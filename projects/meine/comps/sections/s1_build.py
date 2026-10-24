@@ -121,6 +121,8 @@ def panel_cuts(c, seg, src_in, t0, t1, beats_on, w, h, pos, crop=(0, 0, 1, 1), i
     if loop:    # a looped panel as an explicit map: one linear piece per pass, a 1 ms jump back between them
         a, b = loop
         per = (b - a) / speed
+        if not per > 0.002:   # else the loop below never advances (speed <= 0, empty loop)
+            raise ValueError(f"panel_cuts loop {loop} at speed {speed}")
         song, srcs, t = [], [], t0
         while t < t1:
             e = min(t + per, t1)

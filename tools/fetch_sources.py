@@ -72,7 +72,10 @@ def main():
             fp, dur, _ = fingerprint(got)
             dest.parent.mkdir(parents=True, exist_ok=True)
             if abs(dur - e["duration"]) < 0.15:
-                shutil.move(got, dest.with_suffix(got.suffix) if got.suffix != dest.suffix else dest)
+                if got.suffix == dest.suffix:
+                    shutil.move(got, dest)
+                else:   # same streams, different container (e.g. .mp4 for a .mov): remux under the recorded name
+                    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(got), "-c", "copy", str(dest)], check=True)
                 done.append(e["file"])
                 continue
             off, err_v = locate(e["luma5hz"], fp, hz)

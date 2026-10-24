@@ -148,6 +148,8 @@ def bounce_keys(c, t0, t1, box, choices, seed=0, start=None):
     while t < t1:
         nb = r.choice(choices(t))
         tn = c.snap(t + nb * c.period)
+        if tn <= t + 1e-6:   # nb < 0.5 snaps back onto t: the keys would grow forever
+            raise ValueError(f"bounce_keys: {nb} beats from {t:.3f} does not reach the next beat")
         side = r.choice([s for s in "lrtb" if s != last])
         last = side
         q = {"l": [x0, r.uniform(y0, y1)], "r": [x1, r.uniform(y0, y1)],
