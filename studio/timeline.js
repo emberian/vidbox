@@ -525,14 +525,20 @@ function loadVideo(sig) {
     return;
   }
   $("novideo").style.display = "none";
-  video.src = `/${vidPath}?v=${encodeURIComponent(sig)}`;
+  // until the new file's metadata is in, hold the playhead on the virtual clock (the old
+  // element's currentTime is already gone)
+  videoOK = false; vClock.t = t; vClock.playing = false;
+  const src = `/${vidPath}?v=${encodeURIComponent(sig)}`;
+  video.src = src;
   video.addEventListener("loadedmetadata", () => {
+    if (!video.src.endsWith(src)) return;   // superseded by a newer reload
     videoOK = true;
     video.currentTime = clamp(t - R0, 0, video.duration);
     if (wasPlaying) video.play().catch(() => {});
   }, { once: true });
-  video.addEventListener("error", () => { videoOK = false; status(`video error: ${vidPath}`); }, { once: true });
 }
+// one listener for the element's lifetime (a per-load one would pile up across reloads)
+video.addEventListener("error", () => { if (video.getAttribute("src")) { videoOK = false; status(`video error: ${vidPath}`); } });
 
 // ---------- live reload ----------
 async function poll() {
