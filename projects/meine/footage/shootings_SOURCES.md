@@ -76,3 +76,21 @@ The I-Unit film is stored as section downloads, `youtube_kPE6vbKix6A_<start>.mp4
 
 ### Still wanted (needs login)
 I tried the age-gated items with ember's Firefox cookies, as the root relayed. **The Claude Code permission classifier blocked that command ("Credential Exploration"), and I did not try to work around it.** The whole list above under "Wanted, needs login" is still outstanding, as is dB_ynfOHE_U (Reuters, for the ground lane). To get them, ember needs to allow that Bash rule, or run the downloads themselves.
+
+## Pass 3: the 12 gated clips (downloaded by ember) and the ground-lane Reuters clip
+
+| clip id | incident | filmed by / published by | who fired, per the sources | IDF response |
+|---|---|---|---|---|
+| cnn-ward-white-flags-investigation-2024-01 | CNN's white-flag investigation (YouTube version): Hala Khreis, Ramzi Abu Sahloul, and a third case filmed by 'Rami Abu Jamous' | CNN | CNN maps IDF vehicles about 200 m from the Khreis intersection | on screen: "CNN refused to provide the footage in question prior to the broadcasting ... discloses the partial nature of their report" |
+| mee-hijazi-abu-sahloul-white-flag-2024-01-22 | Ramzi Abu Sahloul, Khan Younis, 22 Jan 2024, filmed by Ahmed Hijazi | MEE | Earshot, NBC and CNN (see the ITV entry) | to NBC: "not aware", "clearly edited" |
+| mee-barbakh-brothers-white-flag-2024-01 | Nahed and Ramez Barbakh | MEE repackaging ITV | family testimony | none |
+| aje-hala-khreis-family-2024-01 | Hala Khreis; family testimony | AJE (footage courtesy of MEE) | witnesses: Israeli forces | clip includes Halevi: "prohibited to shoot at people holding a white flag" (said about the hostages) |
+| aje-iaf-drone-four-men-khan-younis-2024-02 | four unarmed men killed by successive air strikes, Khan Younis, about Feb 2024 | footage from a downed Israeli drone / AJE | AJE: Israeli air attacks; location verified by AJE | none |
+| aje-kuwait-roundabout-aid-killed-2024-03 | 19 killed waiting for aid, Kuwait roundabout, 23 Mar 2024 | AJE | AJE: Israeli attack (aftermath only) | none |
+| aje-jenin-cctv-adam-al-ghoul-2023-11-29 / aje-jenin-children-cctv-short / guardian-jenin-children-cctv | Adam Samer al-Ghoul (8) and Basil Suleiman Abu al-Wafa (15), Jenin, 29 Nov 2023 | CCTV released by Wafa / AJE and the Guardian | AJE and the Palestinian health ministry: Israeli forces. The Guardian: "No shooter can be seen in the footage" | Reuters quotes the IDF: suspects "hurled ..." during the raid (only that excerpt seen). https://www.reuters.com/world/middle-east/four-palestinians-including-two-children-killed-by-israeli-forces-west-bank-2023-11-29/ |
+| reuters-jenin-surrendered-men-2025-11-27 | two men shot after surrendering, Jenin, 27 Nov 2025 | Reuters | Israeli Border Police (not disputed) | IDF and police investigating (see the Guardian entry) |
+| ap-kuwaiti-roundabout-bodies-2024-03 | dead and wounded from an attack near the Kuwaiti roundabout, Mar 2024 | AP | AP's title says only "attack"; the shotlist was not readable | none in clip |
+| btselem-jenin-motorcyclists-2024-06-06 | Ibrahim a-Sa'di (20) and 'Issa Jalad (16), shot from an Israeli military jeep, Jenin, 6 Jun 2024 | CCTV / B'Tselem | B'Tselem: soldiers in the jeep, "intentional, unjustified killing" | none in clip |
+| ground.json: reuters-deadliest-night-strikes-2023-12-24 | the night of 24 Dec 2023 ("100 killed in one of the war's deadliest nights") | Reuters | airstrikes | none in clip |
+
+Metadata: these 12 clips are age-gated, so I took the titles from YouTube's oEmbed and the upload dates from the public watch pages. I did not see the descriptions or shotlists, so on-screen text is the source for everything else.

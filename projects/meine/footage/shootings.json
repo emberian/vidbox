@@ -1849,6 +1849,879 @@
    ],
    "scope": "gaza",
    "scope_note": "Hospital compound under sniper fire; a mother's son killed."
+  },
+  {
+   "id": "cnn-ward-white-flags-investigation-2024-01",
+   "file": "media/footage/shootings/raw/youtube_jfAFAnvGKAU.mp4",
+   "source_url": "https://www.youtube.com/watch?v=jfAFAnvGKAU",
+   "publisher": "CNN (Clarissa Ward)",
+   "date": "2023-11/2024-01",
+   "provenance": "CNN investigation 'Palestinians are being shot while waving white flags' (26 Jan 2024), the YouTube version of the cnn.com report already in this catalog (cnn-hala-khreis). It covers Hala Khreis (MEE footage), Ramzi Abu Sahloul (footage credited 'Ahmed Hijazi'), and a third case filmed by a camera credited 'Rami Abu Jamous': a family evacuating with white flags in Gaza City, then a man sitting wounded against a wall beside a body. CNN maps IDF vehicles about 200 m from the Hala Khreis intersection. IDF statement on screen: 'CNN refused to provide the footage in question prior to the broadcasting of the article, as the IDF requested to receive in order to thoroughly examine the incident ... CNN's hesitancy to share the materials discloses the partial nature of their report'. https://www.cnn.com/2024/01/26/middleeast/hala-khreis-white-flag-shooting-gaza-cmd-intl",
+   "license": "news (CNN)",
+   "width": 1280,
+   "height": 720,
+   "duration": 439.51,
+   "segments": [
+    {
+     "in": 300.0,
+     "out": 316.0,
+     "desc": "vertical phone video: a family in a stairwell with white cloths, then walking out along a sunny street holding white flags",
+     "tags": [
+      "gaza",
+      "white-flag",
+      "evacuation",
+      "family",
+      "phone-footage"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld vertical",
+     "palette": "sun / white flags",
+     "overlay_ok": false,
+     "notes": "Footage credited 'Rami Abu Jamous' (CNN on-screen credit). CNN narration over it.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 316.0,
+     "out": 350.0,
+     "desc": "the same street minutes later: a man sits bleeding against a wall beside a prone body; then people crouch over the wounded on the pavement",
+     "tags": [
+      "gaza",
+      "white-flag",
+      "wounded",
+      "body",
+      "aftermath"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": false,
+     "motion": "handheld vertical",
+     "palette": "beige wall / blood red",
+     "overlay_ok": false,
+     "notes": "No victim names given in the video. Shooter attribution in this case rests on CNN's reporting; the shot is not on camera.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 64.0,
+     "out": 80.0,
+     "desc": "satellite map: the intersection where Hala Khreis fell and 'IDF VEHICLES' about 200 m away",
+     "tags": [
+      "gaza",
+      "map",
+      "forensics",
+      "white-flag"
+     ],
+     "intensity": 2,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "slow zoom",
+     "palette": "grey satellite / yellow lines",
+     "overlay_ok": true,
+     "notes": "Hala Khreis.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 395.0,
+     "out": 412.0,
+     "desc": "IDF statement card over the IDF emblem",
+     "tags": [
+      "idf",
+      "statement"
+     ],
+     "intensity": 1,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "grey",
+     "overlay_ok": true,
+     "notes": "The IDF's response to CNN, quoted in provenance.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "CNN white-flag investigation: three cases."
+  },
+  {
+   "id": "mee-hijazi-abu-sahloul-white-flag-2024-01-22",
+   "file": "media/footage/shootings/raw/youtube_hYsO-l6xgSo.mp4",
+   "source_url": "https://www.youtube.com/watch?v=hYsO-l6xgSo",
+   "publisher": "Middle East Eye (footage: Ahmed Hijazi)",
+   "date": "2024-01-22",
+   "provenance": "MEE (28 Jan 2024): the vertical phone footage by Palestinian videographer Ahmed Hijazi (in a PRESS vest) of the killing of Ramzi Abu Sahloul in al-Mawasi/Khan Younis, a second angle to ITV's. It includes the interview before the shooting, the group walking under black smoke with a white flag, the men going down in the distance, and Hijazi's own piece to camera afterwards ('They killed the man... the Israeli occupation aimed and fired at a group of civilians directly'). Verification: Earshot, NBC, CNN and the IDF's reply are in the itv-ramzi-abu-sahloul entry.",
+   "license": "news (MEE / Ahmed Hijazi)",
+   "width": 720,
+   "height": 1280,
+   "duration": 227.81,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 40.0,
+     "desc": "a man (Abu Sahloul) talks to the camera by a red-and-white wall, black smoke behind; men walk ahead along the road",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "white-flag",
+      "interview",
+      "before"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "handheld vertical",
+     "palette": "blue sky / black smoke / red-white wall",
+     "overlay_ok": false,
+     "notes": "Victim: Ramzi Abu Sahloul (NBC, CNN, ITV URLs in the itv entry). MEE's English subtitles and yellow highlight bars burned in.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 60.0,
+     "out": 100.0,
+     "desc": "the group walks on down the long wall under the smoke with a white flag; in the distance they drop to the road and huddle over one man",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "white-flag",
+      "sniper",
+      "fall",
+      "distant"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "handheld vertical, long zoom",
+     "palette": "grey road / black smoke",
+     "overlay_ok": false,
+     "notes": "Natural sound: shots at 68.8-80 on the audio. The fall is too far and small to time to a frame; use the ITV angle for the hit. Ramzi Abu Sahloul.",
+     "hits": [
+      {
+       "t": 79.85,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "loud report on the audio while the group is on the road (frame-level effect not resolvable)"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 140.0,
+     "out": 180.0,
+     "desc": "Hijazi's selfie in a PRESS vest by the wall: 'They killed the man'",
+     "tags": [
+      "gaza",
+      "journalist",
+      "press-vest",
+      "testimony"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "selfie",
+     "palette": "blue sky / press vest",
+     "overlay_ok": false,
+     "notes": "Subtitled.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis: white-flag killing, Hijazi's own angle."
+  },
+  {
+   "id": "mee-barbakh-brothers-white-flag-2024-01",
+   "file": "media/footage/shootings/raw/youtube_AIRD4YLKTHk.mp4",
+   "source_url": "https://www.youtube.com/watch?v=AIRD4YLKTHk",
+   "publisher": "Middle East Eye (re-packaging ITV News)",
+   "date": "2024-01",
+   "provenance": "MEE (5 Feb 2024) repackages ITV News' Barbakh report: Nahed Barbakh (15) and his brother Ramez (20) shot while evacuating with a white flag in Khan Younis, per the family; their sister (9) testifies. Same evidence as itv-barbakh-brothers (family testimony; aftermath footage).",
+   "license": "news (MEE / ITV)",
+   "width": 720,
+   "height": 1280,
+   "duration": 134.7,
+   "segments": [
+    {
+     "in": 24.0,
+     "out": 36.0,
+     "desc": "family photos: Nahed (left) and Ramez (right)",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "portraits",
+      "white-flag"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "warm",
+     "overlay_ok": true,
+     "notes": "Victims: Nahed Barbakh (15), Ramez Barbakh (20) (ITV, https://www.youtube.com/watch?v=47Wn7U3G1xI).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 36.0,
+     "out": 47.0,
+     "desc": "a body face-down on the empty road ('The younger boy had been carrying a white flag')",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "white-flag",
+      "body"
+     ],
+     "intensity": 4,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "grey asphalt",
+     "overlay_ok": false,
+     "notes": "Duplicate of the ITV shot; MEE subtitles burned in. Nahed/Ramez Barbakh.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis: two brothers killed under a white flag (family testimony)."
+  },
+  {
+   "id": "aje-hala-khreis-family-2024-01",
+   "file": "media/footage/shootings/raw/youtube_qGsy2xTXpfY.mp4",
+   "source_url": "https://www.youtube.com/watch?v=qGsy2xTXpfY",
+   "publisher": "Al Jazeera English (AJ Newsfeed; footage courtesy Middle East Eye)",
+   "date": "2023-11-12",
+   "provenance": "AJE Newsfeed (10 Jan 2024): the MEE footage of Hala Khreis being shot on the 'safe route' in Gaza City (on-screen 'Gaza, Nov 12 2023'; 'Witnesses say Hala Khreis was then shot dead by Israeli forces'), with her daughter Heba Khreis and niece Malak Khateeb. AJE reports that her grandson, whom AJE names Taim Abdel Atti (5) and who was holding the white flag, ran off and was then separated from his family. Includes Israel's chief of staff Herzi Halevi on the hostages shot under a white flag: 'It is prohibited to shoot at people holding a white flag and attempting to surrender'. Same incident as cnn-hala-khreis; CNN spells the grandson Tayem.",
+   "license": "news (Al Jazeera / MEE)",
+   "width": 720,
+   "height": 720,
+   "duration": 181.86,
+   "segments": [
+    {
+     "in": 7.0,
+     "out": 44.0,
+     "desc": "overhead: evacuees with white flags cross the street, a woman falls; an orange circle marks the grandson running",
+     "tags": [
+      "gaza",
+      "gaza-city",
+      "white-flag",
+      "grandmother",
+      "child",
+      "civilian-killed"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "static high angle, digital zoom",
+     "palette": "dust grey",
+     "overlay_ok": false,
+     "notes": "Victim: Hala Khreis. AJE captions with orange highlights burned in; 'Courtesy: Middle East Eye' bottom-right. No natural sound used under the captions (low-level).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 49.0,
+     "out": 72.0,
+     "desc": "Malak Khateeb, niece, and Heba Khreis, daughter, testify; subtitles",
+     "tags": [
+      "gaza",
+      "testimony",
+      "grief"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "dark interior",
+     "overlay_ok": false,
+     "notes": "Named in AJE lower-thirds: Malak Khateeb, Heba Khreis.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 216.0,
+     "out": 234.0,
+     "desc": "Herzi Halevi, IDF chief of staff, at night: 'It is prohibited to shoot at people holding a white flag'",
+     "tags": [
+      "idf",
+      "halevi",
+      "white-flag",
+      "statement"
+     ],
+     "intensity": 2,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "night black",
+     "overlay_ok": true,
+     "notes": "The IDF's own rule, said about the three hostages. Lower-third burned in.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Gaza City: Hala Khreis, her family's testimony."
+  },
+  {
+   "id": "aje-iaf-drone-four-men-khan-younis-2024-02",
+   "file": "media/footage/shootings/raw/youtube_DhVV2_mub84.mp4",
+   "source_url": "https://www.youtube.com/watch?v=DhVV2_mub84",
+   "publisher": "Al Jazeera English (AJ Newsfeed)",
+   "date": "2024-02",
+   "provenance": "AJE (22 Mar 2024): footage AJE says was retrieved from an Israeli drone that was shot down, showing a series of Israeli air attacks on four Palestinian men who appear unarmed in Khan Younis, believed early February 2024; AJE says it verified the location. Two die in the first strike; a survivor walking away is struck; a third stumbling man falls to his knees and is hit. AJE blurs the impacts. Attribution: AJE's verification of drone-recovered footage. A strike, not a shooting, but the same pattern of killing people on foot.",
+   "license": "news (Al Jazeera; Israeli-drone footage)",
+   "width": 720,
+   "height": 720,
+   "duration": 120.77,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 26.5,
+     "desc": "top-down drone view: four men walk across bulldozed sand; the frame blurs and a fireball erupts on them",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "drone",
+      "strike",
+      "unarmed",
+      "men-walking"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "drone tracking",
+     "palette": "sand / dark figures / orange flash",
+     "overlay_ok": false,
+     "notes": "Burned-in AJ captions (orange highlight) bottom third, 'WARNING: DISTRESSING IMAGES' top. AJ blurs the bodies. Audio is a produced bed (no transients found); mute or score. Victims not named.",
+     "hits": [
+      {
+       "t": 25.68,
+       "kind": "impact",
+       "strength": 5,
+       "note": "fireball onset on the first strike (strip sheets/strips/DhVV2_mub84_24.6_s0.12.png)"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 42.0,
+     "out": 75.0,
+     "desc": "the survivor walks down the road and is struck; another man stumbles, falls to his knees, is struck",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "drone",
+      "strike",
+      "survivor"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "drone tracking",
+     "palette": "sand / grey smoke",
+     "overlay_ok": false,
+     "notes": "Hit points not picked for the second and third strikes; the blur hides the frames. AJ marks the missile in a still at 1:17.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis: drone footage of four unarmed men killed by air attacks."
+  },
+  {
+   "id": "aje-kuwait-roundabout-aid-killed-2024-03",
+   "file": "media/footage/shootings/raw/youtube_csRArTKkvgg.mp4",
+   "source_url": "https://www.youtube.com/watch?v=csRArTKkvgg",
+   "publisher": "Al Jazeera English",
+   "date": "2024-03-23",
+   "provenance": "AJE (23 Mar 2024): 'At least 19 people killed waiting for aid' at the Kuwait roundabout, Gaza City; witness Alaa al-Khudary carries a flour sack. Attribution is AJE's ('Israeli Gaza attack'); the clip shows the aftermath at a hospital, not the attack. Also UN chief Guterres at Rafah crossing.",
+   "license": "news (Al Jazeera)",
+   "width": 1280,
+   "height": 720,
+   "duration": 127.27,
+   "segments": [
+    {
+     "in": 8.0,
+     "out": 62.0,
+     "desc": "crowd at a hospital door, a wounded boy in red lies on the ground, women plead, a body under a bloodied sheet",
+     "tags": [
+      "gaza",
+      "gaza-city",
+      "aid",
+      "kuwait-roundabout",
+      "wounded",
+      "child",
+      "hospital"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "sun / red",
+     "overlay_ok": false,
+     "notes": "AJ bug; lower-thirds 0-25 s. Natural sound (crowd, crying). Victims not named.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 18.0,
+     "out": 26.0,
+     "desc": "Alaa al-Khudary, flour sack on his shoulder, speaks",
+     "tags": [
+      "gaza",
+      "aid",
+      "flour",
+      "witness"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "ruins / white sack",
+     "overlay_ok": false,
+     "notes": "Named in AJE lower-third: Alaa al-Khudary (witness).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Kuwait roundabout aid killing, aftermath."
+  },
+  {
+   "id": "aje-jenin-cctv-adam-al-ghoul-2023-11-29",
+   "file": "media/footage/shootings/raw/youtube_4hq39W3F5RI.mp4",
+   "source_url": "https://www.youtube.com/watch?v=4hq39W3F5RI",
+   "publisher": "Al Jazeera English (Charles Stratford, Jenin)",
+   "date": "2023-11-29",
+   "provenance": "AJE (29 Nov 2023), Jenin: CCTV of a street where boys run; one falls shot, others drag him. AJE: Adam Samer al-Ghoul (8) and Basil Abu al-Wafa (15) were shot dead by Israeli soldiers during a raid. The Guardian (https://www.youtube.com/watch?v=s0-TXXwz3AU): Wafa released the CCTV; 'No shooter can be seen in the footage and the IDF did not immediately comment.' Reuters, asked the IDF about the footage, quotes it as saying 'Earlier today, during IDF activity in the Jenin Camp, a number of suspects hurled ...' (the rest of the quote is in the Reuters article; I saw only that excerpt) (https://www.reuters.com/world/middle-east/four-palestinians-including-two-children-killed-by-israeli-forces-west-bank-2023-11-29/). Attribution: Palestinian health ministry, AJE, family; no shooter in frame.",
+   "license": "news (Al Jazeera; CCTV via Wafa)",
+   "width": 1280,
+   "height": 720,
+   "duration": 198.16,
+   "segments": [
+    {
+     "in": 8.0,
+     "out": 22.0,
+     "desc": "overhead CCTV: boys in a street with parked cars; one sprints, flails and falls; another darts back and drags him by the arm",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "child",
+      "cctv",
+      "shot",
+      "fall",
+      "drag"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "static CCTV",
+     "palette": "pale concrete / dark figures",
+     "overlay_ok": false,
+     "notes": "CCTV time-stamp and 'Camera' label in frame; AJ bug bottom-left. AJE narration. Victims as named on screen by Al Jazeera (https://www.youtube.com/watch?v=7wEffWJ6F7I, https://www.youtube.com/watch?v=4hq39W3F5RI): Adam Samer al-Ghoul, 8, and Basil Suleiman Abu al-Wafa, 15. AJE also names Adam's grandmother Salima al-Ghoul and father Samer al-Ghoul (lower-thirds). Which figure is which child is AJE's identification.",
+     "hits": [
+      {
+       "t": 9.32,
+       "kind": "fall",
+       "strength": 5,
+       "note": "the running boy buckles and goes down between 9.20 and 9.32 (strip sheets/strips/4hq39W3F5RI_8.6_s0.12.png)"
+      },
+      {
+       "t": 9.56,
+       "kind": "fall",
+       "strength": 3,
+       "note": "a second figure by the jeep goes down"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 110.0,
+     "out": 130.0,
+     "desc": "his grandmother holds his photo; then his father weeps",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "grief",
+      "family"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "warm interior",
+     "overlay_ok": false,
+     "notes": "Victims as named on screen by Al Jazeera (https://www.youtube.com/watch?v=7wEffWJ6F7I, https://www.youtube.com/watch?v=4hq39W3F5RI): Adam Samer al-Ghoul, 8, and Basil Suleiman Abu al-Wafa, 15. AJE also names Adam's grandmother Salima al-Ghoul and father Samer al-Ghoul (lower-thirds).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 176.0,
+     "out": 190.0,
+     "desc": "photos of Adam: in a cap, then as a small boy in a striped waistcoat",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "child",
+      "portrait"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "warm",
+     "overlay_ok": true,
+     "notes": "Victims as named on screen by Al Jazeera (https://www.youtube.com/watch?v=7wEffWJ6F7I, https://www.youtube.com/watch?v=4hq39W3F5RI): Adam Samer al-Ghoul, 8, and Basil Suleiman Abu al-Wafa, 15. AJE also names Adam's grandmother Salima al-Ghoul and father Samer al-Ghoul (lower-thirds).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin, West Bank: 8-year-old shot dead on CCTV during an Israeli raid."
+  },
+  {
+   "id": "aje-jenin-children-cctv-short-2023-11-29",
+   "file": "media/footage/shootings/raw/youtube_7wEffWJ6F7I.mp4",
+   "source_url": "https://www.youtube.com/watch?v=7wEffWJ6F7I",
+   "publisher": "Al Jazeera English (AJ Newsfeed)",
+   "date": "2023-11-29",
+   "provenance": "AJ Newsfeed (29 Nov 2023), on-screen 'Jenin, occupied West Bank, 29 Nov 2023': 'Video shows Israeli forces shooting a child and a teen'; the same CCTV plus Basil's mother saying goodbye. Same incident and sourcing as aje-jenin-cctv-adam-al-ghoul.",
+   "license": "news (Al Jazeera; CCTV)",
+   "width": 720,
+   "height": 720,
+   "duration": 78.25,
+   "segments": [
+    {
+     "in": 4.0,
+     "out": 24.0,
+     "desc": "the CCTV, cropped vertical, with the boy's fall blurred",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "cctv",
+      "child",
+      "shot"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "static CCTV",
+     "palette": "pale concrete",
+     "overlay_ok": false,
+     "notes": "AJ blurs the body; captions burned in. Victims as named on screen by Al Jazeera (https://www.youtube.com/watch?v=7wEffWJ6F7I, https://www.youtube.com/watch?v=4hq39W3F5RI): Adam Samer al-Ghoul, 8, and Basil Suleiman Abu al-Wafa, 15. AJE also names Adam's grandmother Salima al-Ghoul and father Samer al-Ghoul (lower-thirds).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 28.0,
+     "out": 49.0,
+     "desc": "Basil's mother leans over his body in a blue shroud: 'My love, you're so little. Where did they hit you'",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "grief",
+      "mother",
+      "shroud"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "teal shroud / grey",
+     "overlay_ok": false,
+     "notes": "Basil Suleiman Abu al-Wafa. Natural sound (her voice) under subtitles.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin: Adam al-Ghoul and Basil Abu al-Wafa."
+  },
+  {
+   "id": "guardian-jenin-children-cctv-2023-11-29",
+   "file": "media/footage/shootings/raw/youtube_s0-TXXwz3AU.mp4",
+   "source_url": "https://www.youtube.com/watch?v=s0-TXXwz3AU",
+   "publisher": "The Guardian",
+   "date": "2023-11-29",
+   "provenance": "Guardian (29 Nov 2023): 'The Palestinian news agency Wafa released CCTV footage appearing to show eight-year-old Adam Samer al-Ghoul being shot and killed. No shooter can be seen in the footage and the IDF did not immediately comment.' Also PRCS footage of ambulances blocked at the Jenin government hospital. The careful framing is the point of including it.",
+   "license": "news (Guardian)",
+   "width": 1280,
+   "height": 720,
+   "duration": 75.26,
+   "segments": [
+    {
+     "in": 19.0,
+     "out": 30.0,
+     "desc": "a second CCTV angle: a boy runs across a curved street toward a shopfront",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "cctv",
+      "child"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "static CCTV",
+     "palette": "grey / shadow",
+     "overlay_ok": false,
+     "notes": "Guardian captions burned in (left). Adam Samer al-Ghoul (as captioned by the Guardian).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 36.0,
+     "out": 47.0,
+     "desc": "night, PRCS footage: an ambulance held at the hospital entrance",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "ambulance",
+      "prcs",
+      "night"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "black / red-white lights",
+     "overlay_ok": false,
+     "notes": "Guardian: PRCS said Israeli forces blocked the hospital entrance for 40 minutes (a claim, as captioned).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin: Guardian's cautious framing of the CCTV."
+  },
+  {
+   "id": "reuters-jenin-surrendered-men-2025-11-27",
+   "file": "media/footage/shootings/raw/youtube_3ILAjZNLHkc.mp4",
+   "source_url": "https://www.youtube.com/watch?v=3ILAjZNLHkc",
+   "publisher": "Reuters (footage includes Palestine TV)",
+   "date": "2025-11-27",
+   "provenance": "Reuters (27 Nov 2025), 'Israeli forces kill two Palestinians who appeared to be surrendering', Jenin: long-lens footage of the same incident as guardian-jenin-surrendered-men. Two men come out from under a garage shutter being torn open by an armoured bulldozer, lie on the ground among soldiers, and are then shot. Verification and the IDF/police response are in that entry. 'Palestine TV' credit on the first shots.",
+   "license": "news (Reuters)",
+   "width": 1280,
+   "height": 720,
+   "duration": 108.2,
+   "segments": [
+    {
+     "in": 12.0,
+     "out": 34.0,
+     "desc": "close long-lens: soldiers beside an armoured jeep at a half-open shutter; a man lies down in front of it, a second crawls out; soldiers stand over them",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "surrender",
+      "execution",
+      "border-police"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "static telephoto",
+     "palette": "dust beige / olive",
+     "overlay_ok": false,
+     "notes": "Quiet audio with no clear shot transients, so time the shots from the Guardian clip (29.85, 34.22 there). 'Jenin, West Bank, November 27, 2025' card at 15-20. Named in Times of Israel: Youssef Asasa, Mahmoud Abdallah.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 56.0,
+     "out": 64.0,
+     "desc": "soldiers in black move along the wall with rifles toward the shutter",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "soldiers"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static telephoto",
+     "palette": "grey / black",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin: two men killed after surrendering (Reuters angle)."
+  },
+  {
+   "id": "ap-kuwaiti-roundabout-bodies-2024-03",
+   "file": "media/footage/shootings/raw/youtube__J73RPHEGkk.mp4",
+   "source_url": "https://www.youtube.com/watch?v=_J73RPHEGkk",
+   "publisher": "AP Archive",
+   "date": "2024-03",
+   "provenance": "AP Archive (20 Mar 2024): 'Bodies of victims of attack near Kuwaiti Roundabout near Gaza City': bodies brought on carts and pickups to a hospital, survivors and a medic speak. The shotlist was not readable without login, so attacker attribution here is only AP's title ('attack') plus the AJE and UN reporting of Israeli fire on aid seekers at that roundabout in the same weeks. Treat it as aftermath of an aid-crowd attack.",
+   "license": "news (AP)",
+   "width": 640,
+   "height": 360,
+   "duration": 216.46,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 40.0,
+     "desc": "a body in the back of a van; men lift a stretcher; crowds at the hospital door",
+     "tags": [
+      "gaza",
+      "gaza-city",
+      "aid",
+      "kuwait-roundabout",
+      "bodies",
+      "hospital"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "white walls / grey",
+     "overlay_ok": false,
+     "notes": "AP bug top-right. Natural sound. Victims not named.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 72.0,
+     "out": 120.0,
+     "desc": "a body on a donkey cart under a blanket; a body bag lifted from a pickup",
+     "tags": [
+      "gaza",
+      "aid",
+      "bodies",
+      "donkey-cart",
+      "pickup"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "white / red blanket",
+     "overlay_ok": false,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 180.0,
+     "out": 206.0,
+     "desc": "inside the emergency room: wounded on beds and on the floor",
+     "tags": [
+      "gaza",
+      "hospital",
+      "wounded"
+     ],
+     "intensity": 4,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "fluorescent / blankets",
+     "overlay_ok": false,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Kuwaiti roundabout, Gaza City: aid-seeker dead and wounded arrive at hospital."
+  },
+  {
+   "id": "btselem-jenin-motorcyclists-2024-06-06",
+   "file": "media/footage/shootings/raw/youtube_CtrK1stw5I0.mp4",
+   "source_url": "https://www.youtube.com/watch?v=CtrK1stw5I0",
+   "publisher": "B'Tselem",
+   "date": "2024-06-06",
+   "provenance": "B'Tselem (19 Aug 2024): during a raid on Jenin refugee camp on 6 Jun 2024, soldiers in a military jeep withdrawing from the area were documented fatally shooting two young couriers on a motorcycle in Jenin city, far from the clashes: Ibrahim a-Sa'di (20) and 'Issa Jalad (16). CCTV shows the jeep following and shooting; 'the shot hits Jalad and a-Sa'di, who fall down'; the jeep stops briefly and drives off; ambulances take them to hospital where they are pronounced dead. B'Tselem: 'yet another example of intentional, unjustified killing'. No IDF response in the clip.",
+   "license": "human-rights org (B'Tselem)",
+   "width": 1280,
+   "height": 720,
+   "duration": 167.67,
+   "segments": [
+    {
+     "in": 118.0,
+     "out": 130.0,
+     "desc": "shadowed CCTV of a shop arcade: a motorcycle passes in the bright street, a shot, the bike skids down",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "cctv",
+      "motorcycle",
+      "shot",
+      "fall"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "static CCTV",
+     "palette": "black shutters / glare",
+     "overlay_ok": false,
+     "notes": "B'Tselem captions burned in over a map-plus-video split; crop to the right panel. Natural CCTV sound. Victims: Ibrahim a-Sa'di (20), 'Issa Jalad (16) (named in the B'Tselem video).",
+     "hits": [
+      {
+       "t": 126.95,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "report on the audio ('another shot is heard from the jeep')"
+      },
+      {
+       "t": 128.2,
+       "kind": "fall",
+       "strength": 5,
+       "note": "the motorcycle and riders go down between 128.08 and 128.32 (strip sheets/strips/CtrK1stw5I0_126.4_s0.12.png)"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 130.0,
+     "out": 150.0,
+     "desc": "street CCTV: the two lie by their fallen motorcycle; the armoured jeep pulls up beside them, pauses, drives off",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "cctv",
+      "jeep",
+      "bodies"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "static CCTV",
+     "palette": "sunlit street / olive jeep",
+     "overlay_ok": false,
+     "notes": "Ibrahim a-Sa'di, 'Issa Jalad.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 152.0,
+     "out": 167.0,
+     "desc": "a Red Crescent ambulance arrives; medics lift them in",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "ambulance",
+      "prcs"
+     ],
+     "intensity": 4,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "static CCTV",
+     "palette": "red/white",
+     "overlay_ok": false,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin: two young couriers shot from an Israeli jeep (B'Tselem)."
   }
  ]
 }

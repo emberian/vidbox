@@ -8847,7 +8847,7 @@
        "t": 10.0,
        "kind": "explosion",
        "strength": 2,
-       "note": "tiny distant puff appears; grows slowly. Sound arrives ~30.1 (\u22487 km away); do not sync to audio"
+       "note": "tiny distant puff appears; grows slowly. Sound arrives ~30.1 (≈7 km away); do not sync to audio"
       }
      ]
     },
@@ -13883,6 +13883,122 @@
    ],
    "scope": "gaza",
    "scope_note": "Filmed in Gaza (AJ+ 'It's Bisan From Gaza' episode: Bisan Owda returns to Rafah during Jan 2025 ceasefire and cannot recognise it)."
+  },
+  {
+   "id": "reuters-deadliest-night-strikes-2023-12-24",
+   "file": "media/footage/ground/raw/youtube_dB_ynfOHE_U.mp4",
+   "source_url": "https://www.youtube.com/watch?v=dB_ynfOHE_U",
+   "publisher": "Reuters",
+   "date": "2023-12-24",
+   "provenance": "Reuters (uploaded 25 Dec 2023), 'GRAPHIC WARNING: Israeli airstrikes kill 100 in one of war's deadliest nights': a hospital forecourt in the rain with rows of white body bags, night strike flashes, smoke over Gaza, drone footage of flattened blocks, and PRCS ambulance footage (credit 'Palestine Red Crescent/Mohammed Suleiman'). The camp and hospital are not named in the clip (the shotlist was not readable without login), so they are left unnamed here.",
+   "license": "news (Reuters)",
+   "width": 1280,
+   "height": 720,
+   "duration": 64.18,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 14.5,
+     "desc": "hospital forecourt in the rain: a crowd, then rows of white body bags on the wet ground, mourners lifting them",
+     "tags": [
+      "gaza",
+      "bodies",
+      "shrouds",
+      "hospital",
+      "rain",
+      "2023-war"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "rain grey / white shrouds",
+     "overlay_ok": false,
+     "notes": "'WARNING GRAPHIC CONTENT' tag burned in at the bottom. Natural sound. Dead not named.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 15.0,
+     "out": 19.0,
+     "desc": "night: red flare points over a dark skyline",
+     "tags": [
+      "gaza",
+      "night",
+      "strike"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "black / red",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 19.0,
+     "out": 27.0,
+     "desc": "a smoke column rises beyond a pylon over Gaza",
+     "tags": [
+      "gaza",
+      "smoke",
+      "strike"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "grey dusk",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 27.0,
+     "out": 52.0,
+     "desc": "drone over flattened apartment blocks, people searching the rubble",
+     "tags": [
+      "gaza",
+      "drone",
+      "rubble",
+      "destruction"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "drone orbit",
+     "palette": "grey concrete / pink debris",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 52.0,
+     "out": 64.0,
+     "desc": "PRCS ambulance interior: medics load a casualty",
+     "tags": [
+      "gaza",
+      "prcs",
+      "ambulance",
+      "wounded"
+     ],
+     "intensity": 4,
+     "graphic": 2,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "red/white",
+     "overlay_ok": false,
+     "notes": "Credit 'Palestine Red Crescent/Mohammed Suleiman' burned in.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Gaza: aftermath of one of the war's deadliest nights of airstrikes (Reuters)."
   }
  ]
 }

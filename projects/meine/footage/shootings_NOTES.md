@@ -44,3 +44,19 @@
 - **earshot-nuseirat, 0–9.5 s.** A press crew hit in an alley. Earshot's caption sits mid-frame, which is hard to crop.
 
 **Natural sound in these:** the Khalifa selfie, the Hind Rajab call audio, and the soldier videos (their own sound under AJ narration in places). AJ Bird's Eye View is narrated by an AI voice (on screen: "VOICE BY AI"), so don't use its audio.
+
+## Pass 3 additions worth using
+
+- **aje-jenin-cctv-adam-al-ghoul, 8–22 s.** CCTV: a boy runs, buckles and falls at **9.32**; another figure goes down at 9.56; a boy drags him by the arm. This is one of the hardest images in the set. AJE narrates over it, so use it under music or mute it.
+- **btselem-jenin-motorcyclists, 118–150 s.** Shot at 126.95 (audio), the bike goes down at **128.2**, then the jeep stops beside them and drives off. Natural CCTV sound. Crop to the right panel of the B'Tselem split.
+- **aje-iaf-drone-four-men, 0–26.5 s.** An Israeli drone's own view of four men walking, then a fireball at **25.68**. AJ blurs the impact; the audio is a produced bed.
+- **mee-hijazi-abu-sahloul, 60–100 s.** The white-flag group walking under black smoke, then the men going down in the distance. Natural sound, with a report at 79.85. Pair it with the ITV angle for the fall hit (163.45 there).
+- **reuters-jenin-surrendered-men, 12–34 s.** The cleanest picture of the surrender. Its audio is quiet, so take the shot timing from the Guardian clip.
+- **aje-hala-khreis-family, 216–234 s.** The IDF chief of staff saying it is prohibited to shoot people holding a white flag. A useful counterpoint cut against the Khreis footage.
+
+## Continuation note (for whoever picks this up)
+
+The catalog holds 40 clips; every downloaded clip is catalogued except Earshot's West Bank graphics (CzfTm7qyXd0) and the reviewed rejects listed in SOURCES. What's left:
+- **Shove hits:** the Qabatiya rooftop pushes and the AJ drone's 2nd and 3rd strikes need hits placed by eye.
+- **CNN Ward third case:** the man filmed by "Rami Abu Jamous" has no name or verification beyond CNN's report.
+- **Not obtained:** the Washington Post soldier-video investigation (interactive web page only).
