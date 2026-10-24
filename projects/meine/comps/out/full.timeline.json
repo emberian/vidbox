@@ -8969,13 +8969,14 @@
    "id": "r2-in",
    "tags": [
     "head",
-    "rant2"
+    "rant2",
+    "cloud:graham_mtp_bombs"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
    "t0": 82.106,
    "t1": 84.013,
    "time": {
-    "hold": 0.2
+    "hold": 4.76
    },
    "size": [
     480,
@@ -9162,14 +9163,19 @@
    "tags": [
     "head",
     "copy",
-    "rant2"
+    "rant2",
+    "cloud:johnson_bible_bless"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
    "t0": 89.734,
    "t1": 122.114,
    "time": {
-    "in": 5.921,
-    "speed": 1.0
+    "in": 0.74,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     3.38
+    ]
    },
    "size": [
     480,
@@ -17640,14 +17646,19 @@
    "tags": [
     "head",
     "copy",
-    "rant2"
+    "rant2",
+    "cloud:cruz_tucker_bless"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/cruz_tucker_bless__taught_bless.mp4",
    "t0": 90.686,
    "t1": 122.114,
    "time": {
-    "in": 6.873,
-    "speed": 1.0
+    "in": 1.48,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     3.954
+    ]
    },
    "size": [
     480,
@@ -21786,14 +21797,19 @@
    "tags": [
     "head",
     "copy",
-    "rant2"
+    "rant2",
+    "cloud:walberg_nagasaki"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4",
    "t0": 91.15,
    "t1": 122.114,
    "time": {
-    "in": 7.337,
-    "speed": 1.0
+    "in": 1.85,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     9.15
+    ]
    },
    "size": [
     480,
@@ -29874,14 +29890,19 @@
    "tags": [
     "head",
     "copy",
-    "rant2"
+    "rant2",
+    "cloud:haley_hannity_finish"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/haley_hannity_finish__finish_them.mp4",
    "t0": 92.114,
    "t1": 122.114,
    "time": {
-    "in": 8.301,
-    "speed": 1.0
+    "in": 2.59,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     5.255
+    ]
    },
    "size": [
     480,
@@ -33843,14 +33864,19 @@
    "tags": [
     "head",
     "copy",
-    "rant2"
+    "rant2",
+    "cloud:ogles_kill_them_all"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4",
    "t0": 92.59,
    "t1": 122.114,
    "time": {
-    "in": 8.777,
-    "speed": 1.0
+    "in": 2.96,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     5.956
+    ]
    },
    "size": [
     480,
@@ -41586,14 +41612,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:johnson_bible_bless"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 0.94,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     3.38
+    ]
    },
    "size": [
     480,
@@ -43653,14 +43684,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:graham_mtp_bombs"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 3.7,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     9.47
+    ]
    },
    "size": [
     480,
@@ -44685,14 +44721,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:johnson_bible_bless"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 0.84,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     3.38
+    ]
    },
    "size": [
     480,
@@ -46765,14 +46806,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:cruz_tucker_bless"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/cruz_tucker_bless__taught_bless.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 1.006,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     3.954
+    ]
    },
    "size": [
     480,
@@ -47810,14 +47856,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:walberg_nagasaki"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 5.18,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     9.15
+    ]
    },
    "size": [
     480,
@@ -49905,14 +49956,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:haley_hannity_finish"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/haley_hannity_finish__finish_them.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 0.815,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     5.255
+    ]
    },
    "size": [
     480,
@@ -50948,14 +51004,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:ogles_kill_them_all"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 0.484,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     5.956
+    ]
    },
    "size": [
     480,
@@ -53027,14 +53088,19 @@
    "tags": [
     "head",
     "formation",
-    "rant2"
+    "rant2",
+    "cloud:graham_mtp_bombs"
    ],
-   "src": "media/derived/face_rant2.mp4",
+   "src": "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
    "t0": 105.918,
    "t1": 114.962,
    "time": {
-    "in": 22.105,
-    "speed": 1.0
+    "in": 7.03,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     9.47
+    ]
    },
    "size": [
     480,
@@ -54075,13 +54141,14 @@
    "id": "return-still",
    "tags": [
     "head",
-    "return"
+    "return",
+    "cloud:graham_mtp_bombs"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
    "t0": 209.734,
    "t1": 212.36,
    "time": {
-    "hold": 9.08
+    "hold": 4.76
    },
    "size": [
     480,
@@ -55319,17 +55386,18 @@
    "tags": [
     "head",
     "bounce",
-    "rise"
+    "rise",
+    "cloud:isaac_bible_weaponized"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/isaac_bible_weaponized__weaponized.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 9.0,
+    "in": 0.48,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     8.05
     ]
    },
    "size": [
@@ -55959,17 +56027,18 @@
    "tags": [
     "head",
     "bounce",
-    "rise"
+    "rise",
+    "cloud:graham_mtp_bombs"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 16.4,
+    "in": 7.7,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     9.47
     ]
    },
    "size": [
@@ -56281,17 +56350,18 @@
    "tags": [
     "head",
     "bounce",
-    "rise"
+    "rise",
+    "cloud:johnson_bible_bless"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 20.1,
+    "in": 1.24,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     3.38
     ]
    },
    "size": [
@@ -57148,17 +57218,18 @@
    "tags": [
     "head",
     "bounce",
-    "rise"
+    "rise",
+    "cloud:walberg_nagasaki"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 31.2,
+    "in": 0.5,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     9.15
     ]
    },
    "size": [
@@ -59321,17 +59392,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:johnson_bible_bless"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 6.7,
+    "in": 2.79,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     3.38
     ]
    },
    "size": [
@@ -62366,17 +62438,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:evans_bless_thee"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/evans_bless_thee__bless_thee.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 10.1,
+    "in": 6.3,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     7.54
     ]
    },
    "size": [
@@ -63868,17 +63941,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:huckabee_bless_side"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/huckabee_bless_side__blessing_side.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 11.8,
+    "in": 6.0,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     8.21
     ]
    },
    "size": [
@@ -66893,17 +66967,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:huckabee_tucker_take_it_all"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/huckabee_tucker_take_it_all__take_it_all.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 15.2,
+    "in": 0.117,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     1.618
     ]
    },
    "size": [
@@ -68404,17 +68479,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:vaughn_wonderful_days"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/vaughn_wonderful_days__wonderful_days.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 16.9,
+    "in": 4.27,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     11.05
     ]
    },
    "size": [
@@ -71442,17 +71518,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:hagee_march_victory"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/hagee_march_victory__victory.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 20.3,
+    "in": 2.53,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     6.84
     ]
    },
    "size": [
@@ -76019,17 +76096,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:walberg_nagasaki"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 25.4,
+    "in": 1.36,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     9.15
     ]
    },
    "size": [
@@ -77541,17 +77619,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:haley_hannity_finish"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/haley_hannity_finish__finish_them.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 27.1,
+    "in": 0.519,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     5.255
     ]
    },
    "size": [
@@ -80578,17 +80657,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:ogles_kill_them_all"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 30.5,
+    "in": 5.664,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     5.956
     ]
    },
    "size": [
@@ -82106,17 +82186,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:hibbs_weapons_insulting_god"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/hibbs_weapons_insulting_god__insulting_god.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 32.2,
+    "in": 3.0,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     4.57
     ]
    },
    "size": [
@@ -85125,17 +85206,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:hagee_cufi2024_weapons"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/hagee_cufi2024_weapons__weapons_of_war.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 1.6,
+    "in": 0.968,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     11.762
     ]
    },
    "size": [
@@ -86632,17 +86714,18 @@
    "tags": [
     "head",
     "formation",
-    "rise"
+    "rise",
+    "cloud:bachmann_blessed"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/bachmann_blessed__bless_israel.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "in": 3.3,
+    "in": 3.05,
     "speed": 1.0,
     "loop": [
-     0.3,
-     36.4
+     0.05,
+     3.45
     ]
    },
    "size": [
@@ -96319,17 +96402,18 @@
    "id": "P-gaze",
    "tags": [
     "head",
-    "P"
+    "P",
+    "cloud:haley_hannity_finish"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/haley_hannity_finish__finish_them.mp4",
    "t0": 224.967,
    "t1": 227.886,
    "time": {
-    "in": 6.0,
+    "in": 3.924,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     5.255
     ]
    },
    "size": [
@@ -97100,17 +97184,18 @@
    "id": "P-drift",
    "tags": [
     "head",
-    "P"
+    "P",
+    "cloud:ogles_kill_them_all"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4",
    "t0": 229.386,
    "t1": 236.291,
    "time": {
-    "in": 12.0,
-    "speed": 0.5,
+    "in": 2.192,
+    "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     5.956
     ]
    },
    "size": [
@@ -588164,17 +588249,18 @@
    "id": "chorus1.0",
    "tags": [
     "head",
-    "chorus"
+    "chorus",
+    "cloud:hibbs_weapons_insulting_god"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/hibbs_weapons_insulting_god__poking_god.mp4",
    "t0": 238.295,
    "t1": 378.299,
    "time": {
-    "in": 4.8,
+    "in": 2.883,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     4.517
     ]
    },
    "size": [
@@ -605943,17 +606029,18 @@
    "id": "chorus2.0",
    "tags": [
     "head",
-    "chorus"
+    "chorus",
+    "cloud:hagee_cufi2024_weapons"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/hagee_cufi2024_weapons__weapons_of_war.mp4",
    "t0": 240.199,
    "t1": 381.155,
    "time": {
-    "in": 9.1,
+    "in": 9.108,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     11.762
     ]
    },
    "size": [
@@ -641851,17 +641938,18 @@
    "id": "chorus4.0",
    "tags": [
     "head",
-    "chorus"
+    "chorus",
+    "cloud:bachmann_blessed"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/bachmann_blessed__bless_israel.mp4",
    "t0": 244.019,
    "t1": 386.867,
    "time": {
-    "in": 17.7,
+    "in": 1.66,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     3.45
     ]
    },
    "size": [
@@ -659985,17 +660073,18 @@
    "id": "chorus5.0",
    "tags": [
     "head",
-    "chorus"
+    "chorus",
+    "cloud:evans_bless_thee"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/evans_bless_thee__bless_thee.mp4",
    "t0": 245.923,
    "t1": 389.723,
    "time": {
-    "in": 22.0,
+    "in": 7.05,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     7.54
     ]
    },
    "size": [
@@ -696651,17 +696740,18 @@
    "id": "chorus7.0",
    "tags": [
     "head",
-    "chorus"
+    "chorus",
+    "cloud:huckabee_bless_side"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/huckabee_bless_side__blessing_side.mp4",
    "t0": 249.731,
    "t1": 395.435,
    "time": {
-    "in": 0.6,
+    "in": 6.45,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     8.21
     ]
    },
    "size": [
@@ -737869,17 +737959,18 @@
    "id": "P-plateau",
    "tags": [
     "head",
-    "P"
+    "P",
+    "cloud:huckabee_tucker_take_it_all"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/huckabee_tucker_take_it_all__take_it_all.mp4",
    "t0": 411.632,
    "t1": 426.876,
    "time": {
-    "in": 20.0,
+    "in": 0.915,
     "speed": 1.0,
     "loop": [
-     0.5,
-     34.5
+     0.05,
+     1.618
     ]
    },
    "size": [
@@ -749156,14 +749247,19 @@
    "id": "P-out",
    "tags": [
     "head",
-    "P"
+    "P",
+    "cloud:vaughn_wonderful_days"
    ],
-   "src": "media/derived/face.mp4",
+   "src": "media/derived/preachers/vaughn_wonderful_days__wonderful_days.mp4",
    "t0": 455.448,
    "t1": 458.876,
    "time": {
-    "in": 30.0,
-    "speed": 0.5
+    "in": 1.88,
+    "speed": 1.0,
+    "loop": [
+     0.05,
+     11.05
+    ]
    },
    "size": [
     480,
