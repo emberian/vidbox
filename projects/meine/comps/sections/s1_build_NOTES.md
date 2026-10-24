@@ -1,6 +1,6 @@
 # s1_build: 0:38 to 3:45 (bars 20 to 118)
 
-Time ops used: `c.say`, `c.groove` (through `s1_lib.groove`), `c.footage_multi` (through `s1_lib.land_hits`), `c.stutter` and `c.freeze`.
+Time ops used: `c.say` (including `like=`, so moving heads speak), `c.groove` (through `s1_lib.groove`), `c.footage_multi` (through `s1_lib.land_hits`), `c.stutter` and `c.freeze`.
 
 Files: `s1_build.py` (the section) and `s1_lib.py` (head copies, character fx stacks, gaze and drift tracks, pong keyframes, formation sequences with morphs and bar-locked spin, picture and panel framing). Run `uv run python projects/meine/comps/sections/s1_build.py`, then `uv run python render/tl.py projects/meine/comps/out/section_s1_build.timeline.json --range A B --jobs 3`.
 
@@ -16,7 +16,7 @@ Layer order (z) inside the section, from the bottom: beds, then panels and groov
 |---|---|---|
 | 20 | 38.30 | The "Apache in G Major" false-colour fireball (`hellfire-symphony-tads#5`, hit 32.07) lands on the downbeat, screened over Meine, which ducks to 40%. A plain parent head sits where the s0 preacher ended (1150, 640) and silently mouths "thou shalt give Israel missiles" (face.mp4 at 17.5 s). |
 | 20-21 | 38.3-42.1 | The split. One copy peels off on every beat (beats 1 to 8) and flies home over one beat. The parent shrinks with each copy and is gone when the eighth leaves. There are 8 copies of graded sizes (0.62 down to 0.20), each with its own character (below). |
-| 21-27 | 40-53 | The copies hover where their own face looks (the `face_self_gaze` path, sampled at each copy's source time, so each goes where he looks) and grow on eye contact (the path's scale channel). From bar 24 they hop on alternate beats, half on the off-pair. Underneath, Scranton's red-hot 155 mm noses (`scranton-155mm-nosing-redhot#0`) are lumakeyed over the picture and grooved to one 4 s press cycle per 2 bars. |
+| 21-27 | 40-53 | The copies hover where their own face looks (the `face_self_gaze` path, sampled at each copy's source time, so each goes where he looks) and grow on eye contact (the path's scale channel). From bar 24 they hop on alternate beats, half on the off-pair. Underneath, Scranton's red-hot 155 mm noses (`scranton-155mm-nosing-redhot#0`) are hue-keyed (the new `huekey` op: red only, so greys and darks drop out), bloomed and grooved to one 4 s press cycle per 2 bars. |
 | 27 b1-28 | 51.6-53.5 | All eight gather into one point at the centre. |
 | 28-31 | 53.5-61.2 | A formation of 20 small heads (scale about 0.1) bursts from the point into a wireframe **cube** (8 vertices plus 12 edge midpoints) that snaps a quarter turn on every downbeat. Panels cut on the beat: a fuze screwed into a JDAM (Whiteman) on beats 1-2 left, blue-gloved hands seating a sensor (Balad) on beats 3-4 right, and bomb noses on the build stand from bar 30. |
 | 32 | 61.16 | A white-hot Mosul detonation (`oir-mosul-vbied-facility-2017#0`, hit 0) with a duck. The flash whites out the frame for about 0.25 s on purpose and goes over the heads. The cube morphs into a **sphere** (smooth, one turn per 2 bars). A bigger gaze-steered "core" head sits at the centre of his own globe. |
@@ -48,8 +48,49 @@ Layer order (z) inside the section, from the bottom: beds, then panels and groov
 | 96-103 | 183.1-198.3 | Bed: people returning north on the coast road, **grooved so every step lands on a beat** (0.55 s to 1 beat), multiplied. The sphere formation, quarter turn per bar. The CENTCOM strike-camera montage has all six hits landed on two-beat grid points through the whole 8 bars (multi-hit, whitehot gradmap), each with a short duck. Ground fireballs on beat 3 of odd bars. |
 | 104-111 | 198.3-213.5 | Bed: Lockheed's blue CGI F-35 assembly line, screened ("WING BUILD", "FINAL ASSEMBLY" drift past) through a y2k palette cycle. A torus formation steps 1/16 turn per beat. A strike on every bar. **108: white phosphorus airburst** over tents at night (`aj-high-powered-bombs-explainer#6`), falling gold, with a 3.6 s tail and a duck to 30%. |
 | 112-115 | 213.5-221.2 | Strikes every two beats (12 rotating sources, posterized, ducks on alternate hits). Bed: Jabaliya, men tearing at concrete by hand, grooved 1 s to 2 beats, 45%. A cube formation stepping 1/8 turn per beat. Heads cross on every beat. |
-| 116-117 | 221.2-225.0 | Strikes on **every beat**. `c.say`: "missiles" on every beat of bar 116, from an ironbow-thermal head at the centre. On 117 b2 the small heads collapse to a point. On 117 b3 the bouncing heads' last flights all end in the centre. |
+| 116-117 | 221.2-225.0 | Strikes on **every beat**. Bar 116: "missiles" on every beat, each from a different bouncing copy. Bar 117: "thou / shalt / give / Israel" passed between copies, one per beat. On 117 b2 the small heads collapse to a point. On 117 b3 the bouncing heads' last flights all end in the centre. |
 | 118 | 224.97 | **Handoff.** Every head arrives at the centre and vanishes on the downbeat (scale 0.15). One last night blast flash (`ap-night-blasts-from-israel-2025-09#0`, 3.6) lands on the downbeat, framed to the picture, with a duck to 35%. |
+
+## Speaking heads (`c.say(..., like=head)`)
+
+The mechanism is `comp.say` with `like=layer` (an additive extension). The word's face layer copies the moving copy's size, crop, mask, pos, scale, rot, fx, blend, opacity and tags. The copy itself is gated to opacity 0 for the word's span (a hold-keyed multiply), so the speaking mouth sits exactly where the head is, in the same motion and with the same effects.
+
+`s1_build.say_like` adds two things:
+- `bump`, a scale swell while speaking: x2.4 for small formation, orbit and rise-formation heads, so the mouth is readable; x1.25 for big copies; x1 for the lone head.
+- `z`, a layer-order override.
+
+`speak(c)` holds all of them:
+
+| bar | song s | who says what |
+|---|---|---|
+| 32, 36, 40 | 61.16, 68.78, 76.39 | The small formation head nearest the camera says "missiles" as each strike lands. At 32 it is drawn over the white-hot flash (z 5), so it is the one face left in the whiteout. |
+| 51 b0-b3 | 97.35-98.78 | Call and response across bouncing copies: "thou", "shalt", "give", "Israel" (bounce 0, 5, 2, 7). |
+| 52 | 99.25 | **Chorus**: all 8 bouncing copies plus the drift head say "missiles" on the Rafah domes' downbeat. They use tape-mode stretch 0.8-1.3, so nine preachers speak at nine pitches from one onset, each at gain 0.24. |
+| 61 | 116.40, 117.34 | The drift head: "Hellfire" on the TADS strike, then "missiles" on beat 3. |
+| 63 b0-b2, 64 | 120.21-122.11 | Orbit ring heads pass "more / and / more" round, then a bouncing copy says "MISSILES" into the bar 64 white-sky freeze. |
+| 102-103 | 194.49-197.82 | "as many missiles / as we can get", a word a beat across rise copies. |
+| 105, 107, 109, 111 | 200.2-211.6 | A small spinning formation head swells out of the torus and says "missiles" on each odd-bar strike. |
+| 116-117 | 221.16-224.49 | "missiles" on each beat of 116, then "thou shalt give Israel" across 117, a different copy each beat. |
+| 118 | 224.97 | A six-voice tape chorus "missiles" at the vanishing point. The faces sit under the handoff flash, so they are ghosts. The voices run about 0.6 s past 224.97, inside the allowed cross-fade bar. |
+
+**Variant, not the default.** `uv run python projects/meine/comps/sections/s1_build.py --paying` writes `section_s1_build.paying.timeline.json`. In it, the lone grey head in the breakdown says "I'm / not / paying" on bar 78 beats 0-2 and "enough" on bar 79, slowed (stretch 1.5-1.8), over the shroud cloth. A rendered preview of 147.5-154.5 is next to that timeline.
+
+### How they were verified
+- **By eye:** crop strips around each speaker from 0.16 s before the word, generated with the scratch script `saycrop.py`. They cover the formation heads at 32, the bar 51 call and response, the drift head at 61, the orbit heads at 63, bar 64, the rise formation heads at 105 and 107, and the lone-head variant. The copy vanishes and the speaking face appears in the same spot on the beat, and the mouth opens on the word.
+- **By ear:** a voice-only render (music gain 0, faces hidden) over 96.5-123, with onsets taken from a 5 ms RMS envelope. Errors against the target beat:
+
+| word | error |
+|---|---|
+| "shalt" | +8 ms |
+| "give" | +6 ms |
+| "Israel" | +2 ms |
+| "missiles" (bar 61) | 0 ms |
+| "more", "and", "more" | +1 to +3 ms |
+| "MISSILES" (bar 64) | +1 ms |
+| "thou" | +35 ms |
+| "Hellfire" | +59 ms |
+
+  The "thou" and "Hellfire" lags come from breathy onsets (th, h), which have little energy at the start; the word timing is aligned. The bar 52 chorus could not be measured that way, because "Israel" (0.6 s) is still sounding on the downbeat.
 
 ## At the boundary (for lane B)
 
@@ -104,21 +145,24 @@ Characters 3 and 9-13 use the looks lane's `fx_extra` ops. There is no full-fram
 
 ## Verification
 
-- `c.save()` reports **1 hit off the beat grid** (205 layers), and it is deliberate: `shore-stutter @ 91.876` is the eighth-note retrigger at bar 48 b0.5. The checker only knows whole beats. Everything else is on beats, including `footage_multi` (Rafah domes, CENTCOM montage), the countdown map, both `c.say` onsets and the bar 64 freeze.
+- `c.save()` reports 251 layers: 131 hits on the beat, 1 on an eighth (the bar 48 stutter, deliberate) and 0 off the grid. The 131 include every speaking-head onset.
 - The bar 87 stutter is on quarter notes. Eighths read better but are off-grid by the checker's standard, so I chose beats.
 - Frames I looked at (contact sheets): the split (38.3-53), the formations (53-84), the build (84-137), the breakdown (136-168), the rise and handoff (166-227), and the whole-span sheet.
 
 ## Library notes (not edited)
 
 - `section_main` uses `Comp(...)`, whose `project.json` duration is 36.8. Harmless, since the range is explicit.
-- `footage()` with `**props` containing `meta` silently replaces `meta` (and loses `hits_song`). I set `meta.z` after the call instead. A `z=` prop or a merge would be safer.
+- The `meta` overwrite in `footage()` is fixed upstream (cf1aeb3).
 - A layer-level "clip to picture area" option would save the per-source aspect-crop arithmetic (`s1_lib.picture`).
-- A chroma or hue key op would let Scranton's red-hot shells key cleanly. Lumakey also keeps grey machinery, because red's luma is low.
+- Added: the `huekey` op in `render/fx_extra.py` (hue, width, soft, sat, val, soft_sv, invert). It still needs a line in FX_EXTRA.md or TIMELINE.md.
+- Added: `comp.say(..., like=layer)`. It is additive: s0 and s1 timelines were byte-identical before the s1 say layers were added.
 
 ## What I'd try next
 
 - Give formation heads depth sorting. Layer order is fixed, so far heads can draw over near ones in spins. One way is to split each formation into front and back layers per half-turn.
 - Use more `c.ramp` (a slow-mo into the countdown blast) and `c.reverse` (an explosion un-exploding into the breakdown at 72).
 - Try `feedback`/`slitscan` on the bouncing heads in 112-117 for trails.
-- Add more `c.say`: "Israel" on the bar 32 sphere, "Hellfire" under the Holloman rail panels at 40, and "not paying enough" over the shroud cloth in the breakdown. I held back on the last one; ember should decide.
+- Make speakers in the orbit ring (bar 63) pick a readable character. The pixelate and chromatime heads swell but are hard to lip-read.
+- Nudge breathy onsets (`nudge=-0.03` on "thou", `-0.05` on "Hellfire").
+- Decide whether the bar 118 chorus faces should sit above the handoff flash (z 5) or stay a ghost under it, as now.
 - Try a longer or more varied handoff with lane B once its first bars exist.

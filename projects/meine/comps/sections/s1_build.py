@@ -44,7 +44,8 @@ def split(c):
     scr = c.seg("weapons:scranton-155mm-nosing-redhot#0")
     L.groove(c, scr, at=c.bar(21), dur=b28 - c.bar(21) + 1.0, cycle=4.0, beats=8,
              opacity=0.85, fade={"in": 1.5, "out": 1.0},
-             fx=[{"op": "sat", "factor": 1.5}, {"op": "lumakey", "low": 0.07, "high": 0.24}], id="scranton",
+             fx=[{"op": "huekey", "hue": 8, "width": 24, "soft": 14, "sat": 0.35, "val": 0.25},
+                 {"op": "sat", "factor": 1.4}, {"op": "bloom", "thresh": 0.5, "px": 18, "gain": 0.7}], id="scranton",
              **L.picture(scr))
     # the copies: peel off the parent one per beat, fly home in a beat, then go where they look
     for i in range(8):
@@ -561,11 +562,6 @@ def rise(c):
         strike(c, ref, t, hit=hit_of.get(ref, 0), blend=blend, k=k, after=0.9 if t < b116 else 0.45,
                duck=0.35 if k % 2 == 0 else None, key=(0.5, 0.8) if "mosul" in ref else None,
                crop=NEWS_CROP if ref.startswith("ground:") else (0, 0, 1, 1), id=f"rise-fast-{k}")
-    # bar 116: he says it on every beat
-    c.say("missiles#2", at=b116, repeat=4, every=1, gain=0.9, pos=[720, 540], scale=0.55,
-          fx=[{"op": "gradmap", "palette": "ironbow", "cycle": beat(1, "saw")},
-              {"op": "chroma", "px": rng(4, 24, beat(1, "decay", tau=0.1))}],
-          mask={"shape": "oval", "feather": 0.3}, id="say-missiles-116")
     # 118, the handoff: everything has collapsed to the centre; one last white flash that dies out
     # over the bar, leaving only Meine for lane B
     last = strike(c, "ground:ap-night-blasts-from-israel-2025-09#0", b118, hit=0, duck=0.35, after=b119 - b118,
@@ -573,17 +569,119 @@ def rise(c):
     last["fade"] = {"in": 0.04, "out": b119 - b118 - 0.1}
 
 
-def build(c):
+# ---------------------------------------------------------------- the heads speak (c.say like=)
+W_ = {"hellfire": 12, "missiles": [13, 25, 29, 36, 50, 57], "more": 22, "and": 23, "more2": 24,
+      "as": 34, "many": 35, "as2": 37, "we": 38, "can": 39, "get": 40,
+      "thou": 46, "shalt": 47, "give": 48, "israel": 49, "thou2": 51, "shalt2": 52, "give2": 53, "israel2": 54,
+      "im": 89, "not": 90, "paying": 91, "enough": 92}
+
+
+def layer(c, id):
+    return next(x for x in c.layers if x.get("id") == id)
+
+
+def sig_at(spec, t):
+    """Value of a dense/keys/const scalar signal at t (python side, for choosing heads)."""
+    if isinstance(spec, (int, float)):
+        return spec
+    if "dense" in spec:
+        d = spec["dense"]
+        i = int(min(max((t - d["t0"]) / d["dt"], 0), len(d["v"]) - 1))
+        return d["v"][i]
+    if "mul" in spec:
+        r = 1.0
+        for x in spec["mul"]:
+            v = sig_at(x, t)
+            r *= v if isinstance(v, (int, float)) else 1.0
+        return r
+    return 1.0
+
+
+def nearest(c, prefix, t, skip=()):
+    """The head (id starting with prefix, live at t) closest to camera: the largest scale."""
+    cands = [x for x in c.layers if x.get("id", "").startswith(prefix) and x["t0"] <= t < x["t1"] - 0.6
+             and x["id"] not in skip and "head" in x.get("tags", []) and "say" not in x.get("tags", [])]
+    return max(cands, key=lambda x: sig_at(x["scale"], t))
+
+
+def say_like(c, head, word, at, gain=0.9, bump=None, z=None, **kw):
+    """The moving copy `head` says `word` at `at` (comp.say like=): same place, motion and look, the copy
+    hidden while it speaks. bump: scale multiplier while speaking, so a small formation head swells out
+    of the shape to be read, then shrinks back into it. z: layer order override (5 = over flashes)."""
+    lay = c.say(word, at, like=head, gain=gain, id=f"say:{head['id']}@{at:.2f}", **kw)
+    if bump is None:
+        bump = 2.4 if head["id"].startswith(("form", "orbit", "rform")) else 1.25
+    if bump != 1:
+        t0, t1 = lay["t0"], lay["t1"]
+        lay["scale"] = mul(lay["scale"], keys([t0, 1.0], [t0 + 0.07, bump], [t1 - 0.1, bump], [t1, 1.0], ease="smooth"))
+    if z is not None:
+        lay["meta"]["z"] = z
+    return lay
+
+
+def speak(c, paying=False):
+    bar = c.bar
+    # bars 32 / 36 / 40: the small formation head nearest the camera says "missiles" as the strike lands
+    for n, w in zip((32, 36, 40), W_["missiles"][:3]):
+        say_like(c, nearest(c, "form", bar(n), skip=("form-core",)), w, bar(n), z=5)   # over the white-hot flash
+    # bar 51 call and response across the bouncing copies, bar 52 the whole chorus on the Rafah domes
+    for b, (i, w) in enumerate(zip((0, 5, 2, 7), ("thou", "shalt", "give", "israel"))):
+        say_like(c, layer(c, f"bounce{i}.0"), W_[w], bar(51, b))
+    chorus = [layer(c, f"bounce{i}.0") for i in range(8)] + [layer(c, "drift")]
+    for k, h in enumerate(chorus):    # tape-mode stretches: nine preachers at nine pitches, one onset
+        say_like(c, h, W_["missiles"][4], bar(52), gain=0.24, stretch=[1.0, 0.9, 1.12, 0.95, 1.2, 0.85, 1.06, 1.3, 0.8][k],
+                 mode="tape")
+    # bar 61: the drift head, on the TADS strike: "Hellfire ... missiles"
+    say_like(c, layer(c, "drift"), W_["hellfire"], bar(61))
+    say_like(c, layer(c, "drift"), W_["missiles"][0], bar(61, 2))
+    # bar 63: the orbiting ring, "more / and / more" passed round, "MISSILES" on 64 (the white sky)
+    used = []
+    for b, w in enumerate(("more", "and", "more2")):
+        h = nearest(c, "orbit", bar(63, b), skip=used)
+        used.append(h["id"])
+        say_like(c, h, W_[w], bar(63, b))
+    say_like(c, layer(c, "bounce0.0"), W_["missiles"][1], bar(64))
+    # bars 102-103: "as many missiles / as we can get" bounced between copies, a word a beat
+    seq = [(102, 0, "as"), (102, 1, "many"), (102, 2, "missiles"), (103, 0, "as2"), (103, 1, "we"), (103, 2, "can"),
+           (103, 3, "get")]
+    heads = [0, 6, 1, 7, 2, 3, 0]
+    for (n, b, w), i in zip(seq, heads):
+        say_like(c, layer(c, f"rise{i}.0"), W_["missiles"][3] if w == "missiles" else W_[w], bar(n, b))
+    # bars 105-111: a small spinning head says it as each odd-bar strike lands
+    for k, n in enumerate((105, 107, 109, 111)):
+        say_like(c, nearest(c, "rform", bar(n)), W_["missiles"][k % 4], bar(n), gain=0.8)
+    # bar 116: "missiles" on every beat, a different copy each time; 117: "thou shalt give Israel"
+    for b, i in enumerate((0, 6, 3, 7)):
+        say_like(c, layer(c, f"rise{i}.0"), W_["missiles"][[4, 5, 0, 1][b]], bar(116, b))
+    for b, (i, w) in enumerate(zip((1, 2, 0, 6), ("thou2", "shalt2", "give2", "israel2"))):
+        say_like(c, layer(c, f"rise{i}.0"), W_[w], bar(117, b))
+    # 118: the chorus where they all vanished, inside the handoff flash
+    for k, i in enumerate((0, 1, 2, 3, 6, 7)):
+        say_like(c, layer(c, f"rise{i}.0"), W_["missiles"][5], bar(118), gain=0.26, mode="tape",
+                 stretch=[1.0, 0.88, 1.15, 0.94, 1.25, 0.8][k], scale=0.42 - 0.04 * k)
+    if paying:
+        # variant: in the breakdown the lone grey head mutters "I'm not paying enough", slowed
+        lone = layer(c, "lone")
+        for b, w in enumerate(("im", "not", "paying")):
+            say_like(c, lone, W_[w], bar(78, b), stretch=1.5, gain=1.0, bump=1)
+        say_like(c, lone, W_["enough"], bar(79), stretch=1.8, gain=1.0, bump=1)
+
+
+def build(c, paying=False):
     n0 = len(c.layers)
     split(c)
     formations(c)
     build_up(c)
     breakdown(c)
     rise(c)
+    speak(c, paying=paying)
     mine = c.layers[n0:]
     zsort(mine)
     c.layers[n0:] = mine
 
 
 if __name__ == "__main__":
-    section_main("s1_build", SPAN, build)
+    if "--paying" in sys.argv:     # variant: section_s1_build.paying.timeline.json
+        section_main("s1_build.paying", SPAN, lambda c: build(c, paying=True))
+    else:
+        section_main("s1_build", SPAN, build)
