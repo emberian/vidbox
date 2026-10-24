@@ -23,14 +23,16 @@ def _lattice(seed, octave, k, cy, cx, gh, gw):
     return T[np.ix_((cy + np.arange(gh)) % TABLE, (cx + np.arange(gw)) % TABLE)]
 
 
-def fbm(h, w, t, scale=200.0, octaves=4, speed=0.3, seed=0, lacunarity=2.0, gain=0.5):
-    """Noise field in [0, 1], shape (h, w). scale = feature size of the first octave in px."""
+def fbm(h, w, t, scale=200.0, octaves=4, speed=0.3, seed=0, lacunarity=2.0, gain=0.5, clock=None):
+    """Noise field in [0, 1], shape (h, w). scale = feature size of the first octave in px.
+    clock: if given, the first octave's cycle count (replaces t * speed; see fx.cycles), and
+    octave o runs at 2**o times it, so every octave's crossfades complete on the beat grid."""
     out = np.zeros((h, w), np.float32)
     amp, total = 1.0, 0.0
     for o in range(int(octaves)):
         s = max(2.0, scale / lacunarity ** o)
         gh, gw = int(h / s) + 4, int(w / s) + 4
-        tt = t * speed * (1 + 0.37 * o)
+        tt = t * speed * (1 + 0.37 * o) if clock is None else clock * 2 ** o
         k = int(np.floor(tt))
         f = tt - k
         f = f * f * (3 - 2 * f)

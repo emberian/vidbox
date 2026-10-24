@@ -22,6 +22,76 @@ def op(name):
     return reg
 
 
+NOMINAL_BPM = 126.05   # Meine; only used when an op runs without a song clock
+
+
+class Clock:
+    """Musical time for ops: beats since the song's first downbeat, so integers are beats and
+    multiples of 4 are downbeats. tl.py hands one (built on signals.Music) to fx.apply."""
+
+    def __init__(self, music=None):
+        self.music = music
+        self.spb = float(music.period) if music is not None else 60.0 / NOMINAL_BPM
+
+    def beat(self, t):
+        if self.music is None:
+            return t / self.spb
+        return float(self.music.beat_pos(t) - self.music.db0)   # python float: keeps float32 maps
+
+
+FREE_CLOCK = Clock()
+
+
+def clock_of(p):
+    return p.get("_clock") or FREE_CLOCK
+
+
+def snap_rate(per_beat):
+    """Snap a rate in cycles per beat to the nearest 2**k (1/64 .. 16), keeping its sign."""
+    if per_beat == 0:
+        return 0.0
+    k = min(max(round(math.log2(abs(per_beat))), -6), 4)
+    return math.copysign(2.0 ** k, per_beat)
+
+
+def _ease_out(f, s):
+    return f + s * ((1 - (1 - f) ** 3) - f)
+
+
+def cycles(p, t, per_sec, ease=True):
+    """Cycle count of an op's internal clock at song time t (the thing that used to be
+    t * per_sec). Grid-locked by default: the rate is `beats` (cycle length in beats) if given,
+    else per_sec snapped to 2**k cycles per beat; phase 0 sits on the first downbeat, so cycles
+    complete on beats, bars and phrases. With ease the motion steps per beat (per cycle when
+    faster than a beat): quick right after the kick, settling before the next ('snap' 0..1,
+    default 0.8; 0 = steady). clock: "seconds" restores the free-running t * per_sec."""
+    if p.get("clock") == "seconds":
+        return t * per_sec
+    c = clock_of(p)
+    if "beats" in p:
+        rate = 1.0 / p["beats"] if p["beats"] else 0.0
+    else:
+        rate = snap_rate(per_sec * c.spb)
+    b = c.beat(t)
+    if not ease or rate == 0:
+        return b * rate
+    s = float(p.get("snap", 0.8))
+    if abs(rate) <= 1:
+        B = math.floor(b)
+        return rate * (B + _ease_out(b - B, s))
+    u = b * rate
+    k = math.floor(u)
+    return k + _ease_out(u - k, s)
+
+
+def grid_index(p, t, per_sec):
+    """Integer step counter for patterns that change at per_sec (glitch holds, dither noise):
+    steps on the beat grid (2**k per beat, or one per `beats`) unless clock: "seconds"."""
+    if p.get("clock") == "seconds":
+        return int(math.floor(t * per_sec + 1e-6))
+    return int(math.floor(cycles(p, t, per_sec, ease=False) + 1e-6))
+
+
 def luma(img):
     return img @ LUMA
 
@@ -54,6 +124,8 @@ def chroma(img, a, p, t, st):
 def noise(img, a, p, t, st):
     h, w = img.shape[:2]
     kw = dict(scale=p.get("scale", 200), octaves=p.get("octaves", 4), speed=p.get("speed", 0.3))
+    if p.get("clock") != "seconds":   # boil and drift locked to the beat grid
+        kw["clock"] = cycles(p, t, kw["speed"])
     seed = int(p.get("seed", 0))
     color = p.get("color", [1, 1, 1])
     if color == "rgb":
@@ -84,6 +156,8 @@ def warp(img, a, p, t, st):
     if px < 0.25:
         return img, a
     kw = dict(scale=p.get("scale", 160), octaves=p.get("octaves", 3), speed=p.get("speed", 0.4))
+    if p.get("clock") != "seconds":
+        kw["clock"] = cycles(p, t, kw["speed"])
     seed = int(p.get("seed", 0))
     # low-res displacement field, upsampled: smooth and cheap
     sh, sw = max(8, h // 4), max(8, w // 4)
@@ -208,11 +282,14 @@ def tint(img, a, p, t, st):
     return img * c, a
 
 
-def apply(fx_list, img, alpha, t, state, ev):
-    """Run an fx stack. ev(param_spec) evaluates a signal at t (constants pass through)."""
+def apply(fx_list, img, alpha, t, state, ev, clock=None):
+    """Run an fx stack. ev(param_spec) evaluates a signal at t (constants pass through).
+    clock (a Clock on the song's beat grid) reaches ops as p["_clock"]; see cycles()."""
     for i, spec in enumerate(fx_list):
         f = OPS[spec["op"]]
         p = {k: ev(v, (i, k)) for k, v in spec.items() if k != "op"}
+        if clock is not None:
+            p["_clock"] = clock
         st = state.setdefault(i, {})
         amt = p.get("amount", 1.0)
         if amt <= 0:

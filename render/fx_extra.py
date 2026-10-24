@@ -7,14 +7,21 @@ Conventions shared by every op here:
   mid-song has a full, identical history by its first visible frame. A jump in t (seek, layer
   re-entering) resets state.
 - Recursive ops (feedback, flowmosh) forget geometrically; their seam error is fb**25.
+- Internal clocks run on the beat grid (fx.cycles / fx.grid_index): rates snap to 2**k per beat,
+  phase 0 on the first downbeat, motion eased per beat. clock: "seconds" opts out.
 """
+
+
+def _beat_crossed(p, t, per_sec):
+    """True on the first frame (25 fps) of each grid step of fx.grid_index(p, ., per_sec)."""
+    return grid_index(p, t, per_sec) != grid_index(p, t - 1 / 25, per_sec)
 import math
 from collections import deque
 
 import cv2
 import numpy as np
 
-from fx import luma, op, smoothstep
+from fx import clock_of, cycles, grid_index, luma, op, smoothstep
 from noise import fbm
 
 HIST_CAP = 24      # frames of history any op may keep (1 s pre-roll = 25 frames at 25 fps)
@@ -211,10 +218,13 @@ def feedback(img, a, p, t, st):
         st.pop("prev", None)
         st.pop("stamps", None)
     every = max(1, int(p.get("every", 1)))
-    if every > 1:
+    if every > 1 or "beats" in p:
         fno = int(math.floor(t * 25 + 1e-6))
         stamps = st.setdefault("stamps", [])          # [frame no, img, alpha, 3x3 matrix, steps]
-        if fno % every == 0:
+        # stamp on the beat grid: `every` frames snaps to 2**k stamps per beat (3 -> 16ths), or
+        # one stamp per `beats`; clock "seconds" keeps the old every-N-frames
+        stamp = (fno % every == 0) if p.get("clock") == "seconds" else _beat_crossed(p, t, 25 / every)
+        if stamp:
             M = _fb_matrix(p, w, h)
             for s_ in stamps:
                 s_[3], s_[4] = M @ s_[3], s_[4] + 1
@@ -225,7 +235,7 @@ def feedback(img, a, p, t, st):
                 stamps.append([fno, img, a, M, 1])
         k = max(1, int(p.get("echoes", 6)))
         stamps[:] = [s_ for s_ in stamps if fno - s_[0] <= HIST_CAP][-k:]
-        if fno % every == 0:
+        if stamp:
             stamps[-1][3] = np.eye(3)   # this frame's own stamp: drawn as the current frame
             stamps[-1][4] = 0
         if not stamps or fb <= 0:
@@ -284,7 +294,10 @@ def chromatime(img, a, p, t, st):
     """Each RGB channel from a different moment: R now, G `delay` frames ago, B 2*delay."""
     R = _ring(st, t, HIST_CAP + 1)
     R.push(img, a)
-    d = float(np.clip(p.get("delay", 4), 0, HIST_CAP / 2))
+    d = p.get("delay", 4)
+    if "delay_beats" in p:   # musical lag: 0.25 = a 16th note
+        d = p["delay_beats"] * clock_of(p).spb * 25
+    d = float(np.clip(d, 0, HIST_CAP / 2))
     order = p.get("order", "rgb")    # first letter = now, last = oldest
     out = np.empty_like(img)
     oa = a.copy()
@@ -302,7 +315,10 @@ def chromatime(img, a, p, t, st):
 @op("slitscan")
 def slitscan(img, a, p, t, st):
     """Every row / column / ring / noise-region of the frame comes from a different moment."""
-    depth = int(np.clip(round(p.get("depth", 16)), 1, HIST_CAP))
+    depth = p.get("depth", 16)
+    if "depth_beats" in p:   # 1 = one beat of time across the frame
+        depth = p["depth_beats"] * clock_of(p).spb * 25
+    depth = int(np.clip(round(depth), 1, HIST_CAP))
     R = _ring(st, t, HIST_CAP + 1)
     R.push(img, a)
     h, w = img.shape[:2]
@@ -318,8 +334,10 @@ def slitscan(img, a, p, t, st):
         u = np.hypot((gx - cx) / (w / 2), (gy - cy) / (h / 2)) / math.sqrt(2)
     elif axis == "noise":
         sh, sw = max(8, h // 4), max(8, w // 4)
-        u = cv2.resize(fbm(sh, sw, t, scale=p.get("scale", 240) / 4, octaves=2, speed=p.get("speed", 0.2),
-                           seed=int(p.get("seed", 0))), (w, h))
+        sp = p.get("speed", 0.2)
+        ck = None if p.get("clock") == "seconds" else cycles(p, t, sp)
+        u = cv2.resize(fbm(sh, sw, t, scale=p.get("scale", 240) / 4, octaves=2, speed=sp,
+                           seed=int(p.get("seed", 0)), clock=ck), (w, h))
     else:
         raise ValueError(f"slitscan axis {axis!r}")
     if p.get("reverse", 0):
@@ -389,6 +407,9 @@ def flowmosh(img, a, p, t, st):
         wi = cv2.remap(_resize(pi, (h, w)), mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
         wa = cv2.remap(_resize(pa, (h, w)), mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
         r = float(np.clip(p.get("refresh", 0.15), 0.02, 1))
+        ib = p.get("iframe", 2)   # beats between clean I-frames (0 = none); keeps seams exact
+        if ib and p.get("clock") != "seconds" and _beat_crossed({"beats": ib, "_clock": p.get("_clock")}, t, 0):
+            r = 1.0
         out = wi + (img - wi) * r
         oa = wa + (a - wa) * r
     st["prev"] = (g8, out, oa)
@@ -442,7 +463,10 @@ def gradmap(img, a, p, t, st):
     gamma = p.get("gamma", 1.0)
     if gamma != 1.0:
         L = L ** (1 / max(gamma, 1e-3))
-    u = L * p.get("repeat", 1.0) + p.get("cycle", 0.0)
+    cyc = p.get("cycle", 0.0)
+    if "beats" in p:   # built-in cycling: one palette turn per `beats`, stepping on each beat
+        cyc = cyc + cycles(p, t, 0.0)
+    u = L * p.get("repeat", 1.0) + cyc
     if cyclic:
         u = u - np.floor(u)
     else:   # mirror so cycling a ramp palette ping-pongs instead of jumping
@@ -470,7 +494,7 @@ def dither(img, a, p, t, st):
             st["_dk"], st["_dm"] = key, np.tile(b, (sh // 8 + 1, sw // 8 + 1))[:sh, :sw]
         T = st["_dm"]
     elif mode == "noise":
-        fr = int(math.floor(t * p.get("rate", 12.5))) if p.get("rate", 12.5) > 0 else 0
+        fr = grid_index(p, t, p.get("rate", 12.5)) if p.get("rate", 12.5) > 0 else 0
         T = np.random.default_rng((int(p.get("seed", 0)), fr, 911)).random((sh, sw), dtype=np.float32)
     else:
         raise ValueError(f"dither mode {mode!r}")
@@ -540,7 +564,10 @@ def radialblur(img, a, p, t, st):
 def shock(img, a, p, t, st):
     """A ring of radial displacement expanding from `center` as `phase` goes 0 -> 1 (drive with a
     beat saw for a shockwave per kick). `rgb` splits the channels across the ring."""
-    ph = float(p.get("phase", 0.0))
+    if "phase" in p or p.get("clock") == "seconds":
+        ph = float(p.get("phase", 0.0))
+    else:   # default: a wave per `beats` (1), launched on the beat
+        ph = (clock_of(p).beat(t) / (p.get("beats", 1.0) or 1.0)) % 1.0
     amp = p.get("px", 24) * (1 - ph) ** p.get("decay", 1.5)
     if amp < 0.25 or ph >= 1:
         return img, a
@@ -627,13 +654,19 @@ def vhs(img, a, p, t, st):
     rng = np.random.default_rng((seed, fr, 77))
     y = np.arange(h, dtype=np.float32)
     per = max(4.0, p.get("period", 140))
-    off = p.get("px", 3) * (np.sin(2 * math.pi * (y / per + t * 0.7)) * 0.6
+    free = p.get("clock") == "seconds"
+    wob = t * 0.7 if free else cycles({k: v for k, v in p.items() if k != "beats"}, t, 0.7, ease=False)
+    off = p.get("px", 3) * (np.sin(2 * math.pi * (y / per + wob)) * 0.6
                             + cv2.resize(rng.standard_normal((max(2, h // 6), 1)).astype(np.float32),
                                          (1, h))[:, 0] * 0.4)
     band = p.get("band", 0.4)
     bh = 0.08 * h
     if band > 1e-3:
-        by = ((t * p.get("roll", 0.23) + (seed * 0.37)) % 1.3 - 0.15) * h
+        if free:
+            by = ((t * p.get("roll", 0.23) + (seed * 0.37)) % 1.3 - 0.15) * h
+        else:   # one pass per 2**k beats (default 2 bars), starting on a downbeat
+            u = cycles(p, t, p.get("roll", 0.23), ease=False) + (seed % 4) / 4
+            by = ((u % 1.0) * 1.3 - 0.15) * h
         bz = np.clip(1 - np.abs(y - by) / bh, 0, 1) ** 2
         off = off + bz * band * (0.05 * w) * (0.6 + 0.4 * rng.standard_normal(h).astype(np.float32))
     gx, gy = _grid(st, h, w)
@@ -694,7 +727,8 @@ def glitch(img, a, p, t, st):
         return img, a
     h, w = img.shape[:2]
     hold = max(0.02, p.get("hold", 0.08))
-    rng = np.random.default_rng((int(p.get("seed", 0)), int(math.floor(t / hold + 1e-6)), 13))
+    step = int(math.floor(t / hold + 1e-6)) if p.get("clock") == "seconds" else grid_index(p, t, 1 / hold)
+    rng = np.random.default_rng((int(p.get("seed", 0)), step, 13))
     px = p.get("px", 60)
     split = p.get("rgb", 0.5)
     out, oa = img.copy(), a.copy()
@@ -756,7 +790,7 @@ def voronoi(img, a, p, t, st):
         st["_vk"], st["_vp"] = seed, _vor_points(seed)
     base, phase, colr = st["_vp"]
     spd = p.get("speed", 0.4)
-    jit = 0.4 * (np.sin(2 * math.pi * (phase + t * spd * 0.5)))   # each point orbits in its cell
+    jit = 0.4 * (np.sin(2 * math.pi * (phase + cycles(p, t, spd * 0.5))))   # points orbit, a step per beat
     pts = base * 0.2 + 0.4 + jit                                  # 0..1 within the cell
     gy, gx = np.mgrid[0:sh, 0:sw].astype(np.float32)
     u, v = (gx + 0.5) / cs, (gy + 0.5) / cs
@@ -805,3 +839,21 @@ def voronoi(img, a, p, t, st):
         n = n * np.asarray(color, np.float32)
     mode = p.get("mode", "replace" if feat == "cells" else "overlay")
     return _blend(img, n, mode).astype(np.float32), a
+
+
+# ---------------------------------------------------------------- hue key
+@op("huekey")
+def huekey(img, a, p, t, st):
+    """Keep only pixels near a hue: alpha *= hue match * saturation gate * value gate. hue in
+    degrees (0 red, 120 green, 240 blue), width = half-width in degrees, soft = feather in degrees;
+    sat / val: smoothstep(min, min + soft_sv) gates (drop greys and darks). invert=1 keys the hue out."""
+    hsv = cv2.cvtColor(np.clip(img, 0, 1).astype(np.float32), cv2.COLOR_RGB2HSV)   # H 0..360, S, V 0..1
+    d = np.abs((hsv[..., 0] - p.get("hue", 0.0) + 180.0) % 360.0 - 180.0)
+    w, soft = p.get("width", 20.0), max(p.get("soft", 10.0), 1e-3)
+    m = 1.0 - smoothstep(w, w + soft, d)
+    ssv = p.get("soft_sv", 0.1)
+    m = m * smoothstep(p.get("sat", 0.3), p.get("sat", 0.3) + ssv, hsv[..., 1])
+    m = m * smoothstep(p.get("val", 0.2), p.get("val", 0.2) + ssv, hsv[..., 2])
+    if p.get("invert", 0):
+        m = 1.0 - m
+    return img, a * m.astype(np.float32)

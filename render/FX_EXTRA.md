@@ -24,6 +24,52 @@ ground footage and the preacher's head, open the gallery at
 - **Ops may grow the layer.** `feedback` with `pad` returns a larger image, so its echoes can
   leave the clip's box. Later ops in the same list see the larger image.
 
+## Voronoi is heads only
+
+ember: "do *not* use the voronoi effect on war footage, but it looks AMAZING on the guys face."
+`comp.save` raises if `voronoi` is in the fx of a footage layer (any layer with a catalog
+link) or in `post`. Use it on the preacher's heads. The gallery has seven face variants.
+
+## Grid clock (the default)
+
+Every internal clock runs on the song's beat grid. tl.py hands each op a `fx.Clock` built on
+`signals.Music`, which counts beats since the first downbeat: integers are beats and multiples
+of 4 are downbeats. It reaches the op as `p["_clock"]`. Ops read it through `fx.cycles(p, t,
+per_sec)` or `fx.grid_index(p, t, per_sec)`:
+
+- **Rates snap to musical units.** An old per-second value (`speed`, `roll`, `hold`, `rate`,
+  `every`) is converted to cycles per beat and snapped to the nearest 2^k: 1/64 … 16 per beat.
+  For example, noise `speed 0.3` becomes 1/8 per beat (one lattice crossfade per 2 bars),
+  glitch `hold 0.08` becomes 1/8 beat, and feedback `every 3` becomes 16ths. Old values still
+  mean roughly what they did.
+- **`beats`** sets the cycle length in beats explicitly and overrides the snapped rate
+  (`beats: 4` = once per bar).
+- **Phase 0 is on a downbeat**, so cycles complete on beats, bars and phrases.
+- **Evolving textures breathe with the kick.** Motion advances in eased steps: 51% of a step
+  in the first 16th after the beat, 80% by mid-beat, settled before the next kick. Lattice
+  crossfades complete on beats, and fbm octave o runs at 2^o times octave 0's rate, so every
+  octave stays on the grid. `snap` (0..1, default 0.8) sets how stepped this is; 0 gives a
+  steady locked rate.
+- **Opt out with `clock: "seconds"`.** It restores the old free-running behaviour exactly, for
+  any op.
+
+| op | was free-running | now |
+|---|---|---|
+| noise, warp (fx.py) | fbm boil and drift at `speed`/s, octaves at 1 + 0.37·o | eased steps per beat; `speed` snapped (or `beats`); octaves at 2^o |
+| slitscan `axis: noise` | fbm at `speed`/s | as noise. New: `depth_beats` (depth in beats; 1 ≈ 12 frames) |
+| voronoi | point orbits at `speed`·0.5/s | eased steps per beat; `beats` overrides |
+| vhs | wobble 0.7/s, tracking band 0.23/s over a 1.3 cycle | wobble 1/4 per beat, band one pass per 2 bars (`roll` snapped), launched on a downbeat |
+| glitch | new pattern every `hold` s | new pattern every 2^k beat fraction (0.08 s → 1/8 beat), on the grid |
+| dither `noise` | pattern at `rate` Hz | pattern on 32nds (`rate` snapped) |
+| feedback `every > 1` | stamp every N frames | stamp on grid steps (`every 3` → 16ths), or one per `beats` |
+| flowmosh | refresh only from your signal | also a built-in clean I-frame every `iframe` beats (default 2; 0 = off). This also makes seams exact by default |
+| shock | `phase` default 0 (static) | with no `phase` given: a wave per `beats` (default 1), launched on the beat |
+| gradmap | `cycle` only from your signal | optional `beats`: built-in palette turn per `beats`, stepping on the kicks |
+| chromatime | `delay` in frames | still frames; new `delay_beats` (0.25 = a 16th) |
+| feedback `every = 1`, echo, kaleido, chroma, hue and other param-driven ops | no internal clock | unchanged: drive them with beat signals |
+
+Per-frame tape noise (the vhs streaks and row jitter) still changes every frame, deliberately.
+
 ## Chunked renders: determinism
 
 tl.py renders chunks in parallel, each with 1 s of pre-roll (25 frames).
@@ -39,9 +85,9 @@ from the pre-roll, through tl.py's own `Layer.draw`, and comparing raw canvases:
 
 | op | seam result |
 |---|---|
-| chromatime, slitscan (y / x / noise), flowmosh with an I-frame at least every 1 s, feedback `every > 1` | bit-exact (max diff 0) |
+| chromatime, slitscan (y / x / noise), flowmosh (default `iframe: 2`), feedback `every > 1`, glitch, vhs, voronoi, noise (all re-checked on the grid clock, 2026-10-24, footage and head inputs) | bit-exact (max diff 0) |
 | feedback `every = 1` (recursive) | max 1/255 at fb 0.78-0.82. The leftover is fb^25: keep fb ≤ 0.85 |
-| flowmosh with `refresh` never reaching 1 | leftover (1-refresh)^25: keep refresh ≥ 0.17 or spike it to 1 at least once a second |
+| flowmosh with `iframe: 0` and `refresh` never reaching 1 | leftover (1-refresh)^25: keep refresh ≥ 0.17 or spike it to 1 at least once a second |
 
 ## Ops
 
@@ -124,7 +170,8 @@ preview. Quad on a face gives the four-eyed judge.
 (3 → 8 samples; 4 → 16). Cost: 17 ms full, 6 ms preview.
 
 **shock**: a ring of radial displacement expanding from `center` as `phase` goes 0 → 1.
-Use `phase: beat(1, "saw")` for a shockwave per kick, or keys on a strike's hit time.
+With no `phase`, it launches a wave every `beats` (default 1, so one per kick). Give `phase`
+yourself to key it to a strike's hit time.
 `px` (24: push), `period` (80 px ring width), `decay` (1.5: fades as it grows), `rgb` (0:
 >0 splits the channels across the ring). Cost: 21 ms full, 6 ms preview.
 
@@ -163,7 +210,8 @@ elsewhere, some posterized or channel-swapped), `px` (60: shift distance), `bloc
 band count, or block count factor), `scale` (32: block size), `rgb` (0.5: channel split),
 `hold` (0.08 s: how long a pattern holds), `seed`. Cost: 1-2 ms.
 
-**voronoi**: animated Worley/Voronoi texture, in the spirit of Blender's Voronoi Texture.
+**voronoi** (**heads only**: see above): animated Worley/Voronoi texture, in the spirit of
+Blender's Voronoi Texture.
 `feature`: `f1` (soft cells) | `edge` (F2−F1 crackle lines) | `cells` ("crystallize": each
 cell filled flat with the picture under it) | `random` (a random colour per cell).
 Further params: `scale` (80 px cell), `speed` (0.4: points orbit inside their cells),

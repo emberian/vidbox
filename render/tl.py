@@ -145,6 +145,7 @@ class Params:
 
     def __init__(self, ctx, k):
         self.ctx, self.k, self._sig = ctx, k, {}
+        self.clock = FX.Clock(ctx.music)   # beat grid for ops' internal clocks (fx.cycles)
 
     def sig(self, key, spec, default):
         if key not in self._sig:
@@ -159,7 +160,8 @@ class Params:
         return v * self.k if key[-1] in LENGTH_PARAMS else v
 
     def run_fx(self, fx_list, img, alpha, t, state, scope):
-        return FX.apply(fx_list, img, alpha, t, state, lambda spec, key: self.param(spec, (scope,) + key, t))
+        return FX.apply(fx_list, img, alpha, t, state, lambda spec, key: self.param(spec, (scope,) + key, t),
+                        clock=self.clock)
 
 
 class Layer(Params):
