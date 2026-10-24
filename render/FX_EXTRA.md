@@ -220,6 +220,13 @@ f1/edge), `mode` (blend as in `noise`, plus `replace`; the default is `replace` 
 `overlay` otherwise), `seed`. For a recognisable face in `cells` mode, use `scale` 22-30.
 Cost: 60 ms full, 14-21 ms preview (computed at reduced res).
 
+### Keying
+
+**huekey**: keep only pixels near a hue (alpha is multiplied, the colour is untouched).
+`hue` (0: degrees, 0 red, 120 green, 240 blue), `width` (20: half-width in degrees), `soft`
+(10: feather in degrees), `sat` / `val` (0.3 / 0.2: gates that drop greys and darks, feathered
+by `soft_sv` 0.1), `invert` (1 keys the hue out instead).
+
 ## Recipes (all in the gallery)
 
 | name | stack | where |
