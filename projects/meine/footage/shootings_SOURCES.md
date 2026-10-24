@@ -54,3 +54,25 @@ All clips were downloaded at 720p or lower from the publisher's own upload (YouT
 - Kanal13 (vv_xs9PytEw), "Almost", Times of India, Hindustan Times, Onlooker UK, Neuron News and Haris Shahzad uploads: these are re-uploads or aggregators. I used the original publisher instead, or left the clip out.
 - Yaser Murtaja (2018): AP has only funeral footage.
 - Samer Abudaqa, Anas al-Sharif, Ismail al-Ghoul, Rami al-Rifi, Hossam Shabat: all killed in air or drone strikes, not shootings, and the uploads I found show only aftermath or funerals. That fits the existing strike catalogues better (y2026.json already has journalist strikes).
+
+## Added in pass 2 (no login needed)
+
+| clip id | incident | filmed by / published by | who fired, per the investigations | IDF response |
+|---|---|---|---|---|
+| earshot-mee-ameen-khalifa-ghf-2025-06-03 | Ameen Sameer Khalifa, GHF site, Rafah: filmed himself under fire on 1 Jun 2025, killed 3 Jun 2025 | his own phone / Earshot for Middle East Eye | Earshot puts the shooters 500-600 m and 150-200 m away; MEE: Israeli forces shot him on roads marked as safe. https://www.middleeasteye.net/news/soaked-in-blood-how-gaza-aid-sites-became-death-traps-palestinians | none in the clip |
+| earshot-nuseirat-journalists-tank-2024-04-12 | journalists Sami Barhoum and Sami Shehadeh wounded, Nuseirat, 12 Apr 2024 | Al Jazeera camera / Earshot | Earshot: a tank round fired from about 1.1 km, which matches witnesses who saw an Israeli tank | none in the clip |
+| cnn-hind-rajab-call-2024-01-29 | Hind Rajab (6), her relatives and two PRCS paramedics, Tel al-Hawa, Gaza City, 29 Jan 2024 | PRCS call audio / CNN | FA + Earshot: 335 rounds, consistent with an Israeli tank 13-23 m away. https://forensic-architecture.org/investigation/the-killing-of-hind-rajab | to CNN: "not familiar with the incident described" |
+| aje-birds-eye-hind-rajab-structure-2024-01-29 | same | AJE Bird's Eye View | names the 401st Armoured Brigade officers that the Hind Rajab Foundation accuses. These are accusations, not findings. | Israel denied its troops were there |
+| aj-iunit-soldier-videos-a / -b-2024 | soldiers' own videos: evacuees herded, mockery in ruined homes, a stripped detainee, the burning of Shujaiya, the demolition of Khirbet Khuza'a | Israeli soldiers / Al Jazeera I-Unit, "Investigating war crimes in Gaza" (https://www.youtube.com/watch?v=kPE6vbKix6A) | perpetrators are the soldiers themselves; AJ identified the posters and shows their names on screen | not in the clip |
+| aj-iunit-hospital-sniper-jamal-2024 | Jamal, son of Raeda Abu al-Ola, killed by a sniper at a besieged Gaza hospital | AJ I-Unit | his mother's testimony and footage from inside the compound; I did not confirm the hospital and date independently | not in the clip |
+
+The I-Unit film is stored as section downloads, `youtube_kPE6vbKix6A_<start>.mp4` (sections starting at 1130, 1340, 1850, 2660 and 4250 s). Times in the catalog are seconds into each section; the full-film time is in the notes.
+
+### Reviewed and not catalogued
+- BBC "One month into Gaza's new aid system" (9EpMQF3jE80): studio presenters, BBC Verify map graphics and reporters at Kerem Shalom. It has no ground footage of a shooting.
+- Sky GHF (UUs3q3ZrUS0): anchor two-shot with insets of crowds at the GHF site; nothing usable.
+- Earshot "Targeting of Journalists in the West Bank" (CzfTm7qyXd0): maps and graphics only. It is in raw/ but not catalogued.
+- Washington Post soldier-video investigation (https://www.washingtonpost.com/investigations/interactive/2024/israel-videos-war-idf-gaza/): an interactive page on washingtonpost.com, and I found no YouTube version. I did not get it.
+
+### Still wanted (needs login)
+I tried the age-gated items with ember's Firefox cookies, as the root relayed. **The Claude Code permission classifier blocked that command ("Credential Exploration"), and I did not try to work around it.** The whole list above under "Wanted, needs login" is still outstanding, as is dB_ynfOHE_U (Reuters, for the ground lane). To get them, ember needs to allow that Bash rule, or run the downloads themselves.

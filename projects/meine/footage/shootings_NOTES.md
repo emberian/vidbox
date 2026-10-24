@@ -34,3 +34,13 @@
 - The AP GHF contractor footage shows **US contractors** firing, not the IDF. It is powerful for the US angle; label it exactly that way.
 - Rouzan al-Najjar is 2018, not the current war.
 - Israel calls the two men killed in Jenin wanted militants. What the footage shows is men killed after they had surrendered.
+
+## Pass 2 additions worth using
+
+- **earshot-mee-ameen-khalifa, 40–58 s.** An aid seeker's selfie under fire: a crack at 43.27, then the phone tumbles. It is his own sound, and he was killed two days later. Among the strongest material in the set.
+- **cnn-hind-rajab-call, 24–32 s and 52–72 s.** Her voice, then gunfire on the call over a black frame. This is a *sound* image. The audio is the PRCS recording, not a music bed.
+- **aj-iunit-soldier-videos-b, 0–20 s (bound detainee), 70–85 s (truck of stripped, blindfolded men), 280–315 s (Khuza'a blown up).** The soldiers' own words are burned in as AJ subtitles. AJ name tags and the logo are bottom-left; the clips are vertical with a blurred fill.
+- **aj-iunit-soldier-videos-a, 120–132 s.** Soldiers laughing: "So they will have nowhere to come back to!"
+- **earshot-nuseirat, 0–9.5 s.** A press crew hit in an alley. Earshot's caption sits mid-frame, which is hard to crop.
+
+**Natural sound in these:** the Khalifa selfie, the Hind Rajab call audio, and the soldier videos (their own sound under AJ narration in places). AJ Bird's Eye View is narrated by an AI voice (on screen: "VOICE BY AI"), so don't use its audio.

@@ -1287,6 +1287,568 @@
    ],
    "scope": "israel",
    "scope_note": "South Lebanon: residents returning home fired on; wounded man carried."
+  },
+  {
+   "id": "earshot-mee-ameen-khalifa-ghf-2025-06-03",
+   "file": "media/footage/shootings/raw/youtube_h8b5XkFN4T8.mp4",
+   "source_url": "https://www.youtube.com/watch?v=h8b5XkFN4T8",
+   "publisher": "Earshot, for Middle East Eye's OSINT investigation",
+   "date": "2025-06-03",
+   "provenance": "Earshot audio-ballistic analysis (23 Oct 2025) for MEE's 'Soaked in Blood: how Gaza aid sites became death traps' (https://www.middleeasteye.net/news/soaked-in-blood-how-gaza-aid-sites-became-death-traps-palestinians). Ameen Sameer Khalifa filmed himself pinned in the sand under fire near the GHF site by al-Alam roundabout, Rafah (1 Jun 2025), and was shot dead on 3 Jun 2025 near the Muawiya mosque while waiting for food. Earshot estimates shooter distances of 500-600 m and 150-200 m consistent with Israeli positions; MEE: 'on roads marked as safe, Israeli forces shot him dead'. No IDF response in the clip.",
+   "license": "human-rights org (Earshot / MEE)",
+   "width": 1280,
+   "height": 720,
+   "duration": 402.91,
+   "segments": [
+    {
+     "in": 40.0,
+     "out": 58.0,
+     "desc": "selfie at ground level: a young man in a hoodie and cap lies in the sand with others, rounds crack, the phone tumbles to sky and black, he flashes a V sign and points toward the fire",
+     "tags": [
+      "gaza",
+      "rafah",
+      "ghf",
+      "aid",
+      "selfie",
+      "gunfire",
+      "phone-footage"
+     ],
+     "intensity": 5,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "handheld selfie, tumbling",
+     "palette": "sand / dawn orange / black",
+     "overlay_ok": false,
+     "notes": "His own phone's natural sound. MEE bug top-right, yellow progress bar top-left. Victim: Ameen Sameer Khalifa (Earshot/MEE URLs above). He survived this clip (1 Jun); killed 3 Jun.",
+     "hits": [
+      {
+       "t": 43.27,
+       "kind": "gunshot",
+       "strength": 5,
+       "note": "loud crack; camera jolts and swings away within the next frames (strip sheets/strips/khal_40_s0.5.png)"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 388.0,
+     "out": 403.0,
+     "desc": "closing return to his selfie in the sand",
+     "tags": [
+      "gaza",
+      "ghf",
+      "selfie"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "sand / dark",
+     "overlay_ok": false,
+     "notes": "Ameen Sameer Khalifa.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 108.0,
+     "out": 135.0,
+     "desc": "spectrogram of his recording with the shots marked",
+     "tags": [
+      "gaza",
+      "forensics",
+      "spectrogram",
+      "earshot"
+     ],
+     "intensity": 2,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static graphic",
+     "palette": "orange / navy",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "GHF Rafah: aid seeker films himself under fire, later killed."
+  },
+  {
+   "id": "earshot-nuseirat-journalists-tank-2024-04-12",
+   "file": "media/footage/shootings/raw/youtube_CF58hHDTiiM.mp4",
+   "source_url": "https://www.youtube.com/watch?v=CF58hHDTiiM",
+   "publisher": "Earshot (footage: Al Jazeera)",
+   "date": "2024-04-12",
+   "provenance": "Earshot 'The maiming of journalists in Nuseirat, Gaza' (28 Jun 2024). On-screen: 12 Apr 2024, Nuseirat, journalists Sami Barhoum and Sami Shehadeh were hit by a projectile while reporting from an alleyway on Omar Ben AlKhattab street. Earshot: projectile speed and the muzzle-blast interval are consistent with a tank round fired from ~1.1 km away near the Gaza Valley, matching witnesses who saw an Israeli tank; the crew wore press vests. Wounded, not killed (Shehadeh lost a leg per wider reporting; not confirmed in this clip).",
+   "license": "human-rights org (Earshot / Al Jazeera footage)",
+   "width": 1280,
+   "height": 720,
+   "duration": 141.11,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 9.5,
+     "desc": "Al Jazeera wide of a rubble alley: a group in vests crouches by a pink-and-white shutter, dust bursts, men drag a fallen colleague",
+     "tags": [
+      "gaza",
+      "nuseirat",
+      "journalists",
+      "press-vest",
+      "tank-fire",
+      "wounded"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "pink / rubble grey",
+     "overlay_ok": false,
+     "notes": "Earshot caption burned into the middle of frame. Victims (wounded): Sami Barhoum, Sami Shehadeh (names as captioned by Earshot).",
+     "hits": [
+      {
+       "t": 3.46,
+       "kind": "impact",
+       "strength": 4,
+       "note": "audio-led; strike transient (frame-level confirmation was not resolvable at this size)"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 14.0,
+     "out": 40.0,
+     "desc": "two camera angles side by side, the impact cloud, waveforms under",
+     "tags": [
+      "gaza",
+      "nuseirat",
+      "forensics",
+      "earshot"
+     ],
+     "intensity": 3,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "static graphic",
+     "palette": "black / dust white",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Nuseirat: tank round hits press crew."
+  },
+  {
+   "id": "cnn-hind-rajab-call-2024-01-29",
+   "file": "media/footage/shootings/raw/youtube_pyKIg-UkHEE.mp4",
+   "source_url": "https://www.youtube.com/watch?v=pyKIg-UkHEE",
+   "publisher": "CNN (Jomana Karadsheh; call audio from PRCS)",
+   "date": "2024-01-29",
+   "provenance": "CNN (2 Feb 2024): Hind Rajab (Hind Hamada), 6, trapped in a car in Tel al-Hawa, Gaza City, with her dead relatives after it came under Israeli fire; PRCS released her call ('the tank is next to me'). Her body, relatives and the two PRCS paramedics sent for her were found 10 Feb 2024. Forensic Architecture/Earshot (Jun 2024) found 335 rounds fired, consistent with an Israeli tank 13-23 m away (https://forensic-architecture.org/investigation/the-killing-of-hind-rajab). IDF to CNN: 'not familiar with the incident described' (on screen at 2:36).",
+   "license": "news (CNN / PRCS audio)",
+   "width": 1280,
+   "height": 720,
+   "duration": 211.97,
+   "segments": [
+    {
+     "in": 24.0,
+     "out": 32.0,
+     "desc": "her photo with the call's red waveform and subtitles: 'I'm so scared, please come!'",
+     "tags": [
+      "gaza",
+      "hind-rajab",
+      "child",
+      "phone-call",
+      "prcs"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "black / red waveform",
+     "overlay_ok": false,
+     "notes": "Audio is the PRCS recording (natural, not a music bed). Victim: Hind Rajab (CNN URL).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 52.0,
+     "out": 72.0,
+     "desc": "black frame, red waveform of gunfire on the call; subtitle 'Yes, in the car. The tank is next to us.'",
+     "tags": [
+      "gaza",
+      "hind-rajab",
+      "phone-call",
+      "gunfire",
+      "waveform"
+     ],
+     "intensity": 5,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "black / red",
+     "overlay_ok": true,
+     "notes": "The call of her cousin (CNN lower-third: 'voice of Hind's cousin'; not named in the clip), during which gunfire is heard. Named in CNN lower-thirds: Wissam Hamada (mother), Samir Hamada (uncle).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Gaza City: 6-year-old killed by Israeli tank fire after calling for help."
+  },
+  {
+   "id": "aje-birds-eye-hind-rajab-structure-2024-01-29",
+   "file": "media/footage/shootings/raw/youtube_EMaadyReAkA.mp4",
+   "source_url": "https://www.youtube.com/watch?v=EMaadyReAkA",
+   "publisher": "Al Jazeera English (Bird's Eye View), citing Forensic Architecture and the Hind Rajab Foundation",
+   "date": "2024-01-29",
+   "provenance": "AJE Bird's Eye View (1 Nov 2025): an Al Jazeera Arabic documentary with the Hind Rajab Foundation names commanders and a tank unit of the 401st Armoured Brigade suspected over the killing of Hind Rajab, her relatives and the two paramedics; cites FA's finding that Israeli Merkava tanks were at the intersection. Israel had denied its troops were at the scene. These names are the Foundation's accusations, not adjudicated findings: do not put them on screen as perpetrators without that framing.",
+   "license": "news (Al Jazeera)",
+   "width": 1280,
+   "height": 720,
+   "duration": 178.75,
+   "segments": [
+    {
+     "in": 8.0,
+     "out": 12.0,
+     "desc": "the bullet-riddled black car among rubble",
+     "tags": [
+      "gaza",
+      "hind-rajab",
+      "car",
+      "aftermath"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "grey rubble / black car",
+     "overlay_ok": true,
+     "notes": "Hind Rajab.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 108.0,
+     "out": 120.0,
+     "desc": "close on the shot-through car, then the burned PRCS ambulance",
+     "tags": [
+      "gaza",
+      "hind-rajab",
+      "car",
+      "ambulance",
+      "aftermath",
+      "prcs"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "grey / burned metal",
+     "overlay_ok": true,
+     "notes": "Two PRCS paramedics were killed going to her; their names are not in this clip, so source them before the credits.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 164.0,
+     "out": 175.0,
+     "desc": "the car interior: a child's seat in the wreck",
+     "tags": [
+      "gaza",
+      "hind-rajab",
+      "car",
+      "child"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "grey",
+     "overlay_ok": true,
+     "notes": "Hind Rajab.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Hind Rajab: the wrecked car and the accused unit."
+  },
+  {
+   "id": "aj-iunit-soldier-videos-a-2024",
+   "file": "media/footage/shootings/raw/youtube_kPE6vbKix6A_1340.mp4",
+   "source_url": "https://www.youtube.com/watch?v=kPE6vbKix6A",
+   "publisher": "Al Jazeera Investigative Unit (soldiers' own posts)",
+   "date": "2023-11/2024",
+   "provenance": "Al Jazeera Investigative Unit, 'Investigating war crimes in Gaza' (3 Oct 2024, https://www.youtube.com/watch?v=kPE6vbKix6A): built from thousands of photos and videos posted by Israeli soldiers themselves; where possible the I-Unit identified the posters (names and units appear on screen as AJ's attributions). Section file: times are seconds from the section start; full-film time = file time + 1340 s.",
+   "license": "news (Al Jazeera; soldier-posted material)",
+   "width": 1280,
+   "height": 720,
+   "duration": 370.01,
+   "segments": [
+    {
+     "in": 5.0,
+     "out": 15.0,
+     "desc": "soldier-posted: a helmeted soldier barks through a megaphone at evacuees crossing a ruined road",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "evacuation",
+      "megaphone",
+      "idf"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "sand / olive",
+     "overlay_ok": true,
+     "notes": "Soldier-filmed (AJ I-Unit). Full-film 22:25-22:35.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 20.0,
+     "out": 45.0,
+     "desc": "soldier-posted, Hebrew caption: crowds of displaced people herded down a street past soldiers",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "evacuation",
+      "crowd"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld vertical",
+     "palette": "grey / dense crowd",
+     "overlay_ok": false,
+     "notes": "Hebrew caption burned in; vertical. Full-film 22:40-23:05.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 120.0,
+     "out": 132.0,
+     "desc": "soldiers grinning into a helmet cam in a ruined room; subtitle 'So they will have nowhere to come back to!'",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "demolition",
+      "mockery"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "helmet cam",
+     "palette": "warm interior / grins",
+     "overlay_ok": false,
+     "notes": "Soldier-filmed. Full-film 24:25-24:32.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 165.0,
+     "out": 180.0,
+     "desc": "posted videos with AJ name tags: soldiers in looted, wrecked homes",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "looting",
+      "homes"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "interiors",
+     "overlay_ok": true,
+     "notes": "AJ identity tags on screen (I-Unit's attributions).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Israeli soldiers' own videos from Gaza."
+  },
+  {
+   "id": "aj-iunit-soldier-videos-b-2024",
+   "file": "media/footage/shootings/raw/youtube_kPE6vbKix6A_1850.mp4",
+   "source_url": "https://www.youtube.com/watch?v=kPE6vbKix6A",
+   "publisher": "Al Jazeera Investigative Unit (soldiers' own posts)",
+   "date": "2023-12/2024",
+   "provenance": "Al Jazeera Investigative Unit, 'Investigating war crimes in Gaza' (3 Oct 2024, https://www.youtube.com/watch?v=kPE6vbKix6A): built from thousands of photos and videos posted by Israeli soldiers themselves; where possible the I-Unit identified the posters (names and units appear on screen as AJ's attributions). Section file: times are seconds from the section start; full-film time = file time + 1850 s.",
+   "license": "news (Al Jazeera; soldier-posted material)",
+   "width": 1280,
+   "height": 720,
+   "duration": 370.01,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 20.0,
+     "desc": "night, filmed by a soldier (AJ tag 'Filmed by Yoel Ohnona, Paratroopers Brigade'): a bound, stripped detainee shown to the camera; subtitle 'Look, I'm going to show you his back, you're going to laugh at this'",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "detainee",
+      "abuse",
+      "night"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "black / torch white",
+     "overlay_ok": false,
+     "notes": "Detainee not named. Full-film 30:50-31:10.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 70.0,
+     "out": 85.0,
+     "desc": "a truck packed with stripped, blindfolded Palestinian men driven across sand",
+     "tags": [
+      "gaza",
+      "detainees",
+      "stripped",
+      "blindfolded",
+      "truck"
+     ],
+     "intensity": 5,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "sand / bare backs",
+     "overlay_ok": false,
+     "notes": "The 'shoved into the dirt' register. Full-film 32:00-32:15.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 125.0,
+     "out": 145.0,
+     "desc": "soldier video of fire engulfing buildings; subtitles 'The burning of Shujaiya neighbourhood', 'This is what we'll do to all our enemies', 'We will annihilate them to dust'",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "shujaiya",
+      "fire",
+      "destruction"
+     ],
+     "intensity": 5,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "orange fire / night",
+     "overlay_ok": true,
+     "notes": "AJ tag names the speakers (Givati Brigade). Full-film 32:55-33:15.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 280.0,
+     "out": 315.0,
+     "desc": "posted by a company commander (AJ tag): night demolition of Khirbet Khuza'a, a fireball rolls across houses; subtitles 'We blew up the entire village'",
+     "tags": [
+      "gaza",
+      "soldier-video",
+      "demolition",
+      "khuzaa",
+      "explosion",
+      "night"
+     ],
+     "intensity": 5,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "black / yellow-orange blast",
+     "overlay_ok": true,
+     "notes": "Full-film 35:30-36:05.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Israeli soldiers' own videos: detainees, burning of Shujaiya, demolition of Khirbet Khuza'a."
+  },
+  {
+   "id": "aj-iunit-hospital-sniper-jamal-2024",
+   "file": "media/footage/shootings/raw/youtube_kPE6vbKix6A_2660.mp4",
+   "source_url": "https://www.youtube.com/watch?v=kPE6vbKix6A",
+   "publisher": "Al Jazeera Investigative Unit",
+   "date": "2024",
+   "provenance": "Al Jazeera Investigative Unit, 'Investigating war crimes in Gaza' (3 Oct 2024, https://www.youtube.com/watch?v=kPE6vbKix6A): built from thousands of photos and videos posted by Israeli soldiers themselves; where possible the I-Unit identified the posters (names and units appear on screen as AJ's attributions). Section file: times are seconds from the section start; full-film time = file time + 2660 s. Sequence at a Gaza hospital under siege: footage from inside the compound of people fired on as they were told to evacuate ('Look, they ask us to evacuate but they continue to shoot'); his mother Raeda Abu al-Ola tells the I-Unit her son Jamal was shot by a sniper as she approached him, and his body later showed signs of beating. Hospital and date are as given in the film; I did not confirm them independently.",
+   "license": "news (Al Jazeera)",
+   "width": 1280,
+   "height": 720,
+   "duration": 340.02,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 15.0,
+     "desc": "vertical phone video: a man in a doorway of a hospital building, people duck as shots come in",
+     "tags": [
+      "gaza",
+      "hospital",
+      "sniper",
+      "phone-footage"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld vertical",
+     "palette": "grey concrete / blue tarp",
+     "overlay_ok": false,
+     "notes": "Full-film 44:20-44:35.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 180.0,
+     "out": 200.0,
+     "desc": "from an upper floor: crowds fleeing down the hospital lane; subtitle 'Look, they ask us to evacuate but they continue to shoot'; then the empty lane with figures in white",
+     "tags": [
+      "gaza",
+      "hospital",
+      "evacuation",
+      "sniper",
+      "crowd"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld from above",
+     "palette": "grey / white figures",
+     "overlay_ok": false,
+     "notes": "Full-film 47:20-47:40.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 285.0,
+     "out": 295.0,
+     "desc": "a body in a white shroud on an orange stretcher; the face, bruised; subtitle 'Jamal was beaten and tortured'",
+     "tags": [
+      "gaza",
+      "hospital",
+      "body",
+      "shroud",
+      "torture"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "white / orange",
+     "overlay_ok": false,
+     "notes": "Victim: Jamal, son of Raeda Abu al-Ola (both names as given on screen in the AJ I-Unit film). Full-film 49:05-49:15.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Hospital compound under sniper fire; a mother's son killed."
   }
  ]
 }
