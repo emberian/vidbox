@@ -576,6 +576,9 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         jobs = max(1, min(a.jobs, (F1 - F0) // (fps * 4) or 1))
+        if jobs > (os.cpu_count() or 1):   # each chunk is a full working set (TIMELINE.md "Memory"); past
+            jobs = os.cpu_count() or 1     # the core count they only add memory
+            print(f"  --jobs {a.jobs}: capped at {jobs} (CPU cores)", file=sys.stderr)
         bounds = np.linspace(F0, F1, jobs + 1).round().astype(int)
         procs, parts = [], []
         env = dict(os.environ, VIDBOX_PARENT_PID=str(os.getpid()))
