@@ -105,7 +105,9 @@
      "notes": "excellent as a texture/matte layer",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone footage, Tal al-Hawa, southern Gaza City, 11 Oct 2025 (AP shotlist, story 'Drone images show massive destruction'))."
   },
   {
    "id": "ap-smoke-jabaliya-2025-05",
@@ -157,7 +159,9 @@
      "notes": "AP bug top-right; 360p",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, near Jabaliya, northern Gaza, 15 May 2025; smoke columns after several strikes east of Jabaliya (AP shotlist))."
   },
   {
    "id": "ap-nuseirat-night-strike-2026-07",
@@ -224,7 +228,9 @@
      ],
      "motion_tempo": 0.6
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Nuseirat, central Gaza, 31 Jul 2026 (post-ceasefire strike after warning); 'sky lit up after airstrike, people running' (AP shotlist))."
   },
   {
    "id": "nbc-nuseirat-bakery-drone-2023-10",
@@ -315,7 +321,9 @@
      "notes": "NBC bug; first 0-9s has burned lower-third caption, skip; 87s+ is NBC logo and anchor",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News upload 18 Oct 2023: drone video of aftermath of strike on Al-Nuseirat bakery, Nuseirat refugee camp)."
   },
   {
    "id": "ap-jabaliya-bulldozers-burnt-2025-04",
@@ -421,7 +429,9 @@
      "notes": "AP bug; strong 'living in ruins' imagery",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Jabaliya, 22 Apr 2025: municipality bulldozers/trucks destroyed by Israeli strike on garage, plus wide rubble/tent views (AP shotlist))."
   },
   {
    "id": "ap-smoke-from-israel-2024-03",
@@ -474,7 +484,9 @@
      "notes": "AP bug; nice real-time growth for sync to a swell; distant plume grows gradually from ~36.6 s, no crisp onset frame; its blast sound arrives ~43.96 s (several km away), do not sync to that",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP, filmed from southern Israel looking into Gaza Strip, 5 Mar 2024; large explosion and smoke (AP shotlist))."
   },
   {
    "id": "ap-impact-smoke-2014",
@@ -554,7 +566,9 @@
      "notes": "AP bug",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, 12 Jul 2014 (Operation Protective Edge, 2014 Gaza war), NOT the 2023+ war); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-drone-return-north-coast-2025-01",
@@ -665,7 +679,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Wadi Gaza coast road and Gaza City, 27 Jan 2025: tens of thousands returning north on foot when Israel lifted closure (AP shotlist))."
   },
   {
    "id": "bbc-shorooq-tower-collapse-2021",
@@ -738,7 +754,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (BBC Arabic live report, Gaza City, May 2021 war (al-Shorouk/Shorooq tower)); an earlier Gaza war, which still counts."
   },
   {
    "id": "unrwa-shifa-babies-bodycam",
@@ -810,7 +828,9 @@
      "notes": "captions",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (UNRWA official channel; bodycam from UNRWA/WHO mission evacuating 31 premature babies from al-Shifa, Nov 2023 (caption on footage))."
   },
   {
    "id": "ap-drone-gazacity-ruins-2025-10",
@@ -899,7 +919,9 @@
      "notes": "6-17 and 28-37 are split-screens, avoid",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Gaza City, 15 Oct 2025, after ceasefire (AP shotlist))."
   },
   {
    "id": "ap-aqsa-babies-funeral-2024-08",
@@ -1010,7 +1032,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, al-Aqsa Martyrs Hospital, Deir al-Balah, 30 Aug 2024; men carry bodies of killed babies from morgue, funeral prayers (AP shotlist; AP slate warns graphic))."
   },
   {
    "id": "ap-before-after-gazacity-2025",
@@ -1115,7 +1139,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP before/after compilation, Gaza City: Saraya square/Rimal 2020 vs 30 Jan 2025; Omar al-Mukhtar St 2021 vs 2025 (AP shotlist))."
   },
   {
    "id": "reuters-national-bank-strike-2023-10",
@@ -1211,7 +1237,9 @@
      "notes": "small 'K' logo bottom-left",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters: Israeli air strike hits the National Bank building in Gaza City, 8 Oct 2023 (Reuters caption + on-screen date tag))."
   },
   {
    "id": "sky-jalaa-tower-collapse-2021",
@@ -1264,7 +1292,9 @@
      "notes": "ticker",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Sky News live: al-Jalaa tower (housed AP and Al Jazeera) collapses after Israeli strike, Gaza City, 15 May 2021); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-dusk-smoke-from-israel-2023-10",
@@ -1317,7 +1347,9 @@
      "notes": "AP bug; beautiful and terrible, good for calm sections",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP, filmed from southern Israel looking at Gaza, 18 Oct 2023 at dusk (AP shotlist))."
   },
   {
    "id": "reuters-morning-strikes-2023-10-11",
@@ -1422,7 +1454,9 @@
      "notes": "short but gorgeous",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters: unrelenting strikes on Gaza City morning of 11 Oct 2023 (Reuters caption + date tag))."
   },
   {
    "id": "ap-smoke-gazacity-2009",
@@ -1474,7 +1508,9 @@
      "notes": "4:3 pillarbox; munition type unknown, don't label",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, 9 Jan 2009, Operation Cast Lead (2008-09 Gaza war), NOT 2023+. 4:3 pillarboxed, colour cast); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-jabaliya-camp-strike-2023-10-31",
@@ -1622,7 +1658,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Jabaliya refugee camp, 31 Oct 2023, after the Israeli airstrike that crushed apartment blocks (AP shotlist))."
   },
   {
    "id": "ap-black-smoke-karni-2014",
@@ -1674,7 +1712,9 @@
      "notes": "AP bug",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, 12 Jul 2014 (2014 Gaza war): black smoke column from fire at industrial zone near Karni crossing, eastern Gaza City (AP storyline)); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-smoke-gazacity-2023-10-07",
@@ -1743,7 +1783,9 @@
      "notes": "31s+ = outgoing rocket trails from Gaza; not used for this lane",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 7 Oct 2023 (first day of the war): Israeli strikes' smoke columns over Gaza City)."
   },
   {
    "id": "ap-zikim-aid-trucks-2025-08",
@@ -1836,7 +1878,9 @@
      "hits": [],
      "motion_tempo": 0.55
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City near Zikim crossing, 20 Aug 2025: people riding on aid trucks, carrying sacks; an injured man carried (AP shotlist))."
   },
   {
    "id": "roya-night-rescue-central-gaza-2026-01",
@@ -1928,7 +1972,9 @@
      "hits": [],
      "motion_tempo": 1.3
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Roya News English, rescue at site of overnight Israeli strike in central Gaza; on-screen tag 'Gaza Strip 9/1/2026')."
   },
   {
    "id": "fa-rafah-bomb-identification-2014",
@@ -2035,7 +2081,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Forensic Architecture 'Black Friday' Rafah investigation (1 Aug 2014, 2014 war)); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-bank-strike-fireball-2023-10-08",
@@ -2130,7 +2178,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 8 Oct 2023: fireball and smoke as Israeli strike hits bank building (AP shotlist))."
   },
   {
    "id": "ap-drone-gazacity-ruins-2025-10-long",
@@ -2312,7 +2362,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Gaza City, 15 Oct 2025, ceasefire (AP shotlist, 'Drone aerials show much of Gaza City reduced to rubble'))."
   },
   {
    "id": "ap-bread-queue-rain-2026-04",
@@ -2406,7 +2458,9 @@
      "notes": "caption lower third",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 7 Apr 2026: people crushing at bakery window for bread in rain (AP shotlist))."
   },
   {
    "id": "ap-night-flashes-from-israel-2023-11-12",
@@ -2479,7 +2533,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP, view of Gaza from southern Israel at night, 12 Nov 2023 (AP shotlist))."
   },
   {
    "id": "ap-return-gazacity-walk-2025-10",
@@ -2569,7 +2625,9 @@
      "notes": "subtitles (lower third); crop or place lower third offscreen",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 11 Oct 2025: displaced Palestinians walk back through devastation after ceasefire (AP shotlist))."
   },
   {
    "id": "ap-drone-mosque-destroyed-2023-10-09",
@@ -2639,7 +2697,9 @@
      "notes": "annotation",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Gaza City 9 Oct 2023: destroyed mosque (Sousi/al-Shati area) and Beit Hanoun (AP shotlist and annotations)); an earlier Gaza war, which still counts."
   },
   {
    "id": "guardian-rafah-tent-fire-2024-05-26",
@@ -2731,7 +2791,9 @@
      "notes": "26-46 eyewitness interview, avoid; 58+ end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Guardian, night of 26 May 2024 Israeli strike on Tal al-Sultan displacement camp, Rafah ('tent massacre'); footage via agencies, Guardian captions)."
   },
   {
    "id": "ap-rafah-family-shrouds-2024-01",
@@ -2839,7 +2901,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Abu Youssef al-Najjar Hospital, Rafah, 12 Jan 2024: nine members of one family killed, bodies in white sheets (AP shotlist))."
   },
   {
    "id": "ap-smoke-gazacity-dawn-2014",
@@ -2872,7 +2936,9 @@
      "notes": "AP bug; 360p",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 22 Jul 2014 (2014 war)); an earlier Gaza war, which still counts."
   },
   {
    "id": "reuters-drone-may-2023",
@@ -2942,7 +3008,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters drone, Gaza, 14 May 2023 (May 2023 Israel-Islamic Jihad escalation), BEFORE the Oct 2023 war; on-screen date tag May 14, 2023); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-drone-khanyounis-abushammala-2023-10",
@@ -3036,7 +3104,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Khan Younis, 27 Oct 2023: destroyed Abu Shammala family building hit 26 Oct (20 killed, ~100 feared trapped) and surroundings (AP shotlist))."
   },
   {
    "id": "ap-explosion-near-camera-2009",
@@ -3135,7 +3205,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 1 Jan 2009 (Cast Lead 2008-09 war), NOT 2023+: explosion goes off near a burnt car, cameraman runs (AP shotlist)); an earlier Gaza war, which still counts."
   },
   {
    "id": "aje-beit-lahiya-rubble-2024-06",
@@ -3206,7 +3278,9 @@
      "notes": "lower-third banner",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English package, Beit Lahiya, northern Gaza, ~26 Jun 2024 (strike killing 15); reporter Moath al-Kahlout)."
   },
   {
    "id": "ap-drone-coast-road-return-2025-01-long",
@@ -3318,7 +3392,9 @@
      "notes": "rest of clip (120-323) not reviewed in detail: same coast road material",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Wadi Gaza coastal road, 27 Jan 2025: tens of thousands walk north as Israel lifts closure of northern Gaza (AP shotlist))."
   },
   {
    "id": "ap-flares-over-shifa-2023-11",
@@ -3404,7 +3480,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 7 Nov 2023: flares light up the night sky over al-Shifa Hospital, people say 'that is the sun up there' (AP shotlist))."
   },
   {
    "id": "guardian-ansar-tent-strike-2026-03",
@@ -3501,7 +3579,9 @@
      "notes": "caption 58-62",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Guardian: Israeli strike on al-Ansar tent camp west of Gaza City, evening of 11 Mar 2026, after evacuation calls (Guardian description))."
   },
   {
    "id": "ap-night-explosion-flares-2025-12",
@@ -3578,7 +3658,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel overlooking Gaza Strip, 27 Dec 2025 (during ceasefire): huge explosion, then flares (AP shotlist))."
   },
   {
    "id": "aje-strike-caught-on-camera-2023-10-21",
@@ -3619,7 +3701,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English live feed, Gaza City, 21 Oct 2023 (ticker: aid trucks entering, Cairo summit = 21 Oct 2023))."
   },
   {
    "id": "ap-return-north-vehicles-2025-01",
@@ -3726,7 +3810,9 @@
      "hits": [],
      "motion_tempo": 0.7
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Wadi Gaza / Salah al-Din road, 27 Jan 2025: cars and carts piled with mattresses returning north; families (AP shotlist))."
   },
   {
    "id": "ap-flares-aqsa-hospital-2024-03",
@@ -3777,7 +3863,9 @@
      "notes": "AP bug; keys well",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Deir al-Balah, 4 Mar 2024: flares over al-Aqsa hospital (AP shotlist))."
   },
   {
    "id": "nbc-rafah-drone-strike-aftermath-2023-12",
@@ -3865,7 +3953,9 @@
      "notes": "55+ NBC end card and anchor",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News, drone video of Rafah after an Israeli airstrike, late Dec 2023 (NBC upload 29 Dec 2023))."
   },
   {
    "id": "mee-walk-sheikh-radwan-2023-11-16",
@@ -3957,7 +4047,9 @@
      "notes": "vertical; subtitles 'gas bombs'",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Middle East Eye reporter in Gaza City (al-Jalaa St / Sheikh Radwan), on-screen tag 'Gaza, occupied Palestine 16 November 2023')."
   },
   {
    "id": "afp-rafah-night-strikes-flares-2023-12",
@@ -4031,7 +4123,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AFP, northern Rafah at night, 2 Dec 2023 (day after truce collapsed): air strikes and flares (AFP caption))."
   },
   {
    "id": "ap-zikim-flour-sacks-2025-07-31",
@@ -4105,7 +4199,9 @@
      "notes": "8-28 and 35-53 interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City / Zikim, 31 Jul 2025: crowds carry flour sacks back from Zikim crossing amid reports of shooting (AP shotlist))."
   },
   {
    "id": "reuters-nasser-live-entrance-2023-12",
@@ -4158,7 +4254,9 @@
      "notes": "not reviewed frame by frame",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters live feed of Nasser Medical Complex emergency entrance, Khan Younis, ~14 Dec 2023 (upload date; Reuters title 'GRAPHIC WARNING - LIVE'))."
   },
   {
    "id": "ap-before-after-gazacity-2021-2024",
@@ -4286,7 +4384,9 @@
      "notes": "rest 120-225 not reviewed in detail, same alternation",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP before/after: Omar al-Mukhtar St and Gaza City in 2021-2022 vs 18 Sep 2024 (AP shotlist))."
   },
   {
    "id": "ap-jabaliya-bodies-from-rubble-2025-05",
@@ -4378,7 +4478,9 @@
      "hits": [],
      "motion_tempo": 1.1
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Jabaliya, 23 May 2025: bodies recovered from rubble of a five-storey building destroyed overnight; PRCS (AP shotlist))."
   },
   {
    "id": "nbc-shifa-destroyed-2024-04",
@@ -4470,7 +4572,9 @@
      "notes": "55+ NBC end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News: al-Shifa Hospital, Gaza City, after Israeli forces withdrew from two-week operation (1 Apr 2024))."
   },
   {
    "id": "ap-netzarim-aid-hub-chaos-2025-05",
@@ -4562,7 +4666,9 @@
      "notes": "subtitles; smoke already rising (no onset)",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Nuseirat area near Netzarim / GHF aid hub, 29 May 2025 (AP shotlist))."
   },
   {
    "id": "ap-muwasi-tents-strike-2025-06",
@@ -4691,7 +4797,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Muwasi, 23 Jun 2025: tents of displaced people destroyed in overnight strike; people sift through wreckage (AP shotlist))."
   },
   {
    "id": "ap-maxar-north-gaza-before-after-2023-10",
@@ -4759,7 +4867,9 @@
      "notes": "caption",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP video of Maxar Technologies satellite imagery, northern Gaza before/after strikes (Oct 2023))."
   },
   {
    "id": "ap-zikim-walk-for-food-2025-07",
@@ -4851,7 +4961,9 @@
      "notes": "subtitle; 3-30 and 37-53, 65-79 interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 25 Jul 2025: thousands walk toward Zikim crossing hoping for aid; women describe shootings (AP shotlist))."
   },
   {
    "id": "nbc-missile-hits-building-2023-10",
@@ -4994,7 +5106,9 @@
      "notes": "48+ NBC end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News, Oct 2023 (upload 12 Oct 2023): residents filming earlier damage from a balcony in Gaza City catch a strike on a nearby tower; edit repeats the moment from several takes/angles)."
   },
   {
    "id": "ap-drone-khanyounis-2025-01",
@@ -5102,7 +5216,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Khan Younis, 19 Jan 2025, first day of ceasefire (AP shotlist))."
   },
   {
    "id": "ap-smoke-from-israel-2024-11",
@@ -5134,7 +5250,9 @@
      "notes": "AP bug; black frames at ~8, 27, 42; foreground is an Israeli town, note for framing",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel overlooking Gaza Strip, 12 Nov 2024 (AP shotlist))."
   },
   {
    "id": "ap-zikim-flour-multitude-2025-07-30",
@@ -5211,7 +5329,9 @@
      "hits": [],
      "motion_tempo": 0.55
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City / Zikim area, 30 Jul 2025: enormous crowds carrying flour sacks during famine declaration week (AP shotlist))."
   },
   {
    "id": "afp-flares-north-gaza-2023-11",
@@ -5301,7 +5421,9 @@
      "notes": "edit cuts (e.g. 92.68) between flare shots, not impacts",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AFP, flares and blasts over northern Gaza at night, ~11 Nov 2023 (AFP caption))."
   },
   {
    "id": "aje-children-community-kitchen-2026-02",
@@ -5413,7 +5535,9 @@
      "hits": [],
      "motion_tempo": 1.5
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English package on Gaza community kitchens, Feb 2026 (12-year-old Mahmoud Qassas); reporter piece-to-camera with graphics in second half)."
   },
   {
    "id": "ap-charity-kitchen-pots-2025-10",
@@ -5526,7 +5650,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 23 Oct 2025: women and children queue with pots at a charity kitchen amid rubble (AP shotlist))."
   },
   {
    "id": "ap-smoke-gazacity-rooftops-2023-10-10",
@@ -5613,7 +5739,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 10 Oct 2023: smoke rising from bombed buildings, filmed from rooftops in the city (AP shotlist))."
   },
   {
    "id": "ap-drone-rafah-khanyounis-tents-2025-01",
@@ -5706,7 +5834,9 @@
      "notes": "'KHAN YOUNIS' tag 45-52",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Rafah ruins and Khan Younis tent city, 21 Jan 2025 (AP caption; matches AP Archive TDovNmRZAvc shotlist))."
   },
   {
    "id": "ap-rafah-bread-queue-2024-02",
@@ -5797,7 +5927,9 @@
      "notes": "104+ interview with mother",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Rafah, 25 Feb 2024: women and children queue for hours at a bakery; tent life (AP shotlist))."
   },
   {
    "id": "ap-drone-talhawa-2025-10-b",
@@ -5904,7 +6036,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Tal al-Hawa, Gaza City, 11 Oct 2025 (AP shotlist))."
   },
   {
    "id": "ap-night-eid-bombardment-2014",
@@ -6005,7 +6139,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, night of 28 Jul 2014 (first night of Eid, 2014 war), NOT 2023+); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-sheikh-radwan-ruins-2025-10",
@@ -6095,7 +6231,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Sheikh Radwan neighbourhood, Gaza City, 12 Oct 2025, after ceasefire (AP shotlist))."
   },
   {
    "id": "ap-night-flares-explosions-2023-11-09",
@@ -6170,7 +6308,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel, 9 Nov 2023 night: flares and explosions over Gaza (AP shotlist))."
   },
   {
    "id": "ap-smoke-gazacity-2023-10-16",
@@ -6203,7 +6343,9 @@
      "notes": "AP bug; good as a calm locked-off plate. 120-177 shows view from southern Israel (not reviewed in detail)",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City and southern Israel, 16 Oct 2023: smoke plume over skyline (AP shotlist))."
   },
   {
    "id": "ap-return-gazacity-indescribable-2025-10",
@@ -6294,7 +6436,9 @@
      "notes": "0-6, 23-26, 30-34 split-screens/interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 12 Oct 2025: Palestinians return to find destruction (AP shotlist))."
   },
   {
    "id": "ap-khanyounis-ambulances-2023-10-30",
@@ -6367,7 +6511,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Nasser hospital area, Khan Younis, 30 Oct 2023: ambulances arrive, Red Crescent workers carry injured (AP shotlist))."
   },
   {
    "id": "ap-khanyounis-food-pots-jostle-2025-10",
@@ -6482,7 +6628,9 @@
      "notes": "20-35, 48-63, 92-107, 116+ interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Khan Younis, 31 Oct 2025: children and women jostle with pots for food at a kitchen (AP shotlist))."
   },
   {
    "id": "ap-ansar-tent-strike-fire-2026-03",
@@ -6600,7 +6748,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP ('video as incoming'), Gaza City, 11 Mar 2026: Israeli strike on al-Ansar tent camp after evacuation order sparks huge blaze)."
   },
   {
    "id": "reuters-before-after-drone-2024-04",
@@ -6741,7 +6891,9 @@
      "notes": "alternates with prewar shots (0-2, 12-14, 27-31, 39, 46, 54)",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters before/after drone footage of Gaza City, Khan Younis, Rafah over a year (Reuters description, location tags on-screen))."
   },
   {
    "id": "ap-jabaliya-dig-for-victims-2025-03",
@@ -6849,7 +7001,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Jabaliya, 18 Mar 2025 (day Israel resumed war, ending ceasefire): people dig through rubble for victims, carry a body out (AP shotlist))."
   },
   {
    "id": "f24-maxar-before-after-2023-10",
@@ -6938,7 +7092,9 @@
      "notes": "caption 87-89",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (France 24 package: Maxar satellite before/after of Beit Hanoun and northern Gaza (Oct 2023) plus ground footage)."
   },
   {
    "id": "ap-aqsa-children-mourned-2024-08",
@@ -7068,7 +7224,9 @@
      "notes": "60-71 interview; 120-203 not reviewed in detail",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, al-Aqsa hospital morgue, Deir al-Balah, 22 Aug 2024: 16 killed incl)."
   },
   {
    "id": "ap-drone-beit-lahiya-2025-02",
@@ -7159,7 +7317,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Beit Lahiya, northern Gaza, 17 Feb 2025 during ceasefire (AP shotlist))."
   },
   {
    "id": "ap-night-north-gaza-blasts-2023-10-27",
@@ -7244,7 +7404,9 @@
      "notes": "caption",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, night of 27 Oct 2023 (start of ground invasion, communications blackout): explosions light up northern Gaza, filmed through a window frame (AP shotlist))."
   },
   {
    "id": "guardian-aerial-from-aid-plane-2025-08",
@@ -7332,7 +7494,9 @@
      "notes": "label at 56; 0-1, 16-20, 28-31, 49-50 are 2023 'before' satellite frames",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Guardian: aerial footage shot by correspondent Lorenzo Tondo from a Jordanian aid plane over Gaza, compared with 2023 imagery (Guardian description); date tags on-screen)."
   },
   {
    "id": "reuters-explosions-overnight-2023-10-22",
@@ -7448,7 +7612,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters: explosions over Gaza City, 22 Oct 2023 (on-screen date tag, Reuters caption))."
   },
   {
    "id": "anadolu-drone-khanyounis-2025-10",
@@ -7500,7 +7666,9 @@
      "notes": "AA watermark; 52+ end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Anadolu Agency drone footage, Khan Younis, Oct 2025 (post-ceasefire), AA upload 20 Oct 2025)."
   },
   {
    "id": "guardian-aj-live-strike-2021",
@@ -7578,7 +7746,9 @@
      "notes": "0-37 reporter on camera; 109+ end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera's Youmna al-Sayed live from Gaza City as a neighbouring high-rise is hit, May 2021 war (Guardian description)); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-flares-dawn-from-israel-2023-11-11",
@@ -7629,7 +7799,9 @@
      "notes": "AP bug; foreground is an Israeli town",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel, 11 Nov 2023, night to dawn: flares over Gaza skyline (AP shotlist))."
   },
   {
    "id": "ap-aqsa-body-bags-prayer-2023-12",
@@ -7701,7 +7873,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, outside al-Aqsa Martyrs Hospital, Deir al-Balah, 28 Dec 2023: crowds pray over shrouded bodies on the ground (AP shotlist))."
   },
   {
    "id": "ap-drone-return-gazacity-coast-2025-01",
@@ -7792,7 +7966,9 @@
      "notes": "120-167 not reviewed in detail",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Gaza City coast, 27 Jan 2025: crowds streaming north into the ruins (AP shotlist))."
   },
   {
    "id": "ap-drone-talhawa-2025-01",
@@ -7899,7 +8075,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Tal al-Hawa, Gaza City, 28 Jan 2025 (AP shotlist))."
   },
   {
    "id": "aje-mawasi-burnt-tents-2024-12",
@@ -7971,7 +8149,9 @@
      "notes": "0-37 and 74+ reporter",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English (Tareq Abu Azzoum), al-Mawasi, Khan Younis, ~4 Dec 2024: aftermath of strike on tents in the 'safe zone')."
   },
   {
    "id": "aje-flooded-tents-2025-11",
@@ -8059,7 +8239,9 @@
      "notes": "lower-third; rest is interviews/reporter",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English (Hani Mahmoud), Gaza City, Nov 2025: rain floods tent camps)."
   },
   {
    "id": "ap-mawasi-crater-tents-2024-09",
@@ -8219,7 +8401,9 @@
      "notes": "120-161 not reviewed in detail",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Muwasi 'humanitarian zone', 10 Sep 2024: huge craters among tents after Israeli strike that killed at least 40 per Palestinian officials; residents show munition fragments (AP shotlist))."
   },
   {
    "id": "ap-khanyounis-flooded-tents-2025-12",
@@ -8328,7 +8512,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Khan Younis, 28 Dec 2025: flooded tent camp, people repairing destroyed tents on the beach, woman crying (AP shotlist))."
   },
   {
    "id": "guardian-drone-rafah-2025-01",
@@ -8418,7 +8604,9 @@
      "notes": "94+ Guardian end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Guardian: drone footage from Rafah showing neighbourhoods reduced to rubble, upload 21 Jan 2025 (ceasefire))."
   },
   {
    "id": "guardian-rafah-house-drone-2023-12",
@@ -8490,7 +8678,9 @@
      "notes": "35+ end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Guardian: drone over remains of a house destroyed in an airstrike in Rafah, Palestinians gathered (late Dec 2023))."
   },
   {
    "id": "aje-north-gaza-hunger-2025-06",
@@ -8619,7 +8809,9 @@
      "notes": "rest interviews/reporter",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English (Moath al-Kahlout), northern Gaza, Jun 2025: starving families queue all night; GHF has no sites in the north)."
   },
   {
    "id": "ap-smoke-gazacity-from-israel-2025-09",
@@ -8713,7 +8905,9 @@
      "notes": "116-137 not reviewed",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP, southern Israel looking into Gaza City, 16 Sep 2025 (first day of the Gaza City ground offensive): multiple smoke plumes (AP shotlist))."
   },
   {
    "id": "nbc-tower-flattened-2023-10-07",
@@ -8816,7 +9010,9 @@
      "notes": "41+ NBC end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News, Gaza City, 7 Oct 2023 (evening): Israeli strike flattens a residential high-rise (Palestine Tower area); multiple angles incl)."
   },
   {
    "id": "cctv-dig-remains-2025-03",
@@ -8903,7 +9099,9 @@
      "notes": "subtitles; rest interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (CCTV Video News Agency (Chinese state media agency) feature, northern Gaza, Mar 2025: Suhail al-Majdalawi digging remains of his family from rubble; burned-in English subtitles)."
   },
   {
    "id": "ap-night-blasts-from-israel-2025-09",
@@ -9022,7 +9220,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel overlooking Gaza Strip, night of 7-8 Sep 2025 (Gaza City offensive): large explosions (AP shotlist))."
   },
   {
    "id": "ap-salahaldin-flight-2024-10",
@@ -9114,7 +9314,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Salah al-Din Street, 22 Oct 2024: Palestinians forced from shelters in northern Gaza flee along a road lined with destroyed buildings (AP shotlist))."
   },
   {
    "id": "ap-nasser-ambulances-2023-12-01",
@@ -9203,7 +9405,9 @@
      "notes": "120-155 not reviewed in detail",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Nasser Hospital, Khan Younis, 1 Dec 2023 (strikes resume after truce): ambulances bring injured (AP shotlist))."
   },
   {
    "id": "ap-aqsa-shroud-laundry-2023-10",
@@ -9294,7 +9498,9 @@
      "hits": [],
      "motion_tempo": 1.4
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, al-Aqsa Martyrs Hospital morgue, Deir al-Balah, 25 Oct 2023: bodies carried to ambulance; shrouds running out; workers cut and prepare white cloth (AP shotlist))."
   },
   {
    "id": "ap-night-strikes-2021-05",
@@ -9356,7 +9562,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza, pre-dawn 20 May 2021 (May 2021 war), NOT 2023+); an earlier Gaza war, which still counts."
   },
   {
    "id": "aje-civil-defence-body-recovery-2025-12",
@@ -9464,7 +9672,9 @@
      "notes": "0-11 studio, 24-35, 72-79, 100, 112+ interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English (Ibrahim al-Khalili), Gaza City, Dec 2025: civil defence with one bulldozer recover bodies from rubble; white body bags)."
   },
   {
    "id": "anadolu-drone-batn-alsameen-2025-10",
@@ -9516,7 +9726,9 @@
      "notes": "25+ end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Anadolu Agency drone, Batn al-Sameen neighbourhood, Khan Younis, Oct 2025)."
   },
   {
    "id": "ap-drone-beit-lahiya-2025-02-long",
@@ -9587,7 +9799,9 @@
      "notes": "120-487 not reviewed frame by frame: same continuous drone material, good long backdrop",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Beit Lahiya, 17 Feb 2025 (AP shotlist; longer version of ap-drone-beit-lahiya-2025-02))."
   },
   {
    "id": "nbc-rafah-tent-fire-2024-05",
@@ -9661,7 +9875,9 @@
      "notes": "PiP inset and banner; extremely graphic grief; better sourced clean elsewhere",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC TODAY package (Claudio Lavanga), Rafah tent camp strike of 26 May 2024; includes footage from the night fire and hospital)."
   },
   {
    "id": "guardian-nuseirat-drone-2023-10",
@@ -9751,7 +9967,9 @@
      "notes": "62+ end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Guardian: drone over Nuseirat refugee camp after apparent Israeli airstrike, mid-Oct 2023 (same event as NBC bakery clip))."
   },
   {
    "id": "ap-rafah-smoke-over-tents-2024-05",
@@ -9821,7 +10039,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Khan Younis overlooking Rafah, 29 May 2024: smoke over Rafah behind sprawling tent camps of displaced (AP shotlist))."
   },
   {
    "id": "ap-planet-satellite-before-after-2025-01",
@@ -9908,7 +10128,9 @@
      "notes": "labels",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP video of Planet Labs PBC satellite images: Gaza City, Jabaliya, Muwasi, June 2023 vs 3 Jan 2025 (on-screen labels, Planet Labs credit))."
   },
   {
    "id": "aje-palestine-tower-live-2023-10-07",
@@ -9987,7 +10209,9 @@
      "notes": "banner",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English live, Gaza City, 7 Oct 2023: Palestine Tower is struck behind reporter Youmna El Sayed)."
   },
   {
    "id": "ap-aqsa-shrouds-prayer-2024-05",
@@ -10098,7 +10322,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, al-Aqsa Martyrs Hospital, Deir al-Balah, 12 May 2024: four killed in strike; shrouded bodies carried from morgue, prayers (AP shotlist))."
   },
   {
    "id": "aje-shifa-inside-2023-10-21",
@@ -10187,7 +10413,9 @@
      "notes": "banner",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English (Youmna El Sayed), al-Shifa Hospital, Gaza City, Oct 2023: displaced families sheltering in grounds, overflowing ER, injured children)."
   },
   {
    "id": "ap-flares-cloudy-night-2025-12",
@@ -10238,7 +10466,9 @@
      "notes": "black frame at 60; 120-239 not reviewed in detail",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel overlooking the Gaza Strip, 27 Dec 2025 (ceasefire period): flares over Gaza (AP shotlist))."
   },
   {
    "id": "wsj-residents-film-tower-strike-2023-10",
@@ -10337,7 +10567,9 @@
      "notes": "small Reuters credit lower-left 23-25",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (WSJ, Gaza, Thursday 12 Oct 2023: residents film from a balcony as Israeli strike hits a nearby high-rise; Reuters credit on-screen at end)."
   },
   {
    "id": "c4-gaza-city-flight-hospital-2024-06",
@@ -10445,7 +10677,9 @@
      "notes": "72-95 interviews; rest not reviewed",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Channel 4 News, Gaza City (Shujaiya assault), 27 Jun 2024: families flee south; wounded in hospital; phone footage from local camera operators)."
   },
   {
    "id": "ap-nasser-hospital-wrecked-2024-04",
@@ -10571,7 +10805,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Nasser Hospital, Khan Younis, 7 Apr 2024, after Israeli withdrawal: wrecked wards and emergency entrance (AP shotlist))."
   },
   {
    "id": "nbc-jala-tower-collapse-2021",
@@ -10640,7 +10876,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News Now, May 2021 war (14-storey tower collapse, Gaza City)); an earlier Gaza war, which still counts."
   },
   {
    "id": "newscomau-gaza-city-towers-2025-09",
@@ -10829,7 +11067,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (news.com.au compilation, Gaza City, Sep 2025 tower demolitions (incl)."
   },
   {
    "id": "ap-khanyounis-tents-crater-2026-06",
@@ -10919,7 +11159,9 @@
      "notes": "32-67 and 96-? interviews; 120-247 not reviewed in detail",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Khan Younis, 30 Jun 2026: Israeli air attack destroys dozens of tents; displaced people beside huge crater (AP shotlist))."
   },
   {
    "id": "aje-satellite-studio-2026-09",
@@ -10970,7 +11212,9 @@
      "notes": "AJ logo; rest is presenter in studio",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English studio explainer (Lina Abu Akleh) with satellite before/after imagery of Rafah, Islamic University, coast (2022/2023 vs 2026))."
   },
   {
    "id": "ap-smoke-from-israel-2023-10-18",
@@ -11028,7 +11272,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel looking at Gaza, 18 Oct 2023 (AP shotlist))."
   },
   {
    "id": "ap-national-security-hq-smoke-2012",
@@ -11135,7 +11381,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City (Rimal), 18 Nov 2012 (Operation Pillar of Defense, 2012), NOT 2023+: black smoke from bombed National Security Forces HQ (AP shotlist)); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-salahaldin-crossing-return-2025-01",
@@ -11259,7 +11507,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Salah al-Din Street crossing, 27 Jan 2025: people and vehicles wait and pass north (AP shotlist))."
   },
   {
    "id": "ap-drone-khanyounis-2025-01-long",
@@ -11385,7 +11635,9 @@
      "notes": "120-232 not reviewed frame by frame",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP drone, Khan Younis, 19 Jan 2025 (AP shotlist; long clean version of ap-drone-khanyounis-2025-01))."
   },
   {
    "id": "ap-aqsa-night-ambulances-2025-04",
@@ -11440,7 +11692,9 @@
      "hits": [],
      "motion_tempo": 0.5
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, al-Aqsa hospital, Deir al-Balah, night of 7 Apr 2025: ambulances arrive after strikes (AP shotlist; strike also hit a press tent nearby that night))."
   },
   {
    "id": "reuters-night-fireballs-2023-10-08",
@@ -11581,7 +11835,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Reuters, Gaza City, night of 7-8 Oct 2023 and morning of 8 Oct (on-screen date tags))."
   },
   {
    "id": "ap-gazacity-tent-camp-struck-2026-03-12",
@@ -11689,7 +11945,9 @@
      "notes": "92-103 interview; 120-167 not reviewed",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 12 Mar 2026: displaced people return to the al-Ansar tent camp struck the night before (AP shotlist))."
   },
   {
    "id": "ap-nuseirat-dead-child-2025-10",
@@ -11835,7 +12093,9 @@
      "notes": "120-137 not reviewed",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Nuseirat, 20 Oct 2025 (wave of strikes during ceasefire): AP clients note 'edit contains shots of dead child'; bodies in morgue container, funeral prayers)."
   },
   {
    "id": "nbc-nasser-courtyard-graves-2024-01",
@@ -11949,7 +12209,9 @@
      "notes": "64+ NBC end card",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News, Nasser Hospital grounds, Khan Younis, Jan 2024: dozens buried in sandy graves in the hospital courtyard because cemeteries unreachable)."
   },
   {
    "id": "ap-gazacity-bakery-queue-2024-05",
@@ -12058,7 +12320,9 @@
      "notes": "72-103 interview; 120-161 not reviewed",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 4 May 2024 (famine warning): line outside a reopened bakery behind metal barriers; bread being made and sold (AP shotlist))."
   },
   {
    "id": "nbc-night-tower-collapse-2023-10-08",
@@ -12157,7 +12421,9 @@
      "notes": "45+ NBC end card and anchor",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NBC News Now (upload 8 Oct 2023): Gaza City building struck at night and collapses; next-morning dust and sunrise)."
   },
   {
    "id": "fa-rafah-plume-sync-2014",
@@ -12230,7 +12496,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Forensic Architecture 'Black Friday' Rafah, 1 Aug 2014 (2014 war): synchronising multiple citizen videos of the same plumes, satellite triangulation); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-beit-lahiya-flight-2024-11",
@@ -12361,7 +12629,9 @@
      "notes": "36-55, 88-107 interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Salah al-Din Street, 17 Nov 2024: Palestinians flee Beit Lahiya after strike killing at least 30 (AP shotlist))."
   },
   {
    "id": "ap-night-strike-gazacity-2019",
@@ -12422,7 +12692,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 15 Mar 2019 (2019 escalation), NOT 2023+); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-gazacity-towers-bombed-2025-09",
@@ -12538,7 +12810,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 7 Sep 2025: residents evacuate an al-Ruya residential tower after warning; Israel intensifies bombing of remaining high-rises (AP shotlist; AP resent to clarify building...)."
   },
   {
    "id": "ap-nasser-ambulances-2023-11-03",
@@ -12609,7 +12883,9 @@
      "hits": [],
      "motion_tempo": 0.4
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza (Nasser hospital, Khan Younis), 3 Nov 2023: ambulances arrive, people rush to help (AP shotlist))."
   },
   {
    "id": "ap-strike-near-ap-camera-2014",
@@ -12717,7 +12993,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, 18 Jul 2014 (2014 war), NOT 2023+: airstrike yards from AP camera position, three blasts then towering plume; later rocket trails from Gaza (AP storyline)); an earlier Gaza war, which still counts."
   },
   {
    "id": "ap-dawn-smoke-gazacity-2014",
@@ -12807,7 +13085,9 @@
      "notes": "112+ night",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City at dawn, 31 Jul 2014 (2014 war), NOT 2023+); an earlier Gaza war, which still counts."
   },
   {
    "id": "aje-search-rubble-three-years-2026-07",
@@ -12931,7 +13211,9 @@
      "notes": "56-75, 84-95, 104 interviews; 120-148 not reviewed",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Al Jazeera English (Hind Khoudary), Gaza City, Jul 2026: civil defence and families dig through an apartment block destroyed in Nov 2023 (300+ killed, many still unrecovered); relatives...)."
   },
   {
    "id": "ap-night-blast-gazacity-2014-07-20",
@@ -12992,7 +13274,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AP, Gaza City, night of 20 Jul 2014 (2014 war), NOT 2023+); an earlier Gaza war, which still counts."
   },
   {
    "id": "mee-rafah-abu-jazar-house-2023-11",
@@ -13102,7 +13386,9 @@
      "notes": "vertical; subtitles",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (Middle East Eye, Rafah, 14 Nov 2023 (on-screen tag): residents clear rubble of Abu Jazar family house after night strike)."
   },
   {
    "id": "mee-shorouk-tower-collapse-2021",
@@ -13162,7 +13448,9 @@
      "notes": "vertical frame with blurred sides",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (MEE, al-Shorouk tower collapse, Gaza City, 12 May 2021 (on-screen date), May 2021 war, NOT 2023+. Vertical MEE frame with blurred sides; Al Jazeera Arabic live inside); an earlier Gaza war, which still counts."
   },
   {
    "id": "nypost-aqsa-hospital-tents-burnt-2024-10",
@@ -13252,7 +13540,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (NY Post, aftermath of 14 Oct 2024 strike on the al-Aqsa Hospital courtyard tent camp, Deir al-Balah, which set tents ablaze (widely reported; this clip shows morning-after))."
   },
   {
    "id": "ap-flares-cloudy-night-2025-12-b",
@@ -13312,7 +13602,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed from southern Israel looking into Gaza, so it shows Gaza (AP from southern Israel overlooking the Gaza Strip, 27 Dec 2025 (same night as ap-night-explosion-flares-2025-12, alternate edit))."
   },
   {
    "id": "bisan-fleeing-7th-time-2023-12",
@@ -13439,7 +13731,9 @@
      "notes": "subtitles",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AJ+ 'It's Bisan From Gaza' episode: Bisan Owda leaves Nasser hospital area in Khan Younis for Rafah, Dec 2023 (her 7th displacement))."
   },
   {
    "id": "bisan-cant-recognize-rafah-2025-01",
@@ -13586,7 +13880,9 @@
      "notes": "subtitles; rest mostly interviews",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Filmed in Gaza (AJ+ 'It's Bisan From Gaza' episode: Bisan Owda returns to Rafah during Jan 2025 ceasefire and cannot recognise it)."
   }
  ]
 }

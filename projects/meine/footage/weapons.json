@@ -51,7 +51,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US Army 155 mm shell production at Scranton (arsenal at home); the provenance's 'supplied Ukraine and Israel' is uncited and not tied to these shells, so not arms-to-israel."
   },
   {
    "id": "iowa-aap-155mm-line-workers",
@@ -85,7 +87,9 @@
      "motion_tempo": 3.0,
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US 155 mm production line at Iowa AAP: the arsenal at home, no Israel tie."
   },
   {
    "id": "iowa-aap-paint-line",
@@ -118,7 +122,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US 155 mm paint line at Iowa AAP: the arsenal at home."
   },
   {
    "id": "centcom-iran-strikes-jul2026",
@@ -287,7 +293,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US CENTCOM launches and strike-cam on Iran, July 2026: the resumed phase of the 2026 US-Israel war on Iran; Israel was striking Iran in the same weeks (IDF air-defence strikes, 8 Jun 2026) and PBS calls it 'the US-Israel war with Iran'."
   },
   {
    "id": "jdam-build-balad-2007",
@@ -356,7 +364,9 @@
      "notes": "0-6 is a DoD slate",
      "hits": []
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "USAF building JDAMs at Balad, Iraq, 2007, in theatre for the Iraq war, a war unconnected to Israel."
   },
   {
    "id": "tomahawk-night-philippine-sea-2014",
@@ -442,7 +452,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "US Navy Tomahawk launches for the first US strikes on ISIL in Syria, 2014."
   },
   {
    "id": "apache-gun-tape-iraq-2008",
@@ -562,7 +574,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "US Army Apache gun tape from Iraq, 2008."
   },
   {
    "id": "oir-strike-feb2015",
@@ -622,7 +636,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) airstrike on ISIL in Iraq, 2015."
   },
   {
    "id": "oir-ramadi-bridge-2015",
@@ -712,7 +728,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) strikes on a bridge near Ramadi, Iraq, 2015."
   },
   {
    "id": "oir-hit-weapons-storage-2016",
@@ -785,7 +803,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) strike near Hit, Iraq, 2016."
   },
   {
    "id": "f16-gbu39-sortie-cockpit",
@@ -852,7 +872,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF F-16 GBU-39 sortie cockpit GoPro, with no combat theatre named: weapons footage on a training or test sortie."
   },
   {
    "id": "oir-habbaniyah-convoy-2016",
@@ -938,7 +960,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) convoy strike near Habbaniyah, Iraq, 2016."
   },
   {
    "id": "oir-bayji-vehicle-2017",
@@ -986,7 +1010,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) strike near Bayji, Iraq, 2017."
   },
   {
    "id": "oir-mosul-vbied-facility-2017",
@@ -1046,7 +1072,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) strike near Mosul, Iraq, 2017."
   },
   {
    "id": "ah1z-hellfire-lejeune-2016",
@@ -1078,7 +1106,9 @@
      "notes": "minimal; the streak lines could be used as a texture",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USMC Hellfire range shoot at Camp Lejeune: range firing."
   },
   {
    "id": "oir-raqqa-artillery-2017",
@@ -1119,7 +1149,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "US Marine artillery strike near Raqqa, Syria, 2017 (OIR)."
   },
   {
    "id": "a10-bomb-load-nellis",
@@ -1195,7 +1227,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF A-10 loading and range impact at Nellis: training and range."
   },
   {
    "id": "sdb-feature-deployed-2017",
@@ -1303,9 +1337,13 @@
        "strength": 4,
        "note": "\u00b10.08"
       }
-     ]
+     ],
+     "scope": "other",
+     "scope_note": "A US combat strike clip from a deployed anti-ISIS-era base, not arsenal footage."
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF showcase of the GBU-39 build and loading at Al Dhafra; its one combat strike clip (155.5-163, an anti-ISIS-era strike) is scoped other."
   },
   {
    "id": "oir-susah-fuel-truck-2018",
@@ -1369,7 +1407,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Coalition (OIR) strike on an ISIS fuel truck in as-Susah, Syria, 2018."
   },
   {
    "id": "gbu39-sdb-promo-nellis",
@@ -1442,7 +1482,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF GBU-39 showcase promo on a Nevada range; the bomb type is used by Israel in Gaza, but these bombs and this footage have no Israel tie."
   },
   {
    "id": "mq9-live-hellfire-holloman",
@@ -1628,7 +1670,9 @@
      ],
      "motion_tempo": 1.05
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF MQ-9 Hellfire live-fire training at White Sands: range firing."
   },
   {
    "id": "apache-rising-thunder",
@@ -1693,7 +1737,9 @@
      "notes": "swarm image",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US and Japanese Apaches in exercise Rising Thunder at Yakima: training."
   },
   {
    "id": "juniper-oak-2023-broll",
@@ -1770,7 +1816,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "US-Israel exercise Juniper Oak filmed in Israel's Negev beside IDF troops, so it shows the US military operating jointly with Israel's on Israeli territory."
   },
   {
    "id": "hellfire-yakima-broll",
@@ -1867,7 +1915,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US Army Apache Hellfire range shoot at Yakima: range firing."
   },
   {
    "id": "f35i-nevatim-takeoffs",
@@ -1950,7 +2000,9 @@
      "notes": "sky-only frames key easily",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Israeli Air Force F-35Is taking off from Nevatim, Israel (DVIDS, Juniper Oak 2023)."
   },
   {
    "id": "f35i-juniper-oak-vertical",
@@ -1982,7 +2034,9 @@
      "notes": "9:16; JPO end card from 9",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Israeli Air Force F-35I taking off from Nevatim, Israel."
   },
   {
    "id": "hellfire-symphony-tads",
@@ -2216,7 +2270,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US Army 'Apache in G Major' Hellfire range shoot at Yakima: range firing."
   },
   {
    "id": "hellfire-greece-flir",
@@ -2275,7 +2331,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US Army Apache Hellfire range shoot in Greece (DEFENDER 23): range firing."
   },
   {
    "id": "mq9-nevada-flying",
@@ -2325,7 +2383,9 @@
      "notes": "sky-only background keys easily",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF MQ-9 carrying Hellfires on a test flight over Nevada."
   },
   {
    "id": "c17-munitions-onload-selfridge",
@@ -2410,7 +2470,9 @@
      "notes": "dark surround keys well; nice framing device",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "Domestic US exercise munitions onload at Selfridge; the provenance says it is NOT a shipment to Israel."
   },
   {
    "id": "iowa-aap-rounds-moving",
@@ -2442,7 +2504,9 @@
      "notes": "loopable",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US 155 mm production at Iowa AAP: the arsenal at home."
   },
   {
    "id": "c17-onload-deployed",
@@ -2491,7 +2555,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "other",
+   "scope_note": "Generic USAF C-17 cargo palletizing and takeoff; no munitions are shown and it isn't about weapons."
   },
   {
    "id": "scranton-finish-turn",
@@ -2523,7 +2589,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US 155 mm shell lathe work at Scranton AAP: the arsenal at home."
   },
   {
    "id": "apache-red-sands-uas",
@@ -2617,7 +2685,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US Army Apaches in the Red Sands 24.2 counter-drone exercise in Saudi Arabia: range firing."
   },
   {
    "id": "mq9-strike-yemen-2024",
@@ -2660,7 +2730,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US CENTCOM MQ-9 strike on Houthi weapons storage in Yemen, Nov 2024: the US Red Sea campaign against the Houthis, which began after the Houthis attacked shipping in declared solidarity with Gaza (from Nov 2023)."
   },
   {
    "id": "f35-gbu31-release",
@@ -2694,7 +2766,9 @@
      "notes": "vertical 9:16; burned-in 'File Footage' and 'Lightning Flash Fact' caption at bottom; crop to the middle band",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US F-35 test drop of an inert GBU-31: a weapons test."
   },
   {
    "id": "centcom-sanaa-night-launch-dec2024",
@@ -2740,7 +2814,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US carrier launches for strikes on Houthi missile storage in Sana'a, Dec 2024: the US Red Sea campaign against the Houthis, which began after the Houthis attacked shipping in declared solidarity with Gaza (from Nov 2023)."
   },
   {
    "id": "centcom-yemen-dec2024-carrier-ship",
@@ -2790,7 +2866,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US carrier and ship launches for strikes on the Houthis, Dec 2024: the US Red Sea campaign against the Houthis, which began after the Houthis attacked shipping in declared solidarity with Gaza (from Nov 2023)."
   },
   {
    "id": "b52-refuel-centcom-2025",
@@ -2822,7 +2900,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US B-52 task-force presence flight refuelling over the Middle East; no strike: arsenal showcase."
   },
   {
    "id": "centcom-houthi-carrier-day",
@@ -2874,7 +2954,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US carrier launches as strikes on the Houthis began, 15 Mar 2025: the US Red Sea campaign against the Houthis, which began after the Houthis attacked shipping in declared solidarity with Gaza (from Nov 2023) (resumed after the Houthis renewed their threats over Israel's Gaza aid blockade)."
   },
   {
    "id": "centcom-houthi-night-cat-launches",
@@ -2931,7 +3013,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US carrier night launches against the Houthis, Mar 2025: the US Red Sea campaign against the Houthis, which began after the Houthis attacked shipping in declared solidarity with Gaza (from Nov 2023)."
   },
   {
    "id": "gbu39-load-mq9-night",
@@ -2983,7 +3067,9 @@
      "notes": "keys well",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF crew loading GBU-39s onto an MQ-9: weapons handling."
   },
   {
    "id": "jdam-build-whiteman",
@@ -3121,7 +3207,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF JDAM assembly at Whiteman AFB: the arsenal at home."
   },
   {
    "id": "b2-jdam-load-whiteman",
@@ -3222,7 +3310,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF loading JDAMs into a B-2 at Whiteman: the arsenal at home."
   },
   {
    "id": "c17-night-patriot-delivery",
@@ -3275,7 +3365,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "USAF C-17 delivering Patriot components in the CENTCOM AOR; this is weapons logistics rather than combat, and the provenance says it is not Israel-specific."
   },
   {
    "id": "centcom-epic-fury-tomahawks",
@@ -3368,7 +3460,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "region",
+   "scope_note": "US CENTCOM Tomahawk and carrier launches opening Operation Epic Fury on 28 Feb 2026: part of the same 2026 Iran war Israel fought alongside the US (Epic Fury ran in parallel with Israel's Roaring Lion from 28 Feb 2026)."
   },
   {
    "id": "mq9-hellfire-reload-gulfport",
@@ -3469,7 +3563,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "US Air National Guard Hellfire reload exercise in Mississippi: weapons handling in training."
   },
   {
    "id": "imod-mk84-ashdod-feb2025",
@@ -3544,7 +3640,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "arms-to-israel",
+   "scope_note": "Israel MoD video of the US-released MK-84 2,000 lb bomb shipment unloaded at Ashdod, Feb 2025."
   },
   {
    "id": "ap-deir-balah-strikes-dawn",
@@ -3595,7 +3693,9 @@
      "notes": "slow, mournful base layer",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "AP footage of Israeli strikes filmed in Deir al-Balah, central Gaza."
   },
   {
    "id": "reuters-iran-missiles-north-israel-2026",
@@ -3661,7 +3761,9 @@
      "notes": "quiet, ominous base layer",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Iranian rockets and Israeli interceptors over northern Israel, June 2026."
   },
   {
    "id": "idf-haniyeh-office-2008",
@@ -3755,7 +3857,9 @@
      "notes": "burned-in label",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released strike-pod video of a strike in Gaza City, Cast Lead 2008."
   },
   {
    "id": "idf-gaza-strikes-oct13-2023",
@@ -3889,7 +3993,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released aerial footage of Israeli Air Force strikes on Gaza, 13 Oct 2023."
   },
   {
    "id": "imod-airlift-pixelated-2026",
@@ -3923,7 +4029,9 @@
      "notes": "STRONG concept: the munitions literally pixelated. Vertical 9:16, burned-in 'ISRAEL March 2, 2026', caption boxes, 'THE TIMES OF ISRAEL' logo; crop to central band",
      "hits": []
     }
-   ]
+   ],
+   "scope": "arms-to-israel",
+   "scope_note": "Israel MoD footage of the first munitions cargo plane landing in Israel in the 2026 Iran escalation (cargo censored)."
   },
   {
    "id": "idf-beit-hanoun-launcher-2014",
@@ -3986,7 +4094,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released strike-pod video of a strike in Beit Hanoun, Gaza, 2014."
   },
   {
    "id": "ap-gaza-smoke-column-2014",
@@ -4019,7 +4129,9 @@
      "notes": "AP bug top-right; slow evolving plume",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "AP footage of a smoke column over Gaza City after an Israeli airstrike, 2014 war."
   },
   {
    "id": "ap-interceptions-telaviv-jlm-feb2026",
@@ -4147,7 +4259,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Interceptions of Iranian missiles over Tel Aviv and Jerusalem, Feb 2026."
   },
   {
    "id": "ap-interceptions-jerusalem-mar2026",
@@ -4214,7 +4328,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Interceptions of Iranian missiles over Jerusalem, Mar 2026."
   },
   {
    "id": "idf-launcher-strike-2009",
@@ -4280,7 +4396,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released strike-pod video of a strike in Gaza, Cast Lead 2009."
   },
   {
    "id": "ap-telaviv-intercepts-may2023",
@@ -4320,7 +4438,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Iron Dome interceptions over Tel Aviv, May 2023."
   },
   {
    "id": "ap-iron-dome-chase-may2021",
@@ -4358,7 +4478,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Iron Dome interceptions over Israel, May 2021."
   },
   {
    "id": "idf-weapons-storage-2011",
@@ -4417,7 +4539,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released strike-pod video of a strike in Gaza, Dec 2011."
   },
   {
    "id": "ap-raw-idf-footage-2014",
@@ -4503,7 +4627,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released Gaza strike videos plus Israeli artillery and Iron Dome on the Gaza border, Aug 2014."
   },
   {
    "id": "nypost-senate-rejects-sanders-nov2024",
@@ -4553,7 +4679,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "politics-israel",
+   "scope_note": "Senate vote on Sanders' resolutions to block $20bn of arms sales to Israel, Nov 2024."
   },
   {
    "id": "abc-house-israel-aid-nov2023",
@@ -4601,7 +4729,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "politics-israel",
+   "scope_note": "ABC coverage of the House vote on the $14.3bn Israel aid bill, Nov 2023."
   },
   {
    "id": "iaf-night-launch-feb2026",
@@ -4688,7 +4818,9 @@
      "notes": "blurred faces are an interesting texture",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Israeli Air Force-released video of IAF jets launching at night, Feb 2026."
   },
   {
    "id": "ap-ashkelon-intercept-day-oct2023",
@@ -4737,9 +4869,13 @@
      "palette": "grey/beige",
      "overlay_ok": true,
      "notes": "",
-     "hits": []
+     "hits": [],
+     "scope": "gaza",
+     "scope_note": "Long lens from Ashkelon looking at smoke over Gaza: it depicts Gaza."
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Iron Dome interception over Ashkelon, Israel, Oct 2023; its second segment looks across into Gaza and carries its own gaza scope."
   },
   {
    "id": "c17-first-us-munitions-israel-oct2023",
@@ -4791,7 +4927,9 @@
      "notes": "STRONG for the 'U.S. AIR FORCE' lettering in Israel",
      "hits": []
     }
-   ]
+   ],
+   "scope": "arms-to-israel",
+   "scope_note": "The first US Air Force C-17 carrying munitions landing at Nevatim, Israel, 10 Oct 2023 (re-upload of IDF/IMOD footage)."
   },
   {
    "id": "idf-castlead-nightvision-2009",
@@ -4876,7 +5014,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF Spokesperson night-vision footage of an Israeli ground raid in northern Gaza, Cast Lead 2009."
   },
   {
    "id": "reuters-interceptor-contrail-feb2026",
@@ -4942,7 +5082,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Israeli air defences intercepting Iranian missiles over Jerusalem and central Israel, Feb 2026."
   },
   {
    "id": "boeing-jdam-400k-stcharles",
@@ -5011,7 +5153,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "Boeing JDAM kit production at St. Charles, 2019; the provenance says the plant supplies Israel's JDAMs, but no Israel-bound weapons are shown (a borderline call; it could flip to arms-to-israel)."
   },
   {
    "id": "ap-jerusalem-night-streaks-jun2025",
@@ -5077,7 +5221,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Interceptions of Iranian missiles over Jerusalem, June 2025."
   },
   {
    "id": "iaf-f16i-jdam-rising-lion",
@@ -5147,7 +5293,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF video of IAF F-16Is with JDAMs departing to strike Iran (Rising Lion, 2025)."
   },
   {
    "id": "fa-rafah-bomb-identification",
@@ -5223,7 +5371,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Forensic Architecture's analysis of the 1 Aug 2014 Israeli bombing of Rafah, Gaza, including the munition identification."
   },
   {
    "id": "idf-meet-the-f35i-2026",
@@ -5308,7 +5458,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Official IDF 'Meet the F-35I' propaganda short, including IAF strikes on Iran."
   },
   {
    "id": "israel-gbu31-prep-oct2023-reedit",
@@ -5379,7 +5531,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "arms-to-israel",
+   "scope_note": "Probable IMOD/IDF footage of US-supplied GBU-31 JDAMs being prepared by Israeli personnel after the Oct 2023 airlift began (attribution caveated)."
   },
   {
    "id": "lm-f35i-combat-capable-2017",
@@ -5429,7 +5583,9 @@
      "notes": "captions",
      "hits": []
     }
-   ]
+   ],
+   "scope": "arms-to-israel",
+   "scope_note": "Lockheed Martin video on Israel's F-35I being declared operational at Nevatim: the US manufacturer selling its jet to Israel."
   },
   {
    "id": "iaf-rising-lion-shelters-jun2025",
@@ -5536,7 +5692,9 @@
      "notes": "keys well on black; caption 'INSIDE ISRAEL'S OPERATION RISING LION'",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF video of IAF jets prepared and launching for strikes on Iran, June 2025."
   },
   {
    "id": "aj-high-powered-bombs-explainer",
@@ -5605,7 +5763,9 @@
      "palette": "grey sky",
      "overlay_ok": true,
      "notes": "stock-style air-to-air, origin not stated (likely US/IAF PR)",
-     "hits": []
+     "hits": [],
+     "scope": "other",
+     "scope_note": "Stock F-16 formation with no stated air force; nothing ties it to Israel."
     },
     {
      "in": 128.0,
@@ -5689,7 +5849,9 @@
        "note": "airburst ignition",
        "t_agent": 157.22
       }
-     ]
+     ],
+     "scope": "israel",
+     "scope_note": "Unlabelled night WP airburst; Israel's WP use over Gaza and Lebanon is documented but this shot's location is not stated, so it is scoped to Israel as actor, not Gaza."
     },
     {
      "in": 169.5,
@@ -5707,7 +5869,9 @@
      "palette": "grey/blue screens",
      "overlay_ok": true,
      "notes": "big AJ title text",
-     "hits": []
+     "hits": [],
+     "scope": "israel",
+     "scope_note": "Control-room graphic about Israel's AI kill lists."
     },
     {
      "in": 212.4,
@@ -5733,9 +5897,13 @@
        "strength": 4,
        "note": "cut-in at impact"
       }
-     ]
+     ],
+     "scope": "israel",
+     "scope_note": "Labelled Israeli army strike-cam video."
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Al Jazeera explainer on Israel's heavy bombs in Gaza, mostly AJ field footage from Gaza; the stock jets, the unlocated WP airburst and the Israeli-army inserts carry their own segment scopes."
   },
   {
    "id": "nbc-blinken-netanyahu-oct2023",
@@ -5768,7 +5936,9 @@
      "notes": "long static shot: easy to key the speaker or flags; line 'we will always be by your side'",
      "hits": []
     }
-   ]
+   ],
+   "scope": "politics-israel",
+   "scope_note": "Blinken pledging US support at a podium with Netanyahu in Tel Aviv, Oct 2023."
   },
   {
    "id": "sky-idf-airstrike-videos-analysis",
@@ -5835,7 +6005,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Sky News analysis of the IDF's published Gaza airstrike videos."
   },
   {
    "id": "lm-f35-factory-animation",
@@ -5870,7 +6042,9 @@
      "notes": "STANDOUT keyer: luminous blue on black, perfect for screen-blending over the preacher",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "Lockheed Martin CGI of the F-35 production line: manufacturer showcase, not about Israel."
   },
   {
    "id": "ap-telaviv-intercept-oct2023",
@@ -5908,7 +6082,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Iron Dome interception over Tel Aviv, Oct 2023."
   },
   {
    "id": "iaf-swords-of-iron-loadout-reupload",
@@ -5980,7 +6156,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Compilation of IDF/IAF video of Israeli jets, bombs and takeoffs from the opening of the Gaza war."
   },
   {
    "id": "times-radio-idf-bombardment-oct2023",
@@ -6088,7 +6266,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released strike footage of the Gaza bombardment, Oct 2023."
   },
   {
    "id": "ap-idf-social-media-unit-2015",
@@ -6138,7 +6318,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "AP feature on the IDF spokesperson's social-media unit posting Gaza strike videos."
   },
   {
    "id": "ap-interceptions-telaviv-jun2025",
@@ -6237,7 +6419,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "Interceptions of Iranian missiles over Tel Aviv, June 2025."
   },
   {
    "id": "wsj-house-israel-aid-vote-nov2023",
@@ -6287,7 +6471,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "politics-israel",
+   "scope_note": "House passing the $14.3bn Israel aid package, Nov 2023."
   },
   {
    "id": "wsj-gaza-highrise-strike-oct2023",
@@ -6372,7 +6558,9 @@
       }
      ]
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "Gaza resident's balcony footage of an Israeli strike on a Gaza high-rise, Oct 2023."
   },
   {
    "id": "ap-iaf-yemen-strike-departure-aug2025",
@@ -6443,7 +6631,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF video of IAF jets and bombs departing to strike Yemen, Aug 2025: a strike by Israel."
   },
   {
    "id": "lm-plant4-f16-f35",
@@ -6493,7 +6683,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "us-arsenal",
+   "scope_note": "Lockheed Martin F-16/F-35 factory video: manufacturer showcase, not about Israel."
   },
   {
    "id": "idf-strikes-jan2014-blackhot",
@@ -6576,7 +6768,9 @@
      "notes": "caption 'Secondary explosions of explosives located at the site' + red arrows from ~24",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF-released thermal strike video of strikes in Gaza, Jan 2014."
   },
   {
    "id": "ap-gaza-day-night-strikes-2014",
@@ -6626,7 +6820,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "gaza",
+   "scope_note": "AP footage of Israeli strikes on Gaza City, 2014 war."
   },
   {
    "id": "ynet-iaf-takeoff-iran-jun2025",
@@ -6695,7 +6891,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF video of Israeli jets departing for the first strikes on Iran, June 2025."
   },
   {
    "id": "idf-f35-first-flights-israel-2016",
@@ -6745,7 +6943,9 @@
      "notes": "",
      "hits": []
     }
-   ]
+   ],
+   "scope": "israel",
+   "scope_note": "IDF footage of IAF pilots flying the newly delivered F-35 over Israel, Dec 2016."
   }
  ]
 }
