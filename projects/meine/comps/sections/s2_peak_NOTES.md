@@ -7,6 +7,69 @@ Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/s
 
 `build(c, outro_kind="walkers")`; the other options are `"shroud"` and `"head"` (see Outro).
 
+## Revision 3: "full truth" (ember, 2026-10-24); this section overrides the map below where they differ
+
+The hypnotic bed stays: chorus, kaleidoscope, strike-cam spectacle. It is now **punctured by
+untreated reality**.
+- **Treatment.** Untreated layers are full frame (or a full-picture grid), normal blend, no fx,
+  their own sound, with `c.duck_music` under them.
+- **`real()` helper.** It opens a "reality window". Inside it `build()`'s post-pass mutes every
+  other layer of the section (chorus, beds, strikes, his head), drops any word he would say, and
+  ducks Meine to 0.
+- **The preacher near the dead.** He is never on screen over the dead. At Bureij (a living man
+  thrown by the blast) he is small, still and at the side.
+
+| bars | song time | what | music |
+|---|---|---|---|
+| 160-163 | 304.97-312.59 | **stack**: a 2x2 grid of untreated ground takes, one tile per beat, held 4 bars, all four sounds. Tiles: Shifa wounded (y2026), Jabaliya digging by hand, Shifa stretcher with blood (Roya), men kneeling over shrouds (Khan Younis) | 0.3 |
+| 171 | 325.93 | puncture: bodies on a steel morgue tray (AP Khan Younis, Jul 2026) | 0.25 |
+| 175 | 333.54 | puncture: the wounded carried in, bloody (AP Shifa, Jul 2026) | 0.25 |
+| 179 | 341.16 | puncture: bones laid on dark cloth (Roya, Nuseirat, Sep 2026) | 0.25 |
+| 184 | 350.68 | Bureij: the blast throws a man, portrait frame, own sound; "Hellfire missiles" small at the side | 0.35 |
+| 185-186 | 352.60-356.40 | Khan Younis morgue arrival, bodies rushed in, full frame | 0.15 |
+| 187 | 356.40 | puncture: women bent over the shrouds (AP Khan Younis, Aug 2026; identifiable mourners) | 0.25 |
+| 191 | 364.02 | puncture: the remains of 112 under flags, children's photos taped on (MEE) | 0.25 |
+| 204 | 388.78-393.68 | **Zinati** (below), then black to bar 208 | **0.05** (measured: music at about -40 dB in the black) |
+| 208-215 | 396.40-411.63 | **linger**: the mass funeral of the Hassayna and Abu Sharia families (AP, 4 Aug 2026), one 15 s take: aerial of the rectangle of bodies, then along the rows | 0.3 |
+| 216-223 | 411.63-426.88 | the machine: Ashdod MK-84 cranes; he returns (lines on 217 and 221) | full |
+| 224-231 | 426.88-442.11 | **linger**: Mahmoud Hammad sieves his home's sand for the bones of his wife and children (AP, Jan 2026), one 15 s take, his sounds | 0.3 |
+| 232-237 | 442.11-453.54 | blueprint factory and walkers; his last lines on 233 and 236 | full |
+
+The cooling strikes and copies of 196-203 still play. Bar 204's chorus copies and strike are
+muted by the window.
+
+**Silences.** The music nearly disappears at 204-207: 0.05 under Zinati and the black bar. It dips
+to 0.15 under the morgue (185-186), 0.25 under each puncture, and 0.3 under the grid, the funeral
+and the sieve.
+
+**Zinati: included, once.** It is Guardian "Deconstructed", eyewitness footage by Tamer Labbad,
+source 2.0-6.9 s: the boy stoops by the wounded paramedic, the second strike, dust.
+- It is not a hit. It starts on bar 204 and plays at speed 1 with its own sound, so the strike
+  lands wherever it happened (song about 392.3, between beats). It carries no `hits_song`.
+- The chorus has already left. His face is gone. The music is almost gone. A bar of black follows,
+  then the funeral.
+- **Reasoning:** my earlier refusal was about landing a child's death *on a beat*. That would make
+  it a device, and that is still out. ember's point is that leaving it out keeps the viewer at the
+  perpetrators' distance. Shown once, untreated, held and heard, it is testimony, not decoration.
+- Caveat: the Guardian's own forensic circle marking the incoming munition is visible around 4.5 s
+  of the source. I kept it, since it's part of the record. The Guardian title card after 7 s is not
+  used.
+
+**Names** (`meta.people`, from the catalogue provenance only):
+- `real:zinati`:
+  - Mohammad Abdul Zinati, 15, killed
+  - Sharif Shadi Labad, civil defence paramedic, injured
+  - Tamer Labbad, eyewitness who filmed it
+  - source https://www.youtube.com/watch?v=vQdUgwKtwEY
+- `real:hammad-sieve`: Mahmoud Hammad, bereaved father (wife and children killed); source
+  https://www.youtube.com/watch?v=XoQWFfNR_M8
+- No named individuals in the sources of the other untreated clips. The funeral's provenance names
+  the Hassayna and Abu Sharia families, not individuals, so I added no `people` entry.
+
+**Captions.** All of the new material was swept at 1 s. AP bugs are cropped (top 0.16), along with
+the funeral's subtitles and "ASSOCIATED PRESS", MEE's Instagram credit, and the Guardian logo and
+title. The low-fx variant is left to `tools/variant.py --lowfx`.
+
 ## What the music does (measured, per bar)
 
 Bar numbers index `beats.json` downbeats (bar 118 = 224.967).

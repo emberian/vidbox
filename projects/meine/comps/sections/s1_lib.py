@@ -103,9 +103,9 @@ def character(i, energy=None):
 
 
 def head(id, t0, t1, pos, scale, src_in=0.0, speed=1.0, fx=(), opacity=1.0, fade=None, tags=("head", "copy"),
-         hold=None, rot=0, feather=0.3, **extra):
-    L = {"id": id, "tags": list(tags), "src": FACE, "t0": round(t0, 4), "t1": round(t1, 4),
-         "time": {"hold": hold} if hold is not None else {"in": round(src_in, 3), "speed": speed, "loop": FACE_LOOP},
+         hold=None, rot=0, feather=0.3, src=FACE, loop=FACE_LOOP, **extra):
+    L = {"id": id, "tags": list(tags), "src": src, "t0": round(t0, 4), "t1": round(t1, 4),
+         "time": {"hold": hold} if hold is not None else {"in": round(src_in, 3), "speed": speed, **({"loop": loop} if loop else {})},
          "size": [480, 600], "mask": {"shape": "oval", "feather": feather},
          "pos": pos, "scale": scale, "opacity": opacity, "fx": list(fx)}
     if rot:

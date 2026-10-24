@@ -177,6 +177,32 @@ def strike(c, seg, h, at, before=0.5, after=1.6, depth=0.45, opacity=0.9, k=0, d
     return lay
 
 
+# ---- untreated reality: full frame, normal blend, no fx, its own sound; everything else steps away ----
+ZINATI_SRC = "https://www.youtube.com/watch?v=vQdUgwKtwEY"
+
+
+def real(c, ref, t0, t1, src_in, gain=1.0, music=0.25, people=None, crop=AP_CROP, window=True, id=None, **props):
+    """The dead and the wounded as filmed: no effects, no keying, no kaleidoscope, its own audio.
+    While a `window` is open the preacher, the chorus, the beds and the strike-cam are muted
+    (see build's post-pass) and the music dips to `music`."""
+    seg = c.seg(ref)
+    L = {"id": id or f"real:{seg.clip['id']}@{t0:.2f}", "tags": ["real", seg.catalog], "src": seg.file,
+         "t0": round(t0, 4), "t1": round(t1, 4), "time": {"in": src_in, "speed": 1.0}, "fit": "picture",
+         "crop": crop, "blend": "normal", "opacity": 1.0, "clip": "picture", "audio": {"gain": gain},
+         "fade": {"in": 0.04, "out": 0.1},
+         "meta": {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx, "hits_song": [],
+                  "graphic": seg.s.get("graphic"), "identifiable_victims": seg.s.get("identifiable_victims")}}
+    if people:
+        L["meta"]["people"] = people
+    L.update(props)
+    c.add(L)
+    if window:
+        c._s2_real.append((t0, t1))
+    if music is not None:
+        c.duck_music(t0, hold=t1 - t0, depth=music, attack=0.05, release=0.6)
+    return L
+
+
 # ---- the chorus: eight copies that split off him, trace shapes, scatter, regroup, and leave ----
 def chorus(c):
     N = 8
@@ -349,6 +375,19 @@ def peak2(c, pools, ch):
         ch.speak((n * 3) % 8, B(b), smp[n % 4], gain=0.95, pop=2.4)
     ch.stutter(7, B(165, 2), "missiles#5", stutter=2, gain=1.0)
 
+    # 160-163: the strike-cam stops; a grid of four untreated takes from the ground, one per beat,
+    # held four bars, all their sounds at once
+    tiles = [("y2026:ap-jabaliya-strike-shifa-arrivals-2026-07-14#1", 12.0, AP_CROP),       # the wounded carried in
+             ("ground:ap-jabaliya-dig-for-victims-2025-03#1", 20.0, AP_CROP),               # digging by hand
+             ("y2026:roya-civil-defence-worker-shifa-2026-09-01#1", 8.5, [0, 0.3, 1, 0.62]),  # stretcher, blood
+             ("y2026:ap-khanyounis-mourning-overnight-strikes-2026-08-02#2", 20.5, AP_CROP)]  # men kneel over shrouds
+    cells = [(360, 349), (1080, 349), (360, 731), (1080, 731)]
+    for k, ((ref, src_in, crop), (x, y)) in enumerate(zip(tiles, cells)):
+        t0 = c.beat(c.beat_pos(B(160)) + k)
+        real(c, ref, t0, B(164), src_in, gain=0.6, music=0.3 if k == 0 else None, crop=crop,
+             size=[720, 382], pos=[x, y], fit=None, id=f"real:grid{k}")
+    c._s2_real.append((B(160), B(164)))
+
     # bar 167: the music holds its breath; the last strike freezes and he states his terms
     s, h = pools.take("ir", B(167))
     c.freeze(s, B(167), h, beats=4, then="cut", before=0.3, fit="picture", crop=[0, 0.09, 1, 0.86],
@@ -360,6 +399,16 @@ def peak2(c, pools, ch):
 
 
 # ---- 5:20-6:13  the hottest stretch (168-195): atrocity, atrocity, atrocity; music, music, music ----
+# one-bar punctures of the hypnosis: untreated, full frame, their own sound
+PUNCTURES = {
+    171: ("y2026:ap-khanyounis-morgue-bodies-2026-07-29#1", 13.0, None),            # bodies on a steel morgue tray
+    175: ("y2026:ap-jabaliya-strike-shifa-arrivals-2026-07-14#1", 11.0, None),      # the wounded carried in, bloody
+    179: ("y2026:roya-civil-defence-bones-nuseirat-2026-09-05#1", 5.0, None),       # bones laid on dark cloth
+    187: ("y2026:ap-khanyounis-mourning-overnight-strikes-2026-08-02#0", 1.0, None),  # women bent over the shrouds
+    191: ("y2026:mee-112-remains-flags-2026-08-03#0", 1.0, None),    # (crop drops the Instagram credit)                   # 112 remains, photos taped on
+}
+
+
 def hottest(c, pools, ch):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
     # a kaleidoscope bed of the rubble fields, palette-cycling, changing every eight bars
@@ -382,26 +431,28 @@ def hottest(c, pools, ch):
         if b == 184:
             # the human cost, on the downbeat, as he names the weapon: Bureij, May 2026, a phone
             # video of a night street; the blast lands behind a man and throws him off his feet.
-            # Portrait, so it plays as the phone frame it is.
+            # Portrait, in its own frame, untouched, with its own sound (the blast, the street).
             bureij = c.seg("y2026:anadolu-bureij-night-blast-street-2026-05-19#1")
-            c.footage(bureij, at=B(b), hit=0, before=1.6, after=2.0, size=[440, 782], pos=[720, 540],
-                      crop=[0, 0.1, 1, 0.86], blend="normal", opacity=0.95, fade={"in": 0.3, "out": 0.4},
-                      mask={"shape": "rect", "feather": 0.04}, fx=[{"op": "contrast", "factor": 1.1}],
-                      id="bureij-blast")
+            L = c.footage(bureij, at=B(b), hit=0, before=1.6, after=2.0, size=[440, 782], pos=[720, 540],
+                          crop=[0, 0.1, 1, 0.86], blend="normal", opacity=1.0, fade={"in": 0.3, "out": 0.4},
+                          mask={"shape": "rect", "feather": 0.02}, id="real:bureij-blast")
+            L["tags"] = ["real"] + L["tags"]
+            L["audio"] = {"gain": 1.2}
             c.duck(B(b), hold=1.6, depth=0.2)
+            c.duck_music(B(b) - 0.2, hold=2.0, depth=0.35, attack=0.2)
             continue
         if b == 185:
             # ...and what follows: bodies rushed from an ambulance into the Khan Younis morgue
-            # (Jul 2026; graphic 3, bagged, no faces of the dead), two bars, no effects
-            morgue = c.seg("y2026:ap-khanyounis-morgue-bodies-2026-07-29#0")
-            c.add({"id": "morgue-arrival", "tags": ["y2026", "gaza", "dead"], "src": morgue.file,
-                   "t0": B(b), "t1": B(b + 2), "time": {"in": 1.0, "speed": 1.0}, "fit": "picture",
-                   "crop": AP_CROP, "opacity": 0.9, "fade": {"in": 0.1, "out": 0.5},
-                   "fx": [{"op": "sat", "factor": 0.7}],
-                   "meta": {"catalog": "y2026", "clip": morgue.clip["id"], "seg": 0, "hits_song": []}})
-            c.duck(B(b), hold=2 * 4 * c.period - 0.6, depth=0.25)
+            # (AP, 29 Jul 2026), full frame, its own sound, the music down
+            real(c, "y2026:ap-khanyounis-morgue-bodies-2026-07-29#0", B(b), B(b + 2), 1.0, gain=1.2, music=0.15,
+                 id="real:morgue-arrival")
             continue
         if b == 186:
+            continue
+        if b in PUNCTURES:
+            ref, src_in, people = PUNCTURES[b]
+            real(c, ref, B(b), B(b + 1), src_in, gain=1.1, music=0.25, id=f"real:puncture-{b}", people=people,
+                 crop=[0.1, 0.16, 0.92, 0.9])
             continue
         kind = ("gnight", "ir", "gday", "fire")[b % 4]
         s, h = pools.take(kind, B(b), gap=15)
@@ -429,7 +480,7 @@ def hottest(c, pools, ch):
             ch.stutter(n % 8, B(b), "missiles#5", stutter=3, gain=1.0)
         else:
             ch.speak(n % 8, B(b), smp[n % 5], gain=0.9, pop=2.6)
-    K.say(c, B(184), "hellfire missiles", pos=(1130, 470), scale=0.45, gain=1.15, pop=1.2, id="P-hellfire",
+    K.say(c, B(184), "hellfire missiles", pos=(1180, 400), scale=0.3, gain=1.15, pop=None, id="P-hellfire",
           fx=[{"op": "posterize", "levels": 5}, {"op": "gradmap", "palette": "whitehot"}])
 
 
@@ -443,60 +494,68 @@ def cooling(c, pools, ch):
     c.add({"id": "tent-fire", "tags": ["ground", "tents", "fire"], "src": fire.file, "t0": B(198), "t1": B(206),
            "time": {"in": 33.0, "speed": 1.0}, "fit": "picture", "crop": AP_CROP, "blend": "screen",
            "opacity": 0.6, "fade": {"in": 1.5, "out": 1.5}, "fx": [{"op": "lumakey", "low": 0.1, "high": 0.45}]})
-    # the dead, without effects: men praying over the shrouded, as the last copies fly off
-    pray = c.seg("ground:ap-aqsa-children-mourned-2024-08#3")
-    c.add({"id": "prayer-shrouds", "tags": ["ground", "shrouds"], "src": pray.file, "t0": B(205), "t1": B(208, 2),
-           "time": {"in": 42.0, "speed": 1.0}, "fit": "picture", "crop": AP_CROP, "opacity": 0.85,
-           "fade": {"in": 1.0, "out": 1.2}, "fx": [{"op": "sat", "factor": 0.5}]})
-    c.duck(B(205), hold=B(208) - B(205), depth=0.25, attack=1.0, release=1.0)
+    # 6:28 (bar 204): Gaza City, 15 Sep 2026. Eyewitness footage (Tamer Labbad, via the Guardian):
+    # after a first strike wounded a civil defence paramedic, 15-year-old Mohammad Abdul Zinati went
+    # to check on him and was killed by a second strike. Once, untreated, his own sound, the music
+    # almost gone. It is NOT landed on the grid: it starts on the bar and plays as it happened.
+    # (2.0-7.4 s of the source: the Guardian's circle marks the incoming munition at ~4.5 s; the
+    # title card that follows is not used.) Then a bar of black before the funeral.
+    zin = real(c, "y2026:guardian-deconstructed-zinati-strike-2026-09-15#1", B(204), B(204) + 4.9, 2.0,
+               gain=1.3, music=0.05, crop=[0.0, 0.1, 1.0, 1.0], id="real:zinati",
+               people=[{"name": "Mohammad Abdul Zinati", "age": 15, "role": "killed", "source": ZINATI_SRC},
+                       {"name": "Sharif Shadi Labad", "role": "injured (civil defence paramedic)",
+                        "source": ZINATI_SRC},
+                       {"name": "Tamer Labbad", "role": "filmed it (eyewitness)", "source": ZINATI_SRC}])
+    c._s2_real.append((B(204), B(208)))          # the black after it belongs to the window too
+    c.duck_music(B(204), hold=B(208) - B(204) - 0.2, depth=0.05, attack=0.05, release=0.5)
+    c.duck(B(204), hold=B(208) - B(204), depth=0.0, attack=0.05, release=0.2)
     for n, b in enumerate((197, 199, 201)):
         ch.speak(n + 5, B(b), ("missiles", "missiles.c", "all the missiles they need")[n], gain=0.9, pop=2.2)
 
 
-# ---- 6:36-7:33  plateau (208-237): manufacture and burial; the preacher alone, judging ----
+# ---- 6:36-7:33  plateau (208-237): the dead held; the machine; a father sieving; the preacher returns ----
+HAMMAD_SRC = "https://www.youtube.com/watch?v=XoQWFfNR_M8"
+
+
 def plateau(c):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
-    # the machine, in grooves: shell noses pressed red-hot, the 2,000 lb bombs craned off at Ashdod,
-    # the blueprint factory; against them, a grave dug by hand, shroud cloth cut
-    forge = c.seg("weapons:scranton-155mm-nosing-redhot#0")
-    c.groove(forge, B(208), dur=B(216) - B(208), fit="picture", crop=[0, 0, 1, 0.9], blend="screen", opacity=0.85,
-             fade={"in": 1.0, "out": 1.0}, fx=[{"op": "lumakey", "low": 0.03, "high": 0.2}, {"op": "bloom", "px": 18}],
-             id="forge")
-    grave = c.seg("ground:nbc-nasser-courtyard-graves-2024-01#0")
-    c.groove(grave, B(210), dur=B(216) - B(210), cycle=1.4, fit="picture", crop=[0, 0, 1, 0.88], blend="normal",
-             opacity=keys([B(210), 0.0], [B(212), 0.55], [B(215), 0.55], [B(216), 0.0]),
-             mask={"shape": "rect", "feather": 0.2}, size=[760, 428], pos=[720, 540],
-             fx=[{"op": "sat", "factor": 0.6}], id="grave-dig")
+    # 208-215 (15 s, one take): the mass funeral of the Hassayna and Abu Sharia families, Gaza City,
+    # 4 Aug 2026 -- an aerial of the rectangle of flag-wrapped bodies, then along the rows. Their own
+    # sound; the kick keeps pulsing underneath.
+    real(c, "y2026:ap-mass-funeral-hassayna-2026-08-04#2", B(208), B(216), 20.4, gain=1.0, music=0.3,
+         crop=[0.06, 0.12, 0.96, 0.78], id="real:mass-funeral")
+    # 216-223: the machine, and him: the MK-84 containers craned off at Ashdod, a shroud cut in a window
     ashdod = c.seg("weapons:imod-mk84-ashdod-feb2025#1")
     c.groove(ashdod, B(216), dur=B(224) - B(216), fit="picture", crop=[0.07, 0.09, 1, 0.95], blend="screen",
-             opacity=0.8,
-             fade={"in": 1.0, "out": 1.0}, fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}], id="ashdod-crane")
+             opacity=0.8, fade={"in": 1.0, "out": 1.0}, fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}],
+             id="ashdod-crane")
     shroud = c.seg("ground:ap-aqsa-shroud-laundry-2023-10#3")
     c.groove(shroud, B(218), dur=B(224) - B(218), cycle=1.4, anchor=86.0, fit="picture", crop=[0, 0.13, 0.86, 1],
              blend="screen", opacity=keys([B(218), 0.0], [B(220), 0.5], [B(223), 0.5], [B(224), 0.0]),
              mask={"shape": "rect", "feather": 0.2}, size=[760, 428], pos=[720, 540],
              fx=[{"op": "sat", "factor": 0.4}], id="shroud-cut")
+    strike(c, c.seg("ground:afp-rafah-night-strikes-flares-2023-12#0"), 1, B(220), before=0.6, after=2.6,
+           depth=0.4, k=220, opacity=0.75)
+    # 224-231 (15 s, one take): Mahmoud Hammad sieves the sand of his home for the bones of his wife
+    # and children (AP, Gaza City, 24 Jan 2026); the sieve's rhythm against the kick, his own sound
+    real(c, "y2026:ap-father-sieves-bones-2026-01-24#0", B(224), B(232), 4.0, gain=1.1, music=0.3,
+         id="real:hammad-sieve",
+         people=[{"name": "Mahmoud Hammad", "role": "bereaved father (his wife and children killed)",
+                  "source": HAMMAD_SRC}])
+    # 230-237: the blueprint factory and the crowd walking north, under him again
     walkers = c.seg("ground:ap-drone-return-north-coast-2025-01#1")
-    c.groove(walkers, B(224), dur=B(232) - B(224), fit="picture", crop=AP_CROP, opacity=0.6,
+    c.groove(walkers, B(232), dur=B(238) - B(232), fit="picture", crop=AP_CROP, opacity=0.6,
              fade={"in": 1.5, "out": 1.5}, fx=[{"op": "sat", "factor": 0.5}], id="walkers-crowd")
     f35 = c.seg("weapons:lm-f35-factory-animation#0")
-    c.add({"id": "f35-blueprint", "tags": ["weapons", "factory"], "src": f35.file, "t0": B(230), "t1": B(238),
-           "time": {"in": 20.0, "speed": 1.0}, "fit": "picture", "crop": [0, 0, 1, 0.8], "blend": "screen", "opacity": 0.55,
-           "fade": {"in": 2.0, "out": 2.0}, "fx": [{"op": "lumakey", "low": 0.05, "high": 0.35}]})
-    # sparse strikes, one per eight-bar phrase, on the phrase downbeat: the quiet ones
-    for b, ref in ((212, "weapons:hellfire-symphony-tads#5"), (220, "ground:afp-rafah-night-strikes-flares-2023-12#0"),
-                   (228, "weapons:aj-high-powered-bombs-explainer#6")):
-        seg = c.seg(ref)
-        h = 1 if b == 220 else 0
-        strike(c, seg, h, B(b), before=0.6, after=2.6, depth=0.4, k=b, opacity=0.75,
-               **({"crop": [0.16, 0.2, 1, 0.68]} if seg.catalog == "weapons" else {}))
+    c.add({"id": "f35-blueprint", "tags": ["weapons", "factory"], "src": f35.file, "t0": B(232), "t1": B(238),
+           "time": {"in": 20.0, "speed": 1.0}, "fit": "picture", "crop": [0, 0, 1, 0.8], "blend": "screen",
+           "opacity": 0.55, "fade": {"in": 2.0, "out": 2.0}, "fx": [{"op": "lumakey", "low": 0.05, "high": 0.35}]})
 
-    # him, alone again: gaze-steered, judging the parade, a sentence per eight-bar phrase
-    t0, t1 = B(208), B(239)
-    pos, sc = K.retime_path(GAZE, 20.0, t0, t1, center=(720, 540), k=0.7,
+    # him, alone, gaze-steered, only where the dead are not on screen
+    pos, sc = K.retime_path(GAZE, 20.0, B(216), B(239), center=(720, 540), k=0.7,
                             scale_k=0.36, clamp=(200, 300, 1240, 780))
-    lines = [(212, "they need more missiles"), (220, "thou shalt give israel missiles"),
-             (228, "not paying enough"), (236, "missiles")]
+    lines = [(217, "they need more missiles"), (221, "thou shalt give israel missiles"),
+             (233, "not paying enough"), (236, "missiles")]
     mutes = []
     for b, smp in lines:
         a, anc, e = K.SAMPLES[smp]
@@ -505,12 +564,13 @@ def plateau(c):
         K.say(c, at, smp, pos=pos, scale=mul(sc, 1.15), gain=1.0, id=f"P-plateau-{b}",
               fx=[{"op": "posterize", "levels": 6}])
         c.duck(at, hold=1.0, depth=0.45)
-    c.add({"id": "P-plateau", "tags": ["head", "P"], "src": K.FACE, "t0": t0, "t1": t1,
-           "time": {"in": 20.0, "speed": 1.0, "loop": list(K.MOUTH_LOOP)}, "size": [480, 600], "pos": pos,
-           "scale": sc, "mask": {"shape": "oval", "feather": 0.28}, "opacity": K.mute_signal(mutes, 0.8),
-           "fade": {"in": 2.0, "out": 0.4},
-           "fx": [{"op": "posterize", "levels": 6}, {"op": "noise", "scale": 60, "mode": "overlay", "speed": 0.6,
-                                                      "amount": rng(0.1, 0.35, beat(1, "decay", tau=0.2))}]})
+    for t0, t1, idn in ((B(216), B(224), "P-plateau"), (B(232), B(239), "P-plateau2")):
+        c.add({"id": idn, "tags": ["head", "P"], "src": K.FACE, "t0": t0, "t1": t1,
+               "time": {"in": 20.0, "speed": 1.0, "loop": list(K.MOUTH_LOOP)}, "size": [480, 600], "pos": pos,
+               "scale": sc, "mask": {"shape": "oval", "feather": 0.28}, "opacity": K.mute_signal(mutes, 0.8),
+               "fade": {"in": 1.5, "out": 0.6},
+               "fx": [{"op": "posterize", "levels": 6}, {"op": "noise", "scale": 60, "mode": "overlay", "speed": 0.6,
+                                                          "amount": rng(0.1, 0.35, beat(1, "decay", tau=0.2))}]})
     return pos, sc
 
 
@@ -542,6 +602,7 @@ def outro(c, pos, sc, kind="walkers"):
 
 def build(c, outro_kind="walkers"):
     first = len(c.layers)
+    c._s2_real = []
     pools = Pools(c)
     dip_and_reentry(c, None)
     ch = chorus(c)
@@ -553,6 +614,27 @@ def build(c, outro_kind="walkers"):
     ch.emit()
     pos, sc = plateau(c)
     outro(c, pos, sc, outro_kind)
+    # inside each window of untreated reality: the preacher's words are cut, everything that isn't
+    # the real footage goes dark (the chorus, the beds, the strike-cam, his head), Meine included
+    W = []
+    for a, b in sorted(c._s2_real):          # merge overlapping windows (the grid's tiles share one)
+        if W and a <= W[-1][1] + 0.1:
+            W[-1] = (W[-1][0], max(W[-1][1], b))
+        else:
+            W.append((a, b))
+    keep = []
+    for L in c.layers[first:]:
+        ov = [(a, b) for a, b in W if L["t1"] > a and L["t0"] < b]
+        if "real" in L.get("tags", []) or not ov:
+            keep.append(L)
+            continue
+        if "audio" in L:           # a spoken word over the dead: drop it
+            continue
+        L["opacity"] = mul(L.get("opacity", 1.0), K.mute_signal(ov, 1.0, xf=0.04))
+        keep.append(L)
+    c.layers[first:] = keep
+    for a, b in W:
+        c.duck(a, hold=b - a, depth=0.0, attack=0.04, release=0.3)
     # footage stays inside Meine's picture area (y 158..922); the floating heads may cross the bars
     for L in c.layers[first:]:
         if "head" not in L.get("tags", []) and L.get("fit", "cover") != "native":

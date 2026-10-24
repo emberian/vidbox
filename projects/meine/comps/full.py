@@ -25,4 +25,16 @@ for name in SECTIONS:
         print(f"(section {name} not written yet)")
         continue
     mod.build(c)
+
+# Untreated footage (normal blend, no fx, own sound) is testimony: each clip appears ONCE in the
+# whole piece. Sections are written separately, so the check lives here, where they meet.
+seen = {}
+for L in c.layers:
+    m = L.get("meta", {})
+    if m.get("catalog") and not L.get("fx") and L.get("blend", "normal") == "normal" and "audio" in L:
+        seen.setdefault(f"{m['catalog']}:{m['clip']}", set()).add(round(L["t0"]) // 60)
+dups = {k: v for k, v in seen.items() if len(v) > 1}
+if dups:
+    raise SystemExit("untreated footage used in more than one place (each is shown once): "
+                     + "; ".join(f"{k} around minute(s) {sorted(v)}" for k, v in dups.items()))
 c.save()

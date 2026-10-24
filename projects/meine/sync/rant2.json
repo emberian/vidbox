@@ -1,0 +1,40 @@
+{
+ "source": "media/derived/face.mp4",
+ "words": "analysis/rant_words.json",
+ "start": 83.813,
+ "out": "media/derived/face_rant2.mp4",
+ "pins": [
+  {
+   "word": "missiles#1",
+   "downbeat": 47
+  },
+  {
+   "word": "missiles#2",
+   "beat": 197
+  },
+  {
+   "word": "missiles#3",
+   "downbeat": 50
+  },
+  {
+   "word": "missiles#4",
+   "beat": 205
+  },
+  {
+   "word": "missiles#5",
+   "downbeat": 54
+  },
+  {
+   "word": "missiles#6",
+   "beat": 221
+  },
+  {
+   "word": "enough#1",
+   "beat": 244
+  },
+  {
+   "word": "enough#2",
+   "beat": 248
+  }
+ ]
+}
