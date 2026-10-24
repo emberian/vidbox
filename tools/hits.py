@@ -7,7 +7,7 @@ Combines three signals, each normalized per clip:
   flash   sudden brightness rise over the last ~0.5 s (explosions, muzzle flash, IR bloom)
   motion  frame-difference spike (shockwave, camera jolt, collapse, a body hitting ground)
 Prints JSON candidates sorted by time. These are candidates: confirm by looking.
---sheet writes a 5-frame strip around each candidate (t-0.16 .. t+0.16) for checking.
+--sheet writes a strip of the 5 native frames around each candidate (it is the middle one).
 Candidate times are on the canonical clock (render/media.py): each frame's own timestamp.
 """
 import argparse
@@ -27,18 +27,25 @@ HOP = 256
 
 
 def probe(clip):
+    """fps, has_audio, and where canonical time 0 (the video stream's first frame) sits on the
+    container clock that ffmpeg's -ss counts from (format start = 0)."""
     out = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,avg_frame_rate", "-of", "json", clip],
+        ["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,avg_frame_rate,start_time:format=start_time",
+         "-of", "json", clip],
         capture_output=True, text=True, check=True,
     ).stdout
-    streams = json.loads(out)["streams"]
+    info = json.loads(out)
+    streams = info["streams"]
     v = next(s for s in streams if s["codec_type"] == "video")
     num, den = (int(x) for x in v["avg_frame_rate"].split("/"))
-    return num / den, any(s["codec_type"] == "audio" for s in streams)
+    fmt0 = float(info.get("format", {}).get("start_time", 0) or 0)
+    v0 = float(v.get("start_time", fmt0) or fmt0)
+    return num / den, any(s["codec_type"] == "audio" for s in streams), v0 - fmt0
 
 
-def window(t0, t1):
-    return (["-ss", f"{t0}"] if t0 else []) + (["-t", f"{t1 - t0}"] if t1 else [])
+def window(t0, t1, offset):
+    """ffmpeg input seek for canonical [t0, t1): canonical time t is container time t + offset."""
+    return ["-ss", f"{t0 + offset:.6f}"] + (["-t", f"{t1 - t0:.6f}"] if t1 is not None else [])
 
 
 def norm(x):
@@ -64,7 +71,7 @@ def main():
     ap.add_argument("--top", type=int, default=20)
     ap.add_argument("--sheet")
     a = ap.parse_args()
-    fps, has_audio = probe(a.clip)
+    fps, has_audio, offset = probe(a.clip)
 
     # visual signals at native frame rate, tiny grayscale frames, each with its own timestamp
     frames = decode_range(a.clip, a.t0, a.t1 if a.t1 is not None else 1e9, size=(96, 54), gray=True)
@@ -80,13 +87,17 @@ def main():
     audio = np.zeros_like(tv)
     if has_audio:
         y = np.frombuffer(subprocess.run(
-            ["ffmpeg", "-v", "error", *window(a.t0, a.t1), "-i", a.clip, "-vn", "-ac", "1",
-             "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout, np.float32)
+            # first_pts=0 pads with silence if the audio starts after the seek point, so sample 0
+            # is canonical time t0 either way
+            ["ffmpeg", "-v", "error", *window(a.t0, a.t1, offset), "-i", a.clip, "-vn", "-ac", "1",
+             "-af", "aresample=first_pts=0", "-ar", str(SR), "-f", "f32le", "-"],
+            capture_output=True, check=True).stdout, np.float32)
         if len(y) > SR // 2:
             env = librosa.onset.onset_strength(y=y, sr=SR, hop_length=HOP)
             ta = a.t0 + librosa.frames_to_time(np.arange(len(env)), sr=SR, hop_length=HOP)
-            # max-pool the audio envelope onto video frame times
-            idx = np.clip(np.searchsorted(tv, ta), 0, len(tv) - 1)
+            # max-pool the audio envelope onto the frame on screen at each envelope time
+            # (latest frame with timestamp <= ta, the renderer's rule)
+            idx = np.clip(np.searchsorted(tv, ta + 1e-6, side="right") - 1, 0, len(tv) - 1)
             pooled = np.zeros_like(tv)
             np.maximum.at(pooled, idx, env)
             audio = norm(pooled)
@@ -101,10 +112,12 @@ def main():
     if a.sheet:
         Path(a.sheet).mkdir(parents=True, exist_ok=True)
         for c in cands:
-            t = max(0.0, c["t"] - 0.16)
+            # seek half a frame before the frame 2 back: accurate seek keeps frames from there on.
+            # (An fps= resample here would drop single-frame flashes from the strip.)
+            t = max(0.0, c["t"] - 2.5 / fps) + offset
             subprocess.run(
-                ["ffmpeg", "-v", "error", "-y", "-ss", f"{t}", "-i", a.clip, "-vf",
-                 f"fps=12.5,scale=200:-1,tile=5x1", "-frames:v", "1",
+                ["ffmpeg", "-v", "error", "-y", "-ss", f"{t:.6f}", "-i", a.clip, "-vf",
+                 "scale=200:-1,tile=5x1", "-frames:v", "1",
                  f"{a.sheet}/hit_{c['t']:08.3f}.png"], check=True)
         print(f"strips in {a.sheet}", file=sys.stderr)
 
