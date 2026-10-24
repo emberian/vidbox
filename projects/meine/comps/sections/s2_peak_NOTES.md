@@ -407,3 +407,16 @@ the footage is what you see and Meine's lights glint through it.
 - **Count:** after 240 s, 22 real lines and 14 Hyde words.
 - **Music:** each real phrase gets `music_dip` (shallow, under the hold rule).
 - **Repeats:** `comp.repeats()` now counts footage only, so a speaker's line said again is not reported as repeated footage.
+
+## Revision 5 (2026-10-24): DRC and the v4 visual review
+
+Code bars below (viewer bar = code bar + 1).
+
+- **Bureij (184) is a reality window.** It appends to `c._s2_real` and merges with the morgue arrival's window, so the post-pass takes the chorus, beds, strikes and Meine away round the inset. Hyde's "Hellfire missiles" (`P-hellfire`) is gone. `bed2` comes up a beat early so it never enters over the window.
+- **Pool picks swapped after the pools run (`NOT_HERE`).** The Tehran aerial under a Hebrew IDF caption (176) became the WSJ Gaza City tower collapse (`wsj-gaza-highrise-strike-oct2023#2`, from 16.95 s, bug cropped). The swap happens after every pick, so no later pick moves.
+- **`CLIP_CROPS`:** the APT Khan Younis repost (175) uses its clean lower copy, with no caption.
+- **Zinati (204):** starts at 2.25 s, past the Guardian's red wipe, 0.25 s into the bar. The bar opens on black and the strike comes where it did.
+- **The breath (120-123):** the cloth fades up in 0.6 s, the countdown's lead-in is 0.7 s and P-drift enters later, so the cloth has about two seconds alone.
+- **Plateau (216-223):** the cranes (216-217), shroud window (218-219), convoy (220-221) and shroud (222-223) take turns instead of stacking.
+- **Walkers and airlift (232-237):** they alternate by bar, at 0.85.
+- **Tent fire (198-205):** normal blend, no luma key. Screened, it was a white haze.

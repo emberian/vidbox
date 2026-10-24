@@ -22,6 +22,19 @@ PRE_WAR = ("-war", "2019", "2023-may-round")
 # clips with subtitles/lower-thirds inside the frame that no crop removes: kept out of the pools
 CAPTIONED = {"aj-high-powered-bombs-explainer", "ap-interceptions-telaviv-jlm-feb2026", "ap-flares-cloudy-night-2025-12-b",
              "fa-rafah-bomb-identification", "idf-beit-hanoun-launcher-2014"}
+# v4 review: picked by the pools in the Israeli-voices stretch but wrong there: Tehran, under a large Hebrew
+# IDF caption. Its pick is kept while the pools run (so every later pick stays what it was) and swapped,
+# after them, for a hand-chosen take: clip -> (replacement seg, source time on the hit, crop).
+NOT_HERE = {"idf-tehran-strikes-aerial-2026-03-01":
+            # Gaza City, Oct 2023 (WSJ, residents' phone video): an apartment tower collapses into a black
+            # cloud beside another; from the first frame after the cut into this angle. WSJ bug cropped.
+            ("weapons:wsj-gaza-highrise-strike-oct2023#2", 16.95, [0.04, 0.12, 0.86, 0.9])}
+# per-clip crops for pool picks whose burned-in captions sit inside the default crop
+CLIP_CROPS = {
+    # APT's vertical repost: the shot twice, the top copy under "BLACK SMOKE RISES OVER GAZA'S KHAN
+    # YOUNIS..." and APT's logo; the bottom copy is clean (v4 review, 5:33)
+    "apt-khanyounis-house-strike-2026-09-09": [0.0, 0.545, 1.0, 0.85],
+}
 WEAPONS_CROP = [0.06, 0.16, 0.94, 0.76]   # news bugs/credits at the top corners, slates and lower-thirds below
 OIR_CROP = [0.06, 0.16, 0.94, 0.68]       # OIR strike tapes type their description along the bottom
 
@@ -99,18 +112,21 @@ def dip_and_reentry(c, P):
     shroud = c.seg("ground:ap-aqsa-shroud-laundry-2023-10#3")
     c.add({"id": "shroud-cloth", "tags": ["ground", "shrouds"], "src": shroud.file, "t0": b120 + 2 * c.period,
            "t1": b124 + 0.3, "time": {"in": 84.0, "speed": 1.0}, "fit": "picture", "crop": [0, 0.13, 0.86, 1],
-           "opacity": 0.8, "blend": "screen", "fade": {"in": 1.4, "out": 0.4},
+           "opacity": 0.8, "blend": "screen", "fade": {"in": 0.6, "out": 0.4},
            "fx": [{"op": "sat", "factor": 0.35}, {"op": "levels", "black": 0.04, "white": 0.95, "gamma": 0.9}]})
+    # (v4 review: the cloth, the countdown and his drifting face screened together into mud. The cloth
+    #  now has about two seconds alone: it comes up faster, he drifts in only as it has been seen, and the
+    #  countdown's lead-in is shorter.)
     # P, small now, drifts across the cloth (the drift path, shrunk), watching
     dpos, dsc = K.retime_path(DRIFT, 12.0, b120, b124, center=(720, 520), k=0.55, scale_k=0.45)
-    c.add({"id": "P-drift", "tags": ["head", "P"], "src": K.FACE, "t0": b120 + 0.6, "t1": b124 - 0.1,
+    c.add({"id": "P-drift", "tags": ["head", "P"], "src": K.FACE, "t0": b120 + 2 * c.period + 2.6, "t1": b124 - 0.1,
            "time": {"in": 12.0, "speed": 0.5, "loop": list(K.MOUTH_LOOP)}, "size": [480, 600],
            "pos": dpos, "scale": dsc, "mask": {"shape": "oval", "feather": 0.3}, "opacity": 0.7,
            "fade": {"in": 0.8, "out": 0.2}, "fx": [{"op": "sat", "factor": 0.3}, {"op": "posterize", "levels": 5}]})
 
     # the countdown: TARGET, 3, 2, 1 every two beats, the strike on bar 124 as the kick returns
     cd = c.seg("weapons:mq9-live-hellfire-holloman#7")
-    c.footage_multi(cd, [0, 1, 2, 3], [bars(c, 122, 2), bars(c, 123), bars(c, 123, 2), b124], before=1.6, after=3.2,
+    c.footage_multi(cd, [0, 1, 2, 3], [bars(c, 122, 2), bars(c, 123), bars(c, 123, 2), b124], before=0.7, after=3.2,
            fit="picture", blend="screen", opacity=keys([b124 - 0.2, 0.9], [b124, 1.0]), fade={"in": 0.5, "out": 0.9}, id="countdown",
            fx=[{"op": "contrast", "factor": 1.15}, {"op": "chroma", "px": rng(0, 10, beat(2, "decay", tau=0.2))}])
     K.say(c, b124, "missiles", pos=(720, 520), scale=0.62, gain=1.1, pop=1.25, id="P-says-drop",
@@ -269,8 +285,8 @@ def strike(c, seg, h, at, before=0.5, after=1.6, depth=0.45, opacity=0.9, k=0, d
     """One hit landing on `at`, styled by what the footage is (IR, black-hot, night, day)."""
     L = look_for(seg, k)
     L.update(props)
-    crop = L.pop("crop", AP_CROP if seg.catalog == "ground" else
-                  OIR_CROP if seg.clip["id"].startswith("oir-") else WEAPONS_CROP)
+    crop = L.pop("crop", CLIP_CROPS.get(seg.clip["id"]) or (AP_CROP if seg.catalog == "ground" else
+                  OIR_CROP if seg.clip["id"].startswith("oir-") else WEAPONS_CROP))
     # a second blast inside the window that would land off the grid: end (or start) short of it
     t = seg.hits[h]["t"]
     for x in seg.hits:
@@ -616,7 +632,10 @@ def hottest(c, pools, ch):
         t0, t1 = B(168 + 8 * k), min(B(176 + 8 * k), B(196))
         if t0 >= B(196):
             break
-        c.add({"id": f"bed{k}", "tags": ["ground", "bed"], "src": seg.file, "t0": t0 - 0.3, "t1": t1 + 0.3,
+        # bar 184's bed changes under the Bureij window (it opens ~0.3 s before the downbeat): it comes
+        # up a beat early, as the window's post-pass takes every bed away, so it never enters over it
+        xf = c.period if 168 + 8 * k == 184 else 0.0
+        c.add({"id": f"bed{k}", "tags": ["ground", "bed"], "src": seg.file, "t0": t0 - 0.3 - xf, "t1": t1 + 0.3,
                "time": {"in": seg.t_in, "speed": 0.7}, "fit": "picture", "crop": AP_CROP, "blend": "screen",
                "opacity": rng(0.12, 0.42, beat(4, "decay", tau=0.35)), "fade": {"in": 0.3, "out": 0.3},
                "fx": [{"op": "kaleido", "segments": 6 + 2 * (k % 2), "angle": rng(0, 60, beat(16, "saw"))},
@@ -635,6 +654,10 @@ def hottest(c, pools, ch):
                           mask={"shape": "rect", "feather": 0.02}, id="real:bureij-blast")
             L["tags"] = ["real"] + L["tags"]
             L["audio"] = {"gain": 1.2}
+            # a reality window like real()'s: the chorus, the beds, the strike-cam and his words step
+            # away round the inset (v4 review: kaleidoscope beds round it, a comic head over it)
+            # (it runs on into the morgue arrival's window, so the two merge: one moment, as below)
+            c._s2_real.append((L["t0"] + 0.3, L["t1"] - 0.1, 0.6, 0.1))
             c.duck(B(b), hold=1.6, depth=0.2)
             # Bureij and the morgue are one four-bar moment (184-187): the music goes down with the
             # blast and stays down under the morgue
@@ -658,6 +681,8 @@ def hottest(c, pools, ch):
         s, h = pools.take(kind, B(b), gap=15, before=0.3, after=1.9)
         L = strike(c, s, h, B(b), before=0.3, after=1.9, depth=0.35, k=b, opacity=0.88)
         L["fx"] = L["fx"] + [tunnel]
+        if s.clip["id"] in NOT_HERE:
+            c._s2_swap.append((L, b, B(b), tunnel))
         if b % 2 == 1:
             # off-beat accents: the bar's own strike echoes, its hit frame retriggered on beats
             # 3, 3-and and 4, inverted (a deliberate motif: the same 0.3 s of the same take,
@@ -673,7 +698,7 @@ def hottest(c, pools, ch):
         strike(c, s, h, at, before=0.05, after=0.42,
                depth=None, k=k, opacity=0.75, fade={"in": 0.02, "out": 0.12})
 
-    # the chorus: a word every two bars, stutters on the four-bar phrase ends, Hellfire named over Bureij
+    # the chorus: a word every two bars, stutters on the four-bar phrase ends; none over Bureij
     smp = ["missiles", "missiles.c", "missiles.b", "missiles.e", "missiles.d"]
     for n, b in enumerate(range(168, 196, 2)):
         if b == 184:
@@ -682,8 +707,7 @@ def hottest(c, pools, ch):
             ch.stutter(n % 8, B(b), "missiles#5", stutter=3, gain=1.0)
         else:
             slot(c, ch, n % 8, b, smp[n % 5], gain=0.9, pop=2.6)
-    K.say(c, B(184), "hellfire missiles", pos=(1180, 400), scale=0.3, gain=1.15, pop=None, id="P-hellfire",
-          fx=[{"op": "posterize", "levels": 5}, {"op": "gradmap", "palette": "whitehot"}])
+    # (his "Hellfire missiles" on 184 is gone: it was a comic head over the untreated Bureij inset)
 
 
 # ---- 6:13-6:36  cooling (196-207): the chorus leaves one by one; longer looks ----
@@ -694,15 +718,20 @@ def cooling(c, pools, ch):
         strike(c, s, h, B(b), before=0.6, after=3.0, depth=0.45, k=b, opacity=0.8)
     fire = c.seg("ground:ap-ansar-tent-strike-fire-2026-03#2")
     c.add({"id": "tent-fire", "tags": ["ground", "tents", "fire"], "src": fire.file, "t0": B(198), "t1": B(206),
-           "time": {"in": 33.0, "speed": 1.0}, "fit": "picture", "crop": AP_CROP, "blend": "screen",
-           "opacity": 0.6, "fade": {"in": 1.5, "out": 1.5}, "fx": [{"op": "lumakey", "low": 0.1, "high": 0.45}]})
+           "time": {"in": 33.0, "speed": 1.0}, "fit": "picture", "crop": AP_CROP, "blend": "normal",
+           "opacity": 0.7, "fade": {"in": 1.5, "out": 1.5},
+           "fx": [{"op": "levels", "black": 0.06, "white": 0.95}, {"op": "sat", "factor": 1.1}]})
+    # (v4 review: screened and luma-keyed over the strikes it was a washed white haze; the burning tents
+    #  now sit in the picture as they were filmed, under the strikes)
     # 6:28 (bar 204): Gaza City, 15 Sep 2026. Eyewitness footage (Tamer Labbad, via the Guardian):
     # after a first strike wounded a civil defence paramedic, 15-year-old Mohammad Abdul Zinati went
     # to check on him and was killed by a second strike. Once, untreated, his own sound, the music
     # almost gone. It is NOT landed on the grid: it starts on the bar and plays as it happened.
     # (2.0-7.4 s of the source: the Guardian's circle marks the incoming munition at ~4.5 s; the
     # title card that follows is not used.) Then a bar of black before the funeral.
-    zin = real(c, "y2026:guardian-deconstructed-zinati-strike-2026-09-15#1", B(204), B(204) + 4.9, 2.0,
+    # (v4 review: the Guardian's red intro wipe still covers the left of the frame until ~2.15 s, so the
+    # footage starts 0.25 s into the bar at 2.25 s, black before it: the strike comes where it came)
+    zin = real(c, "y2026:guardian-deconstructed-zinati-strike-2026-09-15#1", B(204) + 0.25, B(204) + 4.9, 2.25,
                gain=1.3, music=0.05, crop=[0.0, 0.1, 1.0, 1.0], id="real:zinati",
                people=[{"name": "Mohammad Abdul Zinati", "age": 15, "role": "killed", "source": ZINATI_SRC},
                        {"name": "Sharif Shadi Labad", "role": "injured (civil defence paramedic)",
@@ -727,18 +756,27 @@ def plateau(c, pools):
     # 216-223: the machine, and him: the MK-84 shipment at Ashdod (IMOD, Feb 2025): the lit gantry
     # cranes over the ship, then the convoy of bomb containers leaving the port. (s1 shows the
     # crane cycle itself, segment 1, at bars 32-35; these are the segments either side of it.)
+    # (v4 review: the cranes, the convoy and the shroud window all stacked into one screen; they take
+    #  turns now, two bars each: cranes 216-217, shroud 218-219, convoy 220-221, shroud 222-223.
+    #  Each full-frame shot dims to nothing across the shroud's bars, which cut in on the downbeats.)
+    def turns(on):
+        """hold keys: 1 inside the [a, b) code-bar spans in `on`, else 0, with a short ramp at each edge"""
+        K = [[B(216) - 0.01, 0.0]]
+        for a, b in on:
+            K += [[B(a) - 0.05, 0.0], [B(a) + 0.05, 1.0], [B(b) - 0.05, 1.0], [B(b) + 0.05, 0.0]]
+        return keys(*K, [B(224) + 1, 0.0])
     port = c.seg("weapons:imod-mk84-ashdod-feb2025#0")
-    c.footage(port, at=B(216), after=B(220) - B(216) + 0.5, fit="picture", crop=[0.12, 0.14, 1, 0.95],
-              blend="screen", opacity=0.8, fade={"in": 1.0, "out": 0.5},
+    c.footage(port, at=B(216), after=B(218) - B(216) + 0.15, fit="picture", crop=[0.12, 0.14, 1, 0.95],
+              blend="screen", opacity=0.85, fade={"in": 1.0, "out": 0.3},
               fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}], id="ashdod-port")
     convoy = c.seg("weapons:imod-mk84-ashdod-feb2025#2")
-    c.footage(convoy, at=B(220), after=B(224) - B(220), fit="picture", crop=[0.12, 0.14, 1, 0.95],
-              blend="screen", opacity=0.8, fade={"in": 0.5, "out": 1.0},
+    c.footage(convoy, at=B(220), after=B(222) - B(220) + 0.15, fit="picture", crop=[0.12, 0.14, 1, 0.95],
+              blend="screen", opacity=0.85, fade={"in": 0.1, "out": 0.3},
               fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}], id="ashdod-convoy")
     shroud = c.seg("ground:ap-aqsa-shroud-laundry-2023-10#3")
     # (the breath at bar 120 shows 84-89 of this take; the window cuts later cloth)
     c.groove(shroud, B(218), dur=B(224) - B(218), cycle=1.4, anchor=96.0, fit="picture", crop=[0, 0.13, 0.86, 1],
-             blend="screen", opacity=keys([B(218), 0.0], [B(220), 0.5], [B(223), 0.5], [B(224), 0.0]),
+             blend="screen", opacity=mul(turns([(218, 220), (222, 224)]), 0.7),
              mask={"shape": "rect", "feather": 0.2}, size=[760, 428], pos=[720, 540],
              fx=[{"op": "sat", "factor": 0.4}], id="shroud-cut")
     s, h = pools.take("gnight", B(220), before=0.6, after=2.6)
@@ -754,8 +792,14 @@ def plateau(c, pools):
     # the vast crowd walking north on the Salah al-Din road (AP, Jan 2025), one stride to two beats,
     # so a little slowed (s1 has the coast-road crowd)
     walkers = c.seg("ground:ap-salahaldin-crossing-return-2025-01#0")
+    # (v4 review: walkers and airlift both at 0.6 on top of each other read as neither: they alternate
+    #  bar by bar now, cut on the downbeat, walkers on the even bars, the airlift on the odd)
+    def bars_on(even):
+        return keys([B(232) - 0.01, 0.0], *[[B(n), 1.0 if (n % 2 == 0) == even else 0.0] for n in range(232, 239)],
+                    ease="hold")
+    alt = {0: bars_on(True), 1: bars_on(False)}
     c.groove(walkers, B(232), dur=B(238) - B(232), lengths=(2,), limits=(0.5, 1.6), fit="picture", crop=AP_CROP,
-             opacity=0.6,
+             opacity=mul(alt[0], 0.85),
              fade={"in": 1.5, "out": 1.5}, fx=[{"op": "sat", "factor": 0.5}], id="walkers-crowd")
     # (was Lockheed's CGI F-35 factory; ember, v2: "i don't want to use that footage. it confuses me")
     # The 200th IMOD airlift of the war, 26 Mar 2026: on a wet night apron pallets of munitions come
@@ -764,7 +808,7 @@ def plateau(c, pools):
     lift = c.seg("y2026:imod-200th-airlift-plane-2026-03-26#3")
     # crop: the IMOD logo bottom-left and its Hebrew subtitles along the bottom
     c.groove(lift, B(232), dur=B(238) - B(232), fit="picture", crop=[0.14, 0.06, 1, 0.8], blend="screen",
-             opacity=0.6, fade={"in": 2.0, "out": 2.0}, fx=[{"op": "lumakey", "low": 0.08, "high": 0.4}],
+             opacity=mul(alt[1], 0.85), fade={"in": 0.3, "out": 2.0}, fx=[{"op": "lumakey", "low": 0.08, "high": 0.4}],
              id="airlift-200")
 
     # him, alone, gaze-steered, only where the dead are not on screen
@@ -881,6 +925,7 @@ def add_(*s):
 def build(c, outro_kind="walkers"):
     first = len(c.layers)
     c._s2_real = []
+    c._s2_swap = []
     pools = Pools(c)
     dip_and_reentry(c, None)
     ch = chorus(c)
@@ -893,6 +938,15 @@ def build(c, outro_kind="walkers"):
     pos, sc = plateau(c, pools)
     outro(c, pos, sc, outro_kind)
     israeli_voices(c)
+    for L, b, at, tunnel in c._s2_swap:      # NOT_HERE: the pools are done; swap the footage in place
+        ref, src_t, crop = NOT_HERE[L["meta"]["clip"]]
+        seg = c.seg(ref)
+        L["t0"] = round(at, 4)          # from the hit: the frames before it are another angle
+        L.update({"id": f"{seg.clip['id']}#{seg.idx}@{at:.2f}", "src": seg.file, "crop": crop,
+                  "time": {"in": src_t, "speed": 1.0}, "tags": [seg.catalog] + seg.tags[:3],
+                  "fx": look_for(seg, b)["fx"] + [tunnel], "blend": look_for(seg, b)["blend"],
+                  "fade": {"in": 0.04, "out": 0.5}})
+        L["meta"].update({"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx, "hits_song": [round(at, 3)]})
     # inside each window of untreated reality: the preacher's words are cut, everything that isn't
     # the real footage goes dark (the chorus, the beds, the strike-cam, his head), Meine included
     # A window is (a, b, xin, xout): everything else recedes over [a - xin, a], is gone over [a, b],

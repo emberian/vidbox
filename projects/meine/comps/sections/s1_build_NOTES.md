@@ -99,3 +99,31 @@ Voice over music (speech-active RMS), at the final gains:
 - **`speaker()` changes:**
   - It takes `catalog=` ("preachers" or "israeli_voices").
   - A non-English line gets `meta.lang` and one subtitle per translated line (`subtitles()`, using `comp.subtitle`).
+
+## DRC and the v4 visual review (2026-10-24)
+
+Viewer bars below.
+
+- **Bar-67 stack:**
+  - `gaza-bed-60` recedes over the stack's first beat.
+  - The 67.0/67.2 strikes are keyed to opacity 0, not removed, so their source stays spent and s2's pool picks don't move.
+  - 68.0 starts as the stack ends.
+- **Bar 69:** the black-hot Beit Hanoun strike is inverted and screened. Multiplied, it was a black silhouette.
+- **Graves to launches (88-89):** a hard cut out of the graves. `launch-88` and Vaughn begin on the downbeat. The launches are at 0.85 with light fx, so they read as missiles.
+- **Bars 97-100:** the coast-road walkers use normal blend, not multiply.
+- **Bars 101-104:**
+  - Hagee's March head shows only once the face crop has found his face (~0.9 s). His voice is on time.
+  - `rise-strike-103.2` is skipped: it flared over the Deir al-Balah hold.
+  - The ruins come up at bar 105, and their source time keeps the same mapping.
+- **Bars 109-110:**
+  - `wp-airburst` uses a new crop and levels instead of posterize.
+  - It and the ruins end as the Dar al-Muttaqin window opens. 110.0 starts as the window ends.
+- **Lower-thirds:**
+  - Card to card is a hard cut.
+  - A card ends no later than 0.15 s after its speaker. Haley's card is the exception (`card_until`), because it also names the shell window.
+  - A pushed card never extends the one before it.
+- **Head clouds:**
+  - `light_cloud_copies()` dry-runs `comps/clouds.py` to find which copies become real speakers and gives them halftone or RGB split.
+  - `clear_of_face()` keeps rant-2 copies and formation heads out of his face while he rants.
+- **Scranton:** a tighter key, and the crop drops the top strip and the right quarter, so the shell sits right of Graham.
+- **s0:** the Al Jazeera explainer strike at bar 7 is cropped below AJ's logo and above its subtitles.
