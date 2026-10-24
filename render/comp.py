@@ -437,13 +437,18 @@ class Comp:
         p = anchor if anchor is not None else (seg.hits[0]["t"] if seg.hits else seg.t_in)
         at = self.snap(at, 0.5 if L < 1 else 1.0)
         dur = (seg.t_out - p) / sp if dur is None else dur
-        b0, song, src, k = self.beat_pos(at), [], [], 0
-        while True:
+        if not (L > 0 and T > 0 and math.isfinite(at + dur)):
+            raise ValueError(f"groove {seg.ref}: cycle {T}, {L} beats, dur {dur}")
+        b0, song, src = self.beat_pos(at), [], []
+        # one knot per cycle until the end: bounded up front (beat(beat_pos(x)) == x), not by luck
+        k_end = max(0, math.ceil((self.beat_pos(at + dur) - b0) / L)) + 3
+        for k in range(k_end + 1):
             song.append(round(self.beat(b0 + k * L), 4))
             src.append(round(p + k * T, 4))
             if song[-1] >= at + dur:
                 break
-            k += 1
+        else:
+            raise RuntimeError(f"groove {seg.ref}: map did not reach {at + dur} in {k_end} cycles")
         time = {"map": {"song": song, "src": src}}
         return self._timed_layer(seg, at, at + dur, time, id or f"{seg.clip['id']}#{seg.idx}@{at:.2f}~groove",
                                  {"groove": {"cycle": T, "beats": L, "speed": round(sp, 4)}}, **props)
@@ -769,6 +774,8 @@ def formation(comp, shape, n, t0, t1, center, radius, spin_bars=2.0, tilt_bars=7
 def bounce(comp, t0, t1, box, beats_per_crossing=(2, 3, 4), seed=0, dt=0.04):
     """Pong-style motion: straight flights between box walls, each wall contact on a beat.
     box = (x0, y0, x1, y1) for the centre. Returns a pos signal."""
+    if not (min(beats_per_crossing) > 0 and math.isfinite(t1)):   # else the loop below never ends
+        raise ValueError(f"bounce: beats_per_crossing {beats_per_crossing}, t1 {t1}")
     r = random.Random(seed)
     x0, y0, x1, y1 = box
     p = [r.uniform(x0, x1), r.uniform(y0, y1)]
