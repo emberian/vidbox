@@ -799,8 +799,8 @@ def pages_names(T, D, people, title, ncol, nrow, secs, script="en"):
     pitch = (BOTTOM - y0) / nrow
     per = ncol * nrow
     npages = -(-len(people) // per)
-    out = []
-    for pi in range(npages):
+
+    def page(pi):   # drawn when written: the long version is ~760 pages, ~6 MB each as images
         im, d = new_page()
         chunk = people[pi * per:(pi + 1) * per]
         ages = sorted({p["age"] for p in chunk})
@@ -823,8 +823,8 @@ def pages_names(T, D, people, title, ncol, nrow, secs, script="en"):
         footer(T, d, f"Gaza Ministry of Health list of the identified dead, deaths to {long_date(n['includes_until'])}, "
                      f"as published by Tech For Palestine (data.techforpalestine.org). English names are its "
                      f"transliterations. Youngest first.")
-        out.append((im, secs))
-    return out
+        return im
+    return [(lambda pi=pi: page(pi), secs) for pi in range(npages)]
 
 
 def page_end(T, D):
@@ -843,7 +843,7 @@ def page_end(T, D):
 
 
 def build_sequence(T, D, full=False):
-    """[(section, [(PIL image, seconds)], dense)]"""
+    """[(section, [(PIL image or a function drawing it, seconds)], dense)]"""
     people = D["dead"]["_people"]
     seq = [("named", pages_named(T, D), False),
            ("sources", pages_sources(T, D, 7.0), False),
@@ -870,12 +870,12 @@ def render(D, out, full=False, sample_pages=0):
         sd.mkdir(parents=True, exist_ok=True)
         for s, pages, _ in seq:
             for i, (im, _) in enumerate(pages[:sample_pages]):
-                im.save(sd / f"{s}_{i:03d}.png")
+                (im() if callable(im) else im).save(sd / f"{s}_{i:03d}.png")
         print(f"wrote samples to {sd}", file=sys.stderr)
         return
     fade = 10        # frames: fade from/to black at section edges and between readable pages
     total = 0
-    plan = []        # (np image, frames, fade_in, fade_out)
+    plan = []        # (page, frames, fade_in, fade_out); a page becomes pixels only when written
     lead = 25        # one second of black after the music ends
     for s, pages, dense in seq:
         for i, (im, secs) in enumerate(pages):
@@ -883,7 +883,7 @@ def render(D, out, full=False, sample_pages=0):
             first, last = i == 0, i == len(pages) - 1
             fi = fade if (first or not dense) else 0
             fo = fade if (last or not dense) else 0
-            plan.append((np.asarray(im, dtype=np.uint8), n, fi, fo))
+            plan.append((im, n, fi, fo))
             total += n
     total += lead + 25
     out = Path(out)
@@ -895,7 +895,10 @@ def render(D, out, full=False, sample_pages=0):
     black = np.zeros((H, W, 3), np.uint8).tobytes()
     for _ in range(lead):
         p.stdin.write(black)
-    for arr, n, fi, fo in plan:
+    for k_page in range(len(plan)):
+        im, n, fi, fo = plan[k_page]
+        plan[k_page] = None   # drop each page once written (the eager pages too)
+        arr = np.asarray(im() if callable(im) else im, dtype=np.uint8)
         raw = arr.tobytes()
         for k in range(n):
             a = 1.0

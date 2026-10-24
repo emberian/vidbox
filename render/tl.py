@@ -11,10 +11,12 @@ import functools
 import json
 import math
 import os
+import signal
 import subprocess
 import sys
 import tempfile
 import time as wall
+from bisect import bisect_left, bisect_right
 from pathlib import Path
 
 import cv2
@@ -27,6 +29,7 @@ from signals import Ctx, Music, compile_signal, compile_time  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PICTURE = (0, 158, 1440, 922)   # Meine's letterboxed picture area (canvas px)
+MAX_LAYER_AREA = 16   # a layer drawn larger than 16 canvases (4x each way) is a broken signal, not a zoom
 LENGTH_PARAMS = {"px", "scale", "period"}   # fx params in canvas px: scaled with the preview
 PREROLL = 1.0
 SR = 48000          # audio bus sample rate
@@ -39,10 +42,21 @@ def is_new_time(T):
     return "seq" in T or not isinstance(T.get("speed", 1.0), (int, float))
 
 
+def _union_add(xs, ys, lo, hi):
+    """Add [lo, hi] to a union of disjoint intervals kept as sorted starts xs / ends ys (touching
+    intervals merge)."""
+    i, j = bisect_left(ys, lo), bisect_right(xs, hi)   # components [i, j) overlap or touch it
+    if i < j:
+        lo, hi = min(lo, xs[i]), max(hi, ys[j - 1])
+    xs[i:j], ys[i:j] = [lo], [hi]
+
+
 def revisit_spans(tm, t0, t1, pad=0.05):
     """Source intervals a time map plays backwards or visits more than once over [t0, t1):
-    decoded once into media.SPANS instead of re-seeking (reverses, stutters)."""
-    seen, spans = [], []
+    decoded once into media.SPANS instead of re-seeking (reverses, stutters). Both the material
+    seen so far and the result are kept as interval unions, so n retriggers of one slice cost O(n),
+    not n^2 / 2 overlap pieces; the padded, merged result depends only on the union."""
+    sx, sy, px, py = [], [], [], []   # seen so far; revisited (starts, ends)
     for r in tm.runs:
         a, b = max(r.a, t0), min(r.b, t1)
         if b <= a or r.kind == "hold":
@@ -50,12 +64,15 @@ def revisit_spans(tm, t0, t1, pad=0.05):
         s = r.src_vec(np.linspace(a, b, 64))
         lo, hi = float(s.min()), float(s.max())
         if np.any(np.diff(s) < -1e-9):
-            spans.append((lo, hi))
+            _union_add(px, py, lo, hi)
         else:
-            spans += [(max(lo, x), min(hi, y)) for x, y in seen if min(hi, y) > max(lo, x)]
-        seen.append((lo, hi))
+            k0, k1 = bisect_right(sy, lo), bisect_left(sx, hi)   # seen components overlapping it
+            for x, y in list(zip(sx[k0:k1], sy[k0:k1])):
+                if min(hi, y) > max(lo, x):
+                    _union_add(px, py, max(lo, x), min(hi, y))
+        _union_add(sx, sy, lo, hi)
     merged = []
-    for lo, hi in sorted((max(0.0, lo - pad), hi + pad) for lo, hi in spans):
+    for lo, hi in sorted((max(0.0, lo - pad), hi + pad) for lo, hi in zip(px, py)):
         if merged and lo <= merged[-1][1]:
             merged[-1] = (merged[-1][0], max(merged[-1][1], hi))
         else:
@@ -75,6 +92,7 @@ def probe(src):
 
 
 _mask_cache = {}
+MASK_CACHE_MB = 64   # a pulsing masked layer makes a new size every frame; a full-canvas mask is 6 MB
 
 
 def mask(spec, w, h):
@@ -93,7 +111,7 @@ def mask(spec, w, h):
             m = np.clip(np.minimum(dx, dy) / f, 0, 1)
         else:
             raise ValueError(f"mask shape {spec['shape']!r}")
-        if len(_mask_cache) > 64:
+        if len(_mask_cache) > 64 or sum(v.nbytes for v in _mask_cache.values()) + m.nbytes > MASK_CACHE_MB * 2 ** 20:
             _mask_cache.clear()
         _mask_cache[key] = m.astype(np.float32)
     return _mask_cache[key]
@@ -244,8 +262,11 @@ class Layer(Params):
         sc = self.sig("scale", s.get("scale"), 1)(t)
         if op <= 0.002 or sc <= 0.002:
             return
-        frame = self.reader.get(self.src_time(t))
         dw, dh = max(2, int(round(self.base[0] * sc))), max(2, int(round(self.base[1] * sc)))
+        if dw * dh > MAX_LAYER_AREA * canvas.shape[0] * canvas.shape[1]:   # each float copy below is dw*dh*12 bytes
+            raise ValueError(f"layer {self.id} at t={t:.3f}: {dw}x{dh} px (scale {sc:.3g}) is over "
+                             f"{MAX_LAYER_AREA}x the canvas")
+        frame = self.reader.get(self.src_time(t))
         if (dw, dh) != (frame.shape[1], frame.shape[0]):   # usually equal: decoded at display size
             frame = cv2.resize(frame, (dw, dh), interpolation=cv2.INTER_AREA if dw < frame.shape[1] else cv2.INTER_LINEAR)
         img = frame.astype(np.float32) * (1 / 255)
@@ -279,33 +300,43 @@ def render_video(tl, frames, k, out, ctx, warm=0):
         stdin=subprocess.PIPE)
     post_state = {}
     t_start = wall.time()
-    for j, fno in enumerate(frames):
-        t = fno / fps
-        canvas = np.zeros((H, W, 3), np.float32)
+    parent = int(os.environ.get("VIDBOX_PARENT_PID", 0))   # set by main() for its chunk processes
+    try:
+        for j, fno in enumerate(frames):
+            if parent and j % 25 == 0 and os.getppid() != parent:   # orphaned (parent killed): stop now
+                sys.exit(f"  {out.name}: parent render {parent} is gone; stopping")
+            t = fno / fps
+            canvas = np.zeros((H, W, 3), np.float32)
+            for L in layers:
+                if L.t0 <= t < L.t1:
+                    if L.reader is None:
+                        L.open()
+                    L.draw(canvas, t)
+                elif L.reader is not None and t >= L.t1:
+                    L.close()
+            if post:
+                ones = np.ones((H, W), np.float32)
+                canvas, _ = post.run_fx(tl["post"], canvas, ones, t, post_state, "post")
+            if j >= warm:
+                enc.stdin.write((np.clip(canvas, 0, 1) * 255 + 0.5).astype(np.uint8).tobytes())
+            if j % 50 == 0 and j:
+                el = wall.time() - t_start
+                print(f"\r  {out.name}: {j}/{len(frames)} {j / el:.1f} fps", end="", file=sys.stderr)
+    finally:   # also on errors and SIGTERM: the encoder finishes its file before this process exits,
+        try:     # so nothing is still writing into main()'s temp dir when it is removed
+            enc.stdin.close()
+        except BrokenPipeError:   # the encoder died first
+            pass
+        enc.wait()
         for L in layers:
-            if L.t0 <= t < L.t1:
-                if L.reader is None:
-                    L.open()
-                L.draw(canvas, t)
-            elif L.reader is not None and t >= L.t1:
-                L.close()
-        if post:
-            ones = np.ones((H, W), np.float32)
-            canvas, _ = post.run_fx(tl["post"], canvas, ones, t, post_state, "post")
-        if j >= warm:
-            enc.stdin.write((np.clip(canvas, 0, 1) * 255 + 0.5).astype(np.uint8).tobytes())
-        if j % 50 == 0 and j:
-            el = wall.time() - t_start
-            print(f"\r  {out.name}: {j}/{len(frames)} {j / el:.1f} fps", end="", file=sys.stderr)
-    enc.stdin.close()
-    enc.wait()
-    for L in layers:
-        L.close()
+            L.close()
     print(file=sys.stderr)
     return enc.returncode
 
 
 def atempo_chain(f):
+    if not 0 < f < math.inf:   # 0 or inf would loop forever below, appending filters
+        raise ValueError(f"atempo factor {f}")
     tempo = []
     while f > 2.0:
         tempo.append("atempo=2.0"); f /= 2
@@ -348,10 +379,12 @@ def _take(y, i0, n):
     return out
 
 
-def _atempo(x, f):
-    """Pitch-preserving tempo change of stereo samples by factor f (ffmpeg atempo)."""
+def _atempo(x, f, n_out=None):
+    """Pitch-preserving tempo change of stereo samples by factor f (ffmpeg atempo). n_out: samples
+    needed; ffmpeg stops a second past them (its output is len(x) / f, unbounded as f -> 0)."""
+    lim = ["-t", f"{n_out / SR + 1.0:.6f}"] if n_out is not None else []
     p = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-",
-                        "-af", ",".join(atempo_chain(f)) or "anull", "-f", "f32le", "-"],
+                        "-af", ",".join(atempo_chain(f)) or "anull", *lim, "-f", "f32le", "-"],
                        input=np.ascontiguousarray(x, np.float32).tobytes(), capture_output=True, check=True)
     return np.frombuffer(p.stdout, np.float32).reshape(-1, 2)
 
@@ -360,6 +393,7 @@ def _fit(x, n):
     return x[:n] if len(x) >= n else np.concatenate([x, np.zeros((n - len(x), 2), np.float32)])
 
 
+AT_CTX = 2.0  # s of song time: most atempo context a slow constant-speed run gets (see layer_audio)
 AXF = 0.005   # s: crossfade half-width where two pieces join continuously (e.g. map knots)
 
 
@@ -404,11 +438,14 @@ def layer_audio(L, r0, r1, ctx):
                 return _take(y, int(round(s1 * SR)) + off, m)[::-1]
             if mode == "tempo":
                 lo, hi = min(s0, s1), max(s0, s1)
-                c_lo, c_hi = min(0.05, max(0.0, lo)), 0.05   # source context so atempo has no edge transient
+                # source context so atempo has no edge transient: 0.05 s, but never more than
+                # AT_CTX of song time once stretched (at |v| < 0.025 it would be lead / |v| s of output)
+                c = min(0.05, AT_CTX * abs(v))
+                c_lo, c_hi = min(c, max(0.0, lo)), c
                 x = _take(y, int(round((lo - c_lo) * SR)) + off, int(round((hi - lo + c_lo + c_hi) * SR)))
                 lead = c_hi if v < 0 else c_lo
-                x = _atempo(x[::-1] if v < 0 else x, abs(v))
                 k = int(round(lead / abs(v) * SR))
+                x = _atempo(x[::-1] if v < 0 else x, abs(v), k + m)
                 return _fit(x[k:], m)
         pos = r.src_vec(ta + np.arange(m) / SR) * SR + off   # tape
         j = np.clip(np.floor(pos).astype(np.int64), 0, max(len(y) - 2, 0))
@@ -497,7 +534,20 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
                     str(out)], check=True)
 
 
+def wait_chunks(procs):
+    """Exit codes of the chunk processes; the first failure stops the rest (killed, code None)
+    instead of letting them render on for nothing."""
+    while True:
+        codes = [p.poll() for p in procs]
+        if all(c is not None for c in codes) or any(c for c in codes):
+            return codes
+        wall.sleep(0.2)
+
+
 def main():
+    # SIGTERM (a timeout, a supervisor) runs main()'s cleanup like Ctrl-C does, instead of
+    # exiting at once and orphaning the chunk processes
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit("terminated"))
     ap = argparse.ArgumentParser()
     ap.add_argument("timeline")
     ap.add_argument("--full", action="store_true")
@@ -526,16 +576,31 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         jobs = max(1, min(a.jobs, (F1 - F0) // (fps * 4) or 1))
+        if jobs > (os.cpu_count() or 1):   # each chunk is a full working set (TIMELINE.md "Memory"); past
+            jobs = os.cpu_count() or 1     # the core count they only add memory
+            print(f"  --jobs {a.jobs}: capped at {jobs} (CPU cores)", file=sys.stderr)
         bounds = np.linspace(F0, F1, jobs + 1).round().astype(int)
         procs, parts = [], []
-        for i in range(jobs):
-            s, e = int(bounds[i]), int(bounds[i + 1])
-            warm = int(PREROLL * fps) if i > 0 else 0
-            part = tmp / f"part{i:03d}.mp4"
-            parts.append(part)
-            procs.append(subprocess.Popen([sys.executable, __file__, str(tl_path), *(["--full"] if a.full else []),
-                                           "--chunk", f"{s - warm} {e} {warm} {part}"]))
-        codes = [p.wait() for p in procs]
+        env = dict(os.environ, VIDBOX_PARENT_PID=str(os.getpid()))
+        try:
+            for i in range(jobs):
+                s, e = int(bounds[i]), int(bounds[i + 1])
+                warm = int(PREROLL * fps) if i > 0 else 0
+                part = tmp / f"part{i:03d}.mp4"
+                parts.append(part)
+                procs.append(subprocess.Popen([sys.executable, __file__, str(tl_path), *(["--full"] if a.full else []),
+                                               "--chunk", f"{s - warm} {e} {warm} {part}"], env=env))
+            codes = wait_chunks(procs)
+        finally:   # an error, Ctrl-C or SIGTERM here must not leave chunk processes rendering
+            for p in procs:   # SIGTERM first: a chunk then reaps its encoder (see render_video)
+                if p.poll() is None:
+                    p.terminate()
+            for p in procs:
+                try:
+                    p.wait(timeout=20)
+                except subprocess.TimeoutExpired:
+                    p.kill()
+                    p.wait()
         if any(codes):
             sys.exit(f"chunk render failed: {codes}")
         (tmp / "list.txt").write_text("".join(f"file '{p}'\n" for p in parts))

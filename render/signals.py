@@ -48,6 +48,8 @@ class Music:
             key = round(smooth, 3)
             if key not in self._smoothed:
                 k = max(1, int(smooth / self.int_dt))
+                if k > len(v):   # pad and kernel are 2k + 1 long: a window past the song is a typo
+                    raise ValueError(f"intensity smooth {smooth} s is longer than the song")
                 pad = np.pad(v, k, mode="edge")
                 self._smoothed[key] = np.convolve(pad, np.ones(2 * k + 1) / (2 * k + 1), "valid")
             v = self._smoothed[key]
@@ -311,6 +313,10 @@ def _seq_runs(pieces, t0):
             continue
         sp = float(sp)
         n, every = int(p.get("repeat", 1)), float(p.get("every", d))
+        if n > 1 and not every > 0:
+            raise ValueError(f"repeat {n} every {every}: triggers must move forward in time")
+        if len(runs) + 2 * n > MAX_RUNS:   # each repeat is up to two Run objects; refuse before allocating
+            raise ValueError(f"seq has more than {MAX_RUNS} runs (repeat {n})")
         for k in range(n):
             last = k == n - 1
             play = d if last else min(d, every)
@@ -319,6 +325,10 @@ def _seq_runs(pieces, t0):
                 runs.append(Run(a + play, a + every, "hold", s0=s + sp * play))
             a += play if last else every
     return runs
+
+
+MAX_RUNS = 100_000      # runs in one time map (loop passes, seq repeats): 4.7 ms loops at 1x over the song
+MAX_SIGNAL_SPAN = 4 * 3600   # s: a speed signal is tabulated every dt over the layer
 
 
 def compile_time(T, t0, t1, ctx=None, dt=0.001):
@@ -351,6 +361,8 @@ def compile_time(T, t0, t1, ctx=None, dt=0.001):
         if ctx is None:
             raise ValueError("a speed signal needs a Ctx")
         f = compile_signal(sp, ctx)
+        if not (dt > 0 and 0 <= t1 - t0 <= MAX_SIGNAL_SPAN):   # the table below is (t1 - t0) / dt long
+            raise ValueError(f"speed signal over song [{t0}, {t1}] at dt {dt}: span must be 0..{MAX_SIGNAL_SPAN} s")
         ts = np.arange(t0, t1 + 2 * dt, dt)
         v = np.array([float(f(t)) for t in ts])
         ss = tin + np.concatenate([[0.0], np.cumsum((v[1:] + v[:-1]) * 0.5 * dt)])
@@ -363,8 +375,14 @@ def compile_time(T, t0, t1, ctx=None, dt=0.001):
         raise ValueError(f"loop [{a}, {b}] is empty")
     runs, t = [], t0
     # One run per pass through the loop; the cap turns any future non-progress into an error
-    # instead of an unbounded list (this loop once ate hundreds of GB, see below).
-    max_runs = int(abs(sp) * (t1 - t0) / (b - a)) + 4
+    # instead of an unbounded list (this loop once ate hundreds of GB, see below). A legitimately
+    # huge pass count (a loop far shorter than a frame, or an absurd speed) is refused up front,
+    # before anything is allocated. 2x: a float edge can add one sliver run per wrap.
+    passes = abs(sp) * (t1 - t0) / (b - a)
+    if not passes <= MAX_RUNS:   # also catches inf / nan
+        raise ValueError(f"loop [{a}, {b}] at speed {sp} over song [{t0}, {t1}] is {passes:.3g} passes "
+                         f"(more than {MAX_RUNS}); a loop shorter than a frame is a hold")
+    max_runs = 2 * int(passes) + 4
     while t < t1 - 1e-9:
         if len(runs) > max_runs:
             raise RuntimeError(f"loop time map isn't advancing (t={t}, loop [{a}, {b}], speed {sp})")

@@ -76,12 +76,21 @@ def main():
     # visual signals at native frame rate, tiny grayscale frames, each with its own timestamp
     frames = decode_range(a.clip, a.t0, a.t1 if a.t1 is not None else 1e9, size=(96, 54), gray=True)
     tv = np.array([x[0] for x in frames])
-    fr = np.array([x[1] for x in frames], np.float32)
-    luma = fr.mean(axis=(1, 2))
+    u8 = [x[1] for x in frames]
+    del frames
+    # per-frame luma and mean |frame difference|, in float32 blocks: one float32 stack of the whole
+    # clip (plus np.diff and abs copies of it) was 1.6 GB for a 13-minute source
+    luma = np.empty(len(u8), np.float32)
+    diff = np.zeros(len(u8))
+    for i in range(0, len(u8), 1024):
+        o = 1 if i else 0   # blocks after the first start one frame early, for the difference
+        blk = np.array(u8[i - o:i + 1024], np.float32)
+        luma[i:i + len(blk) - o] = blk[o:].mean(axis=(1, 2))
+        d = np.abs(np.diff(blk, axis=0)).mean(axis=(1, 2))
+        diff[i + 1 - o:i + 1 - o + len(d)] = d
     k = max(1, int(fps * 0.5))
     base = np.array([np.median(luma[max(0, i - k):i]) if i else luma[0] for i in range(len(luma))])
     flash = norm(np.maximum(0, luma - base))
-    diff = np.r_[0, np.abs(np.diff(fr, axis=0)).mean(axis=(1, 2))]
     motion = norm(diff)
 
     audio = np.zeros_like(tv)
