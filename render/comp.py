@@ -113,6 +113,10 @@ def resolve_word(words, ref):
     return hits[k - 1]
 
 
+# ember: "the problem isn't the strike into people, the problem is that it isn't Israel/Gaza at all."
+IN_SCOPE = ("gaza", "israel", "arms-to-israel", "politics-israel")
+
+
 class Seg:
     """One catalogued footage segment."""
 
@@ -123,6 +127,8 @@ class Seg:
         self.file, self.t_in, self.t_out = clip["file"], s["in"], s["out"]
         self.hits = s.get("hits", [])
         self.tags = s.get("tags", [])
+        # what the footage depicts (footage/SCOPE.md); a segment may override its clip
+        self.scope = s.get("scope") or clip.get("scope")
 
     @property
     def ref(self):
@@ -204,10 +210,14 @@ class Comp:
                     yield Seg(cat, c, i)
 
     def find(self, catalog=None, tags=(), kind=None, min_strength=0, min_intensity=0, max_graphic=3,
-             overlay_ok=None, shuffle=True):
-        """[(Seg, hit_index)] for hits matching, or [(Seg, None)] when kind is None."""
+             overlay_ok=None, shuffle=True, scope=None):
+        """[(Seg, hit_index)] for hits matching, or [(Seg, None)] when kind is None.
+        scope: allowed footage scopes (default IN_SCOPE: Israel/Gaza only)."""
+        allowed = set(scope or IN_SCOPE)
         out = []
         for s in self.segments(catalog):
+            if s.scope is not None and s.scope not in allowed:
+                continue
             if tags and not set(tags) & set(s.tags):
                 continue
             if s.s.get("intensity", 0) < min_intensity or s.s.get("graphic", 0) > max_graphic:
@@ -557,6 +567,18 @@ class Comp:
                if L.get("meta", {}).get("catalog") for f in L.get("fx", []) if f.get("op") in HEADS_ONLY]
         if bad:
             raise ValueError(f"heads-only effects on war footage (ember's rule): {bad}")
+        out_of_scope = []
+        for L in tl["layers"]:
+            m = L.get("meta", {})
+            if m.get("catalog") in self.cat:
+                clip = next((c for c in self.cat[m["catalog"]] if c["id"] == m.get("clip")), None)
+                if clip is not None:
+                    sc = Seg(m["catalog"], clip, m.get("seg", 0)).scope
+                    if sc is not None and sc not in IN_SCOPE:
+                        out_of_scope.append((L["id"], sc))
+        if out_of_scope:
+            raise ValueError(f"footage outside Israel/Gaza (ember's rule): {out_of_scope[:10]}"
+                             f"{' ...' if len(out_of_scope) > 10 else ''}")
         out.write_text(json.dumps(tl, indent=1) + "\n")
         # each hit: on a beat, on an eighth/sixteenth (deliberate stutters), or genuinely off-grid
         on_beat, on_sub, offgrid = 0, 0, []
