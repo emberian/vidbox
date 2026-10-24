@@ -1,0 +1,32 @@
+{
+ "source": "media/derived/face.mp4",
+ "words": "analysis/rant_words.json",
+ "start": 0,
+ "out": "media/derived/face_missiles_on_beat.mp4",
+ "pins": [
+  {
+   "word": "missiles#1",
+   "downbeat": 3
+  },
+  {
+   "word": "missiles#2",
+   "beat": 21
+  },
+  {
+   "word": "missiles#3",
+   "downbeat": 6
+  },
+  {
+   "word": "missiles#4",
+   "beat": 29
+  },
+  {
+   "word": "missiles#5",
+   "downbeat": 10
+  },
+  {
+   "word": "missiles#6",
+   "beat": 45
+  }
+ ]
+}
