@@ -103,7 +103,7 @@ function setRate(r) {
   $("rate").value = String(r);
   bg.playbackRate = face.playbackRate = r;
 }
-function play() { bg.playbackRate = face.playbackRate = +$("rate").value; bg.play(); }
+function play() { bg.playbackRate = face.playbackRate = +$("rate").value; bg.play().catch(() => {}); }  // rejects if paused before it starts
 function pause() { bg.pause(); face.pause(); }
 function seek(t) { bg.currentTime = Math.max(0, Math.min(t, bg.duration || t)); }
 
@@ -113,7 +113,7 @@ function syncFace() {
   face.volume = Math.min(1, layer.gain);
   bg.volume = Math.min(1, project.background.gain);
   if (!bg.paused && inside) {
-    if (face.paused) { face.currentTime = local; face.play(); }
+    if (face.paused) { face.currentTime = local; face.play().catch(() => {}); }
     else if (Math.abs(face.currentTime - local) > 0.12) face.currentTime = local;
   } else {
     if (!face.paused) face.pause();
@@ -359,37 +359,44 @@ for (const [id, get, set] of [
   $(id).oninput = () => { set(+$(id).value); scheduleSave(); };
 }
 
+const rates = [0.25, 0.5, 0.75, 1];
+const keys = {
+  " ": () => (bg.paused ? play() : pause()),
+  c: () => setMode(mode === "edit" ? "capture" : "edit"),
+  h: () => { showOverlay = !showOverlay; },
+  ",": () => { pause(); seek(now() - 1 / fps); },
+  ".": () => { pause(); seek(now() + 1 / fps); },
+  ArrowLeft: () => seek(now() - 1),
+  ArrowRight: () => seek(now() + 1),
+  Home: () => seek(0),
+  "[": () => setRate(rates[Math.max(0, rates.indexOf(+$("rate").value) - 1)]),
+  "]": () => setRate(rates[Math.min(rates.length - 1, rates.indexOf(+$("rate").value) + 1)]),
+  Backspace: () => { if (sel >= 0) { path.anchors.splice(sel, 1); sel = -1; commit(); } },
+  a: () => { const i = splitAt(path, now()); if (i >= 0) { sel = i; commit(); } },
+  s: () => { if (sel >= 0) { smoothAnchor(path.anchors, sel); commit(); } },
+};
+keys.Delete = keys.Backspace;
+
 addEventListener("keydown", e => {
-  if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
-  const k = e.key, cmd = e.metaKey || e.ctrlKey, A = path.anchors;
-  const rates = [0.25, 0.5, 0.75, 1];
-  if (cmd && k.toLowerCase() === "z") {
+  if (e.target.tagName === "INPUT" && e.target.type !== "range") return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if (e.metaKey || e.ctrlKey) {
+    if (k !== "z") return;
     e.preventDefault();
     if (e.shiftKey) { if (redo.length) { undo.push(redo.pop()); restore(undo[undo.length - 1]); } }
     else if (undo.length > 1) { redo.push(undo.pop()); restore(undo[undo.length - 1]); }
     return;
   }
-  if (cmd) return;
-  if (k === " ") { e.preventDefault(); bg.paused ? play() : pause(); }
-  else if (k === "c" || k === "C") setMode(mode === "edit" ? "capture" : "edit");
-  else if (k === "h" || k === "H") showOverlay = !showOverlay;
-  else if (k === ",") { pause(); seek(now() - 1 / fps); }
-  else if (k === ".") { pause(); seek(now() + 1 / fps); }
-  else if (k === "ArrowLeft") seek(now() - 1);
-  else if (k === "ArrowRight") seek(now() + 1);
-  else if (k === "Home") seek(0);
-  else if (k === "[" || k === "]") {
-    const i = rates.indexOf(+$("rate").value) + (k === "]" ? 1 : -1);
-    setRate(rates[Math.max(0, Math.min(rates.length - 1, i))]);
-  } else if ((k === "Backspace" || k === "Delete") && sel >= 0) {
-    A.splice(sel, 1); sel = -1; commit();
-  } else if (k === "a" || k === "A") {
-    const i = splitAt(path, now());
-    if (i >= 0) { sel = i; commit(); }
-  } else if ((k === "s" || k === "S") && sel >= 0) {
-    smoothAnchor(A, sel); commit();
-  }
+  if (e.altKey || !keys[k]) return;
+  // claim the key, or Firefox's type-to-search (and focused buttons on Space) also act on it
+  e.preventDefault();
+  keys[k]();
 });
+
+// Toolbar controls shouldn't keep keyboard focus: a focused button would also fire on
+// Space, and a focused <select> or slider would eat the arrow keys.
+for (const el of document.querySelectorAll("#bar button")) el.addEventListener("mousedown", e => e.preventDefault());
+for (const el of document.querySelectorAll("#bar select, #bar input")) el.addEventListener("change", () => el.blur());
 
 status(`${path.anchors.length} anchors · ${path.takes.length} takes`);
 requestAnimationFrame(draw);
