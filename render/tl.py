@@ -11,6 +11,7 @@ import functools
 import json
 import math
 import os
+import signal
 import subprocess
 import sys
 import tempfile
@@ -299,7 +300,10 @@ def render_video(tl, frames, k, out, ctx, warm=0):
         stdin=subprocess.PIPE)
     post_state = {}
     t_start = wall.time()
+    parent = int(os.environ.get("VIDBOX_PARENT_PID", 0))   # set by main() for its chunk processes
     for j, fno in enumerate(frames):
+        if parent and j % 25 == 0 and os.getppid() != parent:   # orphaned (parent killed): stop now
+            sys.exit(f"  {out.name}: parent render {parent} is gone; stopping")
         t = fno / fps
         canvas = np.zeros((H, W, 3), np.float32)
         for L in layers:
@@ -525,7 +529,20 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
                     str(out)], check=True)
 
 
+def wait_chunks(procs):
+    """Exit codes of the chunk processes; the first failure stops the rest (killed, code None)
+    instead of letting them render on for nothing."""
+    while True:
+        codes = [p.poll() for p in procs]
+        if all(c is not None for c in codes) or any(c for c in codes):
+            return codes
+        wall.sleep(0.2)
+
+
 def main():
+    # SIGTERM (a timeout, a supervisor) runs main()'s cleanup like Ctrl-C does, instead of
+    # exiting at once and orphaning the chunk processes
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit("terminated"))
     ap = argparse.ArgumentParser()
     ap.add_argument("timeline")
     ap.add_argument("--full", action="store_true")
@@ -556,14 +573,21 @@ def main():
         jobs = max(1, min(a.jobs, (F1 - F0) // (fps * 4) or 1))
         bounds = np.linspace(F0, F1, jobs + 1).round().astype(int)
         procs, parts = [], []
-        for i in range(jobs):
-            s, e = int(bounds[i]), int(bounds[i + 1])
-            warm = int(PREROLL * fps) if i > 0 else 0
-            part = tmp / f"part{i:03d}.mp4"
-            parts.append(part)
-            procs.append(subprocess.Popen([sys.executable, __file__, str(tl_path), *(["--full"] if a.full else []),
-                                           "--chunk", f"{s - warm} {e} {warm} {part}"]))
-        codes = [p.wait() for p in procs]
+        env = dict(os.environ, VIDBOX_PARENT_PID=str(os.getpid()))
+        try:
+            for i in range(jobs):
+                s, e = int(bounds[i]), int(bounds[i + 1])
+                warm = int(PREROLL * fps) if i > 0 else 0
+                part = tmp / f"part{i:03d}.mp4"
+                parts.append(part)
+                procs.append(subprocess.Popen([sys.executable, __file__, str(tl_path), *(["--full"] if a.full else []),
+                                               "--chunk", f"{s - warm} {e} {warm} {part}"], env=env))
+            codes = wait_chunks(procs)
+        finally:   # an error, Ctrl-C or SIGTERM here must not leave chunk processes rendering
+            for p in procs:
+                if p.poll() is None:
+                    p.kill()
+                    p.wait()
         if any(codes):
             sys.exit(f"chunk render failed: {codes}")
         (tmp / "list.txt").write_text("".join(f"file '{p}'\n" for p in parts))
