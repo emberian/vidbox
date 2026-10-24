@@ -453,9 +453,13 @@ def politicians(c):
     speaker(c, "cruz_tucker_bless__taught_bless", "bless", bar(30), pos=[720, 410], scale=0.6, play=True,
             swell=("Bible", "blessed"), card=["Sen. Ted Cruz (R-TX)", "The Tucker Carlson Show  ·  18 Jun 2025"])
     # ... and Tucker Carlson: "Where is that?", WHERE on bar 31 (the broadcast's own cut from Cruz to him)
-    speaker(c, "cruz_tucker_bless__where_is_that", "Where", bar(31), oval=False, size=(400, 225), pos=[720, 330],
-            crop=(0.08, 0, 0.92, 1), fade=(0.06, 0.3), z=3.6,
-            card=["Tucker Carlson", "to Sen. Ted Cruz  ·  The Tucker Carlson Show  ·  18 Jun 2025"], card_dur=3.0)
+    # The source opens on 8 frames of Cruz before cutting to Carlson (0.267 s in): his voice starts on time,
+    # the picture only once it has settled on him, zoomed to his head and shoulders (ember).
+    tucker = speaker(c, "cruz_tucker_bless__where_is_that", "Where", bar(31), oval=False, size=(400, 225),
+                     pos=[720, 330], crop=(0.32, 0.04, 0.68, 0.40), fade=(0.06, 0.3), z=3.6,
+                     card=["Tucker Carlson", "to Sen. Ted Cruz  ·  The Tucker Carlson Show  ·  18 Jun 2025"],
+                     card_dur=3.0)
+    tucker["opacity"] = {"k": [[tucker["t0"], 0.0], [tucker["t0"] + 8 / 29.97, 0.92]], "ease": "hold"}
     # Walberg (voice only: filmed from behind): "...like Nagasaki and Hiroshima. Get it over QUICK" on bar 36,
     # where the black-hot strike lands
     speaker(c, "walberg_nagasaki__nagasaki_quick", "quick", bar(36), video=False, oval=False, size=(480, 270),

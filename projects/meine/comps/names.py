@@ -7,7 +7,8 @@ text        a page flashes on every downbeat (3 frames), white names screened ov
             where the song is intense (> 0.7) also on beats 2-4 (2 frames)
 hard        the same schedule, but the page replaces the frame (white on black: a real flash;
             photosensitivity applies)
-continuous  the page stays over the picture at low opacity, turning on the beat; all 759 pages,
+continuous  the page stays over the Meine video (a layer just above it, below everything else),
+            white at full strength, turning on the beat; all 759 pages,
             in order, spread over the free beats so the list ends with the song
 
 Never during untreated footage of the dead, and not over the credits.
@@ -73,13 +74,17 @@ def schedule(tl, mode, music):
 def add_names(tl, mode, first_page=0):
     music = Music(ROOT / "projects/meine/analysis/beats.json")
     spans = schedule(tl, mode, music)
-    style = {"text": ("screen", 0.85), "hard": ("normal", 1.0), "continuous": ("screen", 0.3)}[mode]
+    style = {"text": ("screen", 0.85), "hard": ("normal", 1.0), "continuous": ("screen", 1.0)}[mode]
+    # a middle layer: above the Meine video, below everything else (ember)
+    at = next((i + 1 for i, L in enumerate(tl["layers"]) if L.get("id") == "meine"), 0)
+    new = []
     for j, (k, a, b) in enumerate(spans):
-        tl["layers"].append({
+        new.append({
             "id": f"names:{first_page + k:04d}.{j}", "tags": ["names", "text"],
             "src": f"media/derived/names/page_{first_page + k:04d}.png",
             "t0": round(a, 4), "t1": round(b, 4), "time": {"hold": 0.0}, "fit": "native",
             "pos": [720, 540], "blend": style[0], "opacity": style[1]})
+    tl["layers"][at:at] = new
     return spans
 
 
