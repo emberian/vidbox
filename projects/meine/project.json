@@ -1,0 +1,31 @@
+{
+ "size": [
+  1440,
+  1080
+ ],
+ "fps": 25,
+ "duration": 36.8,
+ "background": {
+  "src": "media/src/meine.webm",
+  "proxy": "media/derived/meine_proxy.mp4",
+  "gain": 1
+ },
+ "layers": [
+  {
+   "id": "face",
+   "src": "media/derived/face.mp4",
+   "start": 0,
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "opacity": 0.7,
+   "gain": 1,
+   "path": "paths/face.json"
+  }
+ ]
+}

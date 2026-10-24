@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vidbox studio</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --bg: #111; --panel: #1b1b1d; --ink: #ddd; --dim: #888; --accent: #ff6a3d; --rec: #ff2d55; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 13px/1.4 ui-monospace, Menlo, monospace;
+         display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+  #bar { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; padding: 8px 12px; background: var(--panel); }
+  #bar label { display: flex; gap: 6px; align-items: center; color: var(--dim); }
+  #bar input[type=range] { width: 90px; }
+  button, select { background: #2a2a2e; color: var(--ink); border: 1px solid #3a3a40; border-radius: 4px; padding: 3px 8px; font: inherit; }
+  button:hover { border-color: var(--dim); }
+  #mode.capture { background: var(--rec); border-color: var(--rec); color: #fff; }
+  #status { margin-left: auto; color: var(--dim); }
+  #wrap { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 8px; }
+  #stage { background: #000; display: block; cursor: default; touch-action: none; }
+  #stage.capture { cursor: crosshair; }
+  #timeline { height: 64px; width: 100%; display: block; background: var(--panel); cursor: ew-resize; touch-action: none; }
+  #help { padding: 4px 12px 6px; color: var(--dim); background: var(--panel); font-size: 12px; }
+  #help b { color: var(--ink); font-weight: normal; }
+  video { display: none; }
+</style>
+</head>
+<body>
+<div id="bar">
+  <button id="mode" title="C">EDIT</button>
+  <button id="play" title="Space">▶</button>
+  <span id="time">0.00</span>
+  <label>rate <select id="rate"><option>0.25</option><option>0.5</option><option>0.75</option><option selected>1</option></select></label>
+  <label title="fit tolerance in px: higher = fewer, smoother anchors">tidy <input id="tol" type="range" min="1" max="40" value="12"><span id="tolv">12</span></label>
+  <button id="refit" title="re-fit the most recent take with the current tidy value">refit last take</button>
+  <label>opacity <input id="opacity" type="range" min="0" max="1" step="0.05"></label>
+  <label>music <input id="gbg" type="range" min="0" max="1.5" step="0.05"></label>
+  <label>voice <input id="gvoice" type="range" min="0" max="1.5" step="0.05"></label>
+  <span id="status">loading…</span>
+</div>
+<div id="wrap"><canvas id="stage"></canvas></div>
+<canvas id="timeline"></canvas>
+<div id="help">
+  <b>C</b> capture/edit · capture: <b>hold mouse</b> on the picture to play + record, release to stop ·
+  edit: drag anchors/handles (<b>⌥</b> breaks smoothness), <b>dbl-click</b> add anchor at playhead,
+  <b>A</b> split at playhead, <b>⌫</b> delete, <b>S</b> smooth anchor · <b>Space</b> play · <b>,</b> <b>.</b> frame ·
+  <b>←</b> <b>→</b> 1s · <b>[</b> <b>]</b> rate · <b>H</b> hide overlay · <b>⌘Z</b> / <b>⇧⌘Z</b> undo/redo
+</div>
+<video id="bg" preload="auto" playsinline></video>
+<video id="face" preload="auto" playsinline></video>
+<script type="module" src="studio.js"></script>
+</body>
+</html>
