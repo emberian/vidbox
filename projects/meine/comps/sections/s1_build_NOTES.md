@@ -1,149 +1,90 @@
-# s1_build v2: 0:38 to 3:45 (bars 20 to 118)
+# s1_build v3: 0:38 to 3:45 (song 38.30-224.97 s)
 
-This is v2, built on ember's direction after watching v1:
-- His face is there only while he talks.
-- A second rant runs around 85 s.
-- He fades back in around 3:30.
-- All footage is in scope (Israel and Gaza, arms to Israel, the US arsenal).
-- Untreated reality goes in with its own sound: lingering shots and stacks.
+Bars below are **viewer bars** (counted from 1, as ember counts): viewer bar N = `c.bar(N-1)` in the code.
+The v2 notes and script are backed up in the s1v3 scratchpad (`s1_build_NOTES_v2.md`, `s1_build_v2_before.py`).
 
-Run `uv run python projects/meine/comps/sections/s1_build.py`. The v1 script is kept at `/private/tmp/claude-501/-Users-ember-Downloads/42340d15-64ac-4c01-9187-25feb7131eb1/scratchpad/composeA/s1_build_v1.py` for reference.
+Build: `uv run python projects/meine/comps/sections/s1_build.py`, which reports 189 layers, 0 repeated
+footage pairs and 0 hits off the grid. Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/section_s1_build.timeline.json
 
-Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/section_s1_build.timeline.json
+## v3, from ember's notes on v2
 
-`c.save()` reports 160 layers: 90 hits on the beat, 2 on 8ths/16ths (the bar 50 eighth-note stutter, deliberate) and 0 off the grid. No layer is out of scope.
+- **Real speakers on top of the scenes.** Politicians come between the rants, preachers after rant 2.
+  - Each is named and dated by a lower-third in the letterbox under the picture, so the text never covers a face or a victim.
+  - Over the dead they are still, plain (no fx) and to one side.
+  - Elsewhere they join the beat play: a pulse, a sway, a light RGB split, and a swell on their key words.
+  - Hyde is never on screen with the dead.
+- **The F-35 CGI is gone.**
+- **No repeated footage in s1.** The IDF crater strike-cam belongs to s2, so s1 doesn't use it.
+- **Ducks follow ember's rule** via `music_dip()`: a hold under 4 bars stays at 0.5 or above, deep dips only on holds of 4+ bars, and every release lasts at least a bar.
 
-## Rant 2
+## Speakers
 
-- `projects/meine/sync/rant2.json` places face.mp4 at start 83.813 s and writes `media/derived/face_rant2.mp4` and `rant2.resolved.json`. The rant runs 84.01 to 120.93.
-- Pins:
+Lines are cut by `tools/preacher_prep.py` into `media/derived/preachers/<clip>__<line>.mp4` (+ a `.json` sidecar with words in the clip's clock):
+- **Heads:** facecrop'd ovals.
+- **Windows:** the plain cut, as a framed window.
+- **Audio:** gently compressed and normalised to -14 LUFS.
 
-| word | lands on | song s |
-|---|---|---|
-| "missiles" #1 | downbeat 47 | 89.73 |
-| "missiles" #2 | beat 197 | 94.02 |
-| "missiles" #3 | downbeat 50 | 95.45 |
-| "missiles" #4 | beat 205 | 97.83 |
-| "missiles" #5 | downbeat 54 | 103.06 |
-| "missiles" #6 | beat 221 | 105.44 |
-| "enough" #1 | beat 244 (downbeat 61) | 116.40 |
-| "enough" #2 | beat 248 | 118.31 |
+`speaker()` in s1_build.py lands one word on a grid time.
 
-- The motion is `paths/face_rant2_gaze.json` (`selfmotion --mode gaze --sync`).
-- The main head is held at 0.72 of the path's scale, because at full scale he and eight copies filled the frame.
+| viewer bars | song s | speaker | line (key word on the grid) | under it |
+|---|---|---|---|---|
+| 22-27 | 41.6-51.2 | Sen. Lindsey Graham, oval, play | "...Hiroshima and Nagasaki... the right decision. Give Israel the BOMBS..." (BOMBS on 26) | Scranton forge |
+| 27-29 | 51.1-54.6 | Speaker Mike Johnson, oval, play | "God will BLESS the nation that blesses Israel..." (28) | Scranton / JDAM panels |
+| 29-31 | 54.8-58.8 | Sen. Ted Cruz, oval, play | "...those who BLESS Israel will be blessed" (31) | JDAM panels |
+| 32 | 59.1-60.0 | Tucker Carlson, window | "WHERE is that?" (32) | JDAM panels |
+| 32-37 | 60.0-69.0 | Rep. Tim Walberg, voice only | "...not a dime on humanitarian aid... like Nagasaki and Hiroshima. Get it over QUICK" (QUICK on the bar-37 strike) | strike 33, Ashdod MK-84 ship |
+| 37-39 | 69.4-74.7 | Nikki Haley, Hannity voice + window of her writing on a shell | "FINISH them. Finish them." (39) | C-17 at Nevatim |
+| 40-43 | 74.8-80.8 | Rep. Andy Ogles, window | "that's my taxpayer dollars... I think we should KILL them all" (43) | Hellfires |
+| 65-66 | 121.9-126.5 | Pastor Jack Hibbs, oval, play | "We are actually insulting GOD by hamstringing his own people" (66) | strikes as Hyde's heads fade |
+| 69-72 | 129.7-137.4 | Pastor John Hagee, CUFI broadcast window (left) | "...We must give them the weapons of war to win that FIGHT" (FIGHT on the bar-73 blast) | Reaper countdown (moved right), flour crowd |
+| 73-74 | 137.6-141.1 | Michele Bachmann, still oval in the sky | "an opportunity to BLESS Israel" (74 beat 3; over before the bar-75 fireball) | **untreated** Maghazi families, dusk |
+| 77-80 | 144.8-152.4 | Mike Evans, still oval top-right, waving his Bible | "I will bless them that bless thee... America has been blessed because of this" (I on 77) | **untreated** Mahmoud Hammad sieving |
+| 81-84 | 152.2-160.4 | Mike Huckabee, still oval in the gap above the stack | "GENESIS 12, those who bless Israel will be blessed... blessing side, not the curse side" (81) | **untreated** stack of the dead |
+| 86 | 161.4-163.1 | Mike Huckabee, still oval top-right | "It would be FINE if they took it all" (86) | **untreated** Nasser courtyard graves |
+| 89-94 | 167.6-178.7 | Shane Vaughn, oval, play, sung | "WHAT wonderful days these days are before the coming of the Lord" (89) | launches, night strikes |
+| 95 | 179.1-181.6 | Shane Vaughn + 4 silent copies in a ring | "OH, the glory" (95) | launch |
+| 97-99 | 182.6-187.2 | Pastor Jack Hibbs, oval, play | "poking the God of Abraham, Isaac, and Jacob right in the EYE" (EYE on the bar-99 strike-cam) | coast-road walkers |
+| 101-104 | 191.5-198.4 | Pastor John Hagee, still oval left | "VICTORY was our only aim..." (101 beat 3, after the fireballs) | **untreated** Deir al-Balah window |
+| 105-108 | 198.2-206.2 | Rev. Munther Isaac, window, alone, not multiplied, no fx | "HERE in Palestine, the Bible is weaponized against us, our very own sacred text" (105) | untreated drone shot of Gaza City's ruins |
 
-## Bar map
+Lower-third texts are in `politicians()` and `preachers()`. Every first appearance gets one; Hibbs's second line doesn't.
+Each speaker layer carries `meta.people` (name, role, date, source).
 
-| bars | song s | on screen |
-|---|---|---|
-| (s0 tail) | 36.84-40.2 | The s0 preacher's last frame dissolves out, blurring and sinking slightly, over about 3.4 s. |
-| 20 | 38.30 | The "Apache in G Major" false-colour fireball on the downbeat (US arsenal), Meine dipped to 40%. No heads. |
-| 21-27 | 40-53 | Scranton's red-hot 155 mm noses, hue-keyed (red only) and bloomed, one press stroke per 2 bars. Meine otherwise. |
-| 28-31 | 53.5-61.2 | Beat-cut panels: a JDAM fuze screwed home and JDAM kits fitted (Whiteman); bomb noses on the stand from bar 30. |
-| 32 | 61.16 | An IDF strike-cam whiteout (Gaza crater, Aug 2026), screened, with a dip. |
-| 32-35 | | The MK-84 ship at Ashdod (IMOD), one crane cycle per 2 bars, screened. |
-| 36 | 68.78 | An IDF black-hot strike on Gaza (Jan 2014), multiplied. |
-| 36-39 | | The first US munitions C-17 into Nevatim (tall window) and apron cuts. |
-| 40 | 76.39 | A false-colour Hellfire hit (TADS). Hellfires onto the Reaper rail and out of their crates (panels). |
-| 43 | 82.1-84.0 | **He fades in** on his first frame. |
-| 44-63 | 84.0-121 | **Rant 2**: the main head is steered by his gaze, chroma-pulsed, with his voice. |
-| 44-47 | | Night SDB loading (screened, 1 s to 2 beats). |
-| 47 | 89.73 | "Hellfire MISSILES" lands on the downbeat with a Hellfire launch (Apache, US range). **The split**: one copy peels off per beat over bar 47. The 8 copies mouth the rant in unison with him (the same retimed clip, silent) and drift where he looks. |
-| 48-51 | | GBU-31 rows and forklifts (Israel, Oct 2023) and IAF pylons, beat-cut. |
-| 49.1 | 94.02 | "missiles": the AFP Rafah domes, their hits landed on the grid. |
-| 50 | 95.45 | "missiles": the IDF Gaza-shore fireball, stuttered three times on eighths. |
-| 51.1 | 97.83 | "missiles": a Reuters night fireball over Gaza City. |
-| 52-55 | 99-107 | The heads pass "thou / shalt / give / Israel" (twice): one copy swells on each word, and all of them swell on each "missiles". 54 (103.06): an IDF Oct 2023 aerial fireball, normal blend. 55.1 (105.44): the NBC night tower collapse. |
-| 56-59 | 106.9-114.5 | The copies plus 12 more small heads form a ring, then a sphere, around him, spun on the grid, all mouthing the rant. The civil-defence dig panel (Al Jazeera bug cropped) begins. The Khan Younis drone bed is faint underneath. |
-| 60-63 | 114.5-122 | The copies bounce off the walls on 2 beats, then every beat. All of them swell on "I'm not paying ENOUGH" (61, 116.40, and 118.31). The coast-road walkers bed. |
-| 63 | 120.93 | The rant ends. **Every head falls back into him and fades over about 1.2 s** (gone by 122.1). |
-| 64-71 | 122-137 | **No heads.** 64: the IDF crater strike-cam. 65: a Reuters fireball. 66-67: **the stack** (below). 68-69: news.com.au night tower, IDF Beit Hanoun, Reuters. 70 b2-72: the Reaper countdown "3, 2, 1" on two-beat steps, its blast on bar 72 (shortened, so it is gone by 138.3). The flour-crowd bed. |
-| 72-75 | 137.4-144.97 | **Untreated** Maghazi: families walking at dusk, then the strike (below). The music is pulled down to 12%. |
-| 76-83 | 145-160 | **Untreated**: Hammad, then the stack (mass-funeral remains, the Rafah family's shrouds, the graves). |
-| 84-87 | 160-167.8 | **Untreated**: the Nasser courtyard graves fill the picture with their sound while the riser climbs. |
-| 88-95 | 167.8-183 | Launches on alternate downbeats, each with a dip: HIMARS in the Negev (Juniper Oak), an Apache Hellfire (Red Sands), an Apache Hellfire (Yakima) and a PAC-3 (Lockheed 2026). Night strikes on Gaza on the odd bars. No heads. |
-| 96-99 | 183-190.7 | People returning north on the coast road, grooved so each step is a beat. IDF strike-cam on 96 and 98. |
-| 100-103 | 190.7-198.3 | **Untreated** Deir al-Balah (below). |
-| 104-111 | 198.3-213.5 | The Lockheed CGI F-35 line, screened (its diegetic labels kept). 104: an IDF strike (Times Radio repost, captions cropped). 105-107: strikes. 108: a white-phosphorus airburst over Gaza. 109: **untreated** Dar al-Muttaqin street (below). |
-| 110-111 | 209.7-213.5 | **He fades back in** (still frame, silent), then says "They need more and more MISSILES", landing MISSILES on bar 112's downbeat with his voice (face.mp4 9.08-10.26). |
-| 112-117 | 213.5-225 | On MISSILES he splits: 8 copies bounce (2 beats, then every beat) and 20 small heads form a sphere, then a cube. A strike on every 2 beats, then every beat. Jabaliya digging by hand (grooved). 116: "missiles" on each beat, a different copy each time (`c.say like=`). 117: "thou / shalt / give / Israel" passed between copies. |
-| 118 | 224.967 | **Handoff.** Every head collapses to the centre and vanishes on the downbeat. A six-voice "missiles" chorus sounds there. One night-blast flash (AP, from Israel) fades out across the bar, ending at 226.871. Clean Meine follows. Lane B may fade in from 223.06; those last two bars are my busiest. |
+## Other changes from v2
 
-## Untreated moments, silences, stacks
+- **Bars 33-37:** the strike is now the Times Radio IDF bombardment (screen).
+- **Bar 66:** the IDF soldiers watching a demolition (both strikes were the crater strike-cam, which is s2's).
+- **Bars 57-64:** the panel under Hyde's formation is now the Iowa 155 mm shell-line workers (grooved). It used to be the civil-defence body recovery.
+- **Bar 51 (m6):** AP's 2014 Gaza City night blast. The NBC tower is shown untreated in the bar-67 stack.
+- **Bars 89-95 launches:** HIMARS, Apache Red Sands, Apache Yakima #3 (the old #1 was s0's), PAC-3 triple.
+- **Bars 105-110:** the ruins bed replaces the F-35 CGI. The strikes at 105-108 are gone.
+- **Bars 113-118:** under Hyde's return, the B-2 bomb-bay loading bed replaces the Jabaliya dig for victims.
+- **The fast strikes are all different segments.** The bars 117-118 hits stutter twice, on the beat.
+- **Caption crops:** the rise's ground strikes use TIGHT_CROP (0.18-0.72), plus per-clip crops (AP Deir al-Balah night strike, WSJ high-rise, B-2 watermark).
+- **Looped panels** are explicit maps, so `repeats()` reads their true source span.
 
-"Untreated" here means: normal blend, no effects, no key, no heads on top, the footage's own sound, a large frame.
+## Ducks (music level relative to raw Meine, measured from a music-only render)
 
-- **137.82-142.77, Maghazi camp, 15 Jul 2026** (AP). Two shots of one AP story, in AP's order, full picture, their own sound.
-  - 137.82-139.25 (src 8.0): families with bags walk toward the camera along a rubble road at dusk, under an evacuation order.
-  - Cut on bar 73 to the dark horizon (src 15.36); the ball of flame from that evening's strike lands on bar 74's downbeat, 141.17. Cut 1.6 s later as the cloud climbs.
-  - The music is ducked to 12% across bars 72-75. Meine alone follows until 145.
-  - The walk shot sits above the Reaper countdown (z 4.5), so the monitor's fading tail (to 138.26) is never over the families.
-  - (Until 2026-10-24 this slot held the Zinati killing. It is now shown once, in s2 at bar 204, its deepest silence.)
-- **144.97-160.0, Mahmoud Hammad sieving the sand of his home for the remains of his wife and children** (AP, Jan 2026).
-  - Full picture, one shake every two beats (retimed to the grid), so his fingers lift the fragments on the grid.
-  - Sound at gain 1. Music at 15% for bars 76-79.
-- **Stack 80-83, over Hammad**, three windows landing one per downbeat (81, 82, 83), each with its own sound (gain 0.6). Music at 20%.
-  - 81: flag-wrapped remains with photos and handwritten names, at the Gaza City mass funeral of 105 bodies recovered from the rubble (AP, 1 Oct 2026, src 36.0, one shot).
-  - 82: men standing over the shrouded bodies of nine members of one family, al-Najjar hospital, Rafah (AP, 12 Jan 2024, src 5.5, one shot).
-  - 83: the Nasser courtyard graves (NBC, src 17.0).
-  - (The MEE 112 remains and the Khan Younis morgue were here; both are shown once, in s2.)
-- **159.99-167.82, the Nasser courtyard graves** fill the picture, with their sound, while the music climbs back. It is the bar-83 tile's take continuing (src 18.9 on), so the segment is used once.
-- **Stack 66-67 (125.84-129.73)**: four strikes on Gaza land one per beat into the four quarters of the picture and stay there, each with its sound (gain 0.45). Meine dipped to 30%, music to 45%.
-  - Zeitoun cemetery (AP, Feb 2026)
-  - Reuters, 22 Oct 2023
-  - the al-Ansar tent camp strike at night, men watching in the street (Guardian, 11 Mar 2026; logo and caption box cropped). It replaced the Maghazi fireball, now in the 72-75 window.
-  - NBC night tower
-- **190.38-198.30, Deir al-Balah tent camp, 26 Mar 2026** (Guardian / AP). A tall untreated window.
-  - The fireballs land on bar 100's downbeat; people duck and run; the sound is at gain 1.
-  - It then holds still on the smoke over the tents to bar 104.
-  - Music at 25% for about 3.5 s.
-- **207.33-209.73, Gaza City, 28 Jul 2026, the Dar al-Muttaqin mosque strike** (Reuters street angle, from NBC's vertical edit). Filmed from a roof over a street of tents: the fireball lands on bar 109's downbeat, people below run, the camera drops to the parapet. A 680x556 window (only the Reuters picture: NBC's "Gaza City July 28" band and the REUTERS credit cropped), its own sound, music at 30%. It now ends on bar 110 (209.73), where his still face starts to fade in (Bureij ran 0.6 s into that fade).
-  - (Bureij was here; it is shown once, in s2 at bar 184.)
-- **No heads over any of these.** The head-free stretch runs 122.1 to 209.7. He returns only at 210, after the bar-109 window ends.
-
-## People named (`meta.people`, from source provenance only)
-
-- **Mahmoud Hammad**, father; his wife and children were killed. Source: https://www.youtube.com/watch?v=XoQWFfNR_M8 (AP).
-
-(Zinati, Sharif Shadi Labad and Tamer Labbad are named in s2, where the Zinati footage now is.) The mass-funeral tile shows photos and handwritten names, but the provenance names no one, so none are given. The Rafah family is unnamed in its provenance. The Maghazi, al-Ansar, Dar al-Muttaqin, graves and stack clips name no one.
-
-## What was swapped for scope
-
-| v1 clip (out of scope) | used for | replaced by |
-|---|---|---|
-| OIR Mosul (other) | strikes at 32, 50, 63, 107 and fast strikes | IDF Gaza crater strike-cam (y2026) |
-| CENTCOM Iran (region) | ink blot at 54; montage 96-103; fast strikes | IDF crater strike-cam, IDF Haniyeh office (2008), IDF Beit Hanoun, Times Radio IDF repost |
-| CENTCOM Tomahawks (region) | launches 88-95 | HIMARS Juniper Oak, Apache Red Sands, Apache Yakima, PAC-3 |
-| Tomahawk Philippine Sea (other) | strike 104 | IDF aerial fireball (Times Radio) |
-| JDAM Balad (other) | panel | JDAM build Whiteman #1 |
-| SDB feature (other) | fast strike | A-10 bomb at Nellis (US arsenal range) |
-| AP flares (cloudy night) | strike | AP flares and explosions, Nov 2023 (no lower-third) |
-
-## Caption sweep (two passes, a frame every 2 s, offset by 1 s)
-
-| leak | fix |
+| where | music |
 |---|---|
-| Guardian burned-in captions at 194-197 ("This video shows an explosion...", "At least one person was killed") | Window ends before them and holds a clean frame. |
-| Guardian place card at 143 | (Zinati moved to s2.) |
-| Guardian caption box on al-Ansar (from 4.5 s) and logo | Crop (0, 0.09, 1, 0.70): the caption box rises to y 0.72. |
-| NBC title band and REUTERS credit on Dar al-Muttaqin | Crop to the Reuters picture (0, 0.345, 1, 0.80). |
-| AP bug on Maghazi, mass funeral, Rafah shrouds | AP_CROP. |
-| "Secondary Explosions" label on IDF Beit Hanoun at 132 | Top crop 0.24. |
-| IMOD camera icon (Ashdod) | Cropped. |
-| Al Jazeera bug (civil-defence dig) | Cropped. |
-| NBC NEWS NOW bug (graves) | Cropped. |
-| Telegram-style watermark on the GBU-31 rows and forklift | Top crop. |
-| DVIDS caption (Gulfport carry) | Cropped. |
-| Holloman night text card ("This is the largest") | Panel loops before it. |
-| Green UNCLASSIFIED banners | Gone with the CENTCOM footage. |
-| "OVER 46 MILE RANGE" ad copy | Bar 58 strike removed in the restructure. |
-| News lower-thirds on ground strikes | NEWS_CROP. |
-| IDF releases rebroadcast with bugs | `idf-` crop. |
+| politicians, Hibbs, Hagee CUFI, Huckabee "take it all", stack 66 (short) | 0.52-0.59 |
+| Vaughn | 0.63 |
+| Maghazi, Hammad, stack 77-84 (4+ bars) | 0.19 |
+| Deir al-Balah, Isaac (4 bars each) | 0.31 |
+| Dar al-Muttaqin (short) | 0.63 |
 
-- Kept on purpose: reticles and sight data, Lockheed's CGI factory labels, the handwritten names and photos on the mass-funeral remains, and Meine's own signs.
-- Every footage layer has `"clip": "picture"`. Only heads cross the letterbox.
+Voice over music (speech-active RMS), at the final gains:
+- **Shallow dips:** about +6.5 to +9 dB. Computed from a measurement at 2 dB lower gain, not re-measured.
+- **Over the dead:** +16 dB.
+- **Hagee at Deir al-Balah:** +10 dB.
+- **Isaac:** about +10 dB.
 
 ## Open
 
-- The tools/variant.py low-fx variant was not run here.
-- Two of my scratch audit processes (srcaudit.py, PIDs 59376/59378 and 63194/63196) hung while the load average was about 28. They have no PID files, so I have not killed them. ember should stop them.
+- **Scope:** comp.save accepts the speaker layers. Their `meta.catalog` "preachers" is not a footage catalog, so scope is not checked for them. Checking it would need comp.py to load preachers.json as a catalog with scope politics-israel.
+- **The MQ-9 countdown** is in s1 (bars 71-73) and s2 (123-125), on purpose: ember decides.
+- **`full.py`:** 2 repeated pairs: the countdown, and ap-nuseirat-night-strike between 242.7 and 418.6 (both s2 or later, not s1).
+- **Questions for ember:**
+  - Should Isaac move to the very end of the section?
+  - Should Graham's lower-third carry his death year?
+  - Bachmann's line and Vaughn's song come from the Iran strikes (Bachmann is dated, Vaughn's card says so). Is Bachmann over Maghazi OK?
