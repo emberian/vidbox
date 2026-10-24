@@ -325,7 +325,7 @@ def main():
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", tmp / "list.txt",
                         "-c", "copy", tmp / "video.mp4"], check=True)
         mux_audio(tl, tmp / "video.mp4", out, r0, r1)
-    print(f"wrote {out.relative_to(ROOT)} ({r1 - r0:.1f}s of song) in {wall.time() - t_wall:.1f}s with {jobs} job(s)",
+    print(f"wrote {out} ({r1 - r0:.1f}s of song) in {wall.time() - t_wall:.1f}s with {jobs} job(s)",
           file=sys.stderr)
 
 

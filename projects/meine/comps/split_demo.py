@@ -67,5 +67,5 @@ for i in range(8):
            "scale": mul(0.22 + 0.05 * (i % 4), rng(0.9, 1.25, beat(1, "decay", tau=0.15))), "opacity": 0.9,
            "rot": rng(-12, 12, beat(4, "sine", offset=i / 8))})
 
-c.post = [{"op": "noise", "scale": 3, "octaves": 1, "speed": 12, "mode": "overlay", "amount": 0.12}]
+c.post = [{"op": "noise", "scale": 3, "octaves": 1, "speed": 12, "mode": "overlay", "amount": 0.03}]   # grain: keep it subtle
 c.save()

@@ -8,7 +8,7 @@ dependencies = [
     "mediapipe>=1.1.1",
     "mlx-whisper>=0.4.3",
     "numpy",
-    "opencv-python-headless<5",
+    "opencv-contrib-python<5",
     "torch==2.8.*",
     "torchaudio==2.8.*",
 ]

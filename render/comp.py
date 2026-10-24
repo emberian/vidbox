@@ -85,6 +85,7 @@ class Comp:
         self.cat = {f.stem: json.loads(f.read_text())["clips"] for f in sorted((self.pdir / "footage").glob("*.json"))}
         self.range = list(range or (0, self.proj.get("duration", 473.5)))
         self.layers, self.post = [], []
+        self.ducks = []   # background opacity dips, see duck()
         self.rand = random.Random(seed)
         self.W, self.H = self.proj["size"]
 
@@ -195,6 +196,26 @@ class Comp:
         return {"id": "meine", "tags": ["bg"], "src": bg["src"], "t0": self.range[0], "t1": self.range[1],
                 "time": {"in": self.range[0], "speed": 1.0}, "fit": "native", **props}
 
+    def duck(self, at, hold=1.0, depth=0.4, attack=0.12, release=0.6):
+        """Dip the Meine background to `depth` opacity around song time `at` (reached `attack` s
+        before it, held `hold` s after, recovering over `release`), so footage can shine through.
+        Overlapping ducks merge (the deepest wins)."""
+        self.ducks.append((at - attack, at, at + hold, at + hold + release, depth))
+
+    def _duck_signal(self):
+        if not self.ducks:
+            return None
+        pts = sorted({round(x, 4) for d in self.ducks for x in d[:4]} | {self.range[0], self.range[1]})
+
+        def level(t):
+            v = 1.0
+            for a0, a1, h1, r1, depth in self.ducks:
+                if a0 <= t <= r1:
+                    u = (t - a0) / (a1 - a0) if t < a1 else 1.0 if t <= h1 else 1 - (t - h1) / (r1 - h1)
+                    v = min(v, 1 - (1 - depth) * u)
+            return round(v, 4)
+        return keys(*[[t, level(t)] for t in pts], ease="smooth")
+
     def save(self):
         out = self.pdir / "comps/out" / f"{self.name}.timeline.json"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -202,6 +223,10 @@ class Comp:
               "range": self.range, "music": {"src": self.proj["background"]["src"],
                                              "gain": self.proj["background"].get("gain", 1.0)},
               "layers": self.layers, "post": self.post}
+        duck = self._duck_signal()
+        for L in tl["layers"]:
+            if L.get("id") == "meine" and duck and "opacity" not in L:
+                L["opacity"] = duck
         out.write_text(json.dumps(tl, indent=1) + "\n")
         offgrid = [(L["id"], h) for L in self.layers for h in L.get("meta", {}).get("hits_song", [])
                    if min(abs(h - b) for b in self.beats) > 0.03]
