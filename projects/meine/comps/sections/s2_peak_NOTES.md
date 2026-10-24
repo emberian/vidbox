@@ -126,10 +126,25 @@ the footage is what you see and Meine's lights glint through it.
 - **Identifiable victims:** pools exclude `identifiable_victims: true`. Pre-2023 *ground* material
   (`-war`, 2019, May-2023 tags) is excluded. Some *weapons* clips are older IDF/OIR strike-cam
   (2009-2018) and `ap-iron-dome-chase-may2021`. They show the machine, not a dated Gaza event.
-- **Captions:** ground crops drop AP/NBC corner bugs. Three captioned clips are kept out of the
-  pools. Still visible: "ISRAEL DEFENSE FORCES HANDOUT" top-right on `times-radio-idf-bombardment`
-  around 5:31, and an Al Jazeera bug may peek in at 7:14 (the WP airburst). Also, `fit: picture`
-  covers the picture area, so non-4:3 footage spills into the letterbox bars; I left that as a look.
+- **Captions (swept 2026-10-24).** Every 1 s of the render was checked: two sweeps, each with a
+  frame every 2 s, offset by 1 s. Fixes:
+  - Weapons crop is now `WEAPONS_CROP` [0.06, 0.16, 0.94, 0.76]. This removes the AP credit at 4:24
+    and 5:26, the corner logos at 5:34 and 5:42, and "ISRAEL DEFENSE FORCES HANDOUT" at about 5:31
+    (`times-radio-idf-bombardment`).
+  - OIR tapes use `OIR_CROP` (bottom at 0.68), which removes their typed description at 5:22.
+  - Captioned clips are kept out of the pools (`CAPTIONED`):
+    - `aj-high-powered-bombs-explainer` (subtitles; it remains only as the 7:14 WP airburst, cropped
+      [0.16, 0.2, 1, 0.68])
+    - `ap-interceptions-telaviv-jlm-feb2026`
+    - `ap-flares-cloudy-night-2025-12-b` (the "SOUTHERN ISRAEL OVERLOOKING THE GAZA STRIP"
+      lower-third at 5:43)
+    - `fa-rafah-bomb-identification` (white page with text at 6:12)
+  - Ashdod crane: cropped away the IMOD camera icon (6:52-7:05).
+  - Deliberately kept: the redaction boxes in CENTCOM strike-cam, the sight's "FLIR"/reticle data,
+    the diegetic labels in Lockheed's CGI factory ("FORWARD FUSELAGE", "FINAL ASSEMBLY", "WING
+    BUILD"), and a lit shop sign in Meine itself (6:14).
+- **Letterbox:** every footage layer now has `"clip": "picture"`. Only the floating heads may cross
+  into the bars.
 
 ## Verification
 
@@ -152,5 +167,3 @@ the footage is what you see and Meine's lights glint through it.
 - `c.say(..., video=False, repeat=4, every=1)`: a voice-only "missiles" chant under 188-195.
 - The 2 s of silence after his head vanishes may want the WP airburst embers falling (screened)
   before the walkers take the frame.
-- Library wish: a `fit: "picture"` variant that also clips to the picture area (no spill into the
-  letterbox).

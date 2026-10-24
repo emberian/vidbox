@@ -1869,7 +1869,8 @@
     "hits_song": [
      228.786
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "meine-freeze",
@@ -2039,7 +2040,8 @@
      "white": 0.95,
      "gamma": 0.9
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "P-drift",
@@ -3147,7 +3149,8 @@
      0.96,
      1.0
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "P-says-drop",
@@ -3313,7 +3316,8 @@
      1.209,
      1.0
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "rafah-domes",
@@ -3396,7 +3400,8 @@
      1.135,
      1.0
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "blasts-129",
@@ -3475,7 +3480,8 @@
      0.798,
      1.0
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-explosions-overnight-2023-10-22#2@249.73",
@@ -3539,7 +3545,8 @@
     "hits_song": [
      249.731
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "afp-rafah-night-strikes-flares-2023-12#0@253.54",
@@ -3600,7 +3607,8 @@
     "hits_song": [
      253.539
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-bank-strike-fireball-2023-10-08#0@257.35",
@@ -3664,7 +3672,8 @@
     "hits_song": [
      257.347
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-ansar-tent-strike-fire-2026-03#0@261.15",
@@ -3725,7 +3734,8 @@
     "hits_song": [
      261.155
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "newscomau-gaza-city-towers-2025-09#3@264.98",
@@ -3789,7 +3799,8 @@
     "hits_song": [
      264.975
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-night-blasts-from-israel-2025-09#0@268.78",
@@ -3850,7 +3861,8 @@
     "hits_song": [
      268.783
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-explosions-overnight-2023-10-22#0@272.59",
@@ -3914,7 +3926,8 @@
     "hits_song": [
      272.591
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-interceptions-telaviv-jun2025#0@263.06",
@@ -3933,9 +3946,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -3975,7 +3988,8 @@
     "hits_song": [
      263.059
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "centcom-iran-strikes-jul2026#3@266.88",
@@ -3994,9 +4008,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -4043,7 +4057,8 @@
     "hits_song": [
      266.879
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "hellfire-symphony-tads#5@270.69",
@@ -4062,9 +4077,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -4107,7 +4122,8 @@
     "hits_song": [
      270.687
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "hellfire-greece-flir#1@273.07",
@@ -4126,9 +4142,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -4172,7 +4188,8 @@
     "hits_song": [
      273.067
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-beit-hanoun-launcher-2014#1@273.54",
@@ -4191,9 +4208,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -4240,7 +4257,8 @@
     "hits_song": [
      273.543
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-launcher-strike-2009#0@274.02",
@@ -4259,9 +4277,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -4303,7 +4321,8 @@
     "clip": "idf-launcher-strike-2009",
     "seg": 0,
     "hits_song": []
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "say0:missiles@251.63",
@@ -111170,7 +111189,8 @@
      "beats": 1,
      "speed": 1.1555
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "flour-multitude",
@@ -111259,7 +111279,8 @@
      "beats": 1,
      "speed": 1.1555
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "say4:ripped from me@283.90",
@@ -129234,9 +129255,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -129301,7 +129322,8 @@
     "hits_song": [
      289.727
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-night-blasts-from-israel-2025-09#1@291.64",
@@ -129380,7 +129402,8 @@
     "hits_song": [
      291.643
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "hellfire-symphony-tads#8@293.55",
@@ -129399,9 +129422,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -129459,7 +129482,8 @@
     "hits_song": [
      293.547
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-explosions-overnight-2023-10-22#2@295.45",
@@ -129541,7 +129565,8 @@
     "hits_song": [
      295.451
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "mq9-strike-yemen-2024#0@297.36",
@@ -129560,9 +129585,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -129624,7 +129649,8 @@
     "hits_song": [
      297.355
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-night-explosion-flares-2025-12#0@299.26",
@@ -129703,7 +129729,8 @@
     "hits_song": [
      299.259
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-gaza-strikes-oct13-2023#2@301.16",
@@ -129722,9 +129749,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -129785,7 +129812,8 @@
     "hits_song": [
      301.163
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-national-bank-strike-2023-10#0@303.07",
@@ -129867,7 +129895,8 @@
     "hits_song": [
      303.067
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-bayji-vehicle-2017#0@304.97",
@@ -129886,10 +129915,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.15,
@@ -129950,7 +129979,8 @@
     "hits_song": [
      304.971
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-nuseirat-night-strike-2026-07#1@306.88",
@@ -130029,7 +130059,8 @@
     "hits_song": [
      306.875
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "times-radio-idf-bombardment-oct2023#0@308.78",
@@ -130048,9 +130079,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -130111,7 +130142,8 @@
     "hits_song": [
      308.779
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-gazacity-towers-bombed-2025-09#4@310.68",
@@ -130193,7 +130225,8 @@
     "hits_song": [
      310.683
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-habbaniyah-convoy-2016#1@312.59",
@@ -130212,10 +130245,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.15,
@@ -130276,7 +130309,8 @@
     "hits_song": [
      312.587
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "nbc-night-tower-collapse-2023-10-08#0@314.49",
@@ -130355,7 +130389,8 @@
     "hits_song": [
      314.491
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "tomahawk-night-philippine-sea-2014#1@316.39",
@@ -130374,9 +130409,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -130434,7 +130469,8 @@
     "hits_song": [
      316.395
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "say0:missiles@289.73",
@@ -291864,7 +291900,8 @@
      318.299,
      320.203
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "P-75",
@@ -292004,7 +292041,8 @@
      },
      "repeat": 1.5
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "bed1",
@@ -292072,7 +292110,8 @@
      },
      "repeat": 1.5
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "bed2",
@@ -292140,7 +292179,8 @@
      },
      "repeat": 1.5
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "bed3",
@@ -292208,7 +292248,8 @@
      },
      "repeat": 1.5
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "newscomau-gaza-city-towers-2025-09#7@320.20",
@@ -292287,7 +292328,8 @@
     "hits_song": [
      320.203
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-ramadi-bridge-2015#1@322.12",
@@ -292306,10 +292348,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.15,
@@ -292373,7 +292415,8 @@
     "hits_song": [
      322.119
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-strike-feb2015#1@323.06~stutter",
@@ -292415,10 +292458,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -292469,7 +292512,8 @@
      323.303,
      323.547
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "nbc-missile-hits-building-2023-10#0@324.02",
@@ -292548,7 +292592,8 @@
     "hits_song": [
      324.023
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-interceptions-telaviv-jun2025#1@325.93",
@@ -292567,9 +292612,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -292627,7 +292672,8 @@
     "hits_song": [
      325.927
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-susah-fuel-truck-2018#1@326.88~stutter",
@@ -292669,10 +292715,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -292723,7 +292769,8 @@
      327.117,
      327.355
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-explosions-overnight-2023-10-22#3@327.83",
@@ -292802,7 +292849,8 @@
     "hits_song": [
      327.831
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "times-radio-idf-bombardment-oct2023#3@329.74",
@@ -292821,9 +292869,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -292885,7 +292933,8 @@
     "hits_song": [
      329.735
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-raw-idf-footage-2014#0@330.69~stutter",
@@ -292927,9 +292976,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -292981,7 +293030,8 @@
      330.925,
      331.163
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "wsj-residents-film-tower-strike-2023-10#0@331.64",
@@ -293060,7 +293110,8 @@
     "hits_song": [
      331.639
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-iron-dome-chase-may2021#0@333.54",
@@ -293079,9 +293130,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -293139,7 +293190,8 @@
     "hits_song": [
      333.543
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "apache-gun-tape-iraq-2008#4@334.50~stutter",
@@ -293181,9 +293233,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -293235,7 +293287,8 @@
      334.733,
      334.971
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "afp-rafah-night-strikes-flares-2023-12#0@335.45",
@@ -293314,7 +293367,8 @@
     "hits_song": [
      335.447
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "centcom-iran-strikes-jul2026#3@337.35",
@@ -293333,9 +293387,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -293400,7 +293454,8 @@
     "hits_song": [
      337.351
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-beit-hanoun-launcher-2014#1@338.30~stutter",
@@ -293442,9 +293497,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -293496,7 +293551,8 @@
      338.541,
      338.779
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-bank-strike-fireball-2023-10-08#0@339.25",
@@ -293578,7 +293634,8 @@
     "hits_song": [
      339.255
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-telaviv-intercepts-may2023#0@341.16",
@@ -293597,9 +293654,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -293657,7 +293714,8 @@
     "hits_song": [
      341.159
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-strikes-jan2014-blackhot#1@342.11~stutter",
@@ -293699,9 +293757,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -293753,7 +293811,8 @@
      342.349,
      342.587
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-night-flashes-from-israel-2023-11-12#0@343.06",
@@ -293832,7 +293891,8 @@
     "hits_song": [
      343.063
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "mq9-live-hellfire-holloman#7@344.97",
@@ -293851,9 +293911,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -293915,7 +293975,8 @@
     "hits_song": [
      344.967
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-hit-weapons-storage-2016#1@345.92~stutter",
@@ -293957,10 +294018,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -294011,7 +294072,8 @@
      346.157,
      346.395
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "newscomau-gaza-city-towers-2025-09#3@346.87",
@@ -294093,7 +294155,8 @@
     "hits_song": [
      346.871
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "centcom-epic-fury-tomahawks#1@348.77",
@@ -294112,9 +294175,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -294175,7 +294238,8 @@
     "hits_song": [
      348.775
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-mosul-vbied-facility-2017#0@349.73~stutter",
@@ -294217,10 +294281,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -294271,7 +294335,8 @@
      349.965,
      350.203
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "gun-tape",
@@ -294331,7 +294396,8 @@
     "hits_song": [
      350.679
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-susah-fuel-truck-2018#1@352.60",
@@ -294350,10 +294416,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.15,
@@ -294417,7 +294483,8 @@
     "hits_song": [
      352.595
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "sdb-feature-deployed-2017#4@353.54~stutter",
@@ -294459,9 +294526,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -294513,7 +294580,8 @@
      353.779,
      354.023
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-explosions-overnight-2023-10-22#0@354.50",
@@ -294595,7 +294663,8 @@
     "hits_song": [
      354.499
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "centcom-iran-strikes-jul2026#1@356.40",
@@ -294614,9 +294683,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -294674,7 +294743,8 @@
     "hits_song": [
      356.403
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "hellfire-greece-flir#1@357.36~stutter",
@@ -294716,9 +294786,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -294770,7 +294840,8 @@
      357.593,
      357.831
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-night-fireballs-2023-10-08#0@358.31",
@@ -294849,7 +294920,8 @@
     "hits_song": [
      358.307
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "hellfire-symphony-tads#2@360.21",
@@ -294868,9 +294940,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -294932,7 +295004,8 @@
     "hits_song": [
      360.211
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-beit-hanoun-launcher-2014#1@361.16~stutter",
@@ -294974,9 +295047,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -295028,7 +295101,8 @@
      361.401,
      361.639
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "reuters-national-bank-strike-2023-10#0@362.12",
@@ -295110,7 +295184,8 @@
     "hits_song": [
      362.115
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "centcom-sanaa-night-launch-dec2024#0@364.02",
@@ -295129,9 +295204,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -295189,7 +295264,8 @@
     "hits_song": [
      364.019
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-launcher-strike-2009#0@364.97~stutter",
@@ -295231,9 +295307,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -295285,7 +295361,8 @@
      365.209,
      365.447
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "afp-rafah-night-strikes-flares-2023-12#0@365.92",
@@ -295364,7 +295441,8 @@
     "hits_song": [
      365.923
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "idf-weapons-storage-2011#1@367.83",
@@ -295383,9 +295461,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -295450,7 +295528,8 @@
     "hits_song": [
      367.827
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "mq9-strike-yemen-2024#0@368.78~stutter",
@@ -295492,9 +295571,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "blend": "screen",
@@ -295546,7 +295625,8 @@
      369.017,
      369.255
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-gazacity-towers-bombed-2025-09#4@369.73",
@@ -295628,28 +295708,29 @@
     "hits_song": [
      369.731
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
-   "id": "fa-rafah-bomb-identification#0@371.63",
+   "id": "idf-haniyeh-office-2008#2@371.63",
    "tags": [
     "weapons",
     "strike",
-    "fireball",
+    "impact",
     "gaza"
    ],
-   "src": "media/footage/weapons/raw/youtube_MK9Lq2NUq3s.mp4",
-   "t0": 371.335,
+   "src": "media/footage/weapons/raw/youtube_0iRJuFyqSrs.mp4",
+   "t0": 371.454,
    "t1": 373.535,
    "time": {
-    "in": 11.26,
+    "in": 12.5,
     "speed": 1.0
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -295705,12 +295786,13 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "fa-rafah-bomb-identification",
-    "seg": 0,
+    "clip": "idf-haniyeh-office-2008",
+    "seg": 2,
     "hits_song": [
      371.635
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-bayji-vehicle-2017#0@372.59~stutter",
@@ -295752,10 +295834,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -295806,7 +295888,8 @@
      372.825,
      373.063
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-habbaniyah-convoy-2016#1@369.73",
@@ -295825,10 +295908,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.02,
@@ -295871,7 +295954,8 @@
     "hits_song": [
      369.731
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "afp-rafah-night-strikes-flares-2023-12#0@370.21",
@@ -295932,7 +296016,8 @@
     "hits_song": [
      370.207
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-mosul-vbied-facility-2017#0@370.68",
@@ -295951,10 +296036,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.02,
@@ -295997,7 +296082,8 @@
     "hits_song": [
      370.683
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-ansar-tent-strike-fire-2026-03#0@371.16",
@@ -296058,7 +296144,8 @@
     "hits_song": [
      371.159
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-ramadi-bridge-2015#1@371.63",
@@ -296077,10 +296164,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.02,
@@ -296126,7 +296213,8 @@
     "hits_song": [
      371.635
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-night-blasts-from-israel-2025-09#0@372.11",
@@ -296187,7 +296275,8 @@
     "hits_song": [
      372.111
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "oir-strike-feb2015#1@372.59",
@@ -296206,10 +296295,10 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
-    0.76
+    0.06,
+    0.16,
+    0.94,
+    0.68
    ],
    "fade": {
     "in": 0.02,
@@ -296252,7 +296341,8 @@
     "hits_song": [
      372.587
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-night-explosion-flares-2025-12#0@373.06",
@@ -296313,7 +296403,8 @@
     "hits_song": [
      373.063
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "say0:missiles@320.20",
@@ -528741,7 +528832,8 @@
     "hits_song": [
      373.539
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ap-nuseirat-night-strike-2026-07#1@377.35",
@@ -528802,7 +528894,8 @@
     "hits_song": [
      377.347
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "times-radio-idf-bombardment-oct2023#3@381.16",
@@ -528821,9 +528914,9 @@
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.09,
-    1,
+    0.06,
+    0.16,
+    0.94,
     0.76
    ],
    "fade": {
@@ -528867,7 +528960,8 @@
     "hits_song": [
      381.156
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "wsj-residents-film-tower-strike-2023-10#0@384.96",
@@ -528928,7 +529022,8 @@
     "hits_song": [
      384.964
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "nbc-night-tower-collapse-2023-10-08#0@388.78",
@@ -528989,7 +529084,8 @@
     "hits_song": [
      388.783
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "tent-fire",
@@ -529024,7 +529120,8 @@
      "low": 0.1,
      "high": 0.45
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "prayer-shrouds",
@@ -529056,7 +529153,8 @@
      "op": "sat",
      "factor": 0.5
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "say5:missiles@375.44",
@@ -727545,7 +727643,8 @@
      "beats": 8,
      "speed": 1.0504
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "grave-dig",
@@ -727637,7 +727736,8 @@
      "beats": 4,
      "speed": 0.7353
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "ashdod-crane",
@@ -727669,6 +727769,12 @@
     }
    },
    "fit": "picture",
+   "crop": [
+    0.07,
+    0.09,
+    1,
+    0.95
+   ],
    "blend": "screen",
    "opacity": 0.8,
    "fade": {
@@ -727692,7 +727798,8 @@
      "beats": 8,
      "speed": 1.313
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "shroud-cut",
@@ -727784,7 +727891,8 @@
      "beats": 4,
      "speed": 0.7353
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "walkers-crowd",
@@ -727899,7 +728007,8 @@
      "beats": 1,
      "speed": 1.1555
     }
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "f35-blueprint",
@@ -727933,7 +728042,8 @@
      "low": 0.05,
      "high": 0.35
     }
-   ]
+   ],
+   "clip": "picture"
   },
   {
    "id": "hellfire-symphony-tads#5@404.02",
@@ -727997,7 +728107,8 @@
     "hits_song": [
      404.016
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "afp-rafah-night-strikes-flares-2023-12#0@419.25",
@@ -728059,7 +728170,8 @@
      419.248,
      421.409
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "aj-high-powered-bombs-explainer#6@434.49",
@@ -728120,7 +728232,8 @@
     "hits_song": [
      434.492
     ]
-   }
+   },
+   "clip": "picture"
   },
   {
    "id": "P-plateau-212",
@@ -765560,7 +765673,8 @@
      "op": "sat",
      "factor": 0.45
     }
-   ]
+   ],
+   "clip": "picture"
   }
  ],
  "post": []

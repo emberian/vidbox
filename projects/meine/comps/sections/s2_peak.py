@@ -20,7 +20,10 @@ PIC = (0, 158, 1440, 922)          # Meine's picture area
 AP_CROP = [0.04, 0.16, 0.92, 0.9]   # drops AP's top-right bug, top-left credits, NBC/AJ corner bugs
 PRE_WAR = ("-war", "2019", "2023-may-round")
 # clips with subtitles/lower-thirds inside the frame that no crop removes: kept out of the pools
-CAPTIONED = {"aj-high-powered-bombs-explainer", "ap-interceptions-telaviv-jlm-feb2026", "ap-flares-cloudy-night-2025-12-b"}
+CAPTIONED = {"aj-high-powered-bombs-explainer", "ap-interceptions-telaviv-jlm-feb2026", "ap-flares-cloudy-night-2025-12-b",
+             "fa-rafah-bomb-identification"}
+WEAPONS_CROP = [0.06, 0.16, 0.94, 0.76]   # news bugs/credits at the top corners, slates and lower-thirds below
+OIR_CROP = [0.06, 0.16, 0.94, 0.68]       # OIR strike tapes type their description along the bottom
 
 
 def bars(c, b, beat_in_bar=0):
@@ -164,7 +167,8 @@ def strike(c, seg, h, at, before=0.5, after=1.6, depth=0.45, opacity=0.9, k=0, d
     """One hit landing on `at`, styled by what the footage is (IR, black-hot, night, day)."""
     L = look_for(seg, k)
     L.update(props)
-    crop = L.pop("crop", AP_CROP if seg.catalog == "ground" else [0, 0.09, 1, 0.76])
+    crop = L.pop("crop", AP_CROP if seg.catalog == "ground" else
+                  OIR_CROP if seg.clip["id"].startswith("oir-") else WEAPONS_CROP)
     lay = c.footage(seg, at=at, hit=h, before=before, after=after, fit=L.pop("fit", "picture"), crop=crop,
                     fade=L.pop("fade", {"in": min(0.15, before), "out": 0.5}), opacity=opacity, **L)
     if depth is not None:
@@ -375,7 +379,8 @@ def hottest(c, pools, ch):
         if b % 2 == 1:   # off-beat accents: the same take stutters on the "and" of beat 3
             s2, h2 = pools.take("ir", B(b, 2.5), gap=10)
             c.stutter(s2, B(b, 2), hit=h2, n=3, div=0.5, slice=0.1, after=0.3, fit="picture",
-                      crop=[0, 0.09, 1, 0.76], blend="screen", opacity=0.55, fade={"out": 0.15},
+                      crop=OIR_CROP if s2.clip["id"].startswith("oir-") else WEAPONS_CROP,
+                      blend="screen", opacity=0.55, fade={"out": 0.15},
                       fx=[{"op": "invert"}, {"op": "levels", "black": 0.4}] + ir_fx(b, 5))
     # last two bars: a hit on every beat
     for k in range(8):
@@ -432,7 +437,8 @@ def plateau(c):
              mask={"shape": "rect", "feather": 0.2}, size=[760, 428], pos=[720, 540],
              fx=[{"op": "sat", "factor": 0.6}], id="grave-dig")
     ashdod = c.seg("weapons:imod-mk84-ashdod-feb2025#1")
-    c.groove(ashdod, B(216), dur=B(224) - B(216), fit="picture", blend="screen", opacity=0.8,
+    c.groove(ashdod, B(216), dur=B(224) - B(216), fit="picture", crop=[0.07, 0.09, 1, 0.95], blend="screen",
+             opacity=0.8,
              fade={"in": 1.0, "out": 1.0}, fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}], id="ashdod-crane")
     shroud = c.seg("ground:ap-aqsa-shroud-laundry-2023-10#3")
     c.groove(shroud, B(218), dur=B(224) - B(218), cycle=1.4, anchor=86.0, fit="picture", crop=[0, 0.13, 0.86, 1],
@@ -504,6 +510,7 @@ def outro(c, pos, sc, kind="walkers"):
 
 
 def build(c, outro_kind="walkers"):
+    first = len(c.layers)
     pools = Pools(c)
     dip_and_reentry(c, None)
     ch = chorus(c)
@@ -515,6 +522,10 @@ def build(c, outro_kind="walkers"):
     ch.emit()
     pos, sc = plateau(c)
     outro(c, pos, sc, outro_kind)
+    # footage stays inside Meine's picture area (y 158..922); the floating heads may cross the bars
+    for L in c.layers[first:]:
+        if "head" not in L.get("tags", []) and L.get("fit", "cover") != "native":
+            L.setdefault("clip", "picture")
 
 
 if __name__ == "__main__":
