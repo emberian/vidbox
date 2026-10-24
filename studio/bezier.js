@@ -59,7 +59,8 @@ function fitSegment(S, i0, i1) {
 }
 
 // Fit samples [{t, p}] (sorted by t) with as few segments as keep max error <= tol px.
-export function fitSamples(S, tol = 6) {
+// `corners` are times that must become anchors left as sharp cusps (e.g. a bounce).
+export function fitSamples(S, tol = 6, corners = []) {
   if (S.length < 2) return S.map(s => ({ t: s.t, p: s.p.slice(), hin: [0, 0], hout: [0, 0] }));
   const knots = [];  // [i0, i1, p1, p2]
   const rec = (i0, i1) => {
@@ -77,7 +78,13 @@ export function fitSamples(S, tol = 6) {
       rec(i0, mid); rec(mid, i1);
     } else knots.push([i0, i1, p1, p2]);
   };
-  rec(0, S.length - 1);
+  const cut = [...new Set(corners.map(t => {
+    let best = 0;
+    for (let i = 1; i < S.length; i++) if (Math.abs(S[i].t - t) < Math.abs(S[best].t - t)) best = i;
+    return best;
+  }))].filter(i => i > 0 && i < S.length - 1).sort((a, b) => a - b);
+  [0, ...cut, S.length - 1].reduce((i0, i1) => { if (i1 > i0) rec(i0, i1); return i1; });
+  const cusp = new Set(cut.map(i => S[i].t));
   const A = [{ t: S[0].t, p: S[0].p.slice(), hin: [0, 0], hout: [0, 0] }];
   const reach = [];  // drawn stroke length of each segment
   for (const [i0, i1, p1, p2] of knots) {
@@ -88,7 +95,7 @@ export function fitSamples(S, tol = 6) {
     for (let i = i0; i < i1; i++) len += Math.hypot(S[i + 1].p[0] - S[i].p[0], S[i + 1].p[1] - S[i].p[1]);
     reach.push(len);
   }
-  for (let i = 1; i < A.length - 1; i++) smoothAnchor(A, i);
+  for (let i = 1; i < A.length - 1; i++) if (!cusp.has(A[i].t)) smoothAnchor(A, i);
   // A handle longer than the stroke it shapes is a fitting artifact, not a gesture.
   A.forEach((a, i) => {
     if (i > 0) a.hin = clampLen(a.hin, reach[i - 1]);

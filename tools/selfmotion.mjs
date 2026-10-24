@@ -2,8 +2,11 @@
 //
 // usage: node tools/selfmotion.mjs [--project meine] [--mode amplify|drift] [--gain G]
 //                                  [--smooth FRAMES] [--tol PX] [--out paths/NAME.json]
+//   hybrid extras: [--base G] [--every BARS] [--pct SPEED_PERCENTILE] [--hbias H]
 //
 //   amplify  his offset from his average position, scaled by G, soft-clamped to the picture
+//   hybrid   amplify, plus beat-timed hops: launched on downbeats when his head moves hard,
+//            hitting a picture edge exactly on a beat, ricocheting, skidding to rest
 //   drift    his frame-to-frame velocity pushes the head (G = push strength); it coasts with
 //            damping, a faint spring toward center, and bounces off the picture edges
 //
@@ -81,10 +84,68 @@ if (opt.mode === "amplify") {
     }
     pos.push(p.slice());
   }
+} else if (opt.mode === "hybrid") {
+  // amplify as a base wiggle, plus "hops": on downbeats where his own head is moving hard,
+  // he's launched the way he was moving, flies at constant speed into a picture edge that
+  // he hits exactly on the next beat (or the one after), ricochets, and skids to rest by
+  // the following beat. He supplies the impulse; the music supplies the timing.
+  const beats = JSON.parse(readFileSync(join(pdir, "analysis/beats.json")));
+  const bgain = +(opt.base ?? 2.5), every = +(opt.every ?? 2), pct = +(opt.pct ?? 60), hb = +(opt.hbias ?? 1.6);
+  const tOf = i => layer.start + i / track.fps, iOf = t => Math.round((t - layer.start) * track.fps);
+  const mx = fx.reduce((a, b) => a + b) / n, my = fy.reduce((a, b) => a + b) / n;
+  const vel = i => { const a = Math.max(0, i - 3), b = Math.min(n - 1, i + 3); return [(fx[b] - fx[a]) / (b - a), (fy[b] - fy[a]) / (b - a)]; };
+  const speeds = fx.map((_, i) => Math.hypot(...vel(i)));
+  const thresh = [...speeds].sort((a, b) => a - b)[Math.floor(n * pct / 100)];
+  const lim = [reach[0] * 0.85, reach[1] * 0.85];
+  const bar = beats.downbeats[1] - beats.downbeats[0], beat = bar / 4;
+  const end = tOf(n - 1);
+
+  const hops = [];
+  let home = [0, 0], lastBar = -Infinity;
+  beats.downbeats.forEach((tb, bi) => {
+    if (tb < tOf(0) + 0.5 || tb > end - 3 * beat || bi - lastBar < every) return;
+    const v = vel(iOf(tb));
+    if (Math.hypot(...v) < thresh) return;
+    let d = [v[0] * hb, v[1]];
+    d = [d[0] / Math.hypot(...d), d[1] / Math.hypot(...d)];
+    // distance along d to the first wall of the home-offset box
+    const s = Math.min(...[0, 1].map(k => d[k] > 1e-6 ? (lim[k] - home[k]) / d[k] : d[k] < -1e-6 ? (-lim[k] - home[k]) / d[k] : Infinity));
+    const wallAxis = [0, 1].find(k => Math.abs(home[k] + d[k] * s) >= lim[k] - 1e-6);
+    const nb = s < 250 ? 1 : 2;    // short flights land on the next beat, long ones on the one after
+    const pW = [home[0] + d[0] * s, home[1] + d[1] * s];
+    const r = d.slice(); r[wallAxis] = -r[wallAxis];
+    const speed = s / (nb * beat);
+    // skid out over one beat with ease-out from the same speed: distance = speed * beat / 2
+    let pE = [pW[0] + r[0] * speed * beat / 2, pW[1] + r[1] * speed * beat / 2];
+    pE = pE.map((x, k) => Math.max(-lim[k], Math.min(lim[k], x)));
+    hops.push({ tA: tb, tW: tb + nb * beat, tE: tb + (nb + 1) * beat, pA: home, pW, pE });
+    home = pE; lastBar = bi;
+  });
+  const homeAt = t => {
+    let h = [0, 0];
+    for (const o of hops) {
+      if (t < o.tA) break;
+      if (t < o.tW) { const u = (t - o.tA) / (o.tW - o.tA); return o.pA.map((x, k) => x + (o.pW[k] - x) * u); }
+      if (t < o.tE) { const u = (t - o.tW) / (o.tE - o.tW), e = 1 - (1 - u) ** 2; return o.pW.map((x, k) => x + (o.pE[k] - x) * e); }
+      h = o.pE;
+    }
+    return h;
+  };
+  // the wiggle fades out mid-flight so the wall contact lands clean
+  const wiggleAt = t => { for (const o of hops) if (t > o.tA - beat / 2 && t < o.tE) return 0.25; return 1; };
+  for (let i = 0; i < n; i++) {
+    const t = tOf(i), h = homeAt(t), w = wiggleAt(t);
+    pos.push([0, 1].map(k => {
+      const p = center[k] + h[k] + w * bgain * ((k ? fy : fx)[i] - (k ? my : mx));
+      return Math.max(center[k] - reach[k], Math.min(center[k] + reach[k], p));
+    }));
+  }
+  opt.corners = hops.flatMap(o => [o.tA, o.tW]);
+  console.error(`hybrid: ${hops.length} hops on downbeats ${hops.map(o => o.tA.toFixed(2)).join(" ")}; walls hit at ${hops.map(o => o.tW.toFixed(2)).join(" ")}`);
 } else throw new Error(`unknown --mode ${opt.mode}`);
 
 const samples = pos.map((p, i) => ({ t: +(layer.start + i / track.fps).toFixed(4), p: [+p[0].toFixed(1), +p[1].toFixed(1)] }));
-const anchors = fitSamples(samples, +opt.tol);
+const anchors = fitSamples(samples, +opt.tol, opt.corners ?? []);
 const out = opt.out ?? `paths/face_self_${opt.mode}.json`;
 const params = { mode: opt.mode, gain, smooth: sw, tol: +opt.tol };
 writeFileSync(join(pdir, out), JSON.stringify({
