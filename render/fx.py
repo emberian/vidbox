@@ -223,3 +223,12 @@ def apply(fx_list, img, alpha, t, state, ev):
             oa = alpha + (oa - alpha) * amt
         img, alpha = out.astype(np.float32, copy=False), oa.astype(np.float32, copy=False)
     return img, alpha
+
+
+# More ops live in fx_extra.py (registered via @op on import). A broken or half-written
+# fx_extra must not take every render down with it, so its import failure is reported, not raised.
+try:
+    import fx_extra  # noqa: E402,F401
+except Exception as e:   # pragma: no cover
+    import sys
+    print(f"fx_extra not loaded: {e!r}", file=sys.stderr)
