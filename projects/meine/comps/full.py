@@ -35,6 +35,14 @@ n_sw, n_cloud, n_silent = mix_clouds(c.layers, HERE.parents[2])
 print(f"head clouds: {n_sw} of {n_cloud} cloud copies now real speakers heard by then "
       f"({n_silent - n_cloud} lone Hyde heads untouched)")
 
+# The names of the dead: every page of the Ministry of Health's list, a layer just above the Meine
+# video, turning on the beat, never over untreated footage of the dead (names.py).
+from names import add_names  # noqa: E402
+
+_tl = {"layers": c.layers}
+add_names(_tl, "continuous")
+c.layers = _tl["layers"]
+
 # The design rule checker holds every rule (render/drc.py): footage scope, nothing over the
 # dead, untreated footage once, speakers named, hits on the grid... Its errors stop the build.
 import drc  # noqa: E402
