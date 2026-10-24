@@ -447,7 +447,8 @@ class Comp:
         return self._raw_words[words]
 
     def say(self, ref, at, repeat=1, every=None, stutter=0, slice=0.12, div=0.25, stretch=1.0, gain=1.0,
-            tail=0.06, nudge=0.0, video=True, src=FACE, words=RANT_WORDS, mode="tempo", id=None, **props):
+            tail=0.06, nudge=0.0, video=True, src=FACE, words=RANT_WORDS, mode="tempo", like=None, id=None,
+            **props):
         """The preacher says word `ref` ('missiles#3' = 3rd occurrence, or an index into
         analysis/rant_words.json) starting exactly at song time `at`, in his voice (and face, from
         media/derived/face.mp4; video=False keeps only the voice).
@@ -458,7 +459,11 @@ class Comp:
         changes pitch with speed). tail: source s kept after the aligned end so the release isn't
         clipped. nudge: source s added to the aligned start (negative starts the word earlier, e.g.
         to keep a breathy "h" the aligner put late). gain: voice level. Audio edges get 6 ms fades. Other props (pos, scale, size,
-        mask, fx, opacity...) style the head; defaults: 480x600 oval at the canvas centre."""
+        mask, fx, opacity...) style the head; defaults: 480x600 oval at the canvas centre.
+        like=layer: a moving head copy speaks. The word's face takes that layer's look and motion
+        (size, crop, mask, pos, scale, rot, fx, blend, opacity, tags; any explicit props still win),
+        and the copy itself is hidden while the word plays, so the mouth moves exactly where the
+        head is. Its src should be the same face clip."""
         w = resolve_word(self.raw_words(words), ref)
         s0, s1 = w["start"] + nudge, w["end"] + tail
         sp = 1.0 / stretch
@@ -493,6 +498,15 @@ class Comp:
                  "size": [480, 600], "pos": [self.W / 2, self.H / 2 - 20], "mask": {"shape": "oval", "feather": 0.28},
                  "audio": {"gain": gain, "mode": mode},
                  "meta": {"word": w["w"], "ref": ref, "src_word": [w["start"], w["end"]], "hits_song": onsets}}
+        if like is not None:
+            for k in ("size", "crop", "mask", "pos", "scale", "rot", "fx", "blend", "opacity", "fit"):
+                if k in like:
+                    layer[k] = like[k]
+            layer["tags"] = list(dict.fromkeys(like.get("tags", []) + ["say"]))
+            layer["meta"]["like"] = like.get("id")
+            t0, t1 = layer["t0"], layer["t1"]
+            gate = {"k": [[t0 - 1e-3, 1], [t0, 0], [t1, 1]], "ease": "hold"}
+            like["opacity"] = {"mul": [like.get("opacity", 1.0), gate]}
         layer.update(props)
         if not video:
             layer["opacity"] = 0
@@ -536,6 +550,13 @@ class Comp:
         for L in tl["layers"]:
             if L.get("id") == "meine" and duck and "opacity" not in L:
                 L["opacity"] = duck
+        # ember: "do *not* use the voronoi effect on war footage, but it looks AMAZING on the
+        # guys face." Footage layers carry a catalog link in meta; heads don't.
+        HEADS_ONLY = {"voronoi"}
+        bad = [(L["id"], f["op"]) for L in tl["layers"] + [{"id": "post", "fx": self.post, "meta": {"catalog": "all"}}]
+               if L.get("meta", {}).get("catalog") for f in L.get("fx", []) if f.get("op") in HEADS_ONLY]
+        if bad:
+            raise ValueError(f"heads-only effects on war footage (ember's rule): {bad}")
         out.write_text(json.dumps(tl, indent=1) + "\n")
         # each hit: on a beat, on an eighth/sixteenth (deliberate stutters), or genuinely off-grid
         on_beat, on_sub, offgrid = 0, 0, []
