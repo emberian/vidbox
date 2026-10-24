@@ -7,22 +7,34 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Mohammad Abdul Zinati**, 15: killed. Gaza City, 15 September 2026. Eyewitnesses told the Guardian he had gone to check on the body of a man struck by an Israeli bomb moments earlier; a second strike killed him. <https://www.youtube.com/watch?v=vQdUgwKtwEY>
 - **The wife and children of Mahmoud Hammad**. Killed, with his brother, his brother's wife and their children, in an Israeli airstrike on their home in Gaza City. He searches the rubble for their bones, January 2026 (AP; their names are not given). <https://www.youtube.com/watch?v=XoQWFfNR_M8>
 - **Dozens buried in the grounds of Nasser Hospital**. Khan Younis, January 2024, when the Israeli offensive made the cemetery too dangerous to reach (NBC News). <https://www.youtube.com/watch?v=vnpsm7nB9JE>
-- **More than 400 people killed across Gaza on 18 March 2025**. The day Israel resumed the war. In Jabaliya, Fahmi Mohammad said ten of his cousins were killed (Gaza Health Ministry and AP). <https://www.youtube.com/watch?v=TunR64-jZUk>
 - **Seven people killed in Jabaliya refugee camp**. Israeli airstrike on a market area, 14 July 2026; one woman among them, and Colonel Mohamad Marwan Salem, head of the Jabaliya police station, per Gaza's interior ministry (Shifa hospital officials, via AP). <https://www.youtube.com/watch?v=_zps_M-njzw>
 - **At least eight people killed across Gaza on 2 August 2026**. Two children among them. In southern Gaza a strike on an apartment killed three members of one family, including their four-year-old child (local health officials and Nasser hospital, via AP). <https://www.youtube.com/watch?v=TVneg3n7Ghc>
 - **Two people killed near a tent camp in Khan Younis**. Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP). <https://www.youtube.com/watch?v=G9EY3rgBcLc>
-- **The dead of a November 2023 strike on a building in Nuseirat**. Their remains, still being recovered from the rubble by Gaza's civil defence in September 2026 (Roya News). <https://www.youtube.com/watch?v=eKwlBuPcmw0>
 - **112 members of the Hassayna and Abu Sharia families**. Killed with some 300 others when an Israeli strike flattened a residential block in Sabra, Gaza City, in November 2023. Their remains were recovered from the rubble and buried on 4 August 2026; more are still under it (AP; Middle East Eye). <https://www.youtube.com/watch?v=D8BWnIo43Dw> <https://www.youtube.com/watch?v=4wLmM3v8XH4>
 - **25 people killed overnight in Bureij and Nuseirat**. Five children and seven women among them, received by al-Aqsa Martyrs Hospital, Deir al-Balah, 28 December 2023 (hospital records, via AP). <https://www.youtube.com/watch?v=Xl9NY5h-MHQ>
 - **A member of Gaza's civil defence**: injured. Critically injured in an Israeli airstrike near Abu Sharkh roundabout, brought to al-Shifa Hospital, 1 September 2026 (Roya News; name not given). <https://www.youtube.com/watch?v=p0uoWSF1AIw>
 - **Sharif Shadi Labad**: injured (civil defence paramedic). Injured by the first strike. The Israeli military told the Guardian he was a Hamas militant and had been targeted. <https://www.youtube.com/watch?v=vQdUgwKtwEY>
 - **Mahmoud Hammad**: father; his wife and children were killed <https://www.youtube.com/watch?v=XoQWFfNR_M8>
+- **John Hagee**: founder, Christians United for Israel <https://www.youtube.com/watch?v=GrgGCwHNuWA> <https://www.youtube.com/watch?v=Sqi7VgaJgZo>
+- **Lindsey Graham**: US Senator (R-SC) <https://www.youtube.com/watch?v=XUdUO02Lc-g>
+- **Mike Johnson**: Speaker of the US House <https://www.youtube.com/watch?v=w2VGO4Dh2mU>
+- **Ted Cruz**: US Senator (R-TX) <https://www.youtube.com/watch?v=smemFVe0l5E>
+- **Tim Walberg**: US Rep. (R-MI) <https://www.youtube.com/watch?v=y4PQ47OEU0Y>
+- **Nikki Haley**: former UN ambassador; then presidential candidate <https://www.youtube.com/watch?v=NLe4j9Koxjw>
+- **Andy Ogles**: US Rep. (R-TN) <https://www.youtube.com/watch?v=K7fG1VqbIyI>
+- **Jack Hibbs**: pastor, Calvary Chapel Chino Hills (CA) <https://www.youtube.com/watch?v=ltRAHOapmkc>
+- **Shane Vaughn ('Professor Toto')**: pastor, First Harvest Ministries; online broadcaster <https://www.youtube.com/watch?v=3xDxFvr4Evc>
+- **Michele Bachmann**: former US Rep. (R-MN); dean, Regent University government school <https://www.youtube.com/watch?v=ffuJp7d_25E>
+- **Mike Evans**: founder, Friends of Zion / Jerusalem Prayer Team <https://www.youtube.com/watch?v=IaIIwXAhPbc>
+- **Mike Huckabee**: Baptist minister; then nominee, now US ambassador to Israel; US ambassador to Israel <https://www.youtube.com/watch?v=EG-8UseD0kI> <https://www.youtube.com/watch?v=XS7itdfgNnU>
+- **Rev. Munther Isaac**: Lutheran pastor, Evangelical Lutheran Christmas Church, Bethlehem <https://www.youtube.com/watch?v=aEGiANa0-oI>
 
 ## Footage
 
 ### Associated Press
 
 - **Drone footage shows destruction in Gaza's Khan Younis**. AP Archive. 2025-01-19. Khan Younis, Gaza Strip. <https://www.youtube.com/watch?v=uUDZm5DnXMA> (licence as catalogued: news (AP); first at 1:39.2; catalog id `ap-drone-khanyounis-2025-01-long`)
+- **Explosions light up night sky over Gaza as Israel continues offensive**. AP Archive. 2014-07-20. <https://www.youtube.com/watch?v=UnlZQZBpgrg> (licence as catalogued: news (AP); first at 1:45.3; catalog id `ap-night-blast-gazacity-2014-07-20`)
 - **Drone shows thousands walking towards northern Gaza as Israel lifts its closure**. AP Archive. 2025-01-27. Wadi Gaza. <https://www.youtube.com/watch?v=5d57aZTpYnQ> (licence as catalogued: news (AP); first at 1:54.5; catalog id `ap-drone-coast-road-return-2025-01-long`)
 - **Dramatic footage of Israeli army striking building in Gaza City**. AP Archive. 2026-02-06. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=5cwc4YfWnl4> (licence as catalogued: news (AP); first at 2:05.8; catalog id `ap-zeitoun-cemetery-strike-2026-02-06`)
 - **Flares and explosions over Gaza night sky as seen from across border in Israel**. AP Archive. 2023-11-09. Southern Israel. <https://www.youtube.com/watch?v=Rrj1NzrnFaM> (licence as catalogued: news (AP); first at 2:08.7; catalog id `ap-night-flares-explosions-2023-11-09`)
@@ -31,35 +43,50 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **A father in Gaza searches for his family's bones in the rubble of their home**. AP Archive. 2026-01-24. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=XoQWFfNR_M8> (licence as catalogued: news (AP); first at 2:25.0; catalog id `ap-father-sieves-bones-2026-01-24`)
 - **ap-mass-funeral-105-2026-10-01**. AP Archive. 2026-10-01. <https://www.youtube.com/watch?v=zC_WjmWdUJk> (licence as catalogued: news (AP); first at 2:34.3; catalog id `ap-mass-funeral-105-2026-10-01`)
 - **Relatives mourn nine members of a family killed in a strike in Rafah**. AP Archive. 2024-01-12. Rafah, Gaza Strip. Camera: Mohammad Jahjouh. <https://www.youtube.com/watch?v=2PQdALFa90Y> (licence as catalogued: news (AP); first at 2:36.2; catalog id `ap-rafah-family-shrouds-2024-01`)
+- **Gaza skyline lights up after Israeli air strikes**. AP Archive. 2019-03-15. <https://www.youtube.com/watch?v=x_FnszcPiug> (licence as catalogued: news (AP); first at 2:49.6; catalog id `ap-night-strike-gazacity-2019`)
+- **Explosions rumble across Gaza City, flares fall from sky on first night of Eid holiday**. AP Archive. 2014-07-28. <https://www.youtube.com/watch?v=RP1ZRu4G2P4> (licence as catalogued: news (AP); first at 2:53.4; catalog id `ap-night-eid-bombardment-2014`)
 - **Israel strikes Gaza tent camp following evacuation order, sparking huge blaze**. AP Archive. 2026-03-11. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=TmtQbF_Hwus> (licence as catalogued: news (AP); first at 2:57.2; catalog id `ap-ansar-tent-strike-fire-2026-03`)
 - **Explosions light up night sky over the Gaza Strip**. AP Archive. 2025-09-07. Southern Israel, overlooking Gaza Strip. <https://www.youtube.com/watch?v=fTiqjhMhFSY> (licence as catalogued: news (AP); first at 3:01.0; catalog id `ap-night-blasts-from-israel-2025-09`)
 - **Drone footage shows thousands of Palestinians returning to the ruins and rubble in Gaza City**. AP Archive. 2025-01-27. Wadi Gaza, Gaza; Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=5KBkxIFXenM> (licence as catalogued: news (AP); first at 3:03.1; catalog id `ap-drone-return-north-coast-2025-01`)
+- **ap-deir-balah-night-strike-2026-05-23**. AP Archive. 2026-05-23. <https://www.youtube.com/watch?v=ZCLpNuaEzl8> (licence as catalogued: news (AP); first at 3:05.8; catalog id `ap-deir-balah-night-strike-2026-05-23`)
 - **Flares light up night sky over Gaza Strip**. AP Archive. 2025-12-27. Southern Israel overlooking the Gaza Strip. <https://www.youtube.com/watch?v=zwwPZ5hmxUU> (licence as catalogued: news (AP); first at 3:17.2; catalog id `ap-flares-cloudy-night-2025-12-b`)
-- **Palestinians search through Jabaliya residential block destroyed in Israeli bombardment**. AP Archive. 2025-03-18. Jabaliya, Gaza Strip. Producer: Wafaa Shurafa. <https://www.youtube.com/watch?v=TunR64-jZUk> (licence as catalogued: news (AP); first at 3:33.5; catalog id `ap-jabaliya-dig-for-victims-2025-03`)
-- **Column of fire and smoke rises in Gaza City as Israeli airstrike hits bank building linked to Hamas**. AP Archive. 2023-10-08. Gaza City, Gaza Strip. Camera: Mohammad Jahjouh. <https://www.youtube.com/watch?v=nEHs-mDQLSI> (licence as catalogued: news (AP); first at 3:41.2; catalog id `ap-bank-strike-fireball-2023-10-08`)
+- **Drone aerials show much of Gaza City reduced to rubble during two years of war**. AP Archive. 2025-10-15. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=nZ15f_tSAHc> (licence as catalogued: news (AP); first at 3:17.7; catalog id `ap-drone-gazacity-ruins-2025-10-long`)
+- **ap-shati-night-strike-2026-05-28**. AP Archive. 2026-05-28. <https://www.youtube.com/watch?v=WIiKD8Mjw1Y> (licence as catalogued: news (AP); first at 3:31.5; catalog id `ap-shati-night-strike-2026-05-28`)
+- **ap-short-gaza-city-blasts-2026-07-28**. Associated Press. 2026-07-28. <https://www.youtube.com/watch?v=lZHFLf8nVtg> (licence as catalogued: news (AP); first at 3:33.4; catalog id `ap-short-gaza-city-blasts-2026-07-28`)
+- **Moment of impact, column of smoke, as Israeli airstrikes continue**. AP Archive. 2014-07-12. <https://www.youtube.com/watch?v=3MPSoglbmTw> (licence as catalogued: news (AP); first at 3:35.3; catalog id `ap-impact-smoke-2014`)
+- **ap-shati-strike-plume-2026-09-09**. AP Archive. 2026-09-09. <https://www.youtube.com/watch?v=2G0ulKRCqLI> (licence as catalogued: news (AP); first at 3:36.3; catalog id `ap-shati-strike-plume-2026-09-09`)
+- **Explosion near cameraman in Gaza Strip**. AP Archive. 2009-01-01. <https://www.youtube.com/watch?v=4sRSITWO3I8> (licence as catalogued: news (AP); first at 3:37.2; catalog id `ap-explosion-near-camera-2009`)
+- **ap-gaza-city-blast-dusk-2026-07-28**. AP Archive. 2026-07-28. <https://www.youtube.com/watch?v=y6kQaVWkddo> (licence as catalogued: news (AP); first at 3:40.1; catalog id `ap-gaza-city-blast-dusk-2026-07-28`)
 - **Shrouds used to cover the dead are running out in Gaza, according to hospital morgue worker**. AP Archive. 2023-10-25. Deir al-Balah, Central Gaza Strip. <https://www.youtube.com/watch?v=iEDyp5YhxDQ> (licence as catalogued: news (AP); first at 3:49.7; catalog id `ap-aqsa-shroud-laundry-2023-10`)
-- **Interceptions in Tel Aviv after Iran missile attack on Israel**. Associated Press. 2025-06-13. <https://www.youtube.com/watch?v=pYZ2sbB9d9o> (licence as catalogued: news (AP); fair use; first at 4:22.7; catalog id `ap-interceptions-telaviv-jun2025`)
+- **Huge explosion and flares on the Gaza skyline seen from southern Israel**. AP Archive. 2025-12-27. Southern Israel overlooking the Gaza Strip. <https://www.youtube.com/watch?v=8jGPdgrxplo> (licence as catalogued: news (AP); first at 4:00.8; catalog id `ap-night-explosion-flares-2025-12`)
+- **Strike hits Gaza's Nuseirat after Israeli military issues warning**. AP Archive. 2026-07-31. Nuseirat, central Gaza Strip. <https://www.youtube.com/watch?v=0Bf1tWaqvvs> (licence as catalogued: news (AP); first at 4:02.7; catalog id `ap-nuseirat-night-strike-2026-07`)
+- **Explosions light up Gaza night sky**. AP Archive. 2023-11-12. View of Gaza from southern Israel. <https://www.youtube.com/watch?v=1RA9XdeKImU> (licence as catalogued: news (AP); first at 4:05.5; catalog id `ap-night-flashes-from-israel-2023-11-12`)
+- **Column of fire and smoke rises in Gaza City as Israeli airstrike hits bank building linked to Hamas**. AP Archive. 2023-10-08. Gaza City, Gaza Strip. Camera: Mohammad Jahjouh. <https://www.youtube.com/watch?v=nEHs-mDQLSI> (licence as catalogued: news (AP); first at 4:09.7; catalog id `ap-bank-strike-fireball-2023-10-08`)
+- **Interceptions in Tel Aviv after Iran missile attack on Israel**. Associated Press. 2025-06-13. <https://www.youtube.com/watch?v=pYZ2sbB9d9o> (licence as catalogued: news (AP); fair use; first at 4:30.3; catalog id `ap-interceptions-telaviv-jun2025`)
+- **Israel intensifies bombing of remaining residential buildings amid Gaza City offensive**. AP Archive. 2025-09-07. Gaza City. <https://www.youtube.com/watch?v=xb1Yj-mLXAU> (licence as catalogued: news (AP); first at 4:32.2; catalog id `ap-gazacity-towers-bombed-2025-09`)
 - **Raw: IDF Footage Said to Show Airstrikes**. Associated Press (IDF-supplied footage). 2014-08-20. <https://www.youtube.com/watch?v=FEBuDBmtFDk> (licence as catalogued: news (AP; IDF footage); fair use; first at 4:49.4; catalog id `ap-raw-idf-footage-2014`)
-- **Huge explosion and flares on the Gaza skyline seen from southern Israel**. AP Archive. 2025-12-27. Southern Israel overlooking the Gaza Strip. <https://www.youtube.com/watch?v=8jGPdgrxplo> (licence as catalogued: news (AP); first at 4:58.9; catalog id `ap-night-explosion-flares-2025-12`)
+- **Columns of black smoke rise from Gaza Strip as Israel continues airstrikes**. AP Archive. 2023-10-18. Southern Israel. Camera: Kostya Manenkov. <https://www.youtube.com/watch?v=tG8VeZvzipM> (licence as catalogued: news (AP); first at 4:55.1; catalog id `ap-smoke-from-israel-2023-10-18`)
+- **More explosions send plumes of smoke into sky over Gaza as Israel expands Gaza City operation**. AP Archive. 2025-09-16. Southern Israel looking into Gaza City. <https://www.youtube.com/watch?v=dzqtf2wuatA> (licence as catalogued: news (AP); first at 5:02.7; catalog id `ap-smoke-gazacity-from-israel-2025-09`)
 - **Dead and wounded brought to Gaza City hospital after Jabaliya strike**. AP Archive. 2026-07-14. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=_zps_M-njzw> (licence as catalogued: news (AP); first at 5:05.0; catalog id `ap-jabaliya-strike-shifa-arrivals-2026-07-14`)
 - **Families mourn those killed as Israeli strikes pound the Gaza Strip overnight**. AP Archive. 2026-08-02. Khan Younis, southern Gaza Strip; Deir al-Balah, Central Gaza Strip. <https://www.youtube.com/watch?v=TVneg3n7Ghc> (licence as catalogued: news (AP); first at 5:06.4; catalog id `ap-khanyounis-mourning-overnight-strikes-2026-08-02`)
-- **Strike hits Gaza's Nuseirat after Israeli military issues warning**. AP Archive. 2026-07-31. Nuseirat, central Gaza Strip. <https://www.youtube.com/watch?v=0Bf1tWaqvvs> (licence as catalogued: news (AP); first at 5:06.5; catalog id `ap-nuseirat-night-strike-2026-07`)
-- **Israel intensifies bombing of remaining residential buildings amid Gaza City offensive**. AP Archive. 2025-09-07. Gaza City. <https://www.youtube.com/watch?v=xb1Yj-mLXAU> (licence as catalogued: news (AP); first at 5:10.3; catalog id `ap-gazacity-towers-bombed-2025-09`)
+- **Large column of black smoke billows over Gaza City after latest Israeli airstrike**. AP Archive. 2023-10-07. Gaza City. <https://www.youtube.com/watch?v=kSsvHTTEL3Y> (licence as catalogued: news (AP); first at 5:10.3; catalog id `ap-smoke-gazacity-2023-10-07`)
 - **Drone footage shows vast destruction in Beit Lahiya, in northern Gaza**. AP Archive. 2025-02-17. Beit Lahiya, Gaza Strip. <https://www.youtube.com/watch?v=VCp7zg_f7qk> (licence as catalogued: news (AP); first at 5:19.9; catalog id `ap-drone-beit-lahiya-2025-02`)
-- **Bodies brought to Gaza hospital after deadly Israeli strike**. AP Archive. 2026-07-29. Khan Younis, Gaza. <https://www.youtube.com/watch?v=G9EY3rgBcLc> (licence as catalogued: news (AP); first at 5:25.9; catalog id `ap-khanyounis-morgue-bodies-2026-07-29`)
-- **Drone aerials show much of Gaza City reduced to rubble during two years of war**. AP Archive. 2025-10-15. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=nZ15f_tSAHc> (licence as catalogued: news (AP); first at 5:35.1; catalog id `ap-drone-gazacity-ruins-2025-10-long`)
-- **Explosions light up Gaza night sky**. AP Archive. 2023-11-12. View of Gaza from southern Israel. <https://www.youtube.com/watch?v=1RA9XdeKImU> (licence as catalogued: news (AP); first at 5:42.8; catalog id `ap-night-flashes-from-israel-2023-11-12`)
-- **Iron Dome chase barrage of rockets fired from Gaza**. AP Archive. 2021-05 (upload 2021-05-24). <https://www.youtube.com/watch?v=EKvPmpAbuZQ> (licence as catalogued: news (AP Archive); fair use; first at 5:48.5; catalog id `ap-iron-dome-chase-may2021`)
+- **Large smoke clouds billow over Gaza Strip as several Israeli airstrikes hit area east of Jabaliya**. AP Archive. 2025-05-15. Near Jabaliya, Gaza Strip. Camera: Wafaa Shurafa. <https://www.youtube.com/watch?v=-N5p9LEIa50> (licence as catalogued: news (AP); first at 5:23.7; catalog id `ap-smoke-jabaliya-2025-05`)
+- **Bodies brought to Gaza hospital after deadly Israeli strike**. AP Archive. 2026-07-29. Khan Younis, Gaza. <https://www.youtube.com/watch?v=G9EY3rgBcLc> (licence as catalogued: news (AP); first at 5:25.7; catalog id `ap-khanyounis-morgue-bodies-2026-07-29`)
+- **apt-khanyounis-house-strike-2026-09-09**. APT (news aggregator). 2026-09-09. <https://www.youtube.com/watch?v=yHnWN-p2G1Q> (licence as catalogued: news aggregator (APT); original camera uncredited; first at 5:31.3; catalog id `apt-khanyounis-house-strike-2026-09-09`)
+- **idf-tehran-strikes-aerial-2026-03-01**. APT (footage: Israel Defense Forces). 2026-03-01. <https://www.youtube.com/watch?v=CIwuAr06Xic> (licence as catalogued: IDF release via APT; first at 5:35.1; catalog id `idf-tehran-strikes-aerial-2026-03-01`)
+- **ap-beirut-barrage-2026-04-08**. Associated Press. 2026-04-08. <https://www.youtube.com/watch?v=A_zAvt-sFxk> (licence as catalogued: news (AP); first at 5:46.6; catalog id `ap-beirut-barrage-2026-04-08`)
+- **ap-gaza-city-twin-plumes-2026-10-10**. AP Archive. 2026-10-10. <https://www.youtube.com/watch?v=oEAwkAZBL4U> (licence as catalogued: news (AP); first at 5:58.0; catalog id `ap-gaza-city-twin-plumes-2026-10-10`)
 - **Overnight Israeli strike hits tents sheltering displaced Palestinian families in Muwasi**. AP Archive. 2025-06-23. Muwasi, Gaza Strip. <https://www.youtube.com/watch?v=H_kELGjZ2RY> (licence as catalogued: news (AP); first at 6:05.6; catalog id `ap-muwasi-tents-strike-2025-06`)
-- **Gaza rockets intercepted over Tel Aviv's night sky**. AP Archive. 2023-05 (upload 2023-05-16). Tel Aviv, Israel. Camera: Paz Bar. <https://www.youtube.com/watch?v=E--NcpXQuZ0> (licence as catalogued: news (AP Archive); fair use; first at 6:11.3; catalog id `ap-telaviv-intercepts-may2023`)
-- **Mass funeral in Gaza after bodies recovered of more than 100 people killed in 2023 Israeli strike**. AP Archive. 2026-08-04. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=D8BWnIo43Dw> (licence as catalogued: news (AP); first at 6:36.4; catalog id `ap-mass-funeral-hassayna-2026-08-04`)
-- **Palestinians at Deir al-Balah hospital pray over body bags holding victims of Israel airstrikes**. AP Archive. 2023-12-28. Outside al-Aqsa Martyr's Hospital, Deir al-Balah, Gaza. Camera: Abd Al Kareem Hana. <https://www.youtube.com/watch?v=Xl9NY5h-MHQ> (licence as catalogued: news (AP); first at 7:06.9; catalog id `ap-aqsa-body-bags-prayer-2023-12`)
+- **Mass funeral in Gaza after bodies recovered of more than 100 people killed in 2023 Israeli strike**. AP Archive. 2026-08-04. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=D8BWnIo43Dw> (licence as catalogued: news (AP); first at 6:36.2; catalog id `ap-mass-funeral-hassayna-2026-08-04`)
+- **Palestinians at Deir al-Balah hospital pray over body bags holding victims of Israel airstrikes**. AP Archive. 2023-12-28. Outside al-Aqsa Martyr's Hospital, Deir al-Balah, Gaza. Camera: Abd Al Kareem Hana. <https://www.youtube.com/watch?v=Xl9NY5h-MHQ> (licence as catalogued: news (AP); first at 7:06.6; catalog id `ap-aqsa-body-bags-prayer-2023-12`)
+- **Cars crowd road as displaced Palestinians begin journey back to homes in north Gaza**. AP Archive. 2025-01-27. Salah al Din street. <https://www.youtube.com/watch?v=uBdeV5rG8UE> (licence as catalogued: news (AP); first at 7:22.1; catalog id `ap-salahaldin-crossing-return-2025-01`)
 
 ### Reuters
 
 - **Explosions rock Gaza overnight**. Reuters. 2023-10-22. <https://www.youtube.com/watch?v=WAGCvWsTpYQ> (licence as catalogued: news (Reuters); first at 1:37.7; catalog id `reuters-explosions-overnight-2023-10-22`)
 - **Israel pummels Gaza with air strikes overnight**. Reuters. 2023-10-08. <https://www.youtube.com/watch?v=vE79wEcq6nE> (licence as catalogued: news (Reuters); first at 2:04.8; catalog id `reuters-night-fireballs-2023-10-08`)
-- **Gaza buildings destroyed in Israeli strikes**. Reuters. 2023-10-08. <https://www.youtube.com/watch?v=bftGJOh4FvY> (licence as catalogued: news (Reuters); first at 3:42.0; catalog id `reuters-national-bank-strike-2023-10`)
+- **Gaza buildings destroyed in Israeli strikes**. Reuters. 2023-10-08. <https://www.youtube.com/watch?v=bftGJOh4FvY> (licence as catalogued: news (Reuters); first at 4:24.6; catalog id `reuters-national-bank-strike-2023-10`)
 
 ### AFP
 
@@ -68,7 +95,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 ### Al Jazeera English
 
 - **Israel is using high-powered bombs to maximise deaths in Gaza, experts say | Al Jazeera Newsfeed**. Al Jazeera English (Newsfeed). 2025-04-24. <https://www.youtube.com/watch?v=XysmVvsDwLQ> (licence as catalogued: news (Al Jazeera); fair use; first at 0:11.6; catalog id `aj-high-powered-bombs-explainer`)
-- **Gaza civil defence struggles through tonnes of rubble to recover thousands of buried Palestinians**. Al Jazeera English. 2025-12-15. Reporter: Ibrahim al-Khalili. <https://www.youtube.com/watch?v=jaBqpg-PB-s> (licence as catalogued: news (Al Jazeera); first at 1:46.9; catalog id `aje-civil-defence-body-recovery-2025-12`)
+- **aje-zawayda-warehouse-strike-shrapnel-2026-08-23**. Al Jazeera English (UGC: Facebook / Telegram). 2026-08-23. <https://www.youtube.com/watch?v=KJcRs_-Tx74> (licence as catalogued: news (AJE; UGC); first at 3:38.2; catalog id `aje-zawayda-warehouse-strike-shrapnel-2026-08-23`)
 
 ### Anadolu Agency
 
@@ -76,14 +103,15 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 ### Middle East Eye
 
-- **Gaza civil defence teams recover remains of 112 Palestinians from rubble**. Middle East Eye. 2026-08-03. Footage credited on screen to: khamees.hasira (Instagram). <https://www.youtube.com/watch?v=4wLmM3v8XH4> (licence as catalogued: news (MEE; journalist UGC); first at 6:04.0; catalog id `mee-112-remains-flags-2026-08-03`)
+- **Gaza civil defence teams recover remains of 112 Palestinians from rubble**. Middle East Eye. 2026-08-03. Footage credited on screen to: khamees.hasira (Instagram). <https://www.youtube.com/watch?v=4wLmM3v8XH4> (licence as catalogued: news (MEE; journalist UGC); first at 5:39.0; catalog id `mee-112-remains-flags-2026-08-03`)
 
 ### Roya News
 
+- **idf-soldiers-watch-demolition-yellow-line-2026-07-08**. Roya News English (footage filmed by Israeli soldiers). 2026-07-08. <https://www.youtube.com/watch?v=v0kPVcvCZO8> (licence as catalogued: news (Roya; soldier-shot UGC); first at 2:03.9; catalog id `idf-soldiers-watch-demolition-yellow-line-2026-07-08`)
+- **roya-afp-tent-strike-black-smoke-2026-03-25**. Roya News English (footage: AFP). 2026-03-25. <https://www.youtube.com/watch?v=r1XSN4h0DIU> (licence as catalogued: news (AFP via Roya); first at 3:39.1; catalog id `roya-afp-tent-strike-black-smoke-2026-03-25`)
 - **'Israeli' army releases footage of strikes on Gaza weapon sites**. Roya News English (footage: IDF / AFP). 2026-09-09. Footage credited on screen to: IDF / AFP. <https://www.youtube.com/watch?v=ILs0UJiqXgw> (licence as catalogued: IDF release via AFP/Roya; first at 4:07.4; catalog id `idf-gaza-weapons-sites-strikecam-2026-09-09`)
+- **Rescuers at site of overnight ‘Israeli’ strike in central Gaza**. Roya News English (Jordan). 2026-01-09. <https://www.youtube.com/watch?v=M3L1t4PVSiY> (licence as catalogued: news (Roya); first at 5:05.4; catalog id `roya-night-rescue-central-gaza-2026-01`)
 - **Critically injured civil defense worker arrives at Al-Shifa Hospital after 'Israeli' airstrike**. Roya News English. 2026-09-01. Footage credited on screen to: m.saed gaza (Instagram). <https://www.youtube.com/watch?v=p0uoWSF1AIw> (licence as catalogued: news (Roya; journalist UGC); first at 5:05.9; catalog id `roya-civil-defence-worker-shifa-2026-09-01`)
-- **Rescuers at site of overnight ‘Israeli’ strike in central Gaza**. Roya News English (Jordan). 2026-01-09. <https://www.youtube.com/watch?v=M3L1t4PVSiY> (licence as catalogued: news (Roya); first at 5:33.5; catalog id `roya-night-rescue-central-gaza-2026-01`)
-- **Gazans search for bodies buried under rubble since 2023 strike**. Roya News English. 2026-09-05. <https://www.youtube.com/watch?v=eKwlBuPcmw0> (licence as catalogued: news (Roya); first at 5:41.2; catalog id `roya-civil-defence-bones-nuseirat-2026-09-05`)
 
 ### The Guardian
 
@@ -94,14 +122,15 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 ### NBC News
 
-- **Watch: Building collapses in Gaza after being struck by Israeli airstrike**. NBC News Now. 2023-10-07/08. <https://www.youtube.com/watch?v=w57kiknN-MA> (licence as catalogued: news (NBC); first at 1:45.3; catalog id `nbc-night-tower-collapse-2023-10-08`)
+- **Watch: Building collapses in Gaza after being struck by Israeli airstrike**. NBC News Now. 2023-10-07/08. <https://www.youtube.com/watch?v=w57kiknN-MA> (licence as catalogued: news (NBC); first at 2:07.3; catalog id `nbc-night-tower-collapse-2023-10-08`)
 - **Gazans dig multiple graves at Khan Younis hospital**. NBC News. 2024-01-23. <https://www.youtube.com/watch?v=vnpsm7nB9JE> (licence as catalogued: news (NBC); first at 2:38.1; catalog id `nbc-nasser-courtyard-graves-2024-01`)
 - **nbc-dar-al-muttaqin-mosque-strike-2026-07-28**. NBC News (footage: WAFA, Reuters). 2026-07-28. <https://www.youtube.com/watch?v=BTr2lDBjto0> (licence as catalogued: news (NBC; WAFA/Reuters); first at 3:27.3; catalog id `nbc-dar-al-muttaqin-mosque-strike-2026-07-28`)
-- **Video captures explosion as Israeli missile hits Gaza City**. NBC News. 2023-10-11. <https://www.youtube.com/watch?v=J7yXotNqLVk> (licence as catalogued: news (NBC); first at 3:39.1; catalog id `nbc-missile-hits-building-2023-10`)
+- **Video captures explosion as Israeli missile hits Gaza City**. NBC News. 2023-10-11. <https://www.youtube.com/watch?v=J7yXotNqLVk> (licence as catalogued: news (NBC); first at 4:06.5; catalog id `nbc-missile-hits-building-2023-10`)
 
 ### The Wall Street Journal
 
-- **Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News**. WSJ News (footage via Reuters). 2023-10-12. Footage credited on screen to: Reuters. <https://www.youtube.com/watch?v=pzFOfUV7iNA> (licence as catalogued: news (WSJ / Reuters); first at 5:31.3; catalog id `wsj-residents-film-tower-strike-2023-10`)
+- **Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News**. WSJ News (footage: Reuters, filmed by Gaza resident). 2023-10-12. <https://www.youtube.com/watch?v=pzFOfUV7iNA> (licence as catalogued: news (WSJ/Reuters); fair use; first at 3:43.1; catalog id `wsj-gaza-highrise-strike-oct2023`)
+- **Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News**. WSJ News (footage via Reuters). 2023-10-12. Footage credited on screen to: Reuters. <https://www.youtube.com/watch?v=pzFOfUV7iNA> (licence as catalogued: news (WSJ / Reuters); first at 4:13.1; catalog id `wsj-residents-film-tower-strike-2023-10`)
 
 ### news.com.au
 
@@ -109,11 +138,12 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 ### Times Radio
 
-- **Israel Defence Force releases footage of devastating aerial bombardment of Gaza**. Times Radio (IDF-released footage). 2023-10-10. <https://www.youtube.com/watch?v=hy8dNUHzApk> (licence as catalogued: IDF release via news; fair use; first at 3:18.2; catalog id `times-radio-idf-bombardment-oct2023`)
+- **Israel Defence Force releases footage of devastating aerial bombardment of Gaza**. Times Radio (IDF-released footage). 2023-10-10. <https://www.youtube.com/watch?v=hy8dNUHzApk> (licence as catalogued: IDF release via news; fair use; first at 1:01.1; catalog id `times-radio-idf-bombardment-oct2023`)
 
 ### Forbes Breaking News
 
-- **WATCH: IDF Releases Footage Of Strike On Gaza That Left Crater**. Forbes Breaking News (footage: IDF via CNN). 2026-08-01. Footage credited on screen to: IDF via CNN. <https://www.youtube.com/watch?v=JMFVyv-HYM0> (licence as catalogued: IDF release via CNN/Forbes; first at 1:01.1; catalog id `idf-gaza-crater-strikecam-2026-08-01`)
+- **anadolu-khanyounis-plume-2026-09-09**. Forbes Breaking News (video: Abed Rahim Khatib / Anadolu Agency via Getty Images). 2026-09-09. <https://www.youtube.com/watch?v=dVPeJx24slc> (licence as catalogued: news (Anadolu/Getty via Forbes); first at 3:34.4; catalog id `anadolu-khanyounis-plume-2026-09-09`)
+- **WATCH: IDF Releases Footage Of Strike On Gaza That Left Crater**. Forbes Breaking News (footage: IDF via CNN). 2026-08-01. Footage credited on screen to: IDF via CNN. <https://www.youtube.com/watch?v=JMFVyv-HYM0> (licence as catalogued: IDF release via CNN/Forbes; first at 3:59.2; catalog id `idf-gaza-crater-strikecam-2026-08-01`)
 
 ### DVIDS (US Department of Defense)
 
@@ -125,8 +155,10 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Live Hellfire Training Event**. DVIDS / 49th Wing, Holloman AFB, USAF. 2021-09-17. <https://www.dvidshub.net/video/815413/live-hellfire-training-event> (licence as catalogued: public domain (DVIDS); first at 1:16.4; catalog id `mq9-live-hellfire-holloman`)
 - **MA-9 Reaper loading AGM-114 Hellfire missile**. DVIDS / 174th Attack Wing, New York ANG. 2026-03-03. <https://www.dvidshub.net/video/998429/ma-9-reaper-loading-agm-114-hellfire-missile> (licence as catalogued: public domain (DVIDS); first at 1:16.4; catalog id `mq9-hellfire-reload-gulfport`)
 - **GBU-39 Small Diameter Bombs Loaded on MQ-9 B-Roll**. DVIDS / USAF. 2025 (posted). <https://www.dvidshub.net/video/956723/gbu-39-small-diameter-bombs-loaded-mq-9-b-roll> (licence as catalogued: public domain (DVIDS); first at 1:24.0; catalog id `gbu39-load-mq9-night`)
+- **Employees on 155mm production line putting the finishing touches on projectile rounds at Iowa Army Ammunition Plant.**. DVIDS / Iowa Army Ammunition Plant. 2026 (posted). <https://www.dvidshub.net/video/1011368/employees-155mm-production-line-putting-finishing-touches-projectile-rounds-iowa-army-ammunition-p> (licence as catalogued: public domain (DVIDS); first at 1:46.9; catalog id `iowa-aap-155mm-line-workers`)
 - **Juniper Oak 2023 B-Roll Package**. DVIDS / U.S. Army (Juniper Oak 2023). 2023-01-26. <https://www.dvidshub.net/video/871481/juniper-oak-2023-b-roll-package> (licence as catalogued: public domain (DVIDS); first at 2:47.4; catalog id `juniper-oak-2023-broll`)
 - **Red Sands 24.2 Apache Live Fire against small-UAS**. DVIDS / U.S. Army (SFC Walter Talens). 2024-09-23. <https://www.dvidshub.net/video/941608/red-sands-242-apache-live-fire-against-small-uas> (licence as catalogued: public domain (DVIDS); first at 2:51.2; catalog id `apache-red-sands-uas`)
+- **B-Roll: 509 BGS Loads JDAMs In B-2 Spirit For Maritime Test**. DVIDS / 509th Bomb Wing, USAF. 2025-08-28. <https://www.dvidshub.net/video/976261/b-roll-509-bgs-loads-jdams-b-2-spirit-maritime-test> (licence as catalogued: public domain (DVIDS); first at 3:33.5; catalog id `b2-jdam-load-whiteman`)
 - **12CAB Conducts Hellfire Missile Shoot in Greece**. DVIDS / 12th Combat Aviation Brigade, U.S. Army. 2023-05-12. <https://www.dvidshub.net/video/883839/12cab-conducts-hellfire-missile-shoot-greece> (licence as catalogued: public domain (DVIDS); first at 4:26.5; catalog id `hellfire-greece-flir`)
 
 ### Israel Defense Forces
@@ -136,23 +168,26 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **The Israeli Air Force strikes Hamas targets on Oct. 13.**. Israel Defense Forces (official YouTube). 2023-10-13. <https://www.youtube.com/watch?v=1dxriivNDhY> (licence as catalogued: IDF release (official military); fair use; first at 1:35.5; catalog id `idf-gaza-strikes-oct13-2023`)
 - **IDF Strike on Concealed Weapons Causes Massive Secondary Explosion**. Israel Defense Forces (official YouTube). 2014-07-10. <https://www.youtube.com/watch?v=4ayyXgRVWHk> (licence as catalogued: IDF release; fair use; first at 2:11.5; catalog id `idf-beit-hanoun-launcher-2014`)
 - **Israel Air Force Strikes Hamas Offices and Armed Grad Launchers**. Israel Defense Forces (official YouTube). 2008-12-31. <https://www.youtube.com/watch?v=0iRJuFyqSrs> (licence as catalogued: IDF release; fair use; first at 3:06.8; catalog id `idf-haniyeh-office-2008`)
+- **Night Strike on Hamas Terrorists**. Israel Defense Forces (official YouTube). 2009-01-14. <https://www.youtube.com/watch?v=H5glijDWVyU> (licence as catalogued: IDF release; fair use; first at 3:41.2; catalog id `idf-castlead-nightvision-2009`)
 - **FIRST FOOTAGE: Watch IDF strikes targeting aerial defense systems in Iran.**. Israel Defense Forces (official YouTube). 2026-06-08. <https://www.youtube.com/watch?v=b01T149myxQ> (licence as catalogued: IDF release; first at 4:03.6; catalog id `idf-iran-air-defence-strike-2026-06-08`)
 - **Aerial Strike on Hamas Weapons Facility in Gaza**. Israel Defense Forces (official YouTube). 2011-12-11. <https://www.youtube.com/watch?v=Eza-Gx3VLSk> (licence as catalogued: IDF release; fair use; first at 4:33.4; catalog id `idf-weapons-storage-2011`)
+- **idf-western-iran-launcher-strikes-2026-02-28**. Israel Defense Forces (official YouTube). 2026-02-28. <https://www.youtube.com/watch?v=lstswzboEcE> (licence as catalogued: IDF release; first at 5:59.9; catalog id `idf-western-iran-launcher-strikes-2026-02-28`)
 
 ### Israel Ministry of Defense
 
 - **Heavy Bombs Shipment Released by U.S. Government Arrives in Israel**. Israel Ministry of Defense (official Facebook). 2025-02-15. <https://www.facebook.com/IsraelMOD/videos/heavy-bombs-shipment-released-by-us-government-arrives-in-israelin-a-joint-opera/1174131547725027/> (licence as catalogued: official government release; fair use; first at 1:01.2; catalog id `imod-mk84-ashdod-feb2025`)
+- **imod-200th-airlift-plane-2026-03-26**. Israel Ministry of Defense (official YouTube). 2026-03-26. <https://www.youtube.com/watch?v=blyi1fP3KrY> (licence as catalogued: government release (Israel MoD); first at 7:22.1; catalog id `imod-200th-airlift-plane-2026-03-26`)
 
 ### Lockheed Martin
 
 - **Lockheed Martin Awarded Seven-Year Deal to Triple PAC-3® MSE Production**. Lockheed Martin (official YouTube). 2026-07-29. <https://www.youtube.com/watch?v=taalsp6ITII> (licence as catalogued: corporate promo (Lockheed Martin); first at 2:58.9; catalog id `lockheed-pac3-triple-short-2026-07-29`)
-- **The F-35 Factory**. Lockheed Martin (official). 2012-08-30. <https://www.youtube.com/watch?v=df_MHNkAVrw> (licence as catalogued: manufacturer marketing; fair use; first at 3:18.3; catalog id `lm-f35-factory-animation`)
 
 ### Re-uploads and others
 
 - **The first large shipment of ammunition from the United States arrived in Israel on a Boeing C-17**. PoliticsInsider (re-upload; original IDF/Israel MoD footage). 2023-10-10. <https://www.youtube.com/watch?v=H23h6mn72nc> (licence as catalogued: IDF release via re-upload; fair use; first at 1:08.8; catalog id `c17-first-us-munitions-israel-oct2023`)
 - **Подготовка бомб GBU-31 JDAM армией Израиля** (Preparation of GBU-31 JDAM bombs by the Israeli army (our translation from Russian)). Lamp of Knowledge (Russian-language re-edit; footage appears to be Israel MoD / IDF release). 2023-10-13 (upload). <https://www.youtube.com/watch?v=Qz5Fa4At0Uk> (licence as catalogued: unknown (re-upload of official footage); fair use; first at 1:31.6; catalog id `israel-gbu31-prep-oct2023-reedit`)
 - **Melihat Konfigurasi dan Muatan Jet Israel dalam Operasi Pedang Besi** (A look at the configuration and payload of Israeli jets in Operation Swords of Iron (our translation from Indonesian)). JejakTapak (Indonesian re-upload; credits 'Video: IDF'). 2023-10-15 (upload). <https://www.youtube.com/watch?v=eWWn7-dK40Q> (licence as catalogued: unknown (re-upload of IDF footage); fair use; first at 1:39.2; catalog id `iaf-swords-of-iron-loadout-reupload`)
+- **Israel publishes hundreds of airstrike videos - but they only tell part of the story**. Sky News. 2024-10-09. <https://www.youtube.com/watch?v=cJ0-6Lu4yNw> (licence as catalogued: news (Sky News); fair use; first at 5:04.6; catalog id `sky-idf-airstrike-videos-analysis`)
 
 ## Music, voice, tools
 
@@ -160,6 +195,44 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - Background picture: the "Daso - Meine" video uploaded to YouTube by discpictures99 on 19 February 2010 (description: "Vilnius"); filmmaker not credited there. <https://www.youtube.com/watch?v=h7qTI6Njp9g>
 - Voice: Sam Hyde, comedian (Million Dollar Extreme), "thou shalt give Israel missiles". The original recording was not traced; the clip circulates widely, e.g. <https://www.youtube.com/shorts/_aFaQ-eRuWM> (uploaded 14 Sep 2022).
 - Tools: Whisper (mlx-whisper) for word timing, MediaPipe face tracking, librosa beat analysis, OpenCV, PyAV and FFmpeg for rendering, Pillow with HarfBuzz/raqm for type.
+
+## UNIDENTIFIED media in the timeline (needs a credit)
+
+- `media/derived/preachers/bachmann_blessed__bless_israel.mp4`
+- `media/derived/preachers/cruz_tucker_bless__taught_bless.mp4`
+- `media/derived/preachers/cruz_tucker_bless__where_is_that.mp4`
+- `media/derived/preachers/evans_bless_thee__bless_thee.mp4`
+- `media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4`
+- `media/derived/preachers/hagee_cufi2024_weapons__weapons_of_war.mp4`
+- `media/derived/preachers/hagee_march_victory__victory.mp4`
+- `media/derived/preachers/haley_finish_them__shell.mp4`
+- `media/derived/preachers/haley_hannity_finish__finish_them.mp4`
+- `media/derived/preachers/hibbs_weapons_insulting_god__insulting_god.mp4`
+- `media/derived/preachers/hibbs_weapons_insulting_god__poking_god.mp4`
+- `media/derived/preachers/huckabee_bless_side__blessing_side.mp4`
+- `media/derived/preachers/huckabee_tucker_take_it_all__take_it_all.mp4`
+- `media/derived/preachers/isaac_bible_weaponized__weaponized.mp4`
+- `media/derived/preachers/johnson_bible_bless__bless_curse.mp4`
+- `media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4`
+- `media/derived/preachers/vaughn_wonderful_days__glory.mp4`
+- `media/derived/preachers/vaughn_wonderful_days__wonderful_days.mp4`
+- `media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4`
+- `media/derived/text/44d9ee05972ae3d7.png`
+- `media/derived/text/4cfc61f879b052b7.png`
+- `media/derived/text/501a11f26dc29dc0.png`
+- `media/derived/text/5206ed41c8b9c68b.png`
+- `media/derived/text/58294408dd28d066.png`
+- `media/derived/text/5a5c394948ec8bce.png`
+- `media/derived/text/671eff7001734ce5.png`
+- `media/derived/text/9650f24ef6067e3b.png`
+- `media/derived/text/9e34b40e1ffbee21.png`
+- `media/derived/text/afd8cf81d062fce9.png`
+- `media/derived/text/b6d0a0919e2faae6.png`
+- `media/derived/text/bbb096da6f7565a9.png`
+- `media/derived/text/bfba81ceeeb85b69.png`
+- `media/derived/text/c2ade9fdb44c2454.png`
+- `media/derived/text/c7b128269242f8ec.png`
+- `media/derived/text/cae36e2061e6ed26.png`
 
 ## The dead of Gaza
 

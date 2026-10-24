@@ -7,9 +7,10 @@
    "catalog": "weapons",
    "id": "hellfire-yakima-broll",
    "first": 5.42,
-   "screen": 2.8,
+   "screen": 4.6,
    "segs": [
-    1
+    1,
+    3
    ],
    "publisher": "DVIDS / 16th Combat Aviation Brigade, U.S. Army (Capt. Kyle Abraham)",
    "outlet": "DVIDS (US Department of Defense)",
@@ -29,9 +30,10 @@
    "catalog": "weapons",
    "id": "idf-launcher-strike-2009",
    "first": 9.71,
-   "screen": 1.6,
+   "screen": 3.6,
    "segs": [
-    0
+    0,
+    1
    ],
    "publisher": "Israel Defense Forces (official YouTube)",
    "outlet": "Israel Defense Forces",
@@ -74,7 +76,7 @@
    "catalog": "weapons",
    "id": "idf-strikes-jan2014-blackhot",
    "first": 13.51,
-   "screen": 10.4,
+   "screen": 4.3,
    "segs": [
     1
    ],
@@ -96,7 +98,7 @@
    "catalog": "weapons",
    "id": "hellfire-symphony-tads",
    "first": 18.75,
-   "screen": 23.7,
+   "screen": 17.0,
    "segs": [
     1,
     2,
@@ -124,7 +126,7 @@
    "catalog": "weapons",
    "id": "a10-bomb-load-nellis",
    "first": 21.13,
-   "screen": 3.0,
+   "screen": 2.4,
    "segs": [
     1
    ],
@@ -189,41 +191,38 @@
    "provenance": "Official DVIDS b-roll: 509th Munitions Squadron assembles GBU-31 and GBU-38 JDAMs at Whiteman AFB, Missouri. Clean modern 1600x900, no burned-in text."
   },
   {
-   "catalog": "y2026",
-   "id": "idf-gaza-crater-strikecam-2026-08-01",
+   "catalog": "weapons",
+   "id": "times-radio-idf-bombardment-oct2023",
    "first": 61.06,
-   "screen": 37.2,
+   "screen": 9.8,
    "segs": [
     0,
-    1,
-    2
+    2,
+    3
    ],
-   "publisher": "Forbes Breaking News (footage: IDF via CNN)",
-   "outlet": "Forbes Breaking News",
-   "title": "WATCH: IDF Releases Footage Of Strike On Gaza That Left Crater",
+   "publisher": "Times Radio (IDF-released footage)",
+   "outlet": "Times Radio",
+   "title": "Israel Defence Force releases footage of devastating aerial bombardment of Gaza",
    "title_en": null,
-   "uploader": "Forbes Breaking News",
-   "date": "2026-08-01",
+   "uploader": "Times Radio",
+   "date": "2023-10-10",
    "place": null,
-   "credits": [
-    [
-     "Footage credited on screen to",
-     "IDF via CNN"
-    ]
-   ],
-   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
-   "url": "https://www.youtube.com/watch?v=JMFVyv-HYM0",
-   "license": "IDF release via CNN/Forbes",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=hy8dNUHzApk",
+   "license": "IDF release via news; fair use",
    "scope": "israel",
-   "provenance": "Forbes Breaking News repost of IDF-released strike footage (on-screen 'VIDEO: IDF VIA CNN', 'AUGUST 1, 2026'): grey aerial strike-cam of a strike in Gaza leaving a crater, amid Hamas disarmament talks. Forbes lower-third throughout."
+   "provenance": "Times Radio compilation of IDF-released strike footage from the first days of the Gaza bombardment, Oct 2023: colour aerial of multi-storey buildings hit, IR pod views. Times captions on every shot."
   },
   {
    "catalog": "weapons",
    "id": "imod-mk84-ashdod-feb2025",
    "first": 61.16,
-   "screen": 22.9,
+   "screen": 23.4,
    "segs": [
-    1
+    0,
+    1,
+    2
    ],
    "publisher": "Israel Ministry of Defense (official Facebook)",
    "outlet": "Israel Ministry of Defense",
@@ -266,7 +265,7 @@
    "catalog": "weapons",
    "id": "mq9-live-hellfire-holloman",
    "first": 76.39,
-   "screen": 23.6,
+   "screen": 19.9,
    "segs": [
     1,
     7
@@ -357,7 +356,7 @@
    "catalog": "ground",
    "id": "afp-rafah-night-strikes-flares-2023-12",
    "first": 93.52,
-   "screen": 27.5,
+   "screen": 9.0,
    "segs": [
     0
    ],
@@ -379,8 +378,10 @@
    "catalog": "weapons",
    "id": "idf-gaza-strikes-oct13-2023",
    "first": 95.45,
-   "screen": 8.2,
+   "screen": 10.0,
    "segs": [
+    0,
+    1,
     2,
     3,
     4
@@ -403,7 +404,7 @@
    "catalog": "ground",
    "id": "reuters-explosions-overnight-2023-10-22",
    "first": 97.71,
-   "screen": 20.4,
+   "screen": 6.8,
    "segs": [
     0,
     2,
@@ -467,61 +468,54 @@
   },
   {
    "catalog": "ground",
-   "id": "nbc-night-tower-collapse-2023-10-08",
+   "id": "ap-night-blast-gazacity-2014-07-20",
    "first": 105.32,
-   "screen": 10.2,
+   "screen": 2.0,
    "segs": [
     0
    ],
-   "publisher": "NBC News Now",
-   "outlet": "NBC News",
-   "title": "Watch: Building collapses in Gaza after being struck by Israeli airstrike",
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Explosions light up night sky over Gaza as Israel continues offensive",
    "title_en": null,
-   "uploader": "NBC News",
-   "date": "2023-10-07/08",
+   "uploader": "AP Archive",
+   "date": "2014-07-20",
    "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=w57kiknN-MA",
-   "license": "news (NBC)",
+   "url": "https://www.youtube.com/watch?v=UnlZQZBpgrg",
+   "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "NBC News Now (upload 8 Oct 2023): Gaza City building struck at night and collapses; next-morning dust and sunrise. Early-war Oct 2023."
+   "provenance": "AP, Gaza City, night of 20 Jul 2014 (2014 war), NOT 2023+."
   },
   {
-   "catalog": "ground",
-   "id": "aje-civil-defence-body-recovery-2025-12",
+   "catalog": "weapons",
+   "id": "iowa-aap-155mm-line-workers",
    "first": 106.87,
    "screen": 15.2,
    "segs": [
-    1
+    0
    ],
-   "publisher": "Al Jazeera English",
-   "outlet": "Al Jazeera English",
-   "title": "Gaza civil defence struggles through tonnes of rubble to recover thousands of buried Palestinians",
+   "publisher": "DVIDS / Iowa Army Ammunition Plant",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "Employees on 155mm production line putting the finishing touches on projectile rounds at Iowa Army Ammunition Plant.",
    "title_en": null,
-   "uploader": "Al Jazeera English",
-   "date": "2025-12-15",
+   "uploader": null,
+   "date": "2026 (posted)",
    "place": null,
-   "credits": [
-    [
-     "Reporter",
-     "Ibrahim al-Khalili"
-    ]
-   ],
+   "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=jaBqpg-PB-s",
-   "license": "news (Al Jazeera)",
-   "scope": "gaza",
-   "provenance": "Al Jazeera English (Ibrahim al-Khalili), Gaza City, Dec 2025: civil defence with one bulldozer recover bodies from rubble; white body bags."
+   "url": "https://www.dvidshub.net/video/1011368/employees-155mm-production-line-putting-finishing-touches-projectile-rounds-iowa-army-ammunition-p",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS: civilian contract employees finishing 155 mm M795 rounds on a production line at Iowa Army Ammunition Plant."
   },
   {
    "catalog": "ground",
    "id": "ap-drone-coast-road-return-2025-01-long",
    "first": 114.49,
-   "screen": 47.1,
-   "segs": [
-    3
-   ],
+   "screen": 39.0,
+   "segs": [],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
    "title": "Drone shows thousands walking towards northern Gaza as Israel lifts its closure",
@@ -537,10 +531,32 @@
    "provenance": "AP drone, Wadi Gaza coastal road, 27 Jan 2025: tens of thousands walk north as Israel lifts closure of northern Gaza (AP shotlist). Clean, muted, 360p, 5+ min."
   },
   {
+   "catalog": "y2026",
+   "id": "idf-soldiers-watch-demolition-yellow-line-2026-07-08",
+   "first": 123.9,
+   "screen": 1.3,
+   "segs": [
+    0
+   ],
+   "publisher": "Roya News English (footage filmed by Israeli soldiers)",
+   "outlet": "Roya News",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-07-08",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=v0kPVcvCZO8",
+   "license": "news (Roya; soldier-shot UGC)",
+   "scope": "gaza",
+   "provenance": "Roya News English short (tag 'Gaza 8/7/2026'): footage filmed by Israeli soldiers inside Gaza showing a line of soldiers watching a controlled demolition of residential blocks inside the 'Yellow Line'. Soldier-shot social media video; Roya captions."
+  },
+  {
    "catalog": "ground",
    "id": "reuters-night-fireballs-2023-10-08",
    "first": 124.85,
-   "screen": 5.1,
+   "screen": 1.3,
    "segs": [
     0
    ],
@@ -604,6 +620,28 @@
   },
   {
    "catalog": "ground",
+   "id": "nbc-night-tower-collapse-2023-10-08",
+   "first": 127.27,
+   "screen": 2.5,
+   "segs": [
+    0
+   ],
+   "publisher": "NBC News Now",
+   "outlet": "NBC News",
+   "title": "Watch: Building collapses in Gaza after being struck by Israeli airstrike",
+   "title_en": null,
+   "uploader": "NBC News",
+   "date": "2023-10-07/08",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=w57kiknN-MA",
+   "license": "news (NBC)",
+   "scope": "gaza",
+   "provenance": "NBC News Now (upload 8 Oct 2023): Gaza City building struck at night and collapses; next-morning dust and sunrise. Early-war Oct 2023."
+  },
+  {
+   "catalog": "ground",
    "id": "ap-night-flares-explosions-2023-11-09",
    "first": 128.66,
    "screen": 1.3,
@@ -628,7 +666,7 @@
    "catalog": "ground",
    "id": "newscomau-gaza-city-towers-2025-09",
    "first": 129.61,
-   "screen": 5.1,
+   "screen": 4.1,
    "segs": [
     3,
     7
@@ -835,6 +873,28 @@
    "provenance": "Official DVIDS b-roll package from US-Israel exercise Juniper Oak 2023 in Israel (Shivta): US HIMARS live fire beside IDF troops, joint planning, vehicles. Slate at start."
   },
   {
+   "catalog": "ground",
+   "id": "ap-night-strike-gazacity-2019",
+   "first": 169.61,
+   "screen": 1.6,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Gaza skyline lights up after Israeli air strikes",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2019-03-15",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=x_FnszcPiug",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City, 15 Mar 2019 (2019 escalation), NOT 2023+."
+  },
+  {
    "catalog": "weapons",
    "id": "apache-red-sands-uas",
    "first": 171.24,
@@ -858,9 +918,31 @@
   },
   {
    "catalog": "ground",
+   "id": "ap-night-eid-bombardment-2014",
+   "first": 173.43,
+   "screen": 1.6,
+   "segs": [
+    2
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Explosions rumble across Gaza City, flares fall from sky on first night of Eid holiday",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2014-07-28",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=RP1ZRu4G2P4",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City, night of 28 Jul 2014 (first night of Eid, 2014 war), NOT 2023+."
+  },
+  {
+   "catalog": "ground",
    "id": "ap-ansar-tent-strike-fire-2026-03",
    "first": 177.23,
-   "screen": 19.4,
+   "screen": 16.9,
    "segs": [
     0
    ],
@@ -904,7 +986,7 @@
    "catalog": "ground",
    "id": "ap-night-blasts-from-israel-2025-09",
    "first": 181.04,
-   "screen": 13.8,
+   "screen": 5.1,
    "segs": [
     0,
     1,
@@ -928,9 +1010,10 @@
    "catalog": "ground",
    "id": "ap-drone-return-north-coast-2025-01",
    "first": 183.07,
-   "screen": 19.4,
+   "screen": 16.0,
    "segs": [
-    1
+    1,
+    3
    ],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
@@ -945,6 +1028,28 @@
    "license": "news (AP)",
    "scope": "gaza",
    "provenance": "AP drone, Wadi Gaza coast road and Gaza City, 27 Jan 2025: tens of thousands returning north on foot when Israel lifted closure (AP shotlist)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-deir-balah-night-strike-2026-05-23",
+   "first": 185.8,
+   "screen": 1.6,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-05-23",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=ZCLpNuaEzl8",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Deir al-Balah, 23 May 2026 (night): Israeli post-warning airstrike on a residential building; flames into sky, then smoke over lit skyline (AP shotlist)."
   },
   {
    "catalog": "weapons",
@@ -1018,50 +1123,26 @@
    "provenance": "AP from southern Israel overlooking the Gaza Strip, 27 Dec 2025 (same night as ap-night-explosion-flares-2025-12, alternate edit)."
   },
   {
-   "catalog": "weapons",
-   "id": "times-radio-idf-bombardment-oct2023",
-   "first": 198.18,
-   "screen": 11.4,
+   "catalog": "ground",
+   "id": "ap-drone-gazacity-ruins-2025-10-long",
+   "first": 197.7,
+   "screen": 27.9,
    "segs": [
-    0,
-    2,
-    3
+    6
    ],
-   "publisher": "Times Radio (IDF-released footage)",
-   "outlet": "Times Radio",
-   "title": "Israel Defence Force releases footage of devastating aerial bombardment of Gaza",
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Drone aerials show much of Gaza City reduced to rubble during two years of war",
    "title_en": null,
-   "uploader": "Times Radio",
-   "date": "2023-10-10",
-   "place": null,
+   "uploader": "AP Archive",
+   "date": "2025-10-15",
+   "place": "Gaza City, Gaza Strip",
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=hy8dNUHzApk",
-   "license": "IDF release via news; fair use",
-   "scope": "israel",
-   "provenance": "Times Radio compilation of IDF-released strike footage from the first days of the Gaza bombardment, Oct 2023: colour aerial of multi-storey buildings hit, IR pod views. Times captions on every shot."
-  },
-  {
-   "catalog": "weapons",
-   "id": "lm-f35-factory-animation",
-   "first": 198.3,
-   "screen": 26.7,
-   "segs": [
-    0
-   ],
-   "publisher": "Lockheed Martin (official)",
-   "outlet": "Lockheed Martin",
-   "title": "The F-35 Factory",
-   "title_en": null,
-   "uploader": "Lockheed Martin",
-   "date": "2012-08-30",
-   "place": null,
-   "credits": [],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=df_MHNkAVrw",
-   "license": "manufacturer marketing; fair use",
-   "scope": "us-arsenal",
-   "provenance": "Lockheed Martin corporate animation 'The F-35 Factory': a glowing blue wireframe flythrough of the Fort Worth F-35 production line with labels (FINAL ASSEMBLY, WING MATE, COMPONENT INSTALL). CGI, labelled as such."
+   "url": "https://www.youtube.com/watch?v=nZ15f_tSAHc",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP drone, Gaza City, 15 Oct 2025, ceasefire (AP shotlist, 'Drone aerials show much of Gaza City reduced to rubble'). Clean (no split screens), 360p."
   },
   {
    "catalog": "y2026",
@@ -1086,108 +1167,275 @@
    "provenance": "NBC News short, Gaza City, 28 Jul 2026: Israeli airstrike destroys the Dar al-Muttaqin mosque; two angles credited on screen WAFA and Reuters. Square video in vertical frame with NBC branding; no casualties reported."
   },
   {
-   "catalog": "ground",
-   "id": "ap-jabaliya-dig-for-victims-2025-03",
+   "catalog": "y2026",
+   "id": "ap-shati-night-strike-2026-05-28",
+   "first": 211.52,
+   "screen": 1.6,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-05-28",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=WIiKD8Mjw1Y",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Shati refugee camp, Gaza City, 28 May 2026 (night): Israeli strike hits a building after warning, residents watched from a distance; no injuries (AP shotlist). Same event as AP short TF_dFA1C_CY (not catalogued)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-short-gaza-city-blasts-2026-07-28",
+   "first": 213.42,
+   "screen": 1.0,
+   "segs": [
+    0
+   ],
+   "publisher": "Associated Press",
+   "outlet": "Associated Press",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-07-28",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=lZHFLf8nVtg",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP vertical short, Gaza City and Deir al-Balah, 28 Jul 2026: two strikes after Israeli warnings. Contains a close fire/debris angle not in the AP Archive horizontal story (y6kQaVWkddo)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "b2-jdam-load-whiteman",
    "first": 213.54,
-   "screen": 18.6,
+   "screen": 11.4,
+   "segs": [
+    4
+   ],
+   "publisher": "DVIDS / 509th Bomb Wing, USAF",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "B-Roll: 509 BGS Loads JDAMs In B-2 Spirit For Maritime Test",
+   "title_en": null,
+   "uploader": null,
+   "date": "2025-08-28",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/976261/b-roll-509-bgs-loads-jdams-b-2-spirit-maritime-test",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS b-roll: GBU-31/GBU-38 JDAMs loaded into a B-2 Spirit at Whiteman AFB."
+  },
+  {
+   "catalog": "y2026",
+   "id": "anadolu-khanyounis-plume-2026-09-09",
+   "first": 214.37,
+   "screen": 1.0,
+   "segs": [
+    0
+   ],
+   "publisher": "Forbes Breaking News (video: Abed Rahim Khatib / Anadolu Agency via Getty Images)",
+   "outlet": "Forbes Breaking News",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-09-09",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=dVPeJx24slc",
+   "license": "news (Anadolu/Getty via Forbes)",
+   "scope": "gaza",
+   "provenance": "Forbes Breaking News repost, on-screen credit 'VIDEO: ABED RAHIM KHATIB/ANADOLU AGENCY VIA GETTY IMAGES', dated 9 Sep 2026: Israeli airstrikes in southern Gaza (Khan Younis area) destroy a building and send a massive plume into the sky. Forbes lower-third throughout."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-impact-smoke-2014",
+   "first": 215.33,
+   "screen": 1.0,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Moment of impact, column of smoke, as Israeli airstrikes continue",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2014-07-12",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=3MPSoglbmTw",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, 12 Jul 2014 (Operation Protective Edge, 2014 Gaza war), NOT the 2023+ war. Uploaded 2015. Moment of impact and smoke column over Gaza City."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-shati-strike-plume-2026-09-09",
+   "first": 216.28,
+   "screen": 1.0,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-09-09",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=2G0ulKRCqLI",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Gaza City, 9 Sep 2026: moment an Israeli missile hits the Shati refugee camp area, flames and smoke rising (AP shotlist). Same event as AP short VO7BB_OHvaA (not catalogued)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-explosion-near-camera-2009",
+   "first": 217.23,
+   "screen": 1.0,
    "segs": [
     1
    ],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
-   "title": "Palestinians search through Jabaliya residential block destroyed in Israeli bombardment",
+   "title": "Explosion near cameraman in Gaza Strip",
    "title_en": null,
    "uploader": "AP Archive",
-   "date": "2025-03-18",
-   "place": "Jabaliya, Gaza Strip",
-   "credits": [
-    [
-     "Producer",
-     "Wafaa Shurafa"
-    ]
-   ],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=TunR64-jZUk",
-   "license": "news (AP)",
-   "scope": "gaza",
-   "provenance": "AP, Jabaliya, 18 Mar 2025 (day Israel resumed war, ending ceasefire): people dig through rubble for victims, carry a body out (AP shotlist)."
-  },
-  {
-   "catalog": "ground",
-   "id": "nbc-missile-hits-building-2023-10",
-   "first": 219.13,
-   "screen": 4.2,
-   "segs": [
-    0
-   ],
-   "publisher": "NBC News",
-   "outlet": "NBC News",
-   "title": "Video captures explosion as Israeli missile hits Gaza City",
-   "title_en": null,
-   "uploader": "NBC News",
-   "date": "2023-10-11",
+   "date": "2009-01-01",
    "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=J7yXotNqLVk",
-   "license": "news (NBC)",
+   "url": "https://www.youtube.com/watch?v=4sRSITWO3I8",
+   "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "NBC News, Oct 2023 (upload 12 Oct 2023): residents filming earlier damage from a balcony in Gaza City catch a strike on a nearby tower; edit repeats the moment from several takes/angles."
+   "provenance": "AP, Gaza City, 1 Jan 2009 (Cast Lead 2008-09 war), NOT 2023+: explosion goes off near a burnt car, cameraman runs (AP shotlist). 4:3 pillarboxed."
   },
   {
-   "catalog": "ground",
-   "id": "ap-bank-strike-fireball-2023-10-08",
-   "first": 221.16,
-   "screen": 4.1,
+   "catalog": "y2026",
+   "id": "aje-zawayda-warehouse-strike-shrapnel-2026-08-23",
+   "first": 218.18,
+   "screen": 1.0,
    "segs": [
     0
+   ],
+   "publisher": "Al Jazeera English (UGC: Facebook / Telegram)",
+   "outlet": "Al Jazeera English",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-08-23",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=KJcRs_-Tx74",
+   "license": "news (AJE; UGC)",
+   "scope": "gaza",
+   "provenance": "Al Jazeera English short, Az-Zawayda, central Gaza, 23 Aug 2026 (AJ tag): heavy Israeli air strike on a warehouse; eyewitness phone footage (credited Facebook/Telegram) - blast across the road, camera knocked as shrapnel and debris rain down, then mushroom plume from other angles. Vertical."
+  },
+  {
+   "catalog": "y2026",
+   "id": "roya-afp-tent-strike-black-smoke-2026-03-25",
+   "first": 219.13,
+   "screen": 1.0,
+   "segs": [
+    0
+   ],
+   "publisher": "Roya News English (footage: AFP)",
+   "outlet": "Roya News",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-03-25",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=r1XSN4h0DIU",
+   "license": "news (AFP via Roya)",
+   "scope": "gaza",
+   "provenance": "Roya News English short (on-screen camera credit 'AFP'; tag 'Gaza 25/3/2026'): Israeli airstrike hits tents of displaced people in central Gaza. Vertical, Roya watermark mid-frame."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-gaza-city-blast-dusk-2026-07-28",
+   "first": 220.09,
+   "screen": 3.2,
+   "segs": [
+    0,
+    1
    ],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
-   "title": "Column of fire and smoke rises in Gaza City as Israeli airstrike hits bank building linked to Hamas",
+   "title": null,
    "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2023-10-08",
-   "place": "Gaza City, Gaza Strip",
-   "credits": [
-    [
-     "Camera",
-     "Mohammad Jahjouh"
-    ]
-   ],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=nEHs-mDQLSI",
-   "license": "news (AP)",
-   "scope": "gaza",
-   "provenance": "AP, Gaza City, 8 Oct 2023: fireball and smoke as Israeli strike hits bank building (AP shotlist). Same event as Reuters 'National Bank' clip, different angle (from a high roof)."
-  },
-  {
-   "catalog": "ground",
-   "id": "reuters-national-bank-strike-2023-10",
-   "first": 221.99,
-   "screen": 4.9,
-   "segs": [
-    0
-   ],
-   "publisher": "Reuters",
-   "outlet": "Reuters",
-   "title": "Gaza buildings destroyed in Israeli strikes",
-   "title_en": null,
-   "uploader": "Reuters",
-   "date": "2023-10-08",
+   "uploader": null,
+   "date": "2026-07-28",
    "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=bftGJOh4FvY",
-   "license": "news (Reuters)",
+   "url": "https://www.youtube.com/watch?v=y6kQaVWkddo",
+   "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "Reuters: Israeli air strike hits the National Bank building in Gaza City, 8 Oct 2023 (Reuters caption + on-screen date tag)."
+   "provenance": "AP Archive story (shot 28 Jul 2026): missiles hit an area of Gaza City, flames and smoke rise; Deir al-Balah night sky lit by airstrike (AP shotlist)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-castlead-nightvision-2009",
+   "first": 221.16,
+   "screen": 15.2,
+   "segs": [
+    2
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "Night Strike on Hamas Terrorists",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2009-01-14",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=H5glijDWVyU",
+   "license": "IDF release; fair use",
+   "scope": "israel",
+   "provenance": "Official IDF Spokesperson release from Operation Cast Lead, 'Night Strike on Hamas Terrorists': combined infantry/armour/air raid in northern Gaza (Hebrew card says Givati/armoured, Rafah north). Green night-vision through a scope, round vignette. Low SD."
+  },
+  {
+   "catalog": "weapons",
+   "id": "wsj-gaza-highrise-strike-oct2023",
+   "first": 223.06,
+   "screen": 0.9,
+   "segs": [
+    0
+   ],
+   "publisher": "WSJ News (footage: Reuters, filmed by Gaza resident)",
+   "outlet": "The Wall Street Journal",
+   "title": "Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News",
+   "title_en": null,
+   "uploader": "WSJ News",
+   "date": "2023-10-12",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=pzFOfUV7iNA",
+   "license": "news (WSJ/Reuters); fair use",
+   "scope": "gaza",
+   "provenance": "WSJ re-edit of Reuters footage: a Gaza resident films an Israeli strike on a high-rise in a dense neighbourhood from a balcony, Oct 12 2023. Overlaps the ground lane; kept here because the strike moment is on camera. 'GAZA OCT.12' super and WSJ bug burned in, Reuters credit at end."
   },
   {
    "catalog": "y2026",
    "id": "guardian-khanyounis-night-strike-2026-02-06",
    "first": 227.59,
-   "screen": 2.6,
+   "screen": 6.8,
    "segs": [
     0
    ],
@@ -1229,6 +1477,79 @@
   },
   {
    "catalog": "y2026",
+   "id": "idf-gaza-crater-strikecam-2026-08-01",
+   "first": 239.2,
+   "screen": 32.1,
+   "segs": [
+    0,
+    3
+   ],
+   "publisher": "Forbes Breaking News (footage: IDF via CNN)",
+   "outlet": "Forbes Breaking News",
+   "title": "WATCH: IDF Releases Footage Of Strike On Gaza That Left Crater",
+   "title_en": null,
+   "uploader": "Forbes Breaking News",
+   "date": "2026-08-01",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "IDF via CNN"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=JMFVyv-HYM0",
+   "license": "IDF release via CNN/Forbes",
+   "scope": "israel",
+   "provenance": "Forbes Breaking News repost of IDF-released strike footage (on-screen 'VIDEO: IDF VIA CNN', 'AUGUST 1, 2026'): grey aerial strike-cam of a strike in Gaza leaving a crater, amid Hamas disarmament talks. Forbes lower-third throughout."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-night-explosion-flares-2025-12",
+   "first": 240.76,
+   "screen": 1.6,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Huge explosion and flares on the Gaza skyline seen from southern Israel",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-12-27",
+   "place": "Southern Israel overlooking the Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=8jGPdgrxplo",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP from southern Israel overlooking Gaza Strip, 27 Dec 2025 (during ceasefire): huge explosion, then flares (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-nuseirat-night-strike-2026-07",
+   "first": 242.67,
+   "screen": 7.4,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Strike hits Gaza's Nuseirat after Israeli military issues warning",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-07-31",
+   "place": "Nuseirat, central Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=0Bf1tWaqvvs",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Nuseirat, central Gaza, 31 Jul 2026 (post-ceasefire strike after warning); 'sky lit up after airstrike, people running' (AP shotlist)."
+  },
+  {
+   "catalog": "y2026",
    "id": "idf-iran-air-defence-strike-2026-06-08",
    "first": 243.62,
    "screen": 1.7,
@@ -1250,10 +1571,55 @@
    "provenance": "Official IDF YouTube release 8 Jun 2026: 'FIRST FOOTAGE: IDF strikes targeting aerial defense systems in Iran'. Colour aerial, captions 'Dismantling of an aerial defense system of the Iranian terror regime' / 'Secondary explosions'."
   },
   {
+   "catalog": "ground",
+   "id": "ap-night-flashes-from-israel-2023-11-12",
+   "first": 245.52,
+   "screen": 3.5,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Explosions light up Gaza night sky",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-11-12",
+   "place": "View of Gaza from southern Israel",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=1RA9XdeKImU",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, view of Gaza from southern Israel at night, 12 Nov 2023 (AP shotlist). Distant explosions and drifting flares over dark rooftops."
+  },
+  {
+   "catalog": "ground",
+   "id": "nbc-missile-hits-building-2023-10",
+   "first": 246.47,
+   "screen": 1.4,
+   "segs": [
+    0
+   ],
+   "publisher": "NBC News",
+   "outlet": "NBC News",
+   "title": "Video captures explosion as Israeli missile hits Gaza City",
+   "title_en": null,
+   "uploader": "NBC News",
+   "date": "2023-10-11",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=J7yXotNqLVk",
+   "license": "news (NBC)",
+   "scope": "gaza",
+   "provenance": "NBC News, Oct 2023 (upload 12 Oct 2023): residents filming earlier damage from a balcony in Gaza City catch a strike on a nearby tower; edit repeats the moment from several takes/angles."
+  },
+  {
    "catalog": "y2026",
    "id": "idf-gaza-weapons-sites-strikecam-2026-09-09",
    "first": 247.43,
-   "screen": 1.8,
+   "screen": 4.8,
    "segs": [
     0
    ],
@@ -1277,33 +1643,86 @@
    "provenance": "Roya News English short (on-screen credit 'IDF / AFP', tag 'Gaza 9/9/2026'): IDF-released footage it says shows strikes on three Hamas weapons storage facilities in Gaza. Heavily compressed strike-cam, sepia and grey. Vertical; Roya watermark."
   },
   {
-   "catalog": "weapons",
-   "id": "ap-interceptions-telaviv-jun2025",
-   "first": 262.66,
-   "screen": 4.1,
+   "catalog": "ground",
+   "id": "ap-bank-strike-fireball-2023-10-08",
+   "first": 249.73,
+   "screen": 1.8,
    "segs": [
-    0,
-    1
+    0
    ],
-   "publisher": "Associated Press",
+   "publisher": "AP Archive",
    "outlet": "Associated Press",
-   "title": "Interceptions in Tel Aviv after Iran missile attack on Israel",
+   "title": "Column of fire and smoke rises in Gaza City as Israeli airstrike hits bank building linked to Hamas",
    "title_en": null,
-   "uploader": "Associated Press",
-   "date": "2025-06-13",
+   "uploader": "AP Archive",
+   "date": "2023-10-08",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [
+    [
+     "Camera",
+     "Mohammad Jahjouh"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=nEHs-mDQLSI",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City, 8 Oct 2023: fireball and smoke as Israeli strike hits bank building (AP shotlist). Same event as Reuters 'National Bank' clip, different angle (from a high roof)."
+  },
+  {
+   "catalog": "ground",
+   "id": "wsj-residents-film-tower-strike-2023-10",
+   "first": 253.14,
+   "screen": 0.6,
+   "segs": [
+    0
+   ],
+   "publisher": "WSJ News (footage via Reuters)",
+   "outlet": "The Wall Street Journal",
+   "title": "Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News",
+   "title_en": null,
+   "uploader": "WSJ News",
+   "date": "2023-10-12",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "Reuters"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in ground.json provenance",
+   "url": "https://www.youtube.com/watch?v=pzFOfUV7iNA",
+   "license": "news (WSJ / Reuters)",
+   "scope": "gaza",
+   "provenance": "WSJ, Gaza, Thursday 12 Oct 2023: residents film from a balcony as Israeli strike hits a nearby high-rise; Reuters credit on-screen at end."
+  },
+  {
+   "catalog": "ground",
+   "id": "reuters-national-bank-strike-2023-10",
+   "first": 264.57,
+   "screen": 2.1,
+   "segs": [
+    0
+   ],
+   "publisher": "Reuters",
+   "outlet": "Reuters",
+   "title": "Gaza buildings destroyed in Israeli strikes",
+   "title_en": null,
+   "uploader": "Reuters",
+   "date": "2023-10-08",
    "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=pYZ2sbB9d9o",
-   "license": "news (AP); fair use",
-   "scope": "israel",
-   "provenance": "AP: interceptions overhead in Tel Aviv following the Iranian missile attack of 13 June 2025."
+   "url": "https://www.youtube.com/watch?v=bftGJOh4FvY",
+   "license": "news (Reuters)",
+   "scope": "gaza",
+   "provenance": "Reuters: Israeli air strike hits the National Bank building in Gaza City, 8 Oct 2023 (Reuters caption + on-screen date tag)."
   },
   {
    "catalog": "weapons",
    "id": "hellfire-greece-flir",
    "first": 266.48,
-   "screen": 6.8,
+   "screen": 2.0,
    "segs": [
     1
    ],
@@ -1323,9 +1742,53 @@
   },
   {
    "catalog": "weapons",
+   "id": "ap-interceptions-telaviv-jun2025",
+   "first": 270.29,
+   "screen": 2.0,
+   "segs": [
+    1
+   ],
+   "publisher": "Associated Press",
+   "outlet": "Associated Press",
+   "title": "Interceptions in Tel Aviv after Iran missile attack on Israel",
+   "title_en": null,
+   "uploader": "Associated Press",
+   "date": "2025-06-13",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=pYZ2sbB9d9o",
+   "license": "news (AP); fair use",
+   "scope": "israel",
+   "provenance": "AP: interceptions overhead in Tel Aviv following the Iranian missile attack of 13 June 2025."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-gazacity-towers-bombed-2025-09",
+   "first": 272.19,
+   "screen": 2.1,
+   "segs": [
+    4
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Israel intensifies bombing of remaining residential buildings amid Gaza City offensive",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-09-07",
+   "place": "Gaza City",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=xb1Yj-mLXAU",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City, 7 Sep 2025: residents evacuate an al-Ruya residential tower after warning; Israel intensifies bombing of remaining high-rises (AP shotlist; AP resent to clarify building names)."
+  },
+  {
+   "catalog": "weapons",
    "id": "idf-weapons-storage-2011",
    "first": 273.44,
-   "screen": 4.0,
+   "screen": 3.1,
    "segs": [
     1
    ],
@@ -1347,7 +1810,7 @@
    "catalog": "weapons",
    "id": "ap-raw-idf-footage-2014",
    "first": 289.38,
-   "screen": 5.1,
+   "screen": 2.6,
    "segs": [
     0
    ],
@@ -1367,25 +1830,74 @@
   },
   {
    "catalog": "ground",
-   "id": "ap-night-explosion-flares-2025-12",
-   "first": 298.91,
-   "screen": 2.6,
+   "id": "ap-smoke-from-israel-2023-10-18",
+   "first": 295.1,
+   "screen": 2.1,
    "segs": [
     0
    ],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
-   "title": "Huge explosion and flares on the Gaza skyline seen from southern Israel",
+   "title": "Columns of black smoke rise from Gaza Strip as Israel continues airstrikes",
    "title_en": null,
    "uploader": "AP Archive",
-   "date": "2025-12-27",
-   "place": "Southern Israel overlooking the Gaza Strip",
-   "credits": [],
+   "date": "2023-10-18",
+   "place": "Southern Israel",
+   "credits": [
+    [
+     "Camera",
+     "Kostya Manenkov"
+    ]
+   ],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=8jGPdgrxplo",
+   "url": "https://www.youtube.com/watch?v=tG8VeZvzipM",
    "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "AP from southern Israel overlooking Gaza Strip, 27 Dec 2025 (during ceasefire): huge explosion, then flares (AP shotlist)."
+   "provenance": "AP from southern Israel looking at Gaza, 18 Oct 2023 (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-smoke-gazacity-from-israel-2025-09",
+   "first": 302.72,
+   "screen": 2.2,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "More explosions send plumes of smoke into sky over Gaza as Israel expands Gaza City operation",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-09-16",
+   "place": "Southern Israel looking into Gaza City",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=dzqtf2wuatA",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, southern Israel looking into Gaza City, 16 Sep 2025 (first day of the Gaza City ground offensive): multiple smoke plumes (AP shotlist)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "sky-idf-airstrike-videos-analysis",
+   "first": 304.62,
+   "screen": 15.8,
+   "segs": [
+    0
+   ],
+   "publisher": "Sky News",
+   "outlet": "Re-uploads and others",
+   "title": "Israel publishes hundreds of airstrike videos - but they only tell part of the story",
+   "title_en": null,
+   "uploader": "Sky News",
+   "date": "2024-10-09",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=cJ0-6Lu4yNw",
+   "license": "news (Sky News); fair use",
+   "scope": "israel",
+   "provenance": "Sky News Data & Forensics analysis 'Israel publishes hundreds of airstrike videos - but they only tell part of the story': counts IDF-published strike videos against UN/OHCHR casualty records; interviews, IDF video grids, chart, Gaza aftermath and family photos of victims."
   },
   {
    "catalog": "y2026",
@@ -1408,6 +1920,28 @@
    "license": "news (AP)",
    "scope": "gaza",
    "provenance": "AP Archive story, Gaza City, 14 Jul 2026: dead and wounded brought to a Gaza City hospital (al-Shifa) after an Israeli strike in Jabaliya (AP shotlist, 'EDIT CONTAINS GRAPHIC IMAGES'). 360p source."
+  },
+  {
+   "catalog": "ground",
+   "id": "roya-night-rescue-central-gaza-2026-01",
+   "first": 305.45,
+   "screen": 7.1,
+   "segs": [
+    3
+   ],
+   "publisher": "Roya News English (Jordan)",
+   "outlet": "Roya News",
+   "title": "Rescuers at site of overnight ‘Israeli’ strike in central Gaza",
+   "title_en": null,
+   "uploader": "Roya News English",
+   "date": "2026-01-09",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=M3L1t4PVSiY",
+   "license": "news (Roya)",
+   "scope": "gaza",
+   "provenance": "Roya News English, rescue at site of overnight Israeli strike in central Gaza; on-screen tag 'Gaza Strip 9/1/2026'. Post-ceasefire strike."
   },
   {
    "catalog": "y2026",
@@ -1440,9 +1974,8 @@
    "catalog": "y2026",
    "id": "ap-khanyounis-mourning-overnight-strikes-2026-08-02",
    "first": 306.4,
-   "screen": 8.1,
+   "screen": 6.2,
    "segs": [
-    0,
     2
    ],
    "publisher": "AP Archive",
@@ -1461,47 +1994,25 @@
   },
   {
    "catalog": "ground",
-   "id": "ap-nuseirat-night-strike-2026-07",
-   "first": 306.52,
-   "screen": 5.8,
+   "id": "ap-smoke-gazacity-2023-10-07",
+   "first": 310.33,
+   "screen": 1.0,
    "segs": [
     1
    ],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
-   "title": "Strike hits Gaza's Nuseirat after Israeli military issues warning",
+   "title": "Large column of black smoke billows over Gaza City after latest Israeli airstrike",
    "title_en": null,
    "uploader": "AP Archive",
-   "date": "2026-07-31",
-   "place": "Nuseirat, central Gaza Strip",
-   "credits": [],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=0Bf1tWaqvvs",
-   "license": "news (AP)",
-   "scope": "gaza",
-   "provenance": "AP, Nuseirat, central Gaza, 31 Jul 2026 (post-ceasefire strike after warning); 'sky lit up after airstrike, people running' (AP shotlist)."
-  },
-  {
-   "catalog": "ground",
-   "id": "ap-gazacity-towers-bombed-2025-09",
-   "first": 310.33,
-   "screen": 5.7,
-   "segs": [
-    4
-   ],
-   "publisher": "AP Archive",
-   "outlet": "Associated Press",
-   "title": "Israel intensifies bombing of remaining residential buildings amid Gaza City offensive",
-   "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2025-09-07",
+   "date": "2023-10-07",
    "place": "Gaza City",
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=xb1Yj-mLXAU",
+   "url": "https://www.youtube.com/watch?v=kSsvHTTEL3Y",
    "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "AP, Gaza City, 7 Sep 2025: residents evacuate an al-Ruya residential tower after warning; Israel intensifies bombing of remaining high-rises (AP shotlist; AP resent to clarify building names)."
+   "provenance": "AP, Gaza City, 7 Oct 2023 (first day of the war): Israeli strikes' smoke columns over Gaza City. Second half (31s+) shows rocket volleys fired FROM Gaza toward Israel, filmed by AP; not a militant production but outside this lane's subject."
   },
   {
    "catalog": "ground",
@@ -1524,10 +2035,37 @@
    "provenance": "AP drone, Beit Lahiya, northern Gaza, 17 Feb 2025 during ceasefire (AP shotlist)."
   },
   {
+   "catalog": "ground",
+   "id": "ap-smoke-jabaliya-2025-05",
+   "first": 323.72,
+   "screen": 2.2,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Large smoke clouds billow over Gaza Strip as several Israeli airstrikes hit area east of Jabaliya",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-05-15",
+   "place": "Near Jabaliya, Gaza Strip",
+   "credits": [
+    [
+     "Camera",
+     "Wafaa Shurafa"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=-N5p9LEIa50",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, near Jabaliya, northern Gaza, 15 May 2025; smoke columns after several strikes east of Jabaliya (AP shotlist)."
+  },
+  {
    "catalog": "y2026",
    "id": "ap-khanyounis-morgue-bodies-2026-07-29",
-   "first": 325.93,
-   "screen": 5.7,
+   "first": 325.69,
+   "screen": 11.9,
    "segs": [
     0,
     1
@@ -1547,139 +2085,98 @@
    "provenance": "AP Archive story, Khan Younis, 29 Jul 2026: medics and people carry bodies of killed men to the morgue after an Israeli strike; relatives mourn (AP shotlist, 'EDIT CONTAINS GRAPHIC CONTENT'). 360p source."
   },
   {
-   "catalog": "ground",
-   "id": "wsj-residents-film-tower-strike-2023-10",
+   "catalog": "y2026",
+   "id": "apt-khanyounis-house-strike-2026-09-09",
    "first": 331.34,
-   "screen": 0.5,
+   "screen": 2.2,
    "segs": [
     0
    ],
-   "publisher": "WSJ News (footage via Reuters)",
-   "outlet": "The Wall Street Journal",
-   "title": "Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News",
+   "publisher": "APT (news aggregator)",
+   "outlet": "Associated Press",
+   "title": null,
    "title_en": null,
-   "uploader": "WSJ News",
-   "date": "2023-10-12",
+   "uploader": null,
+   "date": "2026-09-09",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=yHnWN-p2G1Q",
+   "license": "news aggregator (APT); original camera uncredited",
+   "scope": "gaza",
+   "provenance": "APT vertical (tag 'KHAN YOUNIS, GAZA'): Israeli strike on a house in Khan Younis, 9 Sep 2026, after an evacuation warning; no immediate casualties. APT is an aggregator and does not credit the camera; the angle matches other wire coverage of the same day (cf. Anadolu clip anadolu-khanyounis-plume-2026-09-09) - use with that caveat. Shows the strike twice (replay)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "idf-tehran-strikes-aerial-2026-03-01",
+   "first": 335.15,
+   "screen": 2.2,
+   "segs": [
+    2
+   ],
+   "publisher": "APT (footage: Israel Defense Forces)",
+   "outlet": "Associated Press",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-03-01",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=CIwuAr06Xic",
+   "license": "IDF release via APT",
+   "scope": "israel",
+   "provenance": "APT repost (lower-third 'SOURCE: IDF') of IDF-released aerial footage of strikes on Tehran, 1 Mar 2026, 'Operation Roaring Lion'. Hebrew IDF caption burned in. APT is a news aggregator; IDF original is the source."
+  },
+  {
+   "catalog": "y2026",
+   "id": "mee-112-remains-flags-2026-08-03",
+   "first": 339.02,
+   "screen": 5.9,
+   "segs": [
+    0
+   ],
+   "publisher": "Middle East Eye",
+   "outlet": "Middle East Eye",
+   "title": "Gaza civil defence teams recover remains of 112 Palestinians from rubble",
+   "title_en": null,
+   "uploader": "Middle East Eye",
+   "date": "2026-08-03",
    "place": null,
    "credits": [
     [
      "Footage credited on screen to",
-     "Reuters"
+     "khamees.hasira (Instagram)"
     ]
    ],
-   "credits_source": "on-screen credit, as recorded in ground.json provenance",
-   "url": "https://www.youtube.com/watch?v=pzFOfUV7iNA",
-   "license": "news (WSJ / Reuters)",
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=4wLmM3v8XH4",
+   "license": "news (MEE; journalist UGC)",
    "scope": "gaza",
-   "provenance": "WSJ, Gaza, Thursday 12 Oct 2023: residents film from a balcony as Israeli strike hits a nearby high-rise; Reuters credit on-screen at end."
-  },
-  {
-   "catalog": "ground",
-   "id": "roya-night-rescue-central-gaza-2026-01",
-   "first": 333.54,
-   "screen": 1.9,
-   "segs": [
-    0
-   ],
-   "publisher": "Roya News English (Jordan)",
-   "outlet": "Roya News",
-   "title": "Rescuers at site of overnight ‘Israeli’ strike in central Gaza",
-   "title_en": null,
-   "uploader": "Roya News English",
-   "date": "2026-01-09",
-   "place": null,
-   "credits": [],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=M3L1t4PVSiY",
-   "license": "news (Roya)",
-   "scope": "gaza",
-   "provenance": "Roya News English, rescue at site of overnight Israeli strike in central Gaza; on-screen tag 'Gaza Strip 9/1/2026'. Post-ceasefire strike."
-  },
-  {
-   "catalog": "ground",
-   "id": "ap-drone-gazacity-ruins-2025-10-long",
-   "first": 335.15,
-   "screen": 15.8,
-   "segs": [],
-   "publisher": "AP Archive",
-   "outlet": "Associated Press",
-   "title": "Drone aerials show much of Gaza City reduced to rubble during two years of war",
-   "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2025-10-15",
-   "place": "Gaza City, Gaza Strip",
-   "credits": [],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=nZ15f_tSAHc",
-   "license": "news (AP)",
-   "scope": "gaza",
-   "provenance": "AP drone, Gaza City, 15 Oct 2025, ceasefire (AP shotlist, 'Drone aerials show much of Gaza City reduced to rubble'). Clean (no split screens), 360p."
+   "provenance": "Middle East Eye short (filmed 3 Aug 2026; on-screen credit Instagram khamees.hasira): remains of 112 Palestinians killed in Israeli strikes on 23 Nov 2023 in Sabra, Gaza City, recovered from rubble, laid out under Palestinian flags with photos ahead of mass funeral."
   },
   {
    "catalog": "y2026",
-   "id": "roya-civil-defence-bones-nuseirat-2026-09-05",
-   "first": 341.16,
-   "screen": 1.9,
+   "id": "ap-beirut-barrage-2026-04-08",
+   "first": 346.57,
+   "screen": 4.4,
    "segs": [
+    0,
     1
    ],
-   "publisher": "Roya News English",
-   "outlet": "Roya News",
-   "title": "Gazans search for bodies buried under rubble since 2023 strike",
+   "publisher": "Associated Press",
+   "outlet": "Associated Press",
+   "title": null,
    "title_en": null,
-   "uploader": "Roya News English",
-   "date": "2026-09-05",
+   "uploader": null,
+   "date": "2026-04-08",
    "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=eKwlBuPcmw0",
-   "license": "news (Roya)",
-   "scope": "gaza",
-   "provenance": "Roya News English short, Nuseirat, 5 Sep 2026: Gaza civil defence search the rubble of a building hit in Nov 2023 for remains, with an excavator; spokesperson Mahmoud Basal statement. Vertical, Roya watermark and date tag."
-  },
-  {
-   "catalog": "ground",
-   "id": "ap-night-flashes-from-israel-2023-11-12",
-   "first": 342.76,
-   "screen": 2.2,
-   "segs": [
-    0
-   ],
-   "publisher": "AP Archive",
-   "outlet": "Associated Press",
-   "title": "Explosions light up Gaza night sky",
-   "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2023-11-12",
-   "place": "View of Gaza from southern Israel",
-   "credits": [],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=1RA9XdeKImU",
+   "url": "https://www.youtube.com/watch?v=A_zAvt-sFxk",
    "license": "news (AP)",
-   "scope": "gaza",
-   "provenance": "AP, view of Gaza from southern Israel at night, 12 Nov 2023 (AP shotlist). Distant explosions and drifting flares over dark rooftops."
-  },
-  {
-   "catalog": "weapons",
-   "id": "ap-iron-dome-chase-may2021",
-   "first": 348.48,
-   "screen": 2.2,
-   "segs": [
-    0
-   ],
-   "publisher": "AP Archive",
-   "outlet": "Associated Press",
-   "title": "Iron Dome chase barrage of rockets fired from Gaza",
-   "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2021-05 (upload 2021-05-24)",
-   "place": null,
-   "credits": [],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=EKvPmpAbuZQ",
-   "license": "news (AP Archive); fair use",
    "scope": "israel",
-   "provenance": "AP Archive: Iron Dome interceptors chase a barrage of rockets fired from Gaza, May 2021, night."
+   "provenance": "AP video, Beirut, 8 Apr 2026: barrage of Israeli strikes across Beirut after Israel vowed to keep attacking Lebanon despite the Iran ceasefire (182 killed that day per Lebanese officials)."
   },
   {
    "catalog": "y2026",
@@ -1705,30 +2202,48 @@
   },
   {
    "catalog": "y2026",
-   "id": "mee-112-remains-flags-2026-08-03",
-   "first": 364.02,
-   "screen": 1.9,
+   "id": "ap-gaza-city-twin-plumes-2026-10-10",
+   "first": 358.01,
+   "screen": 2.2,
    "segs": [
     0
    ],
-   "publisher": "Middle East Eye",
-   "outlet": "Middle East Eye",
-   "title": "Gaza civil defence teams recover remains of 112 Palestinians from rubble",
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": null,
    "title_en": null,
-   "uploader": "Middle East Eye",
-   "date": "2026-08-03",
+   "uploader": null,
+   "date": "2026-10-10",
    "place": null,
-   "credits": [
-    [
-     "Footage credited on screen to",
-     "khamees.hasira (Instagram)"
-    ]
-   ],
-   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
-   "url": "https://www.youtube.com/watch?v=4wLmM3v8XH4",
-   "license": "news (MEE; journalist UGC)",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=oEAwkAZBL4U",
+   "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "Middle East Eye short (filmed 3 Aug 2026; on-screen credit Instagram khamees.hasira): remains of 112 Palestinians killed in Israeli strikes on 23 Nov 2023 in Sabra, Gaza City, recovered from rubble, laid out under Palestinian flags with photos ahead of mass funeral."
+   "provenance": "AP Archive story, 10 Oct 2026: smoke rising after Israeli airstrike east of Gaza City; night Deir al-Balah, people gathering then running after a missile hits (AP shotlist)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "idf-western-iran-launcher-strikes-2026-02-28",
+   "first": 359.91,
+   "screen": 4.4,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-02-28",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=lstswzboEcE",
+   "license": "IDF release",
+   "scope": "israel",
+   "provenance": "Official IDF YouTube 28 Feb 2026: 'Roaring Lion: IDF Strikes Terror Targets in Western Iran' - grey EO/IR strike footage on missile launchers; caption 'Strike on Missile Launchers in Western Iran'."
   },
   {
    "catalog": "ground",
@@ -1749,33 +2264,6 @@
    "license": "news (AP)",
    "scope": "gaza",
    "provenance": "AP, Muwasi, 23 Jun 2025: tents of displaced people destroyed in overnight strike; people sift through wreckage (AP shotlist)."
-  },
-  {
-   "catalog": "weapons",
-   "id": "ap-telaviv-intercepts-may2023",
-   "first": 371.33,
-   "screen": 2.2,
-   "segs": [
-    0
-   ],
-   "publisher": "AP Archive",
-   "outlet": "Associated Press",
-   "title": "Gaza rockets intercepted over Tel Aviv's night sky",
-   "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2023-05 (upload 2023-05-16)",
-   "place": "Tel Aviv, Israel",
-   "credits": [
-    [
-     "Camera",
-     "Paz Bar"
-    ]
-   ],
-   "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=E--NcpXQuZ0",
-   "license": "news (AP Archive); fair use",
-   "scope": "israel",
-   "provenance": "AP Archive: rockets from Gaza intercepted over Tel Aviv's night sky, May 2023 (Operation Shield and Arrow)."
   },
   {
    "catalog": "y2026",
@@ -1807,8 +2295,8 @@
   {
    "catalog": "y2026",
    "id": "ap-mass-funeral-hassayna-2026-08-04",
-   "first": 396.4,
-   "screen": 15.2,
+   "first": 396.16,
+   "screen": 15.5,
    "segs": [
     2
    ],
@@ -1829,8 +2317,8 @@
   {
    "catalog": "ground",
    "id": "ap-aqsa-body-bags-prayer-2023-12",
-   "first": 426.88,
-   "screen": 15.2,
+   "first": 426.64,
+   "screen": 15.5,
    "segs": [
     2
    ],
@@ -1852,6 +2340,50 @@
    "license": "news (AP)",
    "scope": "gaza",
    "provenance": "AP, outside al-Aqsa Martyrs Hospital, Deir al-Balah, 28 Dec 2023: crowds pray over shrouded bodies on the ground (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-salahaldin-crossing-return-2025-01",
+   "first": 442.11,
+   "screen": 11.4,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Cars crowd road as displaced Palestinians begin journey back to homes in north Gaza",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-01-27",
+   "place": "Salah al Din street",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=uBdeV5rG8UE",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Salah al-Din Street crossing, 27 Jan 2025: people and vehicles wait and pass north (AP shotlist)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "imod-200th-airlift-plane-2026-03-26",
+   "first": 442.11,
+   "screen": 11.4,
+   "segs": [
+    3
+   ],
+   "publisher": "Israel Ministry of Defense (official YouTube)",
+   "outlet": "Israel Ministry of Defense",
+   "title": null,
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-03-26",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=blyi1fP3KrY",
+   "license": "government release (Israel MoD)",
+   "scope": "arms-to-israel",
+   "provenance": "Israel Ministry of Defense official YouTube, 26 Mar 2026: the 200th aircraft of the MoD/IDF airlift lands during Operation 'Roaring Lion' (~8,000 tons of military equipment and munitions via 200+ flights and sailings). Night cargo 747 unloading at Ben Gurion; pallets partly blurred by censor; Hebrew captions."
   }
  ],
  "people": [
@@ -1901,21 +2433,6 @@
    "detail": "Khan Younis, January 2024, when the Israeli offensive made the cemetery too dangerous to reach (NBC News)"
   },
   {
-   "name": "More than 400 people killed across Gaza on 18 March 2025",
-   "kind": "group",
-   "roles": [
-    "group: killed"
-   ],
-   "age": null,
-   "sources": [
-    "https://www.youtube.com/watch?v=TunR64-jZUk"
-   ],
-   "clips": [
-    "ap-jabaliya-dig-for-victims-2025-03"
-   ],
-   "detail": "The day Israel resumed the war. In Jabaliya, Fahmi Mohammad said ten of his cousins were killed (Gaza Health Ministry and AP)"
-  },
-  {
    "name": "Seven people killed in Jabaliya refugee camp",
    "kind": "group",
    "roles": [
@@ -1959,21 +2476,6 @@
     "ap-khanyounis-morgue-bodies-2026-07-29"
    ],
    "detail": "Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP)"
-  },
-  {
-   "name": "The dead of a November 2023 strike on a building in Nuseirat",
-   "kind": "group",
-   "roles": [
-    "group: killed"
-   ],
-   "age": null,
-   "sources": [
-    "https://www.youtube.com/watch?v=eKwlBuPcmw0"
-   ],
-   "clips": [
-    "roya-civil-defence-bones-nuseirat-2026-09-05"
-   ],
-   "detail": "Their remains, still being recovered from the rubble by Gaza's civil defence in September 2026 (Roya News)"
   },
   {
    "name": "112 members of the Hassayna and Abu Sharia families",
@@ -2051,6 +2553,178 @@
     "ap-father-sieves-bones-2026-01-24"
    ],
    "detail": null
+  },
+  {
+   "name": "John Hagee",
+   "kind": "other",
+   "roles": [
+    "founder, Christians United for Israel"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=GrgGCwHNuWA",
+    "https://www.youtube.com/watch?v=Sqi7VgaJgZo"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Lindsey Graham",
+   "kind": "other",
+   "roles": [
+    "US Senator (R-SC)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=XUdUO02Lc-g"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Mike Johnson",
+   "kind": "other",
+   "roles": [
+    "Speaker of the US House"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=w2VGO4Dh2mU"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Ted Cruz",
+   "kind": "other",
+   "roles": [
+    "US Senator (R-TX)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=smemFVe0l5E"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Tim Walberg",
+   "kind": "other",
+   "roles": [
+    "US Rep. (R-MI)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=y4PQ47OEU0Y"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Nikki Haley",
+   "kind": "other",
+   "roles": [
+    "former UN ambassador; then presidential candidate"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=NLe4j9Koxjw"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Andy Ogles",
+   "kind": "other",
+   "roles": [
+    "US Rep. (R-TN)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=K7fG1VqbIyI"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Jack Hibbs",
+   "kind": "other",
+   "roles": [
+    "pastor, Calvary Chapel Chino Hills (CA)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=ltRAHOapmkc"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Shane Vaughn ('Professor Toto')",
+   "kind": "other",
+   "roles": [
+    "pastor, First Harvest Ministries; online broadcaster"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=3xDxFvr4Evc"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Michele Bachmann",
+   "kind": "other",
+   "roles": [
+    "former US Rep. (R-MN); dean, Regent University government school"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=ffuJp7d_25E"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Mike Evans",
+   "kind": "other",
+   "roles": [
+    "founder, Friends of Zion / Jerusalem Prayer Team"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=IaIIwXAhPbc"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Mike Huckabee",
+   "kind": "other",
+   "roles": [
+    "Baptist minister; then nominee, now US ambassador to Israel",
+    "US ambassador to Israel"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=EG-8UseD0kI",
+    "https://www.youtube.com/watch?v=XS7itdfgNnU"
+   ],
+   "clips": [],
+   "detail": null
+  },
+  {
+   "name": "Rev. Munther Isaac",
+   "kind": "other",
+   "roles": [
+    "Lutheran pastor, Evangelical Lutheran Christmas Church, Bethlehem"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=aEGiANa0-oI"
+   ],
+   "clips": [],
+   "detail": null
   }
  ],
  "other_sources": {
@@ -2066,7 +2740,43 @@
    "media/derived/credits.mp4"
   ]
  },
- "unknown_sources": [],
+ "unknown_sources": [
+  "media/derived/preachers/bachmann_blessed__bless_israel.mp4",
+  "media/derived/preachers/cruz_tucker_bless__taught_bless.mp4",
+  "media/derived/preachers/cruz_tucker_bless__where_is_that.mp4",
+  "media/derived/preachers/evans_bless_thee__bless_thee.mp4",
+  "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
+  "media/derived/preachers/hagee_cufi2024_weapons__weapons_of_war.mp4",
+  "media/derived/preachers/hagee_march_victory__victory.mp4",
+  "media/derived/preachers/haley_finish_them__shell.mp4",
+  "media/derived/preachers/haley_hannity_finish__finish_them.mp4",
+  "media/derived/preachers/hibbs_weapons_insulting_god__insulting_god.mp4",
+  "media/derived/preachers/hibbs_weapons_insulting_god__poking_god.mp4",
+  "media/derived/preachers/huckabee_bless_side__blessing_side.mp4",
+  "media/derived/preachers/huckabee_tucker_take_it_all__take_it_all.mp4",
+  "media/derived/preachers/isaac_bible_weaponized__weaponized.mp4",
+  "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
+  "media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4",
+  "media/derived/preachers/vaughn_wonderful_days__glory.mp4",
+  "media/derived/preachers/vaughn_wonderful_days__wonderful_days.mp4",
+  "media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4",
+  "media/derived/text/44d9ee05972ae3d7.png",
+  "media/derived/text/4cfc61f879b052b7.png",
+  "media/derived/text/501a11f26dc29dc0.png",
+  "media/derived/text/5206ed41c8b9c68b.png",
+  "media/derived/text/58294408dd28d066.png",
+  "media/derived/text/5a5c394948ec8bce.png",
+  "media/derived/text/671eff7001734ce5.png",
+  "media/derived/text/9650f24ef6067e3b.png",
+  "media/derived/text/9e34b40e1ffbee21.png",
+  "media/derived/text/afd8cf81d062fce9.png",
+  "media/derived/text/b6d0a0919e2faae6.png",
+  "media/derived/text/bbb096da6f7565a9.png",
+  "media/derived/text/bfba81ceeeb85b69.png",
+  "media/derived/text/c2ade9fdb44c2454.png",
+  "media/derived/text/c7b128269242f8ec.png",
+  "media/derived/text/cae36e2061e6ed26.png"
+ ],
  "dead": {
   "moh": {
    "killed": 74498,
