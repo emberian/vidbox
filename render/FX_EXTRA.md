@@ -28,7 +28,7 @@ ground footage and the preacher's head, open the gallery at
 
 ember: "do *not* use the voronoi effect on war footage, but it looks AMAZING on the guys face."
 `comp.save` raises if `voronoi` is in the fx of a footage layer (any layer with a catalog
-link) or in `post`. Use it on the preacher's heads. The gallery has seven face variants.
+link, or whose `src` is a catalogued clip) or in `post`. Use it on the preacher's heads. The gallery has seven face variants.
 
 ## Grid clock (the default)
 
