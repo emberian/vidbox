@@ -246,10 +246,11 @@ class Layer(Params):
             return
         frame = self.reader.get(self.src_time(t))
         dw, dh = max(2, int(round(self.base[0] * sc))), max(2, int(round(self.base[1] * sc)))
-        interp = cv2.INTER_AREA if dw < frame.shape[1] else cv2.INTER_LINEAR
-        img = cv2.resize(frame, (dw, dh), interpolation=interp).astype(np.float32) * (1 / 255)
+        if (dw, dh) != (frame.shape[1], frame.shape[0]):   # usually equal: decoded at display size
+            frame = cv2.resize(frame, (dw, dh), interpolation=cv2.INTER_AREA if dw < frame.shape[1] else cv2.INTER_LINEAR)
+        img = frame.astype(np.float32) * (1 / 255)
         m = mask(s.get("mask"), dw, dh)
-        alpha = (m.copy() if m is not None else np.ones((dh, dw), np.float32)) * op
+        alpha = (m if m is not None else np.ones((dh, dw), np.float32)) * op
         if s.get("fx"):
             img, alpha = self.run_fx(s["fx"], img, alpha, t, self.state, "fx")
         H, W = canvas.shape[:2]
