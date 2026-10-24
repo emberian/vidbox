@@ -555,6 +555,45 @@ class Comp:
             return round(v, 4)
         return keys(*[[t, level(t)] for t in pts], ease="smooth")
 
+    def footage_seg(self, L):
+        """The catalog Seg a layer shows, or None for non-footage (heads, Meine). Found by its meta
+        catalog link, else by its src file (a hand-built c.add layer has no meta but is still
+        footage); the segment is meta.seg, else the one holding the layer's first source time."""
+        m = L.get("meta", {})
+        if m.get("catalog") in self.cat:
+            clip = next((c for c in self.cat[m["catalog"]] if c["id"] == m.get("clip")), None)
+            if clip is not None:
+                return Seg(m["catalog"], clip, m.get("seg", 0))
+        if not hasattr(self, "_by_file"):
+            self._by_file = {c["file"]: (cat, c) for cat, clips in self.cat.items() for c in clips}
+        hit = self._by_file.get(L.get("src"))
+        if hit is None:
+            return None
+        cat, clip = hit
+        try:
+            s0 = compile_time(L.get("time"), L["t0"], L["t1"], self.ctx)(L["t0"])
+        except (KeyError, ValueError):
+            s0 = None
+        idx = next((i for i, sg in enumerate(clip["segments"])
+                    if s0 is not None and sg["in"] - 1e-3 <= s0 <= sg["out"] + 1e-3), 0)
+        return Seg(cat, clip, idx)
+
+    def rule_violations(self, layers, post=()):
+        """([(layer id, op)] heads-only fx on footage, [(layer id, scope)] footage out of scope)."""
+        # ember: "do *not* use the voronoi effect on war footage, but it looks AMAZING on the
+        # guys face." Post fx land on everything, footage included.
+        HEADS_ONLY = {"voronoi"}
+        heads_only = [("post", f["op"]) for f in post if f.get("op") in HEADS_ONLY]
+        out_of_scope = []
+        for L in layers:
+            sg = self.footage_seg(L)
+            if sg is None and not L.get("meta", {}).get("catalog"):   # a catalog link of any name = footage
+                continue
+            heads_only += [(L["id"], f["op"]) for f in L.get("fx", []) if f.get("op") in HEADS_ONLY]
+            if sg is not None and sg.scope is not None and sg.scope not in IN_SCOPE:
+                out_of_scope.append((L["id"], sg.scope))
+        return heads_only, out_of_scope
+
     def save(self, path=None):
         out = Path(path) if path else self.pdir / "comps/out" / f"{self.name}.timeline.json"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -570,22 +609,9 @@ class Comp:
         for L in tl["layers"]:
             if L.get("id") == "meine" and duck and "opacity" not in L:
                 L["opacity"] = duck
-        # ember: "do *not* use the voronoi effect on war footage, but it looks AMAZING on the
-        # guys face." Footage layers carry a catalog link in meta; heads don't.
-        HEADS_ONLY = {"voronoi"}
-        bad = [(L["id"], f["op"]) for L in tl["layers"] + [{"id": "post", "fx": self.post, "meta": {"catalog": "all"}}]
-               if L.get("meta", {}).get("catalog") for f in L.get("fx", []) if f.get("op") in HEADS_ONLY]
-        if bad:
-            raise ValueError(f"heads-only effects on war footage (ember's rule): {bad}")
-        out_of_scope = []
-        for L in tl["layers"]:
-            m = L.get("meta", {})
-            if m.get("catalog") in self.cat:
-                clip = next((c for c in self.cat[m["catalog"]] if c["id"] == m.get("clip")), None)
-                if clip is not None:
-                    sc = Seg(m["catalog"], clip, m.get("seg", 0)).scope
-                    if sc is not None and sc not in IN_SCOPE:
-                        out_of_scope.append((L["id"], sc))
+        heads_only, out_of_scope = self.rule_violations(tl["layers"], self.post)
+        if heads_only:
+            raise ValueError(f"heads-only effects on war footage (ember's rule): {heads_only}")
         if out_of_scope:
             raise ValueError(f"footage outside Israel/Gaza (ember's rule): {out_of_scope[:10]}"
                              f"{' ...' if len(out_of_scope) > 10 else ''}")
