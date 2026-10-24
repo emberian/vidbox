@@ -300,7 +300,7 @@
    "segments": [
     {
      "in": 9.0,
-     "out": 22.0,
+     "out": 31.0,
      "desc": "high overhead: a crowd of evacuees with white flags crosses a debris-strewn street; CNN inset zooms on a woman and small child in front, she lurches and collapses, the crowd keeps moving",
      "tags": [
       "gaza",
@@ -317,7 +317,7 @@
      "motion": "static high angle with digital zoom inset",
      "palette": "dust grey / dark figures",
      "overlay_ok": false,
-     "notes": "CNN split layout (wide left, zoom right) and 'WARNING GRAPHIC CONTENT' tag top-left; crop to the inset for a clean frame (low-res, MEE source). Repeat/slow-mo of the fall follows at ~18-22. CNN narration over it, not natural sound. Victim: Hala Khreis (CNN URL above).",
+     "notes": "CNN split layout (wide left, zoom right) and 'WARNING GRAPHIC CONTENT' tag top-left; crop to the inset for a clean frame (low-res, MEE source). Repeat/slow-mo of the fall follows at ~18-22. CNN narration over it, not natural sound. Victim: Hala Khreis (CNN URL above). Segment extended to 31.0 to include her fall (29.56, CNN's zoomed inset).",
      "hits": [
       {
        "t": 13.02,
@@ -326,10 +326,11 @@
        "note": "single-frame camera jolt (startle) as she is hit (strip sheets/strips/cnn_12.3_s0.12.png)"
       },
       {
-       "t": 13.26,
+       "t": 29.56,
        "kind": "fall",
        "strength": 5,
-       "note": "she folds to the ground over the next frames"
+       "note": "lurch at 29.56, down by 30.2 (13.26 was a camera jolt; checked frame by frame)",
+       "t_catalog_wrong": 13.26
       }
      ],
      "motion_tempo": null

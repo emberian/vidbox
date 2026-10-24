@@ -887,9 +887,10 @@ def israeli_voices(c):
                 z=5, fade=(0.4, 0.4), catalog=IV,
                 card=["Yoav Gallant", "Defence Minister of Israel  ·  after a situation assessment, IDF Southern Command"
                       "  ·  9 Oct 2023"])
-    go = keys([B(124) - 0.01, 0.0], [B(124), 1.0], ease="hold")
+    # (slaughters: from 127 Ramzi Abu Sahloul's killing is under him, so he is still and plain from the beat
+    #  before it fades up: the pulse stops there, and his RGB split is gone)
+    go = keys([B(124) - 0.01, 0.0], [B(124), 1.0], [B(127) - c.period, 0.0], ease="hold")
     g["scale"] = mul(g["scale"], add_(1.0, mul(go, rng(-0.04, 0.06, beat(1, "decay", tau=0.16)))))
-    g["fx"] = [{"op": "chroma", "px": mul(go, rng(0, 6, beat(1, "decay", tau=0.14))), "angle": 20}]
     g["meta"]["hits_song"].append(round(B(123), 3))      # "siege" (its word onset is within 15 ms of the bar)
     # 132-135, peak 1, between the chorus's 132 and 136: Gallant to the troops, 10 Oct 2023. HAMAS on 134.
     speaker(c, "gallant_troops_kipa__eliminate", "וחמאס", B(134), pos=[290, 420], scale=0.44, gain=2.8, duck=0.5,
@@ -922,6 +923,104 @@ def add_(*s):
     return {"add": list(s)}
 
 
+# ---- the slaughters under the Israeli speakers (ember: "as the israelis are speaking we should have videos
+#      of the actual slaughters"). Verified shootings (footage/shootings.json), each untreated and shown once:
+#      normal blend, no fx, its own sound where that sound is the scene's (never a reporter or a package's
+#      bed: those are cut out or the clip is silent), the visual frame of the shot or the fall on the grid at
+#      the footage's own speed. They are reality windows like real()'s, so the beds, strikes, chorus and
+#      Hyde step away; the speaker stays, still and plain, beside or above the picture. ----
+def shooting(c, ref, t0, t1, at, hit, also=(), sound=None, gain=1.0, music=0.5, people=None, crop=None,
+             id=None, lead=0.0, xout=0.0, **props):
+    """Segment `ref`'s hit `hit` (an index, or a source time; the shot or the fall as SEEN) lands on song time
+    `at` (a beat); the
+    picture runs at 1x over [t0, t1] (soft edges as real()). `also`: other hit indices that fall inside and
+    are on the grid too. `sound`: (src a, src b), the stretch of the clip's audio that is the scene itself
+    (a separate, invisible layer, so a reporter's words either side are not heard); None = the picture's
+    own audio at `gain`, or silence with gain 0."""
+    seg = c.seg(ref)
+    h = hit if isinstance(hit, float) else seg.hits[hit]["t"]     # a float: a source time read off the frames
+    src_in = h - (at - t0)
+    L = real(c, ref, t0, t1, src_in, gain=0.0 if sound else gain, music=music, people=people, crop=crop, id=id,
+             lead=lead, xout=xout, **props)
+    L["meta"]["hits_song"] = sorted([round(at, 3)] + [round(at + seg.hits[i]["t"] - h, 3) for i in also])
+    if sound:
+        a, b = sound
+        c.add({"id": f"{L['id']}:sound", "tags": ["real", "sound"], "src": seg.file,
+               "t0": round(t0 + (a - src_in), 4), "t1": round(t0 + (b - src_in), 4), "time": {"in": a, "speed": 1.0},
+               "fit": "picture", "clip": "picture", "opacity": 0.0, "audio": {"gain": gain, "fade": 0.12},
+               "meta": {"sound_of": f"{seg.catalog}:{seg.clip['id']}#{seg.idx}"}})
+    return L
+
+
+def still_line(c, b, pos=(720, 92), scale=0.27):
+    """The rotation's real phrase on code bar b, taken out of the chorus: over the dead it is still and plain,
+    small, in the letterbox above the picture (where Eiland and Herzog sit), not a popping copy."""
+    at = round(bars(c, b), 3)
+    for L in c.layers:
+        if "real-line" in L.get("tags", []) and at in L["meta"].get("hits_song", []):
+            L.update(pos=list(pos), scale=scale, fx=[], opacity=1.0, tags=["head", "speaker", "real-line"])
+            c.layers.remove(L)      # drawn above the footage placed after it (s2 draws in list order)
+            c.layers.append(L)
+            return L
+    raise KeyError(f"no rotation line on code bar {b}")
+
+
+ITV_RAMZI = "https://www.itv.com/news/2024-01-23/moment-civilian-brandishing-white-flag-in-gaza-safe-zone-is-shot-dead"
+CNN_KHREIS = "https://www.cnn.com/2024/01/26/middleeast/hala-khreis-white-flag-shooting-gaza-cmd-intl"
+MEE_KHALIFA = "https://www.middleeasteye.net/news/soaked-in-blood-how-gaza-aid-sites-became-death-traps-palestinians"
+AJE_GHOUL = "https://www.youtube.com/watch?v=4hq39W3F5RI"
+
+
+def slaughters(c):
+    B = lambda b, k=0: bars(c, b, k)  # noqa: E731
+    p = c.period
+    at_beat = lambda b, k: c.beat(c.beat_pos(B(b)) + k)  # noqa: E731
+    # 127-129 (viewer 128-130), Gallant: "Everything is closed. We are fighting human animals, and we are acting
+    # accordingly." Khan Younis, 22 Jan 2024, in the "safe zone" (ITV, Mohammed Abu Safia): four men walk with
+    # their hands up and a white cloth; shots (160.57, on 127's third beat); Ramzi Abu Sahloul drops to the kerb
+    # on 129's downbeat, as Gallant says "acting accordingly". Its own sound (wind, the shots, the shouting) from
+    # 159.85 to 164.95: the ITV reporter speaks either side of it. The ITV bug is cropped. Over the night blasts
+    # the pools put on 127-129 (and the crater take's middle, which returns after it); WATER on 126 stays.
+    shooting(c, "shootings:itv-ramzi-abu-sahloul-white-flag-2024-01-22#0", B(127), B(130), B(129), 0, also=(1,),
+             sound=(159.85, 164.95), gain=1.6, music=0.5, crop=[0.0, 0.07, 1.0, 1.0], lead=0.5 * p, xout=2 * p,
+             id="real:ramzi-abu-sahloul",
+             people=[{"name": "Ramzi Abu Sahloul", "age": 51, "role": "killed under a white flag, Khan Younis",
+                      "source": ITV_RAMZI}])
+    # 155-157 (viewer 156-158), the rotation's Netanyahu: '"Remember what Amalek did to you," we were commanded.'
+    # Al-Rimal, Gaza City, 12 Nov 2023 (filmed from above; MEE, via CNN): Hala Khreis, at the front of the
+    # evacuees with a white flag, walks holding her grandson's hand while he speaks; she lurches and folds to the
+    # ground on 157's third beat, as Dichter begins. CNN's zoomed inset only (its split screen, warning tag, logo
+    # and the MEE credit cropped), src 24.8-30.5, inside the inset's one stretch (it settles at 12.0 and gives way
+    # to CNN's wide shot at 30.85). The hit is read off the frames: the lurch at 29.56, folded by 30.2. (The
+    # catalogue's 13.26 is not the fall: at 13 the camera only jolts and she walks on.) Silent: CNN narrates it.
+    shooting(c, "shootings:cnn-hala-khreis-white-flag-2023-11-12#0", B(155), B(158), at_beat(157, 2), 29.56,
+             gain=0.0, music=0.4, crop=[0.465, 0.105, 0.946, 0.738], size=[1000, 740], pos=[720, 545], fit=None,
+             lead=0.5 * p, id="real:hala-khreis",
+             people=[{"name": "Hala Khreis", "age": 57, "role": "killed under a white flag, Gaza City",
+                      "source": CNN_KHREIS}])
+    still_line(c, 156)
+    # 158-159 (viewer 159-160), the rotation's Dichter: "...if you like, the Gaza Nakba." It cuts on NAKBA to
+    # Rafah, 1 Jun 2025, by the GHF aid site: Ameen Sameer Khalifa films himself pinned in the sand under fire;
+    # the crack and the phone's jolt on 159. His own sound (Earshot's narrator is cut away before it); he was
+    # shot dead waiting for food two days later. Then Eiland's grid of the wounded, as before.
+    shooting(c, "shootings:earshot-mee-ameen-khalifa-ghf-2025-06-03#0", B(158), B(160), B(159), 0,
+             sound=(41.37, 45.17), gain=1.0, music=0.4, crop=[0.03, 0.07, 0.89, 0.93], id="real:ameen-khalifa",
+             people=[{"name": "Ameen Sameer Khalifa", "role": "filmed himself under fire at a GHF aid site, Rafah, "
+                      "1 Jun 2025; killed waiting for food, 3 Jun 2025", "source": MEE_KHALIFA}])
+    still_line(c, 158)
+    # 169-170 (viewer 170-171), the rotation's Gallant: "We are fighting human animals." Jenin, 29 Nov 2023, a
+    # street's CCTV (Wafa, via AJE): a boy runs, buckles and falls on 170's downbeat, on his key word, a second
+    # figure goes down on the eighth after, and a boy drags him by the arm. Then the morgue (puncture 171).
+    # From the cut into the CCTV (8.12; AJE's photo of Adam before it is not used); AJE's logo cropped (the crop also
+    # takes the date's first characters; the rest of the CCTV time stamp and the camera label stay). Silent: AJE narrates over it.
+    shooting(c, "shootings:aje-jenin-cctv-adam-al-ghoul-2023-11-29#0", at_beat(169, 1.75), B(171), B(170), 0,
+             also=(1,), gain=0.0, music=0.4, crop=[0.145, 0.0, 1.0, 1.0], size=[1161, 764], pos=[720, 540],
+             fit=None, lead=0.06, id="real:adam-al-ghoul",
+             people=[{"name": "Adam Samer al-Ghoul", "age": 8, "role": "killed, Jenin", "source": AJE_GHOUL},
+                     {"name": "Basil Suleiman Abu al-Wafa", "age": 15, "role": "killed, Jenin", "source": AJE_GHOUL}])
+    still_line(c, 170)
+
+
 def build(c, outro_kind="walkers"):
     first = len(c.layers)
     c._s2_real = []
@@ -937,6 +1036,7 @@ def build(c, outro_kind="walkers"):
     ch.emit()
     pos, sc = plateau(c, pools)
     outro(c, pos, sc, outro_kind)
+    slaughters(c)        # before the speakers, so they are drawn over it (s2 draws in list order)
     israeli_voices(c)
     for L, b, at, tunnel in c._s2_swap:      # NOT_HERE: the pools are done; swap the footage in place
         ref, src_t, crop = NOT_HERE[L["meta"]["clip"]]

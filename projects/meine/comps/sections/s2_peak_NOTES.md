@@ -7,6 +7,43 @@ Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/s
 
 `build(c, outro_kind="walkers")`; the other options are `"shroud"` and `"head"` (see Outro).
 
+## Revision 6 (2026-10-24): the slaughters under the Israeli speakers
+
+ember: "as the israelis are speaking we should have videos of the actual slaughters" and "we don't use much
+if any of the substantial amount of footage of IDF just outright shooting civilians and media on the street."
+`slaughters(c)` (called after `israeli_voices`) puts verified shootings (`footage/shootings.json`) where the
+speakers were over generic night blasts and peak-2 strikes. Each one is a reality window (`shooting()`, built on
+`real()`): untreated, shown once, the visual frame of the shot or fall on the grid at 1x, everything but the
+speaker, his subtitles and Meine's video stepping away. Viewer bars (code bar + 1):
+
+| viewer bars | song s | speaker | footage | hit | music |
+|---|---|---|---|---|---|
+| 128-130 | 242.11-247.83 | Gallant, "Everything is closed. We are fighting human animals, and we are acting accordingly" | ITV, Khan Younis "safe zone", 22 Jan 2024: men walking with a white cloth; Ramzi Abu Sahloul is shot. Src 159.4-165.4 (`#0`), full picture, ITV bug cropped. Its own sound only from 159.85 to 164.95 (wind, shots, shouts): the ITV reporter speaks either side, so the sound is a separate invisible layer (`:sound`) | fall 163.45 on 129's downbeat (viewer 130, "acting accordingly"); the shots at 160.57 fall on 127 beat 3 | 0.5 (3 bars) |
+| 156-158 | 295.45-301.16 | Netanyahu (rotation), "Remember what Amalek did to you, we were commanded"; Dichter begins over her fall | CNN/MEE, al-Rimal, Gaza City, 12 Nov 2023: Hala Khreis, with her grandson's hand and a white flag at the front of the evacuees, walks; she lurches and folds to the ground. CNN's zoomed inset only (src 24.8-30.5; the inset runs 12.0-30.85), as a 1000x740 panel. Silent: CNN narrates it | the lurch at src 29.56 (read off the frames, folded by 30.2) on 157 beat 3. **The catalogue's 13.26 is wrong**: at 13 the camera only jolts and she walks on | 0.4 |
+| 159-160 | 301.16-304.97 | Dichter (rotation), "...the Gaza Nakba" | Earshot/MEE, GHF aid site, Rafah, 1 Jun 2025 (MEE bug cropped, x1 0.89): Ameen Sameer Khalifa's selfie, pinned in the sand under fire (src 41.37-45.17). His own sound from 41.37 (Earshot's narrator is before it). He was killed waiting for food two days later | the crack and jolt 43.27 on 159's downbeat | 0.4, then the grid's 0.3 |
+| 170-171 | 322.95-325.93 | Gallant (rotation), "We are fighting human animals" | Wafa CCTV via AJE, Jenin, 29 Nov 2023: Adam al-Ghoul (8) runs, buckles and falls; a second figure goes down; a boy drags him. From the cut into the CCTV (src 8.19); AJE logo cropped (x0 0.145, which also takes the first characters of the CCTV date: "-2023 Wed 14 19:32" stays), the camera label kept. Silent: AJE narrates it | fall 9.32 on 170's downbeat (his key word), second fall 9.56 on the eighth after | 0.4, merging into puncture 1 (the morgue) |
+
+- **The speakers stay where they were in time.** The three rotation lines (`still_line`) leave the chorus over
+  their windows: same phrase, same timing, subtitles unchanged, but still and plain in the letterbox above
+  the picture at 0.27 (where Eiland and Herzog sit), no pop, no posterize or RGB split. Gallant's siege speech
+  keeps its place and size; its beat pulse now stops a beat before Ramzi's window and its RGB split is gone
+  (`speakers-plain-over-the-dead`).
+- **Merged windows.** Hala, Khalifa and Eiland's grid are one 9-bar stretch (156-164). Adam and the morgue
+  tray are one 4.5-bar stretch (170-174). The pool picks under them are unchanged (they still run first, so no
+  later pick moved); the post-pass hides them.
+- **Draw order.** s2 draws in list order, so `slaughters()` runs before `israeli_voices()` and `still_line()` moves
+  each rotation line to the end: the speakers sit over the footage, not under it.
+- **Names** (`meta.people`, from the catalogue): Ramzi Abu Sahloul, 51; Hala Khreis, 57; Ameen Sameer Khalifa;
+  Adam Samer al-Ghoul, 8, and Basil Suleiman Abu al-Wafa, 15 (AJE's names for the two children killed in that
+  CCTV; which figure is which is AJE's identification).
+- **Left alone, deliberately:**
+  - The breath (code 120-123) under Gallant's first sentence: the frozen road, the shroud cloth and the MQ-9
+    countdown into the strike on 124 are one designed moment, and the crater take's first hit on 126 is WATER.
+  - Gallant to the troops (133-136): the crater take (a designed four-hit piece).
+  - Dichter's own line over the walkers (144-147) and Weiss over the flour multitude (147-149).
+  - Eiland's grid and Herzog's remains.
+  - s1's Netanyahu (109-111): AMALEK already lands on the untreated Dar al-Muttaqin strike.
+
 ## Revision 4: ember's v2 notes (2026-10-24); this section overrides everything below where they differ
 
 **Bar numbers.** In this section, "viewer bar" is ember's count, starting at 1. The code and the
