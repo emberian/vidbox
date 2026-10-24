@@ -306,6 +306,8 @@ def render_video(tl, frames, k, out, ctx, warm=0):
 
 
 def atempo_chain(f):
+    if not 0 < f < math.inf:   # 0 or inf would loop forever below, appending filters
+        raise ValueError(f"atempo factor {f}")
     tempo = []
     while f > 2.0:
         tempo.append("atempo=2.0"); f /= 2
@@ -348,10 +350,12 @@ def _take(y, i0, n):
     return out
 
 
-def _atempo(x, f):
-    """Pitch-preserving tempo change of stereo samples by factor f (ffmpeg atempo)."""
+def _atempo(x, f, n_out=None):
+    """Pitch-preserving tempo change of stereo samples by factor f (ffmpeg atempo). n_out: samples
+    needed; ffmpeg stops a second past them (its output is len(x) / f, unbounded as f -> 0)."""
+    lim = ["-t", f"{n_out / SR + 1.0:.6f}"] if n_out is not None else []
     p = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-",
-                        "-af", ",".join(atempo_chain(f)) or "anull", "-f", "f32le", "-"],
+                        "-af", ",".join(atempo_chain(f)) or "anull", *lim, "-f", "f32le", "-"],
                        input=np.ascontiguousarray(x, np.float32).tobytes(), capture_output=True, check=True)
     return np.frombuffer(p.stdout, np.float32).reshape(-1, 2)
 
@@ -360,6 +364,7 @@ def _fit(x, n):
     return x[:n] if len(x) >= n else np.concatenate([x, np.zeros((n - len(x), 2), np.float32)])
 
 
+AT_CTX = 2.0  # s of song time: most atempo context a slow constant-speed run gets (see layer_audio)
 AXF = 0.005   # s: crossfade half-width where two pieces join continuously (e.g. map knots)
 
 
@@ -404,11 +409,14 @@ def layer_audio(L, r0, r1, ctx):
                 return _take(y, int(round(s1 * SR)) + off, m)[::-1]
             if mode == "tempo":
                 lo, hi = min(s0, s1), max(s0, s1)
-                c_lo, c_hi = min(0.05, max(0.0, lo)), 0.05   # source context so atempo has no edge transient
+                # source context so atempo has no edge transient: 0.05 s, but never more than
+                # AT_CTX of song time once stretched (at |v| < 0.025 it would be lead / |v| s of output)
+                c = min(0.05, AT_CTX * abs(v))
+                c_lo, c_hi = min(c, max(0.0, lo)), c
                 x = _take(y, int(round((lo - c_lo) * SR)) + off, int(round((hi - lo + c_lo + c_hi) * SR)))
                 lead = c_hi if v < 0 else c_lo
-                x = _atempo(x[::-1] if v < 0 else x, abs(v))
                 k = int(round(lead / abs(v) * SR))
+                x = _atempo(x[::-1] if v < 0 else x, abs(v), k + m)
                 return _fit(x[k:], m)
         pos = r.src_vec(ta + np.arange(m) / SR) * SR + off   # tape
         j = np.clip(np.floor(pos).astype(np.int64), 0, max(len(y) - 2, 0))
