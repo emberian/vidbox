@@ -7,7 +7,8 @@ text        a page flashes on every downbeat (3 frames), white names screened ov
             where the song is intense (> 0.7) also on beats 2-4 (2 frames)
 hard        the same schedule, but the page replaces the frame (white on black: a real flash;
             photosensitivity applies)
-continuous  the page stays over the picture at low opacity, turning on each downbeat
+continuous  the page stays over the picture at low opacity, turning on the beat; all 759 pages,
+            in order, spread over the free beats so the list ends with the song
 
 Never during untreated footage of the dead, and not over the credits.
 """
@@ -21,6 +22,7 @@ from signals import Music  # noqa: E402
 
 SONG_END = 473.5
 FPS = 25
+PAGES = 759   # pages in the list (tools/names_pages.py)
 
 
 def untreated_windows(tl):
@@ -44,9 +46,7 @@ def schedule(tl, mode, music):
             break
         nxt = music.downbeats[i + 1] if i + 1 < len(music.downbeats) else SONG_END
         if mode == "continuous":
-            if free(d, nxt):
-                spans.append((d, min(nxt, SONG_END)))
-            continue
+            continue   # laid out below, on the beat grid
         hits = [(d, 3)]
         if music.intensity(d, 1.0) > 0.7:
             k = beats.index(min(beats, key=lambda b: abs(b - d)))
@@ -54,16 +54,29 @@ def schedule(tl, mode, music):
         for t, n in hits:
             if free(t, t + n / FPS):
                 spans.append((t, t + n / FPS))
-    return spans
+    if mode == "continuous":
+        # every page of the list, in order: the free beats (outside untreated windows, before the
+        # song ends) shared out evenly, so each page holds one or two beats and the list ends with the song
+        slots = [(a, b) for a, b in zip(beats, beats[1:] + [SONG_END]) if a < SONG_END and free(a, b)]
+        n = len(slots)
+        for k in range(PAGES):
+            i0, i1 = k * n // PAGES, max(k * n // PAGES + 1, (k + 1) * n // PAGES)
+            for a, b in slots[i0:i1]:   # one span per contiguous run: never bridging a window
+                if spans and spans[-1][0] == k and abs(spans[-1][2] - a) < 1e-6:
+                    spans[-1] = (k, spans[-1][1], min(b, SONG_END))
+                else:
+                    spans.append((k, a, min(b, SONG_END)))
+        return spans
+    return [(k, a, b) for k, (a, b) in enumerate(spans)]
 
 
 def add_names(tl, mode, first_page=0):
     music = Music(ROOT / "projects/meine/analysis/beats.json")
     spans = schedule(tl, mode, music)
     style = {"text": ("screen", 0.85), "hard": ("normal", 1.0), "continuous": ("screen", 0.3)}[mode]
-    for k, (a, b) in enumerate(spans):
+    for j, (k, a, b) in enumerate(spans):
         tl["layers"].append({
-            "id": f"names:{first_page + k:04d}", "tags": ["names", "text"],
+            "id": f"names:{first_page + k:04d}.{j}", "tags": ["names", "text"],
             "src": f"media/derived/names/page_{first_page + k:04d}.png",
             "t0": round(a, 4), "t1": round(b, 4), "time": {"hold": 0.0}, "fit": "native",
             "pos": [720, 540], "blend": style[0], "opacity": style[1]})
@@ -75,7 +88,7 @@ if __name__ == "__main__":   # write the three test variants of a timeline, and 
     for mode in ("text", "hard", "continuous"):
         tl = json.loads(src.read_text())
         spans = add_names(tl, mode)
-        used = [k for k, (a, b) in enumerate(spans) if a < hi and b > lo]
+        used = [k for k, a, b in spans if a < hi and b > lo]
         out = src.with_name(src.name.replace(".timeline.json", f".names_{mode}.timeline.json"))
         out.write_text(json.dumps(tl) + "\n")
-        print(f"{mode}: {len(spans)} pages over the song (of 759); pages {used[0]}-{used[-1]} fall in {lo}-{hi}s")
+        print(f"{mode}: {len({k for k, _, _ in spans})} pages over the song (of 759); pages {used[0]}-{used[-1]} fall in {lo}-{hi}s")
