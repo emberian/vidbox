@@ -99,11 +99,11 @@
       0.45
      ],
      [
-      244.919,
+      244.819,
       0.45
      ],
      [
-      245.519,
+      245.419,
       1.0
      ],
      [
@@ -115,11 +115,11 @@
       0.45
      ],
      [
-      248.727,
+      248.627,
       0.45
      ],
      [
-      249.327,
+      249.227,
       1.0
      ],
      [
@@ -179,22 +179,6 @@
       1.0
      ],
      [
-      255.323,
-      1.0
-     ],
-     [
-      255.443,
-      0.45
-     ],
-     [
-      256.343,
-      0.45
-     ],
-     [
-      256.943,
-      1.0
-     ],
-     [
       257.227,
       1.0
      ],
@@ -207,23 +191,15 @@
       0.45
      ],
      [
+      258.247,
+      0.45
+     ],
+     [
       258.747,
-      1.0
+      0.9083
      ],
      [
-      259.131,
-      1.0
-     ],
-     [
-      259.251,
-      0.45
-     ],
-     [
-      260.151,
-      0.45
-     ],
-     [
-      260.751,
+      258.847,
       1.0
      ],
      [
@@ -287,7 +263,15 @@
       0.4
      ],
      [
+      267.779,
+      0.45
+     ],
+     [
       268.279,
+      0.9083
+     ],
+     [
+      268.379,
       1.0
      ],
      [
@@ -879,44 +863,24 @@
       0.2
      ],
      [
-      352.079,
+      352.279,
       0.2
      ],
      [
       352.475,
-      0.6
+      0.4613
      ],
      [
       352.595,
-      0.35
+      0.25
      ],
      [
-      352.679,
-      0.35
+      352.879,
+      0.25
      ],
      [
-      353.395,
-      0.35
-     ],
-     [
-      353.995,
-      0.6
-     ],
-     [
-      354.379,
-      0.6
-     ],
-     [
-      354.499,
-      0.35
-     ],
-     [
-      355.299,
-      0.35
-     ],
-     [
-      355.899,
-      0.6
+      355.803,
+      0.25
      ],
      [
       356.283,
@@ -1812,27 +1776,27 @@
    ]
   },
   {
-   "id": "mosul-into-dip",
+   "id": "khanyounis-into-dip",
    "tags": [
-    "weapons",
-    "IR",
-    "white-hot",
-    "explosion"
+    "y2026",
+    "gaza",
+    "airstrike",
+    "night"
    ],
-   "src": "media/footage/weapons/raw/dvids_512858.mp4",
+   "src": "media/footage/y2026/raw/youtube_wjr8ISPvdh0.mp4",
    "t0": 227.586,
-   "t1": 230.386,
+   "t1": 230.146,
    "time": {
-    "in": 8.5441,
+    "in": 9.44,
     "speed": 1.0
    },
    "blend": "screen",
    "fit": "picture",
    "crop": [
-    0,
-    0,
-    1,
-    0.9
+    0.02,
+    0.12,
+    0.8,
+    0.95
    ],
    "fade": {
     "in": 0.4,
@@ -1863,8 +1827,8 @@
    ],
    "opacity": 0.75,
    "meta": {
-    "catalog": "weapons",
-    "clip": "oir-mosul-vbied-facility-2017",
+    "catalog": "y2026",
+    "clip": "guardian-khanyounis-night-strike-2026-02-06",
     "seg": 0,
     "hits_song": [
      228.786
@@ -3221,46 +3185,42 @@
    ]
   },
   {
-   "id": "iran-take",
+   "id": "idf-crater-take",
    "tags": [
-    "weapons",
+    "y2026",
     "IR",
     "strike",
-    "crosshair"
+    "idf"
    ],
-   "src": "media/footage/weapons/raw/dvids_1014392.mp4",
+   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
    "t0": 239.199,
-   "t1": 260.651,
+   "t1": 268.279,
    "time": {
     "map": {
      "song": [
       239.199,
       240.199,
-      244.019,
-      247.827,
       251.635,
-      255.443,
-      259.251,
-      260.651
+      257.347,
+      266.879,
+      268.279
      ],
      "src": [
-      43.9125,
-      44.9125,
-      49.0834,
-      53.9215,
-      57.7921,
-      61.3289,
-      65.9335,
-      67.3335
+      0.5700000000000001,
+      1.57,
+      13.05,
+      18.89,
+      28.56,
+      29.959999999999997
      ]
     }
    },
    "fit": "picture",
    "crop": [
-    0,
-    0.1,
-    1,
-    0.92
+    0.05,
+    0.09,
+    0.87,
+    0.7
    ],
    "blend": "normal",
    "opacity": 0.8,
@@ -3296,25 +3256,144 @@
     }
    ],
    "meta": {
-    "catalog": "weapons",
-    "clip": "centcom-iran-strikes-jul2026",
-    "seg": 3,
+    "catalog": "y2026",
+    "clip": "idf-gaza-crater-strikecam-2026-08-01",
+    "seg": 0,
     "hits_song": [
      240.199,
-     244.019,
-     247.827,
      251.635,
-     255.443,
-     259.251
-    ],
-    "speeds": [
-     1.0,
-     1.092,
-     1.271,
-     1.016,
-     0.929,
-     1.209,
-     1.0
+     257.347,
+     266.879
+    ]
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "idf-iran-air-defence-strike-2026-06-08#0@244.02",
+   "tags": [
+    "y2026",
+    "idf",
+    "iran",
+    "explosion"
+   ],
+   "src": "media/footage/y2026/raw/youtube_b01T149myxQ.mp4",
+   "t0": 243.619,
+   "t1": 245.299,
+   "time": {
+    "in": 0.32,
+    "speed": 1.0
+   },
+   "fit": "picture",
+   "crop": [
+    0.14,
+    0.1,
+    0.87,
+    0.72
+   ],
+   "fade": {
+    "in": 0.15,
+    "out": 0.5
+   },
+   "opacity": 0.8,
+   "blend": "normal",
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 7
+    },
+    {
+     "op": "sat",
+     "factor": 1.25
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       1,
+       14
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     },
+     "angle": 4736
+    }
+   ],
+   "meta": {
+    "catalog": "y2026",
+    "clip": "idf-iran-air-defence-strike-2026-06-08",
+    "seg": 0,
+    "hits_song": [
+     244.019
+    ]
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "idf-gaza-weapons-sites-strikecam-2026-09-09#0@247.83",
+   "tags": [
+    "y2026",
+    "idf",
+    "strike-cam",
+    "gaza"
+   ],
+   "src": "media/footage/y2026/raw/youtube_ILs0UJiqXgw.mp4",
+   "t0": 247.427,
+   "t1": 249.227,
+   "time": {
+    "in": 0.44,
+    "speed": 1.0
+   },
+   "fit": "picture",
+   "crop": [
+    0.14,
+    0.1,
+    0.87,
+    0.72
+   ],
+   "fade": {
+    "in": 0.15,
+    "out": 0.5
+   },
+   "opacity": 0.8,
+   "blend": "normal",
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 7
+    },
+    {
+     "op": "sat",
+     "factor": 1.25
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       1,
+       14
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     },
+     "angle": 4810
+    }
+   ],
+   "meta": {
+    "catalog": "y2026",
+    "clip": "idf-gaza-weapons-sites-strikecam-2026-09-09",
+    "seg": 0,
+    "hits_song": [
+     247.827
     ]
    },
    "clip": "picture"
@@ -3992,18 +4071,18 @@
    "clip": "picture"
   },
   {
-   "id": "centcom-iran-strikes-jul2026#3@266.88",
+   "id": "hellfire-greece-flir#1@266.88",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "crosshair"
+    "impact",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_1014392.mp4",
+   "src": "media/footage/weapons/raw/dvids_883839.mp4",
    "t0": 266.479,
    "t1": 268.479,
    "time": {
-    "in": 44.5125,
+    "in": 12.8142,
     "speed": 1.0
    },
    "fit": "picture",
@@ -4021,16 +4100,13 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.35,
-     "white": 0.95
+     "op": "lumakey",
+     "low": 0.3,
+     "high": 0.7
     },
     {
      "op": "posterize",
-     "levels": 7
+     "levels": 6
     },
     {
      "op": "chroma",
@@ -4052,8 +4128,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "centcom-iran-strikes-jul2026",
-    "seg": 3,
+    "clip": "hellfire-greece-flir",
+    "seg": 1,
     "hits_song": [
      266.879
     ]
@@ -4126,18 +4202,18 @@
    "clip": "picture"
   },
   {
-   "id": "hellfire-greece-flir#1@273.07",
+   "id": "idf-launcher-strike-2009#0@273.07",
    "tags": [
     "weapons",
-    "IR",
-    "impact",
-    "explosion"
+    "targeting",
+    "crosshair",
+    "IR"
    ],
-   "src": "media/footage/weapons/raw/dvids_883839.mp4",
+   "src": "media/footage/weapons/raw/youtube_AIRiNPaoLTI.mp4",
    "t0": 272.967,
-   "t1": 273.487,
+   "t1": 273.026,
    "time": {
-    "in": 13.1142,
+    "in": 10.141,
     "speed": 1.0
    },
    "fit": "picture",
@@ -4183,27 +4259,25 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "hellfire-greece-flir",
-    "seg": 1,
-    "hits_song": [
-     273.067
-    ]
+    "clip": "idf-launcher-strike-2009",
+    "seg": 0,
+    "hits_song": []
    },
    "clip": "picture"
   },
   {
-   "id": "idf-beit-hanoun-launcher-2014#1@273.54",
+   "id": "idf-weapons-storage-2011#1@273.54",
    "tags": [
     "weapons",
     "IR",
     "black-hot",
-    "strike"
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/youtube_4ayyXgRVWHk.mp4",
+   "src": "media/footage/weapons/raw/youtube_Eza-Gx3VLSk.mp4",
    "t0": 273.443,
    "t1": 273.963,
    "time": {
-    "in": 15.461,
+    "in": 19.581,
     "speed": 1.0
    },
    "fit": "picture",
@@ -4252,7 +4326,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-beit-hanoun-launcher-2014",
+    "clip": "idf-weapons-storage-2011",
     "seg": 1,
     "hits_song": [
      273.543
@@ -4261,18 +4335,18 @@
    "clip": "picture"
   },
   {
-   "id": "idf-launcher-strike-2009#0@274.02",
+   "id": "times-radio-idf-bombardment-oct2023#3@274.02",
    "tags": [
     "weapons",
-    "targeting",
-    "crosshair",
-    "IR"
+    "IR",
+    "white-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_AIRiNPaoLTI.mp4",
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
    "t0": 273.919,
-   "t1": 273.978,
+   "t1": 274.439,
    "time": {
-    "in": 10.141,
+    "in": 59.421,
     "speed": 1.0
    },
    "fit": "picture",
@@ -4318,9 +4392,11 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-launcher-strike-2009",
-    "seg": 0,
-    "hits_song": []
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 3,
+    "hits_song": [
+     274.019
+    ]
    },
    "clip": "picture"
   },
@@ -129239,18 +129315,18 @@
    ]
   },
   {
-   "id": "idf-weapons-storage-2011#1@289.73",
+   "id": "ap-raw-idf-footage-2014#0@289.73",
    "tags": [
     "weapons",
     "IR",
     "black-hot",
-    "explosion"
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_Eza-Gx3VLSk.mp4",
+   "src": "media/footage/weapons/raw/youtube_FEBuDBmtFDk.mp4",
    "t0": 289.377,
    "t1": 291.527,
    "time": {
-    "in": 19.331,
+    "in": 6.9583,
     "speed": 1.0
    },
    "fit": "picture",
@@ -129317,8 +129393,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-weapons-storage-2011",
-    "seg": 1,
+    "clip": "ap-raw-idf-footage-2014",
+    "seg": 0,
     "hits_song": [
      289.727
     ]
@@ -129569,18 +129645,18 @@
    "clip": "picture"
   },
   {
-   "id": "mq9-strike-yemen-2024#0@297.36",
+   "id": "idf-strikes-jan2014-blackhot#1@297.36",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "explosion"
+    "black-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_943588.mp4",
+   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
    "t0": 297.005,
    "t1": 299.155,
    "time": {
-    "in": 1.9843,
+    "in": 9.331,
     "speed": 1.0
    },
    "fit": "picture",
@@ -129598,13 +129674,16 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.3,
-     "high": 0.7
+     "op": "invert"
+    },
+    {
+     "op": "levels",
+     "black": 0.35,
+     "white": 0.95
     },
     {
      "op": "posterize",
-     "levels": 6
+     "levels": 7
     },
     {
      "op": "chroma",
@@ -129644,8 +129723,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "mq9-strike-yemen-2024",
-    "seg": 0,
+    "clip": "idf-strikes-jan2014-blackhot",
+    "seg": 1,
     "hits_song": [
      297.355
     ]
@@ -129899,18 +129978,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-bayji-vehicle-2017#0@304.97",
+   "id": "mq9-live-hellfire-holloman#7@304.97",
    "tags": [
     "weapons",
-    "IR",
+    "screen",
     "strike",
-    "white-hot"
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_504731.mp4",
+   "src": "media/footage/weapons/raw/dvids_815413.mp4",
    "t0": 304.621,
    "t1": 306.771,
    "time": {
-    "in": 10.9623,
+    "in": 72.2736,
     "speed": 1.0
    },
    "fit": "picture",
@@ -129918,7 +129997,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.15,
@@ -129974,8 +130053,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-bayji-vehicle-2017",
-    "seg": 0,
+    "clip": "mq9-live-hellfire-holloman",
+    "seg": 7,
     "hits_song": [
      304.971
     ]
@@ -130229,18 +130308,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-habbaniyah-convoy-2016#1@312.59",
+   "id": "hellfire-greece-flir#1@312.59",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "convoy"
+    "impact",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_472864.mp4",
+   "src": "media/footage/weapons/raw/dvids_883839.mp4",
    "t0": 312.237,
    "t1": 314.387,
    "time": {
-    "in": 17.6356,
+    "in": 12.8642,
     "speed": 1.0
    },
    "fit": "picture",
@@ -130248,7 +130327,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.15,
@@ -130304,7 +130383,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-habbaniyah-convoy-2016",
+    "clip": "hellfire-greece-flir",
     "seg": 1,
     "hits_song": [
      312.587
@@ -130393,18 +130472,18 @@
    "clip": "picture"
   },
   {
-   "id": "tomahawk-night-philippine-sea-2014#1@316.39",
+   "id": "ap-interceptions-telaviv-jun2025#1@316.39",
    "tags": [
     "weapons",
-    "tomahawk",
-    "launch",
-    "night"
+    "night",
+    "impact",
+    "glow"
    ],
-   "src": "media/footage/weapons/raw/dvids_362338.mp4",
+   "src": "media/footage/weapons/raw/youtube_pYZ2sbB9d9o.mp4",
    "t0": 316.045,
    "t1": 318.195,
    "time": {
-    "in": 4.6894,
+    "in": 19.27,
     "speed": 1.0
    },
    "fit": "picture",
@@ -130464,7 +130543,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "tomahawk-night-philippine-sea-2014",
+    "clip": "ap-interceptions-telaviv-jun2025",
     "seg": 1,
     "hits_song": [
      316.395
@@ -291849,22 +291928,22 @@
    "tags": [
     "weapons",
     "IR",
-    "white-hot",
-    "explosion"
+    "crosshair",
+    "impact"
    ],
-   "src": "media/footage/weapons/raw/dvids_512858.mp4",
-   "t0": 317.999,
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "t0": 318.0225,
    "t1": 320.203,
    "time": {
     "seq": [
      {
-      "dur": 0.3,
-      "in": 9.4441,
+      "dur": 0.2765,
+      "in": 8.6,
       "speed": 1.0
      },
      {
       "dur": 1.904,
-      "hold": 9.7441
+      "hold": 8.8765
      }
     ]
    },
@@ -291891,8 +291970,8 @@
    },
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-mosul-vbied-facility-2017",
-    "seg": 0,
+    "clip": "hellfire-symphony-tads",
+    "seg": 2,
     "hits_song": [
      318.299
     ],
@@ -292332,18 +292411,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-ramadi-bridge-2015#1@322.12",
+   "id": "idf-launcher-strike-2009#0@322.12",
    "tags": [
     "weapons",
-    "IR",
-    "black-hot",
-    "strike"
+    "targeting",
+    "crosshair",
+    "IR"
    ],
-   "src": "media/footage/weapons/raw/dvids_438531.mp4",
+   "src": "media/footage/weapons/raw/youtube_AIRiNPaoLTI.mp4",
    "t0": 321.819,
-   "t1": 324.019,
+   "t1": 322.078,
    "time": {
-    "in": 11.9466,
+    "in": 9.941,
     "speed": 1.0
    },
    "fit": "picture",
@@ -292351,7 +292430,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.15,
@@ -292361,16 +292440,13 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.35,
-     "white": 0.95
+     "op": "lumakey",
+     "low": 0.3,
+     "high": 0.7
     },
     {
      "op": "posterize",
-     "levels": 7
+     "levels": 6
     },
     {
      "op": "chroma",
@@ -292410,48 +292486,46 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-ramadi-bridge-2015",
-    "seg": 1,
-    "hits_song": [
-     322.119
-    ]
+    "clip": "idf-launcher-strike-2009",
+    "seg": 0,
+    "hits_song": []
    },
    "clip": "picture"
   },
   {
-   "id": "oir-strike-feb2015#1@323.06~stutter",
+   "id": "idf-weapons-storage-2011#1@323.06~stutter",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "crosshair"
+    "black-hot",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_391684.mp4",
+   "src": "media/footage/weapons/raw/youtube_Eza-Gx3VLSk.mp4",
    "t0": 323.059,
    "t1": 323.847,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 9.0767,
+      "in": 19.681,
       "speed": 1.0
      },
      {
       "dur": 0.144,
-      "hold": 9.1767
+      "hold": 19.781
      },
      {
       "dur": 0.1,
-      "in": 9.0767,
+      "in": 19.681,
       "speed": 1.0
      },
      {
       "dur": 0.144,
-      "hold": 9.1767
+      "hold": 19.781
      },
      {
       "dur": 0.3,
-      "in": 9.0767,
+      "in": 19.681,
       "speed": 1.0
      }
     ]
@@ -292461,7 +292535,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -292500,7 +292574,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-strike-feb2015",
+    "clip": "idf-weapons-storage-2011",
     "seg": 1,
     "hits_song": [
      323.059,
@@ -292596,18 +292670,18 @@
    "clip": "picture"
   },
   {
-   "id": "ap-interceptions-telaviv-jun2025#1@325.93",
+   "id": "ap-iron-dome-chase-may2021#0@325.93",
    "tags": [
     "weapons",
     "night",
-    "impact",
-    "glow"
+    "iron-dome",
+    "interceptor"
    ],
-   "src": "media/footage/weapons/raw/youtube_pYZ2sbB9d9o.mp4",
+   "src": "media/footage/weapons/raw/youtube_EKvPmpAbuZQ.mp4",
    "t0": 325.627,
-   "t1": 327.807,
+   "t1": 327.827,
    "time": {
-    "in": 19.32,
+    "in": 31.9,
     "speed": 1.0
    },
    "fit": "picture",
@@ -292667,8 +292741,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "ap-interceptions-telaviv-jun2025",
-    "seg": 1,
+    "clip": "ap-iron-dome-chase-may2021",
+    "seg": 0,
     "hits_song": [
      325.927
     ]
@@ -292676,39 +292750,39 @@
    "clip": "picture"
   },
   {
-   "id": "oir-susah-fuel-truck-2018#1@326.88~stutter",
+   "id": "times-radio-idf-bombardment-oct2023#3@326.88~stutter",
    "tags": [
     "weapons",
     "IR",
-    "black-hot",
+    "white-hot",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_645265.mp4",
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
    "t0": 326.879,
    "t1": 327.655,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 10.5532,
+      "in": 59.521,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 10.6532
+      "hold": 59.621
      },
      {
       "dur": 0.1,
-      "in": 10.5532,
+      "in": 59.521,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 10.6532
+      "hold": 59.621
      },
      {
       "dur": 0.3,
-      "in": 10.5532,
+      "in": 59.521,
       "speed": 1.0
      }
     ]
@@ -292718,7 +292792,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -292757,8 +292831,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-susah-fuel-truck-2018",
-    "seg": 1,
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 3,
     "hits_song": [
      326.879,
      327.117,
@@ -292853,18 +292927,18 @@
    "clip": "picture"
   },
   {
-   "id": "times-radio-idf-bombardment-oct2023#3@329.74",
+   "id": "ap-raw-idf-footage-2014#0@329.74",
    "tags": [
     "weapons",
     "IR",
-    "white-hot",
+    "black-hot",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "src": "media/footage/weapons/raw/youtube_FEBuDBmtFDk.mp4",
    "t0": 329.435,
    "t1": 331.635,
    "time": {
-    "in": 59.221,
+    "in": 7.0083,
     "speed": 1.0
    },
    "fit": "picture",
@@ -292882,13 +292956,16 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.3,
-     "high": 0.7
+     "op": "invert"
+    },
+    {
+     "op": "levels",
+     "black": 0.35,
+     "white": 0.95
     },
     {
      "op": "posterize",
-     "levels": 6
+     "levels": 7
     },
     {
      "op": "chroma",
@@ -292928,8 +293005,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
-    "seg": 3,
+    "clip": "ap-raw-idf-footage-2014",
+    "seg": 0,
     "hits_song": [
      329.735
     ]
@@ -292937,39 +293014,39 @@
    "clip": "picture"
   },
   {
-   "id": "ap-raw-idf-footage-2014#0@330.69~stutter",
+   "id": "idf-strikes-jan2014-blackhot#1@330.69~stutter",
    "tags": [
     "weapons",
     "IR",
     "black-hot",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_FEBuDBmtFDk.mp4",
+   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
    "t0": 330.687,
    "t1": 331.463,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 7.3083,
+      "in": 9.681,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 7.4083
+      "hold": 9.781
      },
      {
       "dur": 0.1,
-      "in": 7.3083,
+      "in": 9.681,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 7.4083
+      "hold": 9.781
      },
      {
       "dur": 0.3,
-      "in": 7.3083,
+      "in": 9.681,
       "speed": 1.0
      }
     ]
@@ -293018,8 +293095,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "ap-raw-idf-footage-2014",
-    "seg": 0,
+    "clip": "idf-strikes-jan2014-blackhot",
+    "seg": 1,
     "hits_song": [
      330.687,
      330.925,
@@ -293114,18 +293191,18 @@
    "clip": "picture"
   },
   {
-   "id": "ap-iron-dome-chase-may2021#0@333.54",
+   "id": "ap-telaviv-intercepts-may2023#0@333.54",
    "tags": [
     "weapons",
     "night",
-    "iron-dome",
-    "interceptor"
+    "interceptor",
+    "iron-dome"
    ],
-   "src": "media/footage/weapons/raw/youtube_EKvPmpAbuZQ.mp4",
+   "src": "media/footage/weapons/raw/youtube_E--NcpXQuZ0.mp4",
    "t0": 333.243,
    "t1": 335.443,
    "time": {
-    "in": 31.9,
+    "in": 23.58,
     "speed": 1.0
    },
    "fit": "picture",
@@ -293185,7 +293262,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "ap-iron-dome-chase-may2021",
+    "clip": "ap-telaviv-intercepts-may2023",
     "seg": 0,
     "hits_song": [
      333.543
@@ -293194,39 +293271,39 @@
    "clip": "picture"
   },
   {
-   "id": "apache-gun-tape-iraq-2008#4@334.50~stutter",
+   "id": "mq9-live-hellfire-holloman#7@334.50~stutter",
    "tags": [
     "weapons",
-    "IR",
-    "impact",
+    "screen",
+    "strike",
     "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_36864.mp4",
+   "src": "media/footage/weapons/raw/dvids_815413.mp4",
    "t0": 334.495,
    "t1": 335.271,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 92.56,
+      "in": 72.6236,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 92.66
+      "hold": 72.7236
      },
      {
       "dur": 0.1,
-      "in": 92.56,
+      "in": 72.6236,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 92.66
+      "hold": 72.7236
      },
      {
       "dur": 0.3,
-      "in": 92.56,
+      "in": 72.6236,
       "speed": 1.0
      }
     ]
@@ -293275,8 +293352,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "apache-gun-tape-iraq-2008",
-    "seg": 4,
+    "clip": "mq9-live-hellfire-holloman",
+    "seg": 7,
     "hits_song": [
      334.495,
      334.733,
@@ -293371,18 +293448,18 @@
    "clip": "picture"
   },
   {
-   "id": "centcom-iran-strikes-jul2026#3@337.35",
+   "id": "hellfire-greece-flir#1@337.35",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "crosshair"
+    "impact",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_1014392.mp4",
+   "src": "media/footage/weapons/raw/dvids_883839.mp4",
    "t0": 337.051,
    "t1": 339.251,
    "time": {
-    "in": 48.7834,
+    "in": 12.9142,
     "speed": 1.0
    },
    "fit": "picture",
@@ -293400,16 +293477,13 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.35,
-     "white": 0.95
+     "op": "lumakey",
+     "low": 0.3,
+     "high": 0.7
     },
     {
      "op": "posterize",
-     "levels": 7
+     "levels": 6
     },
     {
      "op": "chroma",
@@ -293449,8 +293523,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "centcom-iran-strikes-jul2026",
-    "seg": 3,
+    "clip": "hellfire-greece-flir",
+    "seg": 1,
     "hits_song": [
      337.351
     ]
@@ -293458,39 +293532,39 @@
    "clip": "picture"
   },
   {
-   "id": "idf-beit-hanoun-launcher-2014#1@338.30~stutter",
+   "id": "hellfire-symphony-tads#2@338.30~stutter",
    "tags": [
     "weapons",
     "IR",
-    "black-hot",
-    "strike"
+    "crosshair",
+    "impact"
    ],
-   "src": "media/footage/weapons/raw/youtube_4ayyXgRVWHk.mp4",
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
    "t0": 338.303,
    "t1": 339.079,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 10.96,
+      "in": 8.8765,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 11.06
+      "hold": 8.9765
      },
      {
       "dur": 0.1,
-      "in": 10.96,
+      "in": 8.8765,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 11.06
+      "hold": 8.9765
      },
      {
       "dur": 0.3,
-      "in": 10.96,
+      "in": 8.8765,
       "speed": 1.0
      }
     ]
@@ -293539,8 +293613,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-beit-hanoun-launcher-2014",
-    "seg": 1,
+    "clip": "hellfire-symphony-tads",
+    "seg": 2,
     "hits_song": [
      338.303,
      338.541,
@@ -293638,18 +293712,18 @@
    "clip": "picture"
   },
   {
-   "id": "ap-telaviv-intercepts-may2023#0@341.16",
+   "id": "idf-haniyeh-office-2008#2@341.16",
    "tags": [
     "weapons",
-    "night",
-    "interceptor",
-    "iron-dome"
+    "strike",
+    "impact",
+    "gaza"
    ],
-   "src": "media/footage/weapons/raw/youtube_E--NcpXQuZ0.mp4",
-   "t0": 340.859,
+   "src": "media/footage/weapons/raw/youtube_0iRJuFyqSrs.mp4",
+   "t0": 340.978,
    "t1": 343.059,
    "time": {
-    "in": 23.58,
+    "in": 12.5,
     "speed": 1.0
    },
    "fit": "picture",
@@ -293664,29 +293738,32 @@
     "out": 0.5
    },
    "opacity": 0.88,
-   "blend": "screen",
+   "blend": "normal",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.12,
-     "high": 0.5
+     "op": "posterize",
+     "levels": 7
+    },
+    {
+     "op": "sat",
+     "factor": 1.25
     },
     {
      "op": "chroma",
      "px": {
       "range": [
-       0,
-       8
+       1,
+       14
       ],
       "of": {
        "beat": {
         "div": 1,
         "shape": "decay",
-        "tau": 0.14
+        "tau": 0.16
        }
       }
      },
-     "angle": 4207
+     "angle": 6623
     },
     {
      "op": "feedback",
@@ -293709,8 +293786,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "ap-telaviv-intercepts-may2023",
-    "seg": 0,
+    "clip": "idf-haniyeh-office-2008",
+    "seg": 2,
     "hits_song": [
      341.159
     ]
@@ -293718,39 +293795,39 @@
    "clip": "picture"
   },
   {
-   "id": "idf-strikes-jan2014-blackhot#1@342.11~stutter",
+   "id": "idf-launcher-strike-2009#0@342.11~stutter",
    "tags": [
     "weapons",
-    "IR",
-    "black-hot",
-    "strike"
+    "targeting",
+    "crosshair",
+    "IR"
    ],
-   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
+   "src": "media/footage/weapons/raw/youtube_AIRiNPaoLTI.mp4",
    "t0": 342.111,
    "t1": 342.887,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 9.681,
+      "in": 10.241,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 9.781
+      "hold": 10.341
      },
      {
       "dur": 0.1,
-      "in": 9.681,
+      "in": 10.241,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 9.781
+      "hold": 10.341
      },
      {
       "dur": 0.3,
-      "in": 9.681,
+      "in": 10.241,
       "speed": 1.0
      }
     ]
@@ -293799,8 +293876,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-strikes-jan2014-blackhot",
-    "seg": 1,
+    "clip": "idf-launcher-strike-2009",
+    "seg": 0,
     "hits_song": [
      342.111,
      342.349,
@@ -293895,18 +293972,18 @@
    "clip": "picture"
   },
   {
-   "id": "mq9-live-hellfire-holloman#7@344.97",
+   "id": "idf-weapons-storage-2011#1@344.97",
    "tags": [
     "weapons",
-    "screen",
-    "strike",
+    "IR",
+    "black-hot",
     "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_815413.mp4",
+   "src": "media/footage/weapons/raw/youtube_Eza-Gx3VLSk.mp4",
    "t0": 344.667,
    "t1": 346.867,
    "time": {
-    "in": 72.3236,
+    "in": 19.381,
     "speed": 1.0
    },
    "fit": "picture",
@@ -293924,13 +294001,16 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.3,
-     "high": 0.7
+     "op": "invert"
+    },
+    {
+     "op": "levels",
+     "black": 0.35,
+     "white": 0.95
     },
     {
      "op": "posterize",
-     "levels": 6
+     "levels": 7
     },
     {
      "op": "chroma",
@@ -293970,8 +294050,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "mq9-live-hellfire-holloman",
-    "seg": 7,
+    "clip": "idf-weapons-storage-2011",
+    "seg": 1,
     "hits_song": [
      344.967
     ]
@@ -293979,39 +294059,39 @@
    "clip": "picture"
   },
   {
-   "id": "oir-hit-weapons-storage-2016#1@345.92~stutter",
+   "id": "times-radio-idf-bombardment-oct2023#3@345.92~stutter",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "multiple-impacts"
+    "white-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_454159.mp4",
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
    "t0": 345.919,
    "t1": 346.695,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 15.8,
+      "in": 59.521,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 15.9
+      "hold": 59.621
      },
      {
       "dur": 0.1,
-      "in": 15.8,
+      "in": 59.521,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 15.9
+      "hold": 59.621
      },
      {
       "dur": 0.3,
-      "in": 15.8,
+      "in": 59.521,
       "speed": 1.0
      }
     ]
@@ -294021,7 +294101,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -294060,8 +294140,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-hit-weapons-storage-2016",
-    "seg": 1,
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 3,
     "hits_song": [
      345.919,
      346.157,
@@ -294159,526 +294239,18 @@
    "clip": "picture"
   },
   {
-   "id": "centcom-epic-fury-tomahawks#1@348.77",
+   "id": "ap-interceptions-telaviv-jun2025#0@348.77",
    "tags": [
     "weapons",
-    "tomahawk",
-    "launch",
-    "ship"
+    "night",
+    "interceptor",
+    "iron-dome"
    ],
-   "src": "media/footage/weapons/raw/dvids_997733.mp4",
+   "src": "media/footage/weapons/raw/youtube_pYZ2sbB9d9o.mp4",
    "t0": 348.475,
    "t1": 350.675,
    "time": {
-    "in": 10.58,
-    "speed": 1.0
-   },
-   "fit": "picture",
-   "crop": [
-    0.06,
-    0.16,
-    0.94,
-    0.76
-   ],
-   "fade": {
-    "in": 0.15,
-    "out": 0.5
-   },
-   "opacity": 0.88,
-   "blend": "normal",
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 7
-    },
-    {
-     "op": "sat",
-     "factor": 1.25
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       1,
-       14
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.16
-       }
-      }
-     },
-     "angle": 6771
-    },
-    {
-     "op": "feedback",
-     "fb": 0.62,
-     "zoom": 1.045,
-     "rot": {
-      "range": [
-       -4,
-       4
-      ],
-      "of": {
-       "beat": {
-        "div": 4,
-        "shape": "sine"
-       }
-      }
-     },
-     "mode": "max"
-    }
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "centcom-epic-fury-tomahawks",
-    "seg": 1,
-    "hits_song": [
-     348.775
-    ]
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "oir-mosul-vbied-facility-2017#0@349.73~stutter",
-   "tags": [
-    "weapons",
-    "IR",
-    "white-hot",
-    "explosion"
-   ],
-   "src": "media/footage/weapons/raw/dvids_512858.mp4",
-   "t0": 349.727,
-   "t1": 350.503,
-   "time": {
-    "seq": [
-     {
-      "dur": 0.1,
-      "in": 16.2839,
-      "speed": 1.0
-     },
-     {
-      "dur": 0.138,
-      "hold": 16.3839
-     },
-     {
-      "dur": 0.1,
-      "in": 16.2839,
-      "speed": 1.0
-     },
-     {
-      "dur": 0.138,
-      "hold": 16.3839
-     },
-     {
-      "dur": 0.3,
-      "in": 16.2839,
-      "speed": 1.0
-     }
-    ]
-   },
-   "fit": "picture",
-   "crop": [
-    0.06,
-    0.16,
-    0.94,
-    0.68
-   ],
-   "blend": "screen",
-   "opacity": 0.55,
-   "fade": {
-    "out": 0.15
-   },
-   "fx": [
-    {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.4
-    },
-    {
-     "op": "posterize",
-     "levels": 5
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       1,
-       14
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.16
-       }
-      }
-     },
-     "angle": 6771
-    }
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "oir-mosul-vbied-facility-2017",
-    "seg": 0,
-    "hits_song": [
-     349.727,
-     349.965,
-     350.203
-    ],
-    "stutter": [
-     349.727,
-     349.965,
-     350.203
-    ]
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "gun-tape",
-   "tags": [
-    "weapons",
-    "IR",
-    "crosshair",
-    "people"
-   ],
-   "src": "media/footage/weapons/raw/dvids_36864.mp4",
-   "t0": 347.879,
-   "t1": 352.279,
-   "time": {
-    "in": 69.32,
-    "speed": 1.0
-   },
-   "fit": "picture",
-   "crop": [
-    0,
-    0,
-    1,
-    0.9
-   ],
-   "blend": "normal",
-   "opacity": 0.92,
-   "fade": {
-    "in": 0.4,
-    "out": 0.6
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 8
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       1,
-       14
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.16
-       }
-      }
-     },
-     "angle": 6808
-    }
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "apache-gun-tape-iraq-2008",
-    "seg": 3,
-    "hits_song": [
-     350.679
-    ]
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "oir-susah-fuel-truck-2018#1@352.60",
-   "tags": [
-    "weapons",
-    "IR",
-    "black-hot",
-    "strike"
-   ],
-   "src": "media/footage/weapons/raw/dvids_645265.mp4",
-   "t0": 352.295,
-   "t1": 354.495,
-   "time": {
-    "in": 21.8064,
-    "speed": 1.0
-   },
-   "fit": "picture",
-   "crop": [
-    0.06,
-    0.16,
-    0.94,
-    0.68
-   ],
-   "fade": {
-    "in": 0.15,
-    "out": 0.5
-   },
-   "opacity": 0.88,
-   "blend": "screen",
-   "fx": [
-    {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.35,
-     "white": 0.95
-    },
-    {
-     "op": "posterize",
-     "levels": 7
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       1,
-       14
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.16
-       }
-      }
-     },
-     "angle": 6845
-    },
-    {
-     "op": "feedback",
-     "fb": 0.62,
-     "zoom": 1.045,
-     "rot": {
-      "range": [
-       -4,
-       4
-      ],
-      "of": {
-       "beat": {
-        "div": 4,
-        "shape": "sine"
-       }
-      }
-     },
-     "mode": "max"
-    }
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "oir-susah-fuel-truck-2018",
-    "seg": 1,
-    "hits_song": [
-     352.595
-    ]
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "sdb-feature-deployed-2017#4@353.54~stutter",
-   "tags": [
-    "weapons",
-    "IR",
-    "strike",
-    "compound"
-   ],
-   "src": "media/footage/weapons/raw/dvids_552968.mp4",
-   "t0": 353.535,
-   "t1": 354.323,
-   "time": {
-    "seq": [
-     {
-      "dur": 0.1,
-      "in": 157.03,
-      "speed": 1.0
-     },
-     {
-      "dur": 0.144,
-      "hold": 157.13
-     },
-     {
-      "dur": 0.1,
-      "in": 157.03,
-      "speed": 1.0
-     },
-     {
-      "dur": 0.144,
-      "hold": 157.13
-     },
-     {
-      "dur": 0.3,
-      "in": 157.03,
-      "speed": 1.0
-     }
-    ]
-   },
-   "fit": "picture",
-   "crop": [
-    0.06,
-    0.16,
-    0.94,
-    0.76
-   ],
-   "blend": "screen",
-   "opacity": 0.55,
-   "fade": {
-    "out": 0.15
-   },
-   "fx": [
-    {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.4
-    },
-    {
-     "op": "posterize",
-     "levels": 5
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       1,
-       14
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.16
-       }
-      }
-     },
-     "angle": 6845
-    }
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "sdb-feature-deployed-2017",
-    "seg": 4,
-    "hits_song": [
-     353.535,
-     353.779,
-     354.023
-    ],
-    "stutter": [
-     353.535,
-     353.779,
-     354.023
-    ]
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "reuters-explosions-overnight-2023-10-22#0@354.50",
-   "tags": [
-    "ground",
-    "strike",
-    "explosion",
-    "fireball"
-   ],
-   "src": "media/footage/ground/raw/youtube_WAGCvWsTpYQ.mp4",
-   "t0": 354.338,
-   "t1": 355.838,
-   "time": {
-    "in": 0.0,
-    "speed": 1.0
-   },
-   "fit": "picture",
-   "crop": [
-    0.04,
-    0.16,
-    0.92,
-    0.9
-   ],
-   "fade": {
-    "in": 0.15,
-    "out": 0.5
-   },
-   "opacity": 0.88,
-   "blend": "normal",
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 7
-    },
-    {
-     "op": "sat",
-     "factor": 1.25
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       1,
-       14
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.16
-       }
-      }
-     },
-     "angle": 6882
-    },
-    {
-     "op": "feedback",
-     "fb": 0.62,
-     "zoom": 1.045,
-     "rot": {
-      "range": [
-       -4,
-       4
-      ],
-      "of": {
-       "beat": {
-        "div": 4,
-        "shape": "sine"
-       }
-      }
-     },
-     "mode": "max"
-    }
-   ],
-   "meta": {
-    "catalog": "ground",
-    "clip": "reuters-explosions-overnight-2023-10-22",
-    "seg": 0,
-    "hits_song": [
-     354.499
-    ]
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "centcom-iran-strikes-jul2026#1@356.40",
-   "tags": [
-    "weapons",
-    "tomahawk",
-    "launch",
-    "ship"
-   ],
-   "src": "media/footage/weapons/raw/dvids_1014392.mp4",
-   "t0": 356.103,
-   "t1": 358.303,
-   "time": {
-    "in": 23.6583,
+    "in": 14.248,
     "speed": 1.0
    },
    "fit": "picture",
@@ -294715,7 +294287,7 @@
        }
       }
      },
-     "angle": 4391
+     "angle": 4299
     },
     {
      "op": "feedback",
@@ -294738,8 +294310,283 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "centcom-iran-strikes-jul2026",
+    "clip": "ap-interceptions-telaviv-jun2025",
+    "seg": 0,
+    "hits_song": [
+     348.775
+    ]
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "ap-raw-idf-footage-2014#0@349.73~stutter",
+   "tags": [
+    "weapons",
+    "IR",
+    "black-hot",
+    "strike"
+   ],
+   "src": "media/footage/weapons/raw/youtube_FEBuDBmtFDk.mp4",
+   "t0": 349.727,
+   "t1": 350.503,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.1,
+      "in": 7.3083,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.138,
+      "hold": 7.4083
+     },
+     {
+      "dur": 0.1,
+      "in": 7.3083,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.138,
+      "hold": 7.4083
+     },
+     {
+      "dur": 0.3,
+      "in": 7.3083,
+      "speed": 1.0
+     }
+    ]
+   },
+   "fit": "picture",
+   "crop": [
+    0.06,
+    0.16,
+    0.94,
+    0.76
+   ],
+   "blend": "screen",
+   "opacity": 0.55,
+   "fade": {
+    "out": 0.15
+   },
+   "fx": [
+    {
+     "op": "invert"
+    },
+    {
+     "op": "levels",
+     "black": 0.4
+    },
+    {
+     "op": "posterize",
+     "levels": 5
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       1,
+       14
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     },
+     "angle": 6771
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "ap-raw-idf-footage-2014",
+    "seg": 0,
+    "hits_song": [
+     349.727,
+     349.965,
+     350.203
+    ],
+    "stutter": [
+     349.727,
+     349.965,
+     350.203
+    ]
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "bureij-blast",
+   "tags": [
+    "y2026",
+    "gaza",
+    "airstrike",
+    "night"
+   ],
+   "src": "media/footage/y2026/raw/youtube_h1ikSUmcrX8.mp4",
+   "t0": 350.359,
+   "t1": 352.679,
+   "time": {
+    "in": 4.0,
+    "speed": 1.0
+   },
+   "size": [
+    440,
+    782
+   ],
+   "pos": [
+    720,
+    540
+   ],
+   "crop": [
+    0,
+    0.1,
+    1,
+    0.86
+   ],
+   "blend": "normal",
+   "opacity": 0.95,
+   "fade": {
+    "in": 0.3,
+    "out": 0.4
+   },
+   "mask": {
+    "shape": "rect",
+    "feather": 0.04
+   },
+   "fx": [
+    {
+     "op": "contrast",
+     "factor": 1.1
+    }
+   ],
+   "meta": {
+    "catalog": "y2026",
+    "clip": "anadolu-bureij-night-blast-street-2026-05-19",
     "seg": 1,
+    "hits_song": [
+     350.679
+    ]
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "morgue-arrival",
+   "tags": [
+    "y2026",
+    "gaza",
+    "dead"
+   ],
+   "src": "media/footage/y2026/raw/youtube_G9EY3rgBcLc.mp4",
+   "t0": 352.595,
+   "t1": 356.403,
+   "time": {
+    "in": 1.0,
+    "speed": 1.0
+   },
+   "fit": "picture",
+   "crop": [
+    0.04,
+    0.16,
+    0.92,
+    0.9
+   ],
+   "opacity": 0.9,
+   "fade": {
+    "in": 0.1,
+    "out": 0.5
+   },
+   "fx": [
+    {
+     "op": "sat",
+     "factor": 0.7
+    }
+   ],
+   "meta": {
+    "catalog": "y2026",
+    "clip": "ap-khanyounis-morgue-bodies-2026-07-29",
+    "seg": 0,
+    "hits_song": []
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "hellfire-symphony-tads#5@356.40",
+   "tags": [
+    "weapons",
+    "explosion",
+    "fireball",
+    "false-colour"
+   ],
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "t0": 356.103,
+   "t1": 358.303,
+   "time": {
+    "in": 31.7664,
+    "speed": 1.0
+   },
+   "fit": "picture",
+   "crop": [
+    0.06,
+    0.16,
+    0.94,
+    0.76
+   ],
+   "fade": {
+    "in": 0.15,
+    "out": 0.5
+   },
+   "opacity": 0.88,
+   "blend": "normal",
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 7
+    },
+    {
+     "op": "sat",
+     "factor": 1.25
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       1,
+       14
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     },
+     "angle": 6919
+    },
+    {
+     "op": "feedback",
+     "fb": 0.62,
+     "zoom": 1.045,
+     "rot": {
+      "range": [
+       -4,
+       4
+      ],
+      "of": {
+       "beat": {
+        "div": 4,
+        "shape": "sine"
+       }
+      }
+     },
+     "mode": "max"
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "hellfire-symphony-tads",
+    "seg": 5,
     "hits_song": [
      356.403
     ]
@@ -294747,39 +294594,39 @@
    "clip": "picture"
   },
   {
-   "id": "hellfire-greece-flir#1@357.36~stutter",
+   "id": "idf-strikes-jan2014-blackhot#1@357.36~stutter",
    "tags": [
     "weapons",
     "IR",
-    "impact",
-    "explosion"
+    "black-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_883839.mp4",
+   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
    "t0": 357.355,
    "t1": 358.131,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 13.2142,
+      "in": 9.681,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 13.3142
+      "hold": 9.781
      },
      {
       "dur": 0.1,
-      "in": 13.2142,
+      "in": 9.681,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 13.3142
+      "hold": 9.781
      },
      {
       "dur": 0.3,
-      "in": 13.2142,
+      "in": 9.681,
       "speed": 1.0
      }
     ]
@@ -294828,7 +294675,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "hellfire-greece-flir",
+    "clip": "idf-strikes-jan2014-blackhot",
     "seg": 1,
     "hits_song": [
      357.355,
@@ -294924,18 +294771,18 @@
    "clip": "picture"
   },
   {
-   "id": "hellfire-symphony-tads#2@360.21",
+   "id": "mq9-live-hellfire-holloman#7@360.21",
    "tags": [
     "weapons",
-    "IR",
-    "crosshair",
-    "impact"
+    "screen",
+    "strike",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
-   "t0": 359.9345,
+   "src": "media/footage/weapons/raw/dvids_815413.mp4",
+   "t0": 359.911,
    "t1": 362.111,
    "time": {
-    "in": 8.6,
+    "in": 72.3236,
     "speed": 1.0
    },
    "fit": "picture",
@@ -294999,8 +294846,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
-    "seg": 2,
+    "clip": "mq9-live-hellfire-holloman",
+    "seg": 7,
     "hits_song": [
      360.211
     ]
@@ -295008,39 +294855,39 @@
    "clip": "picture"
   },
   {
-   "id": "idf-beit-hanoun-launcher-2014#1@361.16~stutter",
+   "id": "hellfire-greece-flir#1@361.16~stutter",
    "tags": [
     "weapons",
     "IR",
-    "black-hot",
-    "strike"
+    "impact",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/youtube_4ayyXgRVWHk.mp4",
+   "src": "media/footage/weapons/raw/dvids_883839.mp4",
    "t0": 361.163,
    "t1": 361.939,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 15.561,
+      "in": 13.2142,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 15.661
+      "hold": 13.3142
      },
      {
       "dur": 0.1,
-      "in": 15.561,
+      "in": 13.2142,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 15.661
+      "hold": 13.3142
      },
      {
       "dur": 0.3,
-      "in": 15.561,
+      "in": 13.2142,
       "speed": 1.0
      }
     ]
@@ -295089,7 +294936,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-beit-hanoun-launcher-2014",
+    "clip": "hellfire-greece-flir",
     "seg": 1,
     "hits_song": [
      361.163,
@@ -295105,18 +294952,18 @@
    "clip": "picture"
   },
   {
-   "id": "reuters-national-bank-strike-2023-10#0@362.12",
+   "id": "reuters-explosions-overnight-2023-10-22#0@362.12",
    "tags": [
     "ground",
     "strike",
     "explosion",
     "fireball"
    ],
-   "src": "media/footage/ground/raw/youtube_bftGJOh4FvY.mp4",
-   "t0": 361.815,
-   "t1": 364.015,
+   "src": "media/footage/ground/raw/youtube_WAGCvWsTpYQ.mp4",
+   "t0": 361.954,
+   "t1": 363.454,
    "time": {
-    "in": 0.2682,
+    "in": 0.0,
     "speed": 1.0
    },
    "fit": "picture",
@@ -295179,7 +295026,7 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "reuters-national-bank-strike-2023-10",
+    "clip": "reuters-explosions-overnight-2023-10-22",
     "seg": 0,
     "hits_song": [
      362.115
@@ -295188,18 +295035,18 @@
    "clip": "picture"
   },
   {
-   "id": "centcom-sanaa-night-launch-dec2024#0@364.02",
+   "id": "idf-gaza-strikes-oct13-2023#2@364.02",
    "tags": [
     "weapons",
-    "carrier",
-    "night",
-    "afterburner"
+    "aerial",
+    "fireball",
+    "gaza"
    ],
-   "src": "media/footage/weapons/raw/dvids_947973.mp4",
+   "src": "media/footage/weapons/raw/youtube_1dxriivNDhY.mp4",
    "t0": 363.719,
-   "t1": 365.919,
+   "t1": 365.599,
    "time": {
-    "in": 4.8061,
+    "in": 12.02,
     "speed": 1.0
    },
    "fit": "picture",
@@ -295214,29 +295061,32 @@
     "out": 0.5
    },
    "opacity": 0.88,
-   "blend": "screen",
+   "blend": "normal",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.12,
-     "high": 0.5
+     "op": "posterize",
+     "levels": 7
+    },
+    {
+     "op": "sat",
+     "factor": 1.25
     },
     {
      "op": "chroma",
      "px": {
       "range": [
-       0,
-       8
+       1,
+       14
       ],
       "of": {
        "beat": {
         "div": 1,
         "shape": "decay",
-        "tau": 0.14
+        "tau": 0.16
        }
       }
      },
-     "angle": 4483
+     "angle": 7067
     },
     {
      "op": "feedback",
@@ -295259,8 +295109,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "centcom-sanaa-night-launch-dec2024",
-    "seg": 0,
+    "clip": "idf-gaza-strikes-oct13-2023",
+    "seg": 2,
     "hits_song": [
      364.019
     ]
@@ -295532,39 +295382,39 @@
    "clip": "picture"
   },
   {
-   "id": "mq9-strike-yemen-2024#0@368.78~stutter",
+   "id": "times-radio-idf-bombardment-oct2023#3@368.78~stutter",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "explosion"
+    "white-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_943588.mp4",
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
    "t0": 368.779,
    "t1": 369.555,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 2.3343,
+      "in": 59.521,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 2.4343
+      "hold": 59.621
      },
      {
       "dur": 0.1,
-      "in": 2.3343,
+      "in": 59.521,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 2.4343
+      "hold": 59.621
      },
      {
       "dur": 0.3,
-      "in": 2.3343,
+      "in": 59.521,
       "speed": 1.0
      }
     ]
@@ -295613,8 +295463,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "mq9-strike-yemen-2024",
-    "seg": 0,
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 3,
     "hits_song": [
      368.779,
      369.017,
@@ -295629,18 +295479,18 @@
    "clip": "picture"
   },
   {
-   "id": "ap-gazacity-towers-bombed-2025-09#4@369.73",
+   "id": "reuters-national-bank-strike-2023-10#0@369.73",
    "tags": [
     "ground",
     "strike",
     "explosion",
-    "smoke-column"
+    "fireball"
    ],
-   "src": "media/footage/ground/raw/youtube_xb1Yj-mLXAU.mp4",
+   "src": "media/footage/ground/raw/youtube_bftGJOh4FvY.mp4",
    "t0": 369.431,
    "t1": 371.631,
    "time": {
-    "in": 102.78,
+    "in": 0.2682,
     "speed": 1.0
    },
    "fit": "picture",
@@ -295703,8 +295553,8 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "ap-gazacity-towers-bombed-2025-09",
-    "seg": 4,
+    "clip": "reuters-national-bank-strike-2023-10",
+    "seg": 0,
     "hits_song": [
      369.731
     ]
@@ -295712,18 +295562,18 @@
    "clip": "picture"
   },
   {
-   "id": "idf-haniyeh-office-2008#2@371.63",
+   "id": "ap-interceptions-telaviv-jun2025#1@371.63",
    "tags": [
     "weapons",
-    "strike",
+    "night",
     "impact",
-    "gaza"
+    "glow"
    ],
-   "src": "media/footage/weapons/raw/youtube_0iRJuFyqSrs.mp4",
-   "t0": 371.454,
-   "t1": 373.535,
+   "src": "media/footage/weapons/raw/youtube_pYZ2sbB9d9o.mp4",
+   "t0": 371.335,
+   "t1": 373.515,
    "time": {
-    "in": 12.5,
+    "in": 19.32,
     "speed": 1.0
    },
    "fit": "picture",
@@ -295738,32 +295588,29 @@
     "out": 0.5
    },
    "opacity": 0.88,
-   "blend": "normal",
+   "blend": "screen",
    "fx": [
     {
-     "op": "posterize",
-     "levels": 7
-    },
-    {
-     "op": "sat",
-     "factor": 1.25
+     "op": "lumakey",
+     "low": 0.12,
+     "high": 0.5
     },
     {
      "op": "chroma",
      "px": {
       "range": [
-       1,
-       14
+       0,
+       8
       ],
       "of": {
        "beat": {
         "div": 1,
         "shape": "decay",
-        "tau": 0.16
+        "tau": 0.14
        }
       }
      },
-     "angle": 7215
+     "angle": 4575
     },
     {
      "op": "feedback",
@@ -295786,8 +295633,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "idf-haniyeh-office-2008",
-    "seg": 2,
+    "clip": "ap-interceptions-telaviv-jun2025",
+    "seg": 1,
     "hits_song": [
      371.635
     ]
@@ -295795,39 +295642,39 @@
    "clip": "picture"
   },
   {
-   "id": "oir-bayji-vehicle-2017#0@372.59~stutter",
+   "id": "ap-raw-idf-footage-2014#0@372.59~stutter",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "white-hot"
+    "black-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_504731.mp4",
+   "src": "media/footage/weapons/raw/youtube_FEBuDBmtFDk.mp4",
    "t0": 372.587,
    "t1": 373.363,
    "time": {
     "seq": [
      {
       "dur": 0.1,
-      "in": 11.3123,
+      "in": 7.3083,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 11.4123
+      "hold": 7.4083
      },
      {
       "dur": 0.1,
-      "in": 11.3123,
+      "in": 7.3083,
       "speed": 1.0
      },
      {
       "dur": 0.138,
-      "hold": 11.4123
+      "hold": 7.4083
      },
      {
       "dur": 0.3,
-      "in": 11.3123,
+      "in": 7.3083,
       "speed": 1.0
      }
     ]
@@ -295837,7 +295684,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "blend": "screen",
    "opacity": 0.55,
@@ -295876,7 +295723,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-bayji-vehicle-2017",
+    "clip": "ap-raw-idf-footage-2014",
     "seg": 0,
     "hits_song": [
      372.587,
@@ -295892,18 +295739,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-habbaniyah-convoy-2016#1@369.73",
+   "id": "idf-strikes-jan2014-blackhot#1@369.73",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "convoy"
+    "black-hot",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_472864.mp4",
+   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
    "t0": 369.681,
    "t1": 370.151,
    "time": {
-    "in": 17.9356,
+    "in": 9.631,
     "speed": 1.0
    },
    "fit": "picture",
@@ -295911,7 +295758,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.02,
@@ -295921,13 +295768,16 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.3,
-     "high": 0.7
+     "op": "invert"
+    },
+    {
+     "op": "levels",
+     "black": 0.35,
+     "white": 0.95
     },
     {
      "op": "posterize",
-     "levels": 6
+     "levels": 7
     },
     {
      "op": "chroma",
@@ -295949,7 +295799,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-habbaniyah-convoy-2016",
+    "clip": "idf-strikes-jan2014-blackhot",
     "seg": 1,
     "hits_song": [
      369.731
@@ -296020,18 +295870,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-mosul-vbied-facility-2017#0@370.68",
+   "id": "mq9-live-hellfire-holloman#7@370.68",
    "tags": [
     "weapons",
-    "IR",
-    "white-hot",
+    "screen",
+    "strike",
     "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_512858.mp4",
+   "src": "media/footage/weapons/raw/dvids_815413.mp4",
    "t0": 370.633,
    "t1": 371.103,
    "time": {
-    "in": 9.6941,
+    "in": 72.5736,
     "speed": 1.0
    },
    "fit": "picture",
@@ -296039,7 +295889,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.02,
@@ -296077,8 +295927,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-mosul-vbied-facility-2017",
-    "seg": 0,
+    "clip": "mq9-live-hellfire-holloman",
+    "seg": 7,
     "hits_song": [
      370.683
     ]
@@ -296148,18 +295998,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-ramadi-bridge-2015#1@371.63",
+   "id": "hellfire-greece-flir#1@371.63",
    "tags": [
     "weapons",
     "IR",
-    "black-hot",
-    "strike"
+    "impact",
+    "explosion"
    ],
-   "src": "media/footage/weapons/raw/dvids_438531.mp4",
+   "src": "media/footage/weapons/raw/dvids_883839.mp4",
    "t0": 371.585,
    "t1": 372.055,
    "time": {
-    "in": 12.1966,
+    "in": 13.1642,
     "speed": 1.0
    },
    "fit": "picture",
@@ -296167,7 +296017,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.02,
@@ -296177,16 +296027,13 @@
    "blend": "screen",
    "fx": [
     {
-     "op": "invert"
-    },
-    {
-     "op": "levels",
-     "black": 0.35,
-     "white": 0.95
+     "op": "lumakey",
+     "low": 0.3,
+     "high": 0.7
     },
     {
      "op": "posterize",
-     "levels": 7
+     "levels": 6
     },
     {
      "op": "chroma",
@@ -296208,7 +296055,7 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-ramadi-bridge-2015",
+    "clip": "hellfire-greece-flir",
     "seg": 1,
     "hits_song": [
      371.635
@@ -296279,18 +296126,18 @@
    "clip": "picture"
   },
   {
-   "id": "oir-strike-feb2015#1@372.59",
+   "id": "hellfire-symphony-tads#2@372.59",
    "tags": [
     "weapons",
     "IR",
-    "strike",
-    "crosshair"
+    "crosshair",
+    "impact"
    ],
-   "src": "media/footage/weapons/raw/dvids_391684.mp4",
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
    "t0": 372.537,
    "t1": 373.007,
    "time": {
-    "in": 9.0267,
+    "in": 8.8265,
     "speed": 1.0
    },
    "fit": "picture",
@@ -296298,7 +296145,7 @@
     0.06,
     0.16,
     0.94,
-    0.68
+    0.76
    ],
    "fade": {
     "in": 0.02,
@@ -296336,8 +296183,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-strike-feb2015",
-    "seg": 1,
+    "clip": "hellfire-symphony-tads",
+    "seg": 2,
     "hits_song": [
      372.587
     ]
@@ -528719,12 +528566,12 @@
     600
    ],
    "pos": [
-    720,
+    1130,
     470
    ],
    "scale": {
     "mul": [
-     0.55,
+     0.45,
      {
       "k": [
        [
@@ -528774,18 +528621,18 @@
    ]
   },
   {
-   "id": "nbc-missile-hits-building-2023-10#0@373.54",
+   "id": "ap-gazacity-towers-bombed-2025-09#4@373.54",
    "tags": [
     "ground",
     "strike",
     "explosion",
-    "city"
+    "smoke-column"
    ],
-   "src": "media/footage/ground/raw/youtube_J7yXotNqLVk.mp4",
-   "t0": 372.939,
-   "t1": 374.7028,
+   "src": "media/footage/ground/raw/youtube_xb1Yj-mLXAU.mp4",
+   "t0": 372.959,
+   "t1": 376.539,
    "time": {
-    "in": 1.2362,
+    "in": 102.5,
     "speed": 1.0
    },
    "fit": "picture",
@@ -528800,35 +528647,38 @@
     "out": 0.5
    },
    "opacity": 0.8,
-   "blend": "screen",
+   "blend": "normal",
    "fx": [
     {
-     "op": "lumakey",
-     "low": 0.12,
-     "high": 0.5
+     "op": "posterize",
+     "levels": 7
+    },
+    {
+     "op": "sat",
+     "factor": 1.25
     },
     {
      "op": "chroma",
      "px": {
       "range": [
-       0,
-       8
+       1,
+       14
       ],
       "of": {
        "beat": {
         "div": 1,
         "shape": "decay",
-        "tau": 0.14
+        "tau": 0.16
        }
       }
      },
-     "angle": 4598
+     "angle": 7252
     }
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "nbc-missile-hits-building-2023-10",
-    "seg": 0,
+    "clip": "ap-gazacity-towers-bombed-2025-09",
+    "seg": 4,
     "hits_song": [
      373.539
     ]
@@ -528898,18 +528748,18 @@
    "clip": "picture"
   },
   {
-   "id": "times-radio-idf-bombardment-oct2023#3@381.16",
+   "id": "hellfire-symphony-tads#7@381.16",
    "tags": [
     "weapons",
     "IR",
-    "white-hot",
-    "strike"
+    "smoke",
+    "wreck"
    ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
    "t0": 380.556,
    "t1": 384.156,
    "time": {
-    "in": 58.921,
+    "in": 44.3459,
     "speed": 1.0
    },
    "fit": "picture",
@@ -528955,8 +528805,8 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
-    "seg": 3,
+    "clip": "hellfire-symphony-tads",
+    "seg": 7,
     "hits_song": [
      381.156
     ]
@@ -528964,18 +528814,18 @@
    "clip": "picture"
   },
   {
-   "id": "wsj-residents-film-tower-strike-2023-10#0@384.96",
+   "id": "nbc-missile-hits-building-2023-10#0@384.96",
    "tags": [
     "ground",
     "strike",
     "explosion",
     "city"
    ],
-   "src": "media/footage/ground/raw/youtube_pzFOfUV7iNA.mp4",
+   "src": "media/footage/ground/raw/youtube_J7yXotNqLVk.mp4",
    "t0": 384.364,
-   "t1": 385.1861,
+   "t1": 386.1278,
    "time": {
-    "in": 1.2779,
+    "in": 1.2362,
     "speed": 1.0
    },
    "fit": "picture",
@@ -529017,7 +528867,7 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "wsj-residents-film-tower-strike-2023-10",
+    "clip": "nbc-missile-hits-building-2023-10",
     "seg": 0,
     "hits_song": [
      384.964

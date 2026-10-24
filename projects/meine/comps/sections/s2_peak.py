@@ -21,7 +21,7 @@ AP_CROP = [0.04, 0.16, 0.92, 0.9]   # drops AP's top-right bug, top-left credits
 PRE_WAR = ("-war", "2019", "2023-may-round")
 # clips with subtitles/lower-thirds inside the frame that no crop removes: kept out of the pools
 CAPTIONED = {"aj-high-powered-bombs-explainer", "ap-interceptions-telaviv-jlm-feb2026", "ap-flares-cloudy-night-2025-12-b",
-             "fa-rafah-bomb-identification"}
+             "fa-rafah-bomb-identification", "idf-beit-hanoun-launcher-2014"}
 WEAPONS_CROP = [0.06, 0.16, 0.94, 0.76]   # news bugs/credits at the top corners, slates and lower-thirds below
 OIR_CROP = [0.06, 0.16, 0.94, 0.68]       # OIR strike tapes type their description along the bottom
 
@@ -78,9 +78,10 @@ def dip_and_reentry(c, P):
            "pos": pos, "scale": sc, "mask": {"shape": "oval", "feather": 0.28}, "opacity": 0.8,
            "fade": {"in": 0.3}, "fx": [{"op": "chroma", "px": rng(0, 6, beat(1, "decay", tau=0.15))}]})
     # the music falls away on bar 120: a white-hot strike lands on it and freezes as he says it
-    mosul = c.seg("weapons:oir-mosul-vbied-facility-2017#0")
-    c.footage(mosul, at=b120, hit=0, before=1.2, after=1.6, blend="screen", fit="picture", crop=[0, 0, 1, 0.9],
-              fade={"in": 0.4, "out": 1.4}, fx=ir_fx(0, 8), opacity=0.75, id="mosul-into-dip")
+    # Khan Younis, Feb 2026: a close night blast that whites out the whole frame
+    khan = c.seg("y2026:guardian-khanyounis-night-strike-2026-02-06#0")
+    c.footage(khan, at=b120, hit=1, before=1.2, after=1.6, blend="screen", fit="picture", crop=[0.02, 0.12, 0.8, 0.95],
+              fade={"in": 0.4, "out": 1.4}, fx=ir_fx(0, 8), opacity=0.75, id="khanyounis-into-dip")
     # ...and the tracking shot itself stops: Meine freezes on that frame for the breath, then
     # starts moving again on the kick (bar 124)
     meine = c.proj["background"]["src"]
@@ -263,13 +264,27 @@ def chorus(c):
 # ---- 4:00-4:34  re-entry (124-131, kick only) and the first peak (132-143) ----
 def reentry_and_peak1(c, pools, ch):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
-    # one continuous Iran strike-cam take: six hits, one every two bars, 126 -> 136
-    iran = c.seg("weapons:centcom-iran-strikes-jul2026#3")
-    c.footage_multi(iran, [0, 1, 2, 3, 4, 5], [B(b) for b in (126, 128, 130, 132, 134, 136)], before=1.0, after=1.4,
-           fit="picture", crop=[0, 0.1, 1, 0.92], blend="normal", opacity=0.8, fade={"in": 0.8, "out": 0.6},
-           mask={"shape": "rect", "feather": 0.12}, fx=ir_fx(1, 6), id="iran-take")
-    for b in (126, 128, 130, 132, 134, 136):
+    # one continuous IDF strike-cam take over Gaza (1 Aug 2026, "leaving crater"): four hits at
+    # natural speed (x1.0) on bars 126, 132, 135 and 140; the IDF's own picture, in a window
+    crater = c.seg("y2026:idf-gaza-crater-strikecam-2026-08-01#0")
+    crater_hits = [(0.0, 1.57), (0, 13.05), (0, 18.89), (0, 28.56)]
+    take_bars = (126, 132, 135, 140)
+    song = [B(126) - 1.0] + [B(b) for b in take_bars] + [B(140) + 1.4]
+    src = [1.57 - 1.0] + [h for _, h in crater_hits] + [28.56 + 1.4]
+    c.add({"id": "idf-crater-take", "tags": ["y2026", "IR", "strike", "idf"], "src": crater.file,
+           "t0": round(song[0], 4), "t1": round(song[-1], 4),
+           "time": {"map": {"song": [round(x, 4) for x in song], "src": src}},
+           "fit": "picture", "crop": [0.05, 0.09, 0.87, 0.7], "blend": "normal", "opacity": 0.8,
+           "fade": {"in": 0.8, "out": 0.6}, "mask": {"shape": "rect", "feather": 0.12}, "fx": ir_fx(1, 6),
+           "meta": {"catalog": "y2026", "clip": crater.clip["id"], "seg": 0,
+                    "hits_song": [round(B(b), 3) for b in take_bars]}})
+    for b in take_bars:
         c.duck(B(b), hold=0.9, depth=0.45)
+    # Israel's strikes elsewhere, on the bars the take leaves open
+    for b, ref in ((128, "y2026:idf-iran-air-defence-strike-2026-06-08#0"),
+                   (130, "y2026:idf-gaza-weapons-sites-strikecam-2026-09-09#0")):
+        strike(c, c.seg(ref), 0, B(b), before=0.4, after=1.4, depth=0.45, k=b, opacity=0.8,
+               crop=[0.14, 0.1, 0.87, 0.72])   # x0 0.14 drops the vertical "IDF / AFP" credit
     # Rafah at night, three domes of light on the odd bars
     rafah = c.seg("ground:afp-rafah-night-strikes-flares-2023-12#0")
     c.footage_multi(rafah, [0, 1, 2], [B(125), B(126, 2), B(127, 2)], before=0.8, after=1.6, fit="picture",
@@ -363,14 +378,30 @@ def hottest(c, pools, ch):
     c.duck(B(168), hold=B(196) - B(168) - 0.5, depth=0.6, attack=0.2, release=1.0)
 
     tunnel = {"op": "feedback", "fb": 0.62, "zoom": 1.045, "rot": rng(-4, 4, beat(4, "sine")), "mode": "max"}
-    gun = c.seg("weapons:apache-gun-tape-iraq-2008#3")
     for b in range(168, 196):
         if b == 184:
-            # the one graphic-3 take: the 2008 gun tape, a Hellfire into a group of people, on the
-            # downbeat, as he names the weapon
-            c.footage(gun, at=B(b), hit=0, before=2.8, after=1.6, fit="picture", crop=[0, 0, 1, 0.9],
-                      blend="normal", opacity=0.92, fade={"in": 0.4, "out": 0.6}, fx=ir_fx(b, 8), id="gun-tape")
-            c.duck(B(b), hold=1.4, depth=0.2)
+            # the human cost, on the downbeat, as he names the weapon: Bureij, May 2026, a phone
+            # video of a night street; the blast lands behind a man and throws him off his feet.
+            # Portrait, so it plays as the phone frame it is.
+            bureij = c.seg("y2026:anadolu-bureij-night-blast-street-2026-05-19#1")
+            c.footage(bureij, at=B(b), hit=0, before=1.6, after=2.0, size=[440, 782], pos=[720, 540],
+                      crop=[0, 0.1, 1, 0.86], blend="normal", opacity=0.95, fade={"in": 0.3, "out": 0.4},
+                      mask={"shape": "rect", "feather": 0.04}, fx=[{"op": "contrast", "factor": 1.1}],
+                      id="bureij-blast")
+            c.duck(B(b), hold=1.6, depth=0.2)
+            continue
+        if b == 185:
+            # ...and what follows: bodies rushed from an ambulance into the Khan Younis morgue
+            # (Jul 2026; graphic 3, bagged, no faces of the dead), two bars, no effects
+            morgue = c.seg("y2026:ap-khanyounis-morgue-bodies-2026-07-29#0")
+            c.add({"id": "morgue-arrival", "tags": ["y2026", "gaza", "dead"], "src": morgue.file,
+                   "t0": B(b), "t1": B(b + 2), "time": {"in": 1.0, "speed": 1.0}, "fit": "picture",
+                   "crop": AP_CROP, "opacity": 0.9, "fade": {"in": 0.1, "out": 0.5},
+                   "fx": [{"op": "sat", "factor": 0.7}],
+                   "meta": {"catalog": "y2026", "clip": morgue.clip["id"], "seg": 0, "hits_song": []}})
+            c.duck(B(b), hold=2 * 4 * c.period - 0.6, depth=0.25)
+            continue
+        if b == 186:
             continue
         kind = ("gnight", "ir", "gday", "fire")[b % 4]
         s, h = pools.take(kind, B(b), gap=15)
@@ -389,7 +420,7 @@ def hottest(c, pools, ch):
         strike(c, s, h, at, before=0.05, after=0.42,
                depth=None, k=k, opacity=0.75, fade={"in": 0.02, "out": 0.12})
 
-    # the chorus: a word every two bars, stutters on the four-bar phrase ends, the gun tape named
+    # the chorus: a word every two bars, stutters on the four-bar phrase ends, Hellfire named over Bureij
     smp = ["missiles", "missiles.c", "missiles.b", "missiles.e", "missiles.d"]
     for n, b in enumerate(range(168, 196, 2)):
         if b == 184:
@@ -398,7 +429,7 @@ def hottest(c, pools, ch):
             ch.stutter(n % 8, B(b), "missiles#5", stutter=3, gain=1.0)
         else:
             ch.speak(n % 8, B(b), smp[n % 5], gain=0.9, pop=2.6)
-    K.say(c, B(184), "hellfire missiles", pos=(720, 470), scale=0.55, gain=1.15, pop=1.2, id="P-hellfire",
+    K.say(c, B(184), "hellfire missiles", pos=(1130, 470), scale=0.45, gain=1.15, pop=1.2, id="P-hellfire",
           fx=[{"op": "posterize", "levels": 5}, {"op": "gradmap", "palette": "whitehot"}])
 
 

@@ -39,7 +39,8 @@ the footage is what you see and Meine's lights glint through it.
   the last bars of the rise. **On screen at 224.967:** Meine (dusk, the car interior, trucks), lane
   A's flash, and a tiny head at the centre starting to grow. Nothing of mine starts before 224.967.
 - **120, the drop-out.** He says "give Israel MISSILES" with the word on the downbeat, as the music
-  falls away. A white-hot Mosul blast lands on the same downbeat. **The tracking shot freezes**
+  falls away. A close night blast in Khan Younis (Guardian, 6 Feb 2026; it whites out the frame) lands on the same
+  downbeat. **The tracking shot freezes**
   (`meine-freeze` holds Meine's frame of bar 120, then desaturates, blurs and dims) for the breath.
   This is the only time the spine of the piece stops.
 - **120-123, the breath.** A morgue worker cuts shroud cloth (one cut about every 3 beats). It is
@@ -47,8 +48,11 @@ the footage is what you see and Meine's lights glint through it.
   122.5 the MQ-9 monitor shows TARGET, then **3, 2, 1 every two beats** (122.5, 123, 123.5), and the
   strike lands on **124 as the kick returns**, as he says "MISSILES" big in the centre.
 - **124-131, re-entry.** The eight-head chorus splits off him, **one copy per bar**, each gliding
-  into a slowly turning cube. One continuous CENTCOM Iran strike-cam take sits in a feathered window
-  with **six hits on bars 126, 128, 130, 132, 134 and 136** (`footage_multi`; speeds 0.93 to 1.27).
+  into a slowly turning cube. One continuous IDF strike-cam take over Gaza ("leaving crater", 1 Aug 2026) sits in a
+  feathered window with **four hits on bars 126, 132, 135 and 140**, all at about x1.0. It is a
+  hand-built time map, because the hits span three catalogue segments of one file. Israel's strikes
+  fill the bars the take leaves open: the IDF air-defence strike in Iran (8 Jun 2026) on 128, and
+  the IDF "weapons sites" strike-cam over Gaza (9 Sep 2026) on 130.
   Rafah's three night domes land on 125, 126.5 and 127.5, two blasts on 129 and 129.5, and a dusk
   fireball on 131.
 - **132-143, peak 1.** Three copies say "missiles" together on 132 (three different takes, a little
@@ -72,8 +76,17 @@ the footage is what you see and Meine's lights glint through it.
     eighths) fills beat 3. On 194-195 there is a hit on every beat, into a whiteout.
   - The chorus moves in a figure-eight about the screen at 0.105 scale, cube to helix to ring, one
     turn per bar. A word comes every 2 bars, and every 8th-bar phrase end is "mi-mi-mi-missiles".
-  - **Bar 184 is the single graphic-3 moment:** the 2008 Apache gun tape, a Hellfire into a group of
-    people, lands on the downbeat as his face (whitehot) says "Hellfire MISSILES".
+  - **Bar 184, the human cost:** "Hellfire MISSILES" (his face moved to the right, so it doesn't
+    cover the picture) lands on Bureij, 19 May 2026 (Anadolu phone video, portrait, in its own
+    frame): a night street, the blast behind a man throws him off his feet, on the downbeat.
+  - **Bars 185-186:** bagged bodies rushed from an ambulance into the Khan Younis morgue (AP, 29 Jul
+    2026; graphic 3, no faces of the dead, `identifiable_victims: false`). Two bars, normal blend,
+    no effects.
+  - **Why these two:** the human cost of one strike as cause and effect, a person thrown by the
+    blast, then the dead arriving. I passed over the Guardian Zinati clip (the moment a
+    15-year-old is killed). It is identifiable, and landing a child's death on a downbeat is
+    exactly the gimmick to avoid. I also passed over the MEE tent-strike bodies (a caption runs
+    throughout) and the mass funerals (used elsewhere in spirit, and slower).
 - **196-207, cooling.** The copies fly outward and leave one every 6 beats. Strikes come every 2
   bars and run longer. The Ansar tent camp burns (keyed fire). From 205 to 208 men pray over
   shrouded bodies: normal blend, desaturated, no effects.
@@ -120,8 +133,13 @@ the footage is what you see and Meine's lights glint through it.
 
 ## Footage choices and cautions (for the sensitivity review)
 
-- **Graphic 3:** only `apache-gun-tape-iraq-2008` at 72.12, bar 184 (Iraq 2008, not Gaza; it's
-  there for the Hellfire). The prayer over the shrouded (`ap-aqsa-children-mourned-2024-08#3`)
+- **Scope (ember's rule):** all footage is Israel/Gaza or US arsenal; `c.save()` passes. Three
+  layers were swapped out:
+  - `mosul-into-dip` (OIR, bar 120, 3:48.8) became Guardian Khan Younis 2026.
+  - `iran-take` (CENTCOM Iran, bars 126-136) became the IDF Gaza crater strike-cam (126, 132, 135,
+    140), plus IDF strikes on 128 and 130.
+  - `gun-tape` (Apache 2008, bar 184, 5:50.7) became Bureij plus the Khan Younis morgue (bars 184-186).
+- **Graphic 3:** the Khan Younis morgue arrival, bars 185-186 (5:52.6-5:56.4). The prayer over the shrouded (`ap-aqsa-children-mourned-2024-08#3`)
   shows no faces of the dead.
 - **Identifiable victims:** pools exclude `identifiable_victims: true`. Pre-2023 *ground* material
   (`-war`, 2019, May-2023 tags) is excluded. Some *weapons* clips are older IDF/OIR strike-cam
@@ -140,6 +158,14 @@ the footage is what you see and Meine's lights glint through it.
       lower-third at 5:43)
     - `fa-rafah-bomb-identification` (white page with text at 6:12)
   - Ashdod crane: cropped away the IMOD camera icon (6:52-7:05).
+  - After the scope swap, a second sweep (every 1 s across the whole span) found:
+    - a vertical "IDF / AFP" credit on the weapons-sites strike-cam at 4:08. Fixed by cropping
+      x0 to 0.14.
+    - IDF "Secondary Explosions" labels at 5:27 and 5:50, from `idf-beit-hanoun-launcher-2014`.
+      That clip is now in `CAPTIONED`.
+  - The crater take's Forbes lower third, "VIDEO: IDF VIA CNN" and date are cropped away
+    ([0.05, 0.09, 0.87, 0.7]). So are the Guardian logo on Khan Younis and the AA logo and
+    location tag on Bureij.
   - Deliberately kept: the redaction boxes in CENTCOM strike-cam, the sight's "FLIR"/reticle data,
     the diegetic labels in Lockheed's CGI factory ("FORWARD FUSELAGE", "FINAL ASSEMBLY", "WING
     BUILD"), and a lit shop sign in Meine itself (6:14).
