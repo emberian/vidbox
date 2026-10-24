@@ -1,6 +1,8 @@
 """Cut the real speakers' lines (projects/meine/preachers/preachers.json) into derived clips.
 
 usage: uv run python tools/preacher_prep.py [KEY ...]      (no keys: every entry in SPECS)
+       uv run python tools/preacher_prep.py --catalog israeli_voices [KEY ...]
+                (projects/meine/israeli_voices/voices.json -> media/derived/israeli_voices, IV_SPECS)
 
 For each spec:
   oval    the line's span cut with ffmpeg (optionally pre-cropped to one pane), face-tracked by
@@ -51,6 +53,25 @@ SPECS = {
 }
 
 
+# Israeli politicians and settler leaders (projects/meine/israeli_voices/voices.json). Pre-crops keep Haar on the
+# speaker: Netanyahu's sign-language inset, the officers either side of Gallant, Dichter's half of Channel 12's
+# split screen, the chyron under Herzog. Weiss (Haar loses her under the headscarf and locks on her hands) is a window, Arutz Sheva's
+# lower-third cropped off.
+IV_SPECS = {
+    "netanyahu": ("netanyahu_amalek_pmo", "amalek", 22.40, 27.60, "oval", (0.3, 0.0, 0.7, 0.62)),
+    "gallant_siege": ("gallant_siege_knesset99", "siege", 3.70, 19.85, "oval", (0.33, 0.06, 0.67, 0.72)),
+    "gallant_troops": ("gallant_troops_kipa", "eliminate", 24.70, 30.40, "oval", (0.40, 0.08, 0.62, 0.6)),
+    "dichter": ("dichter_nakba_c12", "nakba", 33.00, 38.60, "oval", (0.5, 0.05, 1.0, 0.72)),
+    "weiss": ("weiss_arutz7", "arabs_not_stay", 55.00, 60.60, "window", (0.1, 0.0, 0.9, 0.86)),
+    "eiland": ("eiland_timesradio", "cannot_live", 13.50, 20.85, "oval", None),
+    "herzog": ("herzog_presser_i24", "entire_nation", 16.60, 21.70, "oval", (0.25, 0.0, 0.75, 0.72)),
+}
+CATALOGS = {   # --catalog name: (catalog json, output dir, specs)
+    "preachers": (CAT, OUT, SPECS),
+    "israeli_voices": (ROOT / "projects/meine/israeli_voices/voices.json", ROOT / "media/derived/israeli_voices", IV_SPECS),
+}
+
+
 def run(cmd, **kw):
     return subprocess.run(cmd, check=True, **kw)
 
@@ -78,20 +99,27 @@ def loudnorm_args(f):
             f"measured_thresh={m['input_thresh']}:offset={m['target_offset']}")
 
 
-def prep(key, cat):
-    cid, label, a, b, mode, pre = SPECS[key]
+def prep(key, cat, specs=SPECS, out_dir=OUT):
+    cid, label, a, b, mode, pre = specs[key]
     clip = next(c for c in cat["clips"] if c["id"] == cid)
     raw = ROOT / clip["file"]
-    out = OUT / f"{cid}__{label}.mp4"
+    out = out_dir / f"{cid}__{label}.mp4"
     side = out.with_suffix(".json")
-    OUT.mkdir(parents=True, exist_ok=True)
-    words = json.loads((ROOT / clip["lines"][0]["words_json"]).read_text())["words"] if clip["lines"] else []
-    side.write_text(json.dumps({
+    out_dir.mkdir(parents=True, exist_ok=True)
+    wj = clip.get("words_json") or (clip["lines"][0].get("words_json") if clip["lines"] else None)
+    words = json.loads((ROOT / wj).read_text())["words"] if wj else []
+    meta = {
         "key": key, "clip": cid, "label": label, "mode": mode, "src": clip["file"], "span": [a, b],
         "person": clip["person"], "role": clip["role"], "venue": clip.get("venue"), "date": clip["date"],
         "publisher": clip.get("publisher"), "source_url": clip.get("source_url"),
         "words": [{"w": w["w"], "start": round(w["start"] - a, 3), "end": round(w["end"] - a, 3)}
-                  for w in words if a - 0.05 <= w["start"] and w["end"] <= b + 0.05]}, indent=1) + "\n")
+                  for w in words if a - 0.05 <= w["start"] and w["end"] <= b + 0.05]}
+    if "lang" in clip:   # catalogs with translated lines: the lines inside the cut, in the clip's own clock
+        meta["lang"] = clip["lang"]
+        meta["lines"] = [{**{k: v for k, v in ln.items() if k not in ("start", "end")},
+                          "start": round(ln["start"] - a, 3), "end": round(ln["end"] - a, 3)}
+                         for ln in clip["lines"] if a - 0.05 <= ln["start"] and ln["end"] <= b + 0.05]
+    side.write_text(json.dumps(meta, indent=1, ensure_ascii="lang" not in meta) + "\n")
     if out.exists():
         print(f"{out.relative_to(ROOT)} exists")
         return
@@ -128,6 +156,11 @@ def prep(key, cat):
 
 
 if __name__ == "__main__":
-    cat = json.loads(CAT.read_text())
-    for k in sys.argv[1:] or SPECS:
-        prep(k, cat)
+    args = sys.argv[1:]
+    name = "preachers"
+    if args[:1] == ["--catalog"]:
+        name, args = args[1], args[2:]
+    cat_path, out_dir, specs = CATALOGS[name]
+    cat = json.loads(cat_path.read_text())
+    for k in args or specs:
+        prep(k, cat, specs, out_dir)

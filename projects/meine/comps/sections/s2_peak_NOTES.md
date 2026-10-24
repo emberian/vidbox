@@ -377,3 +377,33 @@ the footage is what you see and Meine's lights glint through it.
 - `c.say(..., video=False, repeat=4, every=1)`: a voice-only "missiles" chant under 188-195.
 - The 2 s of silence after his head vanishes may want the WP airburst embers falling (screened)
   before the walkers take the frame.
+
+## Israeli voices and the rotation (2026-10-24)
+
+**`israeli_voices(c)`** places six Israeli speakers at the code bars below. Bars, lines and context are in `projects/meine/israeli_voices/NOTES.md`.
+
+| code bars | speaker | over |
+|---|---|---|
+| 121-131 | Gallant, complete siege | the breath into the re-entry |
+| 132-135 | Gallant, to the troops | peak 1 |
+| 143-147 | Dichter | the lull |
+| 147-149 | Weiss | the lull |
+| 160-163 | Eiland | the grid |
+| 178-180 | Herzog | the MEE remains |
+
+- **Post-pass:** the reality-window post-pass leaves layers tagged `speaker`, `text` or `subtitle` alone.
+- **Over the dead:** the speakers are still and plain, small, in the letterbox above the picture.
+
+**`ROTATION` + `slot()`** (ember: "SO many more voicelines ... than just Hyde going 'missiles'"):
+
+- **Which slots:** chorus slots listed in `ROTATION` are spoken by a real speaker's phrase (`Chorus.speak_real`). The phrase is face-tracked, at the copy's place and pop, with its key word on the slot's downbeat.
+- **On the drop into peak 1 (132):** Johnson, Cruz and Bachmann say BLESS together.
+- **Other slots:** Graham BOMBS (136), Hibbs (152, 201), Bachmann (154), Netanyahu AMALEK (156), Dichter NAKBA (158), Huckabee (164, 197), Gallant "human animals" (170), Evans (176), Vaughn (188), Johnson CURSE (192), Hagee VICTORY (194).
+- **Hyde's other lines:** "trillion bajillion" (168) and "weak and unprotected" (199).
+- **Plateau:**
+  - Walberg (voice only) says "We shouldn't be spending a DIME on humanitarian aid" over the Ashdod MK-84 ship (217).
+  - Hagee's CUFI window says "We must give them the weapons of WAR" over the bomb convoy (221).
+  - Hyde keeps 233 and 236.
+- **Count:** after 240 s, 22 real lines and 14 Hyde words.
+- **Music:** each real phrase gets `music_dip` (shallow, under the hold rule).
+- **Repeats:** `comp.repeats()` now counts footage only, so a speaker's line said again is not reported as repeated footage.

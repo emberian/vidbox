@@ -36,6 +36,9 @@ SAMPLES = {
     "should be paying 75": (34.74, 34.77, 36.62),  # "I should be paying seventy-five percent"
     "75": (35.28, 35.30, 36.62),
     "ripped from me": (26.30, 26.36, 27.42),
+    # his other lines (ember: "we have SO many more voicelines"), anchor on the stressed word
+    "trillion bajillion": (1.24, 1.60, 3.34),      # "one TRILLION bajillion dollars"
+    "weak and unprotected": (6.48, 7.86, 8.98),    # "because they're so WEAK and unprotected"
 }
 
 # stretches of face.mp4 with no word onsets near the loop seams, for silent mouthing copies
@@ -123,6 +126,47 @@ class Chorus:
         base_size = p[4].get("size", [480, 600])
         return say(self.c, at, sample, pos=p[2], scale=p[3], gain=gain, size=base_size, pop=pop,
                    fx=fx if fx is not None else p[4].get("say_fx"), id=f"say{j}:{sample}@{at:.2f}", **kw)
+
+    def speak_real(self, j, at, stem, key, k=1, first=None, last=None, catalog="preachers", pop=1.8, gain=2.4,
+                   sub=None, fx=None, pre=0.08, post=0.15):
+        """Copy j steps forward as a REAL speaker: a phrase of a prepared face-tracked line (s1_lib.speech:
+        media/derived/preachers or media/derived/israeli_voices) whose word `key` (k-th occurrence) starts
+        exactly at `at`; the phrase runs from word `first` to word `last` (each `word` or (word, k); default:
+        the key word alone). Same place, scale and pop as a Hyde word, the copy hidden meanwhile. A line not
+        in English carries meta.lang and the subtitle `sub` (the faithful translation of exactly the phrase)."""
+        import s1_lib
+        p = self.where(j, at)
+        if p is None:
+            raise ValueError(f"copy {j} not on screen at {at}")
+        base = s1_lib.SPEECH_DIRS[catalog]
+        ln = s1_lib.speech(stem, base)
+
+        def find(spec):
+            word, n = spec if isinstance(spec, tuple) else (spec, 1)
+            hits = [w for w in ln["words"] if w["w"].lower().strip(".,?!'\"") == word.lower()]
+            if len(hits) < n:
+                raise KeyError(f"{stem}: no {word!r} #{n}")
+            return hits[n - 1]
+        kw = find((key, k))
+        a = max(0.0, (find(first)["start"] if first else kw["start"]) - pre)
+        b = min(ln["span"][1] - ln["span"][0], (find(last)["end"] if last else kw["end"]) + post)
+        t0 = at - (kw["start"] - a)
+        t1 = t0 + (b - a)
+        self.mutes[j].append((t0, t1))
+        L = {"id": f"real{j}:{stem}@{at:.2f}", "tags": ["head", "say", "chorus", "real-line"],
+             "src": f"{base}/{stem}.mp4", "t0": round(t0, 4), "t1": round(t1, 4), "time": {"in": round(a, 3), "speed": 1.0},
+             "size": [480, 600], "pos": p[2], "scale": mul(p[3], keys([t0, 1.0], [at, pop], [t1, pop * 0.92], ease="smooth")),
+             "mask": {"shape": "oval", "feather": 0.28}, "opacity": 0.95, "fade": {"in": 0.05, "out": 0.08},
+             "audio": {"gain": gain}, "fx": fx if fx is not None else p[4].get("say_fx", []),
+             "meta": {"catalog": catalog, "clip": stem, "seg": 0, "hits_song": [round(at, 3)], "word": key,
+                      "people": [{"name": ln["person"], "role": ln["role"], "date": ln["date"],
+                                  "source": ln["source_url"]}]}}
+        if ln.get("lang", "en") != "en":
+            if not sub:
+                raise ValueError(f"{stem}: a {ln['lang']} phrase needs its subtitle")
+            L["meta"]["lang"] = ln["lang"]
+            self.c.subtitle(sub, t0 - 0.05, t1 - t0 + 0.45, id=f"sub:{L['id']}", meta={"z": 6, "lang": ln["lang"]})
+        return self.c.add(L)
 
     def stutter(self, j, at, ref="missiles#4", stutter=2, div=0.25, pop=2.0, gain=1.0, fx=None, **kw):
         """Like speak, through comp.say (the time lane's sampler): "mi-mi-missiles" with the

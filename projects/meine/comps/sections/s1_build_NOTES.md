@@ -88,3 +88,14 @@ Voice over music (speech-active RMS), at the final gains:
   - Should Isaac move to the very end of the section?
   - Should Graham's lower-third carry his death year?
   - Bachmann's line and Vaughn's song come from the Iran strikes (Bachmann is dated, Vaughn's card says so). Is Bachmann over Maghazi OK?
+
+## Israeli voices (2026-10-24)
+
+- **Viewer bars 109-111 (206.0-211.2):** Netanyahu, in Hebrew and subtitled, answers Rev. Isaac:
+  "Remember what Amalek did to you," we were commanded. We remember.
+  - AMALEK lands on viewer bar 110, the Dar al-Muttaqin fireball.
+  - He is a still oval on the left, beside the untreated window.
+  - Catalog and sources: `projects/meine/israeli_voices/` (voices.json, NOTES.md).
+- **`speaker()` changes:**
+  - It takes `catalog=` ("preachers" or "israeli_voices").
+  - A non-English line gets `meta.lang` and one subtitle per translated line (`subtitles()`, using `comp.subtitle`).

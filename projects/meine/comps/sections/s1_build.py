@@ -157,7 +157,9 @@ def supply_chain(c):
                fx=ARCHIVE, id="jdam-noses")
     # 32-35: the MK-84 ship at Ashdod, crane cycle (5 s) to two bars, screened over Meine
     ash = c.seg("weapons:imod-mk84-ashdod-feb2025#1")
-    L.groove(c, ash, at=b32, dur=b36 - b32, cycle=5.0, beats=8, src_in=11.0, blend="screen", opacity=0.7,
+    # normal blend at full strength: screened at 0.7 over Meine's bright sky it washed out to an
+    # unreadable haze under Walberg's "Nagasaki" (ember: "I have no idea what those are")
+    L.groove(c, ash, at=b32, dur=b36 - b32, cycle=5.0, beats=8, src_in=11.0, blend="normal", opacity=1.0,
              fade={"in": 0.3, "out": 0.4}, fx=[{"op": "levels", "black": 0.12, "white": 0.85}],
              id="ashdod", **L.picture(ash, crop=(0.12, 0.14, 1, 1)))   # IMOD camera icon top-left
     # 36-39: the first US munitions C-17 into Nevatim (vertical phone video: a tall window)
@@ -378,7 +380,7 @@ def lower_third(c, lines, at, dur, id):
     """One name card at a time, in the letterbox under the picture. A new card cuts the previous one
     short, but each stays up at least 2 s (the new one waits if it must)."""
     prev = getattr(c, "_s1_card", None)
-    if prev is not None and prev["t1"] > at:
+    if prev is not None and prev["t0"] <= at < prev["t1"]:   # (only a card still up; s2 adds some out of order)
         at = max(at, prev["t0"] + 2.0)
         prev["t1"] = round(at, 4)
     lay = c.text_card(lines, at, dur, pos=(110, 932), size=36, id=id, tags=["text", "lower-third"], meta={"z": 6})
@@ -388,7 +390,7 @@ def lower_third(c, lines, at, dur, id):
 
 def speaker(c, stem, word, at, k=1, oval=True, pos=(720, 540), scale=None, size=None, crop=(0, 0, 1, 1),
             src_in=0.0, until=None, play=False, swell=(), gain=2.8, duck=0.5, card=None, card_dur=None, z=3.5,
-            fade=(0.25, 0.4), video=True, opacity=0.92, id=None, **extra):
+            fade=(0.25, 0.4), video=True, opacity=0.92, id=None, catalog="preachers", **extra):
     """A real politician or preacher, named on screen, saying a line from media/derived/preachers.
     `word` (its k-th occurrence) starts exactly at song time `at`, which is on the grid.
     oval: a floating face-tracked head, like Hyde's; else a framed window (size, crop) of the broadcast.
@@ -396,16 +398,20 @@ def speaker(c, stem, word, at, k=1, oval=True, pos=(720, 540), scale=None, size=
     arsenal, the strike-cam and the beds, never over the dead, where speakers stay still and plain.
     swell: words on which the head swells (like Hyde's copies on "missiles"). video=False: voice only.
     card: lower-third lines, set in the letterbox below the picture so they never cover a face or a
-    victim. duck: the music dip under the voice (music_dip applies ember's depth rule)."""
-    ln = L.speech(stem)
+    victim. duck: the music dip under the voice (music_dip applies ember's depth rule).
+    catalog: "preachers" (the US speakers) or "israeli_voices" (projects/meine/israeli_voices/voices.json);
+    a line not in English gets meta.lang and a subtitle per translated line (subtitles(), in the letterbox
+    under the lower-third)."""
+    base = L.SPEECH_DIRS[catalog]
+    ln = L.speech(stem, base)
     zero = at - L.word_at(ln, word, k)                 # song time of the clip's first frame
     t0 = zero + src_in
     t1 = until if until is not None else zero + (ln["span"][1] - ln["span"][0])
-    src = f"{L.PREACH}/{stem}.mp4"
+    src = f"{base}/{stem}.mp4"
     lay = {"id": id or f"spk:{stem}", "tags": (["head", "speaker"] if oval else ["speaker", "window"]),
            "src": src, "t0": round(t0, 4), "t1": round(t1, 4), "time": {"in": round(src_in, 3), "speed": 1.0},
            "audio": {"gain": gain}, "fade": {"in": fade[0], "out": fade[1]}, "opacity": opacity,
-           "meta": {"catalog": "preachers", "clip": stem, "seg": 0, "hits_song": [round(at, 3)], "z": z,
+           "meta": {"catalog": catalog, "clip": stem, "seg": 0, "hits_song": [round(at, 3)], "z": z,
                     "people": [{"name": ln["person"], "role": ln["role"], "date": ln["date"],
                                 "source": ln["source_url"]}]}}
     sc = scale if scale is not None else (0.6 if oval else 1.0)
@@ -434,7 +440,24 @@ def speaker(c, stem, word, at, k=1, oval=True, pos=(720, 540), scale=None, size=
         music_dip(c, t0, t1, duck)
     if card:
         lower_third(c, card, t0 + 0.15, card_dur or min(max(t1 - t0, 4.0), 7.0), id=f"card:{stem}")
+    if ln.get("lang", "en") != "en":
+        lay["meta"]["lang"] = ln["lang"]
+        subtitles(c, ln, zero, t1, stem)
     return lay
+
+
+def subtitles(c, ln, zero, t1, stem):
+    """One subtitle per translated line of a prepared clip (its sidecar's lines, in the clip's clock),
+    shown from just before the line starts until the next begins (or 0.6 s after it ends), never past
+    the speaker's layer. Set in the letterbox under the picture, below the lower-third."""
+    lines = [x for x in ln.get("lines", []) if x.get("text_en")]
+    for i, x in enumerate(lines):
+        a = zero + x["start"] - 0.1
+        b = zero + lines[i + 1]["start"] - 0.1 if i + 1 < len(lines) else zero + x["end"] + 0.6
+        b = min(b, t1 + 0.3)
+        c.subtitle(x["text_en"], a, b - a, id=f"sub:{stem}.{i}", meta={"z": 6, "lang": ln["lang"],
+                                                                      "text_he": x.get("text_he"),
+                                                                      "translation_source": x.get("translation_source")})
 
 
 # ---------------------------------------------------------------- bars 21-42: the politicians
@@ -454,9 +477,10 @@ def politicians(c):
             swell=("Bible", "blessed"), card=["Sen. Ted Cruz (R-TX)", "The Tucker Carlson Show  ·  18 Jun 2025"])
     # ... and Tucker Carlson: "Where is that?", WHERE on bar 31 (the broadcast's own cut from Cruz to him)
     # The source opens on 8 frames of Cruz before cutting to Carlson (0.267 s in): his voice starts on time,
-    # the picture only once it has settled on him, zoomed to his head and shoulders (ember).
+    # the picture only once it has settled on him, zoomed to his head and shoulders (ember; face measured at
+    # x 0.53-0.68, y 0.12-0.45 of the frame).
     tucker = speaker(c, "cruz_tucker_bless__where_is_that", "Where", bar(31), oval=False, size=(400, 225),
-                     pos=[720, 330], crop=(0.32, 0.04, 0.68, 0.40), fade=(0.06, 0.3), z=3.6,
+                     pos=[720, 330], crop=(0.35, 0.08, 0.85, 0.58), fade=(0.06, 0.3), z=3.6,
                      card=["Tucker Carlson", "to Sen. Ted Cruz  ·  The Tucker Carlson Show  ·  18 Jun 2025"],
                      card_dur=3.0)
     tucker["opacity"] = {"k": [[tucker["t0"], 0.0], [tucker["t0"] + 8 / 29.97, 0.92]], "ease": "hold"}
@@ -544,6 +568,21 @@ def preachers(c):
             crop=(0.33, 0.0, 0.83, 0.75), gain=2.4, duck=0.3, z=5, opacity=1.0, fade=(0.5, 0.6),
             card=["Rev. Munther Isaac", "Lutheran pastor, Bethlehem  ·  “Christ in the Rubble”"
                   " Christmas liturgy  ·  23 Dec 2023"])
+
+
+# ---------------------------------------------------------------- viewer bars 108-111: Israel answers Isaac
+def israeli_voices(c):
+    """ember: "perspectives from some israeli voices. Settlers and politicians and whatnot" (bars 108-150).
+    s1 holds the first: right after Rev. Munther Isaac ("the Bible is weaponized against us"), Netanyahu
+    quotes it. His own voice in Hebrew (the GPO feed), subtitled; catalog projects/meine/israeli_voices.
+    He is still and plain, to the left of the Dar al-Muttaqin window: the strike he stands beside is
+    untreated footage of a street of tents."""
+    # Netanyahu, 28 Oct 2023: '"Remember what Amalek did to you," we were commanded. We remember.'
+    # AMALEK on code bar 109's downbeat (viewer 110), where the mosque fireball lands; he begins as Isaac's
+    # "sacred text" ends (206.0) and is done (211.2) before Hyde's return says "they need..." (212.4)
+    speaker(c, "netanyahu_amalek_pmo__amalek", "עמלק", c.bar(109), pos=[245, 470], scale=0.42, gain=2.4, duck=0.5,
+            z=5, fade=(0.3, 0.4), catalog="israeli_voices",
+            card=["Benjamin Netanyahu", "Prime Minister of Israel  ·  press conference, Tel Aviv  ·  28 Oct 2023"])
 
 
 def build_up(c):
@@ -910,6 +949,7 @@ def build(c):
     speak(c)
     politicians(c)
     preachers(c)
+    israeli_voices(c)
     mine = c.layers[n0:]
     for x in mine:      # footage stays inside Meine's picture area; heads and lower-thirds may cross the bars
         if not {"head", "say", "voice", "text"} & set(x.get("tags", [])):

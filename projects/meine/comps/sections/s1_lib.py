@@ -351,11 +351,14 @@ def groove(c, seg, at, dur, cycle, beats, src_in=None, id=None, **props):
 
 # ---- real speakers (tools/preacher_prep.py -> media/derived/preachers/<clip>__<line>.mp4 + .json) ----
 PREACH = "media/derived/preachers"
+IVOICES = "media/derived/israeli_voices"     # tools/preacher_prep.py --catalog israeli_voices
+SPEECH_DIRS = {"preachers": PREACH, "israeli_voices": IVOICES}
 
 
-def speech(stem):
-    """The sidecar of a prepared line: span in the raw file, speaker, words in the clip's own clock."""
-    return json.loads((ROOT / PREACH / f"{stem}.json").read_text())
+def speech(stem, base=PREACH):
+    """The sidecar of a prepared line: span in the raw file, speaker, words in the clip's own clock (and,
+    for a translated catalog, its lang and lines: text, translation and source, in the clip's clock)."""
+    return json.loads((ROOT / base / f"{stem}.json").read_text())
 
 
 def word_at(ln, word, k=1):

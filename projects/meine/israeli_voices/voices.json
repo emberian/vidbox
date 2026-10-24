@@ -1,0 +1,245 @@
+{
+ "generated": "2026-10-24",
+ "times_are": "seconds within the local file (clip_start_in_source gives the offset in the source video)",
+ "about": "Israeli politicians, officials and settler leaders on the record about Gaza, for 'Meine' (see NOTES.md). Every line is the speaker's own words from the original broadcast; Hebrew lines carry a faithful English subtitle and its source.",
+ "clips": [
+  {
+   "id": "netanyahu_amalek_pmo",
+   "person": "Benjamin Netanyahu",
+   "role": "Prime Minister of Israel",
+   "lang": "he",
+   "file": "media/israeli_voices/raw/netanyahu_amalek_pmo.mp4",
+   "words_json": "media/israeli_voices/words/netanyahu_amalek_pmo.words.json",
+   "source_url": "https://www.youtube.com/watch?v=lIPkoDk6isc",
+   "clip_start_in_source": "1:30",
+   "publisher": "IsraeliPM (Prime Minister's Office YouTube channel); video: Government Press Office (GPO)",
+   "date": "2023-10-28",
+   "venue": "joint press conference with Gallant and Gantz, the Kirya, Tel Aviv, as the ground operation widened",
+   "provenance": "the PMO's own upload of the GPO live feed; the source South Africa cites (ICJ application, fn 446)",
+   "icj": "South Africa v. Israel, Application instituting proceedings (29 Dec 2023), para 101, fn 446",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": "״זכור את אשר עשה לך עמלק״, נצטווינו.",
+     "text_en": "“Remember what Amalek did to you,” we were commanded.",
+     "translation_source": "own translation of the Hebrew audio (Deut. 25:17 quoted). The ICJ application quotes Sky News' simultaneous interpretation of the same passage: 'you must remember what Amalek has done to you, says our Holy Bible. And we do remember'",
+     "start": 22.57,
+     "end": 25.37
+    },
+    {
+     "text_he": "אנו זוכרים",
+     "text_en": "We remember.",
+     "translation_source": "own translation; matches the ICJ/Sky rendering 'And we do remember'",
+     "start": 26.75,
+     "end": 27.29
+    }
+   ],
+   "context": "Opening statement, 1:00-2:00 of the broadcast: the troops 'are committed to eradicating this evil from the world, for our existence and, I add, for the good of all humanity. The whole nation and its leadership embrace them... \"Remember what Amalek did to you,\" we were commanded. We remember and we are fighting.' The cut ends at the pause after 'We remember'; the sentence continues 'and we are fighting' (omitted for time; the meaning is unchanged). Later in the same statement (3:24-3:34): 'The IDF does everything to avoid harming the uninvolved. I again call on the civilian population to evacuate to a safe zone in the south of the Strip.' The biblical passage (1 Samuel 15:3) is quoted in the ICJ application.",
+   "notes": "The preachers catalog's netanyahu_amalek_mee (MEE, from Sky News) has English audio that is Sky's simultaneous INTERPRETER, not Netanyahu's own voice: its English tracks the Hebrew statement line for line with the same timing ('the 73 October War', 'never again is now' 49 s after 'Amalek', exactly as in the Hebrew). This entry uses his own voice in Hebrew, with subtitles."
+  },
+  {
+   "id": "gallant_siege_knesset99",
+   "person": "Yoav Gallant",
+   "role": "Defence Minister of Israel",
+   "lang": "he",
+   "file": "media/israeli_voices/raw/gallant_siege_knesset99.mp4",
+   "words_json": "media/israeli_voices/words/gallant_siege_knesset99.words.json",
+   "source_url": "https://www.youtube.com/watch?v=1nxvS9VY-t0",
+   "clip_start_in_source": "0:00",
+   "publisher": "Knesset Channel (ערוץ כנסת 99), its own upload; the video the ICJ application cites (fn 452)",
+   "date": "2023-10-09",
+   "venue": "statement after a situation assessment at the IDF Southern Command, Beersheba (Times of Israel)",
+   "provenance": "Knesset Channel upload; the channel's title quotes the line: 'אנחנו נלחמים בחיות אדם- ואנחנו נוהגים בהתאם. אנחנו מטילים מצור על העיר עזה'",
+   "icj": "South Africa v. Israel, Application, para 101, fn 452",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": "אנחנו מטילים מצור מוחלט על העיר עזה.",
+     "text_en": "We are imposing a complete siege on Gaza City.",
+     "translation_source": "ICJ application para 101 ('imposing a complete siege on Gaza') and Times of Israel (E. Fabian, 9 Oct 2023), adjusted to this audio: he says העיר עזה, 'the city of Gaza'",
+     "start": 3.96,
+     "end": 8.8
+    },
+    {
+     "text_he": "אין חשמל, אין מזון, אין מים, אין דלק.",
+     "text_en": "No electricity, no food, no water, no fuel.",
+     "translation_source": "ICJ application para 101 (this audio includes 'no water', which the Times of Israel text omits)",
+     "start": 9.42,
+     "end": 13.99
+    },
+    {
+     "text_he": "הכל סגור.",
+     "text_en": "Everything is closed.",
+     "translation_source": "ICJ application para 101 / Times of Israel",
+     "start": 14.65,
+     "end": 15.67
+    },
+    {
+     "text_he": "אנחנו נלחמים בחיות אדם, ואנחנו נוהגים בהתאם.",
+     "text_en": "We are fighting human animals, and we are acting accordingly.",
+     "translation_source": "ICJ application para 101 / Times of Israel ('We are fighting human animals and we are acting accordingly'); Whisper writes נרחמים, the Knesset Channel's own title has נלחמים",
+     "start": 15.71,
+     "end": 19.65
+    }
+   ],
+   "context": "Two days after the 7 October attack. The whole 20 s clip is used, nothing omitted. Gallant's office and supporters said 'human animals' referred to Hamas; HuffPost (9 Oct 2023) noted that 'it appears that Gallant was specifically referring to Hamas fighters in that comment', while the siege he announces applies to all of Gaza City. Cited by South Africa (ICJ, para 101) and by Amnesty International.",
+   "notes": "Laid as one continuous take; Hyde's 'MISSILES' at bar 125 falls inside Gallant's own 0.6 s pause after 'Gaza City' (nothing is cut or moved)."
+  },
+  {
+   "id": "gallant_troops_kipa",
+   "person": "Yoav Gallant",
+   "role": "Defence Minister of Israel",
+   "lang": "he",
+   "file": "media/israeli_voices/raw/gallant_troops_kipa_70-110.mp4",
+   "words_json": "media/israeli_voices/words/gallant_troops_kipa_70-110.words.json",
+   "source_url": "https://www.youtube.com/watch?v=l9wx7e4u-xM",
+   "clip_start_in_source": "1:10 (the local file is 1:10-1:50 of the source)",
+   "publisher": "Kipa News (חדשות כיפה); 'filmed by Ariel Harmoni, Ministry of Defense' (its title); the video the ICJ application cites (fn 453, 454)",
+   "date": "2023-10-10",
+   "venue": "addressing troops on the Gaza border (Ministry of Defense footage; soldiers' faces blurred at source)",
+   "provenance": "Ministry of Defense footage, published by Kipa News; translation in the Times of Israel (10 Oct 2023) and Bloomberg, cited by the ICJ application",
+   "icj": "South Africa v. Israel, Application, para 101, fn 453-454",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": "אין פשרות.",
+     "text_en": "No compromises.",
+     "translation_source": "own translation",
+     "start": 24.85,
+     "end": 25.39
+    },
+    {
+     "text_he": "עזה לא תחזור להיות מה שהייתה, וחמאס לא יהיה.",
+     "text_en": "Gaza won't return to what it was, and Hamas will not exist.",
+     "translation_source": "ICJ application para 101 / Times of Israel ('Gaza won't return to what it was before'); Whisper's text here is garbled (אז זה ... מה שהיא ידעה), the reading follows the published translation and the audio",
+     "start": 26.25,
+     "end": 29.1
+    },
+    {
+     "text_he": "נחסל את הכל.",
+     "text_en": "We will eliminate everything.",
+     "translation_source": "ICJ application para 101 (Bloomberg's translation, 'We will eliminate everything')",
+     "start": 29.43,
+     "end": 30.23
+    }
+   ],
+   "context": "Four minutes, to soldiers who had fought on 7 October. Just before (1:16-1:35 of the source): 'I have released all the restraints... we kill everyone who fights us, whether there is one terrorist or a hundred, from the air, from the land, with tanks, with bulldozers, every means.' Just after: 'If it doesn't take a day, it will take a week; it will take weeks or even months. We will reach every place.' Earlier (0:38-0:52): 'you saw what we are fighting. We are fighting human animals. This is the ISIS of Gaza.'",
+   "notes": "Face small (wide hand-held shot); used as a small oval head."
+  },
+  {
+   "id": "dichter_nakba_c12",
+   "person": "Avi Dichter",
+   "role": "Minister of Agriculture; member of the security cabinet; former head of the Shin Bet",
+   "lang": "he",
+   "file": "media/israeli_voices/raw/dichter_nakba_c12_archive.mp4",
+   "words_json": "media/israeli_voices/words/dichter_nakba_c12_archive.words.json",
+   "source_url": "https://archive.org/details/new-gaza-nakba_202311",
+   "source_url_alt": "https://www.youtube.com/watch?v=Uz2DOHU6drk (Middle East Eye's subtitled re-edit of the same Channel 12 segment)",
+   "clip_start_in_source": "0:00",
+   "publisher": "Channel 12 News (Keshet 12), 'Meet the Press' (פגוש את העיתונות); the broadcast segment as archived on archive.org (from Hanno Hauenstein's post, the source the ICJ application cites, fn 463)",
+   "date": "2023-11-11",
+   "venue": "Channel 12 'Meet the Press', studio interview",
+   "provenance": "the Channel 12 broadcast itself (its chyrons and graphics intact); widely reported (Haaretz, Times of Israel, ynet, Maariv, NBC); Netanyahu rebuked ministers the next day",
+   "icj": "South Africa v. Israel, Application, para 101, fn 463",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": "אנחנו עכשיו מגלגלים בעצם את נכבת עזה,",
+     "text_en": "We are now actually rolling out the Gaza Nakba,",
+     "translation_source": "ICJ application para 101 ('We are now actually rolling out the Gaza Nakba'); Haaretz: 'We are now in fact unleashing the Gaza Nakba'",
+     "start": 33.09,
+     "end": 36.97
+    },
+    {
+     "text_he": "אם תרצה, נכבת עזה.",
+     "text_en": "if you like, the Gaza Nakba.",
+     "translation_source": "own translation",
+     "start": 37.07,
+     "end": 38.37
+    }
+   ],
+   "context": "The host asks whether the images of a million Gazans walking south with white flags are 'a Nakba, or something temporary'. After this line Dichter explains: 'Operationally there is no way to wage a war as the IDF wants to inside Gaza when the masses are between the tanks and the soldiers... It's the Gaza Nakba 2023.' Asked whether that is how it will end, he says he doesn't know; 'Gaza City sits on a third of the Strip.' Whisper writes נקבת for נכבת.",
+   "notes": "The lower-third gives the question he was answering."
+  },
+  {
+   "id": "weiss_arutz7",
+   "person": "Daniella Weiss",
+   "role": "founder and director, Nachala settlement movement",
+   "lang": "en",
+   "file": "media/israeli_voices/raw/weiss_arutz7.mp4",
+   "words_json": "media/israeli_voices/words/weiss_arutz7.words.json",
+   "source_url": "https://www.youtube.com/watch?v=LVwSwpVVXpw",
+   "clip_start_in_source": "0:00",
+   "publisher": "Israel National News - Arutz Sheva (Israeli settler-aligned outlet), its own upload",
+   "date": "2024-10-21 (uploaded 2024-10-22)",
+   "venue": "Nachala's conference on settling Gaza, at the Gaza border near Be'eri (Sukkot 2024)",
+   "provenance": "Arutz Sheva's own interview, in English; lower-third 'Daniella Weiss, Founder and Director, Nachala'",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": null,
+     "text_en": "But the purpose is to settle the entire area so that Arabs will not stay here.",
+     "translation_source": "English original",
+     "start": 55.09,
+     "end": 60.48
+    }
+   ],
+   "context": "She continues: 'Arabs will go all over the world, will not stay here, because they lost the right to be in Gaza in the massacre of the 7th of October. And the idea is to copy the mechanism that worked in Judea and Samaria.' Earlier: 700 families in six groups 'intend to settle in different locations, including Gush Katif, including the northern part of Gaza'.",
+   "notes": "Settler leader, the face of the settle-Gaza movement (she also led the Jan 2024 Jerusalem 'Settlement Brings Security' conference)."
+  },
+  {
+   "id": "eiland_timesradio",
+   "person": "Giora Eiland",
+   "role": "Maj. Gen. (res.), former head of Israel's National Security Council",
+   "lang": "en",
+   "file": "media/israeli_voices/raw/eiland_timesradio.mp4",
+   "words_json": "media/israeli_voices/words/eiland_timesradio.words.json",
+   "source_url": "https://www.youtube.com/watch?v=CRHz0dZwF2A",
+   "clip_start_in_source": "4:25",
+   "publisher": "Times Radio (The Times), its own upload ('How Israel plan to destroy Hamas')",
+   "date": "2023-10-12",
+   "venue": "Times Radio interview (video call)",
+   "provenance": "Times Radio's own upload; the interview the ICJ application quotes (para 102, fn 472)",
+   "icj": "South Africa v. Israel, Application, para 102, fn 472",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": null,
+     "text_en": "...is to create such a huge pressure on Gaza that Gaza will become an area where people cannot live.",
+     "translation_source": "English original",
+     "start": 13.61,
+     "end": 20.71
+    }
+   ],
+   "context": "Asked about a ground invasion, he calls it one option; 'the other option, and that's what I strongly think that we should do, is to create such a huge pressure on Gaza that Gaza will become an area where people cannot live. People cannot live until Hamas is destroyed, which means that Israel not only stop to supply energies, diesel, water, food... but we should prevent any other possible assistance by others.' He was a Defence Ministry adviser in the war's first weeks (ynet, 26 Oct 2023, cited by the ICJ application).",
+   "notes": "The cut starts at 'is to create'; the lower-third says he is proposing Israel's course."
+  },
+  {
+   "id": "herzog_presser_i24",
+   "person": "Isaac Herzog",
+   "role": "President of Israel",
+   "lang": "en",
+   "file": "media/israeli_voices/raw/herzog_presser_i24_40-90.mp4",
+   "words_json": "media/israeli_voices/words/herzog_presser_i24_40-90.words.json",
+   "source_url": "https://www.youtube.com/watch?v=Om3KRrL_6vM",
+   "clip_start_in_source": "3:40 (the local file is 3:40-4:30 of the source)",
+   "publisher": "i24NEWS English, its broadcast of the press conference",
+   "date": "2023-10-12",
+   "venue": "press conference for the foreign media, President's Residence, Jerusalem",
+   "provenance": "i24NEWS's live broadcast; reported by ITV News (Rageh Omaar asked the question), cited by the ICJ application (para 101, fn 449)",
+   "icj": "South Africa v. Israel, Application, para 101, fn 449",
+   "scope": "israel",
+   "lines": [
+    {
+     "text_he": null,
+     "text_en": "It's an entire nation out there that is responsible.",
+     "translation_source": "English original",
+     "start": 16.71,
+     "end": 21.57
+    }
+   ],
+   "context": "Answering ITV's Rageh Omaar, who asked what Israel could do to alleviate the conflict's impact on 2 million civilians, 'many of whom have nothing to do with Hamas'. Herzog: 'there's a state... that has built a machine of evil right at our doorstep. It's an entire nation out there that is responsible. It's not true, this rhetoric about civilians not aware, not involved. It's absolutely not true. They could have risen up, they could have fought against that evil regime...' Later in the same press conference (10:38, media/israeli_voices/raw/herzog_presser_i24_context.mp4): 'I agree there are many, many innocent Palestinians who don't agree to this, but unfortunately in their homes there are missiles shooting at us.' The cut is the first sentence only; the rest restates it.",
+   "notes": ""
+  }
+ ]
+}

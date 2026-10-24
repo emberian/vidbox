@@ -117,6 +117,10 @@ def resolve_word(words, ref):
 # ember: "I'd like to consider US range launches fully in-scope as well." (the arsenal itself, not
 # its use in other wars). "region" (the wider war, other actors) exists but is opt-in.
 IN_SCOPE = ("gaza", "israel", "arms-to-israel", "politics-israel", "us-arsenal")
+# speaker catalogs whose clips carry a footage scope (projects/<p>/<path>): a speaker layer names its
+# catalog in meta.catalog and its prepared line in meta.clip ("<clip id>__<label>"), and comp.save checks
+# that clip's scope like footage. (The US preachers' catalog predates scopes and is not listed.)
+SPEAKER_CATALOGS = {"israeli_voices": "israeli_voices/voices.json"}
 
 
 class Seg:
@@ -560,6 +564,30 @@ class Comp:
         self.layers.append(layer)
         return layer
 
+    def subtitle(self, text, at, dur, cy=1046, size=30, fade=0.12, id=None, **props):
+        """A subtitle: one line of text centred at (720, cy) in canvas px (default: the letterbox under
+        the picture, below the lower-third), screen-blended so only the text shows. For translated
+        speech: tagged "subtitle" (render/drc.py's subtitled rule looks for it). Cached in
+        media/derived/text/."""
+        import hashlib
+        from PIL import Image, ImageDraw, ImageFont
+        key = hashlib.sha1(json.dumps(["subtitle", text, size]).encode()).hexdigest()[:16]
+        out = ROOT / "media/derived/text" / f"sub_{key}.png"
+        if not out.exists():
+            out.parent.mkdir(parents=True, exist_ok=True)
+            font = ImageFont.truetype("/System/Library/Fonts/HelveticaNeue.ttc", size, index=0)
+            b = font.getbbox(text)
+            w, h = b[2] + 12, int(size * 1.35) + 8
+            img = Image.new("RGB", (w + w % 2, h + h % 2), "black")
+            ImageDraw.Draw(img).text((6, 4), text, font=font, fill=(235, 235, 235))
+            img.save(out)
+        layer = {"id": id or f"sub:{text[:24]}@{at:.2f}", "tags": ["text", "subtitle"],
+                 "src": str(out.relative_to(ROOT)), "t0": round(at, 4), "t1": round(at + dur, 4),
+                 "time": {"hold": 0.0}, "fit": "native", "pos": [720, cy], "blend": "screen",
+                 "fade": {"in": fade, "out": fade}, **props}
+        self.layers.append(layer)
+        return layer
+
     def _src_span(self, L):
         """Source-time interval a footage layer shows (in/speed, map, hold; None if unknown)."""
         T = L.get("time", {})
@@ -578,7 +606,8 @@ class Comp:
         by = {}
         for L in self.layers:
             m = L.get("meta", {})
-            sp = self._src_span(L) if m.get("catalog") else None
+            # footage only: a speaker's line said again (the chorus rotation) is a refrain, not repeated footage
+            sp = self._src_span(L) if m.get("catalog") and m.get("catalog") not in ("preachers", *SPEAKER_CATALOGS) else None
             if sp:
                 by.setdefault((m["catalog"], m["clip"]), []).append((L["t0"], sp))
         out = []
@@ -660,6 +689,17 @@ class Comp:
                     if s0 is not None and sg["in"] - 1e-3 <= s0 <= sg["out"] + 1e-3), 0)
         return Seg(cat, clip, idx)
 
+    def speaker_scope(self, m):
+        """Scope of a speaker layer's clip (meta.catalog in SPEAKER_CATALOGS), or None if unknown."""
+        if not hasattr(self, "_speaker_cat"):
+            self._speaker_cat = {}
+            for name, rel in SPEAKER_CATALOGS.items():
+                f = self.pdir / rel
+                if f.exists():
+                    self._speaker_cat[name] = {c["id"]: c for c in json.loads(f.read_text())["clips"]}
+        clip = self._speaker_cat.get(m.get("catalog"), {}).get(str(m.get("clip", "")).split("__")[0])
+        return clip.get("scope") if clip else None
+
     def rule_violations(self, layers, post=()):
         """([(layer id, op)] heads-only fx on footage, [(layer id, scope)] footage out of scope)."""
         # ember: "do *not* use the voronoi effect on war footage, but it looks AMAZING on the
@@ -674,6 +714,10 @@ class Comp:
             heads_only += [(L["id"], f["op"]) for f in L.get("fx", []) if f.get("op") in HEADS_ONLY]
             if sg is not None and sg.scope is not None and sg.scope not in IN_SCOPE:
                 out_of_scope.append((L["id"], sg.scope))
+            if sg is None and L.get("meta", {}).get("catalog") in SPEAKER_CATALOGS:
+                sc = self.speaker_scope(L["meta"])
+                if sc not in IN_SCOPE:
+                    out_of_scope.append((L["id"], sc or "unknown speaker clip"))
         return heads_only, out_of_scope
 
     def save(self, path=None):

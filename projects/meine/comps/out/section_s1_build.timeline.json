@@ -359,27 +359,43 @@
      0.3
     ],
     [
+     205.808,
+     0.3
+    ],
+    [
+     205.958,
+     0.3
+    ],
+    [
      206.212,
      0.3
     ],
     [
      207.68,
-     0.8138
+     0.5
     ],
     [
      207.83,
-     0.6
+     0.5
     ],
     [
      208.212,
-     0.6
+     0.5
     ],
     [
      209.734,
-     0.6
+     0.5
+    ],
+    [
+     211.158,
+     0.5
     ],
     [
      211.734,
+     0.644
+    ],
+    [
+     213.158,
      1.0
     ],
     [
@@ -2110,8 +2126,8 @@
      ]
     }
    },
-   "blend": "screen",
-   "opacity": 0.7,
+   "blend": "normal",
+   "opacity": 1.0,
    "fade": {
     "in": 0.3,
     "out": 0.4
@@ -93454,7 +93470,19 @@
     "in": 0.06,
     "out": 0.3
    },
-   "opacity": 0.92,
+   "opacity": {
+    "k": [
+     [
+      59.122,
+      0.0
+     ],
+     [
+      59.38893360026693,
+      0.92
+     ]
+    ],
+    "ease": "hold"
+   },
    "meta": {
     "catalog": "preachers",
     "clip": "cruz_tucker_bless__where_is_that",
@@ -93477,10 +93505,10 @@
     225
    ],
    "crop": [
+    0.35,
     0.08,
-    0.08,
-    0.92,
-    0.92
+    0.85,
+    0.58
    ],
    "pos": [
     720,
@@ -94019,6 +94047,59 @@
    "clip": "picture"
   },
   {
+   "id": "spk:netanyahu_amalek_pmo__amalek",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/israeli_voices/netanyahu_amalek_pmo__amalek.mp4",
+   "t0": 205.958,
+   "t1": 211.158,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.4
+   },
+   "fade": {
+    "in": 0.3,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "israeli_voices",
+    "clip": "netanyahu_amalek_pmo__amalek",
+    "seg": 0,
+    "hits_song": [
+     207.83
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "Benjamin Netanyahu",
+      "role": "Prime Minister of Israel",
+      "date": "2023-10-28",
+      "source": "https://www.youtube.com/watch?v=lIPkoDk6isc"
+     }
+    ],
+    "lang": "he"
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    245,
+    470
+   ],
+   "scale": 0.42
+  },
+  {
    "id": "card:graham_mtp_bombs__hiroshima_bombs",
    "tags": [
     "text",
@@ -94432,6 +94513,90 @@
    },
    "meta": {
     "z": 6
+   }
+  },
+  {
+   "id": "card:netanyahu_amalek_pmo__amalek",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/b12baea566f2162d.png",
+   "t0": 206.108,
+   "t1": 211.308,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    433.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "sub:netanyahu_amalek_pmo__amalek.0",
+   "tags": [
+    "text",
+    "subtitle"
+   ],
+   "src": "media/derived/text/sub_ea565e1bcaa1b823.png",
+   "t0": 206.028,
+   "t1": 210.208,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    720,
+    1046
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.12,
+    "out": 0.12
+   },
+   "meta": {
+    "z": 6,
+    "lang": "he",
+    "text_he": "\u05f4\u05d6\u05db\u05d5\u05e8 \u05d0\u05ea \u05d0\u05e9\u05e8 \u05e2\u05e9\u05d4 \u05dc\u05da \u05e2\u05de\u05dc\u05e7\u05f4, \u05e0\u05e6\u05d8\u05d5\u05d5\u05d9\u05e0\u05d5.",
+    "translation_source": "own translation of the Hebrew audio (Deut. 25:17 quoted). The ICJ application quotes Sky News' simultaneous interpretation of the same passage: 'you must remember what Amalek has done to you, says our Holy Bible. And we do remember'"
+   }
+  },
+  {
+   "id": "sub:netanyahu_amalek_pmo__amalek.1",
+   "tags": [
+    "text",
+    "subtitle"
+   ],
+   "src": "media/derived/text/sub_5ade16a06b0eb32d.png",
+   "t0": 210.208,
+   "t1": 211.448,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    720,
+    1046
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.12,
+    "out": 0.12
+   },
+   "meta": {
+    "z": 6,
+    "lang": "he",
+    "text_he": "\u05d0\u05e0\u05d5 \u05d6\u05d5\u05db\u05e8\u05d9\u05dd",
+    "translation_source": "own translation; matches the ICJ/Sky rendering 'And we do remember'"
    }
   }
  ],

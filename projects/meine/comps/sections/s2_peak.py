@@ -326,6 +326,49 @@ def real(c, ref, t0, t1, src_in, gain=1.0, music=0.25, people=None, crop=AP_CROP
     return L
 
 
+# ---- the rotation (ember: "starting around 4 minutes ... we have SO many more voicelines that we could be
+#      sampling than just Hyde going 'missiles' 'missiles'"). A chorus slot (code bar) listed here is spoken
+#      by a REAL speaker's phrase instead of Hyde's word: the US preachers and politicians answered by the
+#      Israeli government, each phrase's key word on the slot's downbeat. Every person here was named by a
+#      lower-third at their first appearance (s1, or israeli_voices() below); Hebrew phrases are subtitled.
+#      Hyde keeps the slots not listed, and gets his other lines (SAMPLES: trillion bajillion, weak and
+#      unprotected, not paying enough, seventy-five percent).
+#   bar: (stem, key word, k, first word, last word, catalog, subtitle) ----
+IVC = "israeli_voices"
+ROTATION = {
+    # 132, the drop into peak 1: a choir of BLESS, three mouths at once (Johnson, Cruz, Bachmann)
+    136: ("graham_mtp_bombs__hiroshima_bombs", "bombs", 1, "Give", "need", "preachers", None),
+    152: ("hibbs_weapons_insulting_god__insulting_god", "God", 1, "We", "people", "preachers", None),
+    154: ("bachmann_blessed__bless_israel", "bless", 1, "an", "Israel", "preachers", None),
+    156: ("netanyahu_amalek_pmo__amalek", "עמלק", 1, "זכור", "נצטבנו", IVC,
+          "\u201cRemember what Amalek did to you,\u201d we were commanded."),
+    158: ("dichter_nakba_c12__nakba", "נקבת", 2, "אם", ("עזה", 2), IVC, "...if you like, the Gaza Nakba."),
+    164: ("huckabee_tucker_take_it_all__take_it_all", "It", 1, "It", "all", "preachers", None),   # IT on 164: the grid window closes 0.3 s before
+    168: "trillion bajillion",
+    170: ("gallant_siege_knesset99__siege", "בחיות", 1, ("אנחנו", 2), "אדם", IVC, "We are fighting human animals"),
+    176: ("evans_bless_thee__bless_thee", "bless", 1, "I", "thee", "preachers", None),
+    188: ("vaughn_wonderful_days__glory", "Oh", 1, "Oh", "glory", "preachers", None),
+    192: ("johnson_bible_bless__bless_curse", "curse", 1, "and", ("Israel", 2), "preachers", None),
+    194: ("hagee_march_victory__victory", "victory", 1, "victory", "aim", "preachers", None),
+    197: ("huckabee_bless_side__blessing_side", "blessing", 1, "I", ("side", 2), "preachers", None),
+    199: "weak and unprotected",
+    201: ("hibbs_weapons_insulting_god__poking_god", "eye", 1, "right", "eye", "preachers", None),
+}
+
+
+def slot(c, ch, j, b, sample, gain=1.0, pop=2.4):
+    """Chorus copy j speaks on code bar b: the rotation's real phrase if listed, else Hyde's `sample`."""
+    r = ROTATION.get(b, sample)
+    if isinstance(r, str):
+        return ch.speak(j, bars(c, b), r, gain=gain, pop=pop)
+    from s1_build import music_dip
+    stem, key, k, first, last, cat, sub = r
+    L = ch.speak_real(j, bars(c, b), stem, key, k=k, first=first, last=last, catalog=cat, sub=sub,
+                      gain=2.4, pop=max(pop, 2.6) * 1.15)   # a real face pops a little larger than his: who speaks reads
+    music_dip(c, L["t0"], L["t1"], 0.55)
+    return L
+
+
 # ---- the chorus: eight copies that split off him, trace shapes, scatter, regroup, and leave ----
 def chorus(c):
     N = 8
@@ -474,11 +517,13 @@ def reentry_and_peak1(c, pools, ch):
                fade={"in": 0.03, "out": 0.15})
 
     # the chorus speaks: all together on the drop into peak 1, then one at a time every four bars
-    for j, smp in ((0, "missiles"), (3, "missiles.b"), (6, "missiles.c")):
-        ch.speak(j, B(132), smp, gain=0.7, pop=2.2)
+    # (rotation: on the drop, three real mouths say BLESS together, where Hyde's three said "missiles")
+    for j, stem in ((0, "johnson_bible_bless__bless_curse"), (3, "cruz_tucker_bless__taught_bless"),
+                    (6, "bachmann_blessed__bless_israel")):
+        ch.speak_real(j, B(132), stem, "bless", gain=1.6, pop=2.2, pre=0.04, post=0.1)
     c.duck(B(132), hold=1.2, depth=0.3)
     for j, b in ((1, 136), (5, 140)):
-        ch.speak(j, B(b), "missiles.d" if b == 136 else "missiles", gain=1.0, pop=2.4)
+        slot(c, ch, j, b, "missiles.d" if b == 136 else "missiles", gain=1.0, pop=2.4)
     ch.speak(2, B(142, 2), "more and more missiles", gain=1.0, pop=2.0)
 
 
@@ -511,7 +556,7 @@ def peak2(c, pools, ch):
     # the chorus speaks every two bars, on the downbeat, round the circle
     smp = ["missiles", "missiles.b", "missiles.c", "missiles.e"]
     for n, b in enumerate(range(152, 167, 2)):
-        ch.speak((n * 3) % 8, B(b), smp[n % 4], gain=0.95, pop=2.4)
+        slot(c, ch, (n * 3) % 8, b, smp[n % 4], gain=0.95, pop=2.4)
     ch.stutter(7, B(165, 2), "missiles#5", stutter=2, gain=1.0)
 
     # 160-163: the strike-cam stops; a grid of four untreated takes from the ground, one per beat,
@@ -636,7 +681,7 @@ def hottest(c, pools, ch):
         if b % 8 == 6:
             ch.stutter(n % 8, B(b), "missiles#5", stutter=3, gain=1.0)
         else:
-            ch.speak(n % 8, B(b), smp[n % 5], gain=0.9, pop=2.6)
+            slot(c, ch, n % 8, b, smp[n % 5], gain=0.9, pop=2.6)
     K.say(c, B(184), "hellfire missiles", pos=(1180, 400), scale=0.3, gain=1.15, pop=None, id="P-hellfire",
           fx=[{"op": "posterize", "levels": 5}, {"op": "gradmap", "palette": "whitehot"}])
 
@@ -668,7 +713,7 @@ def cooling(c, pools, ch):
     c.duck_music(B(204), hold=B(208) - B(204) - 0.2, depth=0.05, attack=0.05, release=4 * c.period)
     c.duck(B(204), hold=B(208) - B(204), depth=0.0, attack=0.05, release=0.2)
     for n, b in enumerate((197, 199, 201)):
-        ch.speak(n + 5, B(b), ("missiles", "missiles.c", "all the missiles they need")[n], gain=0.9, pop=2.2)
+        slot(c, ch, n + 5, b, ("missiles", "missiles.c", "all the missiles they need")[n], gain=0.9, pop=2.2)
 
 
 # ---- 6:36-7:33  plateau (208-237): the dead held; the machine; prayer over the dead; the preacher returns ----
@@ -725,9 +770,19 @@ def plateau(c, pools):
     # him, alone, gaze-steered, only where the dead are not on screen
     pos, sc = K.retime_path(GAZE, 20.0, B(216), B(239), center=(720, 540), k=0.7,
                             scale_k=0.36, clamp=(200, 300, 1240, 780))
-    lines = [(217, "they need more missiles"), (221, "thou shalt give israel missiles"),
-             (233, "not paying enough"), (236, "missiles")]
-    mutes = []
+    # (rotation: over the MK-84 ship and the convoy of bomb containers leaving Ashdod, the real versions
+    #  of his lines: Walberg, voice only as in s1, "We shouldn't be spending a DIME on humanitarian aid"
+    #  (217), and Hagee's CUFI window, "We must give them the weapons of WAR to win that fight" (221))
+    from s1_build import speaker
+    # (named again: their first cards were minutes ago, and his face must not seem to mouth their words)
+    w = speaker(c, "walberg_nagasaki__nagasaki_quick", "dime", B(217), video=False, oval=False, size=(480, 270),
+                until=B(217) + 1.45, gain=2.8, duck=0.55, id="spk:walberg-plateau", card_dur=3.0,
+                card=["Rep. Tim Walberg (R-MI)", "town hall, Dundee, Michigan  ·  25 Mar 2024  ·  audio"])
+    h = speaker(c, "hagee_cufi2024_weapons__weapons_of_war", "war", B(221), oval=False, size=(560, 315),
+                pos=[1050, 420], src_in=7.55, gain=2.8, duck=0.55, z=3.4, fade=(0.3, 0.4), id="spk:hagee-plateau",
+                card_dur=3.5, card=["Pastor John Hagee", "CUFI Summit, Washington  ·  29 Jul 2024"])
+    lines = [(233, "not paying enough"), (236, "missiles")]
+    mutes = [(w["t0"], w["t1"]), (h["t0"], h["t1"])]   # his silent head is gone while they speak
     for b, smp in lines:
         a, anc, e = K.SAMPLES[smp]
         at = B(b)
@@ -771,6 +826,58 @@ def outro(c, pos, sc, kind="walkers"):
     # kind == "head": nothing else; the night road and his shrinking face are the last image
 
 
+# ---- Israeli voices (ember: "perspectives from some israeli voices. Settlers and politicians and whatnot",
+#      bars 108-150 and minute 5). Catalog: projects/meine/israeli_voices/voices.json; prepared by
+#      tools/preacher_prep.py --catalog israeli_voices. Each is named (lower-third) and, in Hebrew, subtitled.
+#      They sit in the gaps between Hyde's words; over untreated footage of the dead they are still and plain,
+#      small, in the letterbox above it; the post-pass in build() leaves them (tag "speaker") alone. ----
+def israeli_voices(c):
+    from s1_build import speaker
+    B = lambda b, k=0: bars(c, b, k)  # noqa: E731
+    IV = "israeli_voices"
+    # 121-131 (code bars), the breath into the re-entry: Gallant's whole statement of 9 Oct 2023, one take.
+    # WATER on bar 126's downbeat, the crater strike-cam's first hit; "siege" falls on 123's downbeat, and
+    # Hyde's "MISSILES" on 124 lands in Gallant's own 0.6 s pause after "Gaza City". Still in the breath;
+    # from 124, with the kick, he pulses and splits a little with the beat.
+    g = speaker(c, "gallant_siege_knesset99__siege", "מים", B(126), pos=[1150, 400], scale=0.5, gain=2.6, duck=0.5,
+                z=5, fade=(0.4, 0.4), catalog=IV,
+                card=["Yoav Gallant", "Defence Minister of Israel  ·  after a situation assessment, IDF Southern Command"
+                      "  ·  9 Oct 2023"])
+    go = keys([B(124) - 0.01, 0.0], [B(124), 1.0], ease="hold")
+    g["scale"] = mul(g["scale"], add_(1.0, mul(go, rng(-0.04, 0.06, beat(1, "decay", tau=0.16)))))
+    g["fx"] = [{"op": "chroma", "px": mul(go, rng(0, 6, beat(1, "decay", tau=0.14))), "angle": 20}]
+    g["meta"]["hits_song"].append(round(B(123), 3))      # "siege" (its word onset is within 15 ms of the bar)
+    # 132-135, peak 1, between the chorus's 132 and 136: Gallant to the troops, 10 Oct 2023. HAMAS on 134.
+    speaker(c, "gallant_troops_kipa__eliminate", "וחמאס", B(134), pos=[290, 420], scale=0.44, gain=2.8, duck=0.5,
+            z=5, play=True, catalog=IV,
+            card=["Yoav Gallant", "Defence Minister  ·  to troops on the Gaza border, Ministry of Defense video  ·  10 Oct 2023"])
+    # 143-147, the lull: the displaced walking (top-down). Dichter, asked whether the pictures of Gazans walking
+    # south are a Nakba (NAKBA on 144 beat 4); then Weiss over the multitude (ARABS on 148's downbeat). Both
+    # are done before Hyde's "ripped from me" on 149.
+    speaker(c, "dichter_nakba_c12__nakba", "נקבת", B(144, 3), pos=[1165, 390], scale=0.46, gain=2.6, duck=0.5, z=5,
+            catalog=IV, card=["Avi Dichter", "Agriculture Minister, security cabinet  ·  asked if Gazans walking south"
+                              " recall the Nakba  ·  Channel 12  ·  11 Nov 2023"])
+    speaker(c, "weiss_arutz7__arabs_not_stay", "Arabs", B(148), oval=False, size=(430, 260), pos=[300, 380],
+            gain=2.6, duck=0.5, z=5, fade=(0.3, 0.4), catalog=IV,
+            card=["Daniella Weiss", "Nachala settlement movement  ·  conference on settling Gaza, at the Gaza border"
+                  "  ·  Arutz Sheva  ·  21 Oct 2024"])
+    # minute 5, over the dead: still, small, in the letterbox above the picture, nothing over a face.
+    # 160-163, the 2x2 grid of the wounded and the mourning: Eiland (GAZA on 161's downbeat)
+    speaker(c, "eiland_timesradio__cannot_live", "Gaza", B(161), pos=[720, 92], scale=0.27, gain=1.9, duck=0.5,
+            z=5, fade=(0.4, 0.5), opacity=1.0, catalog=IV,
+            card=["Maj. Gen. (res.) Giora Eiland", "former head of Israel's National Security Council  ·  proposing"
+                  " Israel's course  ·  Times Radio  ·  12 Oct 2023"])
+    # 178-180, the remains of 112 people from Sabra under flags (MEE; silent): Herzog (NATION on 178 beat 3)
+    speaker(c, "herzog_presser_i24__entire_nation", "nation", B(178, 2), pos=[720, 92], scale=0.27, gain=1.6,
+            duck=0.5, z=5, fade=(0.4, 0.5), opacity=1.0, catalog=IV,
+            card=["Isaac Herzog", "President of Israel  ·  asked about Gaza's 2 million civilians  ·  press conference"
+                  " for foreign media, Jerusalem  ·  12 Oct 2023"])
+
+
+def add_(*s):
+    return {"add": list(s)}
+
+
 def build(c, outro_kind="walkers"):
     first = len(c.layers)
     c._s2_real = []
@@ -785,6 +892,7 @@ def build(c, outro_kind="walkers"):
     ch.emit()
     pos, sc = plateau(c, pools)
     outro(c, pos, sc, outro_kind)
+    israeli_voices(c)
     # inside each window of untreated reality: the preacher's words are cut, everything that isn't
     # the real footage goes dark (the chorus, the beds, the strike-cam, his head), Meine included
     # A window is (a, b, xin, xout): everything else recedes over [a - xin, a], is gone over [a, b],
@@ -802,7 +910,9 @@ def build(c, outro_kind="walkers"):
     keep = []
     for L in c.layers[first:]:
         ov = [w for w in W if L["t1"] > w[0] - w[2] and L["t0"] < w[1] + w[3]]
-        if "real" in L.get("tags", []) or not ov:
+        # (the real speakers, their lower-thirds and subtitles stay: ember wants them over the dead too,
+        #  "those people caused this to happen to these people"; they are placed still and plain there)
+        if "real" in L.get("tags", []) or not ov or {"speaker", "text", "subtitle"} & set(L.get("tags", [])):
             keep.append(L)
             continue
         # a spoken word over the dead, or as they come up: dropped. A word landing as the bed
