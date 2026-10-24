@@ -108,7 +108,8 @@ BLENDS = {
 }
 
 
-def composite(canvas, img, alpha, cx, cy, rot, mode):
+def composite(canvas, img, alpha, cx, cy, rot, mode, clip=None):
+    """clip: (x0, y0, x1, y1) in canvas px; the layer only lands inside it."""
     H, W = canvas.shape[:2]
     h, w = img.shape[:2]
     blend = BLENDS[mode]
@@ -127,8 +128,10 @@ def composite(canvas, img, alpha, cx, cy, rot, mode):
         L = cv2.warpAffine(img, M, (bw_i, bh_i), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
         A = cv2.warpAffine(alpha, M, (bw_i, bh_i), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=0)
     h, w = L.shape[:2]
-    sx0, sy0 = max(0, -x0), max(0, -y0)
-    dx0, dy0, dx1, dy1 = max(0, x0), max(0, y0), min(W, x0 + w), min(H, y0 + h)
+    cx0, cy0, cx1, cy1 = clip if clip else (0, 0, W, H)
+    dx0, dy0 = max(int(cx0), x0), max(int(cy0), y0)
+    dx1, dy1 = min(W, int(cx1), x0 + w), min(H, int(cy1), y0 + h)
+    sx0, sy0 = dx0 - x0, dy0 - y0
     if dx1 <= dx0 or dy1 <= dy0:
         return
     Ls = L[sy0:sy0 + dy1 - dy0, sx0:sx0 + dx1 - dx0]
@@ -247,7 +250,12 @@ class Layer(Params):
         H, W = canvas.shape[:2]
         pos = self.sig("pos", s.get("pos"), [W / self.k / 2, H / self.k / 2])(t)
         rot = self.sig("rot", s.get("rot"), 0)(t)
-        composite(canvas, img, alpha, pos[0] * self.k, pos[1] * self.k, rot, s.get("blend", "normal"))
+        clip = s.get("clip")
+        if clip == "picture":
+            clip = PICTURE
+        if clip:
+            clip = tuple(v * self.k for v in clip)
+        composite(canvas, img, alpha, pos[0] * self.k, pos[1] * self.k, rot, s.get("blend", "normal"), clip)
 
 
 def render_video(tl, frames, k, out, ctx, warm=0):

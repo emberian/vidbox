@@ -1,0 +1,528 @@
+{
+ "version": 1,
+ "project": "meine",
+ "size": [
+  1440,
+  1080
+ ],
+ "fps": 25,
+ "range": [
+  0.0,
+  38.84
+ ],
+ "music": {
+  "src": "media/src/meine.webm",
+  "gain": 1
+ },
+ "layers": [
+  {
+   "id": "meine",
+   "tags": [
+    "bg"
+   ],
+   "src": "media/src/meine.webm",
+   "t0": 0.0,
+   "t1": 38.84,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "fit": "native",
+   "opacity": {
+    "k": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      5.801,
+      1.0
+     ],
+     [
+      5.921,
+      0.4
+     ],
+     [
+      6.921,
+      0.4
+     ],
+     [
+      7.521,
+      1.0
+     ],
+     [
+      10.085,
+      1.0
+     ],
+     [
+      10.205,
+      0.4
+     ],
+     [
+      11.205,
+      0.4
+     ],
+     [
+      11.513,
+      0.708
+     ],
+     [
+      11.633,
+      0.4
+     ],
+     [
+      11.805,
+      0.4
+     ],
+     [
+      12.633,
+      0.4
+     ],
+     [
+      13.233,
+      1.0
+     ],
+     [
+      13.893,
+      1.0
+     ],
+     [
+      14.013,
+      0.4
+     ],
+     [
+      15.013,
+      0.4
+     ],
+     [
+      15.613,
+      1.0
+     ],
+     [
+      19.129,
+      1.0
+     ],
+     [
+      19.249,
+      0.4
+     ],
+     [
+      20.249,
+      0.4
+     ],
+     [
+      20.849,
+      1.0
+     ],
+     [
+      21.509,
+      1.0
+     ],
+     [
+      21.629,
+      0.4
+     ],
+     [
+      22.629,
+      0.4
+     ],
+     [
+      23.229,
+      1.0
+     ],
+     [
+      38.84,
+      1.0
+     ]
+    ],
+    "ease": "smooth"
+   }
+  },
+  {
+   "id": "hellfire-symphony-tads#1@5.92",
+   "tags": [
+    "weapons",
+    "launch",
+    "apache",
+    "day"
+   ],
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "t0": 5.421,
+   "t1": 7.821,
+   "time": {
+    "in": 4.83,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.6
+   },
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 8
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "opacity": 0.85,
+   "meta": {
+    "catalog": "weapons",
+    "clip": "hellfire-symphony-tads",
+    "seg": 1,
+    "hits_song": [
+     5.921
+    ]
+   }
+  },
+  {
+   "id": "times-radio-idf-bombardment-oct2023#0@10.21",
+   "tags": [
+    "weapons",
+    "aerial",
+    "fireball",
+    "gaza"
+   ],
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "t0": 9.705,
+   "t1": 12.105,
+   "time": {
+    "in": 0.381,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.6
+   },
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 8
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 30
+    }
+   ],
+   "opacity": 0.85,
+   "meta": {
+    "catalog": "weapons",
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 0,
+    "hits_song": [
+     10.205
+    ]
+   }
+  },
+  {
+   "id": "times-radio-idf-bombardment-oct2023#2@11.63",
+   "tags": [
+    "weapons",
+    "aerial",
+    "strike",
+    "gaza"
+   ],
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "t0": 11.133,
+   "t1": 13.533,
+   "time": {
+    "in": 18.341,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.6
+   },
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 8
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 60
+    }
+   ],
+   "opacity": 0.85,
+   "meta": {
+    "catalog": "weapons",
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 2,
+    "hits_song": [
+     11.633
+    ]
+   }
+  },
+  {
+   "id": "oir-ramadi-bridge-2015#2@14.01",
+   "tags": [
+    "weapons",
+    "IR",
+    "black-hot",
+    "strike"
+   ],
+   "src": "media/footage/weapons/raw/dvids_438531.mp4",
+   "t0": 13.513,
+   "t1": 15.913,
+   "time": {
+    "in": 46.4146,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.6
+   },
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 8
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 90
+    }
+   ],
+   "opacity": 0.85,
+   "meta": {
+    "catalog": "weapons",
+    "clip": "oir-ramadi-bridge-2015",
+    "seg": 2,
+    "hits_song": [
+     14.013
+    ]
+   }
+  },
+  {
+   "id": "times-radio-idf-bombardment-oct2023#3@19.25",
+   "tags": [
+    "weapons",
+    "IR",
+    "white-hot",
+    "strike"
+   ],
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "t0": 18.749,
+   "t1": 21.149,
+   "time": {
+    "in": 59.021,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.6
+   },
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 8
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 120
+    }
+   ],
+   "opacity": 0.85,
+   "meta": {
+    "catalog": "weapons",
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 3,
+    "hits_song": [
+     19.249
+    ]
+   }
+  },
+  {
+   "id": "hellfire-symphony-tads#8@21.63",
+   "tags": [
+    "weapons",
+    "explosion",
+    "flash",
+    "false-colour"
+   ],
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "t0": 21.129,
+   "t1": 23.4415,
+   "time": {
+    "in": 52.6875,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.6
+   },
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 8
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 150
+    }
+   ],
+   "opacity": 0.85,
+   "meta": {
+    "catalog": "weapons",
+    "clip": "hellfire-symphony-tads",
+    "seg": 8,
+    "hits_song": [
+     21.629
+    ]
+   }
+  },
+  {
+   "id": "preacher",
+   "tags": [
+    "head"
+   ],
+   "src": "media/derived/face_missiles_on_beat.mp4",
+   "t0": 0,
+   "t1": 36.83833333333334,
+   "time": {
+    "in": 0,
+    "speed": 1
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": {
+    "path": "paths/face_self_gaze_synced.json"
+   },
+   "scale": {
+    "pathscale": "paths/face_self_gaze_synced.json"
+   },
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "opacity": 0.75,
+   "audio": {
+    "gain": 1.0
+   }
+  }
+ ],
+ "post": []
+}

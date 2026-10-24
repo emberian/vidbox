@@ -39,6 +39,8 @@ All times are **song seconds** (Meine's clock). Paths are repo-relative unless n
   "blend": "normal",                      // normal screen add multiply difference lighten darken overlay
   "mask": {"shape": "oval", "feather": 0.28},   // or {"shape": "rect", "feather": 0.05}; omit = none
   "fade": {"in": 0.2, "out": 0.5},        // seconds, multiplies opacity
+  "clip": "picture",                      // only draw inside Meine's picture area (no letterbox
+                                          // spill); or [x0, y0, x1, y1] in canvas px
   "fx": [ {"op": "posterize", "levels": 4} ],   // applied to the layer image, in order
   "audio": {"gain": 0.8},                 // omit = silent. Any time form; see "Audio" below
   "meta": {"catalog": "ground", "clip": "id", "seg": 3, "hits_song": [97.5]}   // for the viewer
