@@ -2,6 +2,8 @@
 //
 // usage: node tools/selfmotion.mjs [--project meine] [--mode amplify|hybrid|gaze|drift] [--gain G]
 //                                  [--smooth FRAMES] [--tol PX] [--out paths/NAME.json]
+//   --sync sync/NAME.resolved.json  follow a retimed rant (tools/retime.py): his motion is
+//                                   read at clip time and placed at the retimed song time
 //   hybrid extras: [--base G] [--every BARS] [--pct SPEED_PERCENTILE] [--hbias H]
 //
 //   amplify  his offset from his average position, scaled by G, soft-clamped to the picture
@@ -66,6 +68,18 @@ const sw = +opt.smooth;
 const fx = smooth(fill(0), sw), fy = smooth(fill(1), sw);
 console.error(`track: ${n} frames, kept ${good.length} detections, face ~${fs}px`);
 
+// --- clip time -> song time: 1:1 from layer.start, or through a retime sync sheet's map ---
+const interp = (x, xs, ys) => {
+  if (x <= xs[0]) return ys[0] + (x - xs[0]);
+  if (x >= xs[xs.length - 1]) return ys[ys.length - 1] + (x - xs[xs.length - 1]);
+  let i = 0;
+  while (xs[i + 1] < x) i++;
+  return ys[i] + (ys[i + 1] - ys[i]) * (x - xs[i]) / (xs[i + 1] - xs[i]);
+};
+const tmap = opt.sync && JSON.parse(readFileSync(join(pdir, opt.sync))).map;
+const songT = i => (tmap ? interp(i / track.fps, tmap.src, tmap.song) : layer.start + i / track.fps);
+const frameAt = t => Math.round((tmap ? interp(t, tmap.song, tmap.src) : t - layer.start) * track.fps);
+
 // --- motion model ---
 const pos = [];
 if (opt.mode === "amplify") {
@@ -95,7 +109,7 @@ if (opt.mode === "amplify") {
   // the following beat. He supplies the impulse; the music supplies the timing.
   const beats = JSON.parse(readFileSync(join(pdir, "analysis/beats.json")));
   const bgain = +(opt.base ?? 2.5), every = +(opt.every ?? 2), pct = +(opt.pct ?? 60), hb = +(opt.hbias ?? 1.6);
-  const tOf = i => layer.start + i / track.fps, iOf = t => Math.round((t - layer.start) * track.fps);
+  const tOf = songT, iOf = frameAt;
   const mx = fx.reduce((a, b) => a + b) / n, my = fy.reduce((a, b) => a + b) / n;
   const vel = i => { const a = Math.max(0, i - 3), b = Math.min(n - 1, i + 3); return [(fx[b] - fx[a]) / (b - a), (fy[b] - fy[a]) / (b - a)]; };
   const speeds = fx.map((_, i) => Math.hypot(...vel(i)));
@@ -191,12 +205,17 @@ if (opt.mode === "amplify") {
     pos.push(p.slice());
     scale.push(+s.toFixed(4));
   }
-  opt.scale = { t0: layer.start, dt, values: scale };
+  // resample to a uniform grid in song time (a retime map makes clip frames uneven)
+  const sdt = 0.04, t0 = songT(0), nS = Math.floor((songT(n - 1) - t0) / sdt) + 1;
+  opt.scale = { t0, dt: sdt, values: Array.from({ length: nS }, (_, j) => {
+    const f = Math.min(n - 1, Math.max(0, frameAt(t0 + j * sdt)));
+    return scale[f];
+  }) };
   const big = scale.filter(x => x > 1.3).length / n;
   console.error(`gaze: scale 1..${Math.max(...scale).toFixed(2)}, ${(big * 100).toFixed(0)}% of the time above 1.3x`);
 } else throw new Error(`unknown --mode ${opt.mode}`);
 
-const samples = pos.map((p, i) => ({ t: +(layer.start + i / track.fps).toFixed(4), p: [+p[0].toFixed(1), +p[1].toFixed(1)] }));
+const samples = pos.map((p, i) => ({ t: +songT(i).toFixed(4), p: [+p[0].toFixed(1), +p[1].toFixed(1)] }));
 const anchors = fitSamples(samples, +opt.tol, opt.corners ?? []);
 const out = opt.out ?? `paths/face_self_${opt.mode}.json`;
 const params = { mode: opt.mode, gain, smooth: sw, tol: +opt.tol };
