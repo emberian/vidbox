@@ -81,7 +81,8 @@ class Comp:
         self.beats, self.downbeats = b["beats"], b["downbeats"]
         self.period = float(np.median(np.diff(self.beats)))
         self.sync = json.loads((self.pdir / f"sync/{sync}.resolved.json").read_text()) if sync else None
-        self.cat = {c: json.loads((self.pdir / f"footage/{c}.json").read_text())["clips"] for c in ("weapons", "ground")}
+        # every catalog in footage/ (weapons, ground, and any later lane's)
+        self.cat = {f.stem: json.loads(f.read_text())["clips"] for f in sorted((self.pdir / "footage").glob("*.json"))}
         self.range = list(range or (0, self.proj.get("duration", 473.5)))
         self.layers, self.post = [], []
         self.rand = random.Random(seed)
@@ -207,6 +208,15 @@ class Comp:
         print(f"{out.relative_to(ROOT)}: {len(self.layers)} layers; {len(offgrid)} hits off the beat grid",
               *(f"\n  off-grid: {i} @ {h:.3f}" for i, h in offgrid[:8]))
         return out
+
+
+def section_main(name, span, build, sync="missiles_on_beat", pad=2.0):
+    """Run a section script standalone: its span (plus a little padding) with the background,
+    saved as comps/out/section_<name>.timeline.json for quick previews in the viewer."""
+    c = Comp("meine", f"section_{name}", range=(max(0.0, span[0] - pad), span[1] + pad), sync=sync)
+    c.add(c.background())
+    build(c)
+    return c.save()
 
 
 # ---- motion builders: dense pos/scale signals for head copies ----
