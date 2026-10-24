@@ -114,7 +114,9 @@ def resolve_word(words, ref):
 
 
 # ember: "the problem isn't the strike into people, the problem is that it isn't Israel/Gaza at all."
-IN_SCOPE = ("gaza", "israel", "arms-to-israel", "politics-israel")
+# ember: "I'd like to consider US range launches fully in-scope as well." (the arsenal itself, not
+# its use in other wars). "region" (the wider war, other actors) exists but is opt-in.
+IN_SCOPE = ("gaza", "israel", "arms-to-israel", "politics-israel", "us-arsenal")
 
 
 class Seg:
