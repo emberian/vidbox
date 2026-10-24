@@ -4,6 +4,10 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 ## Named in the footage
 
+- **Ramzi Abu Sahloul**, 51: killed under a white flag, Khan Younis <https://www.itv.com/news/2024-01-23/moment-civilian-brandishing-white-flag-in-gaza-safe-zone-is-shot-dead>
+- **Hala Khreis**, 57: killed under a white flag, Gaza City <https://www.cnn.com/2024/01/26/middleeast/hala-khreis-white-flag-shooting-gaza-cmd-intl>
+- **Adam Samer al-Ghoul**, 8: killed, Jenin <https://www.youtube.com/watch?v=4hq39W3F5RI>
+- **Basil Suleiman Abu al-Wafa**, 15: killed, Jenin <https://www.youtube.com/watch?v=4hq39W3F5RI>
 - **Mohammad Abdul Zinati**, 15: killed. Gaza City, 15 September 2026. Eyewitnesses told the Guardian he had gone to check on the body of a man struck by an Israeli bomb moments earlier; a second strike killed him. <https://www.youtube.com/watch?v=vQdUgwKtwEY>
 - **The wife and children of Mahmoud Hammad**. Killed, with his brother, his brother's wife and their children, in an Israeli airstrike on their home in Gaza City. He searches the rubble for their bones, January 2026 (AP; their names are not given). <https://www.youtube.com/watch?v=XoQWFfNR_M8>
 - **Dozens buried in the grounds of Nasser Hospital**. Khan Younis, January 2024, when the Israeli offensive made the cemetery too dangerous to reach (NBC News). <https://www.youtube.com/watch?v=vnpsm7nB9JE>
@@ -28,6 +32,12 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Mike Evans**: founder, Friends of Zion / Jerusalem Prayer Team <https://www.youtube.com/watch?v=IaIIwXAhPbc>
 - **Mike Huckabee**: Baptist minister; then nominee, now US ambassador to Israel; US ambassador to Israel <https://www.youtube.com/watch?v=EG-8UseD0kI> <https://www.youtube.com/watch?v=XS7itdfgNnU>
 - **Rev. Munther Isaac**: Lutheran pastor, Evangelical Lutheran Christmas Church, Bethlehem <https://www.youtube.com/watch?v=aEGiANa0-oI>
+- **Benjamin Netanyahu**: Prime Minister of Israel <https://www.youtube.com/watch?v=lIPkoDk6isc>
+- **Avi Dichter**: Minister of Agriculture; member of the security cabinet; former head of the Shin Bet <https://archive.org/details/new-gaza-nakba_202311>
+- **Yoav Gallant**: Defence Minister of Israel <https://www.youtube.com/watch?v=1nxvS9VY-t0> <https://www.youtube.com/watch?v=l9wx7e4u-xM>
+- **Daniella Weiss**: founder and director, Nachala settlement movement <https://www.youtube.com/watch?v=LVwSwpVVXpw>
+- **Giora Eiland**: Maj. Gen. (res.), former head of Israel's National Security Council <https://www.youtube.com/watch?v=CRHz0dZwF2A>
+- **Isaac Herzog**: President of Israel <https://www.youtube.com/watch?v=Om3KRrL_6vM>
 
 ## Footage
 
@@ -49,8 +59,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Explosions light up night sky over the Gaza Strip**. AP Archive. 2025-09-07. Southern Israel, overlooking Gaza Strip. <https://www.youtube.com/watch?v=fTiqjhMhFSY> (licence as catalogued: news (AP); first at 3:01.0; catalog id `ap-night-blasts-from-israel-2025-09`)
 - **Drone footage shows thousands of Palestinians returning to the ruins and rubble in Gaza City**. AP Archive. 2025-01-27. Wadi Gaza, Gaza; Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=5KBkxIFXenM> (licence as catalogued: news (AP); first at 3:03.1; catalog id `ap-drone-return-north-coast-2025-01`)
 - **ap-deir-balah-night-strike-2026-05-23**. AP Archive. 2026-05-23. <https://www.youtube.com/watch?v=ZCLpNuaEzl8> (licence as catalogued: news (AP); first at 3:05.8; catalog id `ap-deir-balah-night-strike-2026-05-23`)
-- **Flares light up night sky over Gaza Strip**. AP Archive. 2025-12-27. Southern Israel overlooking the Gaza Strip. <https://www.youtube.com/watch?v=zwwPZ5hmxUU> (licence as catalogued: news (AP); first at 3:17.2; catalog id `ap-flares-cloudy-night-2025-12-b`)
-- **Drone aerials show much of Gaza City reduced to rubble during two years of war**. AP Archive. 2025-10-15. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=nZ15f_tSAHc> (licence as catalogued: news (AP); first at 3:17.7; catalog id `ap-drone-gazacity-ruins-2025-10-long`)
+- **Drone aerials show much of Gaza City reduced to rubble during two years of war**. AP Archive. 2025-10-15. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=nZ15f_tSAHc> (licence as catalogued: news (AP); first at 3:18.3; catalog id `ap-drone-gazacity-ruins-2025-10-long`)
 - **ap-shati-night-strike-2026-05-28**. AP Archive. 2026-05-28. <https://www.youtube.com/watch?v=WIiKD8Mjw1Y> (licence as catalogued: news (AP); first at 3:31.5; catalog id `ap-shati-night-strike-2026-05-28`)
 - **ap-short-gaza-city-blasts-2026-07-28**. Associated Press. 2026-07-28. <https://www.youtube.com/watch?v=lZHFLf8nVtg> (licence as catalogued: news (AP); first at 3:33.4; catalog id `ap-short-gaza-city-blasts-2026-07-28`)
 - **Moment of impact, column of smoke, as Israeli airstrikes continue**. AP Archive. 2014-07-12. <https://www.youtube.com/watch?v=3MPSoglbmTw> (licence as catalogued: news (AP); first at 3:35.3; catalog id `ap-impact-smoke-2014`)
@@ -73,10 +82,9 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Drone footage shows vast destruction in Beit Lahiya, in northern Gaza**. AP Archive. 2025-02-17. Beit Lahiya, Gaza Strip. <https://www.youtube.com/watch?v=VCp7zg_f7qk> (licence as catalogued: news (AP); first at 5:19.9; catalog id `ap-drone-beit-lahiya-2025-02`)
 - **Large smoke clouds billow over Gaza Strip as several Israeli airstrikes hit area east of Jabaliya**. AP Archive. 2025-05-15. Near Jabaliya, Gaza Strip. Camera: Wafaa Shurafa. <https://www.youtube.com/watch?v=-N5p9LEIa50> (licence as catalogued: news (AP); first at 5:23.7; catalog id `ap-smoke-jabaliya-2025-05`)
 - **Bodies brought to Gaza hospital after deadly Israeli strike**. AP Archive. 2026-07-29. Khan Younis, Gaza. <https://www.youtube.com/watch?v=G9EY3rgBcLc> (licence as catalogued: news (AP); first at 5:25.7; catalog id `ap-khanyounis-morgue-bodies-2026-07-29`)
-- **apt-khanyounis-house-strike-2026-09-09**. APT (news aggregator). 2026-09-09. <https://www.youtube.com/watch?v=yHnWN-p2G1Q> (licence as catalogued: news aggregator (APT); original camera uncredited; first at 5:31.3; catalog id `apt-khanyounis-house-strike-2026-09-09`)
-- **idf-tehran-strikes-aerial-2026-03-01**. APT (footage: Israel Defense Forces). 2026-03-01. <https://www.youtube.com/watch?v=CIwuAr06Xic> (licence as catalogued: IDF release via APT; first at 5:35.1; catalog id `idf-tehran-strikes-aerial-2026-03-01`)
-- **ap-beirut-barrage-2026-04-08**. Associated Press. 2026-04-08. <https://www.youtube.com/watch?v=A_zAvt-sFxk> (licence as catalogued: news (AP); first at 5:46.6; catalog id `ap-beirut-barrage-2026-04-08`)
-- **ap-gaza-city-twin-plumes-2026-10-10**. AP Archive. 2026-10-10. <https://www.youtube.com/watch?v=oEAwkAZBL4U> (licence as catalogued: news (AP); first at 5:58.0; catalog id `ap-gaza-city-twin-plumes-2026-10-10`)
+- **apt-khanyounis-house-strike-2026-09-09**. APT (news aggregator). 2026-09-09. <https://www.youtube.com/watch?v=yHnWN-p2G1Q> (licence as catalogued: news aggregator (APT); original camera uncredited; first at 5:35.1; catalog id `apt-khanyounis-house-strike-2026-09-09`)
+- **ap-beirut-barrage-2026-04-08**. Associated Press. 2026-04-08. <https://www.youtube.com/watch?v=A_zAvt-sFxk> (licence as catalogued: news (AP); first at 5:58.3; catalog id `ap-beirut-barrage-2026-04-08`)
+- **ap-gaza-city-twin-plumes-2026-10-10**. AP Archive. 2026-10-10. <https://www.youtube.com/watch?v=oEAwkAZBL4U> (licence as catalogued: news (AP); first at 6:01.8; catalog id `ap-gaza-city-twin-plumes-2026-10-10`)
 - **Overnight Israeli strike hits tents sheltering displaced Palestinian families in Muwasi**. AP Archive. 2025-06-23. Muwasi, Gaza Strip. <https://www.youtube.com/watch?v=H_kELGjZ2RY> (licence as catalogued: news (AP); first at 6:05.6; catalog id `ap-muwasi-tents-strike-2025-06`)
 - **Mass funeral in Gaza after bodies recovered of more than 100 people killed in 2023 Israeli strike**. AP Archive. 2026-08-04. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=D8BWnIo43Dw> (licence as catalogued: news (AP); first at 6:36.2; catalog id `ap-mass-funeral-hassayna-2026-08-04`)
 - **Palestinians at Deir al-Balah hospital pray over body bags holding victims of Israel airstrikes**. AP Archive. 2023-12-28. Outside al-Aqsa Martyr's Hospital, Deir al-Balah, Gaza. Camera: Abd Al Kareem Hana. <https://www.youtube.com/watch?v=Xl9NY5h-MHQ> (licence as catalogued: news (AP); first at 7:06.6; catalog id `ap-aqsa-body-bags-prayer-2023-12`)
@@ -87,6 +95,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Explosions rock Gaza overnight**. Reuters. 2023-10-22. <https://www.youtube.com/watch?v=WAGCvWsTpYQ> (licence as catalogued: news (Reuters); first at 1:37.7; catalog id `reuters-explosions-overnight-2023-10-22`)
 - **Israel pummels Gaza with air strikes overnight**. Reuters. 2023-10-08. <https://www.youtube.com/watch?v=vE79wEcq6nE> (licence as catalogued: news (Reuters); first at 2:04.8; catalog id `reuters-night-fireballs-2023-10-08`)
 - **Gaza buildings destroyed in Israeli strikes**. Reuters. 2023-10-08. <https://www.youtube.com/watch?v=bftGJOh4FvY> (licence as catalogued: news (Reuters); first at 4:24.6; catalog id `reuters-national-bank-strike-2023-10`)
+- **reuters-deadliest-night-strikes-2023-12-24**. Reuters. 2023-12-24. <https://www.youtube.com/watch?v=dB_ynfOHE_U> (licence as catalogued: news (Reuters); first at 5:31.6; catalog id `reuters-deadliest-night-strikes-2023-12-24`)
 
 ### AFP
 
@@ -96,6 +105,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 - **Israel is using high-powered bombs to maximise deaths in Gaza, experts say | Al Jazeera Newsfeed**. Al Jazeera English (Newsfeed). 2025-04-24. <https://www.youtube.com/watch?v=XysmVvsDwLQ> (licence as catalogued: news (Al Jazeera); fair use; first at 0:11.6; catalog id `aj-high-powered-bombs-explainer`)
 - **aje-zawayda-warehouse-strike-shrapnel-2026-08-23**. Al Jazeera English (UGC: Facebook / Telegram). 2026-08-23. <https://www.youtube.com/watch?v=KJcRs_-Tx74> (licence as catalogued: news (AJE; UGC); first at 3:38.2; catalog id `aje-zawayda-warehouse-strike-shrapnel-2026-08-23`)
+- **aje-jenin-cctv-adam-al-ghoul-2023-11-29**. Al Jazeera English (Charles Stratford, Jenin). 2023-11-29. <https://www.youtube.com/watch?v=4hq39W3F5RI> (licence as catalogued: news (Al Jazeera; CCTV via Wafa); first at 5:22.9; catalog id `aje-jenin-cctv-adam-al-ghoul-2023-11-29`)
 
 ### Anadolu Agency
 
@@ -109,7 +119,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 - **idf-soldiers-watch-demolition-yellow-line-2026-07-08**. Roya News English (footage filmed by Israeli soldiers). 2026-07-08. <https://www.youtube.com/watch?v=v0kPVcvCZO8> (licence as catalogued: news (Roya; soldier-shot UGC); first at 2:03.9; catalog id `idf-soldiers-watch-demolition-yellow-line-2026-07-08`)
 - **roya-afp-tent-strike-black-smoke-2026-03-25**. Roya News English (footage: AFP). 2026-03-25. <https://www.youtube.com/watch?v=r1XSN4h0DIU> (licence as catalogued: news (AFP via Roya); first at 3:39.1; catalog id `roya-afp-tent-strike-black-smoke-2026-03-25`)
-- **'Israeli' army releases footage of strikes on Gaza weapon sites**. Roya News English (footage: IDF / AFP). 2026-09-09. Footage credited on screen to: IDF / AFP. <https://www.youtube.com/watch?v=ILs0UJiqXgw> (licence as catalogued: IDF release via AFP/Roya; first at 4:07.4; catalog id `idf-gaza-weapons-sites-strikecam-2026-09-09`)
+- **'Israeli' army releases footage of strikes on Gaza weapon sites**. Roya News English (footage: IDF / AFP). 2026-09-09. Footage credited on screen to: IDF / AFP. <https://www.youtube.com/watch?v=ILs0UJiqXgw> (licence as catalogued: IDF release via AFP/Roya; first at 4:07.8; catalog id `idf-gaza-weapons-sites-strikecam-2026-09-09`)
 - **Rescuers at site of overnight ‘Israeli’ strike in central Gaza**. Roya News English (Jordan). 2026-01-09. <https://www.youtube.com/watch?v=M3L1t4PVSiY> (licence as catalogued: news (Roya); first at 5:05.4; catalog id `roya-night-rescue-central-gaza-2026-01`)
 - **Critically injured civil defense worker arrives at Al-Shifa Hospital after 'Israeli' airstrike**. Roya News English. 2026-09-01. Footage credited on screen to: m.saed gaza (Instagram). <https://www.youtube.com/watch?v=p0uoWSF1AIw> (licence as catalogued: news (Roya; journalist UGC); first at 5:05.9; catalog id `roya-civil-defence-worker-shifa-2026-09-01`)
 
@@ -118,14 +128,14 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **Fire breaks out after Israel strikes Gaza displacement camp**. Guardian News. 2026-03-11. <https://www.youtube.com/watch?v=6RwaK4FN2Ko> (licence as catalogued: news (Guardian); first at 2:06.8; catalog id `guardian-ansar-tent-strike-2026-03`)
 - **Israeli airstrike hits camp in Gaza's Deir Al-Balah**. Guardian News (incl. AP camera angle). 2026-03-26. Second angle credited to: AP. <https://www.youtube.com/watch?v=RYOQOwHPlfw> (licence as catalogued: news (Guardian/AP); first at 3:10.4; catalog id `guardian-deir-balah-tent-camp-strike-2026-03-26`)
 - **Moment airstrike hits building in Khan Younis in southern Gaza**. Guardian News. 2026-02-06. <https://www.youtube.com/watch?v=wjr8ISPvdh0> (licence as catalogued: news (Guardian); first at 3:47.6; catalog id `guardian-khanyounis-night-strike-2026-02-06`)
-- **Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed**. Guardian News (footage: Tamer Labbad). 2026-09-15. Filmed by: Tamer Labbad. <https://www.youtube.com/watch?v=vQdUgwKtwEY> (licence as catalogued: news (Guardian); first at 6:28.8; catalog id `guardian-deconstructed-zinati-strike-2026-09-15`)
+- **Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed**. Guardian News (footage: Tamer Labbad). 2026-09-15. Filmed by: Tamer Labbad. <https://www.youtube.com/watch?v=vQdUgwKtwEY> (licence as catalogued: news (Guardian); first at 6:29.0; catalog id `guardian-deconstructed-zinati-strike-2026-09-15`)
 
 ### NBC News
 
 - **Watch: Building collapses in Gaza after being struck by Israeli airstrike**. NBC News Now. 2023-10-07/08. <https://www.youtube.com/watch?v=w57kiknN-MA> (licence as catalogued: news (NBC); first at 2:07.3; catalog id `nbc-night-tower-collapse-2023-10-08`)
 - **Gazans dig multiple graves at Khan Younis hospital**. NBC News. 2024-01-23. <https://www.youtube.com/watch?v=vnpsm7nB9JE> (licence as catalogued: news (NBC); first at 2:38.1; catalog id `nbc-nasser-courtyard-graves-2024-01`)
 - **nbc-dar-al-muttaqin-mosque-strike-2026-07-28**. NBC News (footage: WAFA, Reuters). 2026-07-28. <https://www.youtube.com/watch?v=BTr2lDBjto0> (licence as catalogued: news (NBC; WAFA/Reuters); first at 3:27.3; catalog id `nbc-dar-al-muttaqin-mosque-strike-2026-07-28`)
-- **Video captures explosion as Israeli missile hits Gaza City**. NBC News. 2023-10-11. <https://www.youtube.com/watch?v=J7yXotNqLVk> (licence as catalogued: news (NBC); first at 4:06.5; catalog id `nbc-missile-hits-building-2023-10`)
+- **Video captures explosion as Israeli missile hits Gaza City**. NBC News. 2023-10-11. <https://www.youtube.com/watch?v=J7yXotNqLVk> (licence as catalogued: news (NBC); first at 4:07.8; catalog id `nbc-missile-hits-building-2023-10`)
 
 ### The Wall Street Journal
 
@@ -134,7 +144,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 ### news.com.au
 
-- **Dramatic footage shows Gaza’s tallest tower obliterated**. news.com.au (compiling Quds News Network, Anadolu, social video via Storyful). 2025-09-15. Footage credited on screen to: Quds News Network, Mohammed Hillis, Ahmed Ibraheem, Ahmad Kahoul, via Storyful. <https://www.youtube.com/watch?v=rbWxRnFeIZ0> (licence as catalogued: news / social via Storyful; first at 2:09.6; catalog id `newscomau-gaza-city-towers-2025-09`)
+- **Dramatic footage shows Gaza’s tallest tower obliterated**. news.com.au (compiling Quds News Network, Anadolu, social video via Storyful). 2025-09-15. Footage credited on screen to: Quds News Network, Mohammed Hillis, Ahmed Ibraheem, Ahmad Kahoul, via Storyful. <https://www.youtube.com/watch?v=rbWxRnFeIZ0> (licence as catalogued: news / social via Storyful; first at 2:09.7; catalog id `newscomau-gaza-city-towers-2025-09`)
 
 ### Times Radio
 
@@ -156,7 +166,7 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **MA-9 Reaper loading AGM-114 Hellfire missile**. DVIDS / 174th Attack Wing, New York ANG. 2026-03-03. <https://www.dvidshub.net/video/998429/ma-9-reaper-loading-agm-114-hellfire-missile> (licence as catalogued: public domain (DVIDS); first at 1:16.4; catalog id `mq9-hellfire-reload-gulfport`)
 - **GBU-39 Small Diameter Bombs Loaded on MQ-9 B-Roll**. DVIDS / USAF. 2025 (posted). <https://www.dvidshub.net/video/956723/gbu-39-small-diameter-bombs-loaded-mq-9-b-roll> (licence as catalogued: public domain (DVIDS); first at 1:24.0; catalog id `gbu39-load-mq9-night`)
 - **Employees on 155mm production line putting the finishing touches on projectile rounds at Iowa Army Ammunition Plant.**. DVIDS / Iowa Army Ammunition Plant. 2026 (posted). <https://www.dvidshub.net/video/1011368/employees-155mm-production-line-putting-finishing-touches-projectile-rounds-iowa-army-ammunition-p> (licence as catalogued: public domain (DVIDS); first at 1:46.9; catalog id `iowa-aap-155mm-line-workers`)
-- **Juniper Oak 2023 B-Roll Package**. DVIDS / U.S. Army (Juniper Oak 2023). 2023-01-26. <https://www.dvidshub.net/video/871481/juniper-oak-2023-b-roll-package> (licence as catalogued: public domain (DVIDS); first at 2:47.4; catalog id `juniper-oak-2023-broll`)
+- **Juniper Oak 2023 B-Roll Package**. DVIDS / U.S. Army (Juniper Oak 2023). 2023-01-26. <https://www.dvidshub.net/video/871481/juniper-oak-2023-b-roll-package> (licence as catalogued: public domain (DVIDS); first at 2:47.8; catalog id `juniper-oak-2023-broll`)
 - **Red Sands 24.2 Apache Live Fire against small-UAS**. DVIDS / U.S. Army (SFC Walter Talens). 2024-09-23. <https://www.dvidshub.net/video/941608/red-sands-242-apache-live-fire-against-small-uas> (licence as catalogued: public domain (DVIDS); first at 2:51.2; catalog id `apache-red-sands-uas`)
 - **B-Roll: 509 BGS Loads JDAMs In B-2 Spirit For Maritime Test**. DVIDS / 509th Bomb Wing, USAF. 2025-08-28. <https://www.dvidshub.net/video/976261/b-roll-509-bgs-loads-jdams-b-2-spirit-maritime-test> (licence as catalogued: public domain (DVIDS); first at 3:33.5; catalog id `b2-jdam-load-whiteman`)
 - **12CAB Conducts Hellfire Missile Shoot in Greece**. DVIDS / 12th Combat Aviation Brigade, U.S. Army. 2023-05-12. <https://www.dvidshub.net/video/883839/12cab-conducts-hellfire-missile-shoot-greece> (licence as catalogued: public domain (DVIDS); first at 4:26.5; catalog id `hellfire-greece-flir`)
@@ -187,6 +197,9 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - **The first large shipment of ammunition from the United States arrived in Israel on a Boeing C-17**. PoliticsInsider (re-upload; original IDF/Israel MoD footage). 2023-10-10. <https://www.youtube.com/watch?v=H23h6mn72nc> (licence as catalogued: IDF release via re-upload; fair use; first at 1:08.8; catalog id `c17-first-us-munitions-israel-oct2023`)
 - **Подготовка бомб GBU-31 JDAM армией Израиля** (Preparation of GBU-31 JDAM bombs by the Israeli army (our translation from Russian)). Lamp of Knowledge (Russian-language re-edit; footage appears to be Israel MoD / IDF release). 2023-10-13 (upload). <https://www.youtube.com/watch?v=Qz5Fa4At0Uk> (licence as catalogued: unknown (re-upload of official footage); fair use; first at 1:31.6; catalog id `israel-gbu31-prep-oct2023-reedit`)
 - **Melihat Konfigurasi dan Muatan Jet Israel dalam Operasi Pedang Besi** (A look at the configuration and payload of Israeli jets in Operation Swords of Iron (our translation from Indonesian)). JejakTapak (Indonesian re-upload; credits 'Video: IDF'). 2023-10-15 (upload). <https://www.youtube.com/watch?v=eWWn7-dK40Q> (licence as catalogued: unknown (re-upload of IDF footage); fair use; first at 1:39.2; catalog id `iaf-swords-of-iron-loadout-reupload`)
+- **itv-ramzi-abu-sahloul-white-flag-2024-01-22**. ITV News. 2024-01-22. <https://www.itv.com/news/2024-01-23/moment-civilian-brandishing-white-flag-in-gaza-safe-zone-is-shot-dead> (licence as catalogued: news (ITV); first at 4:01.9; catalog id `itv-ramzi-abu-sahloul-white-flag-2024-01-22`)
+- **cnn-hala-khreis-white-flag-2023-11-12**. CNN (Clarissa Ward; footage first published by Middle East Eye). 2023-11-12. <https://www.cnn.com/videos/world/2024/01/25/palestinians-gaza-shooting-investigation-ward-intl-ldn-vpx.cnn> (licence as catalogued: news (CNN / Middle East Eye); first at 4:55.2; catalog id `cnn-hala-khreis-white-flag-2023-11-12`)
+- **earshot-mee-ameen-khalifa-ghf-2025-06-03**. Earshot, for Middle East Eye's OSINT investigation. 2025-06-03. Filmed by: Ameen Sameer Khalifa. <https://www.youtube.com/watch?v=h8b5XkFN4T8> (licence as catalogued: human-rights org (Earshot / MEE); first at 5:01.2; catalog id `earshot-mee-ameen-khalifa-ghf-2025-06-03`)
 - **Israel publishes hundreds of airstrike videos - but they only tell part of the story**. Sky News. 2024-10-09. <https://www.youtube.com/watch?v=cJ0-6Lu4yNw> (licence as catalogued: news (Sky News); fair use; first at 5:04.6; catalog id `sky-idf-airstrike-videos-analysis`)
 
 ## Music, voice, tools
@@ -198,6 +211,772 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 
 ## UNIDENTIFIED media in the timeline (needs a credit)
 
+- `media/derived/israeli_voices/dichter_nakba_c12__nakba.mp4`
+- `media/derived/israeli_voices/eiland_timesradio__cannot_live.mp4`
+- `media/derived/israeli_voices/gallant_siege_knesset99__siege.mp4`
+- `media/derived/israeli_voices/gallant_troops_kipa__eliminate.mp4`
+- `media/derived/israeli_voices/herzog_presser_i24__entire_nation.mp4`
+- `media/derived/israeli_voices/netanyahu_amalek_pmo__amalek.mp4`
+- `media/derived/israeli_voices/weiss_arutz7__arabs_not_stay.mp4`
+- `media/derived/names/page_0000.png`
+- `media/derived/names/page_0001.png`
+- `media/derived/names/page_0002.png`
+- `media/derived/names/page_0003.png`
+- `media/derived/names/page_0004.png`
+- `media/derived/names/page_0005.png`
+- `media/derived/names/page_0006.png`
+- `media/derived/names/page_0007.png`
+- `media/derived/names/page_0008.png`
+- `media/derived/names/page_0009.png`
+- `media/derived/names/page_0010.png`
+- `media/derived/names/page_0011.png`
+- `media/derived/names/page_0012.png`
+- `media/derived/names/page_0013.png`
+- `media/derived/names/page_0014.png`
+- `media/derived/names/page_0015.png`
+- `media/derived/names/page_0016.png`
+- `media/derived/names/page_0017.png`
+- `media/derived/names/page_0018.png`
+- `media/derived/names/page_0019.png`
+- `media/derived/names/page_0020.png`
+- `media/derived/names/page_0021.png`
+- `media/derived/names/page_0022.png`
+- `media/derived/names/page_0023.png`
+- `media/derived/names/page_0024.png`
+- `media/derived/names/page_0025.png`
+- `media/derived/names/page_0026.png`
+- `media/derived/names/page_0027.png`
+- `media/derived/names/page_0028.png`
+- `media/derived/names/page_0029.png`
+- `media/derived/names/page_0030.png`
+- `media/derived/names/page_0031.png`
+- `media/derived/names/page_0032.png`
+- `media/derived/names/page_0033.png`
+- `media/derived/names/page_0034.png`
+- `media/derived/names/page_0035.png`
+- `media/derived/names/page_0036.png`
+- `media/derived/names/page_0037.png`
+- `media/derived/names/page_0038.png`
+- `media/derived/names/page_0039.png`
+- `media/derived/names/page_0040.png`
+- `media/derived/names/page_0041.png`
+- `media/derived/names/page_0042.png`
+- `media/derived/names/page_0043.png`
+- `media/derived/names/page_0044.png`
+- `media/derived/names/page_0045.png`
+- `media/derived/names/page_0046.png`
+- `media/derived/names/page_0047.png`
+- `media/derived/names/page_0048.png`
+- `media/derived/names/page_0049.png`
+- `media/derived/names/page_0050.png`
+- `media/derived/names/page_0051.png`
+- `media/derived/names/page_0052.png`
+- `media/derived/names/page_0053.png`
+- `media/derived/names/page_0054.png`
+- `media/derived/names/page_0055.png`
+- `media/derived/names/page_0056.png`
+- `media/derived/names/page_0057.png`
+- `media/derived/names/page_0058.png`
+- `media/derived/names/page_0059.png`
+- `media/derived/names/page_0060.png`
+- `media/derived/names/page_0061.png`
+- `media/derived/names/page_0062.png`
+- `media/derived/names/page_0063.png`
+- `media/derived/names/page_0064.png`
+- `media/derived/names/page_0065.png`
+- `media/derived/names/page_0066.png`
+- `media/derived/names/page_0067.png`
+- `media/derived/names/page_0068.png`
+- `media/derived/names/page_0069.png`
+- `media/derived/names/page_0070.png`
+- `media/derived/names/page_0071.png`
+- `media/derived/names/page_0072.png`
+- `media/derived/names/page_0073.png`
+- `media/derived/names/page_0074.png`
+- `media/derived/names/page_0075.png`
+- `media/derived/names/page_0076.png`
+- `media/derived/names/page_0077.png`
+- `media/derived/names/page_0078.png`
+- `media/derived/names/page_0079.png`
+- `media/derived/names/page_0080.png`
+- `media/derived/names/page_0081.png`
+- `media/derived/names/page_0082.png`
+- `media/derived/names/page_0083.png`
+- `media/derived/names/page_0084.png`
+- `media/derived/names/page_0085.png`
+- `media/derived/names/page_0086.png`
+- `media/derived/names/page_0087.png`
+- `media/derived/names/page_0088.png`
+- `media/derived/names/page_0089.png`
+- `media/derived/names/page_0090.png`
+- `media/derived/names/page_0091.png`
+- `media/derived/names/page_0092.png`
+- `media/derived/names/page_0093.png`
+- `media/derived/names/page_0094.png`
+- `media/derived/names/page_0095.png`
+- `media/derived/names/page_0096.png`
+- `media/derived/names/page_0097.png`
+- `media/derived/names/page_0098.png`
+- `media/derived/names/page_0099.png`
+- `media/derived/names/page_0100.png`
+- `media/derived/names/page_0101.png`
+- `media/derived/names/page_0102.png`
+- `media/derived/names/page_0103.png`
+- `media/derived/names/page_0104.png`
+- `media/derived/names/page_0105.png`
+- `media/derived/names/page_0106.png`
+- `media/derived/names/page_0107.png`
+- `media/derived/names/page_0108.png`
+- `media/derived/names/page_0109.png`
+- `media/derived/names/page_0110.png`
+- `media/derived/names/page_0111.png`
+- `media/derived/names/page_0112.png`
+- `media/derived/names/page_0113.png`
+- `media/derived/names/page_0114.png`
+- `media/derived/names/page_0115.png`
+- `media/derived/names/page_0116.png`
+- `media/derived/names/page_0117.png`
+- `media/derived/names/page_0118.png`
+- `media/derived/names/page_0119.png`
+- `media/derived/names/page_0120.png`
+- `media/derived/names/page_0121.png`
+- `media/derived/names/page_0122.png`
+- `media/derived/names/page_0123.png`
+- `media/derived/names/page_0124.png`
+- `media/derived/names/page_0125.png`
+- `media/derived/names/page_0126.png`
+- `media/derived/names/page_0127.png`
+- `media/derived/names/page_0128.png`
+- `media/derived/names/page_0129.png`
+- `media/derived/names/page_0130.png`
+- `media/derived/names/page_0131.png`
+- `media/derived/names/page_0132.png`
+- `media/derived/names/page_0133.png`
+- `media/derived/names/page_0134.png`
+- `media/derived/names/page_0135.png`
+- `media/derived/names/page_0136.png`
+- `media/derived/names/page_0137.png`
+- `media/derived/names/page_0138.png`
+- `media/derived/names/page_0139.png`
+- `media/derived/names/page_0140.png`
+- `media/derived/names/page_0141.png`
+- `media/derived/names/page_0142.png`
+- `media/derived/names/page_0143.png`
+- `media/derived/names/page_0144.png`
+- `media/derived/names/page_0145.png`
+- `media/derived/names/page_0146.png`
+- `media/derived/names/page_0147.png`
+- `media/derived/names/page_0148.png`
+- `media/derived/names/page_0149.png`
+- `media/derived/names/page_0150.png`
+- `media/derived/names/page_0151.png`
+- `media/derived/names/page_0152.png`
+- `media/derived/names/page_0153.png`
+- `media/derived/names/page_0154.png`
+- `media/derived/names/page_0155.png`
+- `media/derived/names/page_0156.png`
+- `media/derived/names/page_0157.png`
+- `media/derived/names/page_0158.png`
+- `media/derived/names/page_0159.png`
+- `media/derived/names/page_0160.png`
+- `media/derived/names/page_0161.png`
+- `media/derived/names/page_0162.png`
+- `media/derived/names/page_0163.png`
+- `media/derived/names/page_0164.png`
+- `media/derived/names/page_0165.png`
+- `media/derived/names/page_0166.png`
+- `media/derived/names/page_0167.png`
+- `media/derived/names/page_0168.png`
+- `media/derived/names/page_0169.png`
+- `media/derived/names/page_0170.png`
+- `media/derived/names/page_0171.png`
+- `media/derived/names/page_0172.png`
+- `media/derived/names/page_0173.png`
+- `media/derived/names/page_0174.png`
+- `media/derived/names/page_0175.png`
+- `media/derived/names/page_0176.png`
+- `media/derived/names/page_0177.png`
+- `media/derived/names/page_0178.png`
+- `media/derived/names/page_0179.png`
+- `media/derived/names/page_0180.png`
+- `media/derived/names/page_0181.png`
+- `media/derived/names/page_0182.png`
+- `media/derived/names/page_0183.png`
+- `media/derived/names/page_0184.png`
+- `media/derived/names/page_0185.png`
+- `media/derived/names/page_0186.png`
+- `media/derived/names/page_0187.png`
+- `media/derived/names/page_0188.png`
+- `media/derived/names/page_0189.png`
+- `media/derived/names/page_0190.png`
+- `media/derived/names/page_0191.png`
+- `media/derived/names/page_0192.png`
+- `media/derived/names/page_0193.png`
+- `media/derived/names/page_0194.png`
+- `media/derived/names/page_0195.png`
+- `media/derived/names/page_0196.png`
+- `media/derived/names/page_0197.png`
+- `media/derived/names/page_0198.png`
+- `media/derived/names/page_0199.png`
+- `media/derived/names/page_0200.png`
+- `media/derived/names/page_0201.png`
+- `media/derived/names/page_0202.png`
+- `media/derived/names/page_0203.png`
+- `media/derived/names/page_0204.png`
+- `media/derived/names/page_0205.png`
+- `media/derived/names/page_0206.png`
+- `media/derived/names/page_0207.png`
+- `media/derived/names/page_0208.png`
+- `media/derived/names/page_0209.png`
+- `media/derived/names/page_0210.png`
+- `media/derived/names/page_0211.png`
+- `media/derived/names/page_0212.png`
+- `media/derived/names/page_0213.png`
+- `media/derived/names/page_0214.png`
+- `media/derived/names/page_0215.png`
+- `media/derived/names/page_0216.png`
+- `media/derived/names/page_0217.png`
+- `media/derived/names/page_0218.png`
+- `media/derived/names/page_0219.png`
+- `media/derived/names/page_0220.png`
+- `media/derived/names/page_0221.png`
+- `media/derived/names/page_0222.png`
+- `media/derived/names/page_0223.png`
+- `media/derived/names/page_0224.png`
+- `media/derived/names/page_0225.png`
+- `media/derived/names/page_0226.png`
+- `media/derived/names/page_0227.png`
+- `media/derived/names/page_0228.png`
+- `media/derived/names/page_0229.png`
+- `media/derived/names/page_0230.png`
+- `media/derived/names/page_0231.png`
+- `media/derived/names/page_0232.png`
+- `media/derived/names/page_0233.png`
+- `media/derived/names/page_0234.png`
+- `media/derived/names/page_0235.png`
+- `media/derived/names/page_0236.png`
+- `media/derived/names/page_0237.png`
+- `media/derived/names/page_0238.png`
+- `media/derived/names/page_0239.png`
+- `media/derived/names/page_0240.png`
+- `media/derived/names/page_0241.png`
+- `media/derived/names/page_0242.png`
+- `media/derived/names/page_0243.png`
+- `media/derived/names/page_0244.png`
+- `media/derived/names/page_0245.png`
+- `media/derived/names/page_0246.png`
+- `media/derived/names/page_0247.png`
+- `media/derived/names/page_0248.png`
+- `media/derived/names/page_0249.png`
+- `media/derived/names/page_0250.png`
+- `media/derived/names/page_0251.png`
+- `media/derived/names/page_0252.png`
+- `media/derived/names/page_0253.png`
+- `media/derived/names/page_0254.png`
+- `media/derived/names/page_0255.png`
+- `media/derived/names/page_0256.png`
+- `media/derived/names/page_0257.png`
+- `media/derived/names/page_0258.png`
+- `media/derived/names/page_0259.png`
+- `media/derived/names/page_0260.png`
+- `media/derived/names/page_0261.png`
+- `media/derived/names/page_0262.png`
+- `media/derived/names/page_0263.png`
+- `media/derived/names/page_0264.png`
+- `media/derived/names/page_0265.png`
+- `media/derived/names/page_0266.png`
+- `media/derived/names/page_0267.png`
+- `media/derived/names/page_0268.png`
+- `media/derived/names/page_0269.png`
+- `media/derived/names/page_0270.png`
+- `media/derived/names/page_0271.png`
+- `media/derived/names/page_0272.png`
+- `media/derived/names/page_0273.png`
+- `media/derived/names/page_0274.png`
+- `media/derived/names/page_0275.png`
+- `media/derived/names/page_0276.png`
+- `media/derived/names/page_0277.png`
+- `media/derived/names/page_0278.png`
+- `media/derived/names/page_0279.png`
+- `media/derived/names/page_0280.png`
+- `media/derived/names/page_0281.png`
+- `media/derived/names/page_0282.png`
+- `media/derived/names/page_0283.png`
+- `media/derived/names/page_0284.png`
+- `media/derived/names/page_0285.png`
+- `media/derived/names/page_0286.png`
+- `media/derived/names/page_0287.png`
+- `media/derived/names/page_0288.png`
+- `media/derived/names/page_0289.png`
+- `media/derived/names/page_0290.png`
+- `media/derived/names/page_0291.png`
+- `media/derived/names/page_0292.png`
+- `media/derived/names/page_0293.png`
+- `media/derived/names/page_0294.png`
+- `media/derived/names/page_0295.png`
+- `media/derived/names/page_0296.png`
+- `media/derived/names/page_0297.png`
+- `media/derived/names/page_0298.png`
+- `media/derived/names/page_0299.png`
+- `media/derived/names/page_0300.png`
+- `media/derived/names/page_0301.png`
+- `media/derived/names/page_0302.png`
+- `media/derived/names/page_0303.png`
+- `media/derived/names/page_0304.png`
+- `media/derived/names/page_0305.png`
+- `media/derived/names/page_0306.png`
+- `media/derived/names/page_0307.png`
+- `media/derived/names/page_0308.png`
+- `media/derived/names/page_0309.png`
+- `media/derived/names/page_0310.png`
+- `media/derived/names/page_0311.png`
+- `media/derived/names/page_0312.png`
+- `media/derived/names/page_0313.png`
+- `media/derived/names/page_0314.png`
+- `media/derived/names/page_0315.png`
+- `media/derived/names/page_0316.png`
+- `media/derived/names/page_0317.png`
+- `media/derived/names/page_0318.png`
+- `media/derived/names/page_0319.png`
+- `media/derived/names/page_0320.png`
+- `media/derived/names/page_0321.png`
+- `media/derived/names/page_0322.png`
+- `media/derived/names/page_0323.png`
+- `media/derived/names/page_0324.png`
+- `media/derived/names/page_0325.png`
+- `media/derived/names/page_0326.png`
+- `media/derived/names/page_0327.png`
+- `media/derived/names/page_0328.png`
+- `media/derived/names/page_0329.png`
+- `media/derived/names/page_0330.png`
+- `media/derived/names/page_0331.png`
+- `media/derived/names/page_0332.png`
+- `media/derived/names/page_0333.png`
+- `media/derived/names/page_0334.png`
+- `media/derived/names/page_0335.png`
+- `media/derived/names/page_0336.png`
+- `media/derived/names/page_0337.png`
+- `media/derived/names/page_0338.png`
+- `media/derived/names/page_0339.png`
+- `media/derived/names/page_0340.png`
+- `media/derived/names/page_0341.png`
+- `media/derived/names/page_0342.png`
+- `media/derived/names/page_0343.png`
+- `media/derived/names/page_0344.png`
+- `media/derived/names/page_0345.png`
+- `media/derived/names/page_0346.png`
+- `media/derived/names/page_0347.png`
+- `media/derived/names/page_0348.png`
+- `media/derived/names/page_0349.png`
+- `media/derived/names/page_0350.png`
+- `media/derived/names/page_0351.png`
+- `media/derived/names/page_0352.png`
+- `media/derived/names/page_0353.png`
+- `media/derived/names/page_0354.png`
+- `media/derived/names/page_0355.png`
+- `media/derived/names/page_0356.png`
+- `media/derived/names/page_0357.png`
+- `media/derived/names/page_0358.png`
+- `media/derived/names/page_0359.png`
+- `media/derived/names/page_0360.png`
+- `media/derived/names/page_0361.png`
+- `media/derived/names/page_0362.png`
+- `media/derived/names/page_0363.png`
+- `media/derived/names/page_0364.png`
+- `media/derived/names/page_0365.png`
+- `media/derived/names/page_0366.png`
+- `media/derived/names/page_0367.png`
+- `media/derived/names/page_0368.png`
+- `media/derived/names/page_0369.png`
+- `media/derived/names/page_0370.png`
+- `media/derived/names/page_0371.png`
+- `media/derived/names/page_0372.png`
+- `media/derived/names/page_0373.png`
+- `media/derived/names/page_0374.png`
+- `media/derived/names/page_0375.png`
+- `media/derived/names/page_0376.png`
+- `media/derived/names/page_0377.png`
+- `media/derived/names/page_0378.png`
+- `media/derived/names/page_0379.png`
+- `media/derived/names/page_0380.png`
+- `media/derived/names/page_0381.png`
+- `media/derived/names/page_0382.png`
+- `media/derived/names/page_0383.png`
+- `media/derived/names/page_0384.png`
+- `media/derived/names/page_0385.png`
+- `media/derived/names/page_0386.png`
+- `media/derived/names/page_0387.png`
+- `media/derived/names/page_0388.png`
+- `media/derived/names/page_0389.png`
+- `media/derived/names/page_0390.png`
+- `media/derived/names/page_0391.png`
+- `media/derived/names/page_0392.png`
+- `media/derived/names/page_0393.png`
+- `media/derived/names/page_0394.png`
+- `media/derived/names/page_0395.png`
+- `media/derived/names/page_0396.png`
+- `media/derived/names/page_0397.png`
+- `media/derived/names/page_0398.png`
+- `media/derived/names/page_0399.png`
+- `media/derived/names/page_0400.png`
+- `media/derived/names/page_0401.png`
+- `media/derived/names/page_0402.png`
+- `media/derived/names/page_0403.png`
+- `media/derived/names/page_0404.png`
+- `media/derived/names/page_0405.png`
+- `media/derived/names/page_0406.png`
+- `media/derived/names/page_0407.png`
+- `media/derived/names/page_0408.png`
+- `media/derived/names/page_0409.png`
+- `media/derived/names/page_0410.png`
+- `media/derived/names/page_0411.png`
+- `media/derived/names/page_0412.png`
+- `media/derived/names/page_0413.png`
+- `media/derived/names/page_0414.png`
+- `media/derived/names/page_0415.png`
+- `media/derived/names/page_0416.png`
+- `media/derived/names/page_0417.png`
+- `media/derived/names/page_0418.png`
+- `media/derived/names/page_0419.png`
+- `media/derived/names/page_0420.png`
+- `media/derived/names/page_0421.png`
+- `media/derived/names/page_0422.png`
+- `media/derived/names/page_0423.png`
+- `media/derived/names/page_0424.png`
+- `media/derived/names/page_0425.png`
+- `media/derived/names/page_0426.png`
+- `media/derived/names/page_0427.png`
+- `media/derived/names/page_0428.png`
+- `media/derived/names/page_0429.png`
+- `media/derived/names/page_0430.png`
+- `media/derived/names/page_0431.png`
+- `media/derived/names/page_0432.png`
+- `media/derived/names/page_0433.png`
+- `media/derived/names/page_0434.png`
+- `media/derived/names/page_0435.png`
+- `media/derived/names/page_0436.png`
+- `media/derived/names/page_0437.png`
+- `media/derived/names/page_0438.png`
+- `media/derived/names/page_0439.png`
+- `media/derived/names/page_0440.png`
+- `media/derived/names/page_0441.png`
+- `media/derived/names/page_0442.png`
+- `media/derived/names/page_0443.png`
+- `media/derived/names/page_0444.png`
+- `media/derived/names/page_0445.png`
+- `media/derived/names/page_0446.png`
+- `media/derived/names/page_0447.png`
+- `media/derived/names/page_0448.png`
+- `media/derived/names/page_0449.png`
+- `media/derived/names/page_0450.png`
+- `media/derived/names/page_0451.png`
+- `media/derived/names/page_0452.png`
+- `media/derived/names/page_0453.png`
+- `media/derived/names/page_0454.png`
+- `media/derived/names/page_0455.png`
+- `media/derived/names/page_0456.png`
+- `media/derived/names/page_0457.png`
+- `media/derived/names/page_0458.png`
+- `media/derived/names/page_0459.png`
+- `media/derived/names/page_0460.png`
+- `media/derived/names/page_0461.png`
+- `media/derived/names/page_0462.png`
+- `media/derived/names/page_0463.png`
+- `media/derived/names/page_0464.png`
+- `media/derived/names/page_0465.png`
+- `media/derived/names/page_0466.png`
+- `media/derived/names/page_0467.png`
+- `media/derived/names/page_0468.png`
+- `media/derived/names/page_0469.png`
+- `media/derived/names/page_0470.png`
+- `media/derived/names/page_0471.png`
+- `media/derived/names/page_0472.png`
+- `media/derived/names/page_0473.png`
+- `media/derived/names/page_0474.png`
+- `media/derived/names/page_0475.png`
+- `media/derived/names/page_0476.png`
+- `media/derived/names/page_0477.png`
+- `media/derived/names/page_0478.png`
+- `media/derived/names/page_0479.png`
+- `media/derived/names/page_0480.png`
+- `media/derived/names/page_0481.png`
+- `media/derived/names/page_0482.png`
+- `media/derived/names/page_0483.png`
+- `media/derived/names/page_0484.png`
+- `media/derived/names/page_0485.png`
+- `media/derived/names/page_0486.png`
+- `media/derived/names/page_0487.png`
+- `media/derived/names/page_0488.png`
+- `media/derived/names/page_0489.png`
+- `media/derived/names/page_0490.png`
+- `media/derived/names/page_0491.png`
+- `media/derived/names/page_0492.png`
+- `media/derived/names/page_0493.png`
+- `media/derived/names/page_0494.png`
+- `media/derived/names/page_0495.png`
+- `media/derived/names/page_0496.png`
+- `media/derived/names/page_0497.png`
+- `media/derived/names/page_0498.png`
+- `media/derived/names/page_0499.png`
+- `media/derived/names/page_0500.png`
+- `media/derived/names/page_0501.png`
+- `media/derived/names/page_0502.png`
+- `media/derived/names/page_0503.png`
+- `media/derived/names/page_0504.png`
+- `media/derived/names/page_0505.png`
+- `media/derived/names/page_0506.png`
+- `media/derived/names/page_0507.png`
+- `media/derived/names/page_0508.png`
+- `media/derived/names/page_0509.png`
+- `media/derived/names/page_0510.png`
+- `media/derived/names/page_0511.png`
+- `media/derived/names/page_0512.png`
+- `media/derived/names/page_0513.png`
+- `media/derived/names/page_0514.png`
+- `media/derived/names/page_0515.png`
+- `media/derived/names/page_0516.png`
+- `media/derived/names/page_0517.png`
+- `media/derived/names/page_0518.png`
+- `media/derived/names/page_0519.png`
+- `media/derived/names/page_0520.png`
+- `media/derived/names/page_0521.png`
+- `media/derived/names/page_0522.png`
+- `media/derived/names/page_0523.png`
+- `media/derived/names/page_0524.png`
+- `media/derived/names/page_0525.png`
+- `media/derived/names/page_0526.png`
+- `media/derived/names/page_0527.png`
+- `media/derived/names/page_0528.png`
+- `media/derived/names/page_0529.png`
+- `media/derived/names/page_0530.png`
+- `media/derived/names/page_0531.png`
+- `media/derived/names/page_0532.png`
+- `media/derived/names/page_0533.png`
+- `media/derived/names/page_0534.png`
+- `media/derived/names/page_0535.png`
+- `media/derived/names/page_0536.png`
+- `media/derived/names/page_0537.png`
+- `media/derived/names/page_0538.png`
+- `media/derived/names/page_0539.png`
+- `media/derived/names/page_0540.png`
+- `media/derived/names/page_0541.png`
+- `media/derived/names/page_0542.png`
+- `media/derived/names/page_0543.png`
+- `media/derived/names/page_0544.png`
+- `media/derived/names/page_0545.png`
+- `media/derived/names/page_0546.png`
+- `media/derived/names/page_0547.png`
+- `media/derived/names/page_0548.png`
+- `media/derived/names/page_0549.png`
+- `media/derived/names/page_0550.png`
+- `media/derived/names/page_0551.png`
+- `media/derived/names/page_0552.png`
+- `media/derived/names/page_0553.png`
+- `media/derived/names/page_0554.png`
+- `media/derived/names/page_0555.png`
+- `media/derived/names/page_0556.png`
+- `media/derived/names/page_0557.png`
+- `media/derived/names/page_0558.png`
+- `media/derived/names/page_0559.png`
+- `media/derived/names/page_0560.png`
+- `media/derived/names/page_0561.png`
+- `media/derived/names/page_0562.png`
+- `media/derived/names/page_0563.png`
+- `media/derived/names/page_0564.png`
+- `media/derived/names/page_0565.png`
+- `media/derived/names/page_0566.png`
+- `media/derived/names/page_0567.png`
+- `media/derived/names/page_0568.png`
+- `media/derived/names/page_0569.png`
+- `media/derived/names/page_0570.png`
+- `media/derived/names/page_0571.png`
+- `media/derived/names/page_0572.png`
+- `media/derived/names/page_0573.png`
+- `media/derived/names/page_0574.png`
+- `media/derived/names/page_0575.png`
+- `media/derived/names/page_0576.png`
+- `media/derived/names/page_0577.png`
+- `media/derived/names/page_0578.png`
+- `media/derived/names/page_0579.png`
+- `media/derived/names/page_0580.png`
+- `media/derived/names/page_0581.png`
+- `media/derived/names/page_0582.png`
+- `media/derived/names/page_0583.png`
+- `media/derived/names/page_0584.png`
+- `media/derived/names/page_0585.png`
+- `media/derived/names/page_0586.png`
+- `media/derived/names/page_0587.png`
+- `media/derived/names/page_0588.png`
+- `media/derived/names/page_0589.png`
+- `media/derived/names/page_0590.png`
+- `media/derived/names/page_0591.png`
+- `media/derived/names/page_0592.png`
+- `media/derived/names/page_0593.png`
+- `media/derived/names/page_0594.png`
+- `media/derived/names/page_0595.png`
+- `media/derived/names/page_0596.png`
+- `media/derived/names/page_0597.png`
+- `media/derived/names/page_0598.png`
+- `media/derived/names/page_0599.png`
+- `media/derived/names/page_0600.png`
+- `media/derived/names/page_0601.png`
+- `media/derived/names/page_0602.png`
+- `media/derived/names/page_0603.png`
+- `media/derived/names/page_0604.png`
+- `media/derived/names/page_0605.png`
+- `media/derived/names/page_0606.png`
+- `media/derived/names/page_0607.png`
+- `media/derived/names/page_0608.png`
+- `media/derived/names/page_0609.png`
+- `media/derived/names/page_0610.png`
+- `media/derived/names/page_0611.png`
+- `media/derived/names/page_0612.png`
+- `media/derived/names/page_0613.png`
+- `media/derived/names/page_0614.png`
+- `media/derived/names/page_0615.png`
+- `media/derived/names/page_0616.png`
+- `media/derived/names/page_0617.png`
+- `media/derived/names/page_0618.png`
+- `media/derived/names/page_0619.png`
+- `media/derived/names/page_0620.png`
+- `media/derived/names/page_0621.png`
+- `media/derived/names/page_0622.png`
+- `media/derived/names/page_0623.png`
+- `media/derived/names/page_0624.png`
+- `media/derived/names/page_0625.png`
+- `media/derived/names/page_0626.png`
+- `media/derived/names/page_0627.png`
+- `media/derived/names/page_0628.png`
+- `media/derived/names/page_0629.png`
+- `media/derived/names/page_0630.png`
+- `media/derived/names/page_0631.png`
+- `media/derived/names/page_0632.png`
+- `media/derived/names/page_0633.png`
+- `media/derived/names/page_0634.png`
+- `media/derived/names/page_0635.png`
+- `media/derived/names/page_0636.png`
+- `media/derived/names/page_0637.png`
+- `media/derived/names/page_0638.png`
+- `media/derived/names/page_0639.png`
+- `media/derived/names/page_0640.png`
+- `media/derived/names/page_0641.png`
+- `media/derived/names/page_0642.png`
+- `media/derived/names/page_0643.png`
+- `media/derived/names/page_0644.png`
+- `media/derived/names/page_0645.png`
+- `media/derived/names/page_0646.png`
+- `media/derived/names/page_0647.png`
+- `media/derived/names/page_0648.png`
+- `media/derived/names/page_0649.png`
+- `media/derived/names/page_0650.png`
+- `media/derived/names/page_0651.png`
+- `media/derived/names/page_0652.png`
+- `media/derived/names/page_0653.png`
+- `media/derived/names/page_0654.png`
+- `media/derived/names/page_0655.png`
+- `media/derived/names/page_0656.png`
+- `media/derived/names/page_0657.png`
+- `media/derived/names/page_0658.png`
+- `media/derived/names/page_0659.png`
+- `media/derived/names/page_0660.png`
+- `media/derived/names/page_0661.png`
+- `media/derived/names/page_0662.png`
+- `media/derived/names/page_0663.png`
+- `media/derived/names/page_0664.png`
+- `media/derived/names/page_0665.png`
+- `media/derived/names/page_0666.png`
+- `media/derived/names/page_0667.png`
+- `media/derived/names/page_0668.png`
+- `media/derived/names/page_0669.png`
+- `media/derived/names/page_0670.png`
+- `media/derived/names/page_0671.png`
+- `media/derived/names/page_0672.png`
+- `media/derived/names/page_0673.png`
+- `media/derived/names/page_0674.png`
+- `media/derived/names/page_0675.png`
+- `media/derived/names/page_0676.png`
+- `media/derived/names/page_0677.png`
+- `media/derived/names/page_0678.png`
+- `media/derived/names/page_0679.png`
+- `media/derived/names/page_0680.png`
+- `media/derived/names/page_0681.png`
+- `media/derived/names/page_0682.png`
+- `media/derived/names/page_0683.png`
+- `media/derived/names/page_0684.png`
+- `media/derived/names/page_0685.png`
+- `media/derived/names/page_0686.png`
+- `media/derived/names/page_0687.png`
+- `media/derived/names/page_0688.png`
+- `media/derived/names/page_0689.png`
+- `media/derived/names/page_0690.png`
+- `media/derived/names/page_0691.png`
+- `media/derived/names/page_0692.png`
+- `media/derived/names/page_0693.png`
+- `media/derived/names/page_0694.png`
+- `media/derived/names/page_0695.png`
+- `media/derived/names/page_0696.png`
+- `media/derived/names/page_0697.png`
+- `media/derived/names/page_0698.png`
+- `media/derived/names/page_0699.png`
+- `media/derived/names/page_0700.png`
+- `media/derived/names/page_0701.png`
+- `media/derived/names/page_0702.png`
+- `media/derived/names/page_0703.png`
+- `media/derived/names/page_0704.png`
+- `media/derived/names/page_0705.png`
+- `media/derived/names/page_0706.png`
+- `media/derived/names/page_0707.png`
+- `media/derived/names/page_0708.png`
+- `media/derived/names/page_0709.png`
+- `media/derived/names/page_0710.png`
+- `media/derived/names/page_0711.png`
+- `media/derived/names/page_0712.png`
+- `media/derived/names/page_0713.png`
+- `media/derived/names/page_0714.png`
+- `media/derived/names/page_0715.png`
+- `media/derived/names/page_0716.png`
+- `media/derived/names/page_0717.png`
+- `media/derived/names/page_0718.png`
+- `media/derived/names/page_0719.png`
+- `media/derived/names/page_0720.png`
+- `media/derived/names/page_0721.png`
+- `media/derived/names/page_0722.png`
+- `media/derived/names/page_0723.png`
+- `media/derived/names/page_0724.png`
+- `media/derived/names/page_0725.png`
+- `media/derived/names/page_0726.png`
+- `media/derived/names/page_0727.png`
+- `media/derived/names/page_0728.png`
+- `media/derived/names/page_0729.png`
+- `media/derived/names/page_0730.png`
+- `media/derived/names/page_0731.png`
+- `media/derived/names/page_0732.png`
+- `media/derived/names/page_0733.png`
+- `media/derived/names/page_0734.png`
+- `media/derived/names/page_0735.png`
+- `media/derived/names/page_0736.png`
+- `media/derived/names/page_0737.png`
+- `media/derived/names/page_0738.png`
+- `media/derived/names/page_0739.png`
+- `media/derived/names/page_0740.png`
+- `media/derived/names/page_0741.png`
+- `media/derived/names/page_0742.png`
+- `media/derived/names/page_0743.png`
+- `media/derived/names/page_0744.png`
+- `media/derived/names/page_0745.png`
+- `media/derived/names/page_0746.png`
+- `media/derived/names/page_0747.png`
+- `media/derived/names/page_0748.png`
+- `media/derived/names/page_0749.png`
+- `media/derived/names/page_0750.png`
+- `media/derived/names/page_0751.png`
+- `media/derived/names/page_0752.png`
+- `media/derived/names/page_0753.png`
+- `media/derived/names/page_0754.png`
+- `media/derived/names/page_0755.png`
+- `media/derived/names/page_0756.png`
+- `media/derived/names/page_0757.png`
+- `media/derived/names/page_0758.png`
 - `media/derived/preachers/bachmann_blessed__bless_israel.mp4`
 - `media/derived/preachers/cruz_tucker_bless__taught_bless.mp4`
 - `media/derived/preachers/cruz_tucker_bless__where_is_that.mp4`
@@ -217,22 +996,44 @@ Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py`
 - `media/derived/preachers/vaughn_wonderful_days__glory.mp4`
 - `media/derived/preachers/vaughn_wonderful_days__wonderful_days.mp4`
 - `media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4`
+- `media/derived/text/36b607534121c82b.png`
+- `media/derived/text/433d7caf63d1f024.png`
 - `media/derived/text/44d9ee05972ae3d7.png`
+- `media/derived/text/478a08e52c0e45f8.png`
 - `media/derived/text/4cfc61f879b052b7.png`
 - `media/derived/text/501a11f26dc29dc0.png`
 - `media/derived/text/5206ed41c8b9c68b.png`
 - `media/derived/text/58294408dd28d066.png`
 - `media/derived/text/5a5c394948ec8bce.png`
 - `media/derived/text/671eff7001734ce5.png`
+- `media/derived/text/773249a6e640c160.png`
 - `media/derived/text/9650f24ef6067e3b.png`
 - `media/derived/text/9e34b40e1ffbee21.png`
 - `media/derived/text/afd8cf81d062fce9.png`
+- `media/derived/text/b12baea566f2162d.png`
 - `media/derived/text/b6d0a0919e2faae6.png`
 - `media/derived/text/bbb096da6f7565a9.png`
 - `media/derived/text/bfba81ceeeb85b69.png`
 - `media/derived/text/c2ade9fdb44c2454.png`
 - `media/derived/text/c7b128269242f8ec.png`
+- `media/derived/text/c9a7bd1b9a3d286b.png`
 - `media/derived/text/cae36e2061e6ed26.png`
+- `media/derived/text/e2468894eef923c4.png`
+- `media/derived/text/eaceaaf8950a3988.png`
+- `media/derived/text/f38cdba8a2ad6fff.png`
+- `media/derived/text/sub_4792efa83fc75457.png`
+- `media/derived/text/sub_5ade16a06b0eb32d.png`
+- `media/derived/text/sub_62c0c6daa73dfa70.png`
+- `media/derived/text/sub_65fc68ca07fd5a5d.png`
+- `media/derived/text/sub_6b9b86e00b57b2c8.png`
+- `media/derived/text/sub_83df7e8559bef63a.png`
+- `media/derived/text/sub_87b20bc78ec1ddcd.png`
+- `media/derived/text/sub_9a43257c95041e88.png`
+- `media/derived/text/sub_cb54799a3178447d.png`
+- `media/derived/text/sub_d5592f3eb4fd1c05.png`
+- `media/derived/text/sub_daceff1e5aeb3ea4.png`
+- `media/derived/text/sub_ea565e1bcaa1b823.png`
+- `media/derived/text/sub_ed07bf8a0baaadde.png`
 
 ## The dead of Gaza
 
