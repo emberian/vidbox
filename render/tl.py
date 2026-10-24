@@ -7,6 +7,7 @@ timeline viewer plays); --full renders 1:1 to NAME.full.mp4. --jobs splits the r
 chunks rendered in parallel processes (each with a short pre-roll so trails settle).
 """
 import argparse
+import functools
 import json
 import math
 import os
@@ -62,13 +63,15 @@ def revisit_spans(tm, t0, t1, pad=0.05):
     return merged
 
 
+@functools.lru_cache(maxsize=None)
 def probe(src):
+    """(width, height) of a source's first video stream; once per file per process (a timeline
+    has hundreds of layers over a few dozen files)."""
     out = json.loads(subprocess.run(
         ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
-         "stream=width,height,avg_frame_rate", "-of", "json", str(src)],
+         "stream=width,height", "-of", "json", str(src)],
         capture_output=True, text=True, check=True).stdout)["streams"][0]
-    num, den = (int(x) for x in out["avg_frame_rate"].split("/"))
-    return out["width"], out["height"], num / den
+    return out["width"], out["height"]
 
 
 _mask_cache = {}
@@ -165,14 +168,14 @@ class Params:
 
 
 class Layer(Params):
-    def __init__(self, spec, ctx, W, H, k, fps):
+    def __init__(self, spec, ctx, W, H, k):
         super().__init__(ctx, k)
         self.s = spec
         self.id = spec.get("id", "?")
         self.t0, self.t1 = spec["t0"], spec["t1"]
         self.src = ROOT / spec["src"]
         self.reader, self.state = None, {}
-        sw, sh, self.src_fps = probe(self.src)
+        sw, sh = probe(self.src)
         crop = spec.get("crop")
         if crop:
             sw, sh = sw * (crop[2] - crop[0]), sh * (crop[3] - crop[1])
@@ -264,7 +267,9 @@ def render_video(tl, frames, k, out, ctx, warm=0):
     """Render frame indices `frames` (song frame numbers); the first `warm` are pre-roll."""
     W, H = (int(tl["size"][0] * k) // 2 * 2, int(tl["size"][1] * k) // 2 * 2)
     fps = tl["fps"]
-    layers = [Layer(L, ctx, *tl["size"], k, fps) for L in tl["layers"]]
+    # only the layers this frame range touches (a chunk of a full-song timeline sees a few dozen)
+    lo, hi = (frames[0] / fps, frames[-1] / fps) if len(frames) else (0.0, -1.0)
+    layers = [Layer(L, ctx, *tl["size"], k) for L in tl["layers"] if L["t0"] <= hi and L["t1"] > lo]
     post = Params(ctx, k) if tl.get("post") else None
     enc = subprocess.Popen(
         ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(fps),
