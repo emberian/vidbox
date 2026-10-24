@@ -28,6 +28,7 @@ from signals import Ctx, Music, compile_signal, compile_time  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PICTURE = (0, 158, 1440, 922)   # Meine's letterboxed picture area (canvas px)
+MAX_LAYER_AREA = 16   # a layer drawn larger than 16 canvases (4x each way) is a broken signal, not a zoom
 LENGTH_PARAMS = {"px", "scale", "period"}   # fx params in canvas px: scaled with the preview
 PREROLL = 1.0
 SR = 48000          # audio bus sample rate
@@ -90,6 +91,7 @@ def probe(src):
 
 
 _mask_cache = {}
+MASK_CACHE_MB = 64   # a pulsing masked layer makes a new size every frame; a full-canvas mask is 6 MB
 
 
 def mask(spec, w, h):
@@ -108,7 +110,7 @@ def mask(spec, w, h):
             m = np.clip(np.minimum(dx, dy) / f, 0, 1)
         else:
             raise ValueError(f"mask shape {spec['shape']!r}")
-        if len(_mask_cache) > 64:
+        if len(_mask_cache) > 64 or sum(v.nbytes for v in _mask_cache.values()) + m.nbytes > MASK_CACHE_MB * 2 ** 20:
             _mask_cache.clear()
         _mask_cache[key] = m.astype(np.float32)
     return _mask_cache[key]
@@ -259,8 +261,11 @@ class Layer(Params):
         sc = self.sig("scale", s.get("scale"), 1)(t)
         if op <= 0.002 or sc <= 0.002:
             return
-        frame = self.reader.get(self.src_time(t))
         dw, dh = max(2, int(round(self.base[0] * sc))), max(2, int(round(self.base[1] * sc)))
+        if dw * dh > MAX_LAYER_AREA * canvas.shape[0] * canvas.shape[1]:   # each float copy below is dw*dh*12 bytes
+            raise ValueError(f"layer {self.id} at t={t:.3f}: {dw}x{dh} px (scale {sc:.3g}) is over "
+                             f"{MAX_LAYER_AREA}x the canvas")
+        frame = self.reader.get(self.src_time(t))
         if (dw, dh) != (frame.shape[1], frame.shape[0]):   # usually equal: decoded at display size
             frame = cv2.resize(frame, (dw, dh), interpolation=cv2.INTER_AREA if dw < frame.shape[1] else cv2.INTER_LINEAR)
         img = frame.astype(np.float32) * (1 / 255)
