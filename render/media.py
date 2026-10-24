@@ -5,8 +5,9 @@ frame, the same clock a browser's video.currentTime uses. Catalog hit times, the
 the renderer all use it. (Inferring frame times from ffmpeg -ss positions is off by 1-2 frames
 in ways that vary per file; every frame here carries its own timestamp instead.)
 """
+import os
 from bisect import bisect_right
-from collections import deque
+from collections import OrderedDict, deque
 
 import av
 import cv2
@@ -60,18 +61,53 @@ def decode_range(src, t0, t1, size=None, gray=False):
     return out
 
 
+class SpanCache:
+    """Process-wide, size-capped LRU of decoded source spans for revisited material (reverses,
+    stutters, repeated slices): key (src, crop, size, a, b) -> (times, frames). Capped at
+    $VIDBOX_SPAN_CACHE_MB (default 512) per process; a span larger than half the cap is never
+    cached (the Reader's forward path serves it instead)."""
+
+    def __init__(self, cap_mb=None):
+        self.cap = int(float(cap_mb if cap_mb is not None else os.environ.get("VIDBOX_SPAN_CACHE_MB", 512)) * 2 ** 20)
+        self.d = OrderedDict()
+        self.bytes = 0
+
+    def get(self, key):
+        v = self.d.get(key)
+        if v is not None:
+            self.d.move_to_end(key)
+        return v
+
+    def fits(self, nbytes):
+        return nbytes <= self.cap // 2
+
+    def put(self, key, value, nbytes):
+        self.d[key] = (value, nbytes)
+        self.bytes += nbytes
+        while self.bytes > self.cap and len(self.d) > 1:
+            _, (_, nb) = self.d.popitem(last=False)
+            self.bytes -= nb
+
+
+SPANS = SpanCache()
+
+
 class Reader:
     """Frame shown at time t = the latest frame with timestamp <= t (never early).
     Decodes forward, keeps a short buffer so small backward steps (stutters, loop wraps
-    into the recent past) don't re-seek."""
+    into the recent past) don't re-seek. `spans`: source intervals [(a, b)] that will be
+    revisited or played backwards; times inside one are served from SPANS (decoded once, by a
+    separate decoder, so the forward position is kept)."""
 
-    def __init__(self, src, crop, size, keep=120):
+    def __init__(self, src, crop, size, keep=120, spans=None):
         self.src, self.crop, self.size, self.keep = src, crop, size, keep
         self.d = Decoder(src)
         self.fps = self.d.fps
         self.gen, self.eof = None, False
         self.buf = deque()   # (t, array), increasing t
         self.times = []
+        self.spans = sorted(spans or [])
+        self.too_big = set()
 
     def _seek(self, t):
         self.gen = self.d.frames(t)
@@ -88,7 +124,43 @@ class Reader:
         while len(self.buf) > self.keep:
             self.buf.popleft()
 
+    def _span(self, a, b):
+        key = (str(self.src), tuple(self.crop) if self.crop else None, tuple(self.size), round(a, 4), round(b, 4))
+        hit = SPANS.get(key)
+        if hit is not None:
+            return hit[0]
+        if key in self.too_big:
+            return None
+        est = (b - a + 2 / self.fps) * self.fps * self.size[0] * self.size[1] * 3
+        if not SPANS.fits(est):
+            self.too_big.add(key)
+            return None
+        d = Decoder(self.src)
+        times, frames, prev = [], [], None
+        for t, f in d.frames(a):
+            if t > b + 1e-6:
+                break
+            if t <= a + 1e-6:
+                prev = (t, f)   # the frame showing at a (latest with timestamp <= a)
+                continue
+            if prev is not None:
+                times.append(prev[0]); frames.append(to_array(prev[1], self.crop, self.size)); prev = None
+            times.append(t); frames.append(to_array(f, self.crop, self.size))
+        if prev is not None:
+            times.append(prev[0]); frames.append(to_array(prev[1], self.crop, self.size))
+        d.close()
+        val = (times, frames)
+        SPANS.put(key, val, sum(x.nbytes for x in frames))
+        return val
+
     def get(self, t):
+        for a, b in self.spans:
+            if a - 1e-6 <= t <= b + 1e-6:
+                sp = self._span(a, b)
+                if sp is not None and sp[0]:
+                    i = bisect_right(sp[0], t + 1e-6) - 1
+                    return sp[1][max(i, 0)]
+                break
         if self.gen is None or not self.buf or t < self.buf[0][0] - 1e-6 or t > self.buf[-1][0] + 3.0:
             self._seek(t)
         while not self.eof and (not self.buf or self.buf[-1][0] <= t + 1e-6):

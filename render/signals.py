@@ -179,3 +179,197 @@ def compile_signal(spec, ctx):
             return r
         return mul
     raise ValueError(f"unknown signal form {list(spec)}")
+
+
+# ---- time maps: song time -> source time (TIMELINE.md "Time") ----
+# A TimeMap is a list of contiguous runs covering the layer's song span. The renderer uses it
+# for the frame (latest frame with timestamp <= src(t)), for the layer's audio, and comp.py for
+# hits_song. The original forms (in/speed, loop, map, hold) keep their own closed-form lambdas in
+# the renderer; their runs here exist for audio and meta and agree with them exactly.
+
+def _ease_int(x, ease):
+    """Integral over [0, x] of the ramp's easing curve e(u) (e = u or smoothstep)."""
+    if ease == "smooth":
+        return x ** 3 - x ** 4 / 2
+    return x * x / 2
+
+
+def _ease(x, ease):
+    return x * x * (3 - 2 * x) if ease == "smooth" else x
+
+
+class Run:
+    """One piece of a time map over song [a, b).
+    kind: "lin" (s0 + v (t - a)), "hold" (s0), "ramp" (speed v0 -> v1 over d, eased),
+    "curve" (tabulated: ts -> ss)."""
+
+    def __init__(self, a, b, kind, s0=0.0, v=0.0, v0=0.0, v1=0.0, ease="linear", ts=None, ss=None):
+        self.a, self.b, self.kind = a, b, kind
+        self.s0, self.v, self.v0, self.v1, self.ease = s0, v, v0, v1, ease
+        self.ts, self.ss = ts, ss
+
+    def src(self, t):
+        if self.kind == "lin":
+            return self.s0 + self.v * (t - self.a)
+        if self.kind == "hold":
+            return self.s0
+        if self.kind == "ramp":
+            d = self.b - self.a
+            x = min(max((t - self.a) / d, 0.0), 1.0)
+            extra = max(0.0, t - self.b)   # past the ramp's end: continue at v1
+            return self.s0 + d * (self.v0 * x + (self.v1 - self.v0) * _ease_int(x, self.ease)) + self.v1 * extra
+        return float(np.interp(t, self.ts, self.ss))
+
+    def src_vec(self, t):
+        t = np.asarray(t, float)
+        if self.kind == "lin":
+            return self.s0 + self.v * (t - self.a)
+        if self.kind == "hold":
+            return np.full(t.shape, self.s0)
+        if self.kind == "ramp":
+            d = self.b - self.a
+            x = np.clip((t - self.a) / d, 0.0, 1.0)
+            return self.s0 + d * (self.v0 * x + (self.v1 - self.v0) * _ease_int(x, self.ease)) + \
+                self.v1 * np.maximum(0.0, t - self.b)
+        return np.interp(t, self.ts, self.ss)
+
+    def speed_at(self, t):
+        if self.kind == "lin":
+            return self.v
+        if self.kind == "hold":
+            return 0.0
+        if self.kind == "ramp":
+            x = min(max((t - self.a) / (self.b - self.a), 0.0), 1.0)
+            return self.v0 + (self.v1 - self.v0) * _ease(x, self.ease)
+        i = min(max(int(np.searchsorted(self.ts, t)), 1), len(self.ts) - 1)
+        return float((self.ss[i] - self.ss[i - 1]) / (self.ts[i] - self.ts[i - 1]))
+
+    def constant_speed(self):
+        """The run's speed if it is constant (lin/hold), else None."""
+        return self.v if self.kind == "lin" else 0.0 if self.kind == "hold" else None
+
+    def __repr__(self):
+        return f"<Run {self.kind} {self.a:.3f}-{self.b:.3f} src {self.src(self.a):.3f}->{self.src(self.b):.3f}>"
+
+
+class TimeMap:
+    def __init__(self, runs):
+        self.runs = [r for r in runs if r.b > r.a + 1e-9] or runs[:1]
+        self.starts = [r.a for r in self.runs]
+
+    def run_at(self, t):
+        i = bisect_right(self.starts, t + 1e-9) - 1
+        return self.runs[min(max(i, 0), len(self.runs) - 1)]
+
+    def __call__(self, t):
+        return self.run_at(t).src(t)
+
+    @property
+    def end(self):
+        return self.runs[-1].b
+
+    def song_times(self, h, t0=None, t1=None, step=0.002):
+        """Song times in [t0, t1) at which source time h is reached (where a hit at h shows)."""
+        out = []
+        for r in self.runs:
+            a, b = max(r.a, t0 if t0 is not None else r.a), min(r.b, t1 if t1 is not None else r.b)
+            if b <= a:
+                continue
+            if r.kind == "hold":
+                if abs(r.s0 - h) < 1e-6:
+                    out.append(a)
+            elif r.kind == "lin":
+                if abs(r.v) > 1e-12:
+                    t = r.a + (h - r.s0) / r.v
+                    if a - 1e-9 <= t < b:
+                        out.append(t)
+            else:
+                ts = np.arange(a, b + step, step)
+                d = r.src_vec(ts) - h
+                for i in np.nonzero((d[:-1] <= 0) & (d[1:] > 0) | (d[:-1] >= 0) & (d[1:] < 0))[0]:
+                    u = d[i] / (d[i] - d[i + 1]) if d[i] != d[i + 1] else 0.0
+                    t = ts[i] + u * step
+                    if t < b:
+                        out.append(float(t))
+        return sorted(set(round(t, 4) for t in out))
+
+
+def _seq_runs(pieces, t0):
+    runs, a = [], t0
+    for p in pieces:
+        d = float(p["dur"])
+        if "hold" in p:
+            runs.append(Run(a, a + d, "hold", s0=float(p["hold"])))
+            a += d
+            continue
+        s, sp = float(p["in"]), p.get("speed", 1.0)
+        if isinstance(sp, list):   # ramp [v0, v1]
+            if "repeat" in p:
+                raise ValueError("repeat is for constant-speed pieces")
+            runs.append(Run(a, a + d, "ramp", s0=s, v0=float(sp[0]), v1=float(sp[1]), ease=p.get("ease", "linear")))
+            a += d
+            continue
+        sp = float(sp)
+        n, every = int(p.get("repeat", 1)), float(p.get("every", d))
+        for k in range(n):
+            last = k == n - 1
+            play = d if last else min(d, every)
+            runs.append(Run(a, a + play, "lin", s0=s, v=sp))
+            if not last and every > play:   # gap until the next trigger: hold the slice's last frame
+                runs.append(Run(a + play, a + every, "hold", s0=s + sp * play))
+            a += play if last else every
+    return runs
+
+
+def compile_time(T, t0, t1, ctx=None, dt=0.001):
+    """TimeMap for a layer's `time` spec over song [t0, t1)."""
+    T = T or {"in": 0.0, "speed": 1.0}
+    if "seq" in T:
+        runs = _seq_runs(T["seq"], t0)
+        if not runs:
+            raise ValueError("empty seq")
+        last = runs[-1]
+        end = last.b
+        if end < t1:   # past the seq: continue at the last piece's final speed
+            runs.append(Run(end, t1, "lin", s0=last.src(end), v=last.speed_at(end)))
+        return TimeMap(runs)
+    if "map" in T:
+        song, src = [float(x) for x in T["map"]["song"]], [float(x) for x in T["map"]["src"]]
+        runs = [Run(min(t0, song[0]) - 1.0, song[0], "hold", s0=src[0])]
+        for i in range(len(song) - 1):
+            if song[i + 1] > song[i]:
+                runs.append(Run(song[i], song[i + 1], "lin", s0=src[i],
+                                v=(src[i + 1] - src[i]) / (song[i + 1] - song[i])))
+        runs.append(Run(song[-1], max(t1, song[-1]) + 1.0, "hold", s0=src[-1]))
+        return TimeMap(runs)
+    if "hold" in T:
+        return TimeMap([Run(t0, t1, "hold", s0=float(T["hold"]))])
+    tin, sp, loop = float(T.get("in", 0.0)), T.get("speed", 1.0), T.get("loop")
+    if not isinstance(sp, (int, float)):   # speed signal: integrate it
+        if loop:
+            raise ValueError("loop with a speed signal is not supported; use seq")
+        if ctx is None:
+            raise ValueError("a speed signal needs a Ctx")
+        f = compile_signal(sp, ctx)
+        ts = np.arange(t0, t1 + 2 * dt, dt)
+        v = np.array([float(f(t)) for t in ts])
+        ss = tin + np.concatenate([[0.0], np.cumsum((v[1:] + v[:-1]) * 0.5 * dt)])
+        return TimeMap([Run(t0, t1, "curve", ts=ts, ss=ss)])
+    sp = float(sp)
+    if not loop:
+        return TimeMap([Run(t0, t1, "lin", s0=tin, v=sp)])
+    a, b = loop
+    runs, t = [], t0
+    while t < t1 - 1e-9:
+        s = a + ((tin - a) + (t - t0) * sp) % (b - a)
+        if sp > 0:
+            tn = t + (b - s) / sp
+        elif sp < 0:
+            tn = t + (s - a) / -sp
+            if tn <= t + 1e-9:   # sitting exactly on a: wraps immediately
+                s, tn = b, t + (b - a) / -sp
+        else:
+            tn = t1
+        runs.append(Run(t, min(tn, t1), "lin", s0=s, v=sp))
+        t = tn
+    return TimeMap(runs)

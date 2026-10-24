@@ -22,12 +22,44 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).parent))
 import fx as FX  # noqa: E402
 from media import Reader  # noqa: E402
-from signals import Ctx, Music, compile_signal  # noqa: E402
+from signals import Ctx, Music, compile_signal, compile_time  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PICTURE = (0, 158, 1440, 922)   # Meine's letterboxed picture area (canvas px)
 LENGTH_PARAMS = {"px", "scale", "period"}   # fx params in canvas px: scaled with the preview
 PREROLL = 1.0
+SR = 48000          # audio bus sample rate
+AFADE = 0.006       # s: fade on every audio edge (layer start/end, stutter cuts) so nothing clicks
+
+
+def is_new_time(T):
+    """True for the time forms compiled to a TimeMap (seq, speed signals); the original forms keep
+    their closed-form lambdas."""
+    return "seq" in T or not isinstance(T.get("speed", 1.0), (int, float))
+
+
+def revisit_spans(tm, t0, t1, pad=0.05):
+    """Source intervals a time map plays backwards or visits more than once over [t0, t1):
+    decoded once into media.SPANS instead of re-seeking (reverses, stutters)."""
+    seen, spans = [], []
+    for r in tm.runs:
+        a, b = max(r.a, t0), min(r.b, t1)
+        if b <= a or r.kind == "hold":
+            continue
+        s = r.src_vec(np.linspace(a, b, 64))
+        lo, hi = float(s.min()), float(s.max())
+        if np.any(np.diff(s) < -1e-9):
+            spans.append((lo, hi))
+        else:
+            spans += [(max(lo, x), min(hi, y)) for x, y in seen if min(hi, y) > max(lo, x)]
+        seen.append((lo, hi))
+    merged = []
+    for lo, hi in sorted((max(0.0, lo - pad), hi + pad) for lo, hi in spans):
+        if merged and lo <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], hi))
+        else:
+            merged.append((lo, hi))
+    return merged
 
 
 def probe(src):
@@ -155,7 +187,12 @@ class Layer(Params):
             bw, bh = sw * f, sh * f
         self.base = (bw * k, bh * k)
         T = spec.get("time", {"in": 0.0, "speed": 1.0})
-        if "map" in T:
+        self.spans = None
+        if is_new_time(T):
+            tm = compile_time(T, self.t0, self.t1, ctx)
+            self.src_time = tm
+            self.spans = revisit_spans(tm, self.t0, self.t1) or None
+        elif "map" in T:
             song, src = T["map"]["song"], T["map"]["src"]
             self.src_time = lambda t: float(np.interp(t, song, src))
         elif "hold" in T:
@@ -167,6 +204,8 @@ class Layer(Params):
                 self.src_time = lambda t: a + ((tin - a) + (t - self.t0) * sp) % (b - a)
             else:
                 self.src_time = lambda t: tin + (t - self.t0) * sp
+                if sp < 0:   # reverse: decode the span once
+                    self.spans = revisit_spans(compile_time(T, self.t0, self.t1), self.t0, self.t1) or None
         fade = spec.get("fade", {})
         self.fin, self.fout = fade.get("in", 0.0), fade.get("out", 0.0)
 
@@ -177,7 +216,7 @@ class Layer(Params):
         w, h = self.base[0] * smax, self.base[1] * smax
         f = min(1.0, self.native[0] / w, self.native[1] / h)
         size = (max(2, int(w * f)) // 2 * 2, max(2, int(h * f)) // 2 * 2)
-        self.reader = Reader(self.src, self.s.get("crop"), size)
+        self.reader = Reader(self.src, self.s.get("crop"), size, spans=self.spans)
 
     def close(self):
         if self.reader:
@@ -247,34 +286,189 @@ def render_video(tl, frames, k, out, ctx, warm=0):
     return enc.returncode
 
 
-def mux_audio(tl, video, out, r0, r1):
+def atempo_chain(f):
+    tempo = []
+    while f > 2.0:
+        tempo.append("atempo=2.0"); f /= 2
+    while f < 0.5:
+        tempo.append("atempo=0.5"); f /= 0.5
+    if abs(f - 1) > 1e-3:
+        tempo.append(f"atempo={f:.5f}")
+    return tempo
+
+
+_audio_cache = {}
+
+
+def source_audio(src, until):
+    """(samples [n, 2] float32 at SR, offset) for a media file's audio from its start up to
+    `until` s; sample index of canonical (video-clock) time t = round(t * SR) + offset.
+    None if the file has no audio stream."""
+    key = str(src)
+    if key in _audio_cache and _audio_cache[key][2] >= until:
+        return _audio_cache[key][:2]
+    info = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,start_time",
+                                      "-of", "json", str(src)], capture_output=True, text=True, check=True).stdout)
+    st = {s["codec_type"]: float(s.get("start_time") or 0) for s in info["streams"][::-1]}
+    if "audio" not in st:
+        _audio_cache[key] = (None, 0, float("inf"))
+        return None, 0
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(src), "-t", f"{until + 1.0:.3f}", "-vn", "-ac", "2",
+                          "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    y = np.frombuffer(raw, np.float32).reshape(-1, 2)
+    off = int(round((st.get("video", st["audio"]) - st["audio"]) * SR))
+    _audio_cache[key] = (y, off, until)
+    return y, off
+
+
+def _take(y, i0, n):
+    out = np.zeros((n, 2), np.float32)
+    a, b = max(0, i0), min(len(y), i0 + n)
+    if b > a:
+        out[a - i0:b - i0] = y[a:b]
+    return out
+
+
+def _atempo(x, f):
+    """Pitch-preserving tempo change of stereo samples by factor f (ffmpeg atempo)."""
+    p = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-",
+                        "-af", ",".join(atempo_chain(f)) or "anull", "-f", "f32le", "-"],
+                       input=np.ascontiguousarray(x, np.float32).tobytes(), capture_output=True, check=True)
+    return np.frombuffer(p.stdout, np.float32).reshape(-1, 2)
+
+
+def _fit(x, n):
+    return x[:n] if len(x) >= n else np.concatenate([x, np.zeros((n - len(x), 2), np.float32)])
+
+
+AXF = 0.005   # s: crossfade half-width where two pieces join continuously (e.g. map knots)
+
+
+def layer_audio(L, r0, r1, ctx):
+    """(start sample relative to r0, samples) for a layer whose time is any form: the source
+    audio follows the same TimeMap as the frames, sample-exactly. Constant-speed runs keep pitch
+    (atempo; audio.mode "tape" resamples instead); ramps and speed signals are tape (varispeed);
+    holds are silent. Discontinuities (cuts, stutter retriggers, holds, layer edges) get AFADE
+    fades; continuous joins between pieces of different speed are crossfaded over +-AXF."""
+    T = L.get("time", {"in": 0.0, "speed": 1.0})
+    a, b = max(L["t0"], r0), min(L["t1"], r1)
+    n = int(round((b - a) * SR))
+    if n <= 0:
+        return None
+    tm = compile_time(T, L["t0"], L["t1"], ctx)
+    A = L["audio"]
+    mode, fade = A.get("mode", "tempo"), A.get("fade", AFADE)
+    runs = []
+    for r in tm.runs:
+        ra, rb = max(r.a, a), min(r.b, b)
+        i0, i1 = int(round((ra - a) * SR)), int(round((rb - a) * SR))
+        if i1 > i0 and r.constant_speed() != 0.0:
+            runs.append((r, i0, i1, r.src(ra), r.src(rb)))
+    if not runs:
+        return None
+    until = max(max(s0, s1) for _, _, _, s0, s1 in runs) + 0.1
+    y, off = source_audio(ROOT / L["src"], until)
+    if y is None:
+        print(f"  audio skipped for {L.get('id')}: {L['src']} has no audio", file=sys.stderr)
+        return None
+
+    def render(r, j0, j1):
+        """Samples for song-sample indices [j0, j1) through run r (extrapolated past its ends)."""
+        m = j1 - j0
+        v = r.constant_speed()
+        ta, tb = a + j0 / SR, a + j1 / SR
+        if v is not None:
+            s0, s1 = r.s0 + v * (ta - r.a), r.s0 + v * (tb - r.a)
+            if abs(abs(v) - 1) < 1e-3:
+                if v > 0:
+                    return _take(y, int(round(s0 * SR)) + off, m)
+                return _take(y, int(round(s1 * SR)) + off, m)[::-1]
+            if mode == "tempo":
+                lo, hi = min(s0, s1), max(s0, s1)
+                c_lo, c_hi = min(0.05, max(0.0, lo)), 0.05   # source context so atempo has no edge transient
+                x = _take(y, int(round((lo - c_lo) * SR)) + off, int(round((hi - lo + c_lo + c_hi) * SR)))
+                lead = c_hi if v < 0 else c_lo
+                x = _atempo(x[::-1] if v < 0 else x, abs(v))
+                k = int(round(lead / abs(v) * SR))
+                return _fit(x[k:], m)
+        pos = r.src_vec(ta + np.arange(m) / SR) * SR + off   # tape
+        j = np.clip(np.floor(pos).astype(np.int64), 0, max(len(y) - 2, 0))
+        u = (pos - j)[:, None].astype(np.float32)
+        x = (y[j] * (1 - u) + y[j + 1] * u) if len(y) > 1 else np.zeros((m, 2), np.float32)
+        x[(pos < 0) | (pos >= len(y) - 1)] = 0
+        return x.astype(np.float32)
+
+    out = np.zeros((n, 2), np.float32)
+    nf = max(1, int(round(fade * SR)))
+    e = int(round(AXF * SR))
+    for k, (r, i0, i1, s0, s1) in enumerate(runs):
+        prev = runs[k - 1] if k else None
+        nxt = runs[k + 1] if k + 1 < len(runs) else None
+        j_in = prev is not None and prev[2] == i0 and abs(prev[4] - s0) < 2 / SR
+        j_out = nxt is not None and nxt[1] == i1 and abs(nxt[3] - s1) < 2 / SR
+        w0 = max(0, i0 - e) if j_in else i0
+        w1 = min(n, i1 + e) if j_out else i1
+        x = render(r, w0, w1)
+        g = np.ones(w1 - w0, np.float32)
+        if j_in:   # linear crossfade with the previous piece: the two weights sum to 1
+            g[:min(2 * e, len(g))] = np.clip((np.arange(min(2 * e, len(g))) + (w0 - (i0 - e)) + 0.5) / (2 * e), 0, 1)
+        else:
+            w = min(nf, (i1 - i0) // 2)
+            g[:w] *= np.linspace(0, 1, w, dtype=np.float32)
+        if j_out:
+            q = min(2 * e, len(g))
+            g[len(g) - q:] *= np.clip(((i1 + e) - (w1 - q + np.arange(q)) - 0.5) / (2 * e), 0, 1)
+        else:
+            w = min(nf, (i1 - i0) // 2)
+            g[len(g) - w:] *= np.linspace(1, 0, w, dtype=np.float32)
+        out[w0:w1] += x * g[:, None]
+    out *= float(A.get("gain", 1.0))
+    return int(round((a - r0) * SR)), out
+
+
+def mux_audio(tl, video, out, r0, r1, ctx=None):
     ins = ["-i", str(video), "-ss", f"{r0:.4f}", "-i", str(ROOT / tl["music"]["src"])]
-    chains = [f"[1:a]volume={tl['music'].get('gain', 1.0)}[a0]"]
+    # asetpts on every input: the music's first opus packet has pts < 0, which otherwise makes the
+    # mp4 keep 1008 samples of AAC priming (the whole mix 21 ms late against the picture)
+    chains = [f"[1:a]asetpts=PTS-STARTPTS,volume={tl['music'].get('gain', 1.0)}[a0]"]
     n = 1
+    bus = None   # every layer not on the constant-speed path, mixed sample-exactly
     for L in tl["layers"]:
         if "audio" not in L or L["t1"] <= r0 or L["t0"] >= r1:
             continue
         T = L.get("time", {"in": 0.0, "speed": 1.0})
-        if "map" in T or "hold" in T or "loop" in T:
-            print(f"  audio skipped for {L.get('id')}: only constant-speed layers carry audio", file=sys.stderr)
+        if "map" in T or "hold" in T or "loop" in T or is_new_time(T) or T.get("speed", 1.0) <= 0:
+            if ctx is None:
+                pdir = ROOT / "projects" / tl["project"]
+                ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
+            got = layer_audio(L, r0, r1, ctx)
+            if got is not None:
+                if bus is None:
+                    bus = np.zeros((int(round((r1 - r0) * SR)), 2), np.float32)
+                i0, x = got
+                m = min(len(x), len(bus) - i0)
+                bus[i0:i0 + m] += x[:m]
             continue
         sp = T.get("speed", 1.0)
         start = max(L["t0"], r0)
         sin = T.get("in", 0.0) + (start - L["t0"]) * sp
-        dur = (min(L["t1"], r1) - start) * sp
+        song_dur = min(L["t1"], r1) - start
+        dur = song_dur * sp
         ins += ["-ss", f"{sin:.4f}", "-t", f"{dur:.4f}", "-i", str(ROOT / L["src"])]
-        tempo, f = [], sp
-        while f > 2.0:
-            tempo.append("atempo=2.0"); f /= 2
-        while f < 0.5:
-            tempo.append("atempo=0.5"); f /= 0.5
-        if abs(f - 1) > 1e-3:
-            tempo.append(f"atempo={f:.5f}")
-        chain = ",".join(tempo + [f"adelay={int((start - r0) * 1000)}:all=1", f"volume={L['audio'].get('gain', 1.0)}"])
+        fd = min(L["audio"].get("fade", AFADE), song_dur / 2)
+        fades = [f"afade=t=in:d={fd:.4f}", f"afade=t=out:st={max(0.0, song_dur - fd):.4f}:d={fd:.4f}"]
+        chain = ",".join(["asetpts=PTS-STARTPTS"] + atempo_chain(sp) + fades +
+                         [f"adelay={int((start - r0) * 1000)}:all=1", f"volume={L['audio'].get('gain', 1.0)}"])
         chains.append(f"[{n + 1}:a]{chain}[a{n}]")
         n += 1
+    if bus is not None:
+        bus_path = Path(video).with_name("audio_bus.f32")
+        bus_path.write_bytes(bus.tobytes())
+        ins += ["-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", str(bus_path)]
+        chains.append(f"[{n + 1}:a]asetpts=PTS-STARTPTS[a{n}]")
+        n += 1
     graph = ";".join(chains) + ";" + "".join(f"[a{i}]" for i in range(n)) + \
-        f"amix=inputs={n}:normalize=0:duration=first,alimiter=limit=0.95[aout]"
+        f"amix=inputs={n}:normalize=0:duration=first,alimiter=limit=0.95:latency=1[aout]"   # latency=1: no 5 ms lookahead delay
     subprocess.run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", graph, "-map", "0:v", "-map", "[aout]",
                     "-t", f"{r1 - r0:.4f}", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart",
                     str(out)], check=True)
@@ -324,7 +518,7 @@ def main():
         (tmp / "list.txt").write_text("".join(f"file '{p}'\n" for p in parts))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", tmp / "list.txt",
                         "-c", "copy", tmp / "video.mp4"], check=True)
-        mux_audio(tl, tmp / "video.mp4", out, r0, r1)
+        mux_audio(tl, tmp / "video.mp4", out, r0, r1, ctx)
     print(f"wrote {out} ({r1 - r0:.1f}s of song) in {wall.time() - t_wall:.1f}s with {jobs} job(s)",
           file=sys.stderr)
 
