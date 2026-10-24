@@ -36,6 +36,22 @@ for L in c.layers:
     if m.get("catalog") and not L.get("fx") and L.get("blend", "normal") == "normal" and "audio" in L:
         seen.setdefault(f"{m['catalog']}:{m['clip']}", set()).add(round(L["t0"]) // 60)
 dups = {k: v for k, v in seen.items() if len(v) > 1}
+
+# Nothing is drawn over an untreated window except the real speakers, their lower-thirds and the
+# Meine background: ember caught a strike layer fading in over the MEE remains at bar 179.
+untreated = [L for L in c.layers if L.get("meta", {}).get("catalog") in c.cat and not L.get("fx")
+             and L.get("blend", "normal") == "normal" and "audio" in L]
+over = []
+for U in untreated:
+    for L in c.layers:
+        m = L.get("meta", {})
+        if L is U or L in untreated or L.get("id") == "meine" or m.get("catalog") == "preachers" or "text" in L.get("tags", []):
+            continue
+        if m.get("catalog") in c.cat and L["t0"] < U["t1"] - 0.02 and L["t1"] > U["t0"] + 0.02 \
+                and c.layers.index(L) > c.layers.index(U):
+            over.append(f"{L['id']} over {U['id']} ({max(L['t0'], U['t0']):.2f}-{min(L['t1'], U['t1']):.2f})")
+if over:
+    raise SystemExit("footage drawn over untreated footage of the dead:\n  " + "\n  ".join(over))
 if dups:
     raise SystemExit("untreated footage used in more than one place (each is shown once): "
                      + "; ".join(f"{k} around minute(s) {sorted(v)}" for k, v in dups.items()))

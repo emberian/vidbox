@@ -555,7 +555,8 @@ PUNCTURES = {
     # the remains of 112 people killed in Sabra in Nov 2023, recovered from the rubble and laid out
     # under flags with photos taped on (MEE, 3 Aug 2026; the crop drops the Instagram credit). Only
     # segment 0 (0-10 s): the close-ups of the children's photos after it are identifiable.
-    178: ("y2026:mee-112-remains-flags-2026-08-03#0", 1.0, 3, [0.1, 0.16, 0.92, 0.9], 1.1),
+    # Gain 0: MEE's package carries a music bed, not the scene's own sound (ember heard it at bar 179).
+    178: ("y2026:mee-112-remains-flags-2026-08-03#0", 1.0, 3, [0.1, 0.16, 0.92, 0.9], 0.0),
 }
 PUNCTURE_MUSIC = 0.4
 
@@ -808,6 +809,17 @@ def build(c, outro_kind="walkers"):
         # closes back over (starting in the last 0.3 s of the return) stays, fading in with it.
         if "audio" in L:
             if any(L["t1"] > a - xi and L["t0"] < b + xo - 0.3 for a, b, xi, xo in ov):
+                continue
+        # Other footage whose lead-in reaches back into a window starts only once the window has fully
+        # gone: nothing is drawn over the dead (ember: an explosion over the bodies at bar 179). Its
+        # source time advances with it, so the hit still lands where it did.
+        T = L.get("time", {})
+        if L.get("meta", {}).get("catalog") in c.cat and "in" in T and isinstance(T.get("speed", 1.0), (int, float)):
+            end = max(b + xo for a, b, xi, xo in ov)
+            if L["t0"] < end < L["t1"] and all(L["t0"] >= a - xi for a, b, xi, xo in ov):
+                T["in"] += (end - L["t0"]) * T.get("speed", 1.0)
+                L["t0"] = round(end, 4)
+                keep.append(L)
                 continue
         pts = [[0.0, 1.0]]
         head = "head" in L.get("tags", [])
