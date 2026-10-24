@@ -5,3 +5,4 @@ __pycache__/
 projects/*/comps/out/*.mp4
 projects/*/comps/out/fixture_stress.timeline.json
 projects/*/gallery/out/
+projects/*/comps/out/full.candidate.timeline.json

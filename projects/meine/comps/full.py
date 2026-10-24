@@ -28,31 +28,12 @@ for name in SECTIONS:
         continue
     mod.build(c)
 
-# Untreated footage (normal blend, no fx, own sound) is testimony: each clip appears ONCE in the
-# whole piece. Sections are written separately, so the check lives here, where they meet.
-seen = {}
-for L in c.layers:
-    m = L.get("meta", {})
-    if m.get("catalog") and not L.get("fx") and L.get("blend", "normal") == "normal" and "audio" in L:
-        seen.setdefault(f"{m['catalog']}:{m['clip']}", set()).add(round(L["t0"]) // 60)
-dups = {k: v for k, v in seen.items() if len(v) > 1}
+# The design rule checker holds every rule (render/drc.py): footage scope, nothing over the
+# dead, untreated footage once, speakers named, hits on the grid... Its errors stop the build.
+import drc  # noqa: E402
 
-# Nothing is drawn over an untreated window except the real speakers, their lower-thirds and the
-# Meine background: ember caught a strike layer fading in over the MEE remains at bar 179.
-untreated = [L for L in c.layers if L.get("meta", {}).get("catalog") in c.cat and not L.get("fx")
-             and L.get("blend", "normal") == "normal" and "audio" in L]
-over = []
-for U in untreated:
-    for L in c.layers:
-        m = L.get("meta", {})
-        if L is U or L in untreated or L.get("id") == "meine" or m.get("catalog") == "preachers" or "text" in L.get("tags", []):
-            continue
-        if m.get("catalog") in c.cat and L["t0"] < U["t1"] - 0.02 and L["t1"] > U["t0"] + 0.02 \
-                and c.layers.index(L) > c.layers.index(U):
-            over.append(f"{L['id']} over {U['id']} ({max(L['t0'], U['t0']):.2f}-{min(L['t1'], U['t1']):.2f})")
-if over:
-    raise SystemExit("footage drawn over untreated footage of the dead:\n  " + "\n  ".join(over))
-if dups:
-    raise SystemExit("untreated footage used in more than one place (each is shown once): "
-                     + "; ".join(f"{k} around minute(s) {sorted(v)}" for k, v in dups.items()))
-c.save()
+tmp = c.save(path=HERE / "out" / "full.candidate.timeline.json")
+if drc.check(str(tmp)):
+    raise SystemExit("DRC errors: fix them before rendering (full.timeline.json left unchanged)")
+tmp.replace(HERE / "out" / "full.timeline.json")
+

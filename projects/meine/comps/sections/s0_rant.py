@@ -47,7 +47,7 @@ def build(c, blend="normal", duck=0.4):
             c.duck(w["start"], hold=1.0, depth=duck)
         # crop the bottom strip where news captions and lower-thirds sit
         strikes.append(c.footage(seg, at=w["start"], hit=h, before=0.5, after=1.9, blend=blend, fade={"in": 0.15, "out": 0.6},
-                  crop=[0, 0, 1, 0.82],
+                  crop=[0, 0, 1, 0.82], clip="picture",
                   fx=[{"op": "posterize", "levels": 8},
                       {"op": "chroma", "px": rng(2, 16, beat(1, "decay", tau=0.18)), "angle": 30 * k}],
                   opacity=0.85))

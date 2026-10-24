@@ -2324,6 +2324,7 @@
     1,
     0.82
    ],
+   "clip": "picture",
    "fx": [
     {
      "op": "posterize",
@@ -2383,6 +2384,7 @@
     1,
     0.82
    ],
+   "clip": "picture",
    "fx": [
     {
      "op": "posterize",
@@ -2440,6 +2442,7 @@
     1,
     0.82
    ],
+   "clip": "picture",
    "fx": [
     {
      "op": "posterize",
@@ -2499,6 +2502,7 @@
     1,
     0.82
    ],
+   "clip": "picture",
    "fx": [
     {
      "op": "posterize",
@@ -2558,6 +2562,7 @@
     1,
     0.82
    ],
+   "clip": "picture",
    "fx": [
     {
      "op": "posterize",
@@ -2617,6 +2622,7 @@
     1,
     0.82
    ],
+   "clip": "picture",
    "fx": [
     {
      "op": "posterize",

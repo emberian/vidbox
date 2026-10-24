@@ -48,7 +48,9 @@ uv run python render/tl.py projects/meine/comps/out/full.timeline.json --full --
 uv run python tools/variant.py projects/meine/comps/out/full.timeline.json --lowfx   # low-effect variant
 ```
 
-`full.py` and `comp.py` enforce the piece's rules when saving:
+`render/drc.py` is the design rule checker: every rule with the reason it exists, run over any
+timeline (`uv run python render/drc.py TIMELINE.json`); `full.py` refuses to build on its errors.
+Among its rules:
 - footage must be in scope: Israel/Gaza, arms to Israel, the US arsenal (`footage/SCOPE.md`);
 - untreated footage of the dead is shown once;
 - the voronoi effect is used only on faces;
