@@ -301,30 +301,35 @@ def render_video(tl, frames, k, out, ctx, warm=0):
     post_state = {}
     t_start = wall.time()
     parent = int(os.environ.get("VIDBOX_PARENT_PID", 0))   # set by main() for its chunk processes
-    for j, fno in enumerate(frames):
-        if parent and j % 25 == 0 and os.getppid() != parent:   # orphaned (parent killed): stop now
-            sys.exit(f"  {out.name}: parent render {parent} is gone; stopping")
-        t = fno / fps
-        canvas = np.zeros((H, W, 3), np.float32)
+    try:
+        for j, fno in enumerate(frames):
+            if parent and j % 25 == 0 and os.getppid() != parent:   # orphaned (parent killed): stop now
+                sys.exit(f"  {out.name}: parent render {parent} is gone; stopping")
+            t = fno / fps
+            canvas = np.zeros((H, W, 3), np.float32)
+            for L in layers:
+                if L.t0 <= t < L.t1:
+                    if L.reader is None:
+                        L.open()
+                    L.draw(canvas, t)
+                elif L.reader is not None and t >= L.t1:
+                    L.close()
+            if post:
+                ones = np.ones((H, W), np.float32)
+                canvas, _ = post.run_fx(tl["post"], canvas, ones, t, post_state, "post")
+            if j >= warm:
+                enc.stdin.write((np.clip(canvas, 0, 1) * 255 + 0.5).astype(np.uint8).tobytes())
+            if j % 50 == 0 and j:
+                el = wall.time() - t_start
+                print(f"\r  {out.name}: {j}/{len(frames)} {j / el:.1f} fps", end="", file=sys.stderr)
+    finally:   # also on errors and SIGTERM: the encoder finishes its file before this process exits,
+        try:     # so nothing is still writing into main()'s temp dir when it is removed
+            enc.stdin.close()
+        except BrokenPipeError:   # the encoder died first
+            pass
+        enc.wait()
         for L in layers:
-            if L.t0 <= t < L.t1:
-                if L.reader is None:
-                    L.open()
-                L.draw(canvas, t)
-            elif L.reader is not None and t >= L.t1:
-                L.close()
-        if post:
-            ones = np.ones((H, W), np.float32)
-            canvas, _ = post.run_fx(tl["post"], canvas, ones, t, post_state, "post")
-        if j >= warm:
-            enc.stdin.write((np.clip(canvas, 0, 1) * 255 + 0.5).astype(np.uint8).tobytes())
-        if j % 50 == 0 and j:
-            el = wall.time() - t_start
-            print(f"\r  {out.name}: {j}/{len(frames)} {j / el:.1f} fps", end="", file=sys.stderr)
-    enc.stdin.close()
-    enc.wait()
-    for L in layers:
-        L.close()
+            L.close()
     print(file=sys.stderr)
     return enc.returncode
 
@@ -584,8 +589,13 @@ def main():
                                                "--chunk", f"{s - warm} {e} {warm} {part}"], env=env))
             codes = wait_chunks(procs)
         finally:   # an error, Ctrl-C or SIGTERM here must not leave chunk processes rendering
-            for p in procs:
+            for p in procs:   # SIGTERM first: a chunk then reaps its encoder (see render_video)
                 if p.poll() is None:
+                    p.terminate()
+            for p in procs:
+                try:
+                    p.wait(timeout=20)
+                except subprocess.TimeoutExpired:
                     p.kill()
                     p.wait()
         if any(codes):
