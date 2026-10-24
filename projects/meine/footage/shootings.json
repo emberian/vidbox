@@ -1,0 +1,1292 @@
+{
+ "clips": [
+  {
+   "id": "nyt-rafah-paramedics-radwan-phone-2025-03-23",
+   "file": "media/footage/shootings/raw/youtube_HWhNnf6cXyI.mp4",
+   "source_url": "https://www.youtube.com/watch?v=HWhNnf6cXyI",
+   "publisher": "The New York Times (Visual Investigations)",
+   "date": "2025-03-23",
+   "provenance": "NYT Visual Investigations 'How Israeli Soldiers Killed 15 Rescue Workers in Gaza' (2 May 2025). Centrepiece is the phone video filmed by PRCS paramedic Rifaat Radwan from inside a moving ambulance, Tel al-Sultan, Rafah, before dawn 23 Mar 2025; recovered from his phone after his body was found in a mass grave. NYT: multiple soldiers fired over six minutes at unarmed emergency workers who posed no threat. IDF initially said vehicles approached 'without headlights or emergency signals'; its 20 Apr 2025 probe cited 'professional failures' and dismissed a deputy commander (https://www.reuters.com/world/middle-east/israeli-military-says-review-into-killing-gaza-aid-workers-found-professional-2025-04-20/). Forensic Architecture/Earshot (Feb 2026): at least 910 rounds over two hours, no return fire (https://forensic-architecture.org/investigation/the-massacre-of-aid-workers-in-tel-al-sultan).",
+   "license": "news (NYT)",
+   "width": 1280,
+   "height": 720,
+   "duration": 897.89,
+   "segments": [
+    {
+     "in": 285.0,
+     "out": 325.0,
+     "desc": "night dashcam-style phone view from an ambulance: headlights on a sandy road, a red fire engine and ambulances ahead with emergency lights flashing",
+     "tags": [
+      "gaza",
+      "rafah",
+      "paramedics",
+      "ambulance",
+      "night",
+      "phone-footage",
+      "prcs"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "vehicle POV",
+     "palette": "black / sodium headlight / red strobe",
+     "overlay_ok": false,
+     "notes": "lights-on proof that refutes the IDF's first account; burned NYT subtitles (Rifaat's words) at the bottom: crop the lower 15% or keep them deliberately. Named dead (15), Tel al-Sultan 23 Mar 2025. PRCS (IFRC list, via https://en.wikipedia.org/wiki/Rafah_paramedic_massacre citing https://www.ifrc.org/statement/ifrc-condemns-killing-eight-palestine-red-crescent-medics-gaza): Mostafa Khufaga, Saleh Muamer, Ezzedine Shaath, Mohammad Bahloul, Mohammed al-Heila, Ashraf Abu Labda, Raed al-Sharif, Rifaat Radwan. Civil Defence (Airwars, https://airwars.org/incidents/ispt230325za-march-23-2025): Yousef Rasem Khalifa, Fouad Ibrahim al-Jamal, Zuhair Abdul Hamid al-Farra, Anwar Abdel Hamid al-Attar, Samir Yahya al-Bahabsa, Ibrahim al-Maghari. UNRWA: Kamal Shahtout (named on screen in the NYT investigation, https://www.youtube.com/watch?v=HWhNnf6cXyI at ~9:58).",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 325.0,
+     "out": 345.0,
+     "desc": "gunfire erupts: frame blurs and swings into darkness as the phone is jostled; continuous bursts on the audio",
+     "tags": [
+      "gaza",
+      "rafah",
+      "paramedics",
+      "gunfire",
+      "night",
+      "phone-footage"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "violent handheld / near-black",
+     "palette": "black / smeared orange",
+     "overlay_ok": false,
+     "notes": "The killing itself, heard more than seen. Natural sound is Radwan's phone (gunfire, voices). Audio onsets of bursts: 325.25, 334.46, 335.96, 336.70, 337.60, 339.31. NYT then runs ~3 min of near-black with captioned audio ('Mom, forgive me', 'The army, the army') from ~5:36-8:20; usable as a sound bed of the actual event. Named dead (15), Tel al-Sultan 23 Mar 2025. PRCS (IFRC list, via https://en.wikipedia.org/wiki/Rafah_paramedic_massacre citing https://www.ifrc.org/statement/ifrc-condemns-killing-eight-palestine-red-crescent-medics-gaza): Mostafa Khufaga, Saleh Muamer, Ezzedine Shaath, Mohammad Bahloul, Mohammed al-Heila, Ashraf Abu Labda, Raed al-Sharif, Rifaat Radwan. Civil Defence (Airwars, https://airwars.org/incidents/ispt230325za-march-23-2025): Yousef Rasem Khalifa, Fouad Ibrahim al-Jamal, Zuhair Abdul Hamid al-Farra, Anwar Abdel Hamid al-Attar, Samir Yahya al-Bahabsa, Ibrahim al-Maghari. UNRWA: Kamal Shahtout (named on screen in the NYT investigation, https://www.youtube.com/watch?v=HWhNnf6cXyI at ~9:58).",
+     "hits": [
+      {
+       "t": 325.1925,
+       "kind": "gunshot",
+       "strength": 5,
+       "note": "first burst; picture jolts into motion blur on the same frame (0.12 s strip sheets/strips/nyt_324.6_s0.12.png)",
+       "t_agent": 325.25
+      },
+      {
+       "t": 334.46,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "burst, audio-led (frame is dark)"
+      },
+      {
+       "t": 335.96,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "burst, audio-led"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 878.0,
+     "out": 898.0,
+     "desc": "grid of portrait photos of the 15 killed rescue workers with names",
+     "tags": [
+      "gaza",
+      "rafah",
+      "paramedics",
+      "memorial",
+      "portraits",
+      "names"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "white / faces",
+     "overlay_ok": true,
+     "notes": "NYT end card: faces + names of all 15; useful for the credits. Named dead (15), Tel al-Sultan 23 Mar 2025. PRCS (IFRC list, via https://en.wikipedia.org/wiki/Rafah_paramedic_massacre citing https://www.ifrc.org/statement/ifrc-condemns-killing-eight-palestine-red-crescent-medics-gaza): Mostafa Khufaga, Saleh Muamer, Ezzedine Shaath, Mohammad Bahloul, Mohammed al-Heila, Ashraf Abu Labda, Raed al-Sharif, Rifaat Radwan. Civil Defence (Airwars, https://airwars.org/incidents/ispt230325za-march-23-2025): Yousef Rasem Khalifa, Fouad Ibrahim al-Jamal, Zuhair Abdul Hamid al-Farra, Anwar Abdel Hamid al-Attar, Samir Yahya al-Bahabsa, Ibrahim al-Maghari. UNRWA: Kamal Shahtout (named on screen in the NYT investigation, https://www.youtube.com/watch?v=HWhNnf6cXyI at ~9:58).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Rafah, Gaza: Israeli troops kill 15 rescue workers; filmed by one of the victims."
+  },
+  {
+   "id": "independent-prcs-convoy-lights-2025-03-23",
+   "file": "media/footage/shootings/raw/youtube_985kK0XolzQ.mp4",
+   "source_url": "https://www.youtube.com/watch?v=985kK0XolzQ",
+   "publisher": "The Independent (footage published by the Palestine Red Crescent Society)",
+   "date": "2025-03-23",
+   "provenance": "Independent package (5 Apr 2025) of the PRCS-released phone video from Rifaat Radwan: convoy with headlights and emergency lights on, then fire. Same incident and sourcing as the NYT clip. Independent's own voice-over/bed: the audio here is NOT the natural phone sound (no gunfire transients found in 60-84 s); use NYT for sound.",
+   "license": "news (The Independent / PRCS footage)",
+   "width": 1280,
+   "height": 720,
+   "duration": 100.19,
+   "segments": [
+    {
+     "in": 64.0,
+     "out": 80.0,
+     "desc": "through a windscreen at night: ambulances and a fire truck stop on the road, red emergency lights blooming, figures step out; image smears and the wipers swing",
+     "tags": [
+      "gaza",
+      "rafah",
+      "paramedics",
+      "ambulance",
+      "night",
+      "phone-footage"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "vehicle POV",
+     "palette": "navy / red strobe / headlight white",
+     "overlay_ok": false,
+     "notes": "Cleaner picture of the lights than the NYT cut. Audio is produced (narration/bed), so play under music or mute. Named dead (15), Tel al-Sultan 23 Mar 2025. PRCS (IFRC list, via https://en.wikipedia.org/wiki/Rafah_paramedic_massacre citing https://www.ifrc.org/statement/ifrc-condemns-killing-eight-palestine-red-crescent-medics-gaza): Mostafa Khufaga, Saleh Muamer, Ezzedine Shaath, Mohammad Bahloul, Mohammed al-Heila, Ashraf Abu Labda, Raed al-Sharif, Rifaat Radwan. Civil Defence (Airwars, https://airwars.org/incidents/ispt230325za-march-23-2025): Yousef Rasem Khalifa, Fouad Ibrahim al-Jamal, Zuhair Abdul Hamid al-Farra, Anwar Abdel Hamid al-Attar, Samir Yahya al-Bahabsa, Ibrahim al-Maghari. UNRWA: Kamal Shahtout (named on screen in the NYT investigation, https://www.youtube.com/watch?v=HWhNnf6cXyI at ~9:58).",
+     "hits": [
+      {
+       "t": 72.24,
+       "kind": "impact",
+       "strength": 3,
+       "note": "camera lurch as the vehicle brakes beside the stopped convoy; visual only, not a confirmed shot frame"
+      }
+     ],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Rafah: Radwan phone video, PRCS release."
+  },
+  {
+   "id": "itv-ramzi-abu-sahloul-white-flag-2024-01-22",
+   "file": "media/footage/shootings/raw/itv_6345434866112.mp4",
+   "source_url": "https://www.itv.com/news/2024-01-23/moment-civilian-brandishing-white-flag-in-gaza-safe-zone-is-shot-dead",
+   "publisher": "ITV News",
+   "date": "2024-01-22",
+   "provenance": "ITV News report (23 Jan 2024), Khan Younis, al-Bahr Street outside al-Aqsa University, in the IDF-designated 'safe zone'. A group of men walking with hands up and a white flag is fired on; Ramzi Abu Sahloul is shot dead. Filmed by ITV cameraman Mohammed Abu Safia (ITV) and videographer Ahmed Hijazi (NBC, CNN). Earshot audio-ballistic analysis: 6 shots, two or more shooters in Israeli Army vehicles ~330 m east of the camera (https://www.youtube.com/watch?v=pie8S-VPh7U). NBC geolocated it and filmed tanks lining the road; IDF told NBC it was 'not aware of this incident' and 'the video is clearly edited' (https://www.nbcnews.com/news/world/gaza-palestinian-israel-white-flag-shot-dead-killed-rcna135419). CNN: 'impact of the first round ... appears to come from the direction of the tanks' (https://www.cnn.com/2024/01/26/middleeast/hala-khreis-white-flag-shooting-gaza-cmd-intl).",
+   "license": "news (ITV)",
+   "width": 1280,
+   "height": 720,
+   "duration": 538.57,
+   "segments": [
+    {
+     "in": 150.0,
+     "out": 172.0,
+     "desc": "long lens down a road beside a red-and-white wall, black smoke over the city: four men walk with hands raised and a white cloth; they bunch, run, and one drops to the pavement",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "white-flag",
+      "sniper",
+      "safe-zone",
+      "civilian-killed"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "handheld zoom",
+     "palette": "grey road / red-white wall / black smoke",
+     "overlay_ok": false,
+     "notes": "Natural sound (wind, then shots, shouting). Itv News bug top-right. Victim: Ramzi Abu Sahloul, 51 (CNN, NBC, ITV URLs in provenance).",
+     "hits": [
+      {
+       "t": 163.45,
+       "kind": "fall",
+       "strength": 5,
+       "note": "between 163.30 and 163.54 the man drops to the curb (0.12 s strip sheets/strips/itv_163.3_s0.12.png); refine_hits keeps falls as placed"
+      },
+      {
+       "t": 160.57,
+       "kind": "gunshot",
+       "strength": 3,
+       "note": "audio transient as the group starts to flinch and run"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 172.0,
+     "out": 200.0,
+     "desc": "the body lies at the foot of the wall; the others crouch, return, tug at him while more shots sound",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "white-flag",
+      "aftermath",
+      "body"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "handheld zoom",
+     "palette": "grey / red-white wall",
+     "overlay_ok": false,
+     "notes": "Ramzi Abu Sahloul. Natural sound.",
+     "hits": [
+      {
+       "t": 183.641,
+       "kind": "gunshot",
+       "strength": 3,
+       "note": "audio transient while men crouch by the body",
+       "t_agent": 183.72
+      }
+     ],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis safe zone: man with white flag shot dead by Israeli fire (Earshot, NBC, CNN)."
+  },
+  {
+   "id": "earshot-khan-younis-white-flag-analysis-2024-01-22",
+   "file": "media/footage/shootings/raw/youtube_pie8S-VPh7U.mp4",
+   "source_url": "https://www.youtube.com/watch?v=pie8S-VPh7U",
+   "publisher": "Earshot (audio forensics NGO)",
+   "date": "2024-01-22",
+   "provenance": "Earshot 'Targeting of civilians in Khan Yunis' (7 Feb 2024): audio-ballistic analysis of the ITV footage of Ramzi Abu Sahloul's killing; concludes the civilians were targeted by two or more shooters in Israeli Army vehicles ~330 m east of the camera.",
+   "license": "human-rights org (Earshot)",
+   "width": 1280,
+   "height": 720,
+   "duration": 150.42,
+   "segments": [
+    {
+     "in": 37.0,
+     "out": 56.0,
+     "desc": "blue waveform of the gunshots on black, marked shot by shot; caption: 'A total of 6 gunshots were fired at the civilians'",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "forensics",
+      "waveform",
+      "earshot",
+      "white-flag"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static graphic",
+     "palette": "black / electric blue",
+     "overlay_ok": true,
+     "notes": "Graphic evidence beat: the shots as data. Earshot captions burned in. Victim: Ramzi Abu Sahloul.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 110.0,
+     "out": 135.0,
+     "desc": "satellite map: the shot's sound cone reaches from the Israeli vehicles to the camera",
+     "tags": [
+      "gaza",
+      "forensics",
+      "map",
+      "earshot"
+     ],
+     "intensity": 2,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "slow graphic",
+     "palette": "ochre satellite / blue rings",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Forensic analysis of the Khan Younis white-flag killing."
+  },
+  {
+   "id": "cnn-hala-khreis-white-flag-2023-11-12",
+   "file": "media/footage/shootings/raw/cnn_hala_khreis.mp4",
+   "source_url": "https://www.cnn.com/videos/world/2024/01/25/palestinians-gaza-shooting-investigation-ward-intl-ldn-vpx.cnn",
+   "publisher": "CNN (Clarissa Ward; footage first published by Middle East Eye)",
+   "date": "2023-11-12",
+   "provenance": "CNN investigation (25-26 Jan 2024). Al-Rimal, Gaza City, 12 Nov 2023: Hala Khreis, 57, walking at the front of ~30 evacuees holding the hand of her grandson Tayem (4), who held a white flag, is shot and falls. Filmed from a building above; the clip surfaced via Middle East Eye. CNN: family testimony that Israeli tanks were directly in front of the group to the south and satellite imagery placing Israeli troops to the west; IDF told CNN 'the incident is being examined' (referring to al-Mawasi) and did not say whether others were (https://www.cnn.com/2024/01/26/middleeast/hala-khreis-white-flag-shooting-gaza-cmd-intl). Attribution is CNN's eyewitness+satellite case, not ballistic. Note: the brief's 'ITV' attribution for this clip is wrong; ITV covered Ramzi Abu Sahloul.",
+   "license": "news (CNN / Middle East Eye)",
+   "width": 1280,
+   "height": 720,
+   "duration": 439.64,
+   "segments": [
+    {
+     "in": 9.0,
+     "out": 22.0,
+     "desc": "high overhead: a crowd of evacuees with white flags crosses a debris-strewn street; CNN inset zooms on a woman and small child in front, she lurches and collapses, the crowd keeps moving",
+     "tags": [
+      "gaza",
+      "gaza-city",
+      "white-flag",
+      "evacuation",
+      "grandmother",
+      "child",
+      "civilian-killed"
+     ],
+     "intensity": 5,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "static high angle with digital zoom inset",
+     "palette": "dust grey / dark figures",
+     "overlay_ok": false,
+     "notes": "CNN split layout (wide left, zoom right) and 'WARNING GRAPHIC CONTENT' tag top-left; crop to the inset for a clean frame (low-res, MEE source). Repeat/slow-mo of the fall follows at ~18-22. CNN narration over it, not natural sound. Victim: Hala Khreis (CNN URL above).",
+     "hits": [
+      {
+       "t": 13.02,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "single-frame camera jolt (startle) as she is hit (strip sheets/strips/cnn_12.3_s0.12.png)"
+      },
+      {
+       "t": 13.26,
+       "kind": "fall",
+       "strength": 5,
+       "note": "she folds to the ground over the next frames"
+      }
+     ],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Gaza City: grandmother with grandson and white flag shot during evacuation."
+  },
+  {
+   "id": "itv-barbakh-brothers-white-flag-2024-01",
+   "file": "media/footage/shootings/raw/youtube_47Wn7U3G1xI.mp4",
+   "source_url": "https://www.youtube.com/watch?v=47Wn7U3G1xI",
+   "publisher": "ITV News",
+   "date": "2024-01-24",
+   "provenance": "ITV News (2 Feb 2024), Khan Younis: Nahed Barbakh, 15, waving a white flag while the family evacuated, is shot; his brother Ramez, 20, runs to him and is also shot dead, witnessed by their sister Rimas (9). Shooter attribution is the family's testimony to ITV; the clip shows the aftermath (a body on the road), not the shooting. Date: 'last week' per ITV, i.e. late Jan 2024.",
+   "license": "news (ITV)",
+   "width": 1280,
+   "height": 720,
+   "duration": 262.9,
+   "segments": [
+    {
+     "in": 38.5,
+     "out": 48.0,
+     "desc": "a body lies face-down in an empty road beside a wooden post",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "white-flag",
+      "body",
+      "aftermath"
+     ],
+     "intensity": 4,
+     "graphic": 4,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "grey asphalt",
+     "overlay_ok": false,
+     "notes": "Victims: Nahed Barbakh (15) and Ramez Barbakh (20), per ITV (YouTube description). Partly blurred by ITV.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 82.0,
+     "out": 130.0,
+     "desc": "Rimas, 9, in a pink hat, tells how her brothers were shot; subtitles",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "testimony",
+      "child",
+      "grief"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "static",
+     "palette": "pink / tent white",
+     "overlay_ok": false,
+     "notes": "ITV subtitles burned in. Testimony, not footage of the act.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis: two brothers killed under a white flag (family testimony)."
+  },
+  {
+   "id": "fa-shireen-abu-akleh-jenin-2022-05-11",
+   "file": "media/footage/shootings/raw/youtube_zE7E0eLJPqU.mp4",
+   "source_url": "https://www.youtube.com/watch?v=zE7E0eLJPqU",
+   "publisher": "Forensic Architecture with Al-Haq",
+   "date": "2022-05-11",
+   "provenance": "FA/Al-Haq 'Shireen Abu Akleh: The Extrajudicial Killing of a Journalist' (Nov 2022): previously unseen footage from Jenin, 11 May 2022, plus 3D reconstruction; concludes an Israeli soldier in an armoured vehicle repeatedly fired at clearly identifiable journalists and at those trying to rescue her. IDF (5 Sep 2022): 'high possibility' she was accidentally hit by IDF fire (https://www.idf.il/en/articles/2022/final-conclusions-of-shireen-abu-akleh-investigation/); US Security Coordinator: gunfire from IDF positions likely responsible, unintentional (https://2021-2025.state.gov/on-the-killing-of-shireen-abu-akleh/).",
+   "license": "human-rights org (Forensic Architecture / Al-Haq)",
+   "width": 1280,
+   "height": 720,
+   "duration": 641.22,
+   "segments": [
+    {
+     "in": 150.0,
+     "out": 175.0,
+     "desc": "handheld street footage, labelled 'Shireen' and 'Ali' in circles; shots crack, the camera swings as Ali runs across the road clutching his shoulder",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "journalist",
+      "press-vest",
+      "gunfire",
+      "shireen-abu-akleh"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "handheld, frantic",
+     "palette": "sunlit tarmac / blue press vests",
+     "overlay_ok": false,
+     "notes": "Original scene audio with sustained gunfire (onsets from 157.45 through ~170). FA timeline and labels burned in; crop to the inner frame. Victim: Shireen Abu Akleh (IDF and US State Dept URLs in provenance). 'Ali' is the wounded colleague as labelled by FA; his full name is not in the sources I checked.",
+     "hits": [
+      {
+       "t": 157.45,
+       "kind": "gunshot",
+       "strength": 5,
+       "note": "first burst; strip sheets/strips/fa_156.6_s0.12.png shows Ali starting to run right after"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 195.0,
+     "out": 215.0,
+     "desc": "journalists pinned behind a wall and a tree; a woman crouches by a figure on the ground (blurred)",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "journalist",
+      "aftermath"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "dry green / concrete",
+     "overlay_ok": false,
+     "notes": "Shireen Abu Akleh.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 330.0,
+     "out": 370.0,
+     "desc": "reconstruction: rifle-scope circle view down the street toward the journalists",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "forensics",
+      "reconstruction",
+      "scope-view"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "slow push",
+     "palette": "grey CGI / black vignette",
+     "overlay_ok": true,
+     "notes": "The shooter's-eye view; strong as a cold counter-image.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin, West Bank: Israeli soldier kills Al Jazeera journalist."
+  },
+  {
+   "id": "reuters-issam-abdallah-tank-fire-2023-10-13",
+   "file": "media/footage/shootings/raw/youtube_0a8pAR0JHbQ.mp4",
+   "source_url": "https://www.youtube.com/watch?v=0a8pAR0JHbQ",
+   "publisher": "news.com.au (republishing the Reuters investigation video)",
+   "date": "2023-10-13",
+   "provenance": "Reuters investigation (7 Dec 2023), republished by news.com.au: an Israeli tank crew killed Reuters video journalist Issam Abdallah and wounded six reporters near Alma al-Chaab, south Lebanon, 13 Oct 2023, firing two shells in quick succession from Israel while they filmed. Also found by AFP, HRW, Amnesty and RSF. IDF spokesman Lt Col Richard Hecht: 'We don't target journalists' (https://www.reuters.com/graphics/ISRAEL-LEBANON/JOURNALIST/akveabxrzvr/). Prefer Reuters' own upload if one is found.",
+   "license": "news (Reuters via news.com.au)",
+   "width": 1280,
+   "height": 720,
+   "duration": 400.87,
+   "segments": [
+    {
+     "in": 13.0,
+     "out": 24.0,
+     "desc": "the journalists' live camera on the hillside facing Israel: an Israeli post and mast through haze; the picture whites out and freezes grey",
+     "tags": [
+      "lebanon",
+      "journalist",
+      "tank-fire",
+      "live-feed",
+      "issam-abdallah"
+     ],
+     "intensity": 5,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "static, then dead feed",
+     "palette": "haze grey / pink-white",
+     "overlay_ok": true,
+     "notes": "The camera's own last frames. Natural sound under news.com.au narration. Victim: Issam Abdallah (Reuters URL).",
+     "hits": [
+      {
+       "t": 16.9,
+       "kind": "impact",
+       "strength": 5,
+       "note": "feed blows out to grey between 16.5 and 17.0 (strip sheets/strips/issam_8_s0.5.png); refine_hits will snap to the brightness onset"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 20.0,
+     "out": 30.0,
+     "desc": "Issam Abdallah's selfie in front of ruins; then an ambulance and a burning car beside the journalists' tripod at dusk",
+     "tags": [
+      "lebanon",
+      "journalist",
+      "issam-abdallah",
+      "aftermath",
+      "fire"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "orange fire / dusk",
+     "overlay_ok": false,
+     "notes": "Issam Abdallah.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "South Lebanon: Israeli tank fire kills Reuters journalist."
+  },
+  {
+   "id": "nyt-rouzan-al-najjar-2018-06-01",
+   "file": "media/footage/shootings/raw/youtube_w0inm3oS71c.mp4",
+   "source_url": "https://www.youtube.com/watch?v=w0inm3oS71c",
+   "publisher": "The New York Times (Visual Investigations)",
+   "date": "2018-06-01",
+   "provenance": "NYT 'How an Israeli Soldier Killed Palestinian Medic Rouzan al-Najjar' (Dec 2018): from 1,000+ photos/videos and a 3D model, an Israeli soldier fired into a crowd at the Gaza fence near Khan Younis, a bullet fragment killing medic Rouzan al-Najjar, 20, wearing white; NYT calls it reckless at best, possibly a war crime. IDF initially said she was not deliberately targeted (https://www.timesofisrael.com/idf-gazan-medic-shot-dead-last-week-was-not-deliberately-targeted/), later said it was probing (https://www.timesofisrael.com/after-damning-report-idf-says-it-is-probing-killing-of-gazan-medic-in-june/). 2018 Great March of Return: not the 2023 war.",
+   "license": "news (NYT)",
+   "width": 1280,
+   "height": 720,
+   "duration": 1024.51,
+   "segments": [
+    {
+     "in": 639.0,
+     "out": 650.0,
+     "desc": "crowd on dry ground at the fence, a white-clad medic tagged 'Rouzan' among them",
+     "tags": [
+      "gaza",
+      "2018",
+      "great-march-of-return",
+      "medic",
+      "rouzan-al-najjar"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": true,
+     "motion": "handheld",
+     "palette": "dust ochre / white coats",
+     "overlay_ok": false,
+     "notes": "NOT 2023+. Victim: Rouzan al-Najjar.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 785.0,
+     "out": 810.0,
+     "desc": "medics and men run carrying a wounded person across the field; then close on a man in white held up by others",
+     "tags": [
+      "gaza",
+      "2018",
+      "medic",
+      "wounded",
+      "carry"
+     ],
+     "intensity": 4,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "handheld run",
+     "palette": "ochre / white",
+     "overlay_ok": false,
+     "notes": "NOT 2023+. Rouzan al-Najjar.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 830.0,
+     "out": 845.0,
+     "desc": "3D model: an orange line of fire from the Israeli side through the crowd",
+     "tags": [
+      "gaza",
+      "2018",
+      "forensics",
+      "reconstruction",
+      "line-of-fire"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "slow graphic",
+     "palette": "pale grey / orange",
+     "overlay_ok": true,
+     "notes": "Clean graphic; good overlay.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis fence protests 2018: Israeli sniper kills a medic."
+  },
+  {
+   "id": "cnn-flour-massacre-idf-drone-2024-02-29",
+   "file": "media/footage/shootings/raw/youtube_ywOzeZl7uIU.mp4",
+   "source_url": "https://www.youtube.com/watch?v=ywOzeZl7uIU",
+   "publisher": "CNN (Jeremy Diamond), carrying IDF-released aerial footage",
+   "date": "2024-02-29",
+   "provenance": "CNN live report 29 Feb 2024 on the al-Rashid/Nabulsi roundabout 'flour massacre', Gaza City: Gaza health ministry 104+ killed, 760 hurt (later 118+). Inset shows the IDF's own released drone footage (labelled 'IDF/Today') of crowds swarming aid trucks; IDF said most died in a stampede and troops fired at people approaching them. UN team at al-Shifa saw 'a large number of gunshot wounds' (https://www.aljazeera.com/news/2024/3/2/un-reports-large-number-of-gunshot-wounds-following-flour-massacre); UN experts condemned it (https://www.ohchr.org/en/press-releases/2024/03/un-experts-condemn-flour-massacre-urge-israel-end-campaign-starvation-gaza). The IDF video is Israel's edited release and shows no shooting.",
+   "license": "news (CNN; IDF handout inset)",
+   "width": 854,
+   "height": 480,
+   "duration": 189.34,
+   "segments": [
+    {
+     "in": 62.0,
+     "out": 125.0,
+     "desc": "grey thermal drone view: hundreds of dark figures surge around a line of trucks; some lie still on the ground",
+     "tags": [
+      "gaza",
+      "gaza-city",
+      "flour-massacre",
+      "aid",
+      "idf-drone",
+      "crowd"
+     ],
+     "intensity": 4,
+     "graphic": 2,
+     "identifiable_victims": false,
+     "motion": "slow drone drift",
+     "palette": "grey thermal / black dots",
+     "overlay_ok": false,
+     "notes": "Inset only (CNN split-screen with correspondent and lower-third): crop the right ~55%. IDF handout; label as such on screen.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 46.0,
+     "out": 60.0,
+     "desc": "night: fires and lights over the aid gathering point ('Earlier Today', IDF/Today)",
+     "tags": [
+      "gaza",
+      "flour-massacre",
+      "night",
+      "idf-drone"
+     ],
+     "intensity": 3,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "black / orange",
+     "overlay_ok": false,
+     "notes": "Inset crop.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Flour massacre, Gaza City: IDF's own drone footage."
+  },
+  {
+   "id": "aje-al-rashid-aid-fire-2024-02-26",
+   "file": "media/footage/shootings/raw/youtube_NPC1Fil5Lr0.mp4",
+   "source_url": "https://www.youtube.com/watch?v=NPC1Fil5Lr0",
+   "publisher": "Al Jazeera English",
+   "date": "2024-02-26",
+   "provenance": "AJE (27 Feb 2024): crowds came under fire from guns and tanks gathering flour on al-Rashid Road near Gaza City on Monday 26 Feb, three days before the flour massacre at the same corridor. Attribution: AJE reporting (Hani Mahmoud); WFP suspended deliveries north over the violence.",
+   "license": "news (Al Jazeera)",
+   "width": 1280,
+   "height": 720,
+   "duration": 267.77,
+   "segments": [
+    {
+     "in": 56.0,
+     "out": 80.0,
+     "desc": "dawn haze over the coast road: men run carrying white flour sacks through dust",
+     "tags": [
+      "gaza",
+      "al-rashid",
+      "aid",
+      "flour",
+      "crowd",
+      "running"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "dust gold / white sacks",
+     "overlay_ok": true,
+     "notes": "AJE lower-thirds and split-screen with reporter: crop the left frame.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Al-Rashid Road, Gaza City: Israeli fire on flour seekers."
+  },
+  {
+   "id": "aje-gaza-city-aid-gunfire-2024-02-18",
+   "file": "media/footage/shootings/raw/youtube_Wm1dzhiXjBg.mp4",
+   "source_url": "https://www.youtube.com/watch?v=Wm1dzhiXjBg",
+   "publisher": "Al Jazeera English (AJ Newsfeed)",
+   "date": "2024-02-18",
+   "provenance": "AJE Newsfeed (19 Feb 2024; on-screen 'Gaza City 18 Feb 2024'): Israeli soldiers opened fire on a crowd waiting for an aid parcel. Attribution: AJE reporting.",
+   "license": "news (Al Jazeera)",
+   "width": 720,
+   "height": 720,
+   "duration": 137.09,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 7.0,
+     "desc": "a vast crowd on rubble ground turns and runs as shots crack",
+     "tags": [
+      "gaza",
+      "gaza-city",
+      "aid",
+      "crowd",
+      "gunfire",
+      "running"
+     ],
+     "intensity": 5,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "overcast grey / dark crowd",
+     "overlay_ok": false,
+     "notes": "Natural sound with gunshots under AJ's burned-in captions ('GUNSHOTS', 'The sound of gunfire sent these Palestinians running for their lives'); crop lower third.",
+     "hits": [
+      {
+       "t": 1.01,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "audio burst; crowd already running"
+      },
+      {
+       "t": 1.49,
+       "kind": "gunshot",
+       "strength": 3,
+       "note": "audio"
+      },
+      {
+       "t": 1.78,
+       "kind": "gunshot",
+       "strength": 3,
+       "note": "audio"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 7.5,
+     "out": 12.0,
+     "desc": "men climb onto an aid truck, arms reaching for boxes",
+     "tags": [
+      "gaza",
+      "aid",
+      "truck",
+      "crowd",
+      "hunger"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "grey / white boxes",
+     "overlay_ok": false,
+     "notes": "captions burned in",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Gaza City aid crowd under gunfire."
+  },
+  {
+   "id": "c4-ghf-rafah-night-fire-2025-06-01",
+   "file": "media/footage/shootings/raw/youtube_9jxzin1wIiA.mp4",
+   "source_url": "https://www.youtube.com/watch?v=9jxzin1wIiA",
+   "publisher": "Channel 4 News",
+   "date": "2025-06-01",
+   "provenance": "Channel 4 News 'How Gaza aid attack happened - timeline' (2 Jun 2025): 1 June 2025 near the GHF site in Rafah (al-Alam roundabout); at least 31 killed per health officials; survivors told MSF they were shot from all sides by Israeli forces, drones and tanks. IDF denied firing at civilians near the site that day, later reported 'warning shots' at suspects. Channel 4 relies on survivor/MSF/ICRC accounts; the phone footage is from the crowd.",
+   "license": "news (Channel 4)",
+   "width": 1280,
+   "height": 720,
+   "duration": 493.59,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 14.5,
+     "desc": "pre-dawn phone footage at ground level: people flat in the sand, heads down, a horizon of glowing light; gunfire",
+     "tags": [
+      "gaza",
+      "rafah",
+      "ghf",
+      "aid",
+      "night",
+      "gunfire",
+      "phone-footage"
+     ],
+     "intensity": 5,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld low",
+     "palette": "near-black / blue dawn",
+     "overlay_ok": false,
+     "notes": "Natural sound (gunfire at 0.18, 0.43, 1.56, 1.81). Pillarboxed vertical video.",
+     "hits": [
+      {
+       "t": 0.43,
+       "kind": "gunshot",
+       "strength": 3,
+       "note": "audio, frame dark"
+      },
+      {
+       "t": 1.56,
+       "kind": "gunshot",
+       "strength": 3,
+       "note": "audio"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 15.0,
+     "out": 34.0,
+     "desc": "Nasser hospital grounds: shrouded bodies carried, women collapse in grief, two girls weep",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "ghf",
+      "grief",
+      "shroud",
+      "nasser-hospital"
+     ],
+     "intensity": 4,
+     "graphic": 2,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "white shrouds / dark",
+     "overlay_ok": false,
+     "notes": "Aftermath; dead not named in the clip.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "GHF Rafah site, 1 Jun 2025: aid seekers under fire before dawn."
+  },
+  {
+   "id": "ap-ghf-khan-younis-wounded-2025-06-03",
+   "file": "media/footage/shootings/raw/youtube_2390fNhB6L8.mp4",
+   "source_url": "https://www.youtube.com/watch?v=2390fNhB6L8",
+   "publisher": "AP Archive",
+   "date": "2025-06-03",
+   "provenance": "AP, Khan Younis 3 Jun 2025: witnesses say Israeli forces fired on people heading to a GHF distribution site (27 killed that day per health officials). Attribution: witnesses/AP. 360p.",
+   "license": "news (AP)",
+   "width": 640,
+   "height": 360,
+   "duration": 237.98,
+   "segments": [
+    {
+     "in": 18.0,
+     "out": 40.0,
+     "desc": "crowds and donkey carts on the aid road; a man with a bandaged head among the wounded sitting in sand; streams of people carrying sacks",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "ghf",
+      "aid",
+      "wounded"
+     ],
+     "intensity": 3,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "sand / white sacks",
+     "overlay_ok": true,
+     "notes": "Natural sound. 360p.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "GHF aid route, Khan Younis: wounded aid seekers."
+  },
+  {
+   "id": "ap-us-contractors-ghf-live-fire-2025-07-02",
+   "file": "media/footage/shootings/raw/youtube_63XTo2EyLZA.mp4",
+   "source_url": "https://www.youtube.com/watch?v=63XTo2EyLZA",
+   "publisher": "Associated Press",
+   "date": "2025-06",
+   "provenance": "AP investigation (2 Jul 2025): videos and testimony from two American contractors show US security contractors at GHF sites using live ammunition and stun grenades on Palestinians seeking food. SHOOTERS HERE ARE US CONTRACTORS, NOT THE IDF: label accordingly. Highly relevant to the US angle of the piece.",
+   "license": "news (AP)",
+   "width": 1280,
+   "height": 720,
+   "duration": 341.36,
+   "segments": [
+    {
+     "in": 0.0,
+     "out": 21.0,
+     "desc": "crowds at a fenced GHF site in the dunes; a stun grenade cloud bursts over people at the wire",
+     "tags": [
+      "gaza",
+      "ghf",
+      "aid",
+      "us-contractors",
+      "stun-grenade",
+      "crowd"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "sand / white smoke",
+     "overlay_ok": true,
+     "notes": "Contractor-filmed video inside AP package.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 100.0,
+     "out": 128.0,
+     "desc": "crowd grabbing boxes at the fence; dark night clip marked 'stun grenade'",
+     "tags": [
+      "gaza",
+      "ghf",
+      "aid",
+      "us-contractors",
+      "stun-grenade"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "sand / night",
+     "overlay_ok": true,
+     "notes": "Hit points not yet picked.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 262.0,
+     "out": 282.0,
+     "desc": "night: contractors in blue vests at a floodlit site as people run",
+     "tags": [
+      "gaza",
+      "ghf",
+      "night",
+      "us-contractors"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "black / floodlight",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "GHF sites: US contractors firing on aid seekers (AP)."
+  },
+  {
+   "id": "aje-nasser-snipers-2024-02-08",
+   "file": "media/footage/shootings/raw/youtube_DVNsbCiiEuM.mp4",
+   "source_url": "https://www.youtube.com/watch?v=DVNsbCiiEuM",
+   "publisher": "Al Jazeera English",
+   "date": "2024-02-08",
+   "provenance": "AJE (8 Feb 2024): Israeli snipers shot at civilians near Nasser hospital, Khan Younis. Attribution: AJE reporting (Ibtissem Guenfoud). Footage filmed through a fence/railing.",
+   "license": "news (Al Jazeera)",
+   "width": 1280,
+   "height": 720,
+   "duration": 125.64,
+   "segments": [
+    {
+     "in": 10.5,
+     "out": 23.5,
+     "desc": "through the bars of a railing: an empty street with a figure lying in it; then people bent over a fallen man pulling him along",
+     "tags": [
+      "gaza",
+      "khan-younis",
+      "nasser-hospital",
+      "sniper",
+      "body",
+      "rescue"
+     ],
+     "intensity": 4,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "handheld through bars",
+     "palette": "sand / black bars",
+     "overlay_ok": false,
+     "notes": "Vertical clip pillarboxed with blur; AJ bug. No natural gunfire found on the audio.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "gaza",
+   "scope_note": "Khan Younis, Nasser hospital: sniper fire on civilians."
+  },
+  {
+   "id": "guardian-jenin-surrendered-men-shot-2025-11-27",
+   "file": "media/footage/shootings/raw/youtube_apf9daHt-xM.mp4",
+   "source_url": "https://www.youtube.com/watch?v=apf9daHt-xM",
+   "publisher": "The Guardian (footage: Al-Ghad TV)",
+   "date": "2025-11-27",
+   "provenance": "Guardian (28 Nov 2025), Jenin: Israeli Border Police shot dead two Palestinian men moments after they came out of a building and surrendered, also witnessed by journalists. Israel identified them as wanted militants; Islamic Jihad claimed them. IDF and Israel Police said they were investigating (https://www.timesofisrael.com/liveblog_entry/idf-police-investigating-troops-for-shooting-two-terror-suspects-after-they-surrendered/); OHCHR 'appalled at the brazen killing' (https://www.ohchr.org/en/press-briefing-notes/2025/11/jenin-killings-incident); minister Ben-Gvir defended it. Not-civilian status is contested; what the footage shows is men killed after surrendering.",
+   "license": "news (Guardian / Al-Ghad)",
+   "width": 1280,
+   "height": 720,
+   "duration": 83.89,
+   "segments": [
+    {
+     "in": 22.0,
+     "out": 46.0,
+     "desc": "telephoto: soldiers around an armoured jeep at a garage being torn open by a bulldozer; a man comes out and lies down; soldiers stand over him, shots, he is still",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "surrender",
+      "execution",
+      "border-police",
+      "bulldozer"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": true,
+     "motion": "static telephoto",
+     "palette": "dusty grey / olive",
+     "overlay_ok": false,
+     "notes": "Natural sound with shots at 22.16, 29.85, 34.22. Guardian bug; Julian Borger cutaways at 6-9, 16-17, 46-48 and 49.5-58. Named in Times of Israel: Youssef Asasa, Mahmoud Abdallah (https://www.timesofisrael.com/two-palestinian-terror-suspects-shot-dead-in-jenin-after-surrendering-to-border-police/).",
+     "hits": [
+      {
+       "t": 29.85,
+       "kind": "gunshot",
+       "strength": 5,
+       "note": "shot on audio; a man is down at the door by 30.06 (strip sheets/strips/youtube_apf9daHt-xM_28.5.png)"
+      },
+      {
+       "t": 34.22,
+       "kind": "gunshot",
+       "strength": 4,
+       "note": "second shot on audio"
+      }
+     ],
+     "motion_tempo": null
+    },
+    {
+     "in": 58.0,
+     "out": 75.0,
+     "desc": "wider angle: two soldiers stand by the jeep as the bulldozer arm swings into the building",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "bulldozer",
+      "soldiers"
+     ],
+     "intensity": 3,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "grey",
+     "overlay_ok": true,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin, West Bank: Israeli forces kill two men after surrender."
+  },
+  {
+   "id": "aje-qabatiya-bodies-off-roof-2024-09-19",
+   "file": "media/footage/shootings/raw/youtube_g9CUNhWc_GI.mp4",
+   "source_url": "https://www.youtube.com/watch?v=g9CUNhWc_GI",
+   "publisher": "Al Jazeera English",
+   "date": "2024-09-19",
+   "provenance": "AJE (19 Sep 2024), Qabatiya near Jenin: Israeli soldiers filmed pushing at least four apparently lifeless bodies off a rooftop during a raid. Verified by AP and Reuters; IDF called it 'a serious incident that does not accord with IDF values' and opened an investigation (https://www.reuters.com/world/middle-east/israel-investigates-after-videos-show-soldiers-pushing-bodies-off-west-bank-roof-2024-09-20/, https://apnews.com/article/israel-palestinians-soldiers-qabatiya-west-bank-ae65d70f7da5db4603ba1b7c77f2ccd3).",
+   "license": "news (Al Jazeera)",
+   "width": 1280,
+   "height": 720,
+   "duration": 395.06,
+   "segments": [
+    {
+     "in": 23.0,
+     "out": 58.0,
+     "desc": "long-lens, hazy: soldiers move on a rooftop behind a black water tank and drag and tip figures over the edge",
+     "tags": [
+      "west-bank",
+      "qabatiya",
+      "bodies",
+      "soldiers",
+      "rooftop",
+      "desecration"
+     ],
+     "intensity": 5,
+     "graphic": 3,
+     "identifiable_victims": false,
+     "motion": "static telephoto, smoky",
+     "palette": "haze grey / olive",
+     "overlay_ok": false,
+     "notes": "AJE lower-third over the lower third throughout: crop. Low resolution: the individual push frames did not resolve on my strips, so no hit times yet; pick shove hits by eye before cutting. Victims not named in the sources I checked.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Qabatiya, West Bank: soldiers push bodies off a roof."
+  },
+  {
+   "id": "dw-jenin-man-strapped-to-jeep-2024-06-22",
+   "file": "media/footage/shootings/raw/youtube_JbpenBgUILE.mp4",
+   "source_url": "https://www.youtube.com/watch?v=JbpenBgUILE",
+   "publisher": "DW News (social-media footage)",
+   "date": "2024-06-22",
+   "provenance": "DW (23 Jun 2024), Jenin: Israeli troops drove a wounded Palestinian strapped to the hood of a military jeep past ambulances. IDF confirmed it and said soldiers violated orders (https://www.reuters.com/world/middle-east/israeli-forces-strap-wounded-palestinian-jeep-during-raid-2024-06-22/, https://www.bbc.com/news/articles/cjqq5n8911do). Named by Reuters eyewitnesses as Mujahed Azmi; AP later interviewed him as Mujahid Abadi, 24 (https://apnews.com/article/israel-palestinians-rights-human-shield-jeep-8e8ed63bda65383e38e4dd52d239e319).",
+   "license": "news (DW)",
+   "width": 1280,
+   "height": 720,
+   "duration": 525.26,
+   "segments": [
+    {
+     "in": 96.0,
+     "out": 112.0,
+     "desc": "from a roof: an Israeli military jeep with a man splayed across its hood drives down a lane past two Red Crescent ambulances",
+     "tags": [
+      "west-bank",
+      "jenin",
+      "human-shield",
+      "jeep",
+      "ambulance",
+      "wounded"
+     ],
+     "intensity": 5,
+     "graphic": 2,
+     "identifiable_victims": true,
+     "motion": "handheld from above",
+     "palette": "dusty white / olive / ambulance red",
+     "overlay_ok": false,
+     "notes": "Vertical clip in DW blur-pillarbox. Victim: Mujahed Azmi / Mujahid Abadi (two spellings in Reuters and AP; same man).",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "Jenin: wounded man tied to an IDF jeep hood."
+  },
+  {
+   "id": "sky-west-bank-protesters-shot-2023-10",
+   "file": "media/footage/shootings/raw/youtube_fd1BQhSZ2Kw.mp4",
+   "source_url": "https://www.youtube.com/watch?v=fd1BQhSZ2Kw",
+   "publisher": "Sky News (Stuart Ramsay)",
+   "date": "2023-10-18",
+   "provenance": "Sky News (18 Oct 2023), West Bank: Stuart Ramsay reports from protests where Israeli marksmen were shooting stone-throwers; over 60 killed and 1,300+ wounded in the West Bank in ten days. Attribution: Sky's own crew on the scene, soldiers visible on the ridge.",
+   "license": "news (Sky)",
+   "width": 1280,
+   "height": 720,
+   "duration": 205.5,
+   "segments": [
+    {
+     "in": 16.0,
+     "out": 30.0,
+     "desc": "tyre smoke over a road, youths hurl stones; soldiers line a ridge above the field",
+     "tags": [
+      "west-bank",
+      "protest",
+      "stones",
+      "soldiers",
+      "sniper"
+     ],
+     "intensity": 4,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "black smoke / blue sky",
+     "overlay_ok": false,
+     "notes": "Sky lower-third and ticker: crop bottom 18%.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 35.0,
+     "out": 46.0,
+     "desc": "medics in orange vests load a wounded young man into a van",
+     "tags": [
+      "west-bank",
+      "medics",
+      "wounded",
+      "rescue"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "orange vests",
+     "overlay_ok": false,
+     "notes": "",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "West Bank protests: Israeli marksmen fire on youths (Sky crew)."
+  },
+  {
+   "id": "ap-south-lebanon-return-wounded-2025-01-26",
+   "file": "media/footage/shootings/raw/youtube_7MZDcgazZfA.mp4",
+   "source_url": "https://www.youtube.com/watch?v=7MZDcgazZfA",
+   "publisher": "AP Archive",
+   "date": "2025-01-26",
+   "provenance": "AP, Mays el-Jabal, south Lebanon, 26 Jan 2025: residents cross army blockades to return home on the day Israel was due to withdraw; shotlist item 6 'young man injured while trying to cross towards Mays El Jabal', an Israeli Merkava tank blocking the road. Israeli fire killed 22 that day per Lebanon's health ministry. AP does not show the shot itself.",
+   "license": "news (AP)",
+   "width": 640,
+   "height": 360,
+   "duration": 179.14,
+   "segments": [
+    {
+     "in": 50.9,
+     "out": 54.2,
+     "desc": "a man struggles to push a motorbike up a dirt barrier while two others climb past",
+     "tags": [
+      "lebanon",
+      "return",
+      "barrier",
+      "civilians"
+     ],
+     "intensity": 3,
+     "graphic": 0,
+     "identifiable_victims": false,
+     "motion": "static",
+     "palette": "earth brown / green",
+     "overlay_ok": true,
+     "notes": "Not the shooting; context.",
+     "hits": [],
+     "motion_tempo": null
+    },
+    {
+     "in": 57.0,
+     "out": 70.0,
+     "desc": "crowd and civil-defence men rush a wounded young man on an orange stretcher",
+     "tags": [
+      "lebanon",
+      "wounded",
+      "stretcher",
+      "rescue"
+     ],
+     "intensity": 4,
+     "graphic": 1,
+     "identifiable_victims": false,
+     "motion": "handheld",
+     "palette": "orange stretcher",
+     "overlay_ok": false,
+     "notes": "Natural sound; not named in AP.",
+     "hits": [],
+     "motion_tempo": null
+    }
+   ],
+   "scope": "israel",
+   "scope_note": "South Lebanon: residents returning home fired on; wounded man carried."
+  }
+ ]
+}
