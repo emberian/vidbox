@@ -11,10 +11,6 @@ Conventions shared by every op here:
   phase 0 on the first downbeat, motion eased per beat. clock: "seconds" opts out.
 """
 
-
-def _beat_crossed(p, t, per_sec):
-    """True on the first frame (25 fps) of each grid step of fx.grid_index(p, ., per_sec)."""
-    return grid_index(p, t, per_sec) != grid_index(p, t - 1 / 25, per_sec)
 import math
 from collections import deque
 
@@ -29,6 +25,11 @@ GAP = 0.1          # s: a larger step in t (or going backwards) resets per-op st
 
 
 # ---------------------------------------------------------------- shared helpers
+def _beat_crossed(p, t, per_sec):
+    """True on the first frame (25 fps) of each grid step of fx.grid_index(p, ., per_sec)."""
+    return grid_index(p, t, per_sec) != grid_index(p, t - 1 / 25, per_sec)
+
+
 def _fresh(st, t):
     """True when state must be dropped (first frame, seek, or t went backwards)."""
     last = st.get("_t")
