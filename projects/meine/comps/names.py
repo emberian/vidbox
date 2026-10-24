@@ -27,13 +27,9 @@ PAGES = 759   # pages in the list (tools/names_pages.py)
 
 
 def untreated_windows(tl):
-    out = []
-    for L in tl["layers"]:
-        m = L.get("meta", {})
-        if m.get("catalog") in ("ground", "weapons", "y2026") and not L.get("fx") \
-                and L.get("blend", "normal") == "normal" and "audio" in L:
-            out.append((L["t0"] - 0.3, L["t1"] + 0.3))
-    return out
+    import drc   # one definition of "untreated", shared with the design rule checker
+    cats = {f.stem for f in (ROOT / "projects/meine/footage").glob("*.json")}
+    return [(L["t0"] - 0.3, L["t1"] + 0.3) for L in tl["layers"] if drc.untreated(L, cats)]
 
 
 def schedule(tl, mode, music):

@@ -23,6 +23,7 @@ COMIC_FX = {"voronoi", "hue", "chroma", "glitch", "kaleido", "posterize", "dithe
             "chromatime", "gradmap", "noise", "warp"}
 REPEAT_ALLOW = {"mq9-countdown-gcs-2026-03", "mq9-countdown"}   # ember: "We can keep that MQ-9"
 GRID_TOL = 0.03
+EDGE = 1.0   # s: a window's designed fade in/out, where a receding or returning bed is a transition
 
 
 class Piece:
@@ -64,7 +65,10 @@ class Piece:
         return "head" in L.get("tags", []) and not self.speaker(L)
 
     def untreated(self, L):
-        return self.footage(L) and not L.get("fx") and L.get("blend", "normal") == "normal" and "audio" in L
+        return untreated(L, self.cat)
+
+    def names(self, L):
+        return L.get("id", "").startswith("names:") or "names" in L.get("tags", [])
 
     def visible(self, L, a, b, n=12):
         """Is the layer visible anywhere in [a, b]? (samples its opacity signal)"""
@@ -77,6 +81,15 @@ class Piece:
     def scope(self, L):
         clip, seg = self.seg(L)
         return (seg.get("scope") or clip.get("scope")) if clip else None
+
+
+def untreated(L, catalogs):
+    """THE definition of untreated footage of the dead (used by every gate and by the names
+    schedule): catalogued footage, normal blend, no effects, and either its own sound or tagged
+    untreated/real by its section (a held frame has no sound and is still a window of the dead)."""
+    m = L.get("meta", {})
+    return (m.get("catalog") in catalogs and not L.get("fx") and L.get("blend", "normal") == "normal"
+            and ("audio" in L or bool({"untreated", "real"} & set(L.get("tags", [])))))
 
 
 def overlap(L, a, b, margin=0.02):
@@ -137,28 +150,35 @@ def r_once(P):
 
 @rule("nothing-over-the-dead", "ERROR", "ember caught a strike fading in over the MEE remains at bar 179: \"distasteful\".")
 def r_over(P):
+    # Nothing else is visible while a window of the dead is up, ABOVE OR BELOW it: a layer beneath
+    # shows through as the window fades, and around an inset (the v4 review: a launch fading in over
+    # a burial, psychedelic beds around the Bureij inset). Allowed: other untreated footage (stacks),
+    # the real speakers and their text, the Meine video. Heads have their own rule.
+    # Designed soft edges are allowed: a bed receding as the window fades up, or closing back over it
+    # as it fades out (the first and last EDGE seconds). Not allowed: anything ENTERING while the
+    # window is up, or anything visible through its core.
     out = []
-    idx = {id(L): i for i, L in enumerate(P.L)}
-    unt = [L for L in P.L if P.untreated(L)]
-    for U in unt:
+    for U in (L for L in P.L if P.untreated(L)):
+        core = (U["t0"] + EDGE, U["t1"] - EDGE)
         for L in P.L:
-            if L is U or P.untreated(L) or L.get("id") == "meine" or P.speaker(L) or P.text(L) or P.head(L):
+            if L is U or P.untreated(L) or L.get("id") == "meine" or P.speaker(L) or P.text(L) or P.head(L) \
+                    or P.names(L):
                 continue
-            if overlap(L, U["t0"], U["t1"]) and idx[id(L)] > idx[id(U)] and \
-                    P.visible(L, max(L["t0"], U["t0"]), min(L["t1"], U["t1"])):
-                out.append((max(L["t0"], U["t0"]), f"{L['id']} over {U['id']}"))
+            if U["t0"] <= L["t0"] < U["t1"] - 0.04 and P.visible(L, L["t0"], min(L["t1"], U["t1"])):
+                out.append((L["t0"], f"{L['id']} enters over {U['id']} ({U['t1'] - L['t0']:.2f}s before it ends)"))
+            elif core[1] > core[0] and L["t0"] < core[1] and L["t1"] > core[0] and \
+                    P.visible(L, max(L["t0"], core[0]), min(L["t1"], core[1])):
+                out.append((max(L["t0"], core[0]), f"{L['id']} visible through {U['id']}"))
     return out
 
 
 @rule("hyde-off-the-dead", "ERROR", "His comic register over the dead reads as mockery; the real speakers are the indictment.")
 def r_hyde(P):
     out = []
-    for U in (L for L in P.L if P.untreated(L)):
-        clip, seg = P.seg(U)
-        if not seg or seg.get("graphic", 0) < 2:
-            continue
-        for H in (L for L in P.L if P.head(L) and overlap(L, U["t0"], U["t1"], 0.3)):
-            if P.visible(H, U["t0"] + 0.3, U["t1"] - 0.3):
+    for U in (L for L in P.L if P.untreated(L)):   # every window of the dead, whatever its graphic level
+        a, b = U["t0"] + EDGE, U["t1"] - EDGE
+        for H in (L for L in P.L if P.head(L) and b > a and overlap(L, a, b)):
+            if P.visible(H, max(H["t0"], a), min(H["t1"], b)):
                 out.append((max(H["t0"], U["t0"]), f"{H['id']} over {U['id']}"))
     return out
 
@@ -198,6 +218,27 @@ def r_grid(P):
             err = abs(pos * 4 - round(pos * 4)) / 4 * P.period
             if err > GRID_TOL:
                 out.append((h, f"{L['id']}: hit {err * 1000:.0f} ms off the 16th grid"))
+    return out
+
+
+@rule("names-off-the-dead", "ERROR", "The names of the dead never run over a specific, untreated death.")
+def r_names_off(P):
+    out = []
+    for U in (L for L in P.L if P.untreated(L)):
+        for N in (L for L in P.L if P.names(L) and overlap(L, U["t0"], U["t1"], 0.04)):
+            out.append((max(N["t0"], U["t0"]), f"{N['id']} with {U['id']}"))
+    return out[:40]
+
+
+@rule("card-outlives-speaker", "WARN", "A lower-third that stays after its speaker has gone hangs over whatever comes next.")
+def r_card_outlives(P):
+    out = []
+    for C in (L for L in P.L if L.get("id", "").startswith("card:")):
+        stem = C["id"][5:]
+        S = [L for L in P.L if P.speaker(L) and stem in L.get("id", "") and "audio" in L
+             and abs(L["t0"] - C["t0"]) < 3.0]   # the appearance this card belongs to
+        if S and C["t1"] > max(x["t1"] for x in S) + 0.5:
+            out.append((C["t0"], f"{C['id']} ends {C['t1'] - max(x['t1'] for x in S):.1f}s after the speaker"))
     return out
 
 
