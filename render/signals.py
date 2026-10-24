@@ -359,11 +359,20 @@ def compile_time(T, t0, t1, ctx=None, dt=0.001):
     if not loop:
         return TimeMap([Run(t0, t1, "lin", s0=tin, v=sp)])
     a, b = loop
+    if not b > a:
+        raise ValueError(f"loop [{a}, {b}] is empty")
     runs, t = [], t0
+    # One run per pass through the loop; the cap turns any future non-progress into an error
+    # instead of an unbounded list (this loop once ate hundreds of GB, see below).
+    max_runs = int(abs(sp) * (t1 - t0) / (b - a)) + 4
     while t < t1 - 1e-9:
+        if len(runs) > max_runs:
+            raise RuntimeError(f"loop time map isn't advancing (t={t}, loop [{a}, {b}], speed {sp})")
         s = a + ((tin - a) + (t - t0) * sp) % (b - a)
         if sp > 0:
             tn = t + (b - s) / sp
+            if tn <= t + 1e-9:   # float error left us a hair below a wrap: s == b, wrap now
+                s, tn = a, t + (b - a) / sp
         elif sp < 0:
             tn = t + (s - a) / -sp
             if tn <= t + 1e-9:   # sitting exactly on a: wraps immediately
