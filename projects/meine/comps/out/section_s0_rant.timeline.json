@@ -139,18 +139,18 @@
    }
   },
   {
-   "id": "hellfire-symphony-tads#1@5.92",
+   "id": "hellfire-yakima-broll#1@5.92",
    "tags": [
     "weapons",
-    "launch",
     "apache",
-    "day"
+    "launch",
+    "hellfire"
    ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "src": "media/footage/weapons/raw/dvids_871530.mp4",
    "t0": 5.421,
-   "t1": 7.821,
+   "t1": 6.501,
    "time": {
-    "in": 4.83,
+    "in": 25.42,
     "speed": 1.0
    },
    "blend": "normal",
@@ -190,7 +190,7 @@
    "opacity": 0.85,
    "meta": {
     "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
+    "clip": "hellfire-yakima-broll",
     "seg": 1,
     "hits_song": [
      5.921
@@ -198,18 +198,18 @@
    }
   },
   {
-   "id": "times-radio-idf-bombardment-oct2023#0@10.21",
+   "id": "idf-launcher-strike-2009#0@10.21",
    "tags": [
     "weapons",
-    "aerial",
-    "fireball",
-    "gaza"
+    "targeting",
+    "crosshair",
+    "IR"
    ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "src": "media/footage/weapons/raw/youtube_AIRiNPaoLTI.mp4",
    "t0": 9.705,
-   "t1": 12.105,
+   "t1": 10.164,
    "time": {
-    "in": 0.381,
+    "in": 9.741,
     "speed": 1.0
    },
    "blend": "normal",
@@ -249,26 +249,24 @@
    "opacity": 0.85,
    "meta": {
     "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
+    "clip": "idf-launcher-strike-2009",
     "seg": 0,
-    "hits_song": [
-     10.205
-    ]
+    "hits_song": []
    }
   },
   {
-   "id": "times-radio-idf-bombardment-oct2023#2@11.63",
+   "id": "aj-high-powered-bombs-explainer#8@11.63",
    "tags": [
     "weapons",
-    "aerial",
-    "strike",
-    "gaza"
+    "IR",
+    "crosshair",
+    "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
-   "t0": 11.133,
+   "src": "media/footage/weapons/raw/youtube_XysmVvsDwLQ.mp4",
+   "t0": 11.573,
    "t1": 13.533,
    "time": {
-    "in": 18.341,
+    "in": 212.4,
     "speed": 1.0
    },
    "blend": "normal",
@@ -308,26 +306,26 @@
    "opacity": 0.85,
    "meta": {
     "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
-    "seg": 2,
+    "clip": "aj-high-powered-bombs-explainer",
+    "seg": 8,
     "hits_song": [
      11.633
     ]
    }
   },
   {
-   "id": "oir-ramadi-bridge-2015#2@14.01",
+   "id": "idf-strikes-jan2014-blackhot#1@14.01",
    "tags": [
     "weapons",
     "IR",
     "black-hot",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_438531.mp4",
+   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
    "t0": 13.513,
    "t1": 15.913,
    "time": {
-    "in": 46.4146,
+    "in": 12.261,
     "speed": 1.0
    },
    "blend": "normal",
@@ -367,26 +365,26 @@
    "opacity": 0.85,
    "meta": {
     "catalog": "weapons",
-    "clip": "oir-ramadi-bridge-2015",
-    "seg": 2,
+    "clip": "idf-strikes-jan2014-blackhot",
+    "seg": 1,
     "hits_song": [
      14.013
     ]
    }
   },
   {
-   "id": "times-radio-idf-bombardment-oct2023#3@19.25",
+   "id": "hellfire-symphony-tads#7@19.25",
    "tags": [
     "weapons",
     "IR",
-    "white-hot",
-    "strike"
+    "smoke",
+    "wreck"
    ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
    "t0": 18.749,
    "t1": 21.149,
    "time": {
-    "in": 59.021,
+    "in": 44.4459,
     "speed": 1.0
    },
    "blend": "normal",
@@ -426,26 +424,26 @@
    "opacity": 0.85,
    "meta": {
     "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
-    "seg": 3,
+    "clip": "hellfire-symphony-tads",
+    "seg": 7,
     "hits_song": [
      19.249
     ]
    }
   },
   {
-   "id": "hellfire-symphony-tads#8@21.63",
+   "id": "a10-bomb-load-nellis#1@21.63",
    "tags": [
     "weapons",
     "explosion",
-    "flash",
-    "false-colour"
+    "fireball",
+    "range"
    ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "src": "media/footage/weapons/raw/dvids_544380.mp4",
    "t0": 21.129,
-   "t1": 23.4415,
+   "t1": 23.529,
    "time": {
-    "in": 52.6875,
+    "in": 19.5,
     "speed": 1.0
    },
    "blend": "normal",
@@ -485,8 +483,8 @@
    "opacity": 0.85,
    "meta": {
     "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
-    "seg": 8,
+    "clip": "a10-bomb-load-nellis",
+    "seg": 1,
     "hits_song": [
      21.629
     ]
@@ -509,7 +507,163 @@
     600
    ],
    "pos": {
-    "path": "paths/face_self_gaze_synced.json"
+    "add": [
+     {
+      "path": "paths/face_self_gaze_synced.json"
+     },
+     {
+      "k": [
+       [
+        0.0,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        5.121,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        5.421,
+        [
+         -380,
+         0
+        ]
+       ],
+       [
+        6.501,
+        [
+         -380,
+         0
+        ]
+       ],
+       [
+        6.801,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        9.405,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        9.705,
+        [
+         380,
+         0
+        ]
+       ],
+       [
+        10.164,
+        [
+         380,
+         0
+        ]
+       ],
+       [
+        10.464,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        11.273,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        11.573,
+        [
+         -380,
+         0
+        ]
+       ],
+       [
+        13.533,
+        [
+         -380,
+         0
+        ]
+       ],
+       [
+        13.513,
+        [
+         -380,
+         0
+        ]
+       ],
+       [
+        15.913,
+        [
+         -380,
+         0
+        ]
+       ],
+       [
+        16.213,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        18.448999999999998,
+        [
+         0,
+         0
+        ]
+       ],
+       [
+        18.749,
+        [
+         380,
+         0
+        ]
+       ],
+       [
+        21.149,
+        [
+         380,
+         0
+        ]
+       ],
+       [
+        21.129,
+        [
+         380,
+         0
+        ]
+       ],
+       [
+        23.529,
+        [
+         380,
+         0
+        ]
+       ],
+       [
+        23.829,
+        [
+         0,
+         0
+        ]
+       ]
+      ],
+      "ease": "smooth"
+     }
+    ]
    },
    "scale": {
     "pathscale": "paths/face_self_gaze_synced.json"

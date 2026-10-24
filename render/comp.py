@@ -524,6 +524,83 @@ class Comp:
         self.layers.append(layer)
         return layer
 
+    def text_card(self, lines, at, dur, pos=(140, 860), size=34, fade=0.3, id=None, **props):
+        """A lower-third: lines of white text (first line larger) placed with screen blend, so
+        only the text shows. Used to name and date every real speaker on screen. The image is
+        cached in media/derived/text/. pos is the text block's top-left in canvas px."""
+        import hashlib
+        from PIL import Image, ImageDraw, ImageFont
+        key = hashlib.sha1(json.dumps([lines, size]).encode()).hexdigest()[:16]
+        out = ROOT / "media/derived/text" / f"{key}.png"
+        if not out.exists():
+            out.parent.mkdir(parents=True, exist_ok=True)
+            font = "/System/Library/Fonts/HelveticaNeue.ttc"
+            fonts = [ImageFont.truetype(font, size if i == 0 else int(size * 0.62), index=10 if i == 0 else 7)
+                     for i in range(len(lines))]
+            boxes = [f.getbbox(t) for f, t in zip(fonts, lines)]
+            w = max(b[2] for b in boxes) + 8
+            h = sum(int(f.size * 1.3) for f in fonts) + 8
+            img = Image.new("RGB", (w + w % 2, h + h % 2), "black")
+            d, y = ImageDraw.Draw(img), 4
+            for f, t in zip(fonts, lines):
+                d.text((4, y), t, font=f, fill="white")
+                y += int(f.size * 1.3)
+            img.save(out)
+        from PIL import Image as _I
+        w, h = _I.open(out).size
+        layer = {"id": id or f"text:{lines[0][:24]}@{at:.2f}", "tags": ["text"], "src": str(out.relative_to(ROOT)),
+                 "t0": round(at, 4), "t1": round(at + dur, 4), "time": {"hold": 0.0}, "fit": "native",
+                 "pos": [pos[0] + w / 2, pos[1] + h / 2], "blend": "screen", "fade": {"in": fade, "out": fade},
+                 **props}
+        self.layers.append(layer)
+        return layer
+
+    def _src_span(self, L):
+        """Source-time interval a footage layer shows (in/speed, map, hold; None if unknown)."""
+        T = L.get("time", {})
+        if "map" in T:
+            return (min(T["map"]["src"]), max(T["map"]["src"]))
+        if "hold" in T:
+            return (T["hold"], T["hold"])
+        if "in" in T and isinstance(T.get("speed", 1.0), (int, float)):
+            a = T["in"] + (L["t1"] - L["t0"]) * T.get("speed", 1.0)
+            return (min(T["in"], a), max(T["in"], a))
+        return None
+
+    def repeats(self, min_overlap=0.5):
+        """Pairs of footage layers showing the same source material (same clip, overlapping
+        source time by more than min_overlap s): [(clip, t0_a, t0_b, overlap)]."""
+        by = {}
+        for L in self.layers:
+            m = L.get("meta", {})
+            sp = self._src_span(L) if m.get("catalog") else None
+            if sp:
+                by.setdefault((m["catalog"], m["clip"]), []).append((L["t0"], sp))
+        out = []
+        for (cat, clip), v in by.items():
+            v.sort()
+            for i in range(len(v)):
+                for j in range(i + 1, len(v)):
+                    ov = min(v[i][1][1], v[j][1][1]) - max(v[i][1][0], v[j][1][0])
+                    if ov > min_overlap:
+                        out.append((clip, v[i][0], v[j][0], round(ov, 2)))
+        return out
+
+    def fresh(self, pool, min_overlap=0.5):
+        """The items of a find() pool whose segment hasn't already been shown in this Comp
+        (any overlap with a placed layer's source range). In full.py all sections share one
+        Comp, so a later section's fresh() also avoids an earlier section's footage."""
+        used = {}
+        for L in self.layers:
+            m = L.get("meta", {})
+            sp = self._src_span(L) if m.get("catalog") else None
+            if sp:
+                used.setdefault((m["catalog"], m["clip"]), []).append(sp)
+        def ok(seg):
+            return all(min(seg.t_out, b) - max(seg.t_in, a) <= min_overlap
+                       for a, b in used.get((seg.catalog, seg.clip["id"]), []))
+        return [x for x in pool if ok(x[0])]
+
     def background(self, **props):
         bg = self.proj["background"]
         return {"id": "meine", "tags": ["bg"], "src": bg["src"], "t0": self.range[0], "t1": self.range[1],
@@ -628,7 +705,9 @@ class Comp:
                     on_sub += 1
                 else:
                     offgrid.append((L["id"], h))
+        rep = self.repeats()
         print(f"{out.relative_to(ROOT) if out.is_relative_to(ROOT) else out}: {len(self.layers)} layers; "
+              f"{len(rep)} repeated footage pairs; "
               f"hits: {on_beat} on beat, {on_sub} on 8ths/16ths, {len(offgrid)} off the grid",
               *(f"\n  off-grid: {i} @ {h:.3f}" for i, h in offgrid[:8]))
         return out
