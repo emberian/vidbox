@@ -452,6 +452,9 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
     """Mux `video` with the music and every audio layer over song [r0, r1). Layers are mixed into
     one sample-exact bus by layer_audio (all time forms, constant speed included); ffmpeg only adds
     the music, which it seeks itself."""
+    if ctx is None:
+        pdir = ROOT / "projects" / tl["project"]
+        ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
     ins = ["-i", str(video), "-ss", f"{r0:.4f}", "-i", str(ROOT / tl["music"]["src"])]
     # asetpts on every input: the music's first opus packet has pts < 0, which otherwise makes the
     # mp4 keep 1008 samples of AAC priming (the whole mix 21 ms late against the picture)
@@ -460,9 +463,6 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
         chains = [f"[1:a]asetpts=PTS-STARTPTS,volume={mg}[a0]"]
         env_path = None
     else:   # a signal: the music's volume follows it (e.g. dipping so source audio punches through)
-        if ctx is None:
-            pdir = ROOT / "projects" / tl["project"]
-            ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
         g = compile_signal(mg, ctx)
         env = np.array([g(r0 + i / ENV_RATE) for i in range(int((r1 - r0) * ENV_RATE) + 2)], np.float32)
         env_path = Path(video).with_name("music_env.f32")
@@ -473,9 +473,6 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
     for L in tl["layers"]:
         if "audio" not in L or L["t1"] <= r0 or L["t0"] >= r1:
             continue
-        if ctx is None:
-            pdir = ROOT / "projects" / tl["project"]
-            ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
         got = layer_audio(L, r0, r1, ctx)
         if got is not None:
             if bus is None:
