@@ -1,15 +1,25 @@
 """Track the largest face in a video and stream a face-centered crop as raw BGR24 to stdout.
 
-usage: facecrop.py INPUT OUT_W OUT_H > raw
+usage: facecrop.py INPUT OUT_W OUT_H [--track track.json [--track-only]] > raw
+--track also saves the per-frame detections (the face's own motion in the frame).
 Crop box is a fixed size (from the median face size) so the face scale stays steady;
 only its center follows the smoothed track.
 """
+import argparse
+import json
 import sys
 
 import cv2
 import numpy as np
 
-src, out_w, out_h = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
+ap = argparse.ArgumentParser()
+ap.add_argument("src")
+ap.add_argument("out_w", type=int)
+ap.add_argument("out_h", type=int)
+ap.add_argument("--track")
+ap.add_argument("--track-only", action="store_true")
+args = ap.parse_args()
+src, out_w, out_h = args.src, args.out_w, args.out_h
 cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 # pass 1: detect
@@ -27,7 +37,15 @@ while True:
         dets.append((x + w / 2, y + h / 2, w))
     else:
         dets.append(None)
+fps = cap.get(cv2.CAP_PROP_FPS)
 cap.release()
+
+if args.track:
+    with open(args.track, "w") as f:
+        json.dump({"src": src, "fps": fps, "size": [W, H],
+                   "frames": [None if d is None else [round(float(v), 1) for v in d] for d in dets]}, f)
+    if args.track_only:
+        sys.exit(0)
 
 n = len(dets)
 hit = [i for i, d in enumerate(dets) if d is not None]

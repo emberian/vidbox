@@ -30,6 +30,19 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_header("Location", "/studio/index.html")
             self.end_headers()
             return
+        url = urlparse(self.path)
+        if url.path == "/api/ls":
+            d = (ROOT / parse_qs(url.query).get("dir", [""])[0]).resolve()
+            if d != PROJECTS and PROJECTS not in d.parents:
+                return self.send_error(403)
+            names = sorted(p.name for p in d.glob("*.json")) if d.is_dir() else []
+            body = json.dumps(names).encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
         rng = self.headers.get("Range")
         m = rng and re.fullmatch(r"bytes=(\d*)-(\d*)", rng.strip())
         if not m:

@@ -11,13 +11,7 @@ const project = await (await fetch(`${projDir}/project.json`)).json();
 const layer = project.layers.find(l => l.path);
 const [W, H] = project.size;
 const fps = project.fps;
-const pathFile = `projects/${projName}/${layer.path}`;
-
-let path = { anchors: [], takes: [] };
-try {
-  const r = await fetch(`/${pathFile}`);
-  if (r.ok) path = Object.assign(path, await r.json());
-} catch {}
+let pathFile, path;
 
 bg.src = "/" + (project.background.proxy || project.background.src);
 face.src = "/" + layer.src;
@@ -30,7 +24,32 @@ let drag = null;              // {kind: 'anchor'|'hin'|'hout'|'tick'|'scrub', i,
 let take = null;              // samples while recording
 let clock = null;             // capture clock: pointer timestamps -> media time
 let mouse = [W / 2, H / 2];
-let undo = [JSON.stringify(path)], redo = [];
+let undo = [], redo = [];
+
+// The layer renders with whichever path file it points at; switching here repoints it.
+async function loadPath(rel) {
+  layer.path = rel;
+  pathFile = `projects/${projName}/${rel}`;
+  path = { anchors: [], takes: [] };
+  try {
+    const r = await fetch(`/${pathFile}`);
+    if (r.ok) path = Object.assign(path, await r.json());
+  } catch {}
+  sel = -1;
+  undo = [JSON.stringify(path)];
+  redo = [];
+}
+await loadPath(layer.path);
+{
+  const names = await (await fetch(`/api/ls?dir=projects/${projName}/paths`)).json();
+  const cur = layer.path.replace(/^paths\//, "");
+  if (!names.includes(cur)) names.unshift(cur);
+  $("pathsel").innerHTML = names.map(n => `<option${n === cur ? " selected" : ""}>${n}</option>`).join("");
+  $("pathsel").onchange = async () => {
+    await loadPath("paths/" + $("pathsel").value);
+    scheduleSave();
+  };
+}
 
 const status = msg => { $("status").textContent = msg; };
 

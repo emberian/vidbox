@@ -11,10 +11,11 @@ D=media/derived
 
 # Face-tracked crop of the short, with his voice muxed back in.
 if [[ ! -f $D/face.mp4 ]]; then
-  uv run python -I tools/facecrop.py media/src/missiles_short.mov 480 600 \
+  uv run python -I tools/facecrop.py media/src/missiles_short.mov 480 600 --track $D/face_track.json \
     | ffmpeg -v error -f rawvideo -pix_fmt bgr24 -s 480x600 -r 160050/5519 -i - \
       -i media/src/missiles_short.mov -map 0:v -map 1:a \
       -c:v libx264 -crf 12 -g 15 -pix_fmt yuv420p -c:a aac -b:a 160k -shortest \
       -movflags +faststart $D/face.mp4
 fi
+[[ -f $D/face_track.json ]] || uv run python -I tools/facecrop.py media/src/missiles_short.mov 480 600 --track $D/face_track.json --track-only
 ls -la $D

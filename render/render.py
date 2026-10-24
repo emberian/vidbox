@@ -1,6 +1,7 @@
 """Render a project to video at full quality.
 
 usage: uv run python render/render.py PROJECT [-o out.mp4] [--start S] [--duration D] [--preview]
+                                        [--path LAYER=paths/other.json ...]
 
 Frames are composited in numpy: ffmpeg decodes each source to raw RGB on a pipe, and the
 result is piped into an encoder that also mixes the audio.
@@ -75,6 +76,8 @@ def main():
     ap.add_argument("--start", type=float, default=0.0)
     ap.add_argument("--duration", type=float)
     ap.add_argument("--preview", action="store_true", help="half size, fast encode")
+    ap.add_argument("--path", action="append", default=[], metavar="LAYER=FILE",
+                    help="render a layer along a different path file than project.json says")
     args = ap.parse_args()
 
     pdir = ROOT / "projects" / args.project
@@ -91,6 +94,9 @@ def main():
     bgsrc = ROOT / proj["background"]["src"]
     bg = Reader(bgsrc, (OW, OH), fps, args.start)
 
+    for spec in args.path:
+        lid, f = spec.split("=", 1)
+        next(L for L in proj["layers"] if L["id"] == lid)["path"] = f
     layers = []
     for L in proj["layers"]:
         lw, lh = (int(round(v * k)) for v in L["size"])
