@@ -90,6 +90,9 @@ class SpanCache:
 
 
 SPANS = SpanCache()
+# converted (display-size rgb) frames one Reader keeps for backward steps; a full-canvas layer
+# was 120 x 4.7 MB = 560 MB per open layer per process
+READER_MB = float(os.environ.get("VIDBOX_READER_MB", 64))
 
 
 class Reader:
@@ -97,10 +100,13 @@ class Reader:
     Decodes forward, keeps a short buffer so small backward steps (stutters, loop wraps
     into the recent past) don't re-seek. `spans`: source intervals [(a, b)] that will be
     revisited or played backwards; times inside one are served from SPANS (decoded once, by a
-    separate decoder, so the forward position is kept)."""
+    separate decoder, so the forward position is kept). Memory: at most `keep` entries, of which
+    converted frames total at most READER_MB (older ones are dropped: a step back to one re-seeks),
+    and raw decoded frames only for the shown frame and the one after it."""
 
     def __init__(self, src, crop, size, keep=120, spans=None):
         self.src, self.crop, self.size, self.keep = src, crop, size, keep
+        self.budget, self.conv = int(READER_MB * 2 ** 20), 0   # converted bytes: cap, current
         self.d = Decoder(src)
         self.fps = self.d.fps
         self.gen, self.eof = None, False
@@ -116,6 +122,7 @@ class Reader:
         self.gen = self.d.frames(t)
         self.eof = False
         self.buf.clear()
+        self.conv = 0
 
     def _pull(self):
         try:
@@ -124,8 +131,16 @@ class Reader:
             self.eof = True
             return
         self.buf.append([t, f, None])
+        # Only called while the previous last frame is at or before the target, so the shown frame
+        # is that one or this one: anything older is never shown for this target (get() drops it
+        # afterwards anyway). Dropping it now keeps a long keyframe pre-roll from holding up to
+        # `keep` raw source-size frames (120 x 12 MB for 4K).
+        if len(self.buf) >= 3:
+            self.buf[-3][1] = None
         while len(self.buf) > self.keep:
-            self.buf.popleft()
+            e = self.buf.popleft()
+            if e[2] is not None:
+                self.conv -= e[2].nbytes
 
     def _span(self, a, b):
         key = (str(self.src), tuple(self.crop) if self.crop else None, tuple(self.size), round(a, 4), round(b, 4))
@@ -179,8 +194,13 @@ class Reader:
                 continue
             if e[2] is None:
                 e[2], e[1] = to_array(e[1], self.crop, self.size), None
+                self.conv += e[2].nbytes
             for j in range(i):   # frames before the shown one are only kept if converted
-                self.buf[j][1] = None
+                b = self.buf[j]
+                b[1] = None
+                if self.conv > self.budget and b[2] is not None:   # oldest first, never the shown one
+                    self.conv -= b[2].nbytes
+                    b[2] = None
             return e[2]
         raise RuntimeError(f"{self.src}: no frame at {t}")
 
