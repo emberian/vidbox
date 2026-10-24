@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -57,7 +58,7 @@ class Handler(SimpleHTTPRequestHandler):
             return
         rng = self.headers.get("Range")
         m = rng and re.fullmatch(r"bytes=(\d*)-(\d*)", rng.strip())
-        if not m:
+        if not m or not (m[1] or m[2]):   # absent, multi-range or "bytes=-": serve the whole file
             return super().do_GET()
         fpath = Path(self.translate_path(self.path))
         if not fpath.is_file():
@@ -99,10 +100,16 @@ class Handler(SimpleHTTPRequestHandler):
         if PROJECTS not in dest.parents or dest.suffix != ".json":
             return self.send_error(403, "can only save .json under projects/")
         body = self.rfile.read(int(self.headers.get("Content-Length", 0)))
-        data = json.loads(body)
+        try:
+            data = json.loads(body)
+        except ValueError as e:
+            return self.send_error(400, f"not JSON: {e}")
         dest.parent.mkdir(parents=True, exist_ok=True)
-        tmp = dest.with_suffix(".json.tmp")
-        tmp.write_text(json.dumps(data, indent=1) + "\n")
+        # a temp name per request: concurrent saves of one file must not share (and clobber) a temp
+        fd, tmp = tempfile.mkstemp(dir=dest.parent, prefix=f".{dest.name}.", suffix=".tmp")
+        os.fchmod(fd, dest.stat().st_mode & 0o777 if dest.exists() else 0o644)   # mkstemp makes it 0600
+        with os.fdopen(fd, "w") as f:
+            f.write(json.dumps(data, indent=1) + "\n")
         os.replace(tmp, dest)
         self.send_response(204)
         self.end_headers()
