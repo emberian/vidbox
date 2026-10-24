@@ -104,8 +104,11 @@ class Reader:
         self.d = Decoder(src)
         self.fps = self.d.fps
         self.gen, self.eof = None, False
-        self.buf = deque()   # (t, array), increasing t
-        self.times = []
+        # [t, av.VideoFrame | None, array | None], increasing t. A frame is converted (rgb, crop,
+        # resize: the expensive part) only when it is shown; frames passed over (decode from the
+        # keyframe after a seek, sources faster than the song fps) drop their raw frame unconverted
+        # and are re-decoded by a seek in the rare case a later step goes back to one.
+        self.buf = deque()
         self.spans = sorted(spans or [])
         self.too_big = set()
 
@@ -120,7 +123,7 @@ class Reader:
         except StopIteration:
             self.eof = True
             return
-        self.buf.append((t, to_array(f, self.crop, self.size)))
+        self.buf.append([t, f, None])
         while len(self.buf) > self.keep:
             self.buf.popleft()
 
@@ -161,17 +164,25 @@ class Reader:
                     i = bisect_right(sp[0], t + 1e-6) - 1
                     return sp[1][max(i, 0)]
                 break
-        if self.gen is None or not self.buf or t < self.buf[0][0] - 1e-6 or t > self.buf[-1][0] + 3.0:
-            self._seek(t)
-        while not self.eof and (not self.buf or self.buf[-1][0] <= t + 1e-6):
-            self._pull()
-        times = [x[0] for x in self.buf]
-        i = bisect_right(times, t + 1e-6) - 1
-        if i < 0:   # t precedes the first decodable frame (or the stream is empty)
-            if not self.buf:
+        for attempt in (0, 1):
+            if attempt or self.gen is None or not self.buf or t < self.buf[0][0] - 1e-6 \
+                    or (t > self.buf[-1][0] + 3.0 and not self.eof):   # past the end: keep the last frame
+                self._seek(t)
+            while not self.eof and (not self.buf or self.buf[-1][0] <= t + 1e-6):
+                self._pull()
+            if not self.buf:   # empty stream
                 return np.zeros((self.size[1], self.size[0], 3), np.uint8)
-            i = 0
-        return self.buf[i][1]
+            # i < 0: t precedes the first decodable frame
+            i = max(bisect_right(self.buf, t + 1e-6, key=lambda e: e[0]) - 1, 0)
+            e = self.buf[i]
+            if e[2] is None and e[1] is None:   # passed over earlier: decode it again
+                continue
+            if e[2] is None:
+                e[2], e[1] = to_array(e[1], self.crop, self.size), None
+            for j in range(i):   # frames before the shown one are only kept if converted
+                self.buf[j][1] = None
+            return e[2]
+        raise RuntimeError(f"{self.src}: no frame at {t}")
 
     def close(self):
         self.d.close()
