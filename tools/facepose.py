@@ -14,11 +14,14 @@ import argparse
 import json
 import math
 import sys
+from pathlib import Path
 
 import cv2
 import mediapipe as mp
 import numpy as np
 from mediapipe.tasks.python import BaseOptions, vision
+
+ROOT = Path(__file__).resolve().parent.parent
 
 # MediaPipe face mesh indices
 NOSE, CHEEK_A, CHEEK_B, BROW, CHIN = 1, 234, 454, 10, 152
@@ -32,7 +35,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video")
     ap.add_argument("out")
-    ap.add_argument("--model", default="media/models/face_landmarker.task")
+    ap.add_argument("--model", default=str(ROOT / "media/models/face_landmarker.task"))
     a = ap.parse_args()
 
     lm = vision.FaceLandmarker.create_from_options(vision.FaceLandmarkerOptions(
