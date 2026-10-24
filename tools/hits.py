@@ -8,6 +8,7 @@ Combines three signals, each normalized per clip:
   motion  frame-difference spike (shockwave, camera jolt, collapse, a body hitting ground)
 Prints JSON candidates sorted by time. These are candidates: confirm by looking.
 --sheet writes a 5-frame strip around each candidate (t-0.16 .. t+0.16) for checking.
+Candidate times are on the canonical clock (render/media.py): each frame's own timestamp.
 """
 import argparse
 import json
@@ -16,6 +17,10 @@ import sys
 
 import librosa
 import numpy as np
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "render"))
+from media import decode_range  # noqa: E402
 
 SR = 22050
 HOP = 256
@@ -61,15 +66,10 @@ def main():
     a = ap.parse_args()
     fps, has_audio = probe(a.clip)
 
-    # visual signals at native frame rate, tiny grayscale frames
-    W, H = 96, 54
-    raw = subprocess.run(
-        ["ffmpeg", "-v", "error", *window(a.t0, a.t1), "-i", a.clip, "-an",
-         "-vf", f"scale={W}:{H},format=gray", "-f", "rawvideo", "-"],
-        capture_output=True, check=True,
-    ).stdout
-    fr = np.frombuffer(raw, np.uint8).reshape(-1, H, W).astype(np.float32)
-    tv = a.t0 + np.arange(len(fr)) / fps
+    # visual signals at native frame rate, tiny grayscale frames, each with its own timestamp
+    frames = decode_range(a.clip, a.t0, a.t1 if a.t1 is not None else 1e9, size=(96, 54), gray=True)
+    tv = np.array([x[0] for x in frames])
+    fr = np.array([x[1] for x in frames], np.float32)
     luma = fr.mean(axis=(1, 2))
     k = max(1, int(fps * 0.5))
     base = np.array([np.median(luma[max(0, i - k):i]) if i else luma[0] for i in range(len(luma))])
@@ -99,7 +99,6 @@ def main():
     print(json.dumps({"clip": a.clip, "fps": round(fps, 3), "has_audio": has_audio, "candidates": cands}, indent=1))
 
     if a.sheet:
-        from pathlib import Path
         Path(a.sheet).mkdir(parents=True, exist_ok=True)
         for c in cands:
             t = max(0.0, c["t"] - 0.16)

@@ -1,4 +1,6 @@
 media/
-out/
+/out/
 .venv/
 __pycache__/
+projects/*/comps/out/*.mp4
+projects/*/comps/out/fixture_stress.timeline.json

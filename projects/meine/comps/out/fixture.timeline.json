@@ -1,0 +1,1597 @@
+{
+ "version": 1,
+ "project": "meine",
+ "size": [
+  1440,
+  1080
+ ],
+ "fps": 25,
+ "range": [
+  0,
+  473.5
+ ],
+ "music": {
+  "src": "media/src/meine.webm",
+  "gain": 1.0
+ },
+ "layers": [
+  {
+   "id": "meine",
+   "tags": [
+    "bg"
+   ],
+   "src": "media/derived/meine_proxy.mp4",
+   "t0": 0,
+   "t1": 473.5,
+   "time": {
+    "in": 0,
+    "speed": 1.0
+   },
+   "fit": "contain"
+  },
+  {
+   "id": "face",
+   "tags": [
+    "face"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 0.20000000000000018,
+   "t1": 36.83833333333334,
+   "time": {
+    "map": {
+     "song": [
+      0.20000000000000018,
+      5.921,
+      10.205,
+      11.633,
+      14.013,
+      19.249,
+      21.629,
+      36.83833333333334
+     ],
+     "src": [
+      0.0,
+      5.721,
+      10.262,
+      11.922,
+      14.142,
+      19.023,
+      21.584,
+      36.79333333333334
+     ]
+    }
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": {
+    "path": "paths/face_self_gaze_synced.json"
+   },
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "opacity": 0.85,
+   "fade": {
+    "in": 0.3,
+    "out": 0.5
+   },
+   "audio": {
+    "gain": 1.0
+   }
+  },
+  {
+   "id": "head-0",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 30.685,
+   "t1": 38.685,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    180,
+    300
+   ],
+   "scale": 0.6,
+   "rot": {
+    "k": [
+     [
+      30.685,
+      -8
+     ],
+     [
+      38.685,
+      8
+     ]
+    ]
+   },
+   "opacity": {
+    "range": [
+     0.2,
+     0.7
+    ],
+    "of": {
+     "beat": {
+      "div": 1,
+      "shape": "decay",
+      "tau": 0.15
+     }
+    }
+   },
+   "blend": "screen",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "duotone",
+     "dark": [
+      0,
+      0,
+      0.1
+     ],
+     "light": [
+      1,
+      0.4,
+      0.2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-1",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 38.301,
+   "t1": 50.301,
+   "time": {
+    "in": 2.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    340,
+    360
+   ],
+   "scale": 0.65,
+   "rot": {
+    "k": [
+     [
+      38.301,
+      -8
+     ],
+     [
+      50.301,
+      8
+     ]
+    ]
+   },
+   "opacity": {
+    "k": [
+     [
+      38.301,
+      0
+     ],
+     [
+      40.301,
+      0.6
+     ],
+     [
+      48.301,
+      0.6
+     ],
+     [
+      50.301,
+      0
+     ]
+    ],
+    "ease": "smooth"
+   },
+   "blend": "add",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 4
+    }
+   ]
+  },
+  {
+   "id": "head-2",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 45.917,
+   "t1": 61.917,
+   "time": {
+    "in": 4.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    500,
+    420
+   ],
+   "scale": 0.7,
+   "rot": {
+    "k": [
+     [
+      45.917,
+      -8
+     ],
+     [
+      61.917,
+      8
+     ]
+    ]
+   },
+   "opacity": 0.54,
+   "blend": "difference",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "duotone",
+     "dark": [
+      0,
+      0,
+      0.1
+     ],
+     "light": [
+      1,
+      0.4,
+      0.2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-3",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 53.534,
+   "t1": 73.534,
+   "time": {
+    "in": 6.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    660,
+    300
+   ],
+   "scale": 0.75,
+   "rot": {
+    "k": [
+     [
+      53.534,
+      -8
+     ],
+     [
+      73.53399999999999,
+      8
+     ]
+    ]
+   },
+   "opacity": {
+    "range": [
+     0.2,
+     0.7
+    ],
+    "of": {
+     "beat": {
+      "div": 1,
+      "shape": "decay",
+      "tau": 0.15
+     }
+    }
+   },
+   "blend": "lighten",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 4
+    }
+   ]
+  },
+  {
+   "id": "head-4",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 61.161,
+   "t1": 85.161,
+   "time": {
+    "in": 8.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    820,
+    360
+   ],
+   "scale": 0.8,
+   "rot": {
+    "k": [
+     [
+      61.161,
+      -8
+     ],
+     [
+      85.161,
+      8
+     ]
+    ]
+   },
+   "opacity": {
+    "k": [
+     [
+      61.161,
+      0
+     ],
+     [
+      63.161,
+      0.6
+     ],
+     [
+      83.161,
+      0.6
+     ],
+     [
+      85.161,
+      0
+     ]
+    ],
+    "ease": "smooth"
+   },
+   "blend": "overlay",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "duotone",
+     "dark": [
+      0,
+      0,
+      0.1
+     ],
+     "light": [
+      1,
+      0.4,
+      0.2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-5",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 68.778,
+   "t1": 96.778,
+   "time": {
+    "in": 10.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    980,
+    420
+   ],
+   "scale": 0.85,
+   "rot": {
+    "k": [
+     [
+      68.778,
+      -8
+     ],
+     [
+      96.778,
+      8
+     ]
+    ]
+   },
+   "opacity": 0.75,
+   "blend": "normal",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 4
+    }
+   ]
+  },
+  {
+   "id": "head-6",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 76.394,
+   "t1": 108.394,
+   "time": {
+    "in": 12.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    1140,
+    300
+   ],
+   "scale": 0.9,
+   "rot": {
+    "k": [
+     [
+      76.394,
+      -8
+     ],
+     [
+      108.394,
+      8
+     ]
+    ]
+   },
+   "opacity": {
+    "range": [
+     0.2,
+     0.7
+    ],
+    "of": {
+     "beat": {
+      "div": 1,
+      "shape": "decay",
+      "tau": 0.15
+     }
+    }
+   },
+   "blend": "screen",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "duotone",
+     "dark": [
+      0,
+      0,
+      0.1
+     ],
+     "light": [
+      1,
+      0.4,
+      0.2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-7",
+   "tags": [
+    "head",
+    "copy"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 84.01,
+   "t1": 120.01,
+   "time": {
+    "in": 14.0,
+    "speed": 1.0,
+    "loop": [
+     0,
+     36
+    ]
+   },
+   "size": [
+    240,
+    300
+   ],
+   "pos": [
+    1300,
+    360
+   ],
+   "scale": 0.95,
+   "rot": {
+    "k": [
+     [
+      84.01,
+      -8
+     ],
+     [
+      120.01,
+      8
+     ]
+    ]
+   },
+   "opacity": {
+    "k": [
+     [
+      84.01,
+      0
+     ],
+     [
+      86.01,
+      0.6
+     ],
+     [
+      118.01,
+      0.6
+     ],
+     [
+      120.01,
+      0
+     ]
+    ],
+    "ease": "smooth"
+   },
+   "blend": "multiply",
+   "mask": {
+    "shape": "oval",
+    "feather": 0.3
+   },
+   "fx": [
+    {
+     "op": "posterize",
+     "levels": 4
+    }
+   ]
+  },
+  {
+   "id": "w00-times-radio-idf-bo",
+   "tags": [
+    "weapons",
+    "aerial",
+    "strike"
+   ],
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "t0": 38.705,
+   "t1": 47.529,
+   "time": {
+    "in": 18.05,
+    "speed": 0.5
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 1.0,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 2,
+    "hits_song": [
+     40.205
+    ]
+   }
+  },
+  {
+   "id": "g01-reuters-night-fire",
+   "tags": [
+    "ground",
+    "strike",
+    "night"
+   ],
+   "src": "media/footage/ground/raw/youtube_vE79wEcq6nE.mp4",
+   "t0": 47.291,
+   "t1": 50.291,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.83,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "ground",
+    "clip": "reuters-night-fireballs-2023-10-08",
+    "seg": 0,
+    "hits_song": [
+     47.821
+    ]
+   }
+  },
+  {
+   "id": "g02-afp-rafah-night-st",
+   "tags": [
+    "ground",
+    "strike",
+    "night"
+   ],
+   "src": "media/footage/ground/raw/youtube_DZQfl2Ox96g.mp4",
+   "t0": 61.647,
+   "t1": 65.701,
+   "time": {
+    "in": 7.18,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.53,
+   "blend": "add",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "ground",
+    "clip": "afp-rafah-night-strikes-flares-2023-12",
+    "seg": 0,
+    "hits_song": [
+     63.147
+    ]
+   }
+  },
+  {
+   "id": "g03-ap-night-blasts-fr",
+   "tags": [
+    "ground",
+    "strike",
+    "night"
+   ],
+   "src": "media/footage/ground/raw/youtube_fTiqjhMhFSY.mp4",
+   "t0": 66.801,
+   "t1": 72.03,
+   "time": {
+    "in": 37.3,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.7,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "ground",
+    "clip": "ap-night-blasts-from-israel-2025-09",
+    "seg": 2,
+    "hits_song": [
+     68.301,
+     69.061
+    ]
+   }
+  },
+  {
+   "id": "w04-centcom-iran-strik",
+   "tags": [
+    "weapons",
+    "tomahawk",
+    "launch"
+   ],
+   "src": "media/footage/weapons/raw/dvids_1014392.mp4",
+   "t0": 72.038,
+   "t1": 79.081,
+   "time": {
+    "in": 16.65,
+    "speed": 0.5
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.77,
+   "blend": "screen",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "centcom-iran-strikes-jul2026",
+    "seg": 1,
+    "hits_song": [
+     73.538
+    ]
+   }
+  },
+  {
+   "id": "w05-wsj-gaza-highrise-",
+   "tags": [
+    "weapons",
+    "strike",
+    "high-rise"
+   ],
+   "src": "media/footage/weapons/raw/youtube_pzFOfUV7iNA.mp4",
+   "t0": 85.842,
+   "t1": 87.642,
+   "time": {
+    "in": 0.3,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.64,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "wsj-gaza-highrise-strike-oct2023",
+    "seg": 0,
+    "hits_song": [
+     87.342
+    ]
+   }
+  },
+  {
+   "id": "w06-fa-rafah-bomb-iden",
+   "tags": [
+    "weapons",
+    "strike",
+    "fireball"
+   ],
+   "src": "media/footage/weapons/raw/youtube_MK9Lq2NUq3s.mp4",
+   "t0": 101.562,
+   "t1": 110.502,
+   "time": {
+    "in": 10.06,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.69,
+   "blend": "screen",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "fa-rafah-bomb-identification",
+    "seg": 0,
+    "hits_song": [
+     103.062
+    ]
+   }
+  },
+  {
+   "id": "w07-idf-castlead-night",
+   "tags": [
+    "weapons",
+    "night-vision",
+    "green"
+   ],
+   "src": "media/footage/weapons/raw/youtube_H5glijDWVyU.mp4",
+   "t0": 107.193,
+   "t1": 116.12,
+   "time": {
+    "in": 197.14,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.51,
+   "blend": "screen",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "idf-castlead-nightvision-2009",
+    "seg": 2,
+    "hits_song": [
+     108.693
+    ]
+   }
+  },
+  {
+   "id": "w08-hellfire-symphony-",
+   "tags": [
+    "weapons",
+    "targeting",
+    "crosshair"
+   ],
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "t0": 114.426,
+   "t1": 117.463,
+   "time": {
+    "in": 20.62,
+    "speed": 0.5
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.71,
+   "blend": "add",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "hellfire-symphony-tads",
+    "seg": 4,
+    "hits_song": [
+     115.926
+    ]
+   }
+  },
+  {
+   "id": "g09-ap-night-blasts-fr",
+   "tags": [
+    "ground",
+    "strike",
+    "night"
+   ],
+   "src": "media/footage/ground/raw/youtube_fTiqjhMhFSY.mp4",
+   "t0": 125.85,
+   "t1": 131.718,
+   "time": {
+    "in": 23.34,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.56,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "ground",
+    "clip": "ap-night-blasts-from-israel-2025-09",
+    "seg": 1,
+    "hits_song": [
+     127.35
+    ]
+   }
+  },
+  {
+   "id": "w10-hellfire-yakima-br",
+   "tags": [
+    "weapons",
+    "apache",
+    "launch"
+   ],
+   "src": "media/footage/weapons/raw/dvids_871530.mp4",
+   "t0": 135.37,
+   "t1": 138.25,
+   "time": {
+    "in": 23.62,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.98,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "hellfire-yakima-broll",
+    "seg": 1,
+    "hits_song": [
+     136.87,
+     137.67
+    ]
+   }
+  },
+  {
+   "id": "w11-ap-interceptions-t",
+   "tags": [
+    "weapons",
+    "night",
+    "impact"
+   ],
+   "src": "media/footage/weapons/raw/youtube_pYZ2sbB9d9o.mp4",
+   "t0": 144.83,
+   "t1": 147.33,
+   "time": {
+    "in": 19.0,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.74,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "ap-interceptions-telaviv-jun2025",
+    "seg": 1,
+    "hits_song": [
+     145.45
+    ]
+   }
+  },
+  {
+   "id": "w12-oir-mosul-vbied-fa",
+   "tags": [
+    "weapons",
+    "IR",
+    "white-hot"
+   ],
+   "src": "media/footage/weapons/raw/dvids_512858.mp4",
+   "t0": 148.815,
+   "t1": 155.781,
+   "time": {
+    "in": 8.91,
+    "speed": 0.5
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.55,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "oir-mosul-vbied-facility-2017",
+    "seg": 0,
+    "hits_song": [
+     150.315
+    ]
+   }
+  },
+  {
+   "id": "w13-times-radio-idf-bo",
+   "tags": [
+    "weapons",
+    "aerial",
+    "fireball"
+   ],
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "t0": 154.73,
+   "t1": 157.73,
+   "time": {
+    "in": 0,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.77,
+   "blend": "add",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 0,
+    "hits_song": [
+     155.69
+    ]
+   }
+  },
+  {
+   "id": "g14-nbc-night-tower-co",
+   "tags": [
+    "ground",
+    "strike",
+    "night"
+   ],
+   "src": "media/footage/ground/raw/youtube_w57kiknN-MA.mp4",
+   "t0": 165.277,
+   "t1": 168.91,
+   "time": {
+    "in": 0.67,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.6,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "ground",
+    "clip": "nbc-night-tower-collapse-2023-10-08",
+    "seg": 0,
+    "hits_song": [
+     166.777
+    ]
+   }
+  },
+  {
+   "id": "w15-ap-interceptions-t",
+   "tags": [
+    "weapons",
+    "night",
+    "interceptor"
+   ],
+   "src": "media/footage/weapons/raw/youtube_8HLDO2yM5qc.mp4",
+   "t0": 172.294,
+   "t1": 177.294,
+   "time": {
+    "in": 12.0,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.67,
+   "blend": "add",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "ap-interceptions-telaviv-jlm-feb2026",
+    "seg": 1,
+    "hits_song": [
+     172.594
+    ]
+   }
+  },
+  {
+   "id": "w16-idf-gaza-strikes-o",
+   "tags": [
+    "weapons",
+    "aerial",
+    "fireball"
+   ],
+   "src": "media/footage/weapons/raw/youtube_1dxriivNDhY.mp4",
+   "t0": 181.09,
+   "t1": 185.128,
+   "time": {
+    "in": 11.57,
+    "speed": 0.5
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.74,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "idf-gaza-strikes-oct13-2023",
+    "seg": 2,
+    "hits_song": [
+     182.59
+    ]
+   }
+  },
+  {
+   "id": "w17-hellfire-symphony-",
+   "tags": [
+    "weapons",
+    "explosion",
+    "fireball"
+   ],
+   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "t0": 190.686,
+   "t1": 194.606,
+   "time": {
+    "in": 30.64,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.67,
+   "blend": "add",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "hellfire-symphony-tads",
+    "seg": 5,
+    "hits_song": [
+     192.186
+    ]
+   }
+  },
+  {
+   "id": "w18-wsj-gaza-highrise-",
+   "tags": [
+    "weapons",
+    "collapse",
+    "high-rise"
+   ],
+   "src": "media/footage/weapons/raw/youtube_pzFOfUV7iNA.mp4",
+   "t0": 202.098,
+   "t1": 209.698,
+   "time": {
+    "in": 16.9,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.76,
+   "blend": "screen",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "weapons",
+    "clip": "wsj-gaza-highrise-strike-oct2023",
+    "seg": 2,
+    "hits_song": [
+     202.118
+    ]
+   }
+  },
+  {
+   "id": "g19-ap-gazacity-towers",
+   "tags": [
+    "ground",
+    "strike",
+    "explosion"
+   ],
+   "src": "media/footage/ground/raw/youtube_xb1Yj-mLXAU.mp4",
+   "t0": 216.77,
+   "t1": 224.524,
+   "time": {
+    "in": 102.5,
+    "speed": 1.0
+   },
+   "fit": "cover",
+   "crop": [
+    0,
+    0,
+    1,
+    0.92
+   ],
+   "opacity": 0.57,
+   "blend": "normal",
+   "fade": {
+    "in": 0.15,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "onset": {
+       "tau": 0.15,
+       "min": 0.3
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "catalog": "ground",
+    "clip": "ap-gazacity-towers-bombed-2025-09",
+    "seg": 4,
+    "hits_song": [
+     217.35
+    ]
+   }
+  }
+ ],
+ "post": [
+  {
+   "op": "noise",
+   "scale": 3,
+   "octaves": 1,
+   "speed": 1,
+   "mode": "overlay",
+   "amount": 0.15
+  }
+ ]
+}

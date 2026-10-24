@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vidbox timeline</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --bg: #111; --panel: #1b1b1d; --ink: #ddd; --dim: #888; --accent: #ff6a3d; --rec: #ff2d55; --on: #5dffa0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 13px/1.4 ui-monospace, Menlo, monospace;
+         display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+  #bar { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; padding: 8px 12px; background: var(--panel); }
+  #bar label { display: flex; gap: 6px; align-items: center; color: var(--dim); }
+  button, select { background: #2a2a2e; color: var(--ink); border: 1px solid #3a3a40; border-radius: 4px; padding: 3px 8px; font: inherit; }
+  button:hover { border-color: var(--dim); }
+  #time { min-width: 23ch; }
+  #sync b.on { color: var(--on); font-weight: normal; }
+  #sync b.off { color: var(--rec); font-weight: normal; }
+  #status { margin-left: auto; color: var(--dim); }
+  #status.flash { color: var(--accent); }
+  #top { display: flex; min-height: 80px; height: 40vh; background: #000; }
+  #vwrap { flex: 1; min-width: 0; position: relative; display: flex; align-items: center; justify-content: center; }
+  video { max-width: 100%; max-height: 100%; display: block; cursor: pointer; }
+  #novideo { position: absolute; color: var(--dim); display: none; text-align: center; padding: 12px; }
+  #insp { width: 400px; flex: none; overflow: auto; background: var(--panel); border-left: 1px solid #2a2a2e; padding: 8px 10px; font-size: 12px; }
+  #insp h3 { margin: 0 0 6px; font-size: 13px; font-weight: normal; color: var(--accent); word-break: break-all; }
+  #insp .kv { display: grid; grid-template-columns: 9ch 1fr; gap: 1px 8px; margin-bottom: 8px; }
+  #insp .kv span:nth-child(odd) { color: var(--dim); }
+  #insp .desc { margin: 0 0 8px; }
+  #insp .prov { color: #aaa; margin: 0 0 8px; }
+  #insp pre { margin: 0; white-space: pre-wrap; word-break: break-all; color: #bbb; font: 11px/1.35 ui-monospace, Menlo, monospace; }
+  #insp a { color: #8ab4ff; }
+  #insp .on { color: var(--on); } #insp .off { color: var(--rec); }
+  #insp .tag { display: inline-block; background: #2a2a2e; border-radius: 3px; padding: 0 4px; margin: 0 3px 2px 0; }
+  #split { height: 5px; flex: none; background: #2a2a2e; cursor: ns-resize; }
+  #split:hover { background: #3a3a40; }
+  #tlwrap { flex: 1; min-height: 0; position: relative; background: var(--bg); }
+  #tlwrap canvas { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
+  #over { touch-action: none; }
+  #tip { position: fixed; pointer-events: none; display: none; background: #000d; border: 1px solid #3a3a40; border-radius: 4px;
+         padding: 4px 7px; font-size: 11px; max-width: 420px; white-space: pre-wrap; z-index: 5; }
+  #help { padding: 4px 12px 6px; color: var(--dim); background: var(--panel); font-size: 12px; }
+  #help b { color: var(--ink); font-weight: normal; }
+</style>
+</head>
+<body>
+<div id="bar">
+  <label>timeline <select id="pick"></select></label>
+  <button id="play" title="Space">▶</button>
+  <span id="time">0:00.00</span>
+  <button id="fit" title="F">fit</button>
+  <label title="page the view to keep the playhead visible while playing"><input id="follow" type="checkbox" checked> follow</label>
+  <span id="sync" title="meta.hits_song within 30 ms of a beat"></span>
+  <button id="nextoff" title="N / ⇧N: next / previous off-grid hit">next off-grid</button>
+  <span id="status">loading…</span>
+</div>
+<div id="top">
+  <div id="vwrap"><video id="video" preload="auto" playsinline></video><div id="novideo"></div></div>
+  <div id="insp"></div>
+</div>
+<div id="split" title="drag to resize"></div>
+<div id="tlwrap"><canvas id="base"></canvas><canvas id="over"></canvas></div>
+<div id="tip"></div>
+<div id="help">
+  <b>Space</b> play · <b>←</b> <b>→</b> beat · <b>⇧←</b> <b>⇧→</b> bar · <b>,</b> <b>.</b> frame · <b>F</b> fit · <b>+</b> <b>−</b> zoom ·
+  <b>N</b> next off-grid hit · <b>Esc</b> deselect · <b>wheel</b> zoom · <b>⇧wheel</b>/trackpad pan · <b>⌥wheel</b> or wheel over labels: scroll tracks ·
+  drag ruler/music to seek · drag tracks to pan · click a layer to inspect, <b>dbl-click</b> to seek to it
+</div>
+<script type="module" src="timeline.js"></script>
+</body>
+</html>

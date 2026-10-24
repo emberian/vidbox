@@ -177,10 +177,11 @@
        "note": "white-out"
       },
       {
-       "t": 23.94,
+       "t": 23.9583,
        "kind": "launch",
        "strength": 4,
-       "note": "cut-in on ignition glow"
+       "note": "cut-in on ignition glow",
+       "t_agent": 23.94
       }
      ]
     },
@@ -203,9 +204,10 @@
      "notes": "",
      "hits": [
       {
-       "t": 31.22,
+       "t": 31.1655,
        "kind": "launch",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 31.22
       },
       {
        "t": 31.78,
@@ -214,10 +216,11 @@
        "note": "full white-out"
       },
       {
-       "t": 40.06,
+       "t": 40.0744,
        "kind": "launch",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 40.06
       }
      ]
     },
@@ -243,38 +246,44 @@
      "notes": "several distinct hits, good for beat-locked cutting",
      "hits": [
       {
-       "t": 44.9,
+       "t": 44.9125,
        "kind": "impact",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 44.9
       },
       {
-       "t": 49.12,
+       "t": 49.0834,
        "kind": "explosion",
        "strength": 4,
-       "note": "black ring blooms around redaction box"
+       "note": "black ring blooms around redaction box",
+       "t_agent": 49.12
       },
       {
-       "t": 53.97,
+       "t": 53.9215,
        "kind": "explosion",
        "strength": 5,
-       "note": "cut from black to white with ink-black blast"
+       "note": "cut from black to white with ink-black blast",
+       "t_agent": 53.97
       },
       {
-       "t": 57.83,
+       "t": 57.7921,
        "kind": "explosion",
        "strength": 4,
-       "note": "white-hot wall in dark mode"
+       "note": "white-hot wall in dark mode",
+       "t_agent": 57.83
       },
       {
-       "t": 61.27,
+       "t": 61.3289,
        "kind": "impact",
        "strength": 4,
-       "note": "sensor gain collapse at impact"
+       "note": "sensor gain collapse at impact",
+       "t_agent": 61.27
       },
       {
-       "t": 65.97,
+       "t": 65.9335,
        "kind": "impact",
-       "strength": 3
+       "strength": 3,
+       "t_agent": 65.97
       }
      ]
     }
@@ -398,10 +407,11 @@
      "notes": "STANDOUT keyer; long dark pauses between launches",
      "hits": [
       {
-       "t": 5.02,
+       "t": 5.0394,
        "kind": "launch",
        "strength": 5,
-       "note": "ignition; white-out at 5.63"
+       "note": "ignition; white-out at 5.63",
+       "t_agent": 5.02
       }
      ]
     },
@@ -424,10 +434,11 @@
      "notes": "",
      "hits": [
       {
-       "t": 40.66,
+       "t": 40.675,
        "kind": "launch",
        "strength": 5,
-       "note": "white-out 41.3"
+       "note": "white-out 41.3",
+       "t_agent": 40.66
       }
      ]
     }
@@ -603,10 +614,11 @@
      "notes": "redaction box top-right",
      "hits": [
       {
-       "t": 9.11,
+       "t": 9.0767,
        "kind": "explosion",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 9.11
       }
      ]
     }
@@ -662,15 +674,16 @@
      "notes": "caption burned in; the scattered redaction squares are a striking texture",
      "hits": [
       {
-       "t": 12.24,
+       "t": 12.2466,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 12.24
       },
       {
        "t": 21.79,
        "kind": "flash",
        "strength": 3,
-       "note": "±0.08"
+       "note": "\u00b10.08"
       }
      ]
     },
@@ -692,9 +705,10 @@
      "notes": "",
      "hits": [
       {
-       "t": 46.98,
+       "t": 46.9146,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 46.98
       }
      ]
     }
@@ -751,7 +765,7 @@
        "t": 15.8,
        "kind": "impact",
        "strength": 4,
-       "note": "simultaneous impacts; ±0.08"
+       "note": "simultaneous impacts; \u00b10.08"
       }
      ]
     },
@@ -890,10 +904,11 @@
      "notes": "people killed in vehicles (not visible)",
      "hits": [
       {
-       "t": 18.05,
+       "t": 17.9856,
        "kind": "explosion",
        "strength": 5,
-       "note": "sensor white-out"
+       "note": "sensor white-out",
+       "t_agent": 18.05
       }
      ]
     },
@@ -919,7 +934,7 @@
        "t": 31.68,
        "kind": "explosion",
        "strength": 5,
-       "note": "±0.08"
+       "note": "\u00b10.08"
       }
      ]
     }
@@ -956,16 +971,18 @@
      "notes": "two hard white-outs, great beat strobes",
      "hits": [
       {
-       "t": 11.34,
+       "t": 11.3123,
        "kind": "flash",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 11.34
       },
       {
-       "t": 14.13,
+       "t": 14.1818,
        "kind": "explosion",
        "strength": 5,
-       "note": "second white-out"
+       "note": "second white-out",
+       "t_agent": 14.13
       }
      ]
     }
@@ -1003,25 +1020,29 @@
      "notes": "STANDOUT for rhythmic cutting: ~5 distinct detonations",
      "hits": [
       {
-       "t": 9.66,
+       "t": 9.7441,
        "kind": "explosion",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 9.66
       },
       {
-       "t": 16.28,
+       "t": 16.2839,
        "kind": "explosion",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 16.28
       },
       {
-       "t": 23.95,
+       "t": 23.9583,
        "kind": "explosion",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 23.95
       },
       {
-       "t": 30.16,
+       "t": 30.1645,
        "kind": "explosion",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 30.16
       }
      ]
     }
@@ -1090,10 +1111,11 @@
      "notes": "",
      "hits": [
       {
-       "t": 10.74,
+       "t": 10.7784,
        "kind": "impact",
        "strength": 3,
-       "note": "±0.08"
+       "note": "\u00b10.08",
+       "t_agent": 10.74
       }
      ]
     }
@@ -1279,7 +1301,7 @@
        "t": 157.03,
        "kind": "impact",
        "strength": 4,
-       "note": "±0.08"
+       "note": "\u00b10.08"
       }
      ]
     }
@@ -1334,14 +1356,16 @@
      "notes": "STRONG graphic black blot on white",
      "hits": [
       {
-       "t": 10.47,
+       "t": 10.5532,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 10.47
       },
       {
-       "t": 22.06,
+       "t": 22.1064,
        "kind": "explosion",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 22.06
       }
      ]
     }
@@ -1378,9 +1402,10 @@
      "notes": "STANDOUT: advertising copy over a blast",
      "hits": [
       {
-       "t": 10.96,
+       "t": 11.012,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 10.96
       }
      ]
     },
@@ -1594,10 +1619,11 @@
        "note": "countdown 1"
       },
       {
-       "t": 72.64,
+       "t": 72.6236,
        "kind": "explosion",
        "strength": 4,
-       "note": "strike flash on the monitor"
+       "note": "strike flash on the monitor",
+       "t_agent": 72.64
       }
      ],
      "motion_tempo": 1.05
@@ -1793,10 +1819,11 @@
      "notes": "long static head-on hover is great for the 'face' motif, could echo the preacher's head",
      "hits": [
       {
-       "t": 25.12,
+       "t": 25.1677,
        "kind": "launch",
        "strength": 3,
-       "note": "first Hellfire smoke puff"
+       "note": "first Hellfire smoke puff",
+       "t_agent": 25.12
       },
       {
        "t": 25.92,
@@ -2029,10 +2056,11 @@
      "notes": "crosshair reticle, no burned-in text",
      "hits": [
       {
-       "t": 8.9,
+       "t": 8.8765,
        "kind": "explosion",
        "strength": 5,
-       "note": "white-out IR bloom"
+       "note": "white-out IR bloom",
+       "t_agent": 8.9
       }
      ]
     },
@@ -2097,10 +2125,11 @@
      "notes": "STANDOUT: the 33s fireball is the most saturated explosion in the set",
      "hits": [
       {
-       "t": 32.14,
+       "t": 32.0664,
        "kind": "explosion",
        "strength": 5,
-       "note": "biggest fireball"
+       "note": "biggest fireball",
+       "t_agent": 32.14
       }
      ]
     },
@@ -2121,10 +2150,11 @@
      "notes": "",
      "hits": [
       {
-       "t": 41.91,
+       "t": 41.8762,
        "kind": "explosion",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 41.91
       }
      ]
     },
@@ -2146,16 +2176,18 @@
      "notes": "",
      "hits": [
       {
-       "t": 44.98,
+       "t": 44.9459,
        "kind": "explosion",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 44.98
       },
       {
-       "t": 50.58,
+       "t": 50.5181,
        "kind": "explosion",
        "strength": 5,
-       "note": "white-out"
+       "note": "white-out",
+       "t_agent": 50.58
       }
      ]
     },
@@ -2176,10 +2208,11 @@
      "notes": "crest overlay from ~54.5",
      "hits": [
       {
-       "t": 53.24,
+       "t": 53.1875,
        "kind": "explosion",
        "strength": 5,
-       "note": "false-colour flash"
+       "note": "false-colour flash",
+       "t_agent": 53.24
       }
      ]
     }
@@ -2234,10 +2267,11 @@
      "notes": "banner burned in; would need crop to remove",
      "hits": [
       {
-       "t": 13.28,
+       "t": 13.2142,
        "kind": "impact",
        "strength": 5,
-       "note": "IR white bloom on cliff"
+       "note": "IR white bloom on cliff",
+       "t_agent": 13.28
       }
      ]
     }
@@ -2618,10 +2652,11 @@
      "notes": "opens on near-full-white flash, good for a hard cut",
      "hits": [
       {
-       "t": 2.38,
+       "t": 2.3343,
        "kind": "explosion",
        "strength": 5,
-       "note": "IR white-out"
+       "note": "IR white-out",
+       "t_agent": 2.38
       }
      ]
     }
@@ -2692,14 +2727,16 @@
      "notes": "keys well",
      "hits": [
       {
-       "t": 5.17,
+       "t": 5.1061,
        "kind": "launch",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 5.17
       },
       {
-       "t": 11.01,
+       "t": 10.9453,
        "kind": "launch",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 11.01
       }
      ]
     }
@@ -3299,7 +3336,7 @@
        "t": 19.85,
        "kind": "launch",
        "strength": 4,
-       "note": "±0.1"
+       "note": "\u00b10.1"
       },
       {
        "t": 24.56,
@@ -3310,19 +3347,19 @@
        "t": 40.0,
        "kind": "launch",
        "strength": 4,
-       "note": "±0.1"
+       "note": "\u00b10.1"
       },
       {
        "t": 45.2,
        "kind": "launch",
        "strength": 4,
-       "note": "±0.1"
+       "note": "\u00b10.1"
       },
       {
        "t": 49.8,
        "kind": "launch",
        "strength": 3,
-       "note": "±0.1, in smoke"
+       "note": "\u00b10.1, in smoke"
       },
       {
        "t": 54.96,
@@ -3693,10 +3730,11 @@
      "notes": "",
      "hits": [
       {
-       "t": 12.6,
+       "t": 12.681,
        "kind": "impact",
        "strength": 4,
-       "note": "building hit, black blast under crosshair"
+       "note": "building hit, black blast under crosshair",
+       "t_agent": 12.6
       }
      ]
     },
@@ -3750,10 +3788,11 @@
      "notes": "blurred vignette border",
      "hits": [
       {
-       "t": 0.6,
+       "t": 0.561,
        "kind": "explosion",
        "strength": 3,
-       "note": "onset within ±0.08"
+       "note": "onset within \u00b10.08",
+       "t_agent": 0.6
       }
      ]
     },
@@ -3843,9 +3882,10 @@
      "notes": "STANDOUT, short",
      "hits": [
       {
-       "t": 31.4,
+       "t": 31.441,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 31.4
       }
      ]
     }
@@ -3938,10 +3978,11 @@
        "strength": 4
       },
       {
-       "t": 15.64,
+       "t": 15.561,
        "kind": "explosion",
        "strength": 5,
-       "note": "secondary, cut-in"
+       "note": "secondary, cut-in",
+       "t_agent": 15.64
       }
      ]
     }
@@ -4029,10 +4070,11 @@
      "notes": "STRONG keyer: bright on black",
      "hits": [
       {
-       "t": 12.3,
+       "t": 12.3343,
        "kind": "flash",
        "strength": 4,
-       "note": "interception burst"
+       "note": "interception burst",
+       "t_agent": 12.3
       }
      ]
     },
@@ -4054,16 +4096,18 @@
      "notes": "good for screen/add blend",
      "hits": [
       {
-       "t": 25.1,
+       "t": 25.1677,
        "kind": "flash",
        "strength": 4,
-       "note": "interception burst"
+       "note": "interception burst",
+       "t_agent": 25.1
       },
       {
-       "t": 28.62,
+       "t": 28.6343,
        "kind": "flash",
        "strength": 5,
-       "note": "blast lights the whole sky"
+       "note": "blast lights the whole sky",
+       "t_agent": 28.62
       }
      ]
     },
@@ -4202,10 +4246,11 @@
      "notes": "burned-in caption",
      "hits": [
       {
-       "t": 10.22,
+       "t": 10.241,
        "kind": "explosion",
        "strength": 5,
-       "note": "white flash fills frame"
+       "note": "white flash fills frame",
+       "t_agent": 10.22
       }
      ]
     },
@@ -4227,10 +4272,11 @@
      "notes": "clean from ~10.5",
      "hits": [
       {
-       "t": 10.22,
+       "t": 10.241,
        "kind": "explosion",
        "strength": 5,
-       "note": "white flash fills frame"
+       "note": "white flash fills frame",
+       "t_agent": 10.22
       }
      ]
     }
@@ -4364,9 +4410,10 @@
      "notes": "long, slowly pulsing blob is a good organic texture",
      "hits": [
       {
-       "t": 19.6,
+       "t": 19.681,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 19.6
       }
      ]
     }
@@ -4402,9 +4449,10 @@
      "notes": "IDF captions bottom",
      "hits": [
       {
-       "t": 7.37,
+       "t": 7.3083,
        "kind": "explosion",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 7.37
       },
       {
        "t": 10.48,
@@ -4451,7 +4499,7 @@
        "t": 64.55,
        "kind": "launch",
        "strength": 3,
-       "note": "Iron Dome interceptor leaves the launcher; ±0.08"
+       "note": "Iron Dome interceptor leaves the launcher; \u00b10.08"
       }
      ]
     }
@@ -4815,9 +4863,10 @@
      "notes": "",
      "hits": [
       {
-       "t": 198.64,
+       "t": 198.721,
        "kind": "explosion",
-       "strength": 4
+       "strength": 4,
+       "t_agent": 198.64
       },
       {
        "t": 207.68,
@@ -5634,10 +5683,11 @@
      "notes": "STANDOUT keyer: gold sparks on black; caption 'for its use near civilian areas' bottom",
      "hits": [
       {
-       "t": 157.22,
+       "t": 157.121,
        "kind": "flash",
        "strength": 4,
-       "note": "airburst ignition"
+       "note": "airburst ignition",
+       "t_agent": 157.22
       }
      ]
     },
@@ -5962,9 +6012,10 @@
      "notes": "STANDOUT; captions",
      "hits": [
       {
-       "t": 0.96,
+       "t": 0.881,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 0.96
       }
      ]
     },
@@ -6005,9 +6056,10 @@
      "notes": "",
      "hits": [
       {
-       "t": 18.8,
+       "t": 18.841,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 18.8
       }
      ]
     },
@@ -6029,9 +6081,10 @@
      "notes": "",
      "hits": [
       {
-       "t": 59.6,
+       "t": 59.521,
        "kind": "explosion",
-       "strength": 5
+       "strength": 5,
+       "t_agent": 59.6
       }
      ]
     }
@@ -6169,16 +6222,18 @@
      "notes": "STANDOUT: city as a screen of light",
      "hits": [
       {
-       "t": 33.767,
+       "t": 33.7681,
        "kind": "flash",
        "strength": 5,
-       "note": "sky turns white"
+       "note": "sky turns white",
+       "t_agent": 33.767
       },
       {
-       "t": 38.872,
+       "t": 38.8732,
        "kind": "flash",
        "strength": 5,
-       "note": "impact flashes along skyline"
+       "note": "impact flashes along skyline",
+       "t_agent": 38.872
       }
      ]
     }
@@ -6265,10 +6320,11 @@
      "notes": "GAZA OCT.12 super top-left",
      "hits": [
       {
-       "t": 1.8,
+       "t": 1.8779,
        "kind": "explosion",
        "strength": 4,
-       "note": "first flash at tower base; ±0.08"
+       "note": "first flash at tower base; \u00b10.08",
+       "t_agent": 1.8
       }
      ]
     },
@@ -6308,10 +6364,11 @@
      "notes": "",
      "hits": [
       {
-       "t": 16.92,
+       "t": 16.8512,
        "kind": "collapse",
        "strength": 3,
-       "note": "cut-in already mid-collapse"
+       "note": "cut-in already mid-collapse",
+       "t_agent": 16.92
       }
      ]
     }
@@ -6485,16 +6542,18 @@
      "notes": "STANDOUT: inverted (black) explosion, keys with multiply/darken; small IDF logo bottom-left",
      "hits": [
       {
-       "t": 9.6,
+       "t": 9.681,
        "kind": "impact",
        "strength": 4,
-       "note": "black-hot blast"
+       "note": "black-hot blast",
+       "t_agent": 9.6
       },
       {
-       "t": 12.84,
+       "t": 12.761,
        "kind": "explosion",
        "strength": 4,
-       "note": "secondary, blast doubles in size"
+       "note": "secondary, blast doubles in size",
+       "t_agent": 12.84
       }
      ]
     },

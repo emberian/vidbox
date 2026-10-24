@@ -1149,10 +1149,11 @@
      "notes": "clean for first ~4.5s, then captions",
      "hits": [
       {
-       "t": 0.5,
+       "t": 0.5682,
        "kind": "explosion",
        "strength": 5,
-       "note": "first spark 0.50, fireball fills building by 0.57 (30fps clip)"
+       "note": "first spark 0.50, fireball fills building by 0.57 (30fps clip)",
+       "t_agent": 0.5
       }
      ]
     },
@@ -3990,10 +3991,11 @@
      "notes": "small AFP bug top-right in places; superb keying source",
      "hits": [
       {
-       "t": 8.68,
+       "t": 8.721,
        "kind": "explosion",
        "strength": 4,
-       "note": "orange dome blooms on horizon"
+       "note": "orange dome blooms on horizon",
+       "t_agent": 8.68
       },
       {
        "t": 11.56,
@@ -4002,10 +4004,11 @@
        "note": "brightest dome, whole sky orange"
       },
       {
-       "t": 13.68,
+       "t": 13.721,
        "kind": "explosion",
        "strength": 5,
-       "note": "second dome, full by 13.76"
+       "note": "second dome, full by 13.76",
+       "t_agent": 13.68
       }
      ]
     },
@@ -4882,10 +4885,11 @@
      "notes": "NBC bug; 'GAZA CITY' tag top-left",
      "hits": [
       {
-       "t": 1.9,
+       "t": 1.8362,
        "kind": "explosion",
        "strength": 4,
-       "note": "orange flash at base of far building"
+       "note": "orange flash at base of far building",
+       "t_agent": 1.9
       }
      ]
     },
@@ -4945,10 +4949,11 @@
      "notes": "caption 16-21",
      "hits": [
       {
-       "t": 22.92,
+       "t": 22.8572,
        "kind": "explosion",
        "strength": 4,
-       "note": "replay of same flash"
+       "note": "replay of same flash",
+       "t_agent": 22.92
       }
      ]
     },
@@ -6511,10 +6516,11 @@
      "notes": "AP bug appears at strike; 'EPRESS' small mark top-left",
      "hits": [
       {
-       "t": 2.88,
+       "t": 2.801,
        "kind": "explosion",
        "strength": 5,
-       "note": "fireball blooms (same moment as Guardian clip at 1.60)"
+       "note": "fireball blooms (same moment as Guardian clip at 1.60)",
+       "t_agent": 2.88
       }
      ]
     },
@@ -7205,10 +7211,11 @@
      "notes": "caption lower third 19-55; crop bottom",
      "hits": [
       {
-       "t": 22.44,
+       "t": 22.39,
        "kind": "flash",
        "strength": 4,
-       "note": "orange glow fills horizon"
+       "note": "orange glow fills horizon",
+       "t_agent": 22.44
       },
       {
        "t": 44.96,
@@ -7359,10 +7366,11 @@
      "notes": "clean first 1s, then caption 1-6",
      "hits": [
       {
-       "t": 0.08,
+       "t": 0.161,
        "kind": "explosion",
        "strength": 5,
-       "note": "fireball bloom, clip starts mid-rise"
+       "note": "fireball bloom, clip starts mid-rise",
+       "t_agent": 0.08
       }
      ]
     },
@@ -7404,10 +7412,11 @@
      "notes": "enters via a white dissolve at ~11.5",
      "hits": [
       {
-       "t": 11.88,
+       "t": 11.921,
        "kind": "explosion",
        "strength": 5,
-       "note": "fireball appears (dissolve-in from 11.84)"
+       "note": "fireball appears (dissolve-in from 11.84)",
+       "t_agent": 11.88
       }
      ]
     },
@@ -7431,10 +7440,11 @@
      "notes": "enters after white flash at 19.7",
      "hits": [
       {
-       "t": 20.4,
+       "t": 20.321,
        "kind": "explosion",
        "strength": 5,
-       "note": "night fireball erupts"
+       "note": "night fireball erupts",
+       "t_agent": 20.4
       }
      ]
     }
@@ -8645,7 +8655,7 @@
        "t": 10.0,
        "kind": "explosion",
        "strength": 2,
-       "note": "tiny distant puff appears; grows slowly. Sound arrives ~30.1 (≈7 km away); do not sync to audio"
+       "note": "tiny distant puff appears; grows slowly. Sound arrives ~30.1 (\u22487 km away); do not sync to audio"
       }
      ]
     },
@@ -8953,10 +8963,11 @@
      "notes": "",
      "hits": [
       {
-       "t": 24.84,
+       "t": 24.881,
        "kind": "flash",
        "strength": 5,
-       "note": "small glow 24.84, whole sky 24.88"
+       "note": "small glow 24.84, whole sky 24.88",
+       "t_agent": 24.84
       }
      ]
     },
@@ -9932,10 +9943,11 @@
      "notes": "AJ banner + ticker bottom 30%; reporter identifiable",
      "hits": [
       {
-       "t": 14.14,
+       "t": 14.1422,
        "kind": "explosion",
        "strength": 5,
-       "note": "fireball blooms on tower top (60 fps clip)"
+       "note": "fireball blooms on tower top (60 fps clip)",
+       "t_agent": 14.14
       }
      ]
     },
@@ -10260,10 +10272,11 @@
      "notes": "WSJ mark top-right",
      "hits": [
       {
-       "t": 1.84,
+       "t": 1.8779,
        "kind": "explosion",
        "strength": 4,
-       "note": "flash at base of middle block; dust erupts by 1.96"
+       "note": "flash at base of middle block; dust erupts by 1.96",
+       "t_agent": 1.84
       }
      ]
     },
@@ -10808,10 +10821,11 @@
      "notes": "credit top-left; 114+ black embers",
      "hits": [
       {
-       "t": 109.76,
+       "t": 109.681,
        "kind": "flash",
        "strength": 5,
-       "note": "white flash, fireball by 109.84"
+       "note": "white flash, fireball by 109.84",
+       "t_agent": 109.76
       }
      ]
     }
@@ -11460,10 +11474,11 @@
      "notes": "location tag top-right",
      "hits": [
       {
-       "t": 0.53,
+       "t": 0.5349,
        "kind": "flash",
        "strength": 4,
-       "note": "fireball already up at clip start; brightness peak 0.53"
+       "note": "fireball already up at clip start; brightness peak 0.53",
+       "t_agent": 0.53
       }
      ]
     },
@@ -11504,10 +11519,11 @@
      "notes": "caption",
      "hits": [
       {
-       "t": 7.87,
+       "t": 7.8755,
        "kind": "explosion",
        "strength": 5,
-       "note": "fireball blooms, full by 8.11"
+       "note": "fireball blooms, full by 8.11",
+       "t_agent": 7.87
       }
      ]
     },
@@ -12380,10 +12396,11 @@
      "notes": "AP bug",
      "hits": [
       {
-       "t": 1.92,
+       "t": 2.001,
        "kind": "explosion",
        "strength": 4,
-       "note": "orange bloom on horizon, peaks 2.12"
+       "note": "orange bloom on horizon, peaks 2.12",
+       "t_agent": 1.92
       }
      ]
     },
@@ -13268,10 +13285,11 @@
      "notes": "location text",
      "hits": [
       {
-       "t": 1.1,
+       "t": 1.134,
        "kind": "flash",
        "strength": 4,
-       "note": "sky lights up 1.10-1.30"
+       "note": "sky lights up 1.10-1.30",
+       "t_agent": 1.1
       }
      ]
     },
