@@ -84,7 +84,19 @@ def add_names(tl, mode, first_page=0):
             "src": f"media/derived/names/page_{first_page + k:04d}.png",
             "t0": round(a, 4), "t1": round(b, 4), "time": {"hold": 0.0}, "fit": "native",
             "pos": [720, 540], "blend": style[0], "opacity": style[1]})
-    tl["layers"][at:at] = new
+    # While a lower-third or subtitle is up, the page steps out of the bottom band (y > 922, where
+    # the cards sit), so attributions stay legible (the v4 review: cards overprinting names rows).
+    cards = sorted((L["t0"], L["t1"]) for L in tl["layers"]
+                   if L.get("id", "").startswith("card:") or "subtitle" in L.get("tags", []))
+    split = []
+    for N in new:
+        cuts = sorted({N["t0"], N["t1"]} | {x for a, b in cards for x in (a, b) if N["t0"] < x < N["t1"]})
+        for a, b in zip(cuts, cuts[1:]):
+            piece = dict(N, t0=round(a, 4), t1=round(b, 4), id=f"{N['id']}.{len(split)}")
+            if any(ca < b and cb > a for ca, cb in cards):
+                piece["clip"] = [0, 0, 1440, 922]
+            split.append(piece)
+    tl["layers"][at:at] = split
     return spans
 
 
