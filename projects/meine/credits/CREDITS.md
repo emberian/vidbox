@@ -1,21 +1,22 @@
 # Credits
 
-Derived from `projects/meine/comps/out/section_s0_rant.timeline.json, projects/meine/comps/out/section_s1_build.timeline.json, projects/meine/comps/out/section_s2_peak.timeline.json` by `tools/credits.py` on 2026-10-24. Every clip that appears in the piece is listed, in order of first appearance within each outlet.
+Derived from `projects/meine/comps/out/full.timeline.json` by `tools/credits.py` on 2026-10-24. Every clip that appears in the piece is listed, in order of first appearance within each outlet.
 
 ## Named in the footage
 
 - **Mohammad Abdul Zinati**, 15: killed. Gaza City, 15 September 2026. Eyewitnesses told the Guardian he had gone to check on the body of a man struck by an Israeli bomb moments earlier; a second strike killed him. <https://www.youtube.com/watch?v=vQdUgwKtwEY>
 - **The wife and children of Mahmoud Hammad**. Killed, with his brother, his brother's wife and their children, in an Israeli airstrike on their home in Gaza City. He searches the rubble for their bones, January 2026 (AP; their names are not given). <https://www.youtube.com/watch?v=XoQWFfNR_M8>
-- **112 members of the Hassayna and Abu Sharia families**. Killed with some 300 others when an Israeli strike flattened a residential block in Sabra, Gaza City, in November 2023. Their remains were recovered from the rubble and buried on 4 August 2026; more are still under it (AP; Middle East Eye). <https://www.youtube.com/watch?v=D8BWnIo43Dw> <https://www.youtube.com/watch?v=4wLmM3v8XH4>
-- **Two people killed near a tent camp in Khan Younis**. Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP). <https://www.youtube.com/watch?v=G9EY3rgBcLc>
 - **Dozens buried in the grounds of Nasser Hospital**. Khan Younis, January 2024, when the Israeli offensive made the cemetery too dangerous to reach (NBC News). <https://www.youtube.com/watch?v=vnpsm7nB9JE>
 - **More than 400 people killed across Gaza on 18 March 2025**. The day Israel resumed the war. In Jabaliya, Fahmi Mohammad said ten of his cousins were killed (Gaza Health Ministry and AP). <https://www.youtube.com/watch?v=TunR64-jZUk>
 - **Seven people killed in Jabaliya refugee camp**. Israeli airstrike on a market area, 14 July 2026; one woman among them, and Colonel Mohamad Marwan Salem, head of the Jabaliya police station, per Gaza's interior ministry (Shifa hospital officials, via AP). <https://www.youtube.com/watch?v=_zps_M-njzw>
 - **At least eight people killed across Gaza on 2 August 2026**. Two children among them. In southern Gaza a strike on an apartment killed three members of one family, including their four-year-old child (local health officials and Nasser hospital, via AP). <https://www.youtube.com/watch?v=TVneg3n7Ghc>
+- **Two people killed near a tent camp in Khan Younis**. Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP). <https://www.youtube.com/watch?v=G9EY3rgBcLc>
 - **The dead of a November 2023 strike on a building in Nuseirat**. Their remains, still being recovered from the rubble by Gaza's civil defence in September 2026 (Roya News). <https://www.youtube.com/watch?v=eKwlBuPcmw0>
-- **Sharif Shadi Labad**: injured (civil defence paramedic). Injured by the first strike. The Israeli military told the Guardian he was a Hamas militant and had been targeted. <https://www.youtube.com/watch?v=vQdUgwKtwEY>
+- **112 members of the Hassayna and Abu Sharia families**. Killed with some 300 others when an Israeli strike flattened a residential block in Sabra, Gaza City, in November 2023. Their remains were recovered from the rubble and buried on 4 August 2026; more are still under it (AP; Middle East Eye). <https://www.youtube.com/watch?v=D8BWnIo43Dw> <https://www.youtube.com/watch?v=4wLmM3v8XH4>
+- **25 people killed overnight in Bureij and Nuseirat**. Five children and seven women among them, received by al-Aqsa Martyrs Hospital, Deir al-Balah, 28 December 2023 (hospital records, via AP). <https://www.youtube.com/watch?v=Xl9NY5h-MHQ>
 - **A member of Gaza's civil defence**: injured. Critically injured in an Israeli airstrike near Abu Sharkh roundabout, brought to al-Shifa Hospital, 1 September 2026 (Roya News; name not given). <https://www.youtube.com/watch?v=p0uoWSF1AIw>
-- **Mahmoud Hammad**: father; his wife and children were killed; bereaved father (his wife and children killed) <https://www.youtube.com/watch?v=XoQWFfNR_M8>
+- **Sharif Shadi Labad**: injured (civil defence paramedic). Injured by the first strike. The Israeli military told the Guardian he was a Hamas militant and had been targeted. <https://www.youtube.com/watch?v=vQdUgwKtwEY>
+- **Mahmoud Hammad**: father; his wife and children were killed <https://www.youtube.com/watch?v=XoQWFfNR_M8>
 
 ## Footage
 
@@ -24,11 +25,12 @@ Derived from `projects/meine/comps/out/section_s0_rant.timeline.json, projects/m
 - **Drone footage shows destruction in Gaza's Khan Younis**. AP Archive. 2025-01-19. Khan Younis, Gaza Strip. <https://www.youtube.com/watch?v=uUDZm5DnXMA> (licence as catalogued: news (AP); first at 1:39.2; catalog id `ap-drone-khanyounis-2025-01-long`)
 - **Drone shows thousands walking towards northern Gaza as Israel lifts its closure**. AP Archive. 2025-01-27. Wadi Gaza. <https://www.youtube.com/watch?v=5d57aZTpYnQ> (licence as catalogued: news (AP); first at 1:54.5; catalog id `ap-drone-coast-road-return-2025-01-long`)
 - **Dramatic footage of Israeli army striking building in Gaza City**. AP Archive. 2026-02-06. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=5cwc4YfWnl4> (licence as catalogued: news (AP); first at 2:05.8; catalog id `ap-zeitoun-cemetery-strike-2026-02-06`)
-- **Three strikes hit different zones of central Gaza after warning from the Israeli army**. AP Archive. 2026-07-15. Maghazi refugee camp, central Gaza Strip; Nuseirat refugee camp, central Gaza Strip. <https://www.youtube.com/watch?v=qKPvpxpb7MI> (licence as catalogued: news (AP); first at 2:06.8; catalog id `ap-maghazi-evacuation-dusk-strikes-2026-07-15`)
 - **Flares and explosions over Gaza night sky as seen from across border in Israel**. AP Archive. 2023-11-09. Southern Israel. <https://www.youtube.com/watch?v=Rrj1NzrnFaM> (licence as catalogued: news (AP); first at 2:08.7; catalog id `ap-night-flares-explosions-2023-11-09`)
 - **Crowds of Palestinians carry sacks of flour in Gaza City's Zikim area**. AP Archive. 2025-07-30. Gaza City. <https://www.youtube.com/watch?v=KwtMLK-pa-s> (licence as catalogued: news (AP); first at 2:09.7; catalog id `ap-zikim-flour-multitude-2025-07-30`)
+- **Three strikes hit different zones of central Gaza after warning from the Israeli army**. AP Archive. 2026-07-15. Maghazi refugee camp, central Gaza Strip; Nuseirat refugee camp, central Gaza Strip. <https://www.youtube.com/watch?v=qKPvpxpb7MI> (licence as catalogued: news (AP); first at 2:17.8; catalog id `ap-maghazi-evacuation-dusk-strikes-2026-07-15`)
 - **A father in Gaza searches for his family's bones in the rubble of their home**. AP Archive. 2026-01-24. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=XoQWFfNR_M8> (licence as catalogued: news (AP); first at 2:25.0; catalog id `ap-father-sieves-bones-2026-01-24`)
-- **Bodies brought to Gaza hospital after deadly Israeli strike**. AP Archive. 2026-07-29. Khan Younis, Gaza. <https://www.youtube.com/watch?v=G9EY3rgBcLc> (licence as catalogued: news (AP); first at 2:36.2; catalog id `ap-khanyounis-morgue-bodies-2026-07-29`)
+- **ap-mass-funeral-105-2026-10-01**. AP Archive. 2026-10-01. <https://www.youtube.com/watch?v=zC_WjmWdUJk> (licence as catalogued: news (AP); first at 2:34.3; catalog id `ap-mass-funeral-105-2026-10-01`)
+- **Relatives mourn nine members of a family killed in a strike in Rafah**. AP Archive. 2024-01-12. Rafah, Gaza Strip. Camera: Mohammad Jahjouh. <https://www.youtube.com/watch?v=2PQdALFa90Y> (licence as catalogued: news (AP); first at 2:36.2; catalog id `ap-rafah-family-shrouds-2024-01`)
 - **Israel strikes Gaza tent camp following evacuation order, sparking huge blaze**. AP Archive. 2026-03-11. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=TmtQbF_Hwus> (licence as catalogued: news (AP); first at 2:57.2; catalog id `ap-ansar-tent-strike-fire-2026-03`)
 - **Explosions light up night sky over the Gaza Strip**. AP Archive. 2025-09-07. Southern Israel, overlooking Gaza Strip. <https://www.youtube.com/watch?v=fTiqjhMhFSY> (licence as catalogued: news (AP); first at 3:01.0; catalog id `ap-night-blasts-from-israel-2025-09`)
 - **Drone footage shows thousands of Palestinians returning to the ruins and rubble in Gaza City**. AP Archive. 2025-01-27. Wadi Gaza, Gaza; Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=5KBkxIFXenM> (licence as catalogued: news (AP); first at 3:03.1; catalog id `ap-drone-return-north-coast-2025-01`)
@@ -44,12 +46,14 @@ Derived from `projects/meine/comps/out/section_s0_rant.timeline.json, projects/m
 - **Strike hits Gaza's Nuseirat after Israeli military issues warning**. AP Archive. 2026-07-31. Nuseirat, central Gaza Strip. <https://www.youtube.com/watch?v=0Bf1tWaqvvs> (licence as catalogued: news (AP); first at 5:06.5; catalog id `ap-nuseirat-night-strike-2026-07`)
 - **Israel intensifies bombing of remaining residential buildings amid Gaza City offensive**. AP Archive. 2025-09-07. Gaza City. <https://www.youtube.com/watch?v=xb1Yj-mLXAU> (licence as catalogued: news (AP); first at 5:10.3; catalog id `ap-gazacity-towers-bombed-2025-09`)
 - **Drone footage shows vast destruction in Beit Lahiya, in northern Gaza**. AP Archive. 2025-02-17. Beit Lahiya, Gaza Strip. <https://www.youtube.com/watch?v=VCp7zg_f7qk> (licence as catalogued: news (AP); first at 5:19.9; catalog id `ap-drone-beit-lahiya-2025-02`)
+- **Bodies brought to Gaza hospital after deadly Israeli strike**. AP Archive. 2026-07-29. Khan Younis, Gaza. <https://www.youtube.com/watch?v=G9EY3rgBcLc> (licence as catalogued: news (AP); first at 5:25.9; catalog id `ap-khanyounis-morgue-bodies-2026-07-29`)
 - **Drone aerials show much of Gaza City reduced to rubble during two years of war**. AP Archive. 2025-10-15. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=nZ15f_tSAHc> (licence as catalogued: news (AP); first at 5:35.1; catalog id `ap-drone-gazacity-ruins-2025-10-long`)
 - **Explosions light up Gaza night sky**. AP Archive. 2023-11-12. View of Gaza from southern Israel. <https://www.youtube.com/watch?v=1RA9XdeKImU> (licence as catalogued: news (AP); first at 5:42.8; catalog id `ap-night-flashes-from-israel-2023-11-12`)
 - **Iron Dome chase barrage of rockets fired from Gaza**. AP Archive. 2021-05 (upload 2021-05-24). <https://www.youtube.com/watch?v=EKvPmpAbuZQ> (licence as catalogued: news (AP Archive); fair use; first at 5:48.5; catalog id `ap-iron-dome-chase-may2021`)
 - **Overnight Israeli strike hits tents sheltering displaced Palestinian families in Muwasi**. AP Archive. 2025-06-23. Muwasi, Gaza Strip. <https://www.youtube.com/watch?v=H_kELGjZ2RY> (licence as catalogued: news (AP); first at 6:05.6; catalog id `ap-muwasi-tents-strike-2025-06`)
 - **Gaza rockets intercepted over Tel Aviv's night sky**. AP Archive. 2023-05 (upload 2023-05-16). Tel Aviv, Israel. Camera: Paz Bar. <https://www.youtube.com/watch?v=E--NcpXQuZ0> (licence as catalogued: news (AP Archive); fair use; first at 6:11.3; catalog id `ap-telaviv-intercepts-may2023`)
 - **Mass funeral in Gaza after bodies recovered of more than 100 people killed in 2023 Israeli strike**. AP Archive. 2026-08-04. Gaza City, Gaza Strip. <https://www.youtube.com/watch?v=D8BWnIo43Dw> (licence as catalogued: news (AP); first at 6:36.4; catalog id `ap-mass-funeral-hassayna-2026-08-04`)
+- **Palestinians at Deir al-Balah hospital pray over body bags holding victims of Israel airstrikes**. AP Archive. 2023-12-28. Outside al-Aqsa Martyr's Hospital, Deir al-Balah, Gaza. Camera: Abd Al Kareem Hana. <https://www.youtube.com/watch?v=Xl9NY5h-MHQ> (licence as catalogued: news (AP); first at 7:06.9; catalog id `ap-aqsa-body-bags-prayer-2023-12`)
 
 ### Reuters
 
@@ -68,28 +72,31 @@ Derived from `projects/meine/comps/out/section_s0_rant.timeline.json, projects/m
 
 ### Anadolu Agency
 
-- **Explosion hits house in Gaza's Bureij Camp amid Israeli attack**. Anadolu English. 2026-05-19. <https://www.youtube.com/watch?v=h1ikSUmcrX8> (licence as catalogued: news (Anadolu); first at 3:27.3; catalog id `anadolu-bureij-night-blast-street-2026-05-19`)
+- **Explosion hits house in Gaza's Bureij Camp amid Israeli attack**. Anadolu English. 2026-05-19. <https://www.youtube.com/watch?v=h1ikSUmcrX8> (licence as catalogued: news (Anadolu); first at 5:50.4; catalog id `anadolu-bureij-night-blast-street-2026-05-19`)
 
 ### Middle East Eye
 
-- **Gaza civil defence teams recover remains of 112 Palestinians from rubble**. Middle East Eye. 2026-08-03. Footage credited on screen to: khamees.hasira (Instagram). <https://www.youtube.com/watch?v=4wLmM3v8XH4> (licence as catalogued: news (MEE; journalist UGC); first at 2:34.3; catalog id `mee-112-remains-flags-2026-08-03`)
+- **Gaza civil defence teams recover remains of 112 Palestinians from rubble**. Middle East Eye. 2026-08-03. Footage credited on screen to: khamees.hasira (Instagram). <https://www.youtube.com/watch?v=4wLmM3v8XH4> (licence as catalogued: news (MEE; journalist UGC); first at 6:04.0; catalog id `mee-112-remains-flags-2026-08-03`)
 
 ### Roya News
 
 - **'Israeli' army releases footage of strikes on Gaza weapon sites**. Roya News English (footage: IDF / AFP). 2026-09-09. Footage credited on screen to: IDF / AFP. <https://www.youtube.com/watch?v=ILs0UJiqXgw> (licence as catalogued: IDF release via AFP/Roya; first at 4:07.4; catalog id `idf-gaza-weapons-sites-strikecam-2026-09-09`)
 - **Critically injured civil defense worker arrives at Al-Shifa Hospital after 'Israeli' airstrike**. Roya News English. 2026-09-01. Footage credited on screen to: m.saed gaza (Instagram). <https://www.youtube.com/watch?v=p0uoWSF1AIw> (licence as catalogued: news (Roya; journalist UGC); first at 5:05.9; catalog id `roya-civil-defence-worker-shifa-2026-09-01`)
+- **Rescuers at site of overnight ‘Israeli’ strike in central Gaza**. Roya News English (Jordan). 2026-01-09. <https://www.youtube.com/watch?v=M3L1t4PVSiY> (licence as catalogued: news (Roya); first at 5:33.5; catalog id `roya-night-rescue-central-gaza-2026-01`)
 - **Gazans search for bodies buried under rubble since 2023 strike**. Roya News English. 2026-09-05. <https://www.youtube.com/watch?v=eKwlBuPcmw0> (licence as catalogued: news (Roya); first at 5:41.2; catalog id `roya-civil-defence-bones-nuseirat-2026-09-05`)
 
 ### The Guardian
 
-- **Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed**. Guardian News (footage: Tamer Labbad). 2026-09-15. Filmed by: Tamer Labbad. <https://www.youtube.com/watch?v=vQdUgwKtwEY> (licence as catalogued: news (Guardian); first at 2:17.8; catalog id `guardian-deconstructed-zinati-strike-2026-09-15`)
+- **Fire breaks out after Israel strikes Gaza displacement camp**. Guardian News. 2026-03-11. <https://www.youtube.com/watch?v=6RwaK4FN2Ko> (licence as catalogued: news (Guardian); first at 2:06.8; catalog id `guardian-ansar-tent-strike-2026-03`)
 - **Israeli airstrike hits camp in Gaza's Deir Al-Balah**. Guardian News (incl. AP camera angle). 2026-03-26. Second angle credited to: AP. <https://www.youtube.com/watch?v=RYOQOwHPlfw> (licence as catalogued: news (Guardian/AP); first at 3:10.4; catalog id `guardian-deir-balah-tent-camp-strike-2026-03-26`)
 - **Moment airstrike hits building in Khan Younis in southern Gaza**. Guardian News. 2026-02-06. <https://www.youtube.com/watch?v=wjr8ISPvdh0> (licence as catalogued: news (Guardian); first at 3:47.6; catalog id `guardian-khanyounis-night-strike-2026-02-06`)
+- **Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed**. Guardian News (footage: Tamer Labbad). 2026-09-15. Filmed by: Tamer Labbad. <https://www.youtube.com/watch?v=vQdUgwKtwEY> (licence as catalogued: news (Guardian); first at 6:28.8; catalog id `guardian-deconstructed-zinati-strike-2026-09-15`)
 
 ### NBC News
 
 - **Watch: Building collapses in Gaza after being struck by Israeli airstrike**. NBC News Now. 2023-10-07/08. <https://www.youtube.com/watch?v=w57kiknN-MA> (licence as catalogued: news (NBC); first at 1:45.3; catalog id `nbc-night-tower-collapse-2023-10-08`)
 - **Gazans dig multiple graves at Khan Younis hospital**. NBC News. 2024-01-23. <https://www.youtube.com/watch?v=vnpsm7nB9JE> (licence as catalogued: news (NBC); first at 2:38.1; catalog id `nbc-nasser-courtyard-graves-2024-01`)
+- **nbc-dar-al-muttaqin-mosque-strike-2026-07-28**. NBC News (footage: WAFA, Reuters). 2026-07-28. <https://www.youtube.com/watch?v=BTr2lDBjto0> (licence as catalogued: news (NBC; WAFA/Reuters); first at 3:27.3; catalog id `nbc-dar-al-muttaqin-mosque-strike-2026-07-28`)
 - **Video captures explosion as Israeli missile hits Gaza City**. NBC News. 2023-10-11. <https://www.youtube.com/watch?v=J7yXotNqLVk> (licence as catalogued: news (NBC); first at 3:39.1; catalog id `nbc-missile-hits-building-2023-10`)
 
 ### The Wall Street Journal

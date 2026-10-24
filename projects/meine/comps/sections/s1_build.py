@@ -397,7 +397,9 @@ def build_up(c):
     quads = [(360, 349), (1080, 349), (360, 731), (1080, 731)]
     for k, (ref, h, crop) in enumerate([("y2026:ap-zeitoun-cemetery-strike-2026-02-06#0", 0, (0, 0.16, 1, 0.8)),
                                         ("ground:reuters-explosions-overnight-2023-10-22#0", 0, (0, 0, 1, 0.62)),
-                                        ("y2026:ap-maghazi-evacuation-dusk-strikes-2026-07-15#1", 0, AP_CROP),
+                                        # al-Ansar tent camp, 11 Mar 2026 (Guardian): Guardian logo and the
+                                        # caption box (from 4.5 s) cropped; men watching in the street stay
+                                        ("ground:guardian-ansar-tent-strike-2026-03#0", 0, (0, 0.09, 1, 0.70)),
                                         ("ground:nbc-night-tower-collapse-2023-10-08#0", 0, NEWS_CROP)]):
         seg = c.seg(ref)
         at = c.bar(66, k)
@@ -433,19 +435,20 @@ def breakdown(c):
     each shot held for bars. No heads, no effects. The music is dipped further so the real sound leads."""
     b72, b74, b76, b80, b84, b88 = (c.bar(n) for n in (72, 74, 76, 80, 84, 88))
     Y = "y2026:"
-    # 72-75: Gaza City, 15 Sep 2026 (Guardian, eyewitness footage by Tamer Labbad). A first strike has
-    #        wounded a paramedic; 15-year-old Mohammad Abdul Zinati goes to check on a body and the second
-    #        strike lands, on bar 74's downbeat. Guardian's logo cropped; its forensic circle stays.
-    zin = c.seg(Y + "guardian-deconstructed-zinati-strike-2026-09-15#1")
-    url = zin.clip["source_url"]
-    untreated(c, zin, b74, hit=0, before=b74 - c.bar(72, 1), until=b74 + 1.6, gain=1.0, id="zinati-double-strike",
-              people=[{"name": "Mohammad Abdul Zinati", "age": 15, "role": "killed", "source": url},
-                      {"name": "Sharif Shadi Labad", "role": "injured (civil defence paramedic)", "source": url},
-                      {"name": "Tamer Labbad", "role": "filmed", "source": url}],
-              **L.picture(zin, crop=(0.0, 0.1, 0.86, 1.0)))
+    # 72-75: Maghazi camp, 15 Jul 2026 (AP). Families walk out along a rubble road at dusk under an
+    #        evacuation order; then, in AP's own sequence, the strike that evening: a ball of flame on the
+    #        horizon, on bar 74's downbeat. Two untreated shots of one story, cut on bar 73, their own
+    #        sound. (The Zinati killing is shown once, in s2 at bar 204.)
+    b73 = c.bar(73)
+    walk = c.seg(Y + "ap-maghazi-evacuation-dusk-strikes-2026-07-15#0")
+    lay = untreated(c, walk, c.bar(72, 1), src=8.0, until=b73, gain=1.0, id="maghazi-evacuation-walk",
+                    **L.picture(walk, crop=AP_CROP))
+    lay["meta"]["z"] = 4.5     # above the Reaper countdown's fading tail: no targeting screen over the families
+    blast = c.seg(Y + "ap-maghazi-evacuation-dusk-strikes-2026-07-15#1")
+    untreated(c, blast, b74, hit=0, before=b74 - b73, until=b74 + 1.6, gain=1.0, id="maghazi-dusk-strike",
+              **L.picture(blast, crop=AP_CROP))
     c.duck_music(c.bar(72, 1), hold=b76 - c.bar(72, 1), depth=0.12, attack=0.3, release=0.5)
-    # (it is cut 2.4 s after the strike, before Guardian's split-screen layout and place card; ~0.8 s of
-    #  Meine alone follows before Hammad)
+    # (cut 1.6 s after the fireball, as the cloud climbs; ~0.8 s of Meine alone follows before Hammad)
     # 76-83: Gaza City, Jan 2026 (AP). Mahmoud Hammad sieves the sand of his house for the bones of his
     #        wife and children; one shake of the sieve every two beats; then his fingers lift the fragments
     ham = c.seg(Y + "ap-father-sieves-bones-2026-01-24#0")
@@ -458,10 +461,11 @@ def breakdown(c):
                                     "source": ham.clip["source_url"]}]})
     c.duck_music(b76, hold=b80 - b76, depth=0.15, attack=0.2, release=0.4)
     # 80-83: the stack. Over Hammad, one window per downbeat, each untreated with its own sound:
-    #        the remains of 112 people under flags with their photos (MEE), the Khan Younis morgue (AP),
-    #        the Nasser hospital courtyard graves (NBC)
-    tiles = [(Y + "mee-112-remains-flags-2026-08-03#0", 0.5, (0.34, 0.0, 0.66, 0.62), (1110, 400), (420, 440)),
-             (Y + "ap-khanyounis-morgue-bodies-2026-07-29#1", 12.5, AP_CROP, (330, 400), (560, 340)),
+    #        flag-wrapped remains with photos and names on paper at the Gaza City mass funeral of 105
+    #        (AP, 1 Oct 2026), men standing over the shrouded bodies of nine members of one family at
+    #        al-Najjar hospital, Rafah (AP, 12 Jan 2024), the Nasser hospital courtyard graves (NBC)
+    tiles = [(Y + "ap-mass-funeral-105-2026-10-01#3", 36.0, AP_CROP, (1110, 400), (420, 440)),
+             ("ground:ap-rafah-family-shrouds-2024-01#1", 5.5, AP_CROP, (330, 400), (560, 340)),
              ("ground:nbc-nasser-courtyard-graves-2024-01#2", 17.0, (0, 0, 1, 0.84), (720, 720), (560, 340))]
     for k, (ref, src, crop, pos, wh) in enumerate(tiles):
         seg = c.seg(ref)
@@ -470,7 +474,8 @@ def breakdown(c):
     c.duck_music(c.bar(81), hold=b84 - c.bar(81), depth=0.2, attack=0.1, release=0.3)
     # 84-87, the riser: the graves fill the picture, still untreated, the music climbing back over them
     graves = c.seg("ground:nbc-nasser-courtyard-graves-2024-01#2")
-    lay = untreated(c, graves, b84, src=21.0, until=b88, gain=0.6, id="graves",
+    #    (the tile's take continues: the tile grows into the picture)
+    lay = untreated(c, graves, b84, src=17.0 + (b84 - c.bar(83)), until=b88, gain=0.6, id="graves",
                     **L.picture(graves, crop=(0, 0, 1, 0.84)))
 
 
@@ -585,11 +590,15 @@ def rise(c):
     hold_.pop("audio")
     c.duck(B[100], hold=B[104] - B[100] - 0.6, depth=0.5)
     c.duck_music(B[100], hold=3.5, depth=0.25, release=1.5)
-    # 109: Bureij camp, 19 May 2026 (Anadolu, eyewitness phone): a strike lights the night street and
-    #      knocks a man off his feet, on bar 109's downbeat; untreated, its own sound
-    bur = c.seg("y2026:anadolu-bureij-night-blast-street-2026-05-19#1")
-    untreated(c, bur, B[109], hit=0, before=0.5, until=B[110] + 0.6, gain=1.0, id="bureij-night-blast",
-              **L.panel(bur, 430, 764, [720, 540], crop=(0, 0.14, 1, 0.88), feather=0.0))
+    # 109: Gaza City, 28 Jul 2026, the strike on the Dar al-Muttaqin mosque, filmed from a roof above a
+    #      street of tents (Reuters, via NBC's vertical edit): the fireball lands on bar 109's downbeat,
+    #      people in the street below run, the camera drops to the parapet. Untreated, its own sound.
+    #      Only the Reuters picture is used: NBC's title band above it and the REUTERS credit are cropped.
+    #      (Bureij, 19 May 2026, is shown once, in s2 at bar 184.)
+    mos = c.seg("y2026:nbc-dar-al-muttaqin-mosque-strike-2026-07-28#2")
+    #      It ends on bar 110, where his still face begins to fade in, so no head is ever over it.
+    untreated(c, mos, B[109], hit=0, before=0.5, until=B[110], gain=1.0, id="dar-al-muttaqin-street",
+              **L.panel(mos, 680, 556, [720, 540], crop=(0, 0.345, 1, 0.80), feather=0.0))
     c.duck(B[109], hold=1.5, depth=0.4)
     c.duck_music(B[109], hold=1.4, depth=0.3, release=0.8)
     # 108: white phosphorus over the tents at night, an orange point blooming into falling gold

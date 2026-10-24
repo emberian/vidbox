@@ -23,7 +23,7 @@ untreated reality**.
 |---|---|---|---|
 | 160-163 | 304.97-312.59 | **stack**: a 2x2 grid of untreated ground takes, one tile per beat, held 4 bars, all four sounds. Tiles: Shifa wounded (y2026), Jabaliya digging by hand, Shifa stretcher with blood (Roya), men kneeling over shrouds (Khan Younis) | 0.3 |
 | 171 | 325.93 | puncture: bodies on a steel morgue tray (AP Khan Younis, Jul 2026) | 0.25 |
-| 175 | 333.54 | puncture: the wounded carried in, bloody (AP Shifa, Jul 2026) | 0.25 |
+| 175 | 333.54 | puncture: the wounded lifted into an ambulance by torchlight after an overnight strike in central Gaza (Roya News, 9 Jan 2026; src 5.0, logo/date tag/handle cropped [0.12, 0.14, 1, 0.86], gain 0.2 because its street sound is ~22 dB hotter than the AP takes) | 0.25 |
 | 179 | 341.16 | puncture: bones laid on dark cloth (Roya, Nuseirat, Sep 2026) | 0.25 |
 | 184 | 350.68 | Bureij: the blast throws a man, portrait frame, own sound; "Hellfire missiles" small at the side | 0.35 |
 | 185-186 | 352.60-356.40 | Khan Younis morgue arrival, bodies rushed in, full frame | 0.15 |
@@ -32,7 +32,7 @@ untreated reality**.
 | 204 | 388.78-393.68 | **Zinati** (below), then black to bar 208 | **0.05** (measured: music at about -40 dB in the black) |
 | 208-215 | 396.40-411.63 | **linger**: the mass funeral of the Hassayna and Abu Sharia families (AP, 4 Aug 2026), one 15 s take: aerial of the rectangle of bodies, then along the rows | 0.3 |
 | 216-223 | 411.63-426.88 | the machine: Ashdod MK-84 cranes; he returns (lines on 217 and 221) | full |
-| 224-231 | 426.88-442.11 | **linger**: Mahmoud Hammad sieves his home's sand for the bones of his wife and children (AP, Jan 2026), one 15 s take, his sounds | 0.3 |
+| 224-231 | 426.88-442.11 | **linger**: outside al-Aqsa Martyrs Hospital, Deir al-Balah (AP, 28 Dec 2023), men stand in prayer over white body bags on the pavement, ambulances behind, a boy watching. One 15 s take (src 56.0-71.2, inside the single shot 54.7-79.9), its own quiet sound at gain 3.0 (the source sits ~4 dB under the sieve take) | 0.3 |
 | 232-237 | 442.11-453.54 | blueprint factory and walkers; his last lines on 233 and 236 | full |
 
 The cooling strikes and copies of 196-203 still play. Bar 204's chorus copies and strike are
@@ -40,7 +40,7 @@ muted by the window.
 
 **Silences.** The music nearly disappears at 204-207: 0.05 under Zinati and the black bar. It dips
 to 0.15 under the morgue (185-186), 0.25 under each puncture, and 0.3 under the grid, the funeral
-and the sieve.
+and the al-Aqsa prayer.
 
 **Zinati: included, once.** It is Guardian "Deconstructed", eyewitness footage by Tamer Labbad,
 source 2.0-6.9 s: the boy stoops by the wounded paramedic, the second strike, dust.
@@ -61,10 +61,17 @@ source 2.0-6.9 s: the boy stoops by the wounded paramedic, the second strike, du
   - Sharif Shadi Labad, civil defence paramedic, injured
   - Tamer Labbad, eyewitness who filmed it
   - source https://www.youtube.com/watch?v=vQdUgwKtwEY
-- `real:hammad-sieve`: Mahmoud Hammad, bereaved father (wife and children killed); source
-  https://www.youtube.com/watch?v=XoQWFfNR_M8
 - No named individuals in the sources of the other untreated clips. The funeral's provenance names
   the Hassayna and Abu Sharia families, not individuals, so I added no `people` entry.
+
+**Each untreated clip once in the whole piece (2026-10-24).** `full.py` refuses duplicates. s1 and s2
+had both used Zinati, Bureij, the Khan Younis morgue, the MEE 112 remains and Hammad. Zinati, Bureij,
+the morgue and MEE 112 stay here; Hammad's sieve stays in s1's breakdown, so 224-231 is now the al-Aqsa
+prayer take (manufacture against burial: the Ashdod cranes before it, the factory after). Inside this
+section no untreated *segment* repeats: puncture 175 used the same Shifa-arrivals shot as grid tile 0
+(src 11 vs 12), so it is now the Roya ambulance. The morgue's two uses are different shots (arrival,
+src 1.0-4.8, shot 0-7.6; the tray, src 13.0-14.9, shot 7.6-17.2), and so are the Khan Younis mourning
+clip's (grid tile src 20.5, puncture 187 src 1.0).
 
 **Captions.** All of the new material was swept at 1 s. AP bugs are cropped (top 0.16), along with
 the funeral's subtitles and "ASSOCIATED PRESS", MEE's Instagram credit, and the Guardian logo and

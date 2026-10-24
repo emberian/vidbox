@@ -402,7 +402,10 @@ def peak2(c, pools, ch):
 # one-bar punctures of the hypnosis: untreated, full frame, their own sound
 PUNCTURES = {
     171: ("y2026:ap-khanyounis-morgue-bodies-2026-07-29#1", 13.0, None),            # bodies on a steel morgue tray
-    175: ("y2026:ap-jabaliya-strike-shifa-arrivals-2026-07-14#1", 11.0, None),      # the wounded carried in, bloody
+    # the wounded lifted into an ambulance by torchlight after an overnight strike in central Gaza, 9 Jan
+    # 2026 (Roya News): Roya logo, date tag and handle cropped; its loud street sound brought down to
+    # sit with the others. (Shifa arrivals #1 is the grid's tile at 160; a segment is used once.)
+    175: ("ground:roya-night-rescue-central-gaza-2026-01#0", 5.0, None, [0.12, 0.14, 1.0, 0.86], 0.2),
     179: ("y2026:roya-civil-defence-bones-nuseirat-2026-09-05#1", 5.0, None),       # bones laid on dark cloth
     187: ("y2026:ap-khanyounis-mourning-overnight-strikes-2026-08-02#0", 1.0, None),  # women bent over the shrouds
     191: ("y2026:mee-112-remains-flags-2026-08-03#0", 1.0, None),    # (crop drops the Instagram credit)                   # 112 remains, photos taped on
@@ -450,9 +453,10 @@ def hottest(c, pools, ch):
         if b == 186:
             continue
         if b in PUNCTURES:
-            ref, src_in, people = PUNCTURES[b]
-            real(c, ref, B(b), B(b + 1), src_in, gain=1.1, music=0.25, id=f"real:puncture-{b}", people=people,
-                 crop=[0.1, 0.16, 0.92, 0.9])
+            ref, src_in, people, *own = PUNCTURES[b]
+            crop, gain = own if own else ([0.1, 0.16, 0.92, 0.9], 1.1)
+            real(c, ref, B(b), B(b + 1), src_in, gain=gain, music=0.25, id=f"real:puncture-{b}", people=people,
+                 crop=crop)
             continue
         kind = ("gnight", "ir", "gday", "fire")[b % 4]
         s, h = pools.take(kind, B(b), gap=15)
@@ -513,10 +517,7 @@ def cooling(c, pools, ch):
         ch.speak(n + 5, B(b), ("missiles", "missiles.c", "all the missiles they need")[n], gain=0.9, pop=2.2)
 
 
-# ---- 6:36-7:33  plateau (208-237): the dead held; the machine; a father sieving; the preacher returns ----
-HAMMAD_SRC = "https://www.youtube.com/watch?v=XoQWFfNR_M8"
-
-
+# ---- 6:36-7:33  plateau (208-237): the dead held; the machine; prayer over the dead; the preacher returns ----
 def plateau(c):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
     # 208-215 (15 s, one take): the mass funeral of the Hassayna and Abu Sharia families, Gaza City,
@@ -536,12 +537,13 @@ def plateau(c):
              fx=[{"op": "sat", "factor": 0.4}], id="shroud-cut")
     strike(c, c.seg("ground:afp-rafah-night-strikes-flares-2023-12#0"), 1, B(220), before=0.6, after=2.6,
            depth=0.4, k=220, opacity=0.75)
-    # 224-231 (15 s, one take): Mahmoud Hammad sieves the sand of his home for the bones of his wife
-    # and children (AP, Gaza City, 24 Jan 2026); the sieve's rhythm against the kick, his own sound
-    real(c, "y2026:ap-father-sieves-bones-2026-01-24#0", B(224), B(232), 4.0, gain=1.1, music=0.3,
-         id="real:hammad-sieve",
-         people=[{"name": "Mahmoud Hammad", "role": "bereaved father (his wife and children killed)",
-                  "source": HAMMAD_SRC}])
+    # 224-231 (15 s, one take, src 56.0-71.2 inside the single shot 54.7-79.9): outside al-Aqsa
+    # Martyrs Hospital, Deir al-Balah, 28 Dec 2023 (AP): men stand in prayer over the white body bags
+    # laid on the pavement, ambulances behind, a boy watching. Burial after the cranes unload the bombs.
+    # Its own quiet sound (source ~-42 dBFS), raised to gain 3.0 so the murmur is heard under the kick.
+    # (Hammad's sieve is shown once, in s1.)
+    real(c, "ground:ap-aqsa-body-bags-prayer-2023-12#2", B(224), B(232), 56.0, gain=3.0, music=0.3,
+         id="real:aqsa-prayer")
     # 230-237: the blueprint factory and the crowd walking north, under him again
     walkers = c.seg("ground:ap-drone-return-north-coast-2025-01#1")
     c.groove(walkers, B(232), dur=B(238) - B(232), fit="picture", crop=AP_CROP, opacity=0.6,

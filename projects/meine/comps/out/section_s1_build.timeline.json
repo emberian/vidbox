@@ -6839,16 +6839,16 @@
   {
    "id": "stack66-2",
    "tags": [
-    "y2026",
+    "ground",
     "untreated",
-    "gaza",
-    "airstrike"
+    "strike",
+    "explosion"
    ],
-   "src": "media/footage/y2026/raw/youtube_qKPvpxpb7MI.mp4",
+   "src": "media/footage/ground/raw/youtube_6RwaK4FN2Ko.mp4",
    "t0": 126.794,
    "t1": 129.73,
    "time": {
-    "in": 17.2,
+    "in": 1.52,
     "speed": 1.0
    },
    "blend": "normal",
@@ -6860,9 +6860,9 @@
     "out": 0.25
    },
    "meta": {
-    "catalog": "y2026",
-    "clip": "ap-maghazi-evacuation-dusk-strikes-2026-07-15",
-    "seg": 1,
+    "catalog": "ground",
+    "clip": "guardian-ansar-tent-strike-2026-03",
+    "seg": 0,
     "z": 2.5,
     "untreated": true,
     "hits_song": [
@@ -6870,10 +6870,10 @@
     ]
    },
    "crop": [
-    0.0547,
-    0.16,
-    0.9453,
-    1.0
+    0.1766,
+    0.09,
+    0.8234,
+    0.7
    ],
    "size": [
     720,
@@ -6943,18 +6943,18 @@
    "clip": "picture"
   },
   {
-   "id": "zinati-double-strike",
+   "id": "maghazi-dusk-strike",
    "tags": [
     "y2026",
     "untreated",
     "gaza",
-    "drone-strike"
+    "airstrike"
    ],
-   "src": "media/footage/y2026/raw/youtube_vQdUgwKtwEY.mp4",
-   "t0": 137.822,
+   "src": "media/footage/y2026/raw/youtube_qKPvpxpb7MI.mp4",
+   "t0": 139.25,
    "t1": 142.766,
    "time": {
-    "in": 2.216,
+    "in": 15.364,
     "speed": 1.0
    },
    "blend": "normal",
@@ -6967,37 +6967,19 @@
    },
    "meta": {
     "catalog": "y2026",
-    "clip": "guardian-deconstructed-zinati-strike-2026-09-15",
+    "clip": "ap-maghazi-evacuation-dusk-strikes-2026-07-15",
     "seg": 1,
     "z": 2.5,
     "untreated": true,
     "hits_song": [
      141.166
-    ],
-    "people": [
-     {
-      "name": "Mohammad Abdul Zinati",
-      "age": 15,
-      "role": "killed",
-      "source": "https://www.youtube.com/watch?v=vQdUgwKtwEY"
-     },
-     {
-      "name": "Sharif Shadi Labad",
-      "role": "injured (civil defence paramedic)",
-      "source": "https://www.youtube.com/watch?v=vQdUgwKtwEY"
-     },
-     {
-      "name": "Tamer Labbad",
-      "role": "filmed",
-      "source": "https://www.youtube.com/watch?v=vQdUgwKtwEY"
-     }
     ]
    },
    "crop": [
-    0.0,
-    0.1444,
-    0.86,
-    0.9556
+    0.0547,
+    0.16,
+    0.9453,
+    1.0
    ],
    "size": [
     1440,
@@ -7116,11 +7098,11 @@
     "gaza",
     "remains"
    ],
-   "src": "media/footage/y2026/raw/youtube_4wLmM3v8XH4.mp4",
+   "src": "media/footage/y2026/raw/youtube_zC_WjmWdUJk.mp4",
    "t0": 154.262,
    "t1": 159.985,
    "time": {
-    "in": 0.5,
+    "in": 36.0,
     "speed": 1.0
    },
    "blend": "normal",
@@ -7133,17 +7115,17 @@
    },
    "meta": {
     "catalog": "y2026",
-    "clip": "mee-112-remains-flags-2026-08-03",
-    "seg": 0,
+    "clip": "ap-mass-funeral-105-2026-10-01",
+    "seg": 3,
     "z": 2.5,
     "untreated": true,
     "hits_song": []
    },
    "crop": [
-    0.34,
-    0.2157,
-    0.66,
-    0.4043
+    0.2745,
+    0.16,
+    0.7255,
+    1.0
    ],
    "size": [
     420,
@@ -7162,16 +7144,16 @@
   {
    "id": "stack80-1",
    "tags": [
-    "y2026",
+    "ground",
     "untreated",
-    "gaza",
-    "morgue"
+    "mourning",
+    "shrouds"
    ],
-   "src": "media/footage/y2026/raw/youtube_G9EY3rgBcLc.mp4",
+   "src": "media/footage/ground/raw/youtube_2PQdALFa90Y.mp4",
    "t0": 156.166,
    "t1": 159.985,
    "time": {
-    "in": 12.5,
+    "in": 5.5,
     "speed": 1.0
    },
    "blend": "normal",
@@ -7183,8 +7165,8 @@
     "out": 0.25
    },
    "meta": {
-    "catalog": "y2026",
-    "clip": "ap-khanyounis-morgue-bodies-2026-07-29",
+    "catalog": "ground",
+    "clip": "ap-rafah-family-shrouds-2024-01",
     "seg": 1,
     "z": 2.5,
     "untreated": true,
@@ -7273,7 +7255,7 @@
    "t0": 159.985,
    "t1": 167.822,
    "time": {
-    "in": 21.0,
+    "in": 18.904,
     "speed": 1.0
    },
    "blend": "normal",
@@ -7409,18 +7391,18 @@
    "clip": "picture"
   },
   {
-   "id": "bureij-night-blast",
+   "id": "dar-al-muttaqin-street",
    "tags": [
     "y2026",
     "untreated",
     "gaza",
     "airstrike"
    ],
-   "src": "media/footage/y2026/raw/youtube_h1ikSUmcrX8.mp4",
+   "src": "media/footage/y2026/raw/youtube_BTr2lDBjto0.mp4",
    "t0": 207.33,
-   "t1": 210.334,
+   "t1": 209.734,
    "time": {
-    "in": 3.82,
+    "in": 16.98,
     "speed": 1.0
    },
    "blend": "normal",
@@ -7433,8 +7415,8 @@
    },
    "meta": {
     "catalog": "y2026",
-    "clip": "anadolu-bureij-night-blast-street-2026-05-19",
-    "seg": 1,
+    "clip": "nbc-dar-al-muttaqin-mosque-strike-2026-07-28",
+    "seg": 2,
     "z": 2.5,
     "untreated": true,
     "hits_song": [
@@ -7442,14 +7424,14 @@
     ]
    },
    "crop": [
-    0.1298,
-    0.14,
-    0.8702,
-    0.88
+    0.0054,
+    0.345,
+    0.9946,
+    0.8
    ],
    "size": [
-    430,
-    764
+    680,
+    556
    ],
    "pos": [
     720,
@@ -91193,6 +91175,53 @@
     ],
     "z": 4
    },
+   "clip": "picture"
+  },
+  {
+   "id": "maghazi-evacuation-walk",
+   "tags": [
+    "y2026",
+    "untreated",
+    "gaza",
+    "displacement"
+   ],
+   "src": "media/footage/y2026/raw/youtube_qKPvpxpb7MI.mp4",
+   "t0": 137.822,
+   "t1": 139.25,
+   "time": {
+    "in": 8.0,
+    "speed": 1.0
+   },
+   "blend": "normal",
+   "audio": {
+    "gain": 1.0
+   },
+   "fade": {
+    "in": 0.04,
+    "out": 0.25
+   },
+   "meta": {
+    "catalog": "y2026",
+    "clip": "ap-maghazi-evacuation-dusk-strikes-2026-07-15",
+    "seg": 0,
+    "z": 4.5,
+    "untreated": true,
+    "hits_song": []
+   },
+   "crop": [
+    0.0547,
+    0.16,
+    0.9453,
+    1.0
+   ],
+   "size": [
+    1440,
+    764
+   ],
+   "pos": [
+    720,
+    540
+   ],
    "clip": "picture"
   }
  ],

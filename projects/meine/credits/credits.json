@@ -1,8 +1,6 @@
 {
  "timelines": [
-  "projects/meine/comps/out/section_s0_rant.timeline.json",
-  "projects/meine/comps/out/section_s1_build.timeline.json",
-  "projects/meine/comps/out/section_s2_peak.timeline.json"
+  "projects/meine/comps/out/full.timeline.json"
  ],
  "clips": [
   {
@@ -583,26 +581,26 @@
    "provenance": "AP Archive story (shot 6 Feb 2026, posted 11 Feb): moment an Israeli missile hits a building near a cemetery in Zeitoun, Gaza City, after a warning; building flattened; crowds at rubble (AP shotlist). Same footage as AP short 4-Hs8mdpnQE (vertical crop, not catalogued)."
   },
   {
-   "catalog": "y2026",
-   "id": "ap-maghazi-evacuation-dusk-strikes-2026-07-15",
+   "catalog": "ground",
+   "id": "guardian-ansar-tent-strike-2026-03",
    "first": 126.79,
    "screen": 2.9,
    "segs": [
-    1
+    0
    ],
-   "publisher": "AP Archive",
-   "outlet": "Associated Press",
-   "title": "Three strikes hit different zones of central Gaza after warning from the Israeli army",
+   "publisher": "Guardian News",
+   "outlet": "The Guardian",
+   "title": "Fire breaks out after Israel strikes Gaza displacement camp",
    "title_en": null,
-   "uploader": "AP Archive",
-   "date": "2026-07-15",
-   "place": "Maghazi refugee camp, central Gaza Strip; Nuseirat refugee camp, central Gaza Strip",
+   "uploader": "Guardian News",
+   "date": "2026-03-11",
+   "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=qKPvpxpb7MI",
-   "license": "news (AP)",
+   "url": "https://www.youtube.com/watch?v=6RwaK4FN2Ko",
+   "license": "news (Guardian)",
    "scope": "gaza",
-   "provenance": "AP Archive story, Maghazi refugee camp, central Gaza, 15 Jul 2026: families walk through destruction after an Israeli evacuation order; dusk ball of flame after airstrike; night smoke; second night strike (AP shotlist). 360p source."
+   "provenance": "Guardian: Israeli strike on al-Ansar tent camp west of Gaza City, evening of 11 Mar 2026, after evacuation calls (Guardian description). Same event as AP 'Israel strikes Gaza tent camp following evacuation order'."
   },
   {
    "catalog": "ground",
@@ -700,36 +698,32 @@
   },
   {
    "catalog": "y2026",
-   "id": "guardian-deconstructed-zinati-strike-2026-09-15",
+   "id": "ap-maghazi-evacuation-dusk-strikes-2026-07-15",
    "first": 137.82,
-   "screen": 9.8,
+   "screen": 4.9,
    "segs": [
+    0,
     1
    ],
-   "publisher": "Guardian News (footage: Tamer Labbad)",
-   "outlet": "The Guardian",
-   "title": "Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed",
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Three strikes hit different zones of central Gaza after warning from the Israeli army",
    "title_en": null,
-   "uploader": "Guardian News",
-   "date": "2026-09-15",
-   "place": null,
-   "credits": [
-    [
-     "Filmed by",
-     "Tamer Labbad"
-    ]
-   ],
-   "credits_source": "on-screen credit, as recorded in y2026.json provenance and the section's meta.people",
-   "url": "https://www.youtube.com/watch?v=vQdUgwKtwEY",
-   "license": "news (Guardian)",
+   "uploader": "AP Archive",
+   "date": "2026-07-15",
+   "place": "Maghazi refugee camp, central Gaza Strip; Nuseirat refugee camp, central Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=qKPvpxpb7MI",
+   "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "Guardian 'Deconstructed' analysis (posted 18 Sep 2026) of eyewitness footage (credit Tamer Labbad), Gaza City, 15 Sep 2026: after a first strike wounded civil defence paramedic Sharif Shadi Labad, 15-year-old Mohammad Abdul Zinati went to check on a body and was killed by a second Israeli strike; munition identified on screen; IDF statement shown. Guardian opens with a distress warning."
+   "provenance": "AP Archive story, Maghazi refugee camp, central Gaza, 15 Jul 2026: families walk through destruction after an Israeli evacuation order; dusk ball of flame after airstrike; night smoke; second night strike (AP shotlist). 360p source."
   },
   {
    "catalog": "y2026",
    "id": "ap-father-sieves-bones-2026-01-24",
    "first": 144.97,
-   "screen": 30.2,
+   "screen": 15.0,
    "segs": [
     0
    ],
@@ -749,53 +743,52 @@
   },
   {
    "catalog": "y2026",
-   "id": "mee-112-remains-flags-2026-08-03",
+   "id": "ap-mass-funeral-105-2026-10-01",
    "first": 154.26,
-   "screen": 7.6,
+   "screen": 5.7,
    "segs": [
-    0
+    3
    ],
-   "publisher": "Middle East Eye",
-   "outlet": "Middle East Eye",
-   "title": "Gaza civil defence teams recover remains of 112 Palestinians from rubble",
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": null,
    "title_en": null,
-   "uploader": "Middle East Eye",
-   "date": "2026-08-03",
+   "uploader": null,
+   "date": "2026-10-01",
    "place": null,
-   "credits": [
-    [
-     "Footage credited on screen to",
-     "khamees.hasira (Instagram)"
-    ]
-   ],
-   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
-   "url": "https://www.youtube.com/watch?v=4wLmM3v8XH4",
-   "license": "news (MEE; journalist UGC)",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=zC_WjmWdUJk",
+   "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "Middle East Eye short (filmed 3 Aug 2026; on-screen credit Instagram khamees.hasira): remains of 112 Palestinians killed in Israeli strikes on 23 Nov 2023 in Sabra, Gaza City, recovered from rubble, laid out under Palestinian flags with photos ahead of mass funeral."
+   "provenance": "AP Archive story, Gaza City, 1 Oct 2026: mass funeral after 105 bodies recovered from the rubble in the past several days (AP shotlist). 360p source."
   },
   {
-   "catalog": "y2026",
-   "id": "ap-khanyounis-morgue-bodies-2026-07-29",
+   "catalog": "ground",
+   "id": "ap-rafah-family-shrouds-2024-01",
    "first": 156.17,
-   "screen": 9.5,
+   "screen": 3.8,
    "segs": [
-    0,
     1
    ],
    "publisher": "AP Archive",
    "outlet": "Associated Press",
-   "title": "Bodies brought to Gaza hospital after deadly Israeli strike",
+   "title": "Relatives mourn nine members of a family killed in a strike in Rafah",
    "title_en": null,
    "uploader": "AP Archive",
-   "date": "2026-07-29",
-   "place": "Khan Younis, Gaza",
-   "credits": [],
+   "date": "2024-01-12",
+   "place": "Rafah, Gaza Strip",
+   "credits": [
+    [
+     "Camera",
+     "Mohammad Jahjouh"
+    ]
+   ],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=G9EY3rgBcLc",
+   "url": "https://www.youtube.com/watch?v=2PQdALFa90Y",
    "license": "news (AP)",
    "scope": "gaza",
-   "provenance": "AP Archive story, Khan Younis, 29 Jul 2026: medics and people carry bodies of killed men to the morgue after an Israeli strike; relatives mourn (AP shotlist, 'EDIT CONTAINS GRAPHIC CONTENT'). 360p source."
+   "provenance": "AP, Abu Youssef al-Najjar Hospital, Rafah, 12 Jan 2024: nine members of one family killed, bodies in white sheets (AP shotlist)."
   },
   {
    "catalog": "ground",
@@ -1072,25 +1065,25 @@
   },
   {
    "catalog": "y2026",
-   "id": "anadolu-bureij-night-blast-street-2026-05-19",
+   "id": "nbc-dar-al-muttaqin-mosque-strike-2026-07-28",
    "first": 207.33,
-   "screen": 5.3,
+   "screen": 2.4,
    "segs": [
-    1
+    2
    ],
-   "publisher": "Anadolu English",
-   "outlet": "Anadolu Agency",
-   "title": "Explosion hits house in Gaza's Bureij Camp amid Israeli attack",
+   "publisher": "NBC News (footage: WAFA, Reuters)",
+   "outlet": "NBC News",
+   "title": null,
    "title_en": null,
-   "uploader": "Anadolu English",
-   "date": "2026-05-19",
+   "uploader": null,
+   "date": "2026-07-28",
    "place": null,
    "credits": [],
    "credits_source": null,
-   "url": "https://www.youtube.com/watch?v=h1ikSUmcrX8",
-   "license": "news (Anadolu)",
+   "url": "https://www.youtube.com/watch?v=BTr2lDBjto0",
+   "license": "news (NBC; WAFA/Reuters)",
    "scope": "gaza",
-   "provenance": "Anadolu Agency English short (AA watermark; tag 'Deir al-Balah, Gaza, May 19 2026'; titled as Bureij camp): eyewitness phone footage of an Israeli strike on a house at night; a man in the street is caught by the blast; second clip filmed amid dust and searchlights."
+   "provenance": "NBC News short, Gaza City, 28 Jul 2026: Israeli airstrike destroys the Dar al-Muttaqin mosque; two angles credited on screen WAFA and Reuters. Square video in vertical frame with NBC branding; no casualties reported."
   },
   {
    "catalog": "ground",
@@ -1398,7 +1391,7 @@
    "catalog": "y2026",
    "id": "ap-jabaliya-strike-shifa-arrivals-2026-07-14",
    "first": 304.97,
-   "screen": 9.5,
+   "screen": 7.6,
    "segs": [
     1
    ],
@@ -1531,6 +1524,29 @@
    "provenance": "AP drone, Beit Lahiya, northern Gaza, 17 Feb 2025 during ceasefire (AP shotlist)."
   },
   {
+   "catalog": "y2026",
+   "id": "ap-khanyounis-morgue-bodies-2026-07-29",
+   "first": 325.93,
+   "screen": 5.7,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Bodies brought to Gaza hospital after deadly Israeli strike",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-07-29",
+   "place": "Khan Younis, Gaza",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=G9EY3rgBcLc",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Khan Younis, 29 Jul 2026: medics and people carry bodies of killed men to the morgue after an Israeli strike; relatives mourn (AP shotlist, 'EDIT CONTAINS GRAPHIC CONTENT'). 360p source."
+  },
+  {
    "catalog": "ground",
    "id": "wsj-residents-film-tower-strike-2023-10",
    "first": 331.34,
@@ -1556,6 +1572,28 @@
    "license": "news (WSJ / Reuters)",
    "scope": "gaza",
    "provenance": "WSJ, Gaza, Thursday 12 Oct 2023: residents film from a balcony as Israeli strike hits a nearby high-rise; Reuters credit on-screen at end."
+  },
+  {
+   "catalog": "ground",
+   "id": "roya-night-rescue-central-gaza-2026-01",
+   "first": 333.54,
+   "screen": 1.9,
+   "segs": [
+    0
+   ],
+   "publisher": "Roya News English (Jordan)",
+   "outlet": "Roya News",
+   "title": "Rescuers at site of overnight ‘Israeli’ strike in central Gaza",
+   "title_en": null,
+   "uploader": "Roya News English",
+   "date": "2026-01-09",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=M3L1t4PVSiY",
+   "license": "news (Roya)",
+   "scope": "gaza",
+   "provenance": "Roya News English, rescue at site of overnight Israeli strike in central Gaza; on-screen tag 'Gaza Strip 9/1/2026'. Post-ceasefire strike."
   },
   {
    "catalog": "ground",
@@ -1644,6 +1682,55 @@
    "provenance": "AP Archive: Iron Dome interceptors chase a barrage of rockets fired from Gaza, May 2021, night."
   },
   {
+   "catalog": "y2026",
+   "id": "anadolu-bureij-night-blast-street-2026-05-19",
+   "first": 350.36,
+   "screen": 2.3,
+   "segs": [
+    1
+   ],
+   "publisher": "Anadolu English",
+   "outlet": "Anadolu Agency",
+   "title": "Explosion hits house in Gaza's Bureij Camp amid Israeli attack",
+   "title_en": null,
+   "uploader": "Anadolu English",
+   "date": "2026-05-19",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=h1ikSUmcrX8",
+   "license": "news (Anadolu)",
+   "scope": "gaza",
+   "provenance": "Anadolu Agency English short (AA watermark; tag 'Deir al-Balah, Gaza, May 19 2026'; titled as Bureij camp): eyewitness phone footage of an Israeli strike on a house at night; a man in the street is caught by the blast; second clip filmed amid dust and searchlights."
+  },
+  {
+   "catalog": "y2026",
+   "id": "mee-112-remains-flags-2026-08-03",
+   "first": 364.02,
+   "screen": 1.9,
+   "segs": [
+    0
+   ],
+   "publisher": "Middle East Eye",
+   "outlet": "Middle East Eye",
+   "title": "Gaza civil defence teams recover remains of 112 Palestinians from rubble",
+   "title_en": null,
+   "uploader": "Middle East Eye",
+   "date": "2026-08-03",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "khamees.hasira (Instagram)"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=4wLmM3v8XH4",
+   "license": "news (MEE; journalist UGC)",
+   "scope": "gaza",
+   "provenance": "Middle East Eye short (filmed 3 Aug 2026; on-screen credit Instagram khamees.hasira): remains of 112 Palestinians killed in Israeli strikes on 23 Nov 2023 in Sabra, Gaza City, recovered from rubble, laid out under Palestinian flags with photos ahead of mass funeral."
+  },
+  {
    "catalog": "ground",
    "id": "ap-muwasi-tents-strike-2025-06",
    "first": 365.62,
@@ -1692,6 +1779,33 @@
   },
   {
    "catalog": "y2026",
+   "id": "guardian-deconstructed-zinati-strike-2026-09-15",
+   "first": 388.78,
+   "screen": 4.9,
+   "segs": [
+    1
+   ],
+   "publisher": "Guardian News (footage: Tamer Labbad)",
+   "outlet": "The Guardian",
+   "title": "Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed",
+   "title_en": null,
+   "uploader": "Guardian News",
+   "date": "2026-09-15",
+   "place": null,
+   "credits": [
+    [
+     "Filmed by",
+     "Tamer Labbad"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance and the section's meta.people",
+   "url": "https://www.youtube.com/watch?v=vQdUgwKtwEY",
+   "license": "news (Guardian)",
+   "scope": "gaza",
+   "provenance": "Guardian 'Deconstructed' analysis (posted 18 Sep 2026) of eyewitness footage (credit Tamer Labbad), Gaza City, 15 Sep 2026: after a first strike wounded civil defence paramedic Sharif Shadi Labad, 15-year-old Mohammad Abdul Zinati went to check on a body and was killed by a second Israeli strike; munition identified on screen; IDF statement shown. Guardian opens with a distress warning."
+  },
+  {
+   "catalog": "y2026",
    "id": "ap-mass-funeral-hassayna-2026-08-04",
    "first": 396.4,
    "screen": 15.2,
@@ -1711,6 +1825,33 @@
    "license": "news (AP)",
    "scope": "gaza",
    "provenance": "AP Archive story, Gaza City, 4 Aug 2026: mass funeral for 100+ members of the Hassayna and Abu Sharia families, killed in an Israeli strike in Nov 2023, remains recently recovered from rubble (AP shotlist; captioned edit)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-aqsa-body-bags-prayer-2023-12",
+   "first": 426.88,
+   "screen": 15.2,
+   "segs": [
+    2
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Palestinians at Deir al-Balah hospital pray over body bags holding victims of Israel airstrikes",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-12-28",
+   "place": "Outside al-Aqsa Martyr's Hospital, Deir al-Balah, Gaza",
+   "credits": [
+    [
+     "Camera",
+     "Abd Al Kareem Hana"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=Xl9NY5h-MHQ",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, outside al-Aqsa Martyrs Hospital, Deir al-Balah, 28 Dec 2023: crowds pray over shrouded bodies on the ground (AP shotlist)."
   }
  ],
  "people": [
@@ -1743,38 +1884,6 @@
     "ap-father-sieves-bones-2026-01-24"
    ],
    "detail": "Killed, with his brother, his brother's wife and their children, in an Israeli airstrike on their home in Gaza City. He searches the rubble for their bones, January 2026 (AP; their names are not given)"
-  },
-  {
-   "name": "112 members of the Hassayna and Abu Sharia families",
-   "kind": "group",
-   "roles": [
-    "group: killed"
-   ],
-   "age": null,
-   "sources": [
-    "https://www.youtube.com/watch?v=D8BWnIo43Dw",
-    "https://www.youtube.com/watch?v=4wLmM3v8XH4"
-   ],
-   "clips": [
-    "ap-mass-funeral-hassayna-2026-08-04",
-    "mee-112-remains-flags-2026-08-03"
-   ],
-   "detail": "Killed with some 300 others when an Israeli strike flattened a residential block in Sabra, Gaza City, in November 2023. Their remains were recovered from the rubble and buried on 4 August 2026; more are still under it (AP; Middle East Eye)"
-  },
-  {
-   "name": "Two people killed near a tent camp in Khan Younis",
-   "kind": "group",
-   "roles": [
-    "group: killed"
-   ],
-   "age": null,
-   "sources": [
-    "https://www.youtube.com/watch?v=G9EY3rgBcLc"
-   ],
-   "clips": [
-    "ap-khanyounis-morgue-bodies-2026-07-29"
-   ],
-   "detail": "Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP)"
   },
   {
    "name": "Dozens buried in the grounds of Nasser Hospital",
@@ -1837,6 +1946,21 @@
    "detail": "Two children among them. In southern Gaza a strike on an apartment killed three members of one family, including their four-year-old child (local health officials and Nasser hospital, via AP)"
   },
   {
+   "name": "Two people killed near a tent camp in Khan Younis",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=G9EY3rgBcLc"
+   ],
+   "clips": [
+    "ap-khanyounis-morgue-bodies-2026-07-29"
+   ],
+   "detail": "Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP)"
+  },
+  {
    "name": "The dead of a November 2023 strike on a building in Nuseirat",
    "kind": "group",
    "roles": [
@@ -1852,19 +1976,36 @@
    "detail": "Their remains, still being recovered from the rubble by Gaza's civil defence in September 2026 (Roya News)"
   },
   {
-   "name": "Sharif Shadi Labad",
-   "kind": "injured",
+   "name": "112 members of the Hassayna and Abu Sharia families",
+   "kind": "group",
    "roles": [
-    "injured (civil defence paramedic)"
+    "group: killed"
    ],
    "age": null,
    "sources": [
-    "https://www.youtube.com/watch?v=vQdUgwKtwEY"
+    "https://www.youtube.com/watch?v=D8BWnIo43Dw",
+    "https://www.youtube.com/watch?v=4wLmM3v8XH4"
    ],
    "clips": [
-    "guardian-deconstructed-zinati-strike-2026-09-15"
+    "ap-mass-funeral-hassayna-2026-08-04",
+    "mee-112-remains-flags-2026-08-03"
    ],
-   "detail": "Injured by the first strike. The Israeli military told the Guardian he was a Hamas militant and had been targeted"
+   "detail": "Killed with some 300 others when an Israeli strike flattened a residential block in Sabra, Gaza City, in November 2023. Their remains were recovered from the rubble and buried on 4 August 2026; more are still under it (AP; Middle East Eye)"
+  },
+  {
+   "name": "25 people killed overnight in Bureij and Nuseirat",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=Xl9NY5h-MHQ"
+   ],
+   "clips": [
+    "ap-aqsa-body-bags-prayer-2023-12"
+   ],
+   "detail": "Five children and seven women among them, received by al-Aqsa Martyrs Hospital, Deir al-Balah, 28 December 2023 (hospital records, via AP)"
   },
   {
    "name": "A member of Gaza's civil defence",
@@ -1882,11 +2023,25 @@
    "detail": "Critically injured in an Israeli airstrike near Abu Sharkh roundabout, brought to al-Shifa Hospital, 1 September 2026 (Roya News; name not given)"
   },
   {
+   "name": "Sharif Shadi Labad",
+   "kind": "injured",
+   "roles": [
+    "injured (civil defence paramedic)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=vQdUgwKtwEY"
+   ],
+   "clips": [
+    "guardian-deconstructed-zinati-strike-2026-09-15"
+   ],
+   "detail": "Injured by the first strike. The Israeli military told the Guardian he was a Hamas militant and had been targeted"
+  },
+  {
    "name": "Mahmoud Hammad",
    "kind": "bereaved",
    "roles": [
-    "father; his wife and children were killed",
-    "bereaved father (his wife and children killed)"
+    "father; his wife and children were killed"
    ],
    "age": null,
    "sources": [
@@ -1906,6 +2061,9 @@
    "media/derived/face.mp4",
    "media/derived/face_missiles_on_beat.mp4",
    "media/derived/face_rant2.mp4"
+  ],
+  "self": [
+   "media/derived/credits.mp4"
   ]
  },
  "unknown_sources": [],

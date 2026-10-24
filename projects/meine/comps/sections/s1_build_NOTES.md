@@ -11,7 +11,7 @@ Run `uv run python projects/meine/comps/sections/s1_build.py`. The v1 script is 
 
 Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/section_s1_build.timeline.json
 
-`c.save()` reports 159 layers: 90 hits on the beat, 2 on 8ths/16ths (the bar 50 eighth-note stutter, deliberate) and 0 off the grid. No layer is out of scope.
+`c.save()` reports 160 layers: 90 hits on the beat, 2 on 8ths/16ths (the bar 50 eighth-note stutter, deliberate) and 0 off the grid. No layer is out of scope.
 
 ## Rant 2
 
@@ -58,13 +58,13 @@ Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/s
 | 60-63 | 114.5-122 | The copies bounce off the walls on 2 beats, then every beat. All of them swell on "I'm not paying ENOUGH" (61, 116.40, and 118.31). The coast-road walkers bed. |
 | 63 | 120.93 | The rant ends. **Every head falls back into him and fades over about 1.2 s** (gone by 122.1). |
 | 64-71 | 122-137 | **No heads.** 64: the IDF crater strike-cam. 65: a Reuters fireball. 66-67: **the stack** (below). 68-69: news.com.au night tower, IDF Beit Hanoun, Reuters. 70 b2-72: the Reaper countdown "3, 2, 1" on two-beat steps, its blast on bar 72 (shortened, so it is gone by 138.3). The flour-crowd bed. |
-| 72-75 | 137.4-144.97 | **Untreated** (below). The music is pulled down to 12%. |
-| 76-83 | 145-160 | **Untreated**: Hammad, then the stack. |
+| 72-75 | 137.4-144.97 | **Untreated** Maghazi: families walking at dusk, then the strike (below). The music is pulled down to 12%. |
+| 76-83 | 145-160 | **Untreated**: Hammad, then the stack (mass-funeral remains, the Rafah family's shrouds, the graves). |
 | 84-87 | 160-167.8 | **Untreated**: the Nasser courtyard graves fill the picture with their sound while the riser climbs. |
 | 88-95 | 167.8-183 | Launches on alternate downbeats, each with a dip: HIMARS in the Negev (Juniper Oak), an Apache Hellfire (Red Sands), an Apache Hellfire (Yakima) and a PAC-3 (Lockheed 2026). Night strikes on Gaza on the odd bars. No heads. |
 | 96-99 | 183-190.7 | People returning north on the coast road, grooved so each step is a beat. IDF strike-cam on 96 and 98. |
 | 100-103 | 190.7-198.3 | **Untreated** Deir al-Balah (below). |
-| 104-111 | 198.3-213.5 | The Lockheed CGI F-35 line, screened (its diegetic labels kept). 104: an IDF strike (Times Radio repost, captions cropped). 105-107: strikes. 108: a white-phosphorus airburst over Gaza. 109: **untreated** Bureij (below). |
+| 104-111 | 198.3-213.5 | The Lockheed CGI F-35 line, screened (its diegetic labels kept). 104: an IDF strike (Times Radio repost, captions cropped). 105-107: strikes. 108: a white-phosphorus airburst over Gaza. 109: **untreated** Dar al-Muttaqin street (below). |
 | 110-111 | 209.7-213.5 | **He fades back in** (still frame, silent), then says "They need more and more MISSILES", landing MISSILES on bar 112's downbeat with his voice (face.mp4 9.08-10.26). |
 | 112-117 | 213.5-225 | On MISSILES he splits: 8 copies bounce (2 beats, then every beat) and 20 small heads form a sphere, then a cube. A strike on every 2 beats, then every beat. Jabaliya digging by hand (grooved). 116: "missiles" on each beat, a different copy each time (`c.say like=`). 117: "thou / shalt / give / Israel" passed between copies. |
 | 118 | 224.967 | **Handoff.** Every head collapses to the centre and vanishes on the downbeat. A six-voice "missiles" chorus sounds there. One night-blast flash (AP, from Israel) fades out across the bar, ending at 226.871. Clean Meine follows. Lane B may fade in from 223.06; those last two bars are my busiest. |
@@ -73,38 +73,39 @@ Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/s
 
 "Untreated" here means: normal blend, no effects, no key, no heads on top, the footage's own sound, a large frame.
 
-- **137.82-142.77, Zinati, Gaza City, 15 Sep 2026** (Guardian, eyewitness footage by Tamer Labbad).
-  - Shown full-picture from 138.3. The second strike lands on bar 74's downbeat, 141.17.
-  - The music is ducked to 12% across bars 72-75.
-  - It is cut 1.6 s after the strike, before Guardian's split screen and place card. Meine alone follows until 145.
+- **137.82-142.77, Maghazi camp, 15 Jul 2026** (AP). Two shots of one AP story, in AP's order, full picture, their own sound.
+  - 137.82-139.25 (src 8.0): families with bags walk toward the camera along a rubble road at dusk, under an evacuation order.
+  - Cut on bar 73 to the dark horizon (src 15.36); the ball of flame from that evening's strike lands on bar 74's downbeat, 141.17. Cut 1.6 s later as the cloud climbs.
+  - The music is ducked to 12% across bars 72-75. Meine alone follows until 145.
+  - The walk shot sits above the Reaper countdown (z 4.5), so the monitor's fading tail (to 138.26) is never over the families.
+  - (Until 2026-10-24 this slot held the Zinati killing. It is now shown once, in s2 at bar 204, its deepest silence.)
 - **144.97-160.0, Mahmoud Hammad sieving the sand of his home for the remains of his wife and children** (AP, Jan 2026).
   - Full picture, one shake every two beats (retimed to the grid), so his fingers lift the fragments on the grid.
   - Sound at gain 1. Music at 15% for bars 76-79.
 - **Stack 80-83, over Hammad**, three windows landing one per downbeat (81, 82, 83), each with its own sound (gain 0.6). Music at 20%.
-  - The remains of 112 people under flags (MEE, with their photos).
-  - Bodies at the Khan Younis morgue (AP).
-  - The Nasser courtyard graves (NBC).
-- **159.99-167.82, the Nasser courtyard graves** fill the picture, with their sound, while the music climbs back.
+  - 81: flag-wrapped remains with photos and handwritten names, at the Gaza City mass funeral of 105 bodies recovered from the rubble (AP, 1 Oct 2026, src 36.0, one shot).
+  - 82: men standing over the shrouded bodies of nine members of one family, al-Najjar hospital, Rafah (AP, 12 Jan 2024, src 5.5, one shot).
+  - 83: the Nasser courtyard graves (NBC, src 17.0).
+  - (The MEE 112 remains and the Khan Younis morgue were here; both are shown once, in s2.)
+- **159.99-167.82, the Nasser courtyard graves** fill the picture, with their sound, while the music climbs back. It is the bar-83 tile's take continuing (src 18.9 on), so the segment is used once.
 - **Stack 66-67 (125.84-129.73)**: four strikes on Gaza land one per beat into the four quarters of the picture and stay there, each with its sound (gain 0.45). Meine dipped to 30%, music to 45%.
   - Zeitoun cemetery (AP, Feb 2026)
   - Reuters, 22 Oct 2023
-  - Maghazi dusk (AP, Jul 2026)
+  - the al-Ansar tent camp strike at night, men watching in the street (Guardian, 11 Mar 2026; logo and caption box cropped). It replaced the Maghazi fireball, now in the 72-75 window.
   - NBC night tower
 - **190.38-198.30, Deir al-Balah tent camp, 26 Mar 2026** (Guardian / AP). A tall untreated window.
   - The fireballs land on bar 100's downbeat; people duck and run; the sound is at gain 1.
   - It then holds still on the smoke over the tents to bar 104.
   - Music at 25% for about 3.5 s.
-- **207.33-210.33, Bureij camp, 19 May 2026** (Anadolu, eyewitness phone). A night blast on bar 109's downbeat knocks a man in the street off his feet. Tall window, its own sound, music at 30%.
-- **No heads over any of these.** The head-free stretch runs 122.1 to 209.7. He returns only at 210, after the Bureij window ends.
+- **207.33-209.73, Gaza City, 28 Jul 2026, the Dar al-Muttaqin mosque strike** (Reuters street angle, from NBC's vertical edit). Filmed from a roof over a street of tents: the fireball lands on bar 109's downbeat, people below run, the camera drops to the parapet. A 680x556 window (only the Reuters picture: NBC's "Gaza City July 28" band and the REUTERS credit cropped), its own sound, music at 30%. It now ends on bar 110 (209.73), where his still face starts to fade in (Bureij ran 0.6 s into that fade).
+  - (Bureij was here; it is shown once, in s2 at bar 184.)
+- **No heads over any of these.** The head-free stretch runs 122.1 to 209.7. He returns only at 210, after the bar-109 window ends.
 
 ## People named (`meta.people`, from source provenance only)
 
-- **Mohammad Abdul Zinati**, 15, killed. Source: https://www.youtube.com/watch?v=vQdUgwKtwEY (Guardian).
-- **Sharif Shadi Labad**, civil defence paramedic, injured. Same source.
-- **Tamer Labbad**, filmed the footage. Same source.
 - **Mahmoud Hammad**, father; his wife and children were killed. Source: https://www.youtube.com/watch?v=XoQWFfNR_M8 (AP).
 
-The MEE 112 tile shows photos of the dead, but no names are in its provenance, so none are given. The morgue, graves, stack and strike clips name no one.
+(Zinati, Sharif Shadi Labad and Tamer Labbad are named in s2, where the Zinati footage now is.) The mass-funeral tile shows photos and handwritten names, but the provenance names no one, so none are given. The Rafah family is unnamed in its provenance. The Maghazi, al-Ansar, Dar al-Muttaqin, graves and stack clips name no one.
 
 ## What was swapped for scope
 
@@ -123,7 +124,10 @@ The MEE 112 tile shows photos of the dead, but no names are in its provenance, s
 | leak | fix |
 |---|---|
 | Guardian burned-in captions at 194-197 ("This video shows an explosion...", "At least one person was killed") | Window ends before them and holds a clean frame. |
-| Guardian place card at 143 | Zinati cut earlier. |
+| Guardian place card at 143 | (Zinati moved to s2.) |
+| Guardian caption box on al-Ansar (from 4.5 s) and logo | Crop (0, 0.09, 1, 0.70): the caption box rises to y 0.72. |
+| NBC title band and REUTERS credit on Dar al-Muttaqin | Crop to the Reuters picture (0, 0.345, 1, 0.80). |
+| AP bug on Maghazi, mass funeral, Rafah shrouds | AP_CROP. |
 | "Secondary Explosions" label on IDF Beit Hanoun at 132 | Top crop 0.24. |
 | IMOD camera icon (Ashdod) | Cropped. |
 | Al Jazeera bug (civil-defence dig) | Cropped. |
@@ -136,7 +140,7 @@ The MEE 112 tile shows photos of the dead, but no names are in its provenance, s
 | News lower-thirds on ground strikes | NEWS_CROP. |
 | IDF releases rebroadcast with bugs | `idf-` crop. |
 
-- Kept on purpose: reticles and sight data, Lockheed's CGI factory labels, the Guardian forensic circle in the Zinati shot (it is the analysis of the killing), and Meine's own signs.
+- Kept on purpose: reticles and sight data, Lockheed's CGI factory labels, the handwritten names and photos on the mass-funeral remains, and Meine's own signs.
 - Every footage layer has `"clip": "picture"`. Only heads cross the letterbox.
 
 ## Open

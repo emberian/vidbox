@@ -34,13 +34,13 @@
 - 204 (388.78): Zinati. Guardian eyewitness footage, src 2.0-6.9, own sound, music to 0.05. Then
   black until bar 208, music nearly silent (measured -40 dB).
 - 208-215 (396.40-411.63): the Hassayna/Abu Sharia mass funeral, one 15 s take, music to 0.3.
-- 224-231 (426.88-442.11): Mahmoud Hammad sieving, one 15 s take, music to 0.3.
+- 224-231 (426.88-442.11): Mahmoud (was Hammad; now the al-Aqsa hospital prayer over body bags, see s2_peak_NOTES.md) sieving, one 15 s take, music to 0.3.
 
 ## Named people (meta.people)
 - Mohammad Abdul Zinati (15, killed)
 - Sharif Shadi Labad (paramedic, injured)
 - Tamer Labbad (filmed it)
-- Mahmoud Hammad (bereaved father)
+- Mahmoud (was Hammad; now the al-Aqsa hospital prayer over body bags, see s2_peak_NOTES.md) (bereaved father)
 
 ## Left to do
 - Nothing. Revision 3 is complete: rendered, caption-swept at 1 s, and in the notes.
