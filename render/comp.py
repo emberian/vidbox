@@ -534,9 +534,20 @@ class Comp:
             if L.get("id") == "meine" and duck and "opacity" not in L:
                 L["opacity"] = duck
         out.write_text(json.dumps(tl, indent=1) + "\n")
-        offgrid = [(L["id"], h) for L in self.layers for h in L.get("meta", {}).get("hits_song", [])
-                   if min(abs(h - b) for b in self.beats) > 0.03]
-        print(f"{out.relative_to(ROOT) if out.is_relative_to(ROOT) else out}: {len(self.layers)} layers; {len(offgrid)} hits off the beat grid",
+        # each hit: on a beat, on an eighth/sixteenth (deliberate stutters), or genuinely off-grid
+        on_beat, on_sub, offgrid = 0, 0, []
+        for L in self.layers:
+            for h in L.get("meta", {}).get("hits_song", []):
+                pos = self.beat_pos(h)
+                err = lambda div: abs(pos / div - round(pos / div)) * div * self.period
+                if err(1) <= 0.03:
+                    on_beat += 1
+                elif err(0.25) <= 0.03:
+                    on_sub += 1
+                else:
+                    offgrid.append((L["id"], h))
+        print(f"{out.relative_to(ROOT) if out.is_relative_to(ROOT) else out}: {len(self.layers)} layers; "
+              f"hits: {on_beat} on beat, {on_sub} on 8ths/16ths, {len(offgrid)} off the grid",
               *(f"\n  off-grid: {i} @ {h:.3f}" for i, h in offgrid[:8]))
         return out
 

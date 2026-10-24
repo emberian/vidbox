@@ -209,9 +209,12 @@ class Layer(Params):
         fade = spec.get("fade", {})
         self.fin, self.fout = fade.get("in", 0.0), fade.get("out", 0.0)
 
-    def open(self, t0, t1):
-        # decode at the largest size this layer reaches (but never above the source's own)
-        scales = [self.sig("scale", self.s.get("scale"), 1)(t) for t in np.linspace(t0, t1, 24)]
+    def open(self):
+        # Decode at the largest size this layer reaches over its WHOLE life (never above the
+        # source's own), sampled densely enough to catch beat pulses. Must not depend on where
+        # a render chunk starts, or parallel chunks decode at different sizes and seams show.
+        n = int(min(4000, max(24, (self.t1 - self.t0) * 12.5)))
+        scales = [self.sig("scale", self.s.get("scale"), 1)(t) for t in np.linspace(self.t0, self.t1, n)]
         smax = max(1e-3, max(abs(x) for x in scales))
         w, h = self.base[0] * smax, self.base[1] * smax
         f = min(1.0, self.native[0] / w, self.native[1] / h)
@@ -255,7 +258,7 @@ def render_video(tl, frames, k, out, ctx, warm=0):
     post = Params(ctx, k) if tl.get("post") else None
     enc = subprocess.Popen(
         ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(fps),
-         "-i", "-", "-c:v", "libx264", "-crf", "17" if k == 1 else "22", "-preset", "medium" if k == 1 else "veryfast",
+         "-i", "-", "-c:v", "libx264", "-crf", os.environ.get("VIDBOX_CRF", "17" if k == 1 else "22"), "-preset", "medium" if k == 1 else "veryfast",
          "-pix_fmt", "yuv420p", "-an", str(out)],
         stdin=subprocess.PIPE)
     post_state = {}
@@ -266,7 +269,7 @@ def render_video(tl, frames, k, out, ctx, warm=0):
         for L in layers:
             if L.t0 <= t < L.t1:
                 if L.reader is None:
-                    L.open(t, L.t1)
+                    L.open()
                 L.draw(canvas, t)
             elif L.reader is not None and t >= L.t1:
                 L.close()

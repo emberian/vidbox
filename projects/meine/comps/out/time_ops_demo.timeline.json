@@ -1,0 +1,876 @@
+{
+ "version": 1,
+ "project": "meine",
+ "size": [
+  1440,
+  1080
+ ],
+ "fps": 25,
+ "range": [
+  40,
+  66
+ ],
+ "music": {
+  "src": "media/src/meine.webm",
+  "gain": 1
+ },
+ "layers": [
+  {
+   "id": "meine",
+   "tags": [
+    "bg"
+   ],
+   "src": "media/src/meine.webm",
+   "t0": 40,
+   "t1": 66,
+   "time": {
+    "in": 40,
+    "speed": 1.0
+   },
+   "fit": "native",
+   "opacity": {
+    "k": [
+     [
+      40,
+      1.0
+     ],
+     [
+      41.989,
+      1.0
+     ],
+     [
+      42.109,
+      0.5
+     ],
+     [
+      42.709,
+      0.5
+     ],
+     [
+      43.309,
+      1.0
+     ],
+     [
+      45.797,
+      1.0
+     ],
+     [
+      45.917,
+      0.5
+     ],
+     [
+      46.517,
+      0.5
+     ],
+     [
+      47.117,
+      1.0
+     ],
+     [
+      49.606,
+      1.0
+     ],
+     [
+      49.726,
+      0.5
+     ],
+     [
+      50.326,
+      0.5
+     ],
+     [
+      50.926,
+      1.0
+     ],
+     [
+      53.414,
+      1.0
+     ],
+     [
+      53.534,
+      0.5
+     ],
+     [
+      54.134,
+      0.5
+     ],
+     [
+      54.734,
+      1.0
+     ],
+     [
+      66,
+      1.0
+     ]
+    ],
+    "ease": "smooth"
+   }
+  },
+  {
+   "id": "ap-zikim-flour-multitude-2025-07-30#2@42.11~groove",
+   "tags": [
+    "ground",
+    "aid",
+    "flour-sacks",
+    "crowd"
+   ],
+   "src": "media/footage/ground/raw/youtube_KwtMLK-pa-s.mp4",
+   "t0": 42.109,
+   "t1": 64.969,
+   "time": {
+    "map": {
+     "song": [
+      42.109,
+      42.585,
+      43.061,
+      43.537,
+      44.013,
+      44.489,
+      44.965,
+      45.441,
+      45.917,
+      46.393,
+      46.869,
+      47.345,
+      47.821,
+      48.298,
+      48.774,
+      49.25,
+      49.726,
+      50.202,
+      50.678,
+      51.154,
+      51.63,
+      52.106,
+      52.582,
+      53.058,
+      53.534,
+      54.01,
+      54.486,
+      54.962,
+      55.438,
+      55.914,
+      56.39,
+      56.866,
+      57.342,
+      57.818,
+      58.294,
+      58.77,
+      59.257,
+      59.733,
+      60.209,
+      60.685,
+      61.161,
+      61.637,
+      62.113,
+      62.589,
+      63.065,
+      63.541,
+      64.017,
+      64.493,
+      64.969
+     ],
+     "src": [
+      72.0,
+      72.55,
+      73.1,
+      73.65,
+      74.2,
+      74.75,
+      75.3,
+      75.85,
+      76.4,
+      76.95,
+      77.5,
+      78.05,
+      78.6,
+      79.15,
+      79.7,
+      80.25,
+      80.8,
+      81.35,
+      81.9,
+      82.45,
+      83.0,
+      83.55,
+      84.1,
+      84.65,
+      85.2,
+      85.75,
+      86.3,
+      86.85,
+      87.4,
+      87.95,
+      88.5,
+      89.05,
+      89.6,
+      90.15,
+      90.7,
+      91.25,
+      91.8,
+      92.35,
+      92.9,
+      93.45,
+      94.0,
+      94.55,
+      95.1,
+      95.65,
+      96.2,
+      96.75,
+      97.3,
+      97.85,
+      98.4
+     ]
+    }
+   },
+   "meta": {
+    "catalog": "ground",
+    "clip": "ap-zikim-flour-multitude-2025-07-30",
+    "seg": 2,
+    "hits_song": [],
+    "groove": {
+     "cycle": 0.55,
+     "beats": 1,
+     "speed": 1.1555
+    }
+   },
+   "fit": "picture",
+   "opacity": 0.35,
+   "fade": {
+    "in": 1,
+    "out": 1
+   },
+   "fx": [
+    {
+     "op": "sat",
+     "factor": 0.3
+    }
+   ]
+  },
+  {
+   "id": "oir-mosul-vbied-facility-2017#0@42.11~multi",
+   "tags": [
+    "weapons",
+    "IR",
+    "white-hot",
+    "explosion"
+   ],
+   "src": "media/footage/weapons/raw/dvids_512858.mp4",
+   "t0": 41.109,
+   "t1": 55.034,
+   "time": {
+    "map": {
+     "song": [
+      41.109,
+      42.109,
+      45.917,
+      49.726,
+      53.534,
+      55.034
+     ],
+     "src": [
+      8.7441,
+      9.7441,
+      16.2839,
+      23.9583,
+      30.1645,
+      31.6645
+     ]
+    }
+   },
+   "meta": {
+    "catalog": "weapons",
+    "clip": "oir-mosul-vbied-facility-2017",
+    "seg": 0,
+    "hits_song": [
+     42.109,
+     45.917,
+     49.726,
+     53.534
+    ],
+    "speeds": [
+     1.0,
+     1.717,
+     2.015,
+     1.63,
+     1.0
+    ]
+   },
+   "fit": "picture",
+   "blend": "screen",
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fade": {
+    "in": 0.1,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "lumakey",
+     "low": 0.1,
+     "high": 0.5
+    }
+   ],
+   "opacity": 0.9
+  },
+  {
+   "id": "say:missiles#2@42.11",
+   "tags": [
+    "head",
+    "say"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 42.109,
+   "t1": 42.649,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.54,
+      "in": 10.262,
+      "speed": 1.0
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": [
+    1100,
+    330
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "audio": {
+    "gain": 1.0,
+    "mode": "tempo"
+   },
+   "meta": {
+    "word": "missiles.",
+    "ref": "missiles#2",
+    "src_word": [
+     10.262,
+     10.742
+    ],
+    "hits_song": [
+     42.109
+    ]
+   },
+   "scale": 0.55,
+   "opacity": 0.9
+  },
+  {
+   "id": "say:missiles#3@45.92",
+   "tags": [
+    "head",
+    "say"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 45.917,
+   "t1": 46.417,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.5,
+      "in": 11.922,
+      "speed": 1.0
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": [
+    1100,
+    330
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "audio": {
+    "gain": 1.0,
+    "mode": "tempo"
+   },
+   "meta": {
+    "word": "missiles",
+    "ref": "missiles#3",
+    "src_word": [
+     11.922,
+     12.362
+    ],
+    "hits_song": [
+     45.917
+    ]
+   },
+   "scale": 0.55,
+   "opacity": 0.9
+  },
+  {
+   "id": "say:missiles#4@49.73",
+   "tags": [
+    "head",
+    "say"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 49.726,
+   "t1": 50.246,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.52,
+      "in": 14.142,
+      "speed": 1.0
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": [
+    1100,
+    330
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "audio": {
+    "gain": 1.0,
+    "mode": "tempo"
+   },
+   "meta": {
+    "word": "missiles",
+    "ref": "missiles#4",
+    "src_word": [
+     14.142,
+     14.602
+    ],
+    "hits_song": [
+     49.726
+    ]
+   },
+   "scale": 0.55,
+   "opacity": 0.9
+  },
+  {
+   "id": "say:missiles#5@53.53",
+   "tags": [
+    "head",
+    "say"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 53.534,
+   "t1": 54.114,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.58,
+      "in": 19.023,
+      "speed": 1.0
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": [
+    1100,
+    330
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "audio": {
+    "gain": 1.0,
+    "mode": "tempo"
+   },
+   "meta": {
+    "word": "missiles.",
+    "ref": "missiles#5",
+    "src_word": [
+     19.023,
+     19.543
+    ],
+    "hits_song": [
+     53.534
+    ]
+   },
+   "scale": 0.55,
+   "opacity": 0.9
+  },
+  {
+   "id": "centcom-iran-strikes-jul2026#3@57.34~stutter",
+   "tags": [
+    "weapons",
+    "IR",
+    "strike",
+    "crosshair"
+   ],
+   "src": "media/footage/weapons/raw/dvids_1014392.mp4",
+   "t0": 56.942,
+   "t1": 59.256,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.4,
+      "in": 48.6834,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.16,
+      "in": 49.0834,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.078,
+      "hold": 49.2434
+     },
+     {
+      "dur": 0.16,
+      "in": 49.0834,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.078,
+      "hold": 49.2434
+     },
+     {
+      "dur": 0.16,
+      "in": 49.0834,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.078,
+      "hold": 49.2434
+     },
+     {
+      "dur": 1.2,
+      "in": 49.0834,
+      "speed": 1.0
+     }
+    ]
+   },
+   "meta": {
+    "catalog": "weapons",
+    "clip": "centcom-iran-strikes-jul2026",
+    "seg": 3,
+    "hits_song": [
+     57.342,
+     57.58,
+     57.818,
+     58.056
+    ],
+    "stutter": [
+     57.342,
+     57.58,
+     57.818,
+     58.056
+    ]
+   },
+   "fit": "picture",
+   "blend": "screen",
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fade": {
+    "in": 0.1,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "lumakey",
+     "low": 0.1,
+     "high": 0.5
+    }
+   ]
+  },
+  {
+   "id": "say:missiles#1@57.34",
+   "tags": [
+    "head",
+    "say"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 57.342,
+   "t1": 58.08,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.119,
+      "in": 5.721,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.119,
+      "in": 5.721,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.5,
+      "in": 5.721,
+      "speed": 1.0
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": [
+    340,
+    330
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "audio": {
+    "gain": 1.0,
+    "mode": "tempo"
+   },
+   "meta": {
+    "word": "missiles",
+    "ref": "missiles#1",
+    "src_word": [
+     5.721,
+     6.161
+    ],
+    "hits_song": [
+     57.342,
+     57.461,
+     57.58
+    ]
+   },
+   "scale": 0.55
+  },
+  {
+   "id": "afp-rafah-night-strikes-flares-2023-12#0@59.26~freeze",
+   "tags": [
+    "ground",
+    "strike",
+    "night",
+    "flash"
+   ],
+   "src": "media/footage/ground/raw/youtube_DZQfl2Ox96g.mp4",
+   "t0": 58.257,
+   "t1": 61.709,
+   "time": {
+    "seq": [
+     {
+      "dur": 1.0,
+      "in": 10.56,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.952,
+      "hold": 11.56
+     },
+     {
+      "dur": 1.5,
+      "in": 11.56,
+      "speed": 1.0
+     }
+    ]
+   },
+   "meta": {
+    "catalog": "ground",
+    "clip": "afp-rafah-night-strikes-flares-2023-12",
+    "seg": 0,
+    "hits_song": [
+     59.257,
+     60.209
+    ],
+    "freeze": [
+     59.257,
+     60.209
+    ]
+   },
+   "fit": "picture",
+   "blend": "screen",
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fade": {
+    "in": 0.1,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "lumakey",
+     "low": 0.1,
+     "high": 0.5
+    }
+   ]
+  },
+  {
+   "id": "mq9-live-hellfire-holloman#7@63.06~ramp",
+   "tags": [
+    "weapons",
+    "screen",
+    "strike",
+    "explosion"
+   ],
+   "src": "media/footage/weapons/raw/dvids_815413.mp4",
+   "t0": 61.161,
+   "t1": 64.565,
+   "time": {
+    "seq": [
+     {
+      "dur": 1.904,
+      "in": 71.386,
+      "speed": [
+       1.0,
+       0.3
+      ],
+      "ease": "smooth"
+     },
+     {
+      "dur": 1.5,
+      "in": 72.6236,
+      "speed": 0.3
+     }
+    ]
+   },
+   "meta": {
+    "catalog": "weapons",
+    "clip": "mq9-live-hellfire-holloman",
+    "seg": 7,
+    "hits_song": [
+     61.502,
+     63.065
+    ],
+    "ramp": [
+     61.161,
+     63.065
+    ]
+   },
+   "fit": "picture",
+   "blend": "normal",
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fade": {
+    "in": 0.1,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "lumakey",
+     "low": 0.1,
+     "high": 0.5
+    }
+   ]
+  },
+  {
+   "id": "say:hellfire@63.06",
+   "tags": [
+    "head",
+    "say"
+   ],
+   "src": "media/derived/face.mp4",
+   "t0": 63.065,
+   "t1": 63.905,
+   "time": {
+    "seq": [
+     {
+      "dur": 0.84,
+      "in": 5.141,
+      "speed": 0.7142857142857143
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "pos": [
+    720,
+    300
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.28
+   },
+   "audio": {
+    "gain": 1.0,
+    "mode": "tempo"
+   },
+   "meta": {
+    "word": "Hellfire",
+    "ref": "hellfire",
+    "src_word": [
+     5.141,
+     5.681
+    ],
+    "hits_song": [
+     63.065
+    ]
+   },
+   "scale": 0.6
+  },
+  {
+   "id": "centcom-epic-fury-tomahawks#1@64.97~rev",
+   "tags": [
+    "weapons",
+    "tomahawk",
+    "launch",
+    "ship"
+   ],
+   "src": "media/footage/weapons/raw/dvids_997733.mp4",
+   "t0": 62.969,
+   "t1": 65.569,
+   "time": {
+    "in": 12.88,
+    "speed": -1.0
+   },
+   "meta": {
+    "catalog": "weapons",
+    "clip": "centcom-epic-fury-tomahawks",
+    "seg": 1,
+    "hits_song": [
+     64.969
+    ]
+   },
+   "fit": "picture",
+   "blend": "screen",
+   "crop": [
+    0,
+    0,
+    1,
+    0.82
+   ],
+   "fade": {
+    "in": 0.1,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "lumakey",
+     "low": 0.1,
+     "high": 0.5
+    }
+   ]
+  }
+ ],
+ "post": []
+}
