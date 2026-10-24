@@ -439,11 +439,26 @@ def layer_audio(L, r0, r1, ctx):
     return int(round((a - r0) * SR)), out
 
 
+ENV_RATE = 1000   # Hz: music volume envelope sampling
+
+
 def mux_audio(tl, video, out, r0, r1, ctx=None):
     ins = ["-i", str(video), "-ss", f"{r0:.4f}", "-i", str(ROOT / tl["music"]["src"])]
     # asetpts on every input: the music's first opus packet has pts < 0, which otherwise makes the
     # mp4 keep 1008 samples of AAC priming (the whole mix 21 ms late against the picture)
-    chains = [f"[1:a]asetpts=PTS-STARTPTS,volume={tl['music'].get('gain', 1.0)}[a0]"]
+    mg = tl["music"].get("gain", 1.0)
+    if isinstance(mg, (int, float)):
+        chains = [f"[1:a]asetpts=PTS-STARTPTS,volume={mg}[a0]"]
+        env_path = None
+    else:   # a signal: the music's volume follows it (e.g. dipping so source audio punches through)
+        if ctx is None:
+            pdir = ROOT / "projects" / tl["project"]
+            ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
+        g = compile_signal(mg, ctx)
+        env = np.array([g(r0 + i / ENV_RATE) for i in range(int((r1 - r0) * ENV_RATE) + 2)], np.float32)
+        env_path = Path(video).with_name("music_env.f32")
+        env_path.write_bytes(env.tobytes())
+        chains = [f"[1:a]asetpts=PTS-STARTPTS,aresample={SR},aformat=sample_fmts=flt:channel_layouts=stereo[mus]"]
     n = 1
     bus = None   # every layer not on the constant-speed path, mixed sample-exactly
     for L in tl["layers"]:
@@ -480,6 +495,10 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
         ins += ["-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", str(bus_path)]
         chains.append(f"[{n + 1}:a]asetpts=PTS-STARTPTS[a{n}]")
         n += 1
+    if env_path is not None:   # the envelope is the last input
+        ins += ["-f", "f32le", "-ar", str(ENV_RATE), "-ac", "1", "-i", str(env_path)]
+        chains.append(f"[{len([x for x in ins if x == '-i']) - 1}:a]aresample={SR},pan=stereo|c0=c0|c1=c0,"
+                      f"aformat=sample_fmts=flt:channel_layouts=stereo[env];[mus][env]amultiply[a0]")
     graph = ";".join(chains) + ";" + "".join(f"[a{i}]" for i in range(n)) + \
         f"amix=inputs={n}:normalize=0:duration=first,alimiter=limit=0.95:latency=1[aout]"   # latency=1: no 5 ms lookahead delay
     subprocess.run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", graph, "-map", "0:v", "-map", "[aout]",

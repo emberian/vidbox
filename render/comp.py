@@ -154,6 +154,7 @@ class Comp:
         self.range = list(range or (0, self.proj.get("duration", 473.5)))
         self.layers, self.post = [], []
         self.ducks = []   # background opacity dips, see duck()
+        self.music_ducks = []   # music volume dips, see duck_music()
         self.rand = random.Random(seed)
         self.W, self.H = self.proj["size"]
 
@@ -537,14 +538,20 @@ class Comp:
         Overlapping ducks merge (the deepest wins)."""
         self.ducks.append((at - attack, at, at + hold, at + hold + release, depth))
 
-    def _duck_signal(self):
-        if not self.ducks:
+    def duck_music(self, at, hold=1.0, depth=0.15, attack=0.05, release=0.8):
+        """Dip the MUSIC to `depth` volume around song time `at`, so a footage layer's own sound
+        (the scream, the siren, the blast) punches through. Same shape and merging as duck()."""
+        self.music_ducks.append((at - attack, at, at + hold, at + hold + release, depth))
+
+    def _duck_signal(self, ducks=None):
+        ducks = self.ducks if ducks is None else ducks
+        if not ducks:
             return None
-        pts = sorted({round(x, 4) for d in self.ducks for x in d[:4]} | {self.range[0], self.range[1]})
+        pts = sorted({round(x, 4) for d in ducks for x in d[:4]} | {self.range[0], self.range[1]})
 
         def level(t):
             v = 1.0
-            for a0, a1, h1, r1, depth in self.ducks:
+            for a0, a1, h1, r1, depth in ducks:
                 if a0 <= t <= r1:
                     u = (t - a0) / (a1 - a0) if t < a1 else 1.0 if t <= h1 else 1 - (t - h1) / (r1 - h1)
                     v = min(v, 1 - (1 - depth) * u)
@@ -558,6 +565,10 @@ class Comp:
               "range": self.range, "music": {"src": self.proj["background"]["src"],
                                              "gain": self.proj["background"].get("gain", 1.0)},
               "layers": self.layers, "post": self.post}
+        mduck = self._duck_signal(self.music_ducks)
+        if mduck:
+            g = tl["music"].get("gain", 1.0)
+            tl["music"]["gain"] = mduck if g == 1.0 else {"mul": [g, mduck]}
         duck = self._duck_signal()
         for L in tl["layers"]:
             if L.get("id") == "meine" and duck and "opacity" not in L:
