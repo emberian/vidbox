@@ -58,7 +58,11 @@ def schedule(tl, mode, music):
     if mode == "continuous":
         # every page of the list, in order: the free beats (outside untreated windows, before the
         # song ends) shared out evenly, so each page holds one or two beats and the list ends with the song
-        slots = [(a, b) for a, b in zip(beats, beats[1:] + [SONG_END]) if a < SONG_END and free(a, b)]
+        # half-beat slots: the free beats alone (~722) are fewer than the pages, and a page must never
+        # share a slot (ember saw frames with two pages at once)
+        halves = sorted(beats + [(a + b) / 2 for a, b in zip(beats, beats[1:])]) + [SONG_END]
+        slots = [(a, b) for a, b in zip(halves, halves[1:]) if a < SONG_END and free(a, b)]
+        assert len(slots) >= PAGES, f"only {len(slots)} free half-beats for {PAGES} pages"
         n = len(slots)
         for k in range(PAGES):
             i0, i1 = k * n // PAGES, max(k * n // PAGES + 1, (k + 1) * n // PAGES)
