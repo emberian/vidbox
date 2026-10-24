@@ -13,6 +13,7 @@ import sys
 import time
 from pathlib import Path
 
+import cv2
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -103,7 +104,7 @@ def main():
         pth = BezierPath(json.loads((pdir / L["path"]).read_text())) if (pdir / L["path"]).exists() else None
         if not pth or not pth.anchors:
             print(f"layer {L['id']}: no path yet, centering", file=sys.stderr)
-            pth = lambda t: (W / 2, H / 2)  # noqa: E731
+            pth = BezierPath({"anchors": [{"t": 0, "p": [W / 2, H / 2], "hin": [0, 0], "hout": [0, 0]}]})
         local0 = args.start - L["start"]
         layers.append(dict(
             L=L, path=pth,
@@ -152,7 +153,13 @@ def main():
                 l["done"] = True
                 continue
             cx, cy = l["path"](t)
-            paste(acc, img.astype(np.float32), l["alpha"], cx * k, cy * k)
+            img, alpha = img.astype(np.float32), l["alpha"]
+            s = l["path"].scale(t)
+            if abs(s - 1) > 1e-3:
+                size = (max(2, round(img.shape[1] * s)), max(2, round(img.shape[0] * s)))
+                img = cv2.resize(img, size, interpolation=cv2.INTER_LINEAR)
+                alpha = cv2.resize(alpha, size, interpolation=cv2.INTER_LINEAR)
+            paste(acc, img, alpha, cx * k, cy * k)
         enc.stdin.write(np.clip(acc + 0.5, 0, 255).astype(np.uint8).tobytes())
         if f % 50 == 0:
             el = time.time() - t_wall

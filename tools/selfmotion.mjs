@@ -1,12 +1,16 @@
 // Turn the preacher's own head motion (media/derived/face_track.json) into a layer path.
 //
-// usage: node tools/selfmotion.mjs [--project meine] [--mode amplify|drift] [--gain G]
+// usage: node tools/selfmotion.mjs [--project meine] [--mode amplify|hybrid|gaze|drift] [--gain G]
 //                                  [--smooth FRAMES] [--tol PX] [--out paths/NAME.json]
 //   hybrid extras: [--base G] [--every BARS] [--pct SPEED_PERCENTILE] [--hbias H]
 //
 //   amplify  his offset from his average position, scaled by G, soft-clamped to the picture
 //   hybrid   amplify, plus beat-timed hops: launched on downbeats when his head moves hard,
 //            hitting a picture edge exactly on a beat, ricocheting, skidding to rest
+//   gaze     he travels where he's looking (head turn/tilt + eyes, from face_pose.json),
+//            accelerating while he keeps looking; eye contact makes him grow
+//            extras: [--gain ACCEL] [--drag D] [--dead ZONE] [--zone EYE_CONTACT_ZONE]
+//                    [--grow G] [--shrink S] [--smax MAX]
 //   drift    his frame-to-frame velocity pushes the head (G = push strength); it coasts with
 //            damping, a faint spring toward center, and bounces off the picture edges
 //
@@ -142,6 +146,54 @@ if (opt.mode === "amplify") {
   }
   opt.corners = hops.flatMap(o => [o.tA, o.tW]);
   console.error(`hybrid: ${hops.length} hops on downbeats ${hops.map(o => o.tA.toFixed(2)).join(" ")}; walls hit at ${hops.map(o => o.tW.toFixed(2)).join(" ")}`);
+} else if (opt.mode === "gaze") {
+  // He goes where he's looking. Head turn/tilt (plus a little of his eyes) away from his
+  // resting "talking to camera" pose is a push in that direction; he gathers speed while he
+  // keeps looking that way, coasts with drag, and bounces off the picture edges. Looking
+  // straight at you he slows and grows; looking away, he shrinks back to normal size.
+  const pose = JSON.parse(readFileSync(join(ROOT, "media/derived/face_pose.json")));
+  const accel = +(opt.gain ?? 1400), drag = +(opt.drag ?? 1.6), dead = +(opt.dead ?? 0.25);
+  const grow = +(opt.grow ?? 2.2), shrink = +(opt.shrink ?? 0.7), smax = +(opt.smax ?? 1.9), zone = +(opt.zone ?? 0.4);
+  const dt = 1 / pose.fps;
+  const P = pose.frames;
+  const ch = k => {   // a pose channel with gaps filled and light smoothing
+    const ok = [...P.keys()].filter(i => P[i]);
+    const raw = P.map((f, i) => {
+      if (f) return f[k];
+      const a = ok.findLast(g => g < i), b = ok.find(g => g > i);
+      return a === undefined ? P[b][k] : b === undefined ? P[a][k] : P[a][k] + (P[b][k] - P[a][k]) * (i - a) / (b - a);
+    });
+    return smooth(raw, 2);
+  };
+  const yaw = ch("yaw"), pitch = ch("pitch"), gh = ch("gaze_h");
+  const y0 = median(yaw), p0 = median(pitch), g0 = median(gh);
+  // normalize so ~1 = a clear look in that direction (+x screen-right, +y screen-down)
+  const dirX = yaw.map((v, i) => (v - y0) / 15 + 0.5 * (gh[i] - g0) / 0.1);
+  const dirY = pitch.map(v => (v - p0) / 9);
+
+  let p = center.slice(), v = [0, 0], s = 1;
+  const scale = [];
+  for (let i = 0; i < n; i++) {
+    const d = [dirX[i], dirY[i]], m = Math.hypot(...d);
+    // past the dead zone, push along the look direction, harder the further he turns
+    const push = m > dead ? (m - dead) / m : 0;
+    const look = Math.exp(-((m / zone) ** 2));   // 1 = dead on at you
+    for (const k of [0, 1]) {
+      v[k] += (accel * d[k] * push - drag * v[k]) * dt;
+      p[k] += v[k] * dt;
+    }
+    s += (look > 0.45 ? grow * look * (smax - s) : -shrink * (1 - look) * (s - 1)) * dt;
+    for (const k of [0, 1]) {   // walls shrink as he grows, so the oval stays in the picture
+      const r = reach[k] - (k ? FH : FW) * 0.3 * (s - 1);
+      if (p[k] < center[k] - r) { p[k] = 2 * (center[k] - r) - p[k]; v[k] = -v[k] * 0.8; }
+      if (p[k] > center[k] + r) { p[k] = 2 * (center[k] + r) - p[k]; v[k] = -v[k] * 0.8; }
+    }
+    pos.push(p.slice());
+    scale.push(+s.toFixed(4));
+  }
+  opt.scale = { t0: layer.start, dt, values: scale };
+  const big = scale.filter(x => x > 1.3).length / n;
+  console.error(`gaze: scale 1..${Math.max(...scale).toFixed(2)}, ${(big * 100).toFixed(0)}% of the time above 1.3x`);
 } else throw new Error(`unknown --mode ${opt.mode}`);
 
 const samples = pos.map((p, i) => ({ t: +(layer.start + i / track.fps).toFixed(4), p: [+p[0].toFixed(1), +p[1].toFixed(1)] }));
@@ -150,6 +202,7 @@ const out = opt.out ?? `paths/face_self_${opt.mode}.json`;
 const params = { mode: opt.mode, gain, smooth: sw, tol: +opt.tol };
 writeFileSync(join(pdir, out), JSON.stringify({
   anchors,
+  ...(opt.scale && { scale: opt.scale }),
   takes: [{ t0: samples[0].t, t1: samples[samples.length - 1].t, source: "selfmotion", params, samples }],
 }, null, 1) + "\n");
 const xs = pos.map(p => p[0]), ys = pos.map(p => p[1]);

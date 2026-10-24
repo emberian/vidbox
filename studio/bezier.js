@@ -1,6 +1,7 @@
 // Timed cubic Bezier paths.
 //
-// path = { anchors: [{ t, p: [x, y], hin: [dx, dy], hout: [dx, dy] }], takes: [...] }
+// path = { anchors: [{ t, p: [x, y], hin: [dx, dy], hout: [dx, dy] }], takes: [...],
+//          scale?: { t0, dt, values: [...] } }   (optional size multiplier, linear between samples)
 // Anchors are sorted by t. Between anchors a and b the Bezier parameter is linear in time,
 // u = (t - a.t) / (b.t - a.t), over control points a.p, a.p + a.hout, b.p + b.hin, b.p.
 // render/bezier.py mirrors evalPath exactly; keep them in step.
@@ -36,6 +37,15 @@ export function evalPath(path, t) {
   if (t >= A[A.length - 1].t) return A[A.length - 1].p.slice();
   const i = segmentAt(A, t), a = A[i], b = A[i + 1];
   return cubic(a.p, add(a.p, a.hout), add(b.p, b.hin), b.p, (t - a.t) / (b.t - a.t));
+}
+
+export function evalScale(path, t) {
+  const S = path.scale;
+  if (!S || !S.values.length) return 1;
+  const x = Math.max(0, Math.min((t - S.t0) / S.dt, S.values.length - 1));
+  const i = Math.min(Math.floor(x), S.values.length - 2);
+  if (i < 0) return S.values[0];
+  return S.values[i] + (S.values[i + 1] - S.values[i]) * (x - i);
 }
 
 // Least-squares cubic through samples[i0..i1] with endpoints pinned and the parameter

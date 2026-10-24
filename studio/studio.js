@@ -1,4 +1,4 @@
-import { evalPath, fitSamples, smoothAnchor, splitAt, splice } from "./bezier.js";
+import { evalPath, evalScale, fitSamples, smoothAnchor, splitAt, splice } from "./bezier.js";
 
 const $ = id => document.getElementById(id);
 const stage = $("stage"), ctx = stage.getContext("2d");
@@ -163,7 +163,8 @@ function draw() {
     fctx.globalCompositeOperation = "destination-in";
     fctx.drawImage(maskCanvas, 0, 0);
     ctx.globalAlpha = layer.opacity;
-    ctx.drawImage(faceBuf, pos[0] - FW / 2, pos[1] - FH / 2);
+    const sc = take ? 1 : evalScale(path, now());
+    ctx.drawImage(faceBuf, pos[0] - FW * sc / 2, pos[1] - FH * sc / 2, FW * sc, FH * sc);
     ctx.globalAlpha = 1;
   }
 

@@ -15,6 +15,18 @@ class Path:
     def __init__(self, data):
         self.anchors = sorted(data.get("anchors", []), key=lambda a: a["t"])
         self.times = [a["t"] for a in self.anchors]
+        self.scale_track = data.get("scale")
+
+    def scale(self, t):
+        S = self.scale_track
+        if not S or not S["values"]:
+            return 1.0
+        v = S["values"]
+        x = max(0.0, min((t - S["t0"]) / S["dt"], len(v) - 1))
+        i = min(int(x), len(v) - 2)
+        if i < 0:
+            return v[0]
+        return v[i] + (v[i + 1] - v[i]) * (x - i)
 
     def __call__(self, t):
         A = self.anchors
