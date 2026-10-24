@@ -18,7 +18,7 @@
 //
 // The result is fitted with the studio's own fitter, so it opens and edits like a capture.
 import { readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fitSamples } from "../studio/bezier.js";
 
@@ -52,13 +52,20 @@ for (let i = 0; i < n; i++) {   // also reject jumps far from the local median
   const mx = median(win.map(d => d[0])), my = median(win.map(d => d[1]));
   if (Math.hypot(F[i][0] - mx, F[i][1] - my) > fs * 0.35) ok[i] = false;
 }
+// values of frames where isGood(i), linearly interpolated across the gaps, held past the ends
+const gapFill = (len, isGood, val) => {
+  const prev = new Array(len), next = new Array(len);
+  for (let i = 0, g; i < len; i++) { if (isGood(i)) g = i; prev[i] = g; }
+  for (let i = len - 1, g; i >= 0; i--) { if (isGood(i)) g = i; next[i] = g; }
+  return Array.from({ length: len }, (_, i) => {
+    const a = prev[i], b = next[i];
+    if (a === undefined) return val(b);
+    if (b === undefined || a === b) return val(a);
+    return val(a) + (val(b) - val(a)) * (i - a) / (b - a);
+  });
+};
 const good = [...Array(n).keys()].filter(i => ok[i]);
-const fill = k => Array.from({ length: n }, (_, i) => {
-  let a = good.findLast(g => g <= i), b = good.find(g => g >= i);
-  if (a === undefined) return F[b][k];
-  if (b === undefined || a === b) return F[a][k];
-  return F[a][k] + (F[b][k] - F[a][k]) * (i - a) / (b - a);
-});
+const fill = k => gapFill(n, i => ok[i], i => F[i][k]);
 const smooth = (xs, w) => xs.map((_, i) => {
   let s = 0, c = 0;
   for (let j = Math.max(0, i - w); j <= Math.min(n - 1, i + w); j++) { s += xs[j]; c++; }
@@ -170,15 +177,10 @@ if (opt.mode === "amplify") {
   const grow = +(opt.grow ?? 2.2), shrink = +(opt.shrink ?? 0.7), smax = +(opt.smax ?? 1.9), zone = +(opt.zone ?? 0.4);
   const dt = 1 / pose.fps;
   const P = pose.frames;
-  const ch = k => {   // a pose channel with gaps filled and light smoothing
-    const ok = [...P.keys()].filter(i => P[i]);
-    const raw = P.map((f, i) => {
-      if (f) return f[k];
-      const a = ok.findLast(g => g < i), b = ok.find(g => g > i);
-      return a === undefined ? P[b][k] : b === undefined ? P[a][k] : P[a][k] + (P[b][k] - P[a][k]) * (i - a) / (b - a);
-    });
-    return smooth(raw, 2);
-  };
+  // pose frame i must be track frame i (both from the same source video, one entry per frame)
+  if (P.length !== n || pose.src !== track.src)
+    throw new Error(`face_pose.json (${pose.src}, ${P.length} frames) and face_track.json (${track.src}, ${n} frames) disagree`);
+  const ch = k => smooth(gapFill(n, i => P[i], i => P[i][k]), 2);   // a pose channel, gaps filled, lightly smoothed
   const yaw = ch("yaw"), pitch = ch("pitch"), gh = ch("gaze_h");
   const y0 = median(yaw), p0 = median(pitch), g0 = median(gh);
   // normalize so ~1 = a clear look in that direction (+x screen-right, +y screen-down)
@@ -219,7 +221,7 @@ const samples = pos.map((p, i) => ({ t: +songT(i).toFixed(4), p: [+p[0].toFixed(
 const anchors = fitSamples(samples, +opt.tol, opt.corners ?? []);
 const out = opt.out ?? `paths/face_self_${opt.mode}.json`;
 const params = { mode: opt.mode, gain, smooth: sw, tol: +opt.tol };
-writeFileSync(join(pdir, out), JSON.stringify({
+writeFileSync(resolve(pdir, out), JSON.stringify({
   anchors,
   ...(opt.scale && { scale: opt.scale }),
   takes: [{ t0: samples[0].t, t1: samples[samples.length - 1].t, source: "selfmotion", params, samples }],
