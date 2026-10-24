@@ -19,63 +19,303 @@
      1.0
     ],
     [
-     125.872,
+     41.407,
      1.0
+    ],
+    [
+     41.557,
+     0.5
+    ],
+    [
+     50.988,
+     0.5
+    ],
+    [
+     51.077,
+     0.5
+    ],
+    [
+     51.138,
+     0.5
+    ],
+    [
+     53.077,
+     0.5
+    ],
+    [
+     54.568,
+     0.5
+    ],
+    [
+     54.666,
+     0.5245
+    ],
+    [
+     54.816,
+     0.5
+    ],
+    [
+     56.568,
+     0.5
+    ],
+    [
+     58.836,
+     0.5
+    ],
+    [
+     58.972,
+     0.534
+    ],
+    [
+     59.122,
+     0.5
+    ],
+    [
+     59.79,
+     0.5
+    ],
+    [
+     59.94,
+     0.5
+    ],
+    [
+     60.002,
+     0.5
+    ],
+    [
+     60.836,
+     0.5
+    ],
+    [
+     62.002,
+     0.5
+    ],
+    [
+     69.11,
+     0.5
+    ],
+    [
+     69.287,
+     0.5442
+    ],
+    [
+     69.437,
+     0.5
+    ],
+    [
+     71.11,
+     0.5
+    ],
+    [
+     74.655,
+     0.5
+    ],
+    [
+     74.737,
+     0.5
+    ],
+    [
+     74.805,
+     0.5
+    ],
+    [
+     76.737,
+     0.5
+    ],
+    [
+     80.805,
+     0.5
+    ],
+    [
+     82.805,
+     1.0
+    ],
+    [
+     121.781,
+     1.0
+    ],
+    [
+     121.931,
+     0.5
+    ],
+    [
+     125.772,
+     0.5
     ],
     [
      125.922,
-     0.45
+     0.5
     ],
     [
-     129.122,
-     0.45
+     126.551,
+     0.5
     ],
     [
-     129.722,
-     1.0
+     128.551,
+     0.6
+    ],
+    [
+     129.579,
+     0.6
+    ],
+    [
+     129.729,
+     0.5
+    ],
+    [
+     129.73,
+     0.5
+    ],
+    [
+     131.73,
+     0.5
+    ],
+    [
+     137.402,
+     0.5
     ],
     [
      137.522,
-     1.0
+     0.5
+    ],
+    [
+     137.552,
+     0.5
     ],
     [
      137.822,
-     0.12
+     0.18
+    ],
+    [
+     138.009,
+     0.18
+    ],
+    [
+     140.009,
+     0.18
+    ],
+    [
+     141.052,
+     0.18
+    ],
+    [
+     143.052,
+     0.18
+    ],
+    [
+     144.68,
+     0.18
     ],
     [
      144.774,
-     0.12
+     0.18
+    ],
+    [
+     144.83,
+     0.18
     ],
     [
      144.974,
-     0.12
+     0.18
     ],
     [
-     145.474,
-     0.15
+     146.974,
+     0.18
     ],
     [
-     152.346,
-     0.15
+     152.032,
+     0.18
     ],
     [
-     152.746,
-     1.0
+     152.182,
+     0.18
     ],
     [
-     154.162,
-     1.0
+     152.42,
+     0.18
     ],
     [
-     154.262,
-     0.2
+     154.42,
+     0.18
     ],
     [
      159.985,
-     0.2
+     0.18
     ],
     [
-     160.285,
+     160.442,
+     0.18
+    ],
+    [
+     161.243,
+     0.5084
+    ],
+    [
+     161.393,
+     0.5
+    ],
+    [
+     161.985,
+     0.5
+    ],
+    [
+     162.442,
+     0.5
+    ],
+    [
+     163.093,
+     0.5
+    ],
+    [
+     165.093,
+     1.0
+    ],
+    [
+     167.492,
+     1.0
+    ],
+    [
+     167.642,
+     0.6
+    ],
+    [
+     178.742,
+     0.6
+    ],
+    [
+     178.954,
+     0.6424
+    ],
+    [
+     179.104,
+     0.6
+    ],
+    [
+     180.742,
+     0.6
+    ],
+    [
+     181.604,
+     0.6
+    ],
+    [
+     182.484,
+     0.776
+    ],
+    [
+     182.634,
+     0.5
+    ],
+    [
+     183.604,
+     0.5
+    ],
+    [
+     187.204,
+     0.5
+    ],
+    [
+     189.204,
      1.0
     ],
     [
@@ -84,30 +324,62 @@
     ],
     [
      190.682,
-     0.25
+     0.3
     ],
     [
-     194.182,
-     0.25
+     191.335,
+     0.3
     ],
     [
-     195.682,
-     1.0
+     191.485,
+     0.3
     ],
     [
-     207.78,
-     1.0
+     197.998,
+     0.3
+    ],
+    [
+     198.012,
+     0.3049
+    ],
+    [
+     198.162,
+     0.3
+    ],
+    [
+     198.385,
+     0.3
+    ],
+    [
+     199.998,
+     0.3
+    ],
+    [
+     200.385,
+     0.3
+    ],
+    [
+     206.212,
+     0.3
+    ],
+    [
+     207.68,
+     0.8138
     ],
     [
      207.83,
-     0.3
+     0.6
     ],
     [
-     209.23,
-     0.3
+     208.212,
+     0.6
     ],
     [
-     210.03,
+     209.734,
+     0.6
+    ],
+    [
+     211.734,
      1.0
     ],
     [
@@ -459,22 +731,6 @@
       1.0
      ],
      [
-      182.946,
-      1.0
-     ],
-     [
-      183.066,
-      0.55
-     ],
-     [
-      183.766,
-      0.55
-     ],
-     [
-      184.366,
-      1.0
-     ],
-     [
       186.754,
       1.0
      ],
@@ -503,35 +759,7 @@
       0.5
      ],
      [
-      198.178,
-      0.9
-     ],
-     [
       198.298,
-      0.4
-     ],
-     [
-      198.998,
-      0.4
-     ],
-     [
-      199.598,
-      1.0
-     ],
-     [
-      201.998,
-      1.0
-     ],
-     [
-      202.118,
-      0.4
-     ],
-     [
-      202.818,
-      0.4
-     ],
-     [
-      203.418,
       1.0
      ],
      [
@@ -1029,13 +1257,13 @@
     "weapons",
     "apache",
     "launch",
-    "hellfire"
+    "smoke"
    ],
    "src": "media/footage/weapons/raw/dvids_871530.mp4",
-   "t0": 175.038,
-   "t1": 176.7703,
+   "t0": 175.438,
+   "t1": 178.958,
    "time": {
-    "in": 24.7677,
+    "in": 36.0,
     "speed": 1.0
    },
    "opacity": 0.55,
@@ -1074,11 +1302,8 @@
    "meta": {
     "catalog": "weapons",
     "clip": "hellfire-yakima-broll",
-    "seg": 1,
-    "hits_song": [
-     175.438,
-     176.19
-    ],
+    "seg": 3,
+    "hits_song": [],
     "z": 0
    },
    "clip": "picture"
@@ -1233,44 +1458,29 @@
    "clip": "picture"
   },
   {
-   "id": "f35-factory",
+   "id": "gaza-city-ruins",
    "tags": [
-    "weapons",
-    "factory",
-    "CGI",
-    "blueprint"
+    "ground",
+    "rubble",
+    "drone-flyover",
+    "city"
    ],
-   "src": "media/footage/weapons/raw/youtube_df_MHNkAVrw.mp4",
-   "t0": 198.298,
-   "t1": 213.542,
+   "src": "media/footage/ground/raw/youtube_nZ15f_tSAHc.mp4",
+   "t0": 197.698,
+   "t1": 209.734,
    "time": {
-    "in": 20.0,
+    "in": 128.0,
     "speed": 1.0
    },
-   "blend": "screen",
-   "opacity": 0.85,
    "fade": {
-    "in": 0.2,
-    "out": 0.4
+    "in": 1.2,
+    "out": 0.6
    },
-   "fx": [
-    {
-     "op": "gradmap",
-     "palette": "y2k",
-     "cycle": {
-      "beat": {
-       "div": 4,
-       "shape": "saw"
-      }
-     },
-     "amount": 0.4
-    }
-   ],
    "crop": [
-    0,
-    0.0284,
-    1,
-    0.9716
+    0.0547,
+    0.16,
+    0.9453,
+    1.0
    ],
    "size": [
     1440,
@@ -1281,59 +1491,28 @@
     540
    ],
    "meta": {
-    "catalog": "weapons",
-    "clip": "lm-f35-factory-animation",
-    "seg": 0,
+    "catalog": "ground",
+    "clip": "ap-drone-gazacity-ruins-2025-10-long",
+    "seg": 6,
     "hits_song": [],
     "z": 0
    },
    "clip": "picture"
   },
   {
-   "id": "jabaliya-dig",
+   "id": "b2-bomb-bay",
    "tags": [
-    "ground",
-    "rescue",
-    "digging-by-hand",
-    "rubble",
-    "groove"
+    "weapons",
+    "loading",
+    "bomb",
+    "B-2"
    ],
-   "src": "media/footage/ground/raw/youtube_TunR64-jZUk.mp4",
+   "src": "media/footage/weapons/raw/dvids_976261.mp4",
    "t0": 213.542,
    "t1": 224.967,
    "time": {
-    "map": {
-     "song": [
-      213.542,
-      214.494,
-      215.446,
-      216.398,
-      217.35,
-      218.302,
-      219.254,
-      220.206,
-      221.158,
-      222.11,
-      223.062,
-      224.015,
-      224.967
-     ],
-     "src": [
-      20.0,
-      21.0,
-      22.0,
-      23.0,
-      24.0,
-      25.0,
-      26.0,
-      27.0,
-      28.0,
-      29.0,
-      30.0,
-      31.0,
-      32.0
-     ]
-    }
+    "in": 140.0,
+    "speed": 1.0
    },
    "opacity": 0.45,
    "fade": {
@@ -1351,10 +1530,10 @@
     }
    ],
    "crop": [
-    0.0547,
-    0.16,
-    0.9453,
-    1.0
+    0.0229,
+    0.1,
+    0.9771,
+    1
    ],
    "size": [
     1440,
@@ -1365,15 +1544,10 @@
     540
    ],
    "meta": {
-    "catalog": "ground",
-    "clip": "ap-jabaliya-dig-for-victims-2025-03",
-    "seg": 1,
+    "catalog": "weapons",
+    "clip": "b2-jdam-load-whiteman",
+    "seg": 4,
     "hits_song": [],
-    "groove": {
-     "cycle": 1.0,
-     "beats": 2,
-     "speed": 1.0504
-    },
     "z": 0
    },
    "clip": "picture"
@@ -2203,8 +2377,8 @@
     300
    ],
    "pos": [
-    270,
-    470
+    300,
+    755
    ],
    "mask": {
     "shape": "rect",
@@ -2224,12 +2398,24 @@
    "t0": 76.394,
    "t1": 84.01,
    "time": {
-    "in": 13.4,
-    "speed": 1.0,
-    "loop": [
-     13.4,
-     16.0
-    ]
+    "map": {
+     "song": [
+      76.394,
+      78.993,
+      78.994,
+      81.593,
+      81.594,
+      84.009
+     ],
+     "src": [
+      13.4,
+      15.999,
+      13.4,
+      15.999,
+      13.4,
+      15.815
+     ]
+    }
    },
    "opacity": {
     "mul": [
@@ -2353,12 +2539,28 @@
    "t0": 76.394,
    "t1": 84.01,
    "time": {
-    "in": 10.0,
-    "speed": 1.0,
-    "loop": [
-     10.0,
-     12.4
-    ]
+    "map": {
+     "song": [
+      76.394,
+      78.793,
+      78.794,
+      81.193,
+      81.194,
+      83.593,
+      83.594,
+      84.009
+     ],
+     "src": [
+      10.0,
+      12.399,
+      10.0,
+      12.399,
+      10.0,
+      12.399,
+      10.0,
+      10.415
+     ]
+    }
    },
    "opacity": {
     "mul": [
@@ -3128,56 +3330,40 @@
    "clip": "picture"
   },
   {
-   "id": "dig-civil-defence",
+   "id": "iowa-shell-line",
    "tags": [
-    "ground",
-    "rescue",
-    "civil-defence",
-    "digging-by-hand",
+    "weapons",
+    "factory",
+    "workers",
+    "production-line",
     "groove"
    ],
-   "src": "media/footage/ground/raw/youtube_jaBqpg-PB-s.mp4",
+   "src": "media/footage/weapons/raw/dvids_1011368.mp4",
    "t0": 106.87,
    "t1": 122.114,
    "time": {
     "map": {
      "song": [
       106.87,
-      107.822,
       108.774,
-      109.726,
       110.678,
-      111.63,
       112.582,
-      113.534,
       114.486,
-      115.45,
       116.402,
-      117.342,
       118.306,
-      119.258,
       120.21,
-      121.162,
       122.114
      ],
      "src": [
-      38.0,
-      39.1,
-      40.2,
-      41.3,
-      42.4,
-      43.5,
-      44.6,
-      45.7,
-      46.8,
-      47.9,
-      49.0,
-      50.1,
-      51.2,
-      52.3,
-      53.4,
-      54.5,
-      55.6
+      2.0,
+      5.0,
+      8.0,
+      11.0,
+      14.0,
+      17.0,
+      20.0,
+      23.0,
+      26.0
      ]
     }
    },
@@ -3213,9 +3399,9 @@
     }
    ],
    "crop": [
-    0.1725,
+    0.0875,
     0,
-    0.9975,
+    0.9125,
     1
    ],
    "size": [
@@ -3231,14 +3417,14 @@
     "feather": 0.06
    },
    "meta": {
-    "catalog": "ground",
-    "clip": "aje-civil-defence-body-recovery-2025-12",
-    "seg": 1,
+    "catalog": "weapons",
+    "clip": "iowa-aap-155mm-line-workers",
+    "seg": 0,
     "hits_song": [],
     "groove": {
-     "cycle": 1.1,
-     "beats": 2,
-     "speed": 1.1555
+     "cycle": 3.0,
+     "beats": 4,
+     "speed": 1.5756
     }
    },
    "clip": "picture"
@@ -3246,16 +3432,16 @@
   {
    "id": "form-strike0",
    "tags": [
-    "y2026",
-    "idf",
-    "strike-cam",
+    "weapons",
+    "aerial",
+    "strike",
     "gaza"
    ],
-   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
    "t0": 61.061,
    "t1": 62.961,
    "time": {
-    "in": 28.46,
+    "in": 18.741,
     "speed": 1.0
    },
    "blend": "screen",
@@ -3302,8 +3488,8 @@
     540
    ],
    "meta": {
-    "catalog": "y2026",
-    "clip": "idf-gaza-crater-strikecam-2026-08-01",
+    "catalog": "weapons",
+    "clip": "times-radio-idf-bombardment-oct2023",
     "seg": 2,
     "hits_song": [
      61.161
@@ -3859,11 +4045,11 @@
     "explosion",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_w57kiknN-MA.mp4",
+   "src": "media/footage/ground/raw/youtube_UnlZQZBpgrg.mp4",
    "t0": 105.322,
    "t1": 107.342,
    "time": {
-    "in": 2.05,
+    "in": 4.68,
     "speed": 1.0
    },
    "blend": "screen",
@@ -3911,7 +4097,7 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "nbc-night-tower-collapse-2023-10-08",
+    "clip": "ap-night-blast-gazacity-2014-07-20",
     "seg": 0,
     "hits_song": [
      105.442
@@ -3925,15 +4111,15 @@
    "tags": [
     "weapons",
     "aerial",
-    "fireball",
+    "strike",
     "gaza",
     "strike"
    ],
    "src": "media/footage/weapons/raw/youtube_1dxriivNDhY.mp4",
    "t0": 121.994,
-   "t1": 123.273,
+   "t1": 123.314,
    "time": {
-    "in": 31.321,
+    "in": 0.441,
     "speed": 1.0
    },
    "blend": "normal",
@@ -3982,7 +4168,7 @@
    "meta": {
     "catalog": "weapons",
     "clip": "idf-gaza-strikes-oct13-2023",
-    "seg": 4,
+    "seg": 0,
     "hits_song": [
      122.114
     ],
@@ -3995,18 +4181,18 @@
    "tags": [
     "y2026",
     "idf",
-    "strike-cam",
-    "gaza",
+    "demolition",
+    "yellow-line",
     "strike"
    ],
-   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
+   "src": "media/footage/y2026/raw/youtube_v0kPVcvCZO8.mp4",
    "t0": 123.898,
    "t1": 125.218,
    "time": {
-    "in": 12.93,
+    "in": 2.18,
     "speed": 1.0
    },
-   "blend": "multiply",
+   "blend": "screen",
    "opacity": 0.9,
    "fade": {
     "in": 0.06,
@@ -4036,10 +4222,10 @@
     }
    ],
    "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
+    0.06,
+    0.3287,
+    0.94,
+    0.5913
    ],
    "size": [
     1440,
@@ -4051,8 +4237,8 @@
    ],
    "meta": {
     "catalog": "y2026",
-    "clip": "idf-gaza-crater-strikecam-2026-08-01",
-    "seg": 1,
+    "clip": "idf-soldiers-watch-demolition-yellow-line-2026-07-08",
+    "seg": 0,
     "hits_song": [
      124.018
     ],
@@ -4485,15 +4671,15 @@
    "tags": [
     "ground",
     "strike",
+    "night",
     "explosion",
-    "fireball",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_WAGCvWsTpYQ.mp4",
+   "src": "media/footage/ground/raw/youtube_x_FnszcPiug.mp4",
    "t0": 169.606,
    "t1": 171.226,
    "time": {
-    "in": 20.201,
+    "in": 1.881,
     "speed": 1.0
    },
    "blend": "screen",
@@ -4526,10 +4712,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -4541,8 +4727,8 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "reuters-explosions-overnight-2023-10-22",
-    "seg": 3,
+    "clip": "ap-night-strike-gazacity-2019",
+    "seg": 0,
     "hits_song": [
      169.726
     ],
@@ -4556,14 +4742,14 @@
     "ground",
     "strike",
     "night",
-    "flash",
+    "explosion",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_DZQfl2Ox96g.mp4",
+   "src": "media/footage/ground/raw/youtube_RP1ZRu4G2P4.mp4",
    "t0": 173.426,
    "t1": 175.046,
    "time": {
-    "in": 11.44,
+    "in": 174.8,
     "speed": 1.0
    },
    "blend": "screen",
@@ -4596,10 +4782,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -4611,8 +4797,8 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "afp-rafah-night-strikes-flares-2023-12",
-    "seg": 0,
+    "clip": "ap-night-eid-bombardment-2014",
+    "seg": 2,
     "hits_song": [
      173.546
     ],
@@ -4666,10 +4852,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -4736,10 +4922,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -4763,17 +4949,17 @@
   {
    "id": "rise-strike-97.2",
    "tags": [
-    "ground",
-    "strike",
+    "y2026",
+    "gaza",
+    "airstrike",
     "night",
-    "explosion",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_vE79wEcq6nE.mp4",
+   "src": "media/footage/y2026/raw/youtube_ZCLpNuaEzl8.mp4",
    "t0": 185.802,
    "t1": 187.422,
    "time": {
-    "in": 0.4149,
+    "in": 4.88,
     "speed": 1.0
    },
    "blend": "screen",
@@ -4806,10 +4992,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2243,
+    0.2,
+    0.7757,
+    0.72
    ],
    "size": [
     1440,
@@ -4820,8 +5006,8 @@
     540
    ],
    "meta": {
-    "catalog": "ground",
-    "clip": "reuters-night-fireballs-2023-10-08",
+    "catalog": "y2026",
+    "clip": "ap-deir-balah-night-strike-2026-05-23",
     "seg": 0,
     "hits_song": [
      185.922
@@ -4876,10 +5062,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -4895,286 +5081,6 @@
     "seg": 0,
     "hits_song": [
      197.346
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-strike-104.0",
-   "tags": [
-    "weapons",
-    "aerial",
-    "fireball",
-    "gaza",
-    "strike"
-   ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
-   "t0": 198.178,
-   "t1": 199.798,
-   "time": {
-    "in": 0.761,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 333
-    }
-   ],
-   "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
-    "seg": 0,
-    "hits_song": [
-     198.298
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-strike-105.0",
-   "tags": [
-    "weapons",
-    "explosion",
-    "fireball",
-    "false-colour",
-    "strike"
-   ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
-   "t0": 200.082,
-   "t1": 201.702,
-   "time": {
-    "in": 31.9464,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 370
-    }
-   ],
-   "crop": [
-    0,
-    0.2347,
-    1,
-    0.7653
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
-    "seg": 5,
-    "hits_song": [
-     200.202
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-strike-106.0",
-   "tags": [
-    "ground",
-    "strike",
-    "explosion",
-    "fireball",
-    "strike"
-   ],
-   "src": "media/footage/ground/raw/youtube_WAGCvWsTpYQ.mp4",
-   "t0": 201.998,
-   "t1": 203.618,
-   "time": {
-    "in": 11.801,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 407
-    }
-   ],
-   "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "ground",
-    "clip": "reuters-explosions-overnight-2023-10-22",
-    "seg": 2,
-    "hits_song": [
-     202.118
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-strike-107.0",
-   "tags": [
-    "y2026",
-    "idf",
-    "strike-cam",
-    "gaza",
-    "strike"
-   ],
-   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
-   "t0": 203.902,
-   "t1": 205.522,
-   "time": {
-    "in": 28.44,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 444
-    }
-   ],
-   "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "y2026",
-    "clip": "idf-gaza-crater-strikecam-2026-08-01",
-    "seg": 2,
-    "hits_song": [
-     204.022
     ],
     "z": 2
    },
@@ -5222,7 +5128,7 @@
        }
       }
      },
-     "angle": 481
+     "angle": 333
     }
    ],
    "crop": [
@@ -5253,17 +5159,17 @@
   {
    "id": "rise-strike-111.0",
    "tags": [
-    "ground",
-    "strike",
+    "y2026",
+    "gaza",
+    "airstrike",
     "night",
-    "explosion",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_fTiqjhMhFSY.mp4",
+   "src": "media/footage/y2026/raw/youtube_WIiKD8Mjw1Y.mp4",
    "t0": 211.518,
    "t1": 213.138,
    "time": {
-    "in": 3.48,
+    "in": 1.58,
     "speed": 1.0
    },
    "blend": "screen",
@@ -5292,159 +5198,14 @@
        }
       }
      },
-     "angle": 518
+     "angle": 370
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "ground",
-    "clip": "ap-night-blasts-from-israel-2025-09",
-    "seg": 0,
-    "hits_song": [
-     211.638
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-strike-111.2",
-   "tags": [
-    "weapons",
-    "aerial",
-    "fireball",
-    "gaza",
-    "strike"
-   ],
-   "src": "media/footage/weapons/raw/youtube_1dxriivNDhY.mp4",
-   "t0": 212.47,
-   "t1": 214.09,
-   "time": {
-    "in": 12.2,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 555
-    }
-   ],
-   "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "idf-gaza-strikes-oct13-2023",
-    "seg": 2,
-    "hits_song": [
-     212.59
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "idf-strikecam-96",
-   "tags": [
-    "y2026",
-    "idf",
-    "strike-cam",
-    "gaza",
-    "strike"
-   ],
-   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
-   "t0": 182.946,
-   "t1": 184.666,
-   "time": {
-    "in": 1.45,
-    "speed": 1.0
-   },
-   "blend": "multiply",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 259
-    },
-    {
-     "op": "gradmap",
-     "palette": "whitehot",
-     "amount": 0.4
-    }
-   ],
-   "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -5456,10 +5217,10 @@
    ],
    "meta": {
     "catalog": "y2026",
-    "clip": "idf-gaza-crater-strikecam-2026-08-01",
+    "clip": "ap-shati-night-strike-2026-05-28",
     "seg": 0,
     "hits_song": [
-     183.066
+     211.638
     ],
     "z": 2
    },
@@ -5613,17 +5374,17 @@
   {
    "id": "rise-fast-0",
    "tags": [
-    "ground",
-    "strike",
-    "night",
-    "flash",
+    "y2026",
+    "gaza",
+    "airstrike",
+    "fire",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_DZQfl2Ox96g.mp4",
+   "src": "media/footage/y2026/raw/youtube_lZHFLf8nVtg.mp4",
    "t0": 213.422,
    "t1": 214.442,
    "time": {
-    "in": 13.601,
+    "in": 0.48,
     "speed": 1.0
    },
    "blend": "screen",
@@ -5656,10 +5417,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.0,
+    0.3008,
+    1.0,
+    0.5992
    ],
    "size": [
     1440,
@@ -5670,8 +5431,8 @@
     540
    ],
    "meta": {
-    "catalog": "ground",
-    "clip": "afp-rafah-night-strikes-flares-2023-12",
+    "catalog": "y2026",
+    "clip": "ap-short-gaza-city-blasts-2026-07-28",
     "seg": 0,
     "hits_song": [
      213.542
@@ -5684,19 +5445,19 @@
    "id": "rise-fast-1",
    "tags": [
     "y2026",
-    "idf",
-    "strike-cam",
     "gaza",
+    "airstrike",
+    "explosion",
     "strike"
    ],
-   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
+   "src": "media/footage/y2026/raw/youtube_dVPeJx24slc.mp4",
    "t0": 214.374,
    "t1": 215.394,
    "time": {
-    "in": 18.77,
+    "in": 0.16,
     "speed": 1.0
    },
-   "blend": "multiply",
+   "blend": "screen",
    "opacity": 0.9,
    "fade": {
     "in": 0.06,
@@ -5726,10 +5487,10 @@
     }
    ],
    "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -5741,8 +5502,8 @@
    ],
    "meta": {
     "catalog": "y2026",
-    "clip": "idf-gaza-crater-strikecam-2026-08-01",
-    "seg": 1,
+    "clip": "anadolu-khanyounis-plume-2026-09-09",
+    "seg": 0,
     "hits_song": [
      214.494
     ],
@@ -5756,14 +5517,14 @@
     "ground",
     "strike",
     "explosion",
-    "fireball",
+    "smoke-column",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_WAGCvWsTpYQ.mp4",
+   "src": "media/footage/ground/raw/youtube_3MPSoglbmTw.mp4",
    "t0": 215.326,
    "t1": 216.346,
    "time": {
-    "in": 0.041,
+    "in": 1.4,
     "speed": 1.0
    },
    "blend": "screen",
@@ -5796,10 +5557,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -5811,7 +5572,7 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "reuters-explosions-overnight-2023-10-22",
+    "clip": "ap-impact-smoke-2014",
     "seg": 0,
     "hits_song": [
      215.446
@@ -5823,17 +5584,17 @@
   {
    "id": "rise-fast-3",
    "tags": [
-    "weapons",
+    "y2026",
+    "gaza",
+    "airstrike",
     "explosion",
-    "flash",
-    "false-colour",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "src": "media/footage/y2026/raw/youtube_2G0ulKRCqLI.mp4",
    "t0": 216.278,
    "t1": 217.298,
    "time": {
-    "in": 53.0675,
+    "in": 0.72,
     "speed": 1.0
    },
    "blend": "screen",
@@ -5866,10 +5627,10 @@
     }
    ],
    "crop": [
-    0,
-    0.2347,
-    1,
-    0.7653
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -5880,9 +5641,9 @@
     540
    ],
    "meta": {
-    "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
-    "seg": 8,
+    "catalog": "y2026",
+    "clip": "ap-shati-strike-plume-2026-09-09",
+    "seg": 0,
     "hits_song": [
      216.398
     ],
@@ -5895,15 +5656,15 @@
    "tags": [
     "ground",
     "strike",
-    "night",
     "explosion",
+    "camera-jolt",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_fTiqjhMhFSY.mp4",
+   "src": "media/footage/ground/raw/youtube_4sRSITWO3I8.mp4",
    "t0": 217.23,
    "t1": 218.25,
    "time": {
-    "in": 39.44,
+    "in": 9.36,
     "speed": 1.0
    },
    "blend": "screen",
@@ -5936,10 +5697,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -5951,8 +5712,8 @@
    ],
    "meta": {
     "catalog": "ground",
-    "clip": "ap-night-blasts-from-israel-2025-09",
-    "seg": 2,
+    "clip": "ap-explosion-near-camera-2009",
+    "seg": 1,
     "hits_song": [
      217.35
     ],
@@ -5963,17 +5724,17 @@
   {
    "id": "rise-fast-5",
    "tags": [
-    "weapons",
-    "IR",
-    "crosshair",
-    "impact",
+    "y2026",
+    "gaza",
+    "airstrike",
+    "explosion",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
+   "src": "media/footage/y2026/raw/youtube_KJcRs_-Tx74.mp4",
    "t0": 218.182,
    "t1": 219.202,
    "time": {
-    "in": 8.7565,
+    "in": 4.78,
     "speed": 1.0
    },
    "blend": "screen",
@@ -6006,10 +5767,10 @@
     }
    ],
    "crop": [
-    0,
-    0.2347,
-    1,
-    0.7653
+    0.0,
+    0.3008,
+    1.0,
+    0.5992
    ],
    "size": [
     1440,
@@ -6020,9 +5781,9 @@
     540
    ],
    "meta": {
-    "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
-    "seg": 2,
+    "catalog": "y2026",
+    "clip": "aje-zawayda-warehouse-strike-shrapnel-2026-08-23",
+    "seg": 0,
     "hits_song": [
      218.302
     ],
@@ -6033,17 +5794,17 @@
   {
    "id": "rise-fast-6",
    "tags": [
-    "ground",
-    "strike",
-    "explosion",
-    "city",
+    "y2026",
+    "gaza",
+    "tent-camp",
+    "airstrike",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_J7yXotNqLVk.mp4",
+   "src": "media/footage/y2026/raw/youtube_r1XSN4h0DIU.mp4",
    "t0": 219.134,
    "t1": 220.154,
    "time": {
-    "in": 1.7162,
+    "in": 0.0,
     "speed": 1.0
    },
    "blend": "screen",
@@ -6076,10 +5837,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.0,
+    0.3008,
+    1.0,
+    0.5992
    ],
    "size": [
     1440,
@@ -6090,8 +5851,8 @@
     540
    ],
    "meta": {
-    "catalog": "ground",
-    "clip": "nbc-missile-hits-building-2023-10",
+    "catalog": "y2026",
+    "clip": "roya-afp-tent-strike-black-smoke-2026-03-25",
     "seg": 0,
     "hits_song": [
      219.254
@@ -6103,20 +5864,20 @@
   {
    "id": "rise-fast-7",
    "tags": [
-    "weapons",
-    "IR",
-    "black-hot",
-    "strike",
+    "y2026",
+    "gaza",
+    "airstrike",
+    "explosion",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_vXePDd9WRz0.mp4",
+   "src": "media/footage/y2026/raw/youtube_y6kQaVWkddo.mp4",
    "t0": 220.086,
    "t1": 221.106,
    "time": {
-    "in": 9.561,
+    "in": 1.25,
     "speed": 1.0
    },
-   "blend": "multiply",
+   "blend": "screen",
    "opacity": 0.9,
    "fade": {
     "in": 0.06,
@@ -6146,10 +5907,10 @@
     }
    ],
    "crop": [
-    0.06,
-    0.1682,
-    0.94,
-    0.7518
+    0.2137,
+    0.18,
+    0.7863,
+    0.72
    ],
    "size": [
     1440,
@@ -6160,9 +5921,9 @@
     540
    ],
    "meta": {
-    "catalog": "weapons",
-    "clip": "idf-strikes-jan2014-blackhot",
-    "seg": 1,
+    "catalog": "y2026",
+    "clip": "ap-gaza-city-blast-dusk-2026-07-28",
+    "seg": 0,
     "hits_song": [
      220.206
     ],
@@ -6173,25 +5934,39 @@
   {
    "id": "rise-fast-8",
    "tags": [
-    "ground",
-    "strike",
-    "explosion",
-    "fireball",
+    "weapons",
+    "night-vision",
+    "green",
+    "fire",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_nEHs-mDQLSI.mp4",
+   "src": "media/footage/weapons/raw/youtube_H5glijDWVyU.mp4",
    "t0": 221.158,
-   "t1": 221.608,
+   "t1": 222.084,
    "time": {
-    "in": 0.0,
-    "speed": 1.0
+    "seq": [
+     {
+      "dur": 0.4,
+      "in": 198.721,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.076,
+      "hold": 199.121
+     },
+     {
+      "dur": 0.45,
+      "in": 198.721,
+      "speed": 1.0
+     }
+    ]
+   },
+   "fade": {
+    "in": 0.04,
+    "out": 0.3
    },
    "blend": "screen",
    "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
    "fx": [
     {
      "op": "posterize",
@@ -6216,10 +5991,10 @@
     }
    ],
    "crop": [
-    0.1342,
+    0.0759,
     0.16,
-    0.8658,
-    0.85
+    0.9241,
+    0.76
    ],
    "size": [
     1440,
@@ -6230,11 +6005,16 @@
     540
    ],
    "meta": {
-    "catalog": "ground",
-    "clip": "ap-bank-strike-fireball-2023-10-08",
-    "seg": 0,
+    "catalog": "weapons",
+    "clip": "idf-castlead-nightvision-2009",
+    "seg": 2,
     "hits_song": [
-     221.158
+     221.158,
+     221.634
+    ],
+    "stutter": [
+     221.158,
+     221.634
     ],
     "z": 2
    },
@@ -6244,24 +6024,38 @@
    "id": "rise-fast-9",
    "tags": [
     "weapons",
-    "explosion",
+    "aerial",
     "fireball",
-    "range",
+    "gaza",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/dvids_544380.mp4",
-   "t0": 221.514,
-   "t1": 222.084,
+   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
+   "t0": 222.11,
+   "t1": 223.036,
    "time": {
-    "in": 19.88,
-    "speed": 1.0
+    "seq": [
+     {
+      "dur": 0.4,
+      "in": 0.881,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.076,
+      "hold": 1.281
+     },
+     {
+      "dur": 0.45,
+      "in": 0.881,
+      "speed": 1.0
+     }
+    ]
+   },
+   "fade": {
+    "in": 0.04,
+    "out": 0.3
    },
    "blend": "screen",
    "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
    "fx": [
     {
      "op": "posterize",
@@ -6286,10 +6080,10 @@
     }
    ],
    "crop": [
-    0,
-    0.0284,
-    1,
-    0.9716
+    0.1819,
+    0.16,
+    0.8181,
+    0.76
    ],
    "size": [
     1440,
@@ -6301,10 +6095,15 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "a10-bomb-load-nellis",
-    "seg": 1,
+    "clip": "times-radio-idf-bombardment-oct2023",
+    "seg": 0,
     "hits_song": [
-     221.634
+     222.11,
+     222.586
+    ],
+    "stutter": [
+     222.11,
+     222.586
     ],
     "z": 2
    },
@@ -6313,25 +6112,39 @@
   {
    "id": "rise-fast-10",
    "tags": [
-    "ground",
+    "weapons",
     "strike",
-    "explosion",
-    "fireball",
+    "high-rise",
+    "gaza",
     "strike"
    ],
-   "src": "media/footage/ground/raw/youtube_bftGJOh4FvY.mp4",
-   "t0": 221.99,
-   "t1": 222.56,
+   "src": "media/footage/weapons/raw/youtube_pzFOfUV7iNA.mp4",
+   "t0": 223.062,
+   "t1": 223.989,
    "time": {
-    "in": 0.4482,
-    "speed": 1.0
+    "seq": [
+     {
+      "dur": 0.4,
+      "in": 1.8779,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.077,
+      "hold": 2.2779
+     },
+     {
+      "dur": 0.45,
+      "in": 1.8779,
+      "speed": 1.0
+     }
+    ]
+   },
+   "fade": {
+    "in": 0.04,
+    "out": 0.3
    },
    "blend": "screen",
    "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
    "fx": [
     {
      "op": "posterize",
@@ -6356,10 +6169,10 @@
     }
    ],
    "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
+    0.12,
+    0.2216,
+    0.88,
+    0.9384
    ],
    "size": [
     1440,
@@ -6370,11 +6183,16 @@
     540
    ],
    "meta": {
-    "catalog": "ground",
-    "clip": "reuters-national-bank-strike-2023-10",
+    "catalog": "weapons",
+    "clip": "wsj-gaza-highrise-strike-oct2023",
     "seg": 0,
     "hits_song": [
-     222.11
+     223.062,
+     223.539
+    ],
+    "stutter": [
+     223.062,
+     223.539
     ],
     "z": 2
    },
@@ -6384,24 +6202,38 @@
    "id": "rise-fast-11",
    "tags": [
     "weapons",
-    "aerial",
-    "strike",
-    "gaza",
+    "impact",
+    "explosion",
+    "IR",
     "strike"
    ],
-   "src": "media/footage/weapons/raw/youtube_hy8dNUHzApk.mp4",
-   "t0": 222.466,
-   "t1": 223.036,
+   "src": "media/footage/weapons/raw/youtube_AIRiNPaoLTI.mp4",
+   "t0": 224.015,
+   "t1": 224.941,
    "time": {
-    "in": 18.721,
-    "speed": 1.0
+    "seq": [
+     {
+      "dur": 0.4,
+      "in": 10.241,
+      "speed": 1.0
+     },
+     {
+      "dur": 0.076,
+      "hold": 10.641
+     },
+     {
+      "dur": 0.45,
+      "in": 10.241,
+      "speed": 1.0
+     }
+    ]
+   },
+   "fade": {
+    "in": 0.04,
+    "out": 0.3
    },
    "blend": "screen",
    "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
    "fx": [
     {
      "op": "posterize",
@@ -6426,9 +6258,9 @@
     }
    ],
    "crop": [
-    0.1819,
+    0.0759,
     0.16,
-    0.8181,
+    0.9241,
     0.76
    ],
    "size": [
@@ -6441,289 +6273,14 @@
    ],
    "meta": {
     "catalog": "weapons",
-    "clip": "times-radio-idf-bombardment-oct2023",
-    "seg": 2,
-    "hits_song": [
-     222.586
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-fast-12",
-   "tags": [
-    "ground",
-    "strike",
-    "night",
-    "flash",
-    "strike"
-   ],
-   "src": "media/footage/ground/raw/youtube_DZQfl2Ox96g.mp4",
-   "t0": 222.942,
-   "t1": 223.512,
-   "time": {
-    "in": 13.601,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 444
-    }
-   ],
-   "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "ground",
-    "clip": "afp-rafah-night-strikes-flares-2023-12",
-    "seg": 0,
-    "hits_song": [
-     223.062
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-fast-13",
-   "tags": [
-    "y2026",
-    "idf",
-    "strike-cam",
-    "gaza",
-    "strike"
-   ],
-   "src": "media/footage/y2026/raw/youtube_JMFVyv-HYM0.mp4",
-   "t0": 223.419,
-   "t1": 223.989,
-   "time": {
-    "in": 18.77,
-    "speed": 1.0
-   },
-   "blend": "multiply",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 481
-    }
-   ],
-   "crop": [
-    0.1819,
-    0.16,
-    0.8181,
-    0.76
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "y2026",
-    "clip": "idf-gaza-crater-strikecam-2026-08-01",
+    "clip": "idf-launcher-strike-2009",
     "seg": 1,
     "hits_song": [
-     223.539
+     224.015,
+     224.491
     ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-fast-14",
-   "tags": [
-    "ground",
-    "strike",
-    "explosion",
-    "fireball",
-    "strike"
-   ],
-   "src": "media/footage/ground/raw/youtube_WAGCvWsTpYQ.mp4",
-   "t0": 223.895,
-   "t1": 224.465,
-   "time": {
-    "in": 0.041,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 518
-    }
-   ],
-   "crop": [
-    0.1342,
-    0.16,
-    0.8658,
-    0.85
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "ground",
-    "clip": "reuters-explosions-overnight-2023-10-22",
-    "seg": 0,
-    "hits_song": [
-     224.015
-    ],
-    "z": 2
-   },
-   "clip": "picture"
-  },
-  {
-   "id": "rise-fast-15",
-   "tags": [
-    "weapons",
-    "explosion",
-    "flash",
-    "false-colour",
-    "strike"
-   ],
-   "src": "media/footage/weapons/raw/dvids_878950.mp4",
-   "t0": 224.371,
-   "t1": 224.941,
-   "time": {
-    "in": 53.0675,
-    "speed": 1.0
-   },
-   "blend": "screen",
-   "opacity": 0.9,
-   "fade": {
-    "in": 0.06,
-    "out": 0.8
-   },
-   "fx": [
-    {
-     "op": "posterize",
-     "levels": 6
-    },
-    {
-     "op": "chroma",
-     "px": {
-      "range": [
-       2,
-       18
-      ],
-      "of": {
-       "beat": {
-        "div": 1,
-        "shape": "decay",
-        "tau": 0.18
-       }
-      }
-     },
-     "angle": 555
-    }
-   ],
-   "crop": [
-    0,
-    0.2347,
-    1,
-    0.7653
-   ],
-   "size": [
-    1440,
-    764
-   ],
-   "pos": [
-    720,
-    540
-   ],
-   "meta": {
-    "catalog": "weapons",
-    "clip": "hellfire-symphony-tads",
-    "seg": 8,
-    "hits_song": [
+    "stutter": [
+     224.015,
      224.491
     ],
     "z": 2
@@ -91019,6 +90576,2924 @@
    }
   },
   {
+   "id": "spk:haley-shell",
+   "tags": [
+    "speaker",
+    "window"
+   ],
+   "src": "media/derived/preachers/haley_finish_them__shell.mp4",
+   "t0": 69.237,
+   "t1": 75.637,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "fade": {
+    "in": 0.2,
+    "out": 0.4
+   },
+   "size": [
+    430,
+    250
+   ],
+   "crop": [
+    0.235,
+    0.0011,
+    0.765,
+    0.5489
+   ],
+   "pos": [
+    340,
+    330
+   ],
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   },
+   "meta": {
+    "catalog": "preachers",
+    "clip": "haley_finish_them__shell",
+    "seg": 0,
+    "hits_song": [],
+    "z": 3.2
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "spk:hagee_cufi2024_weapons__weapons_of_war",
+   "tags": [
+    "speaker",
+    "window"
+   ],
+   "src": "media/derived/preachers/hagee_cufi2024_weapons__weapons_of_war.mp4",
+   "t0": 129.729,
+   "t1": 138.009,
+   "time": {
+    "in": 3.52,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "hagee_cufi2024_weapons__weapons_of_war",
+    "seg": 0,
+    "hits_song": [
+     137.358
+    ],
+    "z": 3.4,
+    "people": [
+     {
+      "name": "John Hagee",
+      "role": "founder, Christians United for Israel",
+      "date": "2024-07-29",
+      "source": "https://www.youtube.com/watch?v=GrgGCwHNuWA"
+     }
+    ]
+   },
+   "size": [
+    600,
+    338
+   ],
+   "crop": [
+    0.0007,
+    0,
+    0.9993,
+    1
+   ],
+   "pos": [
+    370,
+    470
+   ],
+   "scale": 1.0,
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "spk:vaughn-ring0",
+   "tags": [
+    "head",
+    "speaker",
+    "copy"
+   ],
+   "src": "media/derived/preachers/vaughn_wonderful_days__glory.mp4",
+   "t0": 179.104,
+   "t1": 181.604,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1054.4,
+       500.5
+      ],
+      [
+       1060.4,
+       503.3
+      ],
+      [
+       1056.8,
+       509.7
+      ],
+      [
+       1038.6,
+       519.4
+      ],
+      [
+       1014.4,
+       529.9
+      ],
+      [
+       1002.9,
+       538.1
+      ],
+      [
+       1002.7,
+       543.9
+      ],
+      [
+       1002.5,
+       549.6
+      ],
+      [
+       1002.3,
+       554.9
+      ],
+      [
+       1002.1,
+       560.1
+      ],
+      [
+       1001.8,
+       564.9
+      ],
+      [
+       1001.4,
+       569.5
+      ],
+      [
+       984.5,
+       579.8
+      ],
+      [
+       940.4,
+       596.7
+      ],
+      [
+       872.8,
+       614.4
+      ],
+      [
+       797.4,
+       627.2
+      ],
+      [
+       738.8,
+       634.1
+      ],
+      [
+       720.0,
+       638.0
+      ],
+      [
+       720.0,
+       641.1
+      ],
+      [
+       720.0,
+       643.6
+      ],
+      [
+       720.0,
+       645.6
+      ],
+      [
+       720.0,
+       646.9
+      ],
+      [
+       720.0,
+       647.7
+      ],
+      [
+       718.9,
+       647.9
+      ],
+      [
+       684.3,
+       646.8
+      ],
+      [
+       617.2,
+       640.9
+      ],
+      [
+       542.4,
+       627.5
+      ],
+      [
+       482.2,
+       609.7
+      ],
+      [
+       447.7,
+       594.4
+      ],
+      [
+       439.6,
+       588.5
+      ],
+      [
+       439.4,
+       585.9
+      ],
+      [
+       439.2,
+       583.0
+      ],
+      [
+       439.0,
+       579.7
+      ],
+      [
+       438.8,
+       576.0
+      ],
+      [
+       438.6,
+       572.0
+      ],
+      [
+       437.0,
+       567.2
+      ],
+      [
+       418.6,
+       555.5
+      ],
+      [
+       394.4,
+       538.7
+      ],
+      [
+       380.8,
+       521.6
+      ],
+      [
+       381.3,
+       508.4
+      ],
+      [
+       388.0,
+       501.3
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.9,
+       500.0
+      ],
+      [
+       400.7,
+       501.1
+      ],
+      [
+       423.4,
+       504.7
+      ],
+      [
+       456.8,
+       510.6
+      ],
+      [
+       492.4,
+       517.4
+      ],
+      [
+       517.2,
+       523.8
+      ],
+      [
+       521.4,
+       528.4
+      ],
+      [
+       521.3,
+       532.5
+      ],
+      [
+       521.2,
+       536.4
+      ],
+      [
+       521.1,
+       540.2
+      ],
+      [
+       521.0,
+       543.8
+      ],
+      [
+       520.9,
+       547.2
+      ],
+      [
+       524.3,
+       551.0
+      ],
+      [
+       549.8,
+       558.5
+      ],
+      [
+       592.8,
+       567.6
+      ],
+      [
+       643.3,
+       575.4
+      ]
+     ]
+    }
+   },
+   "scale": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      0.3,
+      0.3045,
+      0.3162,
+      0.3321,
+      0.348,
+      0.3597,
+      0.3637,
+      0.3635,
+      0.3632,
+      0.3629,
+      0.3626,
+      0.3623,
+      0.3621,
+      0.3668,
+      0.3766,
+      0.3863,
+      0.392,
+      0.3934,
+      0.3932,
+      0.3928,
+      0.3926,
+      0.3923,
+      0.3922,
+      0.3921,
+      0.3921,
+      0.3917,
+      0.3887,
+      0.3814,
+      0.3712,
+      0.3627,
+      0.3605,
+      0.3607,
+      0.361,
+      0.3612,
+      0.3615,
+      0.3618,
+      0.3617,
+      0.355,
+      0.3419,
+      0.3258,
+      0.3113,
+      0.3019,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.2992,
+      0.292,
+      0.2806,
+      0.2692,
+      0.2606,
+      0.2559,
+      0.2553,
+      0.2554,
+      0.2556,
+      0.2557,
+      0.2559,
+      0.256,
+      0.2556,
+      0.2521,
+      0.2475,
+      0.2441
+     ]
+    }
+   },
+   "opacity": 0.85,
+   "fade": {
+    "in": 0.3,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "hue",
+     "deg": {
+      "range": [
+       0,
+       180
+      ],
+      "of": {
+       "beat": {
+        "div": 4,
+        "shape": "saw"
+       }
+      }
+     }
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       2,
+       22
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 15
+    }
+   ],
+   "meta": {
+    "z": 3.4
+   }
+  },
+  {
+   "id": "spk:vaughn-ring1",
+   "tags": [
+    "head",
+    "speaker",
+    "copy"
+   ],
+   "src": "media/derived/preachers/vaughn_wonderful_days__glory.mp4",
+   "t0": 179.104,
+   "t1": 181.604,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      [
+       720.0,
+       500.0
+      ],
+      [
+       735.6,
+       493.9
+      ],
+      [
+       774.4,
+       488.0
+      ],
+      [
+       823.9,
+       483.0
+      ],
+      [
+       871.5,
+       479.3
+      ],
+      [
+       906.1,
+       476.5
+      ],
+      [
+       918.6,
+       473.3
+      ],
+      [
+       918.7,
+       469.1
+      ],
+      [
+       918.8,
+       465.1
+      ],
+      [
+       918.9,
+       461.3
+      ],
+      [
+       919.0,
+       457.6
+      ],
+      [
+       919.1,
+       454.2
+      ],
+      [
+       919.4,
+       450.9
+      ],
+      [
+       935.2,
+       451.1
+      ],
+      [
+       967.8,
+       457.1
+      ],
+      [
+       1003.5,
+       468.5
+      ],
+      [
+       1031.3,
+       483.0
+      ],
+      [
+       1046.3,
+       495.6
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.2,
+       500.3
+      ],
+      [
+       1055.4,
+       509.5
+      ],
+      [
+       1059.5,
+       528.5
+      ],
+      [
+       1052.1,
+       552.1
+      ],
+      [
+       1031.0,
+       573.6
+      ],
+      [
+       1007.6,
+       586.9
+      ],
+      [
+       1000.4,
+       588.5
+      ],
+      [
+       1000.6,
+       585.9
+      ],
+      [
+       1000.8,
+       583.0
+      ],
+      [
+       1001.0,
+       579.7
+      ],
+      [
+       1001.2,
+       576.0
+      ],
+      [
+       1001.4,
+       572.0
+      ],
+      [
+       1000.4,
+       568.1
+      ],
+      [
+       978.5,
+       570.1
+      ],
+      [
+       929.5,
+       574.6
+      ],
+      [
+       858.8,
+       576.1
+      ],
+      [
+       784.2,
+       572.3
+      ],
+      [
+       731.4,
+       564.5
+      ],
+      [
+       720.0,
+       555.3
+      ],
+      [
+       720.0,
+       545.9
+      ],
+      [
+       720.0,
+       536.2
+      ],
+      [
+       720.0,
+       526.3
+      ],
+      [
+       720.0,
+       516.2
+      ],
+      [
+       720.0,
+       506.1
+      ],
+      [
+       715.5,
+       495.9
+      ],
+      [
+       671.8,
+       485.9
+      ],
+      [
+       599.9,
+       477.0
+      ],
+      [
+       525.7,
+       470.7
+      ],
+      [
+       470.1,
+       467.3
+      ],
+      [
+       441.3,
+       464.7
+      ],
+      [
+       437.2,
+       459.6
+      ],
+      [
+       437.4,
+       453.8
+      ],
+      [
+       437.6,
+       448.3
+      ],
+      [
+       437.8,
+       443.0
+      ],
+      [
+       438.0,
+       438.0
+      ],
+      [
+       438.3,
+       433.3
+      ],
+      [
+       435.1,
+       430.2
+      ],
+      [
+       414.3,
+       436.4
+      ],
+      [
+       391.4,
+       451.2
+      ],
+      [
+       380.6,
+       470.3
+      ]
+     ]
+    }
+   },
+   "scale": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      0.24,
+      0.2401,
+      0.2411,
+      0.2439,
+      0.2485,
+      0.2532,
+      0.2553,
+      0.2554,
+      0.2555,
+      0.2557,
+      0.2558,
+      0.256,
+      0.2561,
+      0.259,
+      0.266,
+      0.2762,
+      0.2877,
+      0.2969,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3002,
+      0.306,
+      0.318,
+      0.3332,
+      0.3478,
+      0.3578,
+      0.3605,
+      0.3607,
+      0.361,
+      0.3612,
+      0.3615,
+      0.3618,
+      0.3626,
+      0.3695,
+      0.3806,
+      0.3909,
+      0.3967,
+      0.3985,
+      0.3989,
+      0.3993,
+      0.3995,
+      0.3998,
+      0.3999,
+      0.4,
+      0.4,
+      0.3991,
+      0.3947,
+      0.3854,
+      0.3738,
+      0.3653,
+      0.3636,
+      0.3634,
+      0.3631,
+      0.3628,
+      0.3625,
+      0.3622,
+      0.3607,
+      0.3521,
+      0.3379,
+      0.322
+     ]
+    }
+   },
+   "opacity": 0.85,
+   "fade": {
+    "in": 0.3,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "gradmap",
+     "palette": "ironbow",
+     "cycle": {
+      "beat": {
+       "div": 4,
+       "shape": "saw"
+      }
+     }
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       10
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 0
+    }
+   ],
+   "meta": {
+    "z": 3.4
+   }
+  },
+  {
+   "id": "spk:vaughn-ring2",
+   "tags": [
+    "head",
+    "speaker",
+    "copy"
+   ],
+   "src": "media/derived/preachers/vaughn_wonderful_days__glory.mp4",
+   "t0": 179.104,
+   "t1": 181.604,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      [
+       390.0,
+       500.0
+      ],
+      [
+       395.4,
+       499.6
+      ],
+      [
+       412.8,
+       497.0
+      ],
+      [
+       442.5,
+       492.0
+      ],
+      [
+       478.7,
+       485.3
+      ],
+      [
+       509.4,
+       478.6
+      ],
+      [
+       521.4,
+       473.3
+      ],
+      [
+       521.3,
+       469.1
+      ],
+      [
+       521.2,
+       465.1
+      ],
+      [
+       521.1,
+       461.3
+      ],
+      [
+       521.0,
+       457.6
+      ],
+      [
+       520.9,
+       454.2
+      ],
+      [
+       520.9,
+       450.9
+      ],
+      [
+       537.0,
+       444.8
+      ],
+      [
+       574.1,
+       436.0
+      ],
+      [
+       623.0,
+       427.4
+      ],
+      [
+       672.0,
+       421.1
+      ],
+      [
+       708.4,
+       417.4
+      ],
+      [
+       720.0,
+       414.9
+      ],
+      [
+       720.0,
+       412.9
+      ],
+      [
+       720.0,
+       411.2
+      ],
+      [
+       720.0,
+       409.9
+      ],
+      [
+       720.0,
+       409.0
+      ],
+      [
+       720.0,
+       408.5
+      ],
+      [
+       720.7,
+       408.4
+      ],
+      [
+       742.2,
+       408.9
+      ],
+      [
+       784.6,
+       411.5
+      ],
+      [
+       835.1,
+       417.3
+      ],
+      [
+       881.2,
+       425.6
+      ],
+      [
+       912.0,
+       433.4
+      ],
+      [
+       919.8,
+       436.9
+      ],
+      [
+       919.7,
+       438.8
+      ],
+      [
+       919.6,
+       441.0
+      ],
+      [
+       919.5,
+       443.4
+      ],
+      [
+       919.4,
+       446.1
+      ],
+      [
+       919.3,
+       449.0
+      ],
+      [
+       920.5,
+       452.4
+      ],
+      [
+       940.5,
+       459.4
+      ],
+      [
+       974.6,
+       469.7
+      ],
+      [
+       1009.4,
+       481.5
+      ],
+      [
+       1035.0,
+       492.2
+      ],
+      [
+       1047.8,
+       498.7
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.0,
+       500.0
+      ],
+      [
+       1050.8,
+       500.0
+      ],
+      [
+       1057.3,
+       498.8
+      ],
+      [
+       1060.6,
+       494.6
+      ],
+      [
+       1051.1,
+       486.7
+      ],
+      [
+       1028.7,
+       476.4
+      ],
+      [
+       1007.1,
+       466.3
+      ],
+      [
+       1002.8,
+       459.6
+      ],
+      [
+       1002.6,
+       453.8
+      ],
+      [
+       1002.4,
+       448.3
+      ],
+      [
+       1002.2,
+       443.0
+      ],
+      [
+       1002.0,
+       438.0
+      ],
+      [
+       1001.7,
+       433.3
+      ],
+      [
+       997.9,
+       427.5
+      ],
+      [
+       970.1,
+       414.0
+      ],
+      [
+       915.6,
+       395.9
+      ],
+      [
+       842.3,
+       379.7
+      ]
+     ]
+    }
+   },
+   "scale": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      0.3,
+      0.2956,
+      0.2854,
+      0.2736,
+      0.2636,
+      0.2573,
+      0.2553,
+      0.2554,
+      0.2555,
+      0.2557,
+      0.2558,
+      0.256,
+      0.2561,
+      0.2538,
+      0.2493,
+      0.2452,
+      0.243,
+      0.2424,
+      0.2425,
+      0.2427,
+      0.2428,
+      0.2428,
+      0.2429,
+      0.2429,
+      0.2429,
+      0.2431,
+      0.2442,
+      0.2472,
+      0.2517,
+      0.2558,
+      0.2569,
+      0.2568,
+      0.2567,
+      0.2565,
+      0.2564,
+      0.2562,
+      0.2563,
+      0.2597,
+      0.2673,
+      0.278,
+      0.2895,
+      0.2981,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3008,
+      0.3085,
+      0.3223,
+      0.3387,
+      0.3534,
+      0.3624,
+      0.3636,
+      0.3634,
+      0.3631,
+      0.3628,
+      0.3625,
+      0.3622,
+      0.3631,
+      0.3705,
+      0.3808,
+      0.3891
+     ]
+    }
+   },
+   "opacity": 0.85,
+   "fade": {
+    "in": 0.3,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "invert"
+    },
+    {
+     "op": "hue",
+     "deg": {
+      "range": [
+       0,
+       360
+      ],
+      "of": {
+       "beat": {
+        "div": 8,
+        "shape": "saw"
+       }
+      }
+     }
+    },
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       3,
+       16
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     },
+     "angle": 200
+    }
+   ],
+   "meta": {
+    "z": 3.4
+   }
+  },
+  {
+   "id": "spk:vaughn-ring3",
+   "tags": [
+    "head",
+    "speaker",
+    "copy"
+   ],
+   "src": "media/derived/preachers/vaughn_wonderful_days__glory.mp4",
+   "t0": 179.104,
+   "t1": 181.604,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      [
+       720.0,
+       500.0
+      ],
+      [
+       694.0,
+       510.1
+      ],
+      [
+       630.4,
+       519.7
+      ],
+      [
+       554.0,
+       527.2
+      ],
+      [
+       489.2,
+       531.6
+      ],
+      [
+       449.5,
+       534.1
+      ],
+      [
+       437.1,
+       538.1
+      ],
+      [
+       437.3,
+       543.9
+      ],
+      [
+       437.5,
+       549.6
+      ],
+      [
+       437.7,
+       554.9
+      ],
+      [
+       437.9,
+       560.1
+      ],
+      [
+       438.2,
+       564.9
+      ],
+      [
+       438.3,
+       569.4
+      ],
+      [
+       424.0,
+       567.2
+      ],
+      [
+       399.6,
+       555.5
+      ],
+      [
+       383.1,
+       537.5
+      ],
+      [
+       380.8,
+       518.6
+      ],
+      [
+       386.9,
+       504.5
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.0,
+       500.0
+      ],
+      [
+       390.2,
+       499.7
+      ],
+      [
+       397.4,
+       490.8
+      ],
+      [
+       416.8,
+       474.5
+      ],
+      [
+       448.1,
+       457.4
+      ],
+      [
+       484.1,
+       444.2
+      ],
+      [
+       512.3,
+       437.2
+      ],
+      [
+       520.2,
+       436.9
+      ],
+      [
+       520.3,
+       438.8
+      ],
+      [
+       520.4,
+       441.0
+      ],
+      [
+       520.5,
+       443.4
+      ],
+      [
+       520.6,
+       446.1
+      ],
+      [
+       520.7,
+       449.0
+      ],
+      [
+       522.2,
+       451.9
+      ],
+      [
+       543.3,
+       452.1
+      ],
+      [
+       583.7,
+       451.5
+      ],
+      [
+       633.6,
+       452.6
+      ],
+      [
+       681.0,
+       456.0
+      ],
+      [
+       713.1,
+       461.1
+      ],
+      [
+       720.0,
+       466.7
+      ],
+      [
+       720.0,
+       472.4
+      ],
+      [
+       720.0,
+       478.3
+      ],
+      [
+       720.0,
+       484.2
+      ],
+      [
+       720.0,
+       490.3
+      ],
+      [
+       720.0,
+       496.3
+      ],
+      [
+       722.7,
+       502.4
+      ],
+      [
+       749.0,
+       508.5
+      ],
+      [
+       793.6,
+       514.1
+      ],
+      [
+       843.9,
+       518.7
+      ],
+      [
+       887.5,
+       521.9
+      ],
+      [
+       914.2,
+       524.6
+      ],
+      [
+       918.6,
+       528.4
+      ],
+      [
+       918.7,
+       532.5
+      ],
+      [
+       918.8,
+       536.4
+      ],
+      [
+       918.9,
+       540.2
+      ],
+      [
+       919.0,
+       543.8
+      ],
+      [
+       919.1,
+       547.2
+      ],
+      [
+       922.8,
+       549.7
+      ],
+      [
+       947.0,
+       547.2
+      ],
+      [
+       982.4,
+       538.9
+      ],
+      [
+       1016.0,
+       525.9
+      ]
+     ]
+    }
+   },
+   "scale": {
+    "dense": {
+     "t0": 179.104,
+     "dt": 0.04,
+     "v": [
+      0.4,
+      0.3997,
+      0.397,
+      0.3896,
+      0.3784,
+      0.368,
+      0.3637,
+      0.3635,
+      0.3632,
+      0.3629,
+      0.3626,
+      0.3623,
+      0.362,
+      0.3564,
+      0.344,
+      0.3283,
+      0.3134,
+      0.3031,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.2998,
+      0.2943,
+      0.284,
+      0.2728,
+      0.2638,
+      0.2583,
+      0.2569,
+      0.2568,
+      0.2567,
+      0.2565,
+      0.2564,
+      0.2562,
+      0.2558,
+      0.2525,
+      0.2476,
+      0.2434,
+      0.2412,
+      0.2405,
+      0.2404,
+      0.2403,
+      0.2402,
+      0.2401,
+      0.24,
+      0.24,
+      0.24,
+      0.2403,
+      0.242,
+      0.2456,
+      0.2505,
+      0.2545,
+      0.2553,
+      0.2554,
+      0.2556,
+      0.2557,
+      0.2559,
+      0.256,
+      0.2568,
+      0.2614,
+      0.2698,
+      0.2808
+     ]
+    }
+   },
+   "opacity": 0.85,
+   "fade": {
+    "in": 0.3,
+    "out": 0.4
+   },
+   "fx": [
+    {
+     "op": "gradmap",
+     "palette": "acid",
+     "cycle": {
+      "beat": {
+       "div": 2,
+       "shape": "saw"
+      }
+     }
+    },
+    {
+     "op": "edgeglow",
+     "base": 0.5,
+     "color": "source",
+     "gain": {
+      "range": [
+       0.8,
+       2.0
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.18
+       }
+      }
+     }
+    }
+   ],
+   "meta": {
+    "z": 3.4
+   }
+  },
+  {
+   "id": "spk:graham_mtp_bombs__hiroshima_bombs",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/graham_mtp_bombs__hiroshima_bombs.mp4",
+   "t0": 41.557,
+   "t1": 51.077,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "graham_mtp_bombs__hiroshima_bombs",
+    "seg": 0,
+    "hits_song": [
+     47.821
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Lindsey Graham",
+      "role": "US Senator (R-SC)",
+      "date": "2024-05-12",
+      "source": "https://www.youtube.com/watch?v=XUdUO02Lc-g"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "k": [
+     [
+      40.205,
+      [
+       430,
+       480
+      ]
+     ],
+     [
+      51.63,
+      [
+       520,
+       450
+      ]
+     ]
+    ],
+    "ease": "smooth"
+   },
+   "scale": {
+    "mul": [
+     {
+      "mul": [
+       0.62,
+       {
+        "k": [
+         [
+          41.556999999999995,
+          1.0
+         ],
+         [
+          42.789,
+          1.0
+         ],
+         [
+          42.879,
+          1.2
+         ],
+         [
+          43.159,
+          1.2
+         ],
+         [
+          43.388999999999996,
+          1.0
+         ],
+         [
+          47.771,
+          1.0
+         ],
+         [
+          47.861,
+          1.2
+         ],
+         [
+          48.141,
+          1.2
+         ],
+         [
+          48.370999999999995,
+          1.0
+         ]
+        ],
+        "ease": "smooth"
+       }
+      ]
+     },
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:johnson_bible_bless__bless_curse",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/johnson_bible_bless__bless_curse.mp4",
+   "t0": 51.138,
+   "t1": 54.568,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 3.3
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "johnson_bible_bless__bless_curse",
+    "seg": 0,
+    "hits_song": [
+     51.63
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Mike Johnson",
+      "role": "Speaker of the US House",
+      "date": "2024-07-24",
+      "source": "https://www.youtube.com/watch?v=w2VGO4Dh2mU"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    720,
+    400
+   ],
+   "scale": {
+    "mul": [
+     {
+      "mul": [
+       0.6,
+       {
+        "k": [
+         [
+          51.138000000000005,
+          1.0
+         ],
+         [
+          52.24000000000001,
+          1.0
+         ],
+         [
+          52.330000000000005,
+          1.2
+         ],
+         [
+          52.61000000000001,
+          1.2
+         ],
+         [
+          52.84,
+          1.0
+         ],
+         [
+          53.72100000000001,
+          1.0
+         ],
+         [
+          53.81100000000001,
+          1.2
+         ],
+         [
+          54.09100000000001,
+          1.2
+         ],
+         [
+          54.321000000000005,
+          1.0
+         ]
+        ],
+        "ease": "smooth"
+       }
+      ]
+     },
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:cruz_tucker_bless__taught_bless",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/cruz_tucker_bless__taught_bless.mp4",
+   "t0": 54.816,
+   "t1": 58.836,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "cruz_tucker_bless__taught_bless",
+    "seg": 0,
+    "hits_song": [
+     57.342
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Ted Cruz",
+      "role": "US Senator (R-TX)",
+      "date": "2025-06-18",
+      "source": "https://www.youtube.com/watch?v=smemFVe0l5E"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    720,
+    410
+   ],
+   "scale": {
+    "mul": [
+     {
+      "mul": [
+       0.6,
+       {
+        "k": [
+         [
+          54.816,
+          1.0
+         ],
+         [
+          55.891000000000005,
+          1.0
+         ],
+         [
+          55.981,
+          1.2
+         ],
+         [
+          56.261,
+          1.2
+         ],
+         [
+          56.491,
+          1.0
+         ],
+         [
+          58.352000000000004,
+          1.0
+         ],
+         [
+          58.442,
+          1.2
+         ],
+         [
+          58.722,
+          1.2
+         ],
+         [
+          58.952,
+          1.0
+         ]
+        ],
+        "ease": "smooth"
+       }
+      ]
+     },
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:walberg_nagasaki__nagasaki_quick",
+   "tags": [
+    "voice",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/walberg_nagasaki__nagasaki_quick.mp4",
+   "t0": 59.94,
+   "t1": 69.11,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "walberg_nagasaki__nagasaki_quick",
+    "seg": 0,
+    "hits_song": [
+     68.778
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Tim Walberg",
+      "role": "US Rep. (R-MI)",
+      "date": "2024-03-25",
+      "source": "https://www.youtube.com/watch?v=y4PQ47OEU0Y"
+     }
+    ]
+   },
+   "size": [
+    480,
+    270
+   ],
+   "crop": [
+    0,
+    0.3418,
+    1,
+    0.6582
+   ],
+   "pos": [
+    720,
+    540
+   ],
+   "scale": 1.0,
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   }
+  },
+  {
+   "id": "spk:haley_hannity_finish__finish_them",
+   "tags": [
+    "voice",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/haley_hannity_finish__finish_them.mp4",
+   "t0": 69.437,
+   "t1": 74.737,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "haley_hannity_finish__finish_them",
+    "seg": 0,
+    "hits_song": [
+     72.586
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Nikki Haley",
+      "role": "former UN ambassador; then presidential candidate",
+      "date": "2023-10-08",
+      "source": "https://www.youtube.com/watch?v=NLe4j9Koxjw"
+     }
+    ]
+   },
+   "size": [
+    480,
+    270
+   ],
+   "crop": [
+    0,
+    0.0,
+    1,
+    1.0
+   ],
+   "pos": [
+    720,
+    540
+   ],
+   "scale": 1.0,
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   }
+  },
+  {
+   "id": "spk:ogles_kill_them_all__kill_them_all",
+   "tags": [
+    "speaker",
+    "window"
+   ],
+   "src": "media/derived/preachers/ogles_kill_them_all__kill_them_all.mp4",
+   "t0": 74.805,
+   "t1": 80.805,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "ogles_kill_them_all__kill_them_all",
+    "seg": 0,
+    "hits_song": [
+     80.202
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Andy Ogles",
+      "role": "US Rep. (R-TN)",
+      "date": "2024-02 (filmed; Al Jazeera graphic dates it 2024-02-15)",
+      "source": "https://www.youtube.com/watch?v=K7fG1VqbIyI"
+     }
+    ]
+   },
+   "size": [
+    330,
+    366
+   ],
+   "crop": [
+    0.355,
+    0.0765,
+    0.64,
+    0.6385
+   ],
+   "pos": [
+    720,
+    450
+   ],
+   "scale": 1.0,
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "spk:hibbs_weapons_insulting_god__insulting_god",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/hibbs_weapons_insulting_god__insulting_god.mp4",
+   "t0": 121.931,
+   "t1": 126.551,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "hibbs_weapons_insulting_god__insulting_god",
+    "seg": 0,
+    "hits_song": [
+     124.018
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Jack Hibbs",
+      "role": "pastor, Calvary Chapel Chino Hills (CA)",
+      "date": "2024-05-14",
+      "source": "https://www.youtube.com/watch?v=ltRAHOapmkc"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "k": [
+     [
+      122.114,
+      [
+       1040,
+       640
+      ]
+     ],
+     [
+      125.922,
+      [
+       1080,
+       660
+      ]
+     ]
+    ],
+    "ease": "smooth"
+   },
+   "scale": {
+    "mul": [
+     {
+      "mul": [
+       0.62,
+       {
+        "k": [
+         [
+          121.931,
+          1.0
+         ],
+         [
+          123.028,
+          1.0
+         ],
+         [
+          123.11800000000001,
+          1.2
+         ],
+         [
+          123.398,
+          1.2
+         ],
+         [
+          123.628,
+          1.0
+         ],
+         [
+          124.869,
+          1.0
+         ],
+         [
+          124.959,
+          1.2
+         ],
+         [
+          125.23899999999999,
+          1.2
+         ],
+         [
+          125.469,
+          1.0
+         ]
+        ],
+        "ease": "smooth"
+       }
+      ]
+     },
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:vaughn_wonderful_days__wonderful_days",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/vaughn_wonderful_days__wonderful_days.mp4",
+   "t0": 167.642,
+   "t1": 178.742,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.5
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "vaughn_wonderful_days__wonderful_days",
+    "seg": 0,
+    "hits_song": [
+     167.822
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Shane Vaughn ('Professor Toto')",
+      "role": "pastor, First Harvest Ministries; online broadcaster",
+      "date": "2025-06-13",
+      "source": "https://www.youtube.com/watch?v=3xDxFvr4Evc"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": {
+    "k": [
+     [
+      167.822,
+      [
+       1060,
+       470
+      ]
+     ],
+     [
+      179.258,
+      [
+       960,
+       430
+      ]
+     ]
+    ],
+    "ease": "smooth"
+   },
+   "scale": {
+    "mul": [
+     0.6,
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:vaughn_wonderful_days__glory",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/vaughn_wonderful_days__glory.mp4",
+   "t0": 179.104,
+   "t1": 181.604,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.5
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "vaughn_wonderful_days__glory",
+    "seg": 0,
+    "hits_song": [
+     179.258
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Shane Vaughn ('Professor Toto')",
+      "role": "pastor, First Harvest Ministries; online broadcaster",
+      "date": "2025-06-13",
+      "source": "https://www.youtube.com/watch?v=3xDxFvr4Evc"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    720,
+    500
+   ],
+   "scale": {
+    "mul": [
+     {
+      "mul": [
+       0.62,
+       {
+        "k": [
+         [
+          179.104,
+          1.0
+         ],
+         [
+          179.988,
+          1.0
+         ],
+         [
+          180.078,
+          1.2
+         ],
+         [
+          180.358,
+          1.2
+         ],
+         [
+          180.58800000000002,
+          1.0
+         ]
+        ],
+        "ease": "smooth"
+       }
+      ]
+     },
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:hibbs_weapons_insulting_god__poking_god",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/hibbs_weapons_insulting_god__poking_god.mp4",
+   "t0": 182.634,
+   "t1": 187.204,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "hibbs_weapons_insulting_god__poking_god",
+    "seg": 0,
+    "hits_song": [
+     186.874
+    ],
+    "z": 3.5,
+    "people": [
+     {
+      "name": "Jack Hibbs",
+      "role": "pastor, Calvary Chapel Chino Hills (CA)",
+      "date": "2024-05-14",
+      "source": "https://www.youtube.com/watch?v=ltRAHOapmkc"
+     }
+    ]
+   },
+   "rot": {
+    "range": [
+     -3,
+     3
+    ],
+    "of": {
+     "beat": {
+      "div": 8,
+      "shape": "sine"
+     }
+    }
+   },
+   "fx": [
+    {
+     "op": "chroma",
+     "px": {
+      "range": [
+       0,
+       7
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.14
+       }
+      }
+     },
+     "angle": 20
+    }
+   ],
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    430,
+    430
+   ],
+   "scale": {
+    "mul": [
+     {
+      "mul": [
+       0.6,
+       {
+        "k": [
+         [
+          182.634,
+          1.0
+         ],
+         [
+          183.44199999999998,
+          1.0
+         ],
+         [
+          183.53199999999998,
+          1.2
+         ],
+         [
+          183.81199999999998,
+          1.2
+         ],
+         [
+          184.042,
+          1.0
+         ]
+        ],
+        "ease": "smooth"
+       }
+      ]
+     },
+     {
+      "range": [
+       0.96,
+       1.06
+      ],
+      "of": {
+       "beat": {
+        "div": 1,
+        "shape": "decay",
+        "tau": 0.16
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "spk:cruz_tucker_bless__where_is_that",
+   "tags": [
+    "speaker",
+    "window"
+   ],
+   "src": "media/derived/preachers/cruz_tucker_bless__where_is_that.mp4",
+   "t0": 59.122,
+   "t1": 60.002,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.8
+   },
+   "fade": {
+    "in": 0.06,
+    "out": 0.3
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "cruz_tucker_bless__where_is_that",
+    "seg": 0,
+    "hits_song": [
+     59.257
+    ],
+    "z": 3.6,
+    "people": [
+     {
+      "name": "Ted Cruz",
+      "role": "US Senator (R-TX)",
+      "date": "2025-06-18",
+      "source": "https://www.youtube.com/watch?v=smemFVe0l5E"
+     }
+    ]
+   },
+   "size": [
+    400,
+    225
+   ],
+   "crop": [
+    0.08,
+    0.08,
+    0.92,
+    0.92
+   ],
+   "pos": [
+    720,
+    330
+   ],
+   "scale": 1.0,
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   },
+   "clip": "picture"
+  },
+  {
    "id": "countdown",
    "tags": [
     "weapons",
@@ -91088,18 +93563,18 @@
     }
    ],
    "crop": [
-    0.0029,
     0,
-    0.9971,
-    1
+    0.0,
+    1,
+    1.0
    ],
    "size": [
-    760,
-    430
+    640,
+    360
    ],
    "pos": [
-    720,
-    540
+    1050,
+    560
    ],
    "mask": {
     "shape": "rect",
@@ -91223,6 +93698,741 @@
     540
    ],
    "clip": "picture"
+  },
+  {
+   "id": "spk:bachmann_blessed__bless_israel",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/bachmann_blessed__bless_israel.mp4",
+   "t0": 137.552,
+   "t1": 141.052,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 1.3
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "bachmann_blessed__bless_israel",
+    "seg": 0,
+    "hits_song": [
+     140.202
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "Michele Bachmann",
+      "role": "former US Rep. (R-MN); dean, Regent University government school",
+      "date": "2026-03-04",
+      "source": "https://www.youtube.com/watch?v=ffuJp7d_25E"
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    1185,
+    330
+   ],
+   "scale": 0.48
+  },
+  {
+   "id": "spk:evans_bless_thee__bless_thee",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/evans_bless_thee__bless_thee.mp4",
+   "t0": 144.83,
+   "t1": 152.42,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 1.3
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "evans_bless_thee__bless_thee",
+    "seg": 0,
+    "hits_song": [
+     144.974
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "Mike Evans",
+      "role": "founder, Friends of Zion / Jerusalem Prayer Team",
+      "date": "2025-10-31",
+      "source": "https://www.youtube.com/watch?v=IaIIwXAhPbc"
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    1200,
+    330
+   ],
+   "scale": 0.5
+  },
+  {
+   "id": "spk:huckabee_bless_side__blessing_side",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/huckabee_bless_side__blessing_side.mp4",
+   "t0": 152.182,
+   "t1": 160.442,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 1.3
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "huckabee_bless_side__blessing_side",
+    "seg": 0,
+    "hits_song": [
+     152.346
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "Mike Huckabee",
+      "role": "Baptist minister; then nominee, now US ambassador to Israel",
+      "date": "2024-11-14",
+      "source": "https://www.youtube.com/watch?v=EG-8UseD0kI"
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    755,
+    330
+   ],
+   "scale": 0.45
+  },
+  {
+   "id": "spk:huckabee_tucker_take_it_all__take_it_all",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/huckabee_tucker_take_it_all__take_it_all.mp4",
+   "t0": 161.393,
+   "t1": 163.093,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.6
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "huckabee_tucker_take_it_all__take_it_all",
+    "seg": 0,
+    "hits_song": [
+     161.89
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "Mike Huckabee",
+      "role": "US ambassador to Israel",
+      "date": "2026-02-20",
+      "source": "https://www.youtube.com/watch?v=XS7itdfgNnU"
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    1200,
+    320
+   ],
+   "scale": 0.48
+  },
+  {
+   "id": "spk:hagee_march_victory__victory",
+   "tags": [
+    "head",
+    "speaker"
+   ],
+   "src": "media/derived/preachers/hagee_march_victory__victory.mp4",
+   "t0": 191.485,
+   "t1": 198.385,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 1.9
+   },
+   "fade": {
+    "in": 0.25,
+    "out": 0.4
+   },
+   "opacity": 0.92,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "hagee_march_victory__victory",
+    "seg": 0,
+    "hits_song": [
+     191.634
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "John Hagee",
+      "role": "founder, Christians United for Israel",
+      "date": "2023-11-14",
+      "source": "https://www.youtube.com/watch?v=Sqi7VgaJgZo"
+     }
+    ]
+   },
+   "size": [
+    480,
+    600
+   ],
+   "mask": {
+    "shape": "oval",
+    "feather": 0.26
+   },
+   "pos": [
+    285,
+    470
+   ],
+   "scale": 0.55
+  },
+  {
+   "id": "spk:isaac_bible_weaponized__weaponized",
+   "tags": [
+    "speaker",
+    "window"
+   ],
+   "src": "media/derived/preachers/isaac_bible_weaponized__weaponized.mp4",
+   "t0": 198.162,
+   "t1": 206.212,
+   "time": {
+    "in": 0.0,
+    "speed": 1.0
+   },
+   "audio": {
+    "gain": 2.4
+   },
+   "fade": {
+    "in": 0.5,
+    "out": 0.6
+   },
+   "opacity": 1.0,
+   "meta": {
+    "catalog": "preachers",
+    "clip": "isaac_bible_weaponized__weaponized",
+    "seg": 0,
+    "hits_song": [
+     198.298
+    ],
+    "z": 5,
+    "people": [
+     {
+      "name": "Rev. Munther Isaac",
+      "role": "Lutheran pastor, Evangelical Lutheran Christmas Church, Bethlehem",
+      "date": "2023-12-23",
+      "source": "https://www.youtube.com/watch?v=aEGiANa0-oI"
+     }
+    ]
+   },
+   "size": [
+    520,
+    439
+   ],
+   "crop": [
+    0.3301,
+    0.0,
+    0.8299,
+    0.75
+   ],
+   "pos": [
+    720,
+    520
+   ],
+   "scale": 1.0,
+   "mask": {
+    "shape": "rect",
+    "feather": 0.03
+   },
+   "clip": "picture"
+  },
+  {
+   "id": "card:graham_mtp_bombs__hiroshima_bombs",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/b6d0a0919e2faae6.png",
+   "t0": 41.707,
+   "t1": 48.707,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    352.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:johnson_bible_bless__bless_curse",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/58294408dd28d066.png",
+   "t0": 51.288,
+   "t1": 54.966,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    420.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:cruz_tucker_bless__taught_bless",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/cae36e2061e6ed26.png",
+   "t0": 54.966,
+   "t1": 58.986,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    310.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:cruz_tucker_bless__where_is_that",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/bfba81ceeeb85b69.png",
+   "t0": 59.272,
+   "t1": 61.272,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    405.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:walberg_nagasaki__nagasaki_quick",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/5a5c394948ec8bce.png",
+   "t0": 61.272,
+   "t1": 69.272,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    442.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:haley_hannity_finish__finish_them",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/c2ade9fdb44c2454.png",
+   "t0": 69.587,
+   "t1": 74.955,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    464.0,
+    987.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:ogles_kill_them_all__kill_them_all",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/9650f24ef6067e3b.png",
+   "t0": 74.955,
+   "t1": 80.955,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    397.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:hibbs_weapons_insulting_god__insulting_god",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/5206ed41c8b9c68b.png",
+   "t0": 122.081,
+   "t1": 126.701,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    447.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:hagee_cufi2024_weapons__weapons_of_war",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/44d9ee05972ae3d7.png",
+   "t0": 129.879,
+   "t1": 136.879,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    492.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:bachmann_blessed__bless_israel",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/671eff7001734ce5.png",
+   "t0": 137.702,
+   "t1": 141.702,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    400.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:evans_bless_thee__bless_thee",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/9e34b40e1ffbee21.png",
+   "t0": 144.98,
+   "t1": 151.98,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    441.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:huckabee_bless_side__blessing_side",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/501a11f26dc29dc0.png",
+   "t0": 152.332,
+   "t1": 159.332,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    528.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:huckabee_tucker_take_it_all__take_it_all",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/4cfc61f879b052b7.png",
+   "t0": 161.543,
+   "t1": 165.543,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    442.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:vaughn_wonderful_days__wonderful_days",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/afd8cf81d062fce9.png",
+   "t0": 167.792,
+   "t1": 174.792,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    532.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:hagee_march_victory__victory",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/c7b128269242f8ec.png",
+   "t0": 191.635,
+   "t1": 198.312,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    390.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
+  },
+  {
+   "id": "card:isaac_bible_weaponized__weaponized",
+   "tags": [
+    "text",
+    "lower-third"
+   ],
+   "src": "media/derived/text/bbb096da6f7565a9.png",
+   "t0": 198.312,
+   "t1": 205.312,
+   "time": {
+    "hold": 0.0
+   },
+   "fit": "native",
+   "pos": [
+    521.0,
+    973.0
+   ],
+   "blend": "screen",
+   "fade": {
+    "in": 0.3,
+    "out": 0.3
+   },
+   "meta": {
+    "z": 6
+   }
   }
  ],
  "post": []

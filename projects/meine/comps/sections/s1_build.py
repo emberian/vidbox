@@ -40,10 +40,13 @@ CLIP_CROP = {   # per-clip caption/slate crops (swept 2026-10-24)
     "times-radio-idf-bombardment": [0.06, 0.16, 0.94, 0.76],    # "ISRAEL DEFENSE FORCES HANDOUT", channel bugs
     "idf-beit-hanoun": [0.06, 0.24, 0.94, 0.76],                # "Secondary Explosions" label
     "idf-": [0.06, 0.16, 0.94, 0.76],                           # IDF releases rebroadcast with lower-thirds, bugs
+    "wsj-gaza-highrise": [0.12, 0.16, 0.88, 1.0],               # "GAZA OCT 12" top-left, WSJ bug top-right
     "aj-high-powered-bombs-explainer": [0.16, 0.2, 1.0, 0.68],  # subtitles
 }
 AP_CROP = [0.0, 0.16, 1.0, 1.0]    # drops AP's top-right bug (x 0.78-0.87, y 0-0.15)
 NEWS_CROP = [0.0, 0.16, 1.0, 0.85]  # ground strikes: AP bug, place labels, lower thirds, network bugs
+TIGHT_CROP = [0.0, 0.18, 1.0, 0.72]  # the rise's ground strikes: place captions and headlines ("ISRAEL BOMBS",
+                                     # "GAZA CITY, GAZA STRIP") sit lower than NEWS_CROP's edge
 
 
 def hit_fx(k, levels=6):
@@ -115,8 +118,20 @@ def panel_cuts(c, seg, src_in, t0, t1, beats_on, w, h, pos, crop=(0, 0, 1, 1), i
             if t0 - 0.01 <= a < t1 - 0.01:
                 on.append((a, min(c.bar(bar, b + 1), t1)))
         bar += 1
+    if loop:    # a looped panel as an explicit map: one linear piece per pass, a 1 ms jump back between them
+        a, b = loop
+        per = (b - a) / speed
+        song, srcs, t = [], [], t0
+        while t < t1:
+            e = min(t + per, t1)
+            song += [round(t, 4), round(e - 0.001, 4)]
+            srcs += [round(a, 4), round(a + (e - 0.001 - t) * speed, 4)]
+            t = e
+        time = {"map": {"song": song, "src": srcs}}
+    else:
+        time = {"in": src_in, "speed": speed}
     lay = {"id": id or f"{seg.clip['id']}#{seg.idx}@{t0:.2f}panel", "tags": [seg.catalog, "panel"] + seg.tags[:2],
-           "src": seg.file, "t0": round(t0, 4), "t1": round(t1, 4), "time": {"in": src_in, "speed": speed, **({"loop": list(loop)} if loop else {})},
+           "src": seg.file, "t0": round(t0, 4), "t1": round(t1, 4), "time": time,
            "opacity": mul(cut_keys(None, on, t0, t1), opacity), "blend": blend,
            "fx": list(fx), "meta": {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx, "hits_song": []},
            **L.panel(seg, w, h, pos, crop)}
@@ -150,7 +165,7 @@ def supply_chain(c):
                     **L.panel(c17, 340, 600, keys([b36, [1180, 540]], [b40, [1120, 540]]), crop=(0.23, 0, 0.77, 1)))
     lay["time"]["in"] = 6.0
     c17b = c.seg("weapons:c17-first-us-munitions-israel-oct2023#1")
-    panel_cuts(c, c17b, 34.0, c.bar(37), b40, (0, 1, 2, 3), 380, 300, [270, 470], fx=ARCHIVE, id="c17-apron")
+    panel_cuts(c, c17b, 34.0, c.bar(37), b40, (0, 1, 2, 3), 380, 300, [300, 755], fx=ARCHIVE, id="c17-apron")
     # 40-43: Hellfires out of their crates and onto the rail
     panel_cuts(c, c.seg("weapons:mq9-live-hellfire-holloman#1"), 13.4, b40, b44, (0, 1), 430, 330, [270, 560],
                crop=(0.42, 0, 1, 1), loop=(13.4, 16.0), id="hellfire-rail-night")   # loop: text cards follow
@@ -160,7 +175,8 @@ def supply_chain(c):
                crop=(0, 0, 1, 0.62), fx=ARCHIVE, id="hellfire-carry")   # DVIDS caption below
 
     # -- strikes on the four-bar downbeats --
-    for k, (ref, h, blend, depth) in enumerate([("y2026:idf-gaza-crater-strikecam-2026-08-01#2", 0, "screen", 0.5),
+    # (the IDF Gaza crater strike-cam is s2's: one continuous four-hit take there, so it is not used here)
+    for k, (ref, h, blend, depth) in enumerate([("weapons:times-radio-idf-bombardment-oct2023#2", 0, "screen", 0.5),
                                                 ("weapons:idf-strikes-jan2014-blackhot#1", 0, "multiply", None),
                                                 ("weapons:hellfire-symphony-tads#4", 0, "screen", 0.45)]):
         seg = c.seg(ref)
@@ -301,7 +317,7 @@ def rant2(c):
            id="r2-strike-m4")
     strike(c, "weapons:idf-gaza-strikes-oct13-2023#4", m[4], blend="normal", duck=0.35, after=2.0, k=4,
            id="r2-strike-m5")
-    strike(c, "ground:nbc-night-tower-collapse-2023-10-08#0", m[5], duck=0.35, crop=NEWS_CROP, k=5,
+    strike(c, "ground:ap-night-blast-gazacity-2014-07-20#0", m[5], duck=0.35, crop=NEWS_CROP, k=5,
            id="r2-strike-m6")
 
 
@@ -345,6 +361,185 @@ def untreated(c, seg, at, hit=None, until=None, src=None, gain=0.9, people=None,
     return lay
 
 
+BAR_S = 4 * 0.476      # one bar at 126 BPM: the shortest music-duck release (ember: ducks must linger)
+
+
+def music_dip(c, t0, t1, depth):
+    """ember's duck rule: only a hold of 4+ bars may go deep (0.15-0.3); anything shorter stays
+    shallow (0.5-0.7). Every release lasts at least a bar."""
+    if t1 - t0 < 4 * BAR_S - 0.05:
+        depth = max(depth, 0.5)
+    c.duck_music(t0, hold=t1 - t0, depth=depth, attack=0.15, release=2.0)
+
+
+def lower_third(c, lines, at, dur, id):
+    """One name card at a time, in the letterbox under the picture. A new card cuts the previous one
+    short, but each stays up at least 2 s (the new one waits if it must)."""
+    prev = getattr(c, "_s1_card", None)
+    if prev is not None and prev["t1"] > at:
+        at = max(at, prev["t0"] + 2.0)
+        prev["t1"] = round(at, 4)
+    lay = c.text_card(lines, at, dur, pos=(110, 932), size=36, id=id, tags=["text", "lower-third"], meta={"z": 6})
+    c._s1_card = lay
+    return lay
+
+
+def speaker(c, stem, word, at, k=1, oval=True, pos=(720, 540), scale=None, size=None, crop=(0, 0, 1, 1),
+            src_in=0.0, until=None, play=False, swell=(), gain=2.8, duck=0.5, card=None, card_dur=None, z=3.5,
+            fade=(0.25, 0.4), video=True, opacity=0.92, id=None, **extra):
+    """A real politician or preacher, named on screen, saying a line from media/derived/preachers.
+    `word` (its k-th occurrence) starts exactly at song time `at`, which is on the grid.
+    oval: a floating face-tracked head, like Hyde's; else a framed window (size, crop) of the broadcast.
+    play: join the beat-locked play (pulse on the beat, a little sway and RGB split): only over the
+    arsenal, the strike-cam and the beds, never over the dead, where speakers stay still and plain.
+    swell: words on which the head swells (like Hyde's copies on "missiles"). video=False: voice only.
+    card: lower-third lines, set in the letterbox below the picture so they never cover a face or a
+    victim. duck: the music dip under the voice (music_dip applies ember's depth rule)."""
+    ln = L.speech(stem)
+    zero = at - L.word_at(ln, word, k)                 # song time of the clip's first frame
+    t0 = zero + src_in
+    t1 = until if until is not None else zero + (ln["span"][1] - ln["span"][0])
+    src = f"{L.PREACH}/{stem}.mp4"
+    lay = {"id": id or f"spk:{stem}", "tags": (["head", "speaker"] if oval else ["speaker", "window"]),
+           "src": src, "t0": round(t0, 4), "t1": round(t1, 4), "time": {"in": round(src_in, 3), "speed": 1.0},
+           "audio": {"gain": gain}, "fade": {"in": fade[0], "out": fade[1]}, "opacity": opacity,
+           "meta": {"catalog": "preachers", "clip": stem, "seg": 0, "hits_song": [round(at, 3)], "z": z,
+                    "people": [{"name": ln["person"], "role": ln["role"], "date": ln["date"],
+                                "source": ln["source_url"]}]}}
+    sc = scale if scale is not None else (0.6 if oval else 1.0)
+    if swell:
+        sw = [[t0, 1.0]]
+        for w in swell:
+            t = zero + L.word_at(ln, *(w if isinstance(w, tuple) else (w,)))
+            sw += [[t - 0.05, 1.0], [t + 0.04, 1.2], [t + 0.32, 1.2], [t + 0.55, 1.0]]
+        sc = mul(sc, keys(*sorted(sw), ease="smooth"))
+    if play:
+        sc = mul(sc, rng(0.96, 1.06, beat(1, "decay", tau=0.16)))
+        lay["rot"] = rng(-3, 3, beat(8, "sine"))
+        lay["fx"] = [{"op": "chroma", "px": rng(0, 7, beat(1, "decay", tau=0.14)), "angle": 20}]
+    if oval:
+        lay.update({"size": [480, 600], "mask": {"shape": "oval", "feather": 0.26}, "pos": pos, "scale": sc})
+    else:
+        w, h = size
+        lay.update({"size": [w, h], "crop": L.aspect_crop(src, w / h, crop), "pos": pos, "scale": sc,
+                    "mask": {"shape": "rect", "feather": 0.03}})
+    if not video:
+        lay["opacity"] = 0
+        lay["tags"] = ["voice", "speaker"]
+    lay.update(extra)
+    c.add(lay)
+    if duck:
+        music_dip(c, t0, t1, duck)
+    if card:
+        lower_third(c, card, t0 + 0.15, card_dur or min(max(t1 - t0, 4.0), 7.0), id=f"card:{stem}")
+    return lay
+
+
+# ---------------------------------------------------------------- bars 21-42: the politicians
+def politicians(c):
+    """Between the rants, over the supply chain: real politicians saying it in earnest, each named and
+    dated, a key word of each on the grid. They join the beat play here (this is the arsenal)."""
+    bar = c.bar
+    # Graham: Hiroshima "was the right decision" / "Give Israel the BOMBS they need" (BOMBS on bar 25)
+    speaker(c, "graham_mtp_bombs__hiroshima_bombs", "bombs", bar(25), pos=keys([bar(21), [430, 480]], [bar(27), [520, 450]],
+            ease="smooth"), scale=0.62, play=True, swell=("bombs", "Hiroshima"),
+            card=["Sen. Lindsey Graham (R-SC)", "Meet the Press, NBC  ·  12 May 2024"])
+    # Johnson, then Cruz: Genesis 12:3, "bless" landing on bar 27 and bar 30
+    speaker(c, "johnson_bible_bless__bless_curse", "bless", bar(27), pos=[720, 400], scale=0.6, play=True, gain=3.3,
+            swell=("blesses", "curses"),
+            card=["Speaker Mike Johnson (R-LA)", "Speaker of the US House  ·  Capitol press briefing  ·  23 Jul 2024"])
+    speaker(c, "cruz_tucker_bless__taught_bless", "bless", bar(30), pos=[720, 410], scale=0.6, play=True,
+            swell=("Bible", "blessed"), card=["Sen. Ted Cruz (R-TX)", "The Tucker Carlson Show  ·  18 Jun 2025"])
+    # ... and Tucker Carlson: "Where is that?", WHERE on bar 31 (the broadcast's own cut from Cruz to him)
+    speaker(c, "cruz_tucker_bless__where_is_that", "Where", bar(31), oval=False, size=(400, 225), pos=[720, 330],
+            crop=(0.08, 0, 0.92, 1), fade=(0.06, 0.3), z=3.6,
+            card=["Tucker Carlson", "to Sen. Ted Cruz  ·  The Tucker Carlson Show  ·  18 Jun 2025"], card_dur=3.0)
+    # Walberg (voice only: filmed from behind): "...like Nagasaki and Hiroshima. Get it over QUICK" on bar 36,
+    # where the black-hot strike lands
+    speaker(c, "walberg_nagasaki__nagasaki_quick", "quick", bar(36), video=False, oval=False, size=(480, 270),
+            card=["Rep. Tim Walberg (R-MI)", "former pastor  ·  town hall, Dundee, Michigan  ·  25 Mar 2024  ·  audio"],
+            card_dur=8.0)
+    # Haley: "finish them. Finish them." (Hannity), FINISH on bar 38, over her writing on a shell in Israel
+    hv = speaker(c, "haley_hannity_finish__finish_them", "finish", bar(38), video=False, oval=False, size=(480, 270),
+                 card=["Nikki Haley", "former UN ambassador  ·  Hannity, Fox News  ·  8 Oct 2023",
+                       "writing on an Israeli artillery shell, near the Lebanon border  ·  28 May 2024"], card_dur=6.0)
+    shell = f"{L.PREACH}/haley_finish_them__shell.mp4"
+    c.add({"id": "spk:haley-shell", "tags": ["speaker", "window"], "src": shell, "t0": round(hv["t0"] - 0.2, 4),
+           "t1": round(hv["t0"] + 6.2, 4), "time": {"in": 0.0, "speed": 1.0}, "fade": {"in": 0.2, "out": 0.4},
+           "size": [430, 250], "crop": L.aspect_crop(shell, 430 / 250, (0.235, 0.0, 0.765, 0.55)),
+           "pos": [340, 330], "mask": {"shape": "rect", "feather": 0.03},
+           "meta": {"catalog": "preachers", "clip": "haley_finish_them__shell", "seg": 0, "hits_song": [], "z": 3.2}})
+    # Ogles, confronted in a Capitol hallway: "that's my taxpayer dollars ... I think we should KILL them all",
+    # KILL on bar 42 (the vertical phone video's middle, above its burned-in captions)
+    speaker(c, "ogles_kill_them_all__kill_them_all", "kill", bar(42), oval=False, size=(330, 366), pos=[720, 450],
+            crop=(0.355, 0.07, 0.64, 0.645), play=False,
+            card=["Rep. Andy Ogles (R-TN)", "confronted by CODE PINK activists, US Capitol  ·  Feb 2024"])
+
+
+# ---------------------------------------------------------------- bars 64-107: the preachers
+def preachers(c):
+    """After the second rant, over the strikes and the untreated reality: preachers saying it in earnest.
+    Over the dead they are still, plain and to one side, framing the victims rather than covering them;
+    over strikes, launches and beds they join the play. Rev. Munther Isaac answers them, alone."""
+    bar = c.bar
+    # 64-65 Hibbs, over the strikes as Hyde's heads fade: "insulting GOD by hamstringing his own people"
+    speaker(c, "hibbs_weapons_insulting_god__insulting_god", "God", bar(65), pos=keys([bar(64), [1040, 640]],
+            [bar(66), [1080, 660]], ease="smooth"), scale=0.62, play=True, swell=("insulting", "hamstringing"),
+            card=["Pastor Jack Hibbs", "Calvary Chapel Chino Hills  ·  Washington Watch (FRC)  ·  14 May 2024"])
+    # 68-71 Hagee at the CUFI summit (the broadcast: crowd, then the arena and his pulpit), beside the Reaper
+    # countdown: "We must give them the weapons of war to win that FIGHT", FIGHT on the blast, bar 72
+    speaker(c, "hagee_cufi2024_weapons__weapons_of_war", "fight", bar(72), k=2, oval=False, size=(600, 338),
+            pos=[370, 470], src_in=3.52, gain=2.8, duck=0.5, z=3.4,
+            card=["Pastor John Hagee", "founder, Christians United for Israel  ·  CUFI Summit, Washington  ·  29 Jul 2024"])
+    # 72-73 Bachmann over the Maghazi families walking out at dusk: "an opportunity to BLESS Israel"
+    # (BLESS on bar 73 beat 3, the dark horizon; it is over before that evening's strike lands on bar 74)
+    speaker(c, "bachmann_blessed__bless_israel", "bless", bar(73, 2), pos=[1185, 330], scale=0.48, gain=1.3,
+            duck=0.18, z=5, card=["Michele Bachmann", "former US Rep. (R-MN)  ·  broadcast interview  ·  4 Mar 2026"])
+    # 76-79 Evans, waving his Bible, over Mahmoud Hammad sieving for his family: "I will bless them that
+    # bless thee ... America has been blessed because of this" (I on bar 76)
+    speaker(c, "evans_bless_thee__bless_thee", "I", bar(76), pos=[1200, 330], scale=0.5, gain=1.3, duck=0.18, z=5,
+            card=["Mike Evans", "founder, Friends of Zion  ·  address to Tucker Carlson  ·  31 Oct 2025"])
+    # 80-83 Huckabee above the stack of the dead: "Genesis 12, those who bless Israel will be blessed ...
+    # I want to be on the blessing side, not the curse side" (GENESIS on bar 80)
+    speaker(c, "huckabee_bless_side__blessing_side", "Genesis", bar(80), pos=[755, 330], scale=0.45, gain=1.3,
+            duck=0.18, z=5, card=["Mike Huckabee", "Baptist minister, now US ambassador to Israel  ·  "
+                                  "The Charlie Kirk Show  ·  14 Nov 2024"])
+    # 85 Huckabee again, over the Nasser courtyard graves: "It would be FINE if they took it all"
+    speaker(c, "huckabee_tucker_take_it_all__take_it_all", "fine", bar(85), pos=[1200, 320], scale=0.48, gain=2.6,
+            duck=0.5, z=5, card=["Mike Huckabee", "US ambassador to Israel  ·  The Tucker Carlson Show  ·  20 Feb 2026"])
+    # 88-93 Vaughn sings over the launches, a sung layer under Daso: "What wonderful days these days are
+    # before the coming of the Lord" (WHAT on bar 88); then "Oh, the glory" on bar 94's launch, and four
+    # silent copies of him wheel round him on the grid
+    speaker(c, "vaughn_wonderful_days__wonderful_days", "What", bar(88), pos=keys([bar(88), [1060, 470]],
+            [bar(94), [960, 430]], ease="smooth"), scale=0.6, play=True, gain=2.5, duck=0.6,
+            card=["Shane Vaughn", "pastor, First Harvest Ministries  ·  his webcast, the night Israel struck Iran"
+                  "  ·  13 Jun 2025"])
+    g = speaker(c, "vaughn_wonderful_days__glory", "Oh", bar(94), pos=[720, 500], scale=0.62, play=True, gain=2.5,
+                duck=0.6, swell=("glory",))
+    ring = L.formation_track(c, 4, [("ring", g["t0"], ("beat", 1 / 8))], g["t1"], (720, 500), 330, base_scale=0.3,
+                             depth=4.0, tilt=0.35, wobble_bars=2)
+    for i, (pos, sc) in enumerate(ring):
+        c.add({"id": f"spk:vaughn-ring{i}", "tags": ["head", "speaker", "copy"], "src": g["src"], "t0": g["t0"],
+               "t1": g["t1"], "time": {"in": 0.0, "speed": 1.0}, "size": [480, 600],
+               "mask": {"shape": "oval", "feather": 0.26}, "pos": pos, "scale": sc, "opacity": 0.85,
+               "fade": {"in": 0.3, "out": 0.4}, "fx": L.character([0, 9, 6, 12][i]),
+               "meta": {"z": 3.4}})
+    # 96-97 Hibbs again over the strike-cam and the walkers: "poking the God of Abraham, Isaac, and Jacob
+    # right in the EYE", EYE on bar 98's strike
+    speaker(c, "hibbs_weapons_insulting_god__poking_god", "eye", bar(98), pos=[430, 430], scale=0.6, play=True,
+            swell=("God",))
+    # 100-103 Hagee at the March for Israel, beside the Deir al-Balah tents: "VICTORY was our only aim, and
+    # Israel should be afforded that same opportunity" (VICTORY on bar 100 beat 3, after the fireballs)
+    speaker(c, "hagee_march_victory__victory", "victory", bar(100, 2), pos=[285, 470], scale=0.55, gain=1.9,
+            duck=0.3, z=5, card=["Pastor John Hagee", "March for Israel, National Mall, Washington  ·  14 Nov 2023"])
+    # 104-107 Rev. Munther Isaac, alone and not multiplied, over Gaza City's ruins: "Here in Palestine, the
+    # Bible is weaponized against us, our very own sacred text" (HERE on bar 104)
+    speaker(c, "isaac_bible_weaponized__weaponized", "Here", bar(104), oval=False, size=(520, 439), pos=[720, 520],
+            crop=(0.33, 0.0, 0.83, 0.75), gain=2.4, duck=0.3, z=5, opacity=1.0, fade=(0.5, 0.6),
+            card=["Rev. Munther Isaac", "Lutheran pastor, Bethlehem  ·  “Christ in the Rubble”"
+                  " Christmas liturgy  ·  23 Dec 2023"])
+
+
 def build_up(c):
     b44, b48, b52, b56, b60, b64, b68, b72 = (c.bar(n) for n in (44, 48, 52, 56, 60, 64, 68, 72))
     # -- supply chain keeps coming --
@@ -372,15 +567,17 @@ def build_up(c):
                **L.picture(src, crop=AP_CROP)}
         c.add(lay)
     # digging by hand, civil defence (1.1 s per pull, two beats per pull)
-    dig = c.seg("ground:aje-civil-defence-body-recovery-2025-12#1")
-    L.groove(c, dig, at=b56, dur=b64 - b56, cycle=1.1, beats=2, src_in=38.0, id="dig-civil-defence",
+    # (ember: Hyde's comic heads stay off the dead, so the civil-defence body recovery that sat under his
+    #  formation is gone; the Iowa shell line's workers, one hand-cycle per bar, take its panel)
+    iowa = c.seg("weapons:iowa-aap-155mm-line-workers#0")
+    L.groove(c, iowa, at=b56, dur=b64 - b56, cycle=3.0, beats=4, src_in=2.0, id="iowa-shell-line",
              fade={"in": 0.2, "out": 0.2}, fx=ARCHIVE + [{"op": "duotone", "dark": [0.05, 0.02, 0.0], "light": [1.0, 0.8, 0.55]}],
-             **L.panel(dig, 440, 300, [1150, 700], crop=(0.17, 0, 1, 1)))   # Al Jazeera bug bottom-left
+             **L.panel(iowa, 440, 300, [1150, 700]))
 
     # -- strikes, landing on downbeats; denser as the build goes --
     plan = [
-        (64, 0, "weapons:idf-gaza-strikes-oct13-2023#4", 0, "normal", 0.35, None),
-        (65, 0, "y2026:idf-gaza-crater-strikecam-2026-08-01#1", 0, "multiply", None, None),
+        (64, 0, "weapons:idf-gaza-strikes-oct13-2023#0", 0, "normal", 0.35, None),
+        (65, 0, "y2026:idf-soldiers-watch-demolition-yellow-line-2026-07-08#0", 0, "screen", None, None),
         (65, 2, "ground:reuters-night-fireballs-2023-10-08#0", 0, "screen", None, None),
         (67, 0, "weapons:hellfire-symphony-tads#8", 0, "screen", None, None),
         (67, 2, "ground:ap-night-flares-explosions-2023-11-09#0", 0, "screen", None, None),
@@ -406,7 +603,7 @@ def build_up(c):
         untreated(c, seg, at, hit=h, until=c.bar(68), gain=0.45, id=f"stack66-{k}", before=0.08,
                   **L.panel(seg, 720, 382, list(quads[k]), crop=crop, feather=0.0))
     c.duck(c.bar(66), hold=3.0, depth=0.3)
-    c.duck_music(c.bar(66), hold=3.2, depth=0.45, release=0.6)
+    music_dip(c, c.bar(66), c.bar(68), 0.6)
     # -- countdown: the Reaper monitor's 3, 2, 1 on two-beat steps, the strike on bar 72's downbeat --
     cd = c.seg("weapons:mq9-live-hellfire-holloman#7")
     hs = [x["t"] for x in cd.hits]          # 69.6 "3", 70.62 "2", 71.72 "1", 72.62 blast
@@ -414,7 +611,7 @@ def build_up(c):
     lay = L.map_footage(c, cd, [tg[0] - 0.9] + tg + [b72 + 0.9], [hs[0] - 0.9] + hs + [hs[3] + 0.9], hits_song=tg,
                         id="countdown", fade={"in": 0.2, "out": 0.5},
                         fx=[{"op": "contrast", "factor": 1.3}, {"op": "chroma", "px": rng(0, 14, beat(1, "decay", tau=0.15))}],
-                        **L.panel(cd, 760, 430, [720, 540]))
+                        **L.panel(cd, 640, 360, [1050, 560]))   # right: Hagee's CUFI window is on the left
     lay["meta"]["z"] = 4
 
 
@@ -447,7 +644,7 @@ def breakdown(c):
     blast = c.seg(Y + "ap-maghazi-evacuation-dusk-strikes-2026-07-15#1")
     untreated(c, blast, b74, hit=0, before=b74 - b73, until=b74 + 1.6, gain=1.0, id="maghazi-dusk-strike",
               **L.picture(blast, crop=AP_CROP))
-    c.duck_music(c.bar(72, 1), hold=b76 - c.bar(72, 1), depth=0.12, attack=0.3, release=0.5)
+    c.duck_music(c.bar(72, 1), hold=b76 - c.bar(72, 1), depth=0.18, attack=0.3, release=2.0)
     # (cut 1.6 s after the fireball, as the cloud climbs; ~0.8 s of Meine alone follows before Hammad)
     # 76-83: Gaza City, Jan 2026 (AP). Mahmoud Hammad sieves the sand of his house for the bones of his
     #        wife and children; one shake of the sieve every two beats; then his fingers lift the fragments
@@ -459,7 +656,7 @@ def breakdown(c):
     lay["meta"].update({"z": 2.5, "untreated": True,
                         "people": [{"name": "Mahmoud Hammad", "role": "father; his wife and children were killed",
                                     "source": ham.clip["source_url"]}]})
-    c.duck_music(b76, hold=b80 - b76, depth=0.15, attack=0.2, release=0.4)
+    c.duck_music(b76, hold=b84 - b76, depth=0.18, attack=0.2, release=2.0)    # Hammad, then the stack
     # 80-83: the stack. Over Hammad, one window per downbeat, each untreated with its own sound:
     #        flag-wrapped remains with photos and names on paper at the Gaza City mass funeral of 105
     #        (AP, 1 Oct 2026), men standing over the shrouded bodies of nine members of one family at
@@ -471,7 +668,6 @@ def breakdown(c):
         seg = c.seg(ref)
         untreated(c, seg, c.bar(81 + k), src=src, until=b84, gain=0.6, id=f"stack80-{k}",
                   **L.panel(seg, wh[0], wh[1], list(pos), crop=crop, feather=0.0))
-    c.duck_music(c.bar(81), hold=b84 - c.bar(81), depth=0.2, attack=0.1, release=0.3)
     # 84-87, the riser: the graves fill the picture, still untreated, the music climbing back over them
     graves = c.seg("ground:nbc-nasser-courtyard-graves-2024-01#2")
     #    (the tile's take continues: the tile grows into the picture)
@@ -525,7 +721,7 @@ def rise(c):
 
     # -- layer C (beds): the machine and the people, alternating --
     launches = [("weapons:juniper-oak-2023-broll#0", 0), ("weapons:apache-red-sands-uas#0", 0),
-                ("weapons:hellfire-yakima-broll#1", 0), ("y2026:lockheed-pac3-triple-short-2026-07-29#1", 0)]
+                ("weapons:hellfire-yakima-broll#3", None), ("y2026:lockheed-pac3-triple-short-2026-07-29#1", 0)]
     for k, n in enumerate(range(88, 96, 2)):        # a launch on every other downbeat: HIMARS in the Negev,
         tom = c.seg(launches[k][0])                 # then the US arsenal's range shoots
         lay = c.footage(tom, at=B[n], hit=launches[k][1], before=0.4, after=B[n + 2] - B[n] - 0.4 + 0.1,
@@ -537,44 +733,42 @@ def rise(c):
     lay = L.groove(c, walk, at=b96, dur=B[100] - b96 + 0.3, cycle=0.55, beats=1, src_in=7.5, blend="multiply",
                    opacity=0.75, fade={"in": 0.3, "out": 0.3}, id="return-north-walk", **L.picture(walk, crop=AP_CROP))
     lay["meta"]["z"] = 0
-    f35 = c.seg("weapons:lm-f35-factory-animation#0")
-    lay = c.footage(f35, at=b104, after=b112 - b104, speed=1.0, blend="screen", opacity=0.85,
-                    fade={"in": 0.2, "out": 0.4}, id="f35-factory",
-                    fx=[{"op": "gradmap", "palette": "y2k", "cycle": beat(4, "saw"), "amount": 0.4}],
-                    **L.picture(f35))
-    lay["time"]["in"] = 20.0
+    # (the Lockheed CGI F-35 line that sat under 104-111 is gone: ember found it confusing.) 104-109: Gaza
+    # City's ruins from the air, untreated and silent, under Rev. Munther Isaac and the two strikes after him
+    ruins = c.seg("ground:ap-drone-gazacity-ruins-2025-10-long#6")
+    lay = c.footage(ruins, at=b104 - 0.6, after=B[110] - b104 + 0.6, id="gaza-city-ruins",
+                    fade={"in": 1.2, "out": 0.6}, **L.picture(ruins, crop=AP_CROP))
+    lay["time"]["in"] = 128.0
     lay["meta"]["z"] = 0
-    dig = c.seg("ground:ap-jabaliya-dig-for-victims-2025-03#1")
-    lay = L.groove(c, dig, at=b112, dur=b118 - b112, cycle=1.0, beats=2, src_in=20.0, opacity=0.45,
-                   fade={"in": 0.2, "out": 0.1}, id="jabaliya-dig",
-                   fx=[{"op": "sat", "factor": 0.6}, {"op": "contrast", "factor": 1.2}], **L.picture(dig, crop=AP_CROP))
+    # 112-117, under his return: B-2 crews loading bombs into the bay (the Jabaliya dig for victims was
+    # here; ember: Hyde's comic heads stay off the dead)
+    b2 = c.seg("weapons:b2-jdam-load-whiteman#4")
+    lay = c.footage(b2, at=b112, after=b118 - b112, opacity=0.45, fade={"in": 0.2, "out": 0.1}, id="b2-bomb-bay",
+                    fx=[{"op": "sat", "factor": 0.6}, {"op": "contrast", "factor": 1.2}],
+                    **L.picture(b2, crop=(0, 0.1, 1, 1)))   # a "TV" watermark top-left
+    lay["time"]["in"] = 140.0
     lay["meta"]["z"] = 0
 
     # -- layer D (strikes): on the grid, every bar, then every two beats, then every beat --
     plan = [
-        (89, 0, "ground:reuters-explosions-overnight-2023-10-22#3", 0, 0.45),
-        (91, 0, "ground:afp-rafah-night-strikes-flares-2023-12#0", 1, 0.45),
+        (89, 0, "ground:ap-night-strike-gazacity-2019#0", 0, 0.45),
+        (91, 0, "ground:ap-night-eid-bombardment-2014#2", 0, 0.45),
         (93, 0, "ground:ap-ansar-tent-strike-fire-2026-03#0", 0, 0.45),
         (95, 0, "ground:ap-night-blasts-from-israel-2025-09#1", 0, 0.4),
-        (97, 2, "ground:reuters-night-fireballs-2023-10-08#0", 0, None),
+        (97, 2, "y2026:ap-deir-balah-night-strike-2026-05-23#0", 0, None),
         (103, 2, "ground:ap-flares-cloudy-night-2025-12-b#0", 0, None),
-        (104, 0, "weapons:times-radio-idf-bombardment-oct2023#0", 0, 0.4),
-        (105, 0, "weapons:hellfire-symphony-tads#5", 0, None),
-        (106, 0, "ground:reuters-explosions-overnight-2023-10-22#2", 0, 0.4),
-        (107, 0, "y2026:idf-gaza-crater-strikecam-2026-08-01#2", 0, None),
+        # (104-107: no strikes; Rev. Munther Isaac speaks over the ruins)
         (110, 0, "weapons:hellfire-symphony-tads#6", 0, None),
-        (111, 0, "ground:ap-night-blasts-from-israel-2025-09#0", 0, 0.35),
-        (111, 2, "weapons:idf-gaza-strikes-oct13-2023#2", 0, None),
+        (111, 0, "y2026:ap-shati-night-strike-2026-05-28#0", 0, 0.35),
     ]
     for k, (n, bb, ref, h, duck) in enumerate(plan):
-        strike(c, ref, c.bar(n, bb), hit=h, duck=duck, k=k + 3, after=1.5,
-               key=(0.5, 0.8) if "mosul" in ref else None,
-               crop=NEWS_CROP if ref.startswith("ground:") else (0, 0, 1, 1), id=f"rise-strike-{n}.{bb}")
-    # the IDF's own strike-camera on Gaza, a hit on every other downbeat through bars 96-103
-    for k, (ref, h, blend) in enumerate([("y2026:idf-gaza-crater-strikecam-2026-08-01#0", 0, "multiply"),
-                                         ("weapons:idf-haniyeh-office-2008#2", 0, "multiply")]):
-        strike(c, ref, B[96 + 2 * k], hit=h, blend=blend, duck=0.55, k=7 + k, after=1.6, id=f"idf-strikecam-{96 + 2 * k}",
-               extra_fx=[{"op": "gradmap", "palette": "whitehot", "amount": 0.4}])
+        crop = TIGHT_CROP if ref.split(":")[0] in ("ground", "y2026") else (0, 0, 1, 1)
+        if "ap-deir-balah-night-strike" in ref:
+            crop = (0.0, 0.2, 1.0, 0.72)     # "THE ASSOCIATED PRESS" above, the place caption below
+        strike(c, ref, c.bar(n, bb), hit=h, duck=duck, k=k + 3, after=1.5, crop=crop, id=f"rise-strike-{n}.{bb}")
+    # the IDF's own strike-camera on Gaza on bar 98, under Hibbs's "right in the EYE"
+    strike(c, "weapons:idf-haniyeh-office-2008#2", B[98], hit=0, blend="multiply", duck=0.55, k=8, after=1.6,
+           id="idf-strikecam-98", extra_fx=[{"op": "gradmap", "palette": "whitehot", "amount": 0.4}])
     # 100-103: punctured. Deir al-Balah, 26 Mar 2026 (Guardian / AP camera): a row of fireballs behind the
     #          tents lands on bar 100's downbeat; people duck and run; held untreated for four bars with its
     #          own sound, the music pulled down under it. Vertical phone video: a tall frame, Guardian
@@ -589,7 +783,7 @@ def rise(c):
     hold_["time"] = {"hold": 6.6}
     hold_.pop("audio")
     c.duck(B[100], hold=B[104] - B[100] - 0.6, depth=0.5)
-    c.duck_music(B[100], hold=3.5, depth=0.25, release=1.5)
+    c.duck_music(B[100], hold=B[104] - B[100] - 0.3, depth=0.3, release=2.0)   # the shot lingers four bars
     # 109: Gaza City, 28 Jul 2026, the strike on the Dar al-Muttaqin mosque, filmed from a roof above a
     #      street of tents (Reuters, via NBC's vertical edit): the fireball lands on bar 109's downbeat,
     #      people in the street below run, the camera drops to the parapet. Untreated, its own sound.
@@ -600,27 +794,34 @@ def rise(c):
     untreated(c, mos, B[109], hit=0, before=0.5, until=B[110], gain=1.0, id="dar-al-muttaqin-street",
               **L.panel(mos, 680, 556, [720, 540], crop=(0, 0.345, 1, 0.80), feather=0.0))
     c.duck(B[109], hold=1.5, depth=0.4)
-    c.duck_music(B[109], hold=1.4, depth=0.3, release=0.8)
+    music_dip(c, B[109], B[110], 0.6)
     # 108: white phosphorus over the tents at night, an orange point blooming into falling gold
     wp = strike(c, "weapons:aj-high-powered-bombs-explainer#6", B[108], hit=0, duck=0.3, after=3.6, k=1,
                 id="wp-airburst")
     wp["fade"] = {"in": 0.06, "out": 1.5}
     # 112-117: every two beats, then every beat; short, posterized, each a different place
-    fast = ["ground:afp-rafah-night-strikes-flares-2023-12#0", "y2026:idf-gaza-crater-strikecam-2026-08-01#1",
-            "ground:reuters-explosions-overnight-2023-10-22#0", "weapons:hellfire-symphony-tads#8",
-            "ground:ap-night-blasts-from-israel-2025-09#2", "weapons:hellfire-symphony-tads#2",
-            "ground:nbc-missile-hits-building-2023-10#0", "weapons:idf-strikes-jan2014-blackhot#1",
-            "ground:ap-bank-strike-fireball-2023-10-08#0", "weapons:a10-bomb-load-nellis#1",
-            "ground:reuters-national-bank-strike-2023-10#0", "weapons:times-radio-idf-bombardment-oct2023#2"]
-    hit_of = {"y2026:idf-gaza-crater-strikecam-2026-08-01#1": 1, "ground:afp-rafah-night-strikes-flares-2023-12#0": 2,
-              "ground:ap-night-blasts-from-israel-2025-09#2": 1}
-    times = [c.bar(n, b) for n in range(112, 116) for b in (0, 2)] + [c.bar(n, b) for n in (116, 117) for b in range(4)]
-    for k, t in enumerate(times):
-        ref = fast[k % len(fast)]
-        blend = "multiply" if ("blackhot" in ref or "crater" in ref) else "screen"
-        strike(c, ref, t, hit=hit_of.get(ref, 0), blend=blend, k=k, after=0.9 if t < b116 else 0.45,
-               duck=0.35 if k % 2 == 0 else None, key=(0.5, 0.8) if "mosul" in ref else None,
-               crop=NEWS_CROP if ref.startswith("ground:") else (0, 0, 1, 1), id=f"rise-fast-{k}")
+    fast = ["y2026:ap-short-gaza-city-blasts-2026-07-28#0", "y2026:anadolu-khanyounis-plume-2026-09-09#0",
+            "ground:ap-impact-smoke-2014#0", "y2026:ap-shati-strike-plume-2026-09-09#0",
+            "ground:ap-explosion-near-camera-2009#1", "y2026:aje-zawayda-warehouse-strike-shrapnel-2026-08-23#0",
+            "y2026:roya-afp-tent-strike-black-smoke-2026-03-25#0", "y2026:ap-gaza-city-blast-dusk-2026-07-28#0",
+            # 116-117: one per two beats, each stuttered on the second beat
+            "weapons:idf-castlead-nightvision-2009#2", "weapons:times-radio-idf-bombardment-oct2023#0",
+            "weapons:wsj-gaza-highrise-strike-oct2023#0", "weapons:idf-launcher-strike-2009#1"]
+    times = [c.bar(n, b) for n in range(112, 116) for b in (0, 2)] + [c.bar(n, b) for n in (116, 117) for b in (0, 2)]
+    for k, (t, ref) in enumerate(zip(times, fast)):
+        crop = TIGHT_CROP if ref.split(":")[0] in ("ground", "y2026") else (0, 0, 1, 1)
+        if t < b116:
+            strike(c, ref, t, hit=0, blend="screen", k=k, after=0.9, duck=0.35 if k % 2 == 0 else None,
+                   crop=crop, id=f"rise-fast-{k}")
+            continue
+        seg = c.seg(ref)
+        c.duck(t, hold=0.7, depth=0.35)
+        if tuple(crop) == (0, 0, 1, 1):
+            crop = next((v for kk, v in CLIP_CROP.items() if seg.clip["id"].startswith(kk)), crop)
+        lay = c.stutter(seg, at=t, hit=0, n=2, div=1, slice=0.4, after=0.45, fade={"in": 0.04, "out": 0.3},
+                        blend="screen", opacity=0.9, fx=hit_fx(k), id=f"rise-fast-{k}", **L.picture(seg, crop=crop))
+        lay["meta"]["z"] = 2
+        lay["tags"].append("strike")
     # 118, the handoff: everything has collapsed to the centre; one last white flash that dies out
     # over the bar, leaving only Meine for lane B
     last = strike(c, "ground:ap-night-blasts-from-israel-2025-09#0", b118, hit=0, duck=0.35, after=b119 - b118,
@@ -701,9 +902,11 @@ def build(c):
     breakdown(c)
     rise(c)
     speak(c)
+    politicians(c)
+    preachers(c)
     mine = c.layers[n0:]
-    for x in mine:      # footage stays inside Meine's picture area; only the heads may cross the bars
-        if not {"head", "say", "voice"} & set(x.get("tags", [])):
+    for x in mine:      # footage stays inside Meine's picture area; heads and lower-thirds may cross the bars
+        if not {"head", "say", "voice", "text"} & set(x.get("tags", [])):
             x["clip"] = "picture"
     zsort(mine)
     c.layers[n0:] = mine

@@ -345,3 +345,21 @@ def groove(c, seg, at, dur, cycle, beats, src_in=None, id=None, **props):
     lay = c.groove(seg, at, dur=dur, lengths=(beats,), limits=(0.2, 5.0), anchor=src_in, cycle=cycle, id=id, **props)
     lay["tags"].append("groove")
     return lay
+
+
+# ---- real speakers (tools/preacher_prep.py -> media/derived/preachers/<clip>__<line>.mp4 + .json) ----
+PREACH = "media/derived/preachers"
+
+
+def speech(stem):
+    """The sidecar of a prepared line: span in the raw file, speaker, words in the clip's own clock."""
+    return json.loads((ROOT / PREACH / f"{stem}.json").read_text())
+
+
+def word_at(ln, word, k=1):
+    """Clip time of the k-th occurrence of `word` (case and punctuation ignored)."""
+    key = word.lower().strip(".,?!'\"")
+    hits = [w for w in ln["words"] if w["w"].lower().strip(".,?!'\"") == key]
+    if len(hits) < k:
+        raise KeyError(f"{ln['clip']}/{ln['label']}: no {word!r} #{k}")
+    return hits[k - 1]["start"]
