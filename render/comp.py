@@ -162,8 +162,10 @@ class Comp:
     def beat(self, n):
         """Song time of beat n (fractional n interpolates)."""
         i = int(math.floor(n))
-        if i < 0 or i + 1 >= len(self.beats):
+        if i < 0:
             return self.beats[0] + n * self.period
+        if i + 1 >= len(self.beats):   # past the last beat: extrapolate from it (inverse of beat_pos)
+            return self.beats[-1] + (n - (len(self.beats) - 1)) * self.period
         return self.beats[i] + (n - i) * (self.beats[i + 1] - self.beats[i])
 
     def bar(self, n, beat_in_bar=0):
@@ -188,12 +190,7 @@ class Comp:
 
     def word(self, ref, edge="start"):
         """Song time of a word in the retimed rant: 'missiles#3' (3rd occurrence) or index."""
-        W = self.sync["words"]
-        if isinstance(ref, int):
-            return W[ref][edge]
-        key, _, n = ref.partition("#")
-        hits = [w for w in W if w["key"] == key.lower()]
-        return hits[int(n or 1) - 1][edge]
+        return resolve_word(self.sync["words"], ref)[edge]
 
     def words(self, key):
         return [w for w in self.sync["words"] if w["key"] == key]
