@@ -1,6 +1,11 @@
 # s2_peak: continuation notes (lane B, written mid-task, 2026-10-24)
 
-## State
+## State (revision 4, 2026-10-24: ember's v2 notes; see s2_peak_NOTES.md "Revision 4")
+- Punctures are now two 3-bar ones (code 171-173, 178-180) with soft edges (`real(lead=, xout=)`, 4-tuple windows); the morgue holds 3 bars; ducks deepen only with length, and every release lasts at least a bar.
+- Pools are fresh (`Pools.take` checks source overlap against the whole Comp), with detected onsets added (`s2_kit.onsets`, cached in comps/out/section_s2_peak.onsets.json). 0 repeated pairs standalone; 4 in full.py (the countdown motif plus 3 s1 shots inside the crater take).
+- The F-35 CGI is replaced by the IMOD 200th airlift.
+
+## Earlier state (revision 3)
 - `s2_peak.py` builds and `c.save()` passes: in scope, 0 hits off the grid.
 - `section_s2_peak.mp4` is a full render of the current timeline.
 - **Current task: ember's "full truth" direction.** Untreated reality windows, source audio, music
@@ -22,7 +27,7 @@
 ## Untreated moments (bar: song time)
 - 160-163 (304.97-312.59): a 2x2 grid of ground takes, one tile per beat, held, all their sounds.
   Music ducked to 0.3.
-- Punctures, one bar each, full frame, music to 0.25:
+- (superseded by revision 4) Punctures, one bar each, full frame, music to 0.25:
   - 171 (325.93): morgue tray
   - 175 (333.54): Shifa wounded
   - 179 (341.16): bones on cloth

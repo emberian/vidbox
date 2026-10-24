@@ -120,35 +120,136 @@ def dip_and_reentry(c, P):
 
 
 # ---- footage pools and one strike placement ----
+# y2026 clips where people are caught in the blast or fleeing it: never strike-cam spectacle
+PEOPLE_TAGS = {"eyewitness", "people-running", "man-running", "fear", "duck", "blast-nearby", "cemetery",
+               "spectators", "soldiers"}
+# detected onsets count as hits only in footage tagged as a blast
+BLAST_TAGS = {"strike", "explosion", "airstrike", "fireball", "impact", "strike-cam"}
+# clips placed by hand later in this section (the pools run first and must leave them alone)
+RESERVED = {"imod-mk84-ashdod-feb2025", "imod-200th-airlift-plane-2026-03-26", "ap-aqsa-shroud-laundry-2023-10",
+            "ap-ansar-tent-strike-fire-2026-03", "ap-drone-beit-lahiya-2025-02", "ap-drone-gazacity-ruins-2025-10-long",
+            "ap-muwasi-tents-strike-2025-06", "ap-salahaldin-crossing-return-2025-01", "ap-drone-coast-road-return-2025-01-long",
+            "anadolu-bureij-night-blast-street-2026-05-19", "mq9-live-hellfire-holloman"}
+NEAR = {"ir": ("fire", "gnight", "gday"), "fire": ("ir", "gday", "gnight"),
+        "gnight": ("gday", "fire", "ir"), "gday": ("gnight", "fire", "ir")}
+
+
+def src_span(L):
+    """Source interval a placed layer shows, for every time form (seq included, which
+    Comp._src_span leaves out: stutters and freezes)."""
+    T = L.get("time", {})
+    if "seq" in T:
+        pts = []
+        for p in T["seq"]:
+            if "hold" in p:
+                pts.append(p["hold"])
+            else:
+                sp = p.get("speed", 1.0)
+                sp = max(sp, key=abs) if isinstance(sp, list) else sp
+                pts += [p["in"], p["in"] + p["dur"] * sp]
+        return (min(pts), max(pts)) if pts else None
+    if "map" in T:
+        return (min(T["map"]["src"]), max(T["map"]["src"]))
+    if "hold" in T:
+        return (T["hold"], T["hold"])
+    if "in" in T and isinstance(T.get("speed", 1.0), (int, float)):
+        a = T["in"] + (L["t1"] - L["t0"]) * T.get("speed", 1.0)
+        return (min(T["in"], a), max(T["in"], a))
+    return None
+
+
 class Pools:
-    """Hit pools, drawn round-robin so the same take doesn't come back too soon."""
+    """Hit pools. Every take is FRESH: its source window overlaps nothing already placed in the
+    Comp (in full.py that includes s0 and s1), so no strike-cam shot is seen twice. Within a kind
+    the pool rotates, strongest hits first; a kind that has run dry borrows from its nearest
+    neighbour (NEAR)."""
 
     def __init__(self, c):
-        def pool(cat, tags, min_strength=4, overlay=True, max_graphic=2):
+        self.c = c
+
+        def pool(cat, tags, min_strength=2, max_graphic=2):
+            """Every catalogued hit of strength >= min_strength, plus the blasts the catalogue
+            didn't mark (K.onsets: brightness onsets, cached), so the pools hold enough distinct
+            moments for every strike in the piece to be new footage."""
             out = []
-            for s, h in c.find(cat, tags=tags, kind="any", min_strength=min_strength, max_graphic=max_graphic,
-                               shuffle=False):
-                if okay(s) and s.clip["id"] not in CAPTIONED and (not overlay or s.s.get("overlay_ok", True)):
-                    out.append((s, h))
-            out.sort(key=lambda sh: (-sh[0].hits[sh[1]].get("strength", 3), sh[0].ref, sh[1]))
+            for s, _ in c.find(cat, tags=tags, kind=None, max_graphic=max_graphic, shuffle=False):
+                if not (okay(s) and s.clip["id"] not in CAPTIONED | RESERVED and s.s.get("overlay_ok", True)
+                        and not PEOPLE_TAGS & set(s.tags)):
+                    continue
+                # detected onsets only where the footage is a blast (not cranes, flares, launches)
+                auto = [] if not BLAST_TAGS & set(s.tags) else [{"t": t, "kind": "explosion", "strength": 4 if sc >= 60 else 3 if sc >= 30 else 2, "auto": sc}
+                        for t, sc in K.onsets(s, invert="black-hot" in s.tags)
+                        if sc >= 20 and s.t_in + 0.3 < t < s.t_out - 0.3 and all(abs(t - h["t"]) > 0.5 for h in s.hits)]
+                s.hits = sorted([dict(h) for h in s.hits] + auto, key=lambda h: h["t"])   # this Seg only
+                out += [(s, i) for i, h in enumerate(s.hits) if "auto" in h or h.get("strength", 3) >= min_strength]
+            # catalogued hits first, strongest first; then the detected ones
+            out.sort(key=lambda sh: ("auto" in sh[0].hits[sh[1]], -sh[0].hits[sh[1]].get("strength", 3), sh[0].ref, sh[1]))
             return out
-        self.ir = [x for x in pool("weapons", ["IR", "black-hot", "white-hot"]) if "IR" in x[0].tags or "black-hot" in x[0].tags]
-        self.fire = [x for x in pool("weapons", ["fireball", "aerial", "night", "launch", "flash"])
-                     if x not in self.ir and "IR" not in x[0].tags and not {"range", "desert", "marketing"} & set(x[0].tags)]
-        self.gnight = [x for x in pool("ground", ["strike"]) if "night" in x[0].tags]
-        self.gday = [x for x in pool("ground", ["strike"]) if "night" not in x[0].tags]
+        ir_t = {"IR", "black-hot", "white-hot", "strike-cam"}
+        weapons = pool("weapons", ["IR", "black-hot", "white-hot", "fireball", "aerial", "night", "launch", "flash",
+                                   "explosion", "impact", "strike"])
+        # y2026: Israel's strikes (Gaza, Lebanon, Iran); not Iran's strikes on Israel, not the
+        # interceptor promos, and not the strike-cam of a named journalist's killing
+        y26 = [x for x in pool("y2026", ["airstrike", "explosion", "strike-cam", "fireball", "flash"])
+               if not {"iran-strike", "killing", "journalist", "pac-3", "patriot", "lockheed"} & set(x[0].tags)]
+        ground = pool("ground", ["strike", "explosion", "flash", "fireball"])
+        self.ir = [x for x in weapons + y26 if ir_t & set(x[0].tags)]
+        self.fire = [x for x in weapons if x not in self.ir and not {"range", "desert", "marketing", "interceptor",
+                                                                    "iron-dome"} & set(x[0].tags)]
+        self.gnight = [x for x in ground + y26 if x not in self.ir and {"night", "flash", "glow"} & set(x[0].tags)]
+        self.gday = [x for x in ground + y26 if x not in self.ir and x not in self.gnight]
         self.i = {k: 0 for k in ("ir", "fire", "gnight", "gday")}
         self.used = {}
+        self.stale = []      # (kind, at) where nothing fresh was left (printed by build)
 
-    def take(self, kind, at=None, gap=20.0):
+    def _shown(self):
+        """{(catalog, clip): [source spans]} of every footage layer placed so far, and the clips
+        shown untreated anywhere (testimony is never reused as spectacle)."""
+        by, real = {}, set()
+        for L in self.c.layers:
+            m = L.get("meta", {})
+            if not m.get("catalog"):
+                continue
+            sp = src_span(L)
+            if sp:
+                by.setdefault((m["catalog"], m["clip"]), []).append(sp)
+            if "real" in L.get("tags", []) or (not L.get("fx") and L.get("blend", "normal") == "normal"
+                                                and "audio" in L):
+                real.add((m["catalog"], m["clip"]))
+        return by, real
+
+    def unshown(self, seg, a, b):
+        """No placed layer shows any of seg's source [a, b] (and its clip isn't testimony)."""
+        by, real = self._shown()
+        key = (seg.catalog, seg.clip["id"])
+        return key not in real and all(min(b, y) - max(a, x) <= 0.05 for x, y in by.get(key, []))
+
+    def take(self, kind, at=None, gap=20.0, before=0.5, after=2.0):
+        """A fresh (segment, hit) whose source window [hit - before, hit + after] hasn't been shown."""
+        by, real = self._shown()
+
+        def fresh(s, h):
+            if (s.catalog, s.clip["id"]) in real:
+                return False
+            t = s.hits[h]["t"]
+            a, b = max(s.t_in, t - before - 0.1), min(s.t_out, t + after + 0.1)
+            return all(min(b, y) - max(a, x) <= 0.05 for x, y in by.get((s.catalog, s.clip["id"]), []))
+
+        for strict_gap in (True, False):
+            for k in (kind,) + NEAR[kind]:
+                P = getattr(self, k)
+                for n in range(len(P)):
+                    s, h = P[(self.i[k] + n) % len(P)]
+                    last = self.used.get(s.clip["id"])
+                    if strict_gap and at is not None and last is not None and at - last <= gap:
+                        continue
+                    if fresh(s, h):
+                        self.i[k] += n + 1
+                        self.used[s.clip["id"]] = at
+                        return s, h
+        self.stale.append((kind, at))
         P = getattr(self, kind)
-        for _ in range(len(P)):
-            s, h = P[self.i[kind] % len(P)]
-            self.i[kind] += 1
-            last = self.used.get(s.clip["id"])
-            if at is None or last is None or at - last > gap:
-                self.used[s.clip["id"]] = at
-                return s, h
+        self.i[kind] += 1
         return P[self.i[kind] % len(P)]
 
 
@@ -170,6 +271,17 @@ def strike(c, seg, h, at, before=0.5, after=1.6, depth=0.45, opacity=0.9, k=0, d
     L.update(props)
     crop = L.pop("crop", AP_CROP if seg.catalog == "ground" else
                   OIR_CROP if seg.clip["id"].startswith("oir-") else WEAPONS_CROP)
+    # a second blast inside the window that would land off the grid: end (or start) short of it
+    t = seg.hits[h]["t"]
+    for x in seg.hits:
+        d = x["t"] - t
+        if -before < d < after and d != 0:
+            p = c.beat_pos(at + d) * 4
+            if abs(p - round(p)) * c.period / 4 > 0.03:
+                if d > 0:
+                    after = max(0.3, d - 0.12)
+                else:
+                    before = min(before, max(0.0, -d - 0.12))
     lay = c.footage(seg, at=at, hit=h, before=before, after=after, fit=L.pop("fit", "picture"), crop=crop,
                     fade=L.pop("fade", {"in": min(0.15, before), "out": 0.5}), opacity=opacity, **L)
     if depth is not None:
@@ -181,25 +293,36 @@ def strike(c, seg, h, at, before=0.5, after=1.6, depth=0.45, opacity=0.9, k=0, d
 ZINATI_SRC = "https://www.youtube.com/watch?v=vQdUgwKtwEY"
 
 
-def real(c, ref, t0, t1, src_in, gain=1.0, music=0.25, people=None, crop=AP_CROP, window=True, id=None, **props):
+def real(c, ref, t0, t1, src_in, gain=1.0, music=0.25, people=None, crop=AP_CROP, window=True, id=None,
+         lead=0.0, xout=0.0, release=None, **props):
     """The dead and the wounded as filmed: no effects, no keying, no kaleidoscope, its own audio.
-    While a `window` is open the preacher, the chorus, the beds and the strike-cam are muted
-    (see build's post-pass) and the music dips to `music`."""
+    `src_in` is the source time showing at `t0`. While a `window` is open the preacher, the chorus,
+    the beds and the strike-cam are muted (see build's post-pass) and the music dips to `music`.
+    Soft edges (ember, v2: the punctures moved on too fast):
+      lead  s: the footage fades up over the `lead` before t0 (full on t0) while the bed recedes
+            over twice that;
+      xout  s: over the last `xout` before t1 the footage fades out as the bed returns over it.
+    The music comes back over `release` (default a bar, never less than xout)."""
     seg = c.seg(ref)
+    bar_len = 4 * c.period
+    a_fade = max(0.006, min(0.6, max(lead, 0.6 * xout)))
     L = {"id": id or f"real:{seg.clip['id']}@{t0:.2f}", "tags": ["real", seg.catalog], "src": seg.file,
-         "t0": round(t0, 4), "t1": round(t1, 4), "time": {"in": src_in, "speed": 1.0}, "fit": "picture",
-         "crop": crop, "blend": "normal", "opacity": 1.0, "clip": "picture", "audio": {"gain": gain},
-         "fade": {"in": 0.04, "out": 0.1},
+         "t0": round(t0 - lead, 4), "t1": round(t1, 4), "time": {"in": round(src_in - lead, 4), "speed": 1.0},
+         "fit": "picture", "crop": crop, "blend": "normal", "opacity": 1.0, "clip": "picture",
+         "audio": {"gain": gain, "fade": round(a_fade, 3)},
+         "fade": {"in": max(0.04, lead), "out": max(0.1, xout)},
          "meta": {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx, "hits_song": [],
                   "graphic": seg.s.get("graphic"), "identifiable_victims": seg.s.get("identifiable_victims")}}
     if people:
         L["meta"]["people"] = people
     L.update(props)
     c.add(L)
+    full_until = t1 - xout
     if window:
-        c._s2_real.append((t0, t1))
+        c._s2_real.append((t0, full_until, max(0.04, 2 * lead), max(0.04, xout)))
     if music is not None:
-        c.duck_music(t0, hold=t1 - t0, depth=music, attack=0.05, release=0.6)
+        c.duck_music(t0, hold=full_until - t0, depth=music, attack=max(0.05, 2 * lead),
+                     release=release or max(bar_len, xout))
     return L
 
 
@@ -312,26 +435,41 @@ def reentry_and_peak1(c, pools, ch):
         strike(c, c.seg(ref), 0, B(b), before=0.4, after=1.4, depth=0.45, k=b, opacity=0.8,
                crop=[0.14, 0.1, 0.87, 0.72])   # x0 0.14 drops the vertical "IDF / AFP" credit
     # Rafah at night, three domes of light on the odd bars
+    # (each of these hand-picked takes yields to an earlier section that already showed it: then
+    # its hits are drawn fresh from the pools instead)
     rafah = c.seg("ground:afp-rafah-night-strikes-flares-2023-12#0")
-    c.footage_multi(rafah, [0, 1, 2], [B(125), B(126, 2), B(127, 2)], before=0.8, after=1.6, fit="picture",
-           crop=[0, 0, 1, 0.9], blend="screen", opacity=0.95, fade={"in": 0.3, "out": 0.8}, fx=night_fx(0),
-           id="rafah-domes")
+    if pools.unshown(rafah, 8.721 - 0.8, 13.721 + 1.6):
+        c.footage_multi(rafah, [0, 1, 2], [B(125), B(126, 2), B(127, 2)], before=0.8, after=1.6, fit="picture",
+               crop=[0, 0, 1, 0.9], blend="screen", opacity=0.95, fade={"in": 0.3, "out": 0.8}, fx=night_fx(0),
+               id="rafah-domes")
+    else:
+        for k, at in enumerate((B(125), B(126, 2), B(127, 2))):
+            s, h = pools.take("gnight", at, before=0.4, after=1.2)
+            strike(c, s, h, at, before=0.4, after=1.2, depth=None, k=k, opacity=0.95)
     blasts = c.seg("ground:ap-night-blasts-from-israel-2025-09#2")
-    c.footage_multi(blasts, [0, 1], [B(129), B(129, 2)], before=0.5, after=1.4, fit="picture", crop=AP_CROP,
-           blend="screen", opacity=0.95, fade={"in": 0.2, "out": 0.7}, fx=night_fx(2), id="blasts-129")
-    strike(c, c.seg("ground:reuters-explosions-overnight-2023-10-22#2"), 0, B(131), before=0.1, after=1.8,
-           depth=0.5, k=3)
+    if pools.unshown(blasts, blasts.hits[0]["t"] - 0.5, blasts.hits[1]["t"] + 1.4):
+        c.footage_multi(blasts, [0, 1], [B(129), B(129, 2)], before=0.5, after=1.4, fit="picture", crop=AP_CROP,
+               blend="screen", opacity=0.95, fade={"in": 0.2, "out": 0.7}, fx=night_fx(2), id="blasts-129")
+    else:
+        for k, at in enumerate((B(129), B(129, 2))):
+            s, h = pools.take("gnight", at, before=0.4, after=1.0)
+            strike(c, s, h, at, before=0.4, after=1.0, depth=None, k=k + 2, opacity=0.95)
+    dusk = c.seg("ground:reuters-explosions-overnight-2023-10-22#2")
+    if not pools.unshown(dusk, dusk.hits[0]["t"] - 0.1, dusk.hits[0]["t"] + 1.8):
+        dusk = None
+    s, h = (dusk, 0) if dusk else pools.take("gday", B(131), before=0.1, after=1.8)
+    strike(c, s, h, B(131), before=0.1, after=1.8, depth=0.5, k=3)
 
     # peak 1: ground on the odd bars, more weapons on the even bars past the Iran take
     for b in (133, 135, 137, 139, 141, 143):
-        s, h = pools.take("gnight" if b % 4 == 1 else "gday", B(b))
+        s, h = pools.take("gnight" if b % 4 == 1 else "gday", B(b), before=0.4, after=1.7)
         strike(c, s, h, B(b), before=0.4, after=1.7, depth=0.45, k=b)
     for b in (138, 140, 142):
-        s, h = pools.take("fire" if b != 140 else "ir", B(b))
+        s, h = pools.take("fire" if b != 140 else "ir", B(b), before=0.4, after=1.6)
         strike(c, s, h, B(b), before=0.4, after=1.6, depth=0.4, k=b)
     # a dense accent on the last bar before the lull: hits on beats 2, 3, 4
     for k in (1, 2, 3):
-        s, h = pools.take("ir", B(143, k))
+        s, h = pools.take("ir", B(143, k), before=0.1, after=0.42)
         strike(c, s, h, B(143, k), before=0.1, after=0.42, depth=None, k=k, opacity=0.7,
                fade={"in": 0.03, "out": 0.15})
 
@@ -347,7 +485,8 @@ def reentry_and_peak1(c, pools, ch):
 # ---- 4:34-4:50  the lull (144-151): the displaced; the chorus drifts ----
 def lull(c, ch):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
-    coast = c.seg("ground:ap-drone-coast-road-return-2025-01-long#3")     # top-down walkers
+    # top-down: hundreds walking north past a pancaked building (s1 has the coast-road take)
+    coast = c.seg("ground:ap-drone-return-north-coast-2025-01#3")
     c.groove(coast, B(144), dur=B(148) - B(144) + 0.6, fit="picture", crop=AP_CROP, opacity=0.8,
              fade={"in": 0.5, "out": 0.6}, fx=[{"op": "sat", "factor": 0.55}, {"op": "posterize", "levels": 10}],
              id="walkers-topdown")
@@ -366,7 +505,7 @@ def peak2(c, pools, ch):
     tunnel = {"op": "feedback", "fb": 0.6, "zoom": 1.035, "rot": rng(-3, 3, beat(8, "sine")), "mode": "max"}
     for b in range(152, 167):
         kind = ("ir", "gnight", "fire", "gday")[b % 4]
-        s, h = pools.take(kind, B(b))
+        s, h = pools.take(kind, B(b), before=0.35, after=1.8)
         L = strike(c, s, h, B(b), before=0.35, after=1.8, depth=0.4, k=b)
         L["fx"] = L["fx"] + [tunnel]
     # the chorus speaks every two bars, on the downbeat, round the circle
@@ -378,18 +517,22 @@ def peak2(c, pools, ch):
     # 160-163: the strike-cam stops; a grid of four untreated takes from the ground, one per beat,
     # held four bars, all their sounds at once
     tiles = [("y2026:ap-jabaliya-strike-shifa-arrivals-2026-07-14#1", 12.0, AP_CROP),       # the wounded carried in
-             ("ground:ap-jabaliya-dig-for-victims-2025-03#1", 20.0, AP_CROP),               # digging by hand
+             # rescuers digging through rubble by phone light, central Gaza, 9 Jan 2026 (Roya; the
+             # Jabaliya dig is shown in s1). Its street sound runs ~22 dB hot: tile gain scaled down
+             ("ground:roya-night-rescue-central-gaza-2026-01#3", 52.0, [0.12, 0.14, 1.0, 0.86]),
              ("y2026:roya-civil-defence-worker-shifa-2026-09-01#1", 8.5, [0, 0.3, 1, 0.62]),  # stretcher, blood
              ("y2026:ap-khanyounis-mourning-overnight-strikes-2026-08-02#2", 20.5, AP_CROP)]  # men kneel over shrouds
     cells = [(360, 349), (1080, 349), (360, 731), (1080, 731)]
+    # out: over the last two beats the grid fades and the strike-cam returns over it
+    xout = 2 * c.period
     for k, ((ref, src_in, crop), (x, y)) in enumerate(zip(tiles, cells)):
         t0 = c.beat(c.beat_pos(B(160)) + k)
-        real(c, ref, t0, B(164), src_in, gain=0.6, music=0.3 if k == 0 else None, crop=crop,
+        real(c, ref, t0, B(164), src_in, gain=0.12 if "roya-night" in ref else 0.6, music=0.3 if k == 0 else None, crop=crop, xout=xout,
              size=[720, 382], pos=[x, y], fit=None, id=f"real:grid{k}")
-    c._s2_real.append((B(160), B(164)))
+    c._s2_real.append((B(160), B(164) - xout, 0.04, xout))
 
     # bar 167: the music holds its breath; the last strike freezes and he states his terms
-    s, h = pools.take("ir", B(167))
+    s, h = pools.take("ir", B(167), before=0.3, after=0.1)
     c.freeze(s, B(167), h, beats=4, then="cut", before=0.3, fit="picture", crop=[0, 0.09, 1, 0.86],
              blend="screen", opacity=0.7, fx=[{"op": "invert"}, {"op": "gradmap", "palette": "blood"}],
              fade={"out": 0.2}, id="gap-freeze")
@@ -399,17 +542,22 @@ def peak2(c, pools, ch):
 
 
 # ---- 5:20-6:13  the hottest stretch (168-195): atrocity, atrocity, atrocity; music, music, music ----
-# one-bar punctures of the hypnosis: untreated, full frame, their own sound
+# Punctures of the hypnosis: untreated, full frame, their own sound. Revision 4 (ember, v2: "too
+# abrupt ... they move on too fast"): two of them, three bars each, instead of five single bars.
+# Each comes in softly (the bed recedes over the beat before the downbeat while the footage fades
+# up, full on the downbeat) and holds; over its last two beats the kaleidoscope and the strike-cam
+# close back over it. The music dips to 0.4 (a three-bar hold) and comes back over a bar.
+#   bar: (ref, source time on the downbeat, bars, crop, gain)
 PUNCTURES = {
-    171: ("y2026:ap-khanyounis-morgue-bodies-2026-07-29#1", 13.0, None),            # bodies on a steel morgue tray
-    # the wounded lifted into an ambulance by torchlight after an overnight strike in central Gaza, 9 Jan
-    # 2026 (Roya News): Roya logo, date tag and handle cropped; its loud street sound brought down to
-    # sit with the others. (Shifa arrivals #1 is the grid's tile at 160; a segment is used once.)
-    175: ("ground:roya-night-rescue-central-gaza-2026-01#0", 5.0, None, [0.12, 0.14, 1.0, 0.86], 0.2),
-    179: ("y2026:roya-civil-defence-bones-nuseirat-2026-09-05#1", 5.0, None),       # bones laid on dark cloth
-    187: ("y2026:ap-khanyounis-mourning-overnight-strikes-2026-08-02#0", 1.0, None),  # women bent over the shrouds
-    191: ("y2026:mee-112-remains-flags-2026-08-03#0", 1.0, None),    # (crop drops the Instagram credit)                   # 112 remains, photos taped on
+    # bodies in plastic bags laid on a steel morgue tray, Khan Younis (AP, 29 Jul 2026); the shot
+    # runs 7.6-17.2, so 10.0 + 3 bars ends at 15.7 inside it
+    171: ("y2026:ap-khanyounis-morgue-bodies-2026-07-29#1", 10.0, 3, [0.1, 0.16, 0.92, 0.9], 1.1),
+    # the remains of 112 people killed in Sabra in Nov 2023, recovered from the rubble and laid out
+    # under flags with photos taped on (MEE, 3 Aug 2026; the crop drops the Instagram credit). Only
+    # segment 0 (0-10 s): the close-ups of the children's photos after it are identifiable.
+    178: ("y2026:mee-112-remains-flags-2026-08-03#0", 1.0, 3, [0.1, 0.16, 0.92, 0.9], 1.1),
 }
+PUNCTURE_MUSIC = 0.4
 
 
 def hottest(c, pools, ch):
@@ -442,36 +590,40 @@ def hottest(c, pools, ch):
             L["tags"] = ["real"] + L["tags"]
             L["audio"] = {"gain": 1.2}
             c.duck(B(b), hold=1.6, depth=0.2)
-            c.duck_music(B(b) - 0.2, hold=2.0, depth=0.35, attack=0.2)
+            # Bureij and the morgue are one four-bar moment (184-187): the music goes down with the
+            # blast and stays down under the morgue
+            c.duck_music(B(b) - 0.4, hold=B(b + 1) - B(b) + 0.4, depth=0.4, attack=0.4, release=4 * c.period)
             continue
         if b == 185:
             # ...and what follows: bodies rushed from an ambulance into the Khan Younis morgue
-            # (AP, 29 Jul 2026), full frame, its own sound, the music down
-            real(c, "y2026:ap-khanyounis-morgue-bodies-2026-07-29#0", B(b), B(b + 2), 1.0, gain=1.2, music=0.15,
-                 id="real:morgue-arrival")
+            # (AP, 29 Jul 2026), full frame, its own sound, held three bars (src 1.0-6.7 inside the
+            # shot 0-7.6); the bed closes back over it across bar 187's last two beats
+            real(c, "y2026:ap-khanyounis-morgue-bodies-2026-07-29#0", B(b), B(b + 3), 1.0, gain=1.2, music=0.25,
+                 lead=0.5 * c.period, xout=2 * c.period, id="real:morgue-arrival")
             continue
-        if b == 186:
+        if b in (186, 187) or any(p < b < p + v[2] for p, v in PUNCTURES.items()):
             continue
         if b in PUNCTURES:
-            ref, src_in, people, *own = PUNCTURES[b]
-            crop, gain = own if own else ([0.1, 0.16, 0.92, 0.9], 1.1)
-            real(c, ref, B(b), B(b + 1), src_in, gain=gain, music=0.25, id=f"real:puncture-{b}", people=people,
-                 crop=crop)
+            ref, src_in, n, crop, gain = PUNCTURES[b]
+            real(c, ref, B(b), B(b + n), src_in, gain=gain, music=PUNCTURE_MUSIC, id=f"real:puncture-{b}",
+                 crop=crop, lead=0.5 * c.period, xout=2 * c.period)
             continue
         kind = ("gnight", "ir", "gday", "fire")[b % 4]
-        s, h = pools.take(kind, B(b), gap=15)
+        s, h = pools.take(kind, B(b), gap=15, before=0.3, after=1.9)
         L = strike(c, s, h, B(b), before=0.3, after=1.9, depth=0.35, k=b, opacity=0.88)
         L["fx"] = L["fx"] + [tunnel]
-        if b % 2 == 1:   # off-beat accents: the same take stutters on the "and" of beat 3
-            s2, h2 = pools.take("ir", B(b, 2.5), gap=10)
-            c.stutter(s2, B(b, 2), hit=h2, n=3, div=0.5, slice=0.1, after=0.3, fit="picture",
-                      crop=OIR_CROP if s2.clip["id"].startswith("oir-") else WEAPONS_CROP,
-                      blend="screen", opacity=0.55, fade={"out": 0.15},
-                      fx=[{"op": "invert"}, {"op": "levels", "black": 0.4}] + ir_fx(b, 5))
+        if b % 2 == 1:
+            # off-beat accents: the bar's own strike echoes, its hit frame retriggered on beats
+            # 3, 3-and and 4, inverted (a deliberate motif: the same 0.3 s of the same take,
+            # under the 0.5 s that counts as a repeat; no new footage)
+            c.stutter(s, B(b, 2), hit=h, n=3, div=0.5, slice=0.1, after=0.3, fit="picture",
+                      crop=L.get("crop", WEAPONS_CROP), blend="screen", opacity=0.55, fade={"out": 0.15},
+                      fx=[{"op": "invert"}, {"op": "levels", "black": 0.4}] + ir_fx(b, 5),
+                      id=f"{s.clip['id']}#{s.idx}@{B(b, 2):.2f}~echo")
     # last two bars: a hit on every beat
     for k in range(8):
         at = c.beat(c.beat_pos(B(194)) + k)
-        s, h = pools.take(("ir", "gnight")[k % 2], at, gap=4)
+        s, h = pools.take(("ir", "gnight")[k % 2], at, gap=4, before=0.05, after=0.42)
         strike(c, s, h, at, before=0.05, after=0.42,
                depth=None, k=k, opacity=0.75, fade={"in": 0.02, "out": 0.12})
 
@@ -491,8 +643,8 @@ def hottest(c, pools, ch):
 # ---- 6:13-6:36  cooling (196-207): the chorus leaves one by one; longer looks ----
 def cooling(c, pools, ch):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
-    for b in (196, 198, 200, 202, 204):
-        s, h = pools.take(("gnight", "ir", "gday")[(b // 2) % 3], B(b), gap=30)
+    for b in (196, 198, 200, 202):     # (204 belongs to Zinati: nothing else plays)
+        s, h = pools.take(("gnight", "ir", "gday")[(b // 2) % 3], B(b), gap=30, before=0.6, after=3.0)
         strike(c, s, h, B(b), before=0.6, after=3.0, depth=0.45, k=b, opacity=0.8)
     fire = c.seg("ground:ap-ansar-tent-strike-fire-2026-03#2")
     c.add({"id": "tent-fire", "tags": ["ground", "tents", "fire"], "src": fire.file, "t0": B(198), "t1": B(206),
@@ -510,48 +662,64 @@ def cooling(c, pools, ch):
                        {"name": "Sharif Shadi Labad", "role": "injured (civil defence paramedic)",
                         "source": ZINATI_SRC},
                        {"name": "Tamer Labbad", "role": "filmed it (eyewitness)", "source": ZINATI_SRC}])
-    c._s2_real.append((B(204), B(208)))          # the black after it belongs to the window too
-    c.duck_music(B(204), hold=B(208) - B(204) - 0.2, depth=0.05, attack=0.05, release=0.5)
+    c._s2_real.append((B(204), B(208), 0.04, 0.04))          # the black after it belongs to the window too
+    # the music all but gone under Zinati and the black bar; it comes back over a bar, into the funeral
+    c.duck_music(B(204), hold=B(208) - B(204) - 0.2, depth=0.05, attack=0.05, release=4 * c.period)
     c.duck(B(204), hold=B(208) - B(204), depth=0.0, attack=0.05, release=0.2)
     for n, b in enumerate((197, 199, 201)):
         ch.speak(n + 5, B(b), ("missiles", "missiles.c", "all the missiles they need")[n], gain=0.9, pop=2.2)
 
 
 # ---- 6:36-7:33  plateau (208-237): the dead held; the machine; prayer over the dead; the preacher returns ----
-def plateau(c):
+def plateau(c, pools):
     B = lambda b, k=0: bars(c, b, k)  # noqa: E731
     # 208-215 (15 s, one take): the mass funeral of the Hassayna and Abu Sharia families, Gaza City,
     # 4 Aug 2026 -- an aerial of the rectangle of flag-wrapped bodies, then along the rows. Their own
     # sound; the kick keeps pulsing underneath.
     real(c, "y2026:ap-mass-funeral-hassayna-2026-08-04#2", B(208), B(216), 20.4, gain=1.0, music=0.3,
-         crop=[0.06, 0.12, 0.96, 0.78], id="real:mass-funeral")
-    # 216-223: the machine, and him: the MK-84 containers craned off at Ashdod, a shroud cut in a window
-    ashdod = c.seg("weapons:imod-mk84-ashdod-feb2025#1")
-    c.groove(ashdod, B(216), dur=B(224) - B(216), fit="picture", crop=[0.07, 0.09, 1, 0.95], blend="screen",
-             opacity=0.8, fade={"in": 1.0, "out": 1.0}, fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}],
-             id="ashdod-crane")
+         crop=[0.06, 0.12, 0.96, 0.78], lead=0.5 * c.period, xout=2 * c.period, id="real:mass-funeral")
+    # 216-223: the machine, and him: the MK-84 shipment at Ashdod (IMOD, Feb 2025): the lit gantry
+    # cranes over the ship, then the convoy of bomb containers leaving the port. (s1 shows the
+    # crane cycle itself, segment 1, at bars 32-35; these are the segments either side of it.)
+    port = c.seg("weapons:imod-mk84-ashdod-feb2025#0")
+    c.footage(port, at=B(216), after=B(220) - B(216) + 0.5, fit="picture", crop=[0.12, 0.14, 1, 0.95],
+              blend="screen", opacity=0.8, fade={"in": 1.0, "out": 0.5},
+              fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}], id="ashdod-port")
+    convoy = c.seg("weapons:imod-mk84-ashdod-feb2025#2")
+    c.footage(convoy, at=B(220), after=B(224) - B(220), fit="picture", crop=[0.12, 0.14, 1, 0.95],
+              blend="screen", opacity=0.8, fade={"in": 0.5, "out": 1.0},
+              fx=[{"op": "lumakey", "low": 0.1, "high": 0.45}], id="ashdod-convoy")
     shroud = c.seg("ground:ap-aqsa-shroud-laundry-2023-10#3")
-    c.groove(shroud, B(218), dur=B(224) - B(218), cycle=1.4, anchor=86.0, fit="picture", crop=[0, 0.13, 0.86, 1],
+    # (the breath at bar 120 shows 84-89 of this take; the window cuts later cloth)
+    c.groove(shroud, B(218), dur=B(224) - B(218), cycle=1.4, anchor=96.0, fit="picture", crop=[0, 0.13, 0.86, 1],
              blend="screen", opacity=keys([B(218), 0.0], [B(220), 0.5], [B(223), 0.5], [B(224), 0.0]),
              mask={"shape": "rect", "feather": 0.2}, size=[760, 428], pos=[720, 540],
              fx=[{"op": "sat", "factor": 0.4}], id="shroud-cut")
-    strike(c, c.seg("ground:afp-rafah-night-strikes-flares-2023-12#0"), 1, B(220), before=0.6, after=2.6,
-           depth=0.4, k=220, opacity=0.75)
+    s, h = pools.take("gnight", B(220), before=0.6, after=2.6)
+    strike(c, s, h, B(220), before=0.6, after=2.6, depth=0.4, k=220, opacity=0.75)
     # 224-231 (15 s, one take, src 56.0-71.2 inside the single shot 54.7-79.9): outside al-Aqsa
     # Martyrs Hospital, Deir al-Balah, 28 Dec 2023 (AP): men stand in prayer over the white body bags
     # laid on the pavement, ambulances behind, a boy watching. Burial after the cranes unload the bombs.
     # Its own quiet sound (source ~-42 dBFS), raised to gain 3.0 so the murmur is heard under the kick.
     # (Hammad's sieve is shown once, in s1.)
     real(c, "ground:ap-aqsa-body-bags-prayer-2023-12#2", B(224), B(232), 56.0, gain=3.0, music=0.3,
-         id="real:aqsa-prayer")
-    # 230-237: the blueprint factory and the crowd walking north, under him again
-    walkers = c.seg("ground:ap-drone-return-north-coast-2025-01#1")
-    c.groove(walkers, B(232), dur=B(238) - B(232), fit="picture", crop=AP_CROP, opacity=0.6,
+         lead=0.5 * c.period, xout=2 * c.period, id="real:aqsa-prayer")
+    # 232-237: the airlift and the crowd walking north, under him again
+    # the vast crowd walking north on the Salah al-Din road (AP, Jan 2025), one stride to two beats,
+    # so a little slowed (s1 has the coast-road crowd)
+    walkers = c.seg("ground:ap-salahaldin-crossing-return-2025-01#0")
+    c.groove(walkers, B(232), dur=B(238) - B(232), lengths=(2,), limits=(0.5, 1.6), fit="picture", crop=AP_CROP,
+             opacity=0.6,
              fade={"in": 1.5, "out": 1.5}, fx=[{"op": "sat", "factor": 0.5}], id="walkers-crowd")
-    f35 = c.seg("weapons:lm-f35-factory-animation#0")
-    c.add({"id": "f35-blueprint", "tags": ["weapons", "factory"], "src": f35.file, "t0": B(232), "t1": B(238),
-           "time": {"in": 20.0, "speed": 1.0}, "fit": "picture", "crop": [0, 0, 1, 0.8], "blend": "screen",
-           "opacity": 0.55, "fade": {"in": 2.0, "out": 2.0}, "fx": [{"op": "lumakey", "low": 0.05, "high": 0.35}]})
+    # (was Lockheed's CGI F-35 factory; ember, v2: "i don't want to use that footage. it confuses me")
+    # The 200th IMOD airlift of the war, 26 Mar 2026: on a wet night apron pallets of munitions come
+    # down the scissor loader out of the freighter and trail away on dollies. Grooved, one pallet
+    # cycle to two beats; screened so its lights and the wet tarmac glint over the night road.
+    lift = c.seg("y2026:imod-200th-airlift-plane-2026-03-26#3")
+    # crop: the IMOD logo bottom-left and its Hebrew subtitles along the bottom
+    c.groove(lift, B(232), dur=B(238) - B(232), fit="picture", crop=[0.14, 0.06, 1, 0.8], blend="screen",
+             opacity=0.6, fade={"in": 2.0, "out": 2.0}, fx=[{"op": "lumakey", "low": 0.08, "high": 0.4}],
+             id="airlift-200")
 
     # him, alone, gaze-steered, only where the dead are not on screen
     pos, sc = K.retime_path(GAZE, 20.0, B(216), B(239), center=(720, 540), k=0.7,
@@ -614,29 +782,47 @@ def build(c, outro_kind="walkers"):
     hottest(c, pools, ch)
     cooling(c, pools, ch)
     ch.emit()
-    pos, sc = plateau(c)
+    pos, sc = plateau(c, pools)
     outro(c, pos, sc, outro_kind)
     # inside each window of untreated reality: the preacher's words are cut, everything that isn't
     # the real footage goes dark (the chorus, the beds, the strike-cam, his head), Meine included
+    # A window is (a, b, xin, xout): everything else recedes over [a - xin, a], is gone over [a, b],
+    # and returns over [b, b + xout] (the bed closing back over the footage as it fades).
     W = []
-    for a, b in sorted(c._s2_real):          # merge overlapping windows (the grid's tiles share one)
+    for a, b, xi, xo in sorted(c._s2_real):   # merge overlapping windows (the grid's tiles share one)
         if W and a <= W[-1][1] + 0.1:
-            W[-1] = (W[-1][0], max(W[-1][1], b))
+            if b >= W[-1][1]:
+                W[-1] = (W[-1][0], b, W[-1][2], xo)
+            else:
+                W[-1] = (W[-1][0], W[-1][1], W[-1][2], max(W[-1][3], xo))
         else:
-            W.append((a, b))
+            W.append((a, b, xi, xo))
+    print("  reality windows:", ", ".join(f"{a - xi:.2f}>{a:.2f}..{b:.2f}>{b + xo:.2f}" for a, b, xi, xo in W))
     keep = []
     for L in c.layers[first:]:
-        ov = [(a, b) for a, b in W if L["t1"] > a and L["t0"] < b]
+        ov = [w for w in W if L["t1"] > w[0] - w[2] and L["t0"] < w[1] + w[3]]
         if "real" in L.get("tags", []) or not ov:
             keep.append(L)
             continue
-        if "audio" in L:           # a spoken word over the dead: drop it
-            continue
-        L["opacity"] = mul(L.get("opacity", 1.0), K.mute_signal(ov, 1.0, xf=0.04))
+        # a spoken word over the dead, or as they come up: dropped. A word landing as the bed
+        # closes back over (starting in the last 0.3 s of the return) stays, fading in with it.
+        if "audio" in L:
+            if any(L["t1"] > a - xi and L["t0"] < b + xo - 0.3 for a, b, xi, xo in ov):
+                continue
+        pts = [[0.0, 1.0]]
+        head = "head" in L.get("tags", [])
+        for a, b, xi, xo in ov:
+            if head:   # his faces are gone before the footage begins to show, back only once it has gone
+                pts += [[a - xi, 1.0], [a - xi / 2, 0.0], [b + xo, 0.0], [b + xo + 0.3, 1.0]]
+            else:
+                pts += [[a - xi, 1.0], [a, 0.0], [b, 0.0], [b + xo, 1.0]]
+        L["opacity"] = mul(L.get("opacity", 1.0), keys(*pts, ease="smooth"))
         keep.append(L)
     c.layers[first:] = keep
-    for a, b in W:
-        c.duck(a, hold=b - a, depth=0.0, attack=0.04, release=0.3)
+    for a, b, xi, xo in W:
+        c.duck(a, hold=b - a, depth=0.0, attack=xi, release=max(0.3, xo))
+    if pools.stale:
+        print("  nothing fresh left for:", pools.stale)
     # footage stays inside Meine's picture area (y 158..922); the floating heads may cross the bars
     for L in c.layers[first:]:
         if "head" not in L.get("tags", []) and L.get("fit", "cover") != "native":

@@ -7,6 +7,120 @@ Viewer: http://127.0.0.1:8765/studio/timeline.html?tl=projects/meine/comps/out/s
 
 `build(c, outro_kind="walkers")`; the other options are `"shroud"` and `"head"` (see Outro).
 
+## Revision 4: ember's v2 notes (2026-10-24); this section overrides everything below where they differ
+
+**Bar numbers.** In this section, "viewer bar" is ember's count, starting at 1. The code and the
+older tables below count from 0, so code bar N is viewer bar N+1. Song times are the downbeats in
+`analysis/beats.json`.
+
+### Punctures: fewer, longer, soft edges ("too abrupt ... they move on too fast")
+
+The five one-bar punctures (code 171, 175, 179, 187, 191) are replaced by **two three-bar
+punctures**, and the morgue after Bureij now holds three bars, not two.
+- **In:** over the beat before the downbeat, the hypnosis (beds, strikes, chorus, Meine) recedes
+  while the footage fades up. The footage is full on the downbeat.
+- **Out:** over the last two beats, the footage fades out and the kaleidoscope and strike-cam close
+  back over it. The next strike lands on the following downbeat.
+- **His faces:** gone before the footage starts to show, and back only 0.3 s after it has gone.
+  No head is ever over the dead.
+- **Mechanism:** `real(..., lead=, xout=)`. A window is now `(a, b, xin, xout)`, and the post-pass
+  in `build()` ramps every other layer through it.
+
+| viewer bars | code bars | song time | what | music |
+|---|---|---|---|---|
+| 161-164 | 160-163 | 304.97-312.59 | grid (unchanged, except that it now fades out over its last 2 beats as the strike-cam returns). Tile 1 is now **Roya's rescuers digging by phone light** (`roya-night-rescue-central-gaza-2026-01#3`, src 52, gain 0.12, because its street sound runs about 22 dB hot). The Jabaliya dig is s1's. | 0.3 |
+| 172-174 | 171-173 | 325.93-331.64 | **puncture 1**: Khan Younis morgue (AP, 29 Jul 2026). Bodies in bags carried in, then the steel tray. Src 9.76-15.7, all one handheld shot. | 0.4 |
+| 179-181 | 178-180 | 339.25-344.97 | **puncture 2**: the remains of 112 under flags, children's photos taped on (MEE). Src 0.76-6.7, segment 0 only. | 0.4 |
+| 185 | 184 | 350.68 | Bureij (unchanged) | 0.4 |
+| 186-188 | 185-187 | 352.60-358.31 | the Khan Younis morgue arrival, now **3 bars** (src 1.0-6.7, inside shot 0-7.6), soft out | 0.25 |
+| 205-208 | 204-207 | 388.78-396.40 | Zinati, then black (unchanged) | 0.05 |
+| 209-216 | 208-215 | 396.40-411.63 | the mass funeral: fades up from the black, soft out | 0.3 |
+| 225-232 | 224-231 | 426.88-442.11 | the al-Aqsa prayer: soft in and out | 0.3 |
+
+Dropped from the piece (no longer shown anywhere): Roya's torchlight ambulance (old 175), the
+Nuseirat bones (old 179) and the Khan Younis women over the shrouds (old 187).
+
+### Music ducks ("too deep/stark ... don't linger")
+
+- **Depth now follows the hold.** The three-bar punctures go to 0.4 (was 0.25 for one bar).
+  Bureij plus the morgue is one 4-bar moment: 0.4 under the blast, then 0.25 under the morgue
+  (was 0.35, then 0.15 for 2 bars). The 4-bar and 8-bar holds (grid, funeral, al-Aqsa) stay at 0.3.
+- **Every release is now at least a bar** (it was 0.5-0.6 s). The music comes back over the bar
+  after each window, while the bed is already closing over the footage.
+- **Kept:** the deep silence under Zinati and the black bar (0.05). It now comes back over a
+  bar, into the funeral, instead of in 0.5 s.
+- **Measured** from a music-only render of the new timeline (RMS against the bars around each dip):
+  - punctures 1 and 2: -7.5 and -7.4 dB
+  - morgue: -11.4 dB
+  - funeral and al-Aqsa: -9.7 and -9.8 dB
+  - grid: -17.9 dB absolute (about -10 dB)
+  - Zinati and the black: -26.4 dB
+  - after puncture 1 the level is back to the bed's -7.5 dB by beat 2 of the next bar.
+  - (The older "-40 dB" figure for Zinati doesn't match a 0.05 gain: 0.05 is -26 dB.)
+
+### Repeated footage: 0 pairs ("the car scenes ... seems repeated?")
+
+The section now builds with **0 repeated footage pairs**, down from 26 standalone. In full.py
+there are 4, listed below. How:
+- **Pools are fresh.** `Pools.take(kind, at, before=, after=)` returns only a hit whose source
+  window overlaps nothing already placed in the Comp. In full.py that includes s0 and s1. It also
+  skips clips shown untreated anywhere: testimony is never reused as spectacle.
+  `src_span()` also covers `seq` layers (stutters and freezes), which `Comp._src_span` leaves out.
+  A kind that has run dry borrows from its neighbour (ir/fire, gnight/gday).
+- **More supply.** There were only about 110 catalogued hits in scope, and the whole piece needs
+  more. `s2_kit.onsets()` finds the blasts the catalogue didn't mark: brightness onsets at 50 fps
+  (the jump of the brightest 5% of the frame plus the mean; whole-frame changes are skipped as
+  cuts). The results are cached in `comps/out/section_s2_peak.onsets.json`. Calibration: it finds
+  the Rafah domes at 8.72, 11.56 and 13.72 (catalogue: 8.721, 11.560, 13.721), and black-hot
+  2014 at 12.76 (catalogue: 12.761). Onsets count as hits only in footage tagged as a blast
+  (`BLAST_TAGS`). The pools now also take y2026 (Israel's strikes; not Iran's strikes on Israel,
+  not interceptor promos, not the Wishah strike-cam) and catalogued hits of strength 2 or more.
+  Sizes: ir 46, fire 70, gnight 32, gday 24.
+- **The odd-bar stutter is now an echo.** It retriggers the bar's own strike (0.3 s, inverted)
+  on beats 3, 3-and and 4. This is a deliberate motif and needs no new footage. It overlaps by
+  0.3 s, under the 0.5 s that counts as a repeat.
+- **Off-grid second blasts.** When a second blast inside a strike's window would land off the
+  grid, `strike()` ends the window short of it.
+- **Hand-picked takes yield to s1.** The Rafah domes (125-127), the blasts on 129 and the dusk
+  fireball on 131 are used only if no earlier section has shown them; otherwise those hits come
+  from the pools. In full.py they come from the pools. Other changes to avoid s1's material:
+  - lull walkers: now `ap-drone-return-north-coast-2025-01#3`
+  - plateau crowd: now the Salah al-Din road crowd (`ap-salahaldin-crossing-return-2025-01#0`,
+    grooved at x0.58)
+  - Ashdod: s1 has the crane cycle, segment 1; s2 now has segment 0 (the lit port) and
+    segment 2 (the convoy)
+  - the shroud window at 218: now anchored at 96 (the breath at 120 shows 84-89)
+- `RESERVED`: the clips placed by hand later in the section, which the pools leave alone.
+- The cooling strike on code bar 204 is gone. It played entirely inside Zinati's window.
+- **Left in full.py (4 pairs):**
+  1. The MQ-9 **countdown** (`mq9-live-hellfire-holloman#7`) is in both s1 (bars 70-72) and s2
+     (code 122-124). I kept it as a deliberate rhyme: the build's countdown and the peak's.
+     If ember wants it gone, one of the two sections needs another countdown.
+  2. s1 shows three shots from inside the src range of **s2's continuous IDF crater take**
+     (code 126-140, src 0.57-29.96): `form-strike0`, `build-strike-65.0` and `idf-strikecam-96`.
+     The take is one designed piece (four hits at x1.0), so s1 should give up those shots.
+
+### F-35 removed ("i don't want to use that footage. it confuses me")
+
+The Lockheed CGI factory is gone. At code 232-237 (viewer 233-238, 442.11-453.54) there is now
+**the 200th IMOD airlift of the war** (`imod-200th-airlift-plane-2026-03-26#3`, 26 Mar 2026):
+on a wet night apron, pallets of munitions come down the scissor loader from the freighter and
+trail away on dollies.
+- One pallet cycle to two beats; screen plus lumakey, opacity 0.6, under the crowd walking north.
+- Crop [0.14, 0.06, 1, 0.8] removes the IMOD logo and the Hebrew subtitles.
+- Kept as diegetic: the M.O.D vests, a Hebrew placard on a loader, and the Ashdod port sign
+  (code 216-219).
+
+### Captions
+
+New material was checked frame by frame:
+- strike takes at 310-386 and 419
+- the grid, the punctures, the morgue, the plateau
+
+Fixed: the IMOD camera icon on Ashdod (now x0 0.12) and the airlift subtitles. No other
+lower-thirds turned up. The pools pick different takes in full.py than in the standalone build,
+so a full-piece render should get the same 1 s sweep.
+
 ## Revision 3: "full truth" (ember, 2026-10-24); this section overrides the map below where they differ
 
 The hypnotic bed stays: chorus, kaleidoscope, strike-cam spectacle. It is now **punctured by

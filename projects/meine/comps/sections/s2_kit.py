@@ -262,3 +262,56 @@ def since_beat(c, t, div=1):
 
 def pulse(c, t, div=1, tau=0.12):
     return math.exp(-since_beat(c, t, div) / tau)
+
+
+# ---- blasts the catalogue didn't mark: brightness onsets, so strike pools need never repeat ----
+ONSET_CACHE = PDIR / "comps/out/section_s2_peak.onsets.json"
+ONSET_FPS = 50          # decode rate: frame-exact for 25/30 fps sources (duplicated frames)
+
+
+def _luma_frames(file, t0, t1, w=80, h=45):
+    import subprocess
+    import numpy as np
+    out = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t0:.3f}", "-i", str(ROOT / file), "-t", f"{t1 - t0:.3f}",
+                          "-vf", f"fps={ONSET_FPS},scale={w}:{h},format=gray", "-f", "rawvideo", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(out, np.uint8).reshape(-1, h, w).astype(np.float32)
+
+
+def onsets(seg, invert=False, min_gap=1.0):
+    """[(source t, score)] of sudden brightenings in a segment: a blast's flash, a fireball's
+    bloom (for black-hot IR, `invert`: the blast is a sudden darkening). Score: the jump of the
+    brightest 5% of the picture plus the mean, over 2 frames at 50 fps, in 0-255 levels. Hard
+    cuts score too; the caller keeps only onsets that also brighten (not just change)."""
+    import numpy as np
+    key = f"{seg.file}|{seg.t_in:.3f}|{seg.t_out:.3f}|{int(invert)}"
+    cache = json.loads(ONSET_CACHE.read_text()) if ONSET_CACHE.exists() else {}
+    if key not in cache:
+        fr = _luma_frames(seg.file, seg.t_in, seg.t_out)
+        if invert:
+            fr = 255.0 - fr
+        flat = fr.reshape(len(fr), -1)
+        p95 = np.percentile(flat, 95, axis=1)
+        mean = flat.mean(axis=1)
+        # how much of the picture changed: a cut changes nearly all of it, a blast a region
+        chg = np.zeros(len(fr))
+        chg[2:] = (np.abs(flat[2:] - flat[:-2]) > 40).mean(axis=1)
+        d = np.zeros(len(fr))
+        d[2:] = np.maximum(0, p95[2:] - p95[:-2]) + np.maximum(0, mean[2:] - mean[:-2])
+        thr = max(14.0, 5 * float(np.median(d)) + 1e-6)
+        r = int(0.4 * ONSET_FPS)
+        found = []
+        for i in range(2, len(d)):
+            if d[i] < thr or d[i] < d[max(0, i - r):i + r + 1].max():
+                continue
+            if chg[i] > 0.85:            # the whole frame changed: a cut, not a blast
+                continue
+            j = i - 1 if d[i - 1] > 0.5 * d[i] else i     # the first frame of the jump
+            found.append((round(seg.t_in + j / ONSET_FPS, 3), round(float(d[i]), 1)))
+        keep = []
+        for t, s in sorted(found, key=lambda x: -x[1]):
+            if all(abs(t - u) >= min_gap for u, _ in keep):
+                keep.append((t, s))
+        cache[key] = sorted(keep)
+        ONSET_CACHE.write_text(json.dumps(cache, indent=0) + "\n")
+    return [tuple(x) for x in cache[key]]
