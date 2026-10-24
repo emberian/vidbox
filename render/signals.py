@@ -48,6 +48,8 @@ class Music:
             key = round(smooth, 3)
             if key not in self._smoothed:
                 k = max(1, int(smooth / self.int_dt))
+                if k > len(v):   # pad and kernel are 2k + 1 long: a window past the song is a typo
+                    raise ValueError(f"intensity smooth {smooth} s is longer than the song")
                 pad = np.pad(v, k, mode="edge")
                 self._smoothed[key] = np.convolve(pad, np.ones(2 * k + 1) / (2 * k + 1), "valid")
             v = self._smoothed[key]

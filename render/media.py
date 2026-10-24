@@ -155,9 +155,14 @@ class Reader:
             return None
         d = Decoder(self.src)
         times, frames, prev = [], [], None
+        fb = self.size[0] * self.size[1] * 3
         for t, f in d.frames(a):
             if t > b + 1e-6:
                 break
+            if (len(frames) + 2) * fb > SPANS.cap // 2:   # est trusts the stream's average fps; a
+                d.close()                                 # mislabelled stream must not overrun it
+                self.too_big.add(key)
+                return None
             if t <= a + 1e-6:
                 prev = (t, f)   # the frame showing at a (latest with timestamp <= a)
                 continue
