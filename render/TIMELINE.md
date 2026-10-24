@@ -85,6 +85,14 @@ motion cycle per musical length) is a `map` with one knot per cycle on the beat 
 stutter slices, a play that re-crosses a stuttered slice) are decoded once into a per-process
 cache (`media.SPANS`, LRU, `$VIDBOX_SPAN_CACHE_MB` default 512; a span over half the cap streams).
 
+**Memory** is per chunk process, so `--jobs N` multiplies it: about 0.5 GB of libraries and
+decoders, plus per open layer up to `$VIDBOX_READER_MB` (default 64) of recent frames, plus the
+span cache (up to 512 MB), plus a 64 MB mask cache. The single-job --full identity ranges peak at
+0.9 GB (s0 9-14) and 1.3 GB (full_v2 330-336). Limits that raise instead of allocating: a time map
+over 100k runs (`signals.MAX_RUNS`: loop passes, seq repeats), a layer drawn over 16 canvases
+(`tl.MAX_LAYER_AREA`). A chunk exits when its parent render is gone, and a failed chunk stops the
+others.
+
 ## Audio
 
 `"audio": {"gain": 1.0, "mode": "tempo", "fade": 0.006}`. The music and every audio layer are mixed
