@@ -16,8 +16,9 @@ Sync sheet:
   ]
 }
 Targets (at/beat/downbeat) are song times; beat numbers index analysis/beats.json.
-Between pins the clip stretches linearly (pitch-preserving rubberband R3 for the voice,
-nearest-frame remap for video). Before the first pin and after the last, speed is 1x.
+Between pins the clip stretches linearly (pitch-preserving rubberband R3 for the voice; for
+video, each output frame is the latest source frame with timestamp <= the mapped source time,
+on render/media.py's canonical clock). Before the first pin and after the last, speed is 1x.
 Writes <out> and <sheet>.resolved.json: the time map and every word's new song time.
 """
 import json
@@ -26,10 +27,12 @@ import sys
 import tempfile
 from pathlib import Path
 
-import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "render"))
+from media import Decoder, to_array  # noqa: E402
+
 AUDIO_SR = 48000
 
 
@@ -56,11 +59,10 @@ def main():
     out = ROOT / sheet["out"]
     start = sheet.get("start", 0.0)
 
-    cap = cv2.VideoCapture(str(src))
-    src_fps = cap.get(cv2.CAP_PROP_FPS)
-    n_src = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    W, H = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    src_dur = n_src / src_fps
+    dec = Decoder(src)
+    W, H = dec.width, dec.height
+    dur_s = dec.s.duration * dec.tb if dec.s.duration else dec.c.duration / 1e6
+    src_dur = float(dur_s)
 
     # pins: (source clip time, destination clip time); destination = song time - start
     pins = []
@@ -117,23 +119,27 @@ def main():
         fps = sheet.get("fps", 25)
         n_out = int(round(dst_dur * fps))
         enc = subprocess.Popen(
-            ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(fps),
+            ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(fps),
              "-i", "-", "-i", str(tmp / "st.wav"), "-af", f"adelay={int(lead * 1000)}:all=1",
              "-c:v", "libx264", "-crf", "14", "-g", "15", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
              "-shortest", "-movflags", "+faststart", str(out)],
             stdin=subprocess.PIPE)
-        cur_i, frame = -1, None
+        # source time is non-decreasing in k, so one forward pass serves every output frame
+        frames = dec.frames(0.0)
+        cur, nxt = next(frames), next(frames, None)
+        buf = None
         for k in range(n_out):
             t_src = float(np.interp(k / fps, m_dst, m_src))
-            want = min(n_src - 1, int(round(t_src * src_fps)))
-            while cur_i < want:
-                ok, f = cap.read()
-                if not ok:
-                    break
-                frame, cur_i = f, cur_i + 1
-            enc.stdin.write(frame.tobytes())
+            while nxt is not None and nxt[0] <= t_src + 1e-6:
+                cur, nxt, buf = nxt, next(frames, None), None
+            if buf is None:
+                buf = to_array(cur[1]).tobytes()
+            enc.stdin.write(buf)
         enc.stdin.close()
         enc.wait()
+        dec.close()
+        if enc.returncode:
+            sys.exit(f"ffmpeg failed ({enc.returncode})")
 
     new_words = [{**w, "start": round(float(np.interp(w["start"], m_src, m_dst)) + start, 3),
                   "end": round(float(np.interp(w["end"], m_src, m_dst)) + start, 3)} for w in words]
@@ -143,7 +149,8 @@ def main():
                 "words": new_words}
     rpath = sheet_path.with_suffix(".resolved.json")
     rpath.write_text(json.dumps(resolved, indent=1) + "\n")
-    print(f"wrote {out.relative_to(ROOT)} ({dst_dur:.2f}s) and {rpath.relative_to(ROOT)}", file=sys.stderr)
+    rel = lambda q: q.relative_to(ROOT) if q.is_relative_to(ROOT) else q  # noqa: E731
+    print(f"wrote {rel(out)} ({dst_dur:.2f}s) and {rel(rpath)}", file=sys.stderr)
 
 
 if __name__ == "__main__":
