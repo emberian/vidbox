@@ -90,10 +90,10 @@ cache (`media.SPANS`, LRU, `$VIDBOX_SPAN_CACHE_MB` default 512; a span over half
 `"audio": {"gain": 1.0, "mode": "tempo", "fade": 0.006}`. The music and every audio layer are mixed
 on the song clock (the music track aligns with the picture to ~1 ms; layer audio is sample-exact).
 
-- Constant-speed layers (`in`/`speed` > 0, no loop) stream through ffmpeg (atempo for speed != 1).
-- Every other form follows the layer's time map sample by sample, exactly like its frames:
-  speed +-1 copies (backwards for reverse); other constant speeds keep pitch (atempo) unless
-  `"mode": "tape"`; ramps and speed signals are tape (pitch follows speed); holds are silent.
+- Every time form follows the layer's time map sample by sample, exactly like its frames (source
+  audio is placed on the video stream's canonical clock): speed +-1 copies (backwards for
+  reverse); other constant speeds keep pitch (atempo) unless `"mode": "tape"`; ramps and speed
+  signals are tape (pitch follows speed); holds are silent.
 - Every audio edge (layer start/end, stutter retriggers, cuts into or out of holds) gets a
   `fade` (default 6 ms) so nothing clicks; continuous joins between pieces of different speed
   (map knots) crossfade over +-5 ms.

@@ -448,6 +448,9 @@ ENV_RATE = 1000   # Hz: music volume envelope sampling
 
 
 def mux_audio(tl, video, out, r0, r1, ctx=None):
+    """Mux `video` with the music and every audio layer over song [r0, r1). Layers are mixed into
+    one sample-exact bus by layer_audio (all time forms, constant speed included); ffmpeg only adds
+    the music, which it seeks itself."""
     ins = ["-i", str(video), "-ss", f"{r0:.4f}", "-i", str(ROOT / tl["music"]["src"])]
     # asetpts on every input: the music's first opus packet has pts < 0, which otherwise makes the
     # mp4 keep 1008 samples of AAC priming (the whole mix 21 ms late against the picture)
@@ -465,35 +468,20 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
         env_path.write_bytes(env.tobytes())
         chains = [f"[1:a]asetpts=PTS-STARTPTS,aresample={SR},aformat=sample_fmts=flt:channel_layouts=stereo[mus]"]
     n = 1
-    bus = None   # every layer not on the constant-speed path, mixed sample-exactly
+    bus = None
     for L in tl["layers"]:
         if "audio" not in L or L["t1"] <= r0 or L["t0"] >= r1:
             continue
-        T = L.get("time", {"in": 0.0, "speed": 1.0})
-        if "map" in T or "hold" in T or "loop" in T or is_new_time(T) or T.get("speed", 1.0) <= 0:
-            if ctx is None:
-                pdir = ROOT / "projects" / tl["project"]
-                ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
-            got = layer_audio(L, r0, r1, ctx)
-            if got is not None:
-                if bus is None:
-                    bus = np.zeros((int(round((r1 - r0) * SR)), 2), np.float32)
-                i0, x = got
-                m = min(len(x), len(bus) - i0)
-                bus[i0:i0 + m] += x[:m]
-            continue
-        sp = T.get("speed", 1.0)
-        start = max(L["t0"], r0)
-        sin = T.get("in", 0.0) + (start - L["t0"]) * sp
-        song_dur = min(L["t1"], r1) - start
-        dur = song_dur * sp
-        ins += ["-ss", f"{sin:.4f}", "-t", f"{dur:.4f}", "-i", str(ROOT / L["src"])]
-        fd = min(L["audio"].get("fade", AFADE), song_dur / 2)
-        fades = [f"afade=t=in:d={fd:.4f}", f"afade=t=out:st={max(0.0, song_dur - fd):.4f}:d={fd:.4f}"]
-        chain = ",".join(["asetpts=PTS-STARTPTS"] + atempo_chain(sp) + fades +
-                         [f"adelay={int((start - r0) * 1000)}:all=1", f"volume={L['audio'].get('gain', 1.0)}"])
-        chains.append(f"[{n + 1}:a]{chain}[a{n}]")
-        n += 1
+        if ctx is None:
+            pdir = ROOT / "projects" / tl["project"]
+            ctx = Ctx(Music(pdir / "analysis/beats.json"), pdir)
+        got = layer_audio(L, r0, r1, ctx)
+        if got is not None:
+            if bus is None:
+                bus = np.zeros((int(round((r1 - r0) * SR)), 2), np.float32)
+            i0, x = got
+            m = min(len(x), len(bus) - i0)
+            bus[i0:i0 + m] += x[:m]
     if bus is not None:
         bus_path = Path(video).with_name("audio_bus.f32")
         bus_path.write_bytes(bus.tobytes())
