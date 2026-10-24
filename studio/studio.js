@@ -283,10 +283,10 @@ stage.addEventListener("pointerdown", e => {
   if (mode === "capture") {
     take = [{ t: now(), p: mouse.slice() }];
     clock = null;
+    const startClock = () => { if (take) clock = { ts0: performance.now(), t0: bg.currentTime, rate: bg.playbackRate }; };
+    if (!bg.paused && bg.readyState >= 3) startClock();   // already playing: no "playing" event will come
+    else bg.addEventListener("playing", startClock, { once: true });
     play();
-    bg.addEventListener("playing", () => {
-      if (take) clock = { ts0: performance.now(), t0: bg.currentTime, rate: bg.playbackRate };
-    }, { once: true });
     return;
   }
   const hit = hitTest(mouse);
