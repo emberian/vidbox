@@ -15,6 +15,7 @@ import subprocess
 import sys
 import tempfile
 import time as wall
+from bisect import bisect_left, bisect_right
 from pathlib import Path
 
 import cv2
@@ -39,10 +40,21 @@ def is_new_time(T):
     return "seq" in T or not isinstance(T.get("speed", 1.0), (int, float))
 
 
+def _union_add(xs, ys, lo, hi):
+    """Add [lo, hi] to a union of disjoint intervals kept as sorted starts xs / ends ys (touching
+    intervals merge)."""
+    i, j = bisect_left(ys, lo), bisect_right(xs, hi)   # components [i, j) overlap or touch it
+    if i < j:
+        lo, hi = min(lo, xs[i]), max(hi, ys[j - 1])
+    xs[i:j], ys[i:j] = [lo], [hi]
+
+
 def revisit_spans(tm, t0, t1, pad=0.05):
     """Source intervals a time map plays backwards or visits more than once over [t0, t1):
-    decoded once into media.SPANS instead of re-seeking (reverses, stutters)."""
-    seen, spans = [], []
+    decoded once into media.SPANS instead of re-seeking (reverses, stutters). Both the material
+    seen so far and the result are kept as interval unions, so n retriggers of one slice cost O(n),
+    not n^2 / 2 overlap pieces; the padded, merged result depends only on the union."""
+    sx, sy, px, py = [], [], [], []   # seen so far; revisited (starts, ends)
     for r in tm.runs:
         a, b = max(r.a, t0), min(r.b, t1)
         if b <= a or r.kind == "hold":
@@ -50,12 +62,15 @@ def revisit_spans(tm, t0, t1, pad=0.05):
         s = r.src_vec(np.linspace(a, b, 64))
         lo, hi = float(s.min()), float(s.max())
         if np.any(np.diff(s) < -1e-9):
-            spans.append((lo, hi))
+            _union_add(px, py, lo, hi)
         else:
-            spans += [(max(lo, x), min(hi, y)) for x, y in seen if min(hi, y) > max(lo, x)]
-        seen.append((lo, hi))
+            k0, k1 = bisect_right(sy, lo), bisect_left(sx, hi)   # seen components overlapping it
+            for x, y in list(zip(sx[k0:k1], sy[k0:k1])):
+                if min(hi, y) > max(lo, x):
+                    _union_add(px, py, max(lo, x), min(hi, y))
+        _union_add(sx, sy, lo, hi)
     merged = []
-    for lo, hi in sorted((max(0.0, lo - pad), hi + pad) for lo, hi in spans):
+    for lo, hi in sorted((max(0.0, lo - pad), hi + pad) for lo, hi in zip(px, py)):
         if merged and lo <= merged[-1][1]:
             merged[-1] = (merged[-1][0], max(merged[-1][1], hi))
         else:
