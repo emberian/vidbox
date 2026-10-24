@@ -242,8 +242,10 @@ class Comp:
         layer = {"id": id or f"{seg.clip['id']}#{seg.idx}@{at:.2f}", "tags": [seg.catalog] + seg.tags[:3],
                  "src": seg.file, "t0": round(t0, 4), "t1": round(t1, 4),
                  "time": {"in": round(src_in, 4), "speed": speed},
-                 "meta": {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx, "hits_song": hits_song},
                  **props}
+        # a caller's meta adds to the catalog link and hits rather than replacing them
+        layer["meta"] = {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx, "hits_song": hits_song,
+                         **props.get("meta", {})}
         self.layers.append(layer)
         return layer
 
@@ -279,9 +281,10 @@ class Comp:
             hits_song += [t for t in tm.song_times(x["t"], t0, t1)]
         layer = {"id": id, "tags": [seg.catalog] + seg.tags[:3], "src": seg.file,
                  "t0": round(t0, 4), "t1": round(t1, 4), "time": time,
-                 "meta": {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx,
-                          "hits_song": sorted(round(h, 3) for h in hits_song), **(extra_meta or {})},
                  **props}
+        layer["meta"] = {"catalog": seg.catalog, "clip": seg.clip["id"], "seg": seg.idx,
+                         "hits_song": sorted(round(h, 3) for h in hits_song), **(extra_meta or {}),
+                         **props.get("meta", {})}
         self.layers.append(layer)
         return layer
 
