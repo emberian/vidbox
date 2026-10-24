@@ -2150,6 +2150,7 @@ dependencies = [
     { name = "mlx-whisper" },
     { name = "numpy" },
     { name = "opencv-contrib-python" },
+    { name = "pillow" },
     { name = "torch" },
     { name = "torchaudio" },
 ]
@@ -2162,6 +2163,7 @@ requires-dist = [
     { name = "mlx-whisper", specifier = ">=0.4.3" },
     { name = "numpy" },
     { name = "opencv-contrib-python", specifier = "<5" },
+    { name = "pillow", specifier = ">=13.0.0" },
     { name = "torch", specifier = "==2.8.*" },
     { name = "torchaudio", specifier = "==2.8.*" },
 ]

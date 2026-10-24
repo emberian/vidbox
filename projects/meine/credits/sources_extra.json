@@ -1,0 +1,84 @@
+{
+ "newscomau-gaza-city-towers-2025-09": {
+  "credits": [
+   [
+    "Footage credited on screen to",
+    "Quds News Network, Mohammed Hillis, Ahmed Ibraheem, Ahmad Kahoul, via Storyful"
+   ]
+  ],
+  "credits_source": "on-screen credits, as recorded in ground.json provenance"
+ },
+ "mee-112-remains-flags-2026-08-03": {
+  "credits": [
+   [
+    "Footage credited on screen to",
+    "khamees.hasira (Instagram)"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in y2026.json provenance"
+ },
+ "roya-civil-defence-worker-shifa-2026-09-01": {
+  "credits": [
+   [
+    "Footage credited on screen to",
+    "m.saed gaza (Instagram)"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in y2026.json provenance"
+ },
+ "idf-gaza-weapons-sites-strikecam-2026-09-09": {
+  "credits": [
+   [
+    "Footage credited on screen to",
+    "IDF / AFP"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in y2026.json provenance"
+ },
+ "idf-gaza-crater-strikecam-2026-08-01": {
+  "credits": [
+   [
+    "Footage credited on screen to",
+    "IDF via CNN"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in y2026.json provenance"
+ },
+ "wsj-residents-film-tower-strike-2023-10": {
+  "credits": [
+   [
+    "Footage credited on screen to",
+    "Reuters"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in ground.json provenance"
+ },
+ "guardian-deir-balah-tent-camp-strike-2026-03-26": {
+  "credits": [
+   [
+    "Second angle credited to",
+    "AP"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in y2026.json provenance"
+ },
+ "guardian-deconstructed-zinati-strike-2026-09-15": {
+  "credits": [
+   [
+    "Filmed by",
+    "Tamer Labbad"
+   ]
+  ],
+  "credits_source": "on-screen credit, as recorded in y2026.json provenance and the section's meta.people"
+ },
+ "imod-mk84-ashdod-feb2025": {
+  "title": "Heavy Bombs Shipment Released by U.S. Government Arrives in Israel",
+  "title_source": "headline of the Facebook post (the scraped title also carried view counts and the full post text)"
+ },
+ "israel-gbu31-prep-oct2023-reedit": {
+  "title_en": "Preparation of GBU-31 JDAM bombs by the Israeli army (our translation from Russian)"
+ },
+ "iaf-swords-of-iron-loadout-reupload": {
+  "title_en": "A look at the configuration and payload of Israeli jets in Operation Swords of Iron (our translation from Indonesian)"
+ }
+}

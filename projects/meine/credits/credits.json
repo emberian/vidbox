@@ -1,0 +1,3512 @@
+{
+ "timelines": [
+  "projects/meine/comps/out/section_s0_rant.timeline.json",
+  "projects/meine/comps/out/section_s1_build.timeline.json",
+  "projects/meine/comps/out/section_s2_peak.timeline.json"
+ ],
+ "clips": [
+  {
+   "catalog": "weapons",
+   "id": "hellfire-yakima-broll",
+   "first": 5.42,
+   "screen": 2.8,
+   "segs": [
+    1
+   ],
+   "publisher": "DVIDS / 16th Combat Aviation Brigade, U.S. Army (Capt. Kyle Abraham)",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "Hellfire Missile Shoot B-Roll",
+   "title_en": null,
+   "uploader": null,
+   "date": "2023-01-24",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/871530/hellfire-missile-shoot-b-roll",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS b-roll, AH-64E Hellfire shoot at Yakima Training Center (same day as hellfire-symphony-tads). Range, no people."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-launcher-strike-2009",
+   "first": 9.71,
+   "screen": 1.6,
+   "segs": [
+    0
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "Rocket Ready for Launch in Gaza Struck by Israel Air Force",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2009-01-01",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=AIRiNPaoLTI",
+   "license": "IDF release; fair use",
+   "scope": "israel",
+   "provenance": "Official IDF Cast Lead upload: targeting-pod video of strike on a rocket launcher in Gaza."
+  },
+  {
+   "catalog": "weapons",
+   "id": "aj-high-powered-bombs-explainer",
+   "first": 11.57,
+   "screen": 5.7,
+   "segs": [
+    6,
+    8
+   ],
+   "publisher": "Al Jazeera English (Newsfeed)",
+   "outlet": "Al Jazeera English",
+   "title": "Israel is using high-powered bombs to maximise deaths in Gaza, experts say | Al Jazeera Newsfeed",
+   "title_en": null,
+   "uploader": "Al Jazeera English",
+   "date": "2025-04-24",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=XysmVvsDwLQ",
+   "license": "news (Al Jazeera); fair use",
+   "scope": "gaza",
+   "provenance": "Al Jazeera explainer 'Israel is using high-powered bombs to maximise deaths in Gaza, experts say' with Iain Overton (AOAV) and Dr Ghassan Abu Sitta. Square 720x720 social format, burned-in subtitles on every frame, AJ logo. Mix of AJ field footage from Gaza, Israeli army video (labelled 'ISRAELI ARMY VIDEO') and stock jets. The night white-phosphorus airburst footage is unlabelled in the clip; WP use over Gaza and Lebanon in Oct 2023 was documented by HRW/Amnesty but this particular shot's location/date is not stated."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-strikes-jan2014-blackhot",
+   "first": 13.51,
+   "screen": 10.4,
+   "segs": [
+    1
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "IDF Overnight Retaliation Following Gaza Rocket Attack",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2014-01-16",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=vXePDd9WRz0",
+   "license": "IDF release; fair use",
+   "scope": "israel",
+   "provenance": "Official IDF upload: IAF strikes on a 'concealed rocket launcher' and a 'terror installation' in Gaza after rockets on Ashkelon, 16 Jan 2014. Black-hot thermal pod video with IDF blue title cards and red arrows."
+  },
+  {
+   "catalog": "weapons",
+   "id": "hellfire-symphony-tads",
+   "first": 18.75,
+   "screen": 23.7,
+   "segs": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "publisher": "DVIDS / 16th Combat Aviation Brigade, U.S. Army (Capt. Kyle Abraham)",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "A symphony of Hellfires",
+   "title_en": null,
+   "uploader": null,
+   "date": "2023-01-24",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/878950/symphony-hellfires",
+   "license": "public domain (DVIDS, US gov work)",
+   "scope": "us-arsenal",
+   "provenance": "Official US Army DVIDS release 'A symphony of Hellfires': AH-64E Apaches firing AGM-114 Hellfires at Yakima Training Center, WA. Range targets (derelict vehicles), no people. Cut-together edit of ground camera + Apache TADS (targeting sight) footage in grey and false-colour modes. Square 768x768."
+  },
+  {
+   "catalog": "weapons",
+   "id": "a10-bomb-load-nellis",
+   "first": 21.13,
+   "screen": 3.0,
+   "segs": [
+    1
+   ],
+   "publisher": "DVIDS / Nellis AFB Public Affairs, USAF (SrA Andrew Walck)",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "A-10 Bomb Load",
+   "title_en": null,
+   "uploader": null,
+   "date": "2017 (approx, per DVIDS id)",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/544380/10-bomb-load",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official USAF feature on A-10 weapons loaders at Nellis AFB, with a live range bomb impact. Interviews and lower-third name supers."
+  },
+  {
+   "catalog": "weapons",
+   "id": "scranton-155mm-nosing-redhot",
+   "first": 40.2,
+   "screen": 14.3,
+   "segs": [
+    0
+   ],
+   "publisher": "DVIDS / Scranton Army Ammunition Plant, U.S. Army",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "Nosing process for 155MM projectiles at Scranton Army Ammunition Plant",
+   "title_en": null,
+   "uploader": null,
+   "date": "2026 (posted)",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/1000672/nosing-process-155mm-projectiles-scranton-army-ammunition-plant",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS b-roll: nosing process for 155 mm artillery shell bodies at Scranton Army Ammunition Plant, PA (the plant whose 155 mm output has supplied Ukraine and Israel). Steel bodies heated red-hot and pressed into shape."
+  },
+  {
+   "catalog": "weapons",
+   "id": "jdam-build-whiteman",
+   "first": 53.53,
+   "screen": 19.1,
+   "segs": [
+    1,
+    2,
+    3
+   ],
+   "publisher": "DVIDS / 509th Bomb Wing, USAF",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "B-Roll: 509 MUNS Builds JDAMs For Maritime Strike In High North",
+   "title_en": null,
+   "uploader": null,
+   "date": "2025-08-26",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/976258/b-roll-509-muns-builds-jdams-maritime-strike-high-north",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS b-roll: 509th Munitions Squadron assembles GBU-31 and GBU-38 JDAMs at Whiteman AFB, Missouri. Clean modern 1600x900, no burned-in text."
+  },
+  {
+   "catalog": "y2026",
+   "id": "idf-gaza-crater-strikecam-2026-08-01",
+   "first": 61.06,
+   "screen": 37.2,
+   "segs": [
+    0,
+    1,
+    2
+   ],
+   "publisher": "Forbes Breaking News (footage: IDF via CNN)",
+   "outlet": "Forbes Breaking News",
+   "title": "WATCH: IDF Releases Footage Of Strike On Gaza That Left Crater",
+   "title_en": null,
+   "uploader": "Forbes Breaking News",
+   "date": "2026-08-01",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "IDF via CNN"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=JMFVyv-HYM0",
+   "license": "IDF release via CNN/Forbes",
+   "scope": "israel",
+   "provenance": "Forbes Breaking News repost of IDF-released strike footage (on-screen 'VIDEO: IDF VIA CNN', 'AUGUST 1, 2026'): grey aerial strike-cam of a strike in Gaza leaving a crater, amid Hamas disarmament talks. Forbes lower-third throughout."
+  },
+  {
+   "catalog": "weapons",
+   "id": "imod-mk84-ashdod-feb2025",
+   "first": 61.16,
+   "screen": 22.9,
+   "segs": [
+    1
+   ],
+   "publisher": "Israel Ministry of Defense (official Facebook)",
+   "outlet": "Israel Ministry of Defense",
+   "title": "Heavy Bombs Shipment Released by U.S. Government Arrives in Israel",
+   "title_en": null,
+   "uploader": "Israel Ministry of Defense",
+   "date": "2025-02-15",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.facebook.com/IsraelMOD/videos/heavy-bombs-shipment-released-by-us-government-arrives-in-israelin-a-joint-opera/1174131547725027/",
+   "license": "official government release; fair use",
+   "scope": "arms-to-israel",
+   "provenance": "Official IMOD video 'Heavy Bombs Shipment Released by U.S. Government Arrives in Israel': a ship carrying ~1,800 MK-84 2,000 lb bombs (the shipment Biden had held and Trump released) unloaded overnight at Ashdod port and trucked to air bases. Confirmed by IMOD press release (mod.gov.il) and wide news coverage. 848x480."
+  },
+  {
+   "catalog": "weapons",
+   "id": "c17-first-us-munitions-israel-oct2023",
+   "first": 68.78,
+   "screen": 13.3,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "PoliticsInsider (re-upload; original IDF/Israel MoD footage)",
+   "outlet": "Re-uploads and others",
+   "title": "The first large shipment of ammunition from the United States arrived in Israel on a Boeing C-17",
+   "title_en": null,
+   "uploader": "PoliticsInsider",
+   "date": "2023-10-10",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=H23h6mn72nc",
+   "license": "IDF release via re-upload; fair use",
+   "scope": "arms-to-israel",
+   "provenance": "Re-upload (vertical, VivaVideo watermark, Hebrew caption 'the first ammunition plane arrived') of IDF footage of the first US Air Force C-17 (tail 1191, 105th AW) carrying munitions landing at Nevatim, 10 Oct 2023. The event is well documented (IDF and Times of Israel reported it); the clip itself is a third-party copy."
+  },
+  {
+   "catalog": "weapons",
+   "id": "mq9-live-hellfire-holloman",
+   "first": 76.39,
+   "screen": 23.6,
+   "segs": [
+    1,
+    7
+   ],
+   "publisher": "DVIDS / 49th Wing, Holloman AFB, USAF",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "Live Hellfire Training Event",
+   "title_en": null,
+   "uploader": null,
+   "date": "2021-09-17",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/815413/live-hellfire-training-event",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS feature: MQ-9 squadrons transport, load and fire 48 Hellfires at White Sands Missile Range. Includes ground control station screens showing a strike on a range target."
+  },
+  {
+   "catalog": "weapons",
+   "id": "mq9-hellfire-reload-gulfport",
+   "first": 76.39,
+   "screen": 15.2,
+   "segs": [
+    1,
+    2
+   ],
+   "publisher": "DVIDS / 174th Attack Wing, New York ANG",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "MA-9 Reaper loading AGM-114 Hellfire missile",
+   "title_en": null,
+   "uploader": null,
+   "date": "2026-03-03",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/998429/ma-9-reaper-loading-agm-114-hellfire-missile",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS: armament specialists reload AGM-114 Hellfires onto an MQ-9 Reaper during Sentry South 26-2, Gulfport, Mississippi."
+  },
+  {
+   "catalog": "weapons",
+   "id": "gbu39-load-mq9-night",
+   "first": 84.01,
+   "screen": 7.6,
+   "segs": [
+    0
+   ],
+   "publisher": "DVIDS / USAF",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "GBU-39 Small Diameter Bombs Loaded on MQ-9 B-Roll",
+   "title_en": null,
+   "uploader": null,
+   "date": "2025 (posted)",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/956723/gbu-39-small-diameter-bombs-loaded-mq-9-b-roll",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS b-roll: weapons load crew loads GBU-39 Small Diameter Bombs onto an MQ-9 Reaper's dual-carriage rack at night."
+  },
+  {
+   "catalog": "weapons",
+   "id": "israel-gbu31-prep-oct2023-reedit",
+   "first": 91.64,
+   "screen": 15.2,
+   "segs": [
+    1,
+    2
+   ],
+   "publisher": "Lamp of Knowledge (Russian-language re-edit; footage appears to be Israel MoD / IDF release)",
+   "outlet": "Re-uploads and others",
+   "title": "Подготовка бомб GBU-31 JDAM армией Израиля",
+   "title_en": "Preparation of GBU-31 JDAM bombs by the Israeli army (our translation from Russian)",
+   "uploader": "Lamp of Knowledge",
+   "date": "2023-10-13 (upload)",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=Qz5Fa4At0Uk",
+   "license": "unknown (re-upload of official footage); fair use",
+   "scope": "arms-to-israel",
+   "provenance": "Third-party re-edit captioned 'Preparation of GBU-31 JDAM bombs by the Israeli army' after US aid began arriving (Oct 2023). Footage looks like official IMOD/IDF logistics video (C-17 landing, unpacking, long rows of 2,000 lb bombs with JDAM kits, Israeli personnel with blurred faces, forklifts in a hangar). Original upload not located; channel logo burned in at start/end. Treat date/attribution as probable, not confirmed."
+  },
+  {
+   "catalog": "ground",
+   "id": "afp-rafah-night-strikes-flares-2023-12",
+   "first": 93.52,
+   "screen": 27.5,
+   "segs": [
+    0
+   ],
+   "publisher": "AFP News Agency",
+   "outlet": "AFP",
+   "title": "Air strikes and flares over northern Rafah at night | AFP",
+   "title_en": null,
+   "uploader": "AFP News Agency",
+   "date": "2023-12-02",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=DZQfl2Ox96g",
+   "license": "news (AFP)",
+   "scope": "gaza",
+   "provenance": "AFP, northern Rafah at night, 2 Dec 2023 (day after truce collapsed): air strikes and flares (AFP caption)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-gaza-strikes-oct13-2023",
+   "first": 95.45,
+   "screen": 8.2,
+   "segs": [
+    2,
+    3,
+    4
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "The Israeli Air Force strikes Hamas targets on Oct. 13.",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2023-10-13",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=1dxriivNDhY",
+   "license": "IDF release (official military); fair use",
+   "scope": "israel",
+   "provenance": "Official IDF channel upload 'The Israeli Air Force strikes Hamas targets on Oct. 13.' Aerial colour footage over the Gaza coastline (sea visible), multiple strikes. IDF blurred the frame edges. Genuine IDF release; what was hit is the IDF's claim only. 25 fps."
+  },
+  {
+   "catalog": "ground",
+   "id": "reuters-explosions-overnight-2023-10-22",
+   "first": 97.71,
+   "screen": 20.4,
+   "segs": [
+    0,
+    2,
+    3
+   ],
+   "publisher": "Reuters",
+   "outlet": "Reuters",
+   "title": "Explosions rock Gaza overnight",
+   "title_en": null,
+   "uploader": "Reuters",
+   "date": "2023-10-22",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=WAGCvWsTpYQ",
+   "license": "news (Reuters)",
+   "scope": "gaza",
+   "provenance": "Reuters: explosions over Gaza City, 22 Oct 2023 (on-screen date tag, Reuters caption). Telephoto from a high vantage, dusk and night."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-drone-khanyounis-2025-01-long",
+   "first": 99.25,
+   "screen": 15.2,
+   "segs": [],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Drone footage shows destruction in Gaza's Khan Younis",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-01-19",
+   "place": "Khan Younis, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=uUDZm5DnXMA",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP drone, Khan Younis, 19 Jan 2025 (AP shotlist; long clean version of ap-drone-khanyounis-2025-01). 360p."
+  },
+  {
+   "catalog": "weapons",
+   "id": "iaf-swords-of-iron-loadout-reupload",
+   "first": 99.25,
+   "screen": 7.6,
+   "segs": [
+    0
+   ],
+   "publisher": "JejakTapak (Indonesian re-upload; credits 'Video: IDF')",
+   "outlet": "Re-uploads and others",
+   "title": "Melihat Konfigurasi dan Muatan Jet Israel dalam Operasi Pedang Besi",
+   "title_en": "A look at the configuration and payload of Israeli jets in Operation Swords of Iron (our translation from Indonesian)",
+   "uploader": "JejakTapak ",
+   "date": "2023-10-15 (upload)",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=eWWn7-dK40Q",
+   "license": "unknown (re-upload of IDF footage); fair use",
+   "scope": "israel",
+   "provenance": "Indonesian channel compilation of IDF/IAF video from the opening of the Gaza war (Operation Swords of Iron): jets in shelters with bombs, loading, takeoffs, refuelling, Apache silhouettes. Music bed replaces original audio. Mix of IDF footage, possibly some older IAF promo; individual shot dates not verifiable. Use as IAF imagery, not dated evidence."
+  },
+  {
+   "catalog": "ground",
+   "id": "nbc-night-tower-collapse-2023-10-08",
+   "first": 105.32,
+   "screen": 10.2,
+   "segs": [
+    0
+   ],
+   "publisher": "NBC News Now",
+   "outlet": "NBC News",
+   "title": "Watch: Building collapses in Gaza after being struck by Israeli airstrike",
+   "title_en": null,
+   "uploader": "NBC News",
+   "date": "2023-10-07/08",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=w57kiknN-MA",
+   "license": "news (NBC)",
+   "scope": "gaza",
+   "provenance": "NBC News Now (upload 8 Oct 2023): Gaza City building struck at night and collapses; next-morning dust and sunrise. Early-war Oct 2023."
+  },
+  {
+   "catalog": "ground",
+   "id": "aje-civil-defence-body-recovery-2025-12",
+   "first": 106.87,
+   "screen": 15.2,
+   "segs": [
+    1
+   ],
+   "publisher": "Al Jazeera English",
+   "outlet": "Al Jazeera English",
+   "title": "Gaza civil defence struggles through tonnes of rubble to recover thousands of buried Palestinians",
+   "title_en": null,
+   "uploader": "Al Jazeera English",
+   "date": "2025-12-15",
+   "place": null,
+   "credits": [
+    [
+     "Reporter",
+     "Ibrahim al-Khalili"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=jaBqpg-PB-s",
+   "license": "news (Al Jazeera)",
+   "scope": "gaza",
+   "provenance": "Al Jazeera English (Ibrahim al-Khalili), Gaza City, Dec 2025: civil defence with one bulldozer recover bodies from rubble; white body bags."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-drone-coast-road-return-2025-01-long",
+   "first": 114.49,
+   "screen": 47.1,
+   "segs": [
+    3
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Drone shows thousands walking towards northern Gaza as Israel lifts its closure",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-01-27",
+   "place": "Wadi Gaza",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=5d57aZTpYnQ",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP drone, Wadi Gaza coastal road, 27 Jan 2025: tens of thousands walk north as Israel lifts closure of northern Gaza (AP shotlist). Clean, muted, 360p, 5+ min."
+  },
+  {
+   "catalog": "ground",
+   "id": "reuters-night-fireballs-2023-10-08",
+   "first": 124.85,
+   "screen": 5.1,
+   "segs": [
+    0
+   ],
+   "publisher": "Reuters",
+   "outlet": "Reuters",
+   "title": "Israel pummels Gaza with air strikes overnight",
+   "title_en": null,
+   "uploader": "Reuters",
+   "date": "2023-10-08",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=vE79wEcq6nE",
+   "license": "news (Reuters)",
+   "scope": "gaza",
+   "provenance": "Reuters, Gaza City, night of 7-8 Oct 2023 and morning of 8 Oct (on-screen date tags)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-zeitoun-cemetery-strike-2026-02-06",
+   "first": 125.84,
+   "screen": 3.9,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Dramatic footage of Israeli army striking building in Gaza City",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-02-06",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=5cwc4YfWnl4",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story (shot 6 Feb 2026, posted 11 Feb): moment an Israeli missile hits a building near a cemetery in Zeitoun, Gaza City, after a warning; building flattened; crowds at rubble (AP shotlist). Same footage as AP short 4-Hs8mdpnQE (vertical crop, not catalogued)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-maghazi-evacuation-dusk-strikes-2026-07-15",
+   "first": 126.79,
+   "screen": 2.9,
+   "segs": [
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Three strikes hit different zones of central Gaza after warning from the Israeli army",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-07-15",
+   "place": "Maghazi refugee camp, central Gaza Strip; Nuseirat refugee camp, central Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=qKPvpxpb7MI",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Maghazi refugee camp, central Gaza, 15 Jul 2026: families walk through destruction after an Israeli evacuation order; dusk ball of flame after airstrike; night smoke; second night strike (AP shotlist). 360p source."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-night-flares-explosions-2023-11-09",
+   "first": 128.66,
+   "screen": 1.3,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Flares and explosions over Gaza night sky as seen from across border in Israel",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-11-09",
+   "place": "Southern Israel",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=Rrj1NzrnFaM",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP from southern Israel, 9 Nov 2023 night: flares and explosions over Gaza (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "newscomau-gaza-city-towers-2025-09",
+   "first": 129.61,
+   "screen": 5.1,
+   "segs": [
+    3,
+    7
+   ],
+   "publisher": "news.com.au (compiling Quds News Network, Anadolu, social video via Storyful)",
+   "outlet": "news.com.au",
+   "title": "Dramatic footage shows Gaza’s tallest tower obliterated",
+   "title_en": null,
+   "uploader": "news.com.au",
+   "date": "2025-09-15",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "Quds News Network, Mohammed Hillis, Ahmed Ibraheem, Ahmad Kahoul, via Storyful"
+    ]
+   ],
+   "credits_source": "on-screen credits, as recorded in ground.json provenance",
+   "url": "https://www.youtube.com/watch?v=rbWxRnFeIZ0",
+   "license": "news / social via Storyful",
+   "scope": "gaza",
+   "provenance": "news.com.au compilation, Gaza City, Sep 2025 tower demolitions (incl. al-Ghafri tower, 15 Sep 2025, after evacuation warnings); clips credited on-screen to Quds News Network, Mohammed Hillis, Ahmed Ibraheem, Ahmad Kahoul via Storyful. Quds News Network is a Palestinian news outlet (not a militant media wing)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-zikim-flour-multitude-2025-07-30",
+   "first": 129.73,
+   "screen": 15.7,
+   "segs": [
+    2
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Crowds of Palestinians carry sacks of flour in Gaza City's Zikim area",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-07-30",
+   "place": "Gaza City",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=KwtMLK-pa-s",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City / Zikim area, 30 Jul 2025: enormous crowds carrying flour sacks during famine declaration week (AP shotlist)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-beit-hanoun-launcher-2014",
+   "first": 131.51,
+   "screen": 1.3,
+   "segs": [
+    1
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "IDF Strike on Concealed Weapons Causes Massive Secondary Explosion",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2014-07-10",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=4ayyXgRVWHk",
+   "license": "IDF release; fair use",
+   "scope": "israel",
+   "provenance": "Official IDF release, Operation Protective Edge: strike on a 'concealed medium-range rocket launcher in Beit Hanoun' (IDF claim), with secondary explosions. Blue IDF title card and a satellite-map graphic precede it."
+  },
+  {
+   "catalog": "y2026",
+   "id": "guardian-deconstructed-zinati-strike-2026-09-15",
+   "first": 137.82,
+   "screen": 9.8,
+   "segs": [
+    1
+   ],
+   "publisher": "Guardian News (footage: Tamer Labbad)",
+   "outlet": "The Guardian",
+   "title": "Video shows moment Israeli strike kills 15-year-old boy in Gaza | Deconstructed",
+   "title_en": null,
+   "uploader": "Guardian News",
+   "date": "2026-09-15",
+   "place": null,
+   "credits": [
+    [
+     "Filmed by",
+     "Tamer Labbad"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance and the section's meta.people",
+   "url": "https://www.youtube.com/watch?v=vQdUgwKtwEY",
+   "license": "news (Guardian)",
+   "scope": "gaza",
+   "provenance": "Guardian 'Deconstructed' analysis (posted 18 Sep 2026) of eyewitness footage (credit Tamer Labbad), Gaza City, 15 Sep 2026: after a first strike wounded civil defence paramedic Sharif Shadi Labad, 15-year-old Mohammad Abdul Zinati went to check on a body and was killed by a second Israeli strike; munition identified on screen; IDF statement shown. Guardian opens with a distress warning."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-father-sieves-bones-2026-01-24",
+   "first": 144.97,
+   "screen": 30.2,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "A father in Gaza searches for his family's bones in the rubble of their home",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-01-24",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=XoQWFfNR_M8",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story (shot 24 Jan 2026, posted 16 Feb): Mahmoud Hammad sieves sand in the rubble of his Gaza City home for the bones of his wife and children killed in an Israeli airstrike; second half another family searching rubble and recovered remains in white bags. 360p source."
+  },
+  {
+   "catalog": "y2026",
+   "id": "mee-112-remains-flags-2026-08-03",
+   "first": 154.26,
+   "screen": 7.6,
+   "segs": [
+    0
+   ],
+   "publisher": "Middle East Eye",
+   "outlet": "Middle East Eye",
+   "title": "Gaza civil defence teams recover remains of 112 Palestinians from rubble",
+   "title_en": null,
+   "uploader": "Middle East Eye",
+   "date": "2026-08-03",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "khamees.hasira (Instagram)"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=4wLmM3v8XH4",
+   "license": "news (MEE; journalist UGC)",
+   "scope": "gaza",
+   "provenance": "Middle East Eye short (filmed 3 Aug 2026; on-screen credit Instagram khamees.hasira): remains of 112 Palestinians killed in Israeli strikes on 23 Nov 2023 in Sabra, Gaza City, recovered from rubble, laid out under Palestinian flags with photos ahead of mass funeral."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-khanyounis-morgue-bodies-2026-07-29",
+   "first": 156.17,
+   "screen": 9.5,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Bodies brought to Gaza hospital after deadly Israeli strike",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-07-29",
+   "place": "Khan Younis, Gaza",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=G9EY3rgBcLc",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Khan Younis, 29 Jul 2026: medics and people carry bodies of killed men to the morgue after an Israeli strike; relatives mourn (AP shotlist, 'EDIT CONTAINS GRAPHIC CONTENT'). 360p source."
+  },
+  {
+   "catalog": "ground",
+   "id": "nbc-nasser-courtyard-graves-2024-01",
+   "first": 158.08,
+   "screen": 9.7,
+   "segs": [
+    2
+   ],
+   "publisher": "NBC News",
+   "outlet": "NBC News",
+   "title": "Gazans dig multiple graves at Khan Younis hospital",
+   "title_en": null,
+   "uploader": "NBC News",
+   "date": "2024-01-23",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=vnpsm7nB9JE",
+   "license": "news (NBC)",
+   "scope": "gaza",
+   "provenance": "NBC News, Nasser Hospital grounds, Khan Younis, Jan 2024: dozens buried in sandy graves in the hospital courtyard because cemeteries unreachable."
+  },
+  {
+   "catalog": "weapons",
+   "id": "juniper-oak-2023-broll",
+   "first": 167.42,
+   "screen": 3.9,
+   "segs": [
+    0
+   ],
+   "publisher": "DVIDS / U.S. Army (Juniper Oak 2023)",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "Juniper Oak 2023 B-Roll Package",
+   "title_en": null,
+   "uploader": null,
+   "date": "2023-01-26",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/871481/juniper-oak-2023-b-roll-package",
+   "license": "public domain (DVIDS)",
+   "scope": "israel",
+   "provenance": "Official DVIDS b-roll package from US-Israel exercise Juniper Oak 2023 in Israel (Shivta): US HIMARS live fire beside IDF troops, joint planning, vehicles. Slate at start."
+  },
+  {
+   "catalog": "weapons",
+   "id": "apache-red-sands-uas",
+   "first": 171.24,
+   "screen": 2.7,
+   "segs": [
+    0
+   ],
+   "publisher": "DVIDS / U.S. Army (SFC Walter Talens)",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "Red Sands 24.2 Apache Live Fire against small-UAS",
+   "title_en": null,
+   "uploader": null,
+   "date": "2024-09-23",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/941608/red-sands-242-apache-live-fire-against-small-uas",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS: Red Sands 24.2, USCENTCOM AOR (Saudi Arabia), AH-64 Apaches fire Hellfire at small drones. Range, no people."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-ansar-tent-strike-fire-2026-03",
+   "first": 177.23,
+   "screen": 19.4,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Israel strikes Gaza tent camp following evacuation order, sparking huge blaze",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-03-11",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=TmtQbF_Hwus",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP ('video as incoming'), Gaza City, 11 Mar 2026: Israeli strike on al-Ansar tent camp after evacuation order sparks huge blaze. Same source footage as guardian-ansar-tent-strike-2026-03 but longer, no captions, more fire/firefighting."
+  },
+  {
+   "catalog": "y2026",
+   "id": "lockheed-pac3-triple-short-2026-07-29",
+   "first": 178.86,
+   "screen": 3.9,
+   "segs": [
+    1
+   ],
+   "publisher": "Lockheed Martin (official YouTube)",
+   "outlet": "Lockheed Martin",
+   "title": "Lockheed Martin Awarded Seven-Year Deal to Triple PAC-3® MSE Production",
+   "title_en": null,
+   "uploader": "Lockheed Martin",
+   "date": "2026-07-29",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=taalsp6ITII",
+   "license": "corporate promo (Lockheed Martin)",
+   "scope": "us-arsenal",
+   "provenance": "Lockheed Martin YouTube short, 29 Jul 2026: seven-year deal to triple PAC-3 MSE production ('strengthen the Arsenal of Freedom'). Vertical: Patriot launcher, dusk launch, corkscrewing trail, CGI missile."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-night-blasts-from-israel-2025-09",
+   "first": 181.04,
+   "screen": 13.8,
+   "segs": [
+    0,
+    1,
+    2
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Explosions light up night sky over the Gaza Strip",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-09-07",
+   "place": "Southern Israel, overlooking Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=fTiqjhMhFSY",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP from southern Israel overlooking Gaza Strip, night of 7-8 Sep 2025 (Gaza City offensive): large explosions (AP shotlist). Separated by black frames."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-drone-return-north-coast-2025-01",
+   "first": 183.07,
+   "screen": 19.4,
+   "segs": [
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Drone footage shows thousands of Palestinians returning to the ruins and rubble in Gaza City",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-01-27",
+   "place": "Wadi Gaza, Gaza; Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=5KBkxIFXenM",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP drone, Wadi Gaza coast road and Gaza City, 27 Jan 2025: tens of thousands returning north on foot when Israel lifted closure (AP shotlist)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-haniyeh-office-2008",
+   "first": 186.75,
+   "screen": 1.7,
+   "segs": [
+    2
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "Israel Air Force Strikes Hamas Offices and Armed Grad Launchers",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2008-12-31",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=0iRJuFyqSrs",
+   "license": "IDF release; fair use",
+   "scope": "israel",
+   "provenance": "Official IDF upload from Operation Cast Lead: grey targeting-pod video of strike on 'Hamas PM Haniyeh's offices' in Gaza, then Grad launchers. Low-res 4:3 with burned-in titles and red circles."
+  },
+  {
+   "catalog": "y2026",
+   "id": "guardian-deir-balah-tent-camp-strike-2026-03-26",
+   "first": 190.38,
+   "screen": 7.9,
+   "segs": [
+    0
+   ],
+   "publisher": "Guardian News (incl. AP camera angle)",
+   "outlet": "The Guardian",
+   "title": "Israeli airstrike hits camp in Gaza's Deir Al-Balah",
+   "title_en": null,
+   "uploader": "Guardian News",
+   "date": "2026-03-26",
+   "place": null,
+   "credits": [
+    [
+     "Second angle credited to",
+     "AP"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=RYOQOwHPlfw",
+   "license": "news (Guardian/AP)",
+   "scope": "gaza",
+   "provenance": "Guardian News short, Deir al-Balah, 26 Mar 2026: Israeli strike hits a displacement tent camp, sparking fire; at least one killed (witnesses told AP of warning calls). Includes a second angle credited to AP cameras. Vertical, Guardian captions."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-flares-cloudy-night-2025-12-b",
+   "first": 197.23,
+   "screen": 1.6,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Flares light up night sky over Gaza Strip",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-12-27",
+   "place": "Southern Israel overlooking the Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=zwwPZ5hmxUU",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP from southern Israel overlooking the Gaza Strip, 27 Dec 2025 (same night as ap-night-explosion-flares-2025-12, alternate edit)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "times-radio-idf-bombardment-oct2023",
+   "first": 198.18,
+   "screen": 11.4,
+   "segs": [
+    0,
+    2,
+    3
+   ],
+   "publisher": "Times Radio (IDF-released footage)",
+   "outlet": "Times Radio",
+   "title": "Israel Defence Force releases footage of devastating aerial bombardment of Gaza",
+   "title_en": null,
+   "uploader": "Times Radio",
+   "date": "2023-10-10",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=hy8dNUHzApk",
+   "license": "IDF release via news; fair use",
+   "scope": "israel",
+   "provenance": "Times Radio compilation of IDF-released strike footage from the first days of the Gaza bombardment, Oct 2023: colour aerial of multi-storey buildings hit, IR pod views. Times captions on every shot."
+  },
+  {
+   "catalog": "weapons",
+   "id": "lm-f35-factory-animation",
+   "first": 198.3,
+   "screen": 26.7,
+   "segs": [
+    0
+   ],
+   "publisher": "Lockheed Martin (official)",
+   "outlet": "Lockheed Martin",
+   "title": "The F-35 Factory",
+   "title_en": null,
+   "uploader": "Lockheed Martin",
+   "date": "2012-08-30",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=df_MHNkAVrw",
+   "license": "manufacturer marketing; fair use",
+   "scope": "us-arsenal",
+   "provenance": "Lockheed Martin corporate animation 'The F-35 Factory': a glowing blue wireframe flythrough of the Fort Worth F-35 production line with labels (FINAL ASSEMBLY, WING MATE, COMPONENT INSTALL). CGI, labelled as such."
+  },
+  {
+   "catalog": "y2026",
+   "id": "anadolu-bureij-night-blast-street-2026-05-19",
+   "first": 207.33,
+   "screen": 5.3,
+   "segs": [
+    1
+   ],
+   "publisher": "Anadolu English",
+   "outlet": "Anadolu Agency",
+   "title": "Explosion hits house in Gaza's Bureij Camp amid Israeli attack",
+   "title_en": null,
+   "uploader": "Anadolu English",
+   "date": "2026-05-19",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=h1ikSUmcrX8",
+   "license": "news (Anadolu)",
+   "scope": "gaza",
+   "provenance": "Anadolu Agency English short (AA watermark; tag 'Deir al-Balah, Gaza, May 19 2026'; titled as Bureij camp): eyewitness phone footage of an Israeli strike on a house at night; a man in the street is caught by the blast; second clip filmed amid dust and searchlights."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-jabaliya-dig-for-victims-2025-03",
+   "first": 213.54,
+   "screen": 18.6,
+   "segs": [
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Palestinians search through Jabaliya residential block destroyed in Israeli bombardment",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-03-18",
+   "place": "Jabaliya, Gaza Strip",
+   "credits": [
+    [
+     "Producer",
+     "Wafaa Shurafa"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=TunR64-jZUk",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Jabaliya, 18 Mar 2025 (day Israel resumed war, ending ceasefire): people dig through rubble for victims, carry a body out (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "nbc-missile-hits-building-2023-10",
+   "first": 219.13,
+   "screen": 4.2,
+   "segs": [
+    0
+   ],
+   "publisher": "NBC News",
+   "outlet": "NBC News",
+   "title": "Video captures explosion as Israeli missile hits Gaza City",
+   "title_en": null,
+   "uploader": "NBC News",
+   "date": "2023-10-11",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=J7yXotNqLVk",
+   "license": "news (NBC)",
+   "scope": "gaza",
+   "provenance": "NBC News, Oct 2023 (upload 12 Oct 2023): residents filming earlier damage from a balcony in Gaza City catch a strike on a nearby tower; edit repeats the moment from several takes/angles."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-bank-strike-fireball-2023-10-08",
+   "first": 221.16,
+   "screen": 4.1,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Column of fire and smoke rises in Gaza City as Israeli airstrike hits bank building linked to Hamas",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-10-08",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [
+    [
+     "Camera",
+     "Mohammad Jahjouh"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=nEHs-mDQLSI",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City, 8 Oct 2023: fireball and smoke as Israeli strike hits bank building (AP shotlist). Same event as Reuters 'National Bank' clip, different angle (from a high roof)."
+  },
+  {
+   "catalog": "ground",
+   "id": "reuters-national-bank-strike-2023-10",
+   "first": 221.99,
+   "screen": 4.9,
+   "segs": [
+    0
+   ],
+   "publisher": "Reuters",
+   "outlet": "Reuters",
+   "title": "Gaza buildings destroyed in Israeli strikes",
+   "title_en": null,
+   "uploader": "Reuters",
+   "date": "2023-10-08",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=bftGJOh4FvY",
+   "license": "news (Reuters)",
+   "scope": "gaza",
+   "provenance": "Reuters: Israeli air strike hits the National Bank building in Gaza City, 8 Oct 2023 (Reuters caption + on-screen date tag)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "guardian-khanyounis-night-strike-2026-02-06",
+   "first": 227.59,
+   "screen": 2.6,
+   "segs": [
+    0
+   ],
+   "publisher": "Guardian News",
+   "outlet": "The Guardian",
+   "title": "Moment airstrike hits building in Khan Younis in southern Gaza",
+   "title_en": null,
+   "uploader": "Guardian News",
+   "date": "2026-02-06",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=wjr8ISPvdh0",
+   "license": "news (Guardian)",
+   "scope": "gaza",
+   "provenance": "Guardian News (shot in the early hours of Fri 6 Feb 2026): airstrike hits a residential building in Khan Younis after evacuation, residents search rubble by torchlight; resident Saleh Abu Hatab. Guardian subtitles and logo."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-aqsa-shroud-laundry-2023-10",
+   "first": 229.74,
+   "screen": 18.4,
+   "segs": [
+    3
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Shrouds used to cover the dead are running out in Gaza, according to hospital morgue worker",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-10-25",
+   "place": "Deir al-Balah, Central Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=iEDyp5YhxDQ",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, al-Aqsa Martyrs Hospital morgue, Deir al-Balah, 25 Oct 2023: bodies carried to ambulance; shrouds running out; workers cut and prepare white cloth (AP shotlist)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "idf-iran-air-defence-strike-2026-06-08",
+   "first": 243.62,
+   "screen": 1.7,
+   "segs": [
+    0
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "FIRST FOOTAGE: Watch IDF strikes targeting aerial defense systems in Iran.",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2026-06-08",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=b01T149myxQ",
+   "license": "IDF release",
+   "scope": "israel",
+   "provenance": "Official IDF YouTube release 8 Jun 2026: 'FIRST FOOTAGE: IDF strikes targeting aerial defense systems in Iran'. Colour aerial, captions 'Dismantling of an aerial defense system of the Iranian terror regime' / 'Secondary explosions'."
+  },
+  {
+   "catalog": "y2026",
+   "id": "idf-gaza-weapons-sites-strikecam-2026-09-09",
+   "first": 247.43,
+   "screen": 1.8,
+   "segs": [
+    0
+   ],
+   "publisher": "Roya News English (footage: IDF / AFP)",
+   "outlet": "Roya News",
+   "title": "'Israeli' army releases footage of strikes on Gaza weapon sites",
+   "title_en": null,
+   "uploader": "Roya News English",
+   "date": "2026-09-09",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "IDF / AFP"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=ILs0UJiqXgw",
+   "license": "IDF release via AFP/Roya",
+   "scope": "israel",
+   "provenance": "Roya News English short (on-screen credit 'IDF / AFP', tag 'Gaza 9/9/2026'): IDF-released footage it says shows strikes on three Hamas weapons storage facilities in Gaza. Heavily compressed strike-cam, sepia and grey. Vertical; Roya watermark."
+  },
+  {
+   "catalog": "weapons",
+   "id": "ap-interceptions-telaviv-jun2025",
+   "first": 262.66,
+   "screen": 4.1,
+   "segs": [
+    0,
+    1
+   ],
+   "publisher": "Associated Press",
+   "outlet": "Associated Press",
+   "title": "Interceptions in Tel Aviv after Iran missile attack on Israel",
+   "title_en": null,
+   "uploader": "Associated Press",
+   "date": "2025-06-13",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=pYZ2sbB9d9o",
+   "license": "news (AP); fair use",
+   "scope": "israel",
+   "provenance": "AP: interceptions overhead in Tel Aviv following the Iranian missile attack of 13 June 2025."
+  },
+  {
+   "catalog": "weapons",
+   "id": "hellfire-greece-flir",
+   "first": 266.48,
+   "screen": 6.8,
+   "segs": [
+    1
+   ],
+   "publisher": "DVIDS / 12th Combat Aviation Brigade, U.S. Army",
+   "outlet": "DVIDS (US Department of Defense)",
+   "title": "12CAB Conducts Hellfire Missile Shoot in Greece",
+   "title_en": null,
+   "uploader": null,
+   "date": "2023-05-12",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.dvidshub.net/video/883839/12cab-conducts-hellfire-missile-shoot-greece",
+   "license": "public domain (DVIDS)",
+   "scope": "us-arsenal",
+   "provenance": "Official DVIDS: AH-64D Apache Longbow FLIR video of AGM-114R Hellfire II impacts at Karavia Range Complex, Greece, exercise DEFENDER 23. Range target, no people."
+  },
+  {
+   "catalog": "weapons",
+   "id": "idf-weapons-storage-2011",
+   "first": 273.44,
+   "screen": 4.0,
+   "segs": [
+    1
+   ],
+   "publisher": "Israel Defense Forces (official YouTube)",
+   "outlet": "Israel Defense Forces",
+   "title": "Aerial Strike on Hamas Weapons Facility in Gaza",
+   "title_en": null,
+   "uploader": "Israel Defense Forces",
+   "date": "2011-12-11",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=Eza-Gx3VLSk",
+   "license": "IDF release; fair use",
+   "scope": "israel",
+   "provenance": "Official IDF release: 'IAF Targets Weapons Storage Facility' in Gaza, 11 Dec 2011. Grey pod video with red circles, then long burn."
+  },
+  {
+   "catalog": "weapons",
+   "id": "ap-raw-idf-footage-2014",
+   "first": 289.38,
+   "screen": 5.1,
+   "segs": [
+    0
+   ],
+   "publisher": "Associated Press (IDF-supplied footage)",
+   "outlet": "Associated Press",
+   "title": "Raw: IDF Footage Said to Show Airstrikes",
+   "title_en": null,
+   "uploader": "Associated Press",
+   "date": "2014-08-20",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=FEBuDBmtFDk",
+   "license": "news (AP; IDF footage); fair use",
+   "scope": "israel",
+   "provenance": "AP Raw: IDF-released strike videos (mortar launching site, weapons storage) in Gaza, Aug 2014, followed by AP's own shots of Israeli artillery and Iron Dome batteries at the Gaza border."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-night-explosion-flares-2025-12",
+   "first": 298.91,
+   "screen": 2.6,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Huge explosion and flares on the Gaza skyline seen from southern Israel",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-12-27",
+   "place": "Southern Israel overlooking the Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=8jGPdgrxplo",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP from southern Israel overlooking Gaza Strip, 27 Dec 2025 (during ceasefire): huge explosion, then flares (AP shotlist)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-jabaliya-strike-shifa-arrivals-2026-07-14",
+   "first": 304.97,
+   "screen": 9.5,
+   "segs": [
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Dead and wounded brought to Gaza City hospital after Jabaliya strike",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-07-14",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=_zps_M-njzw",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Gaza City, 14 Jul 2026: dead and wounded brought to a Gaza City hospital (al-Shifa) after an Israeli strike in Jabaliya (AP shotlist, 'EDIT CONTAINS GRAPHIC IMAGES'). 360p source."
+  },
+  {
+   "catalog": "y2026",
+   "id": "roya-civil-defence-worker-shifa-2026-09-01",
+   "first": 305.92,
+   "screen": 6.7,
+   "segs": [
+    1
+   ],
+   "publisher": "Roya News English",
+   "outlet": "Roya News",
+   "title": "Critically injured civil defense worker arrives at Al-Shifa Hospital after 'Israeli' airstrike",
+   "title_en": null,
+   "uploader": "Roya News English",
+   "date": "2026-09-01",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "m.saed gaza (Instagram)"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in y2026.json provenance",
+   "url": "https://www.youtube.com/watch?v=p0uoWSF1AIw",
+   "license": "news (Roya; journalist UGC)",
+   "scope": "gaza",
+   "provenance": "Roya News English short, Gaza City, 1 Sep 2026 (on-screen credit Instagram m.saed gaza): a critically injured Gaza civil defence member, wounded in an Israeli airstrike near Abu Sharkh roundabout, arrives at al-Shifa hospital. Face/wounds partly blurred by Roya."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-khanyounis-mourning-overnight-strikes-2026-08-02",
+   "first": 306.4,
+   "screen": 8.1,
+   "segs": [
+    0,
+    2
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Families mourn those killed as Israeli strikes pound the Gaza Strip overnight",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-08-02",
+   "place": "Khan Younis, southern Gaza Strip; Deir al-Balah, Central Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=TVneg3n7Ghc",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Khan Younis, 2 Aug 2026: families mourn relatives killed as Israeli strikes pounded the Gaza Strip overnight; wrapped bodies, funeral prayers (AP shotlist). 360p source."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-nuseirat-night-strike-2026-07",
+   "first": 306.52,
+   "screen": 5.8,
+   "segs": [
+    1
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Strike hits Gaza's Nuseirat after Israeli military issues warning",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-07-31",
+   "place": "Nuseirat, central Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=0Bf1tWaqvvs",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Nuseirat, central Gaza, 31 Jul 2026 (post-ceasefire strike after warning); 'sky lit up after airstrike, people running' (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-gazacity-towers-bombed-2025-09",
+   "first": 310.33,
+   "screen": 5.7,
+   "segs": [
+    4
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Israel intensifies bombing of remaining residential buildings amid Gaza City offensive",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-09-07",
+   "place": "Gaza City",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=xb1Yj-mLXAU",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Gaza City, 7 Sep 2025: residents evacuate an al-Ruya residential tower after warning; Israel intensifies bombing of remaining high-rises (AP shotlist; AP resent to clarify building names)."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-drone-beit-lahiya-2025-02",
+   "first": 319.9,
+   "screen": 31.7,
+   "segs": [],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Drone footage shows vast destruction in Beit Lahiya, in northern Gaza",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-02-17",
+   "place": "Beit Lahiya, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=VCp7zg_f7qk",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP drone, Beit Lahiya, northern Gaza, 17 Feb 2025 during ceasefire (AP shotlist)."
+  },
+  {
+   "catalog": "ground",
+   "id": "wsj-residents-film-tower-strike-2023-10",
+   "first": 331.34,
+   "screen": 0.5,
+   "segs": [
+    0
+   ],
+   "publisher": "WSJ News (footage via Reuters)",
+   "outlet": "The Wall Street Journal",
+   "title": "Watch: Moment Israeli Strike Hits High-Rise Building in Gaza | WSJ News",
+   "title_en": null,
+   "uploader": "WSJ News",
+   "date": "2023-10-12",
+   "place": null,
+   "credits": [
+    [
+     "Footage credited on screen to",
+     "Reuters"
+    ]
+   ],
+   "credits_source": "on-screen credit, as recorded in ground.json provenance",
+   "url": "https://www.youtube.com/watch?v=pzFOfUV7iNA",
+   "license": "news (WSJ / Reuters)",
+   "scope": "gaza",
+   "provenance": "WSJ, Gaza, Thursday 12 Oct 2023: residents film from a balcony as Israeli strike hits a nearby high-rise; Reuters credit on-screen at end."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-drone-gazacity-ruins-2025-10-long",
+   "first": 335.15,
+   "screen": 15.8,
+   "segs": [],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Drone aerials show much of Gaza City reduced to rubble during two years of war",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-10-15",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=nZ15f_tSAHc",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP drone, Gaza City, 15 Oct 2025, ceasefire (AP shotlist, 'Drone aerials show much of Gaza City reduced to rubble'). Clean (no split screens), 360p."
+  },
+  {
+   "catalog": "y2026",
+   "id": "roya-civil-defence-bones-nuseirat-2026-09-05",
+   "first": 341.16,
+   "screen": 1.9,
+   "segs": [
+    1
+   ],
+   "publisher": "Roya News English",
+   "outlet": "Roya News",
+   "title": "Gazans search for bodies buried under rubble since 2023 strike",
+   "title_en": null,
+   "uploader": "Roya News English",
+   "date": "2026-09-05",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=eKwlBuPcmw0",
+   "license": "news (Roya)",
+   "scope": "gaza",
+   "provenance": "Roya News English short, Nuseirat, 5 Sep 2026: Gaza civil defence search the rubble of a building hit in Nov 2023 for remains, with an excavator; spokesperson Mahmoud Basal statement. Vertical, Roya watermark and date tag."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-night-flashes-from-israel-2023-11-12",
+   "first": 342.76,
+   "screen": 2.2,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Explosions light up Gaza night sky",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-11-12",
+   "place": "View of Gaza from southern Israel",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=1RA9XdeKImU",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, view of Gaza from southern Israel at night, 12 Nov 2023 (AP shotlist). Distant explosions and drifting flares over dark rooftops."
+  },
+  {
+   "catalog": "weapons",
+   "id": "ap-iron-dome-chase-may2021",
+   "first": 348.48,
+   "screen": 2.2,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Iron Dome chase barrage of rockets fired from Gaza",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2021-05 (upload 2021-05-24)",
+   "place": null,
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=EKvPmpAbuZQ",
+   "license": "news (AP Archive); fair use",
+   "scope": "israel",
+   "provenance": "AP Archive: Iron Dome interceptors chase a barrage of rockets fired from Gaza, May 2021, night."
+  },
+  {
+   "catalog": "ground",
+   "id": "ap-muwasi-tents-strike-2025-06",
+   "first": 365.62,
+   "screen": 8.2,
+   "segs": [],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Overnight Israeli strike hits tents sheltering displaced Palestinian families in Muwasi",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2025-06-23",
+   "place": "Muwasi, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=H_kELGjZ2RY",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP, Muwasi, 23 Jun 2025: tents of displaced people destroyed in overnight strike; people sift through wreckage (AP shotlist)."
+  },
+  {
+   "catalog": "weapons",
+   "id": "ap-telaviv-intercepts-may2023",
+   "first": 371.33,
+   "screen": 2.2,
+   "segs": [
+    0
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Gaza rockets intercepted over Tel Aviv's night sky",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2023-05 (upload 2023-05-16)",
+   "place": "Tel Aviv, Israel",
+   "credits": [
+    [
+     "Camera",
+     "Paz Bar"
+    ]
+   ],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=E--NcpXQuZ0",
+   "license": "news (AP Archive); fair use",
+   "scope": "israel",
+   "provenance": "AP Archive: rockets from Gaza intercepted over Tel Aviv's night sky, May 2023 (Operation Shield and Arrow)."
+  },
+  {
+   "catalog": "y2026",
+   "id": "ap-mass-funeral-hassayna-2026-08-04",
+   "first": 396.4,
+   "screen": 15.2,
+   "segs": [
+    2
+   ],
+   "publisher": "AP Archive",
+   "outlet": "Associated Press",
+   "title": "Mass funeral in Gaza after bodies recovered of more than 100 people killed in 2023 Israeli strike",
+   "title_en": null,
+   "uploader": "AP Archive",
+   "date": "2026-08-04",
+   "place": "Gaza City, Gaza Strip",
+   "credits": [],
+   "credits_source": null,
+   "url": "https://www.youtube.com/watch?v=D8BWnIo43Dw",
+   "license": "news (AP)",
+   "scope": "gaza",
+   "provenance": "AP Archive story, Gaza City, 4 Aug 2026: mass funeral for 100+ members of the Hassayna and Abu Sharia families, killed in an Israeli strike in Nov 2023, remains recently recovered from rubble (AP shotlist; captioned edit)."
+  }
+ ],
+ "people": [
+  {
+   "name": "Mohammad Abdul Zinati",
+   "kind": "killed",
+   "roles": [
+    "killed"
+   ],
+   "age": 15,
+   "sources": [
+    "https://www.youtube.com/watch?v=vQdUgwKtwEY"
+   ],
+   "clips": [
+    "guardian-deconstructed-zinati-strike-2026-09-15"
+   ],
+   "detail": "Gaza City, 15 September 2026. Eyewitnesses told the Guardian he had gone to check on the body of a man struck by an Israeli bomb moments earlier; a second strike killed him"
+  },
+  {
+   "name": "The wife and children of Mahmoud Hammad",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=XoQWFfNR_M8"
+   ],
+   "clips": [
+    "ap-father-sieves-bones-2026-01-24"
+   ],
+   "detail": "Killed, with his brother, his brother's wife and their children, in an Israeli airstrike on their home in Gaza City. He searches the rubble for their bones, January 2026 (AP; their names are not given)"
+  },
+  {
+   "name": "112 members of the Hassayna and Abu Sharia families",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=D8BWnIo43Dw",
+    "https://www.youtube.com/watch?v=4wLmM3v8XH4"
+   ],
+   "clips": [
+    "ap-mass-funeral-hassayna-2026-08-04",
+    "mee-112-remains-flags-2026-08-03"
+   ],
+   "detail": "Killed with some 300 others when an Israeli strike flattened a residential block in Sabra, Gaza City, in November 2023. Their remains were recovered from the rubble and buried on 4 August 2026; more are still under it (AP; Middle East Eye)"
+  },
+  {
+   "name": "Two people killed near a tent camp in Khan Younis",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=G9EY3rgBcLc"
+   ],
+   "clips": [
+    "ap-khanyounis-morgue-bodies-2026-07-29"
+   ],
+   "detail": "Israeli strike, 29 July 2026; more than 16 wounded (Nasser hospital and Palestinian Red Crescent, via AP)"
+  },
+  {
+   "name": "Dozens buried in the grounds of Nasser Hospital",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=vnpsm7nB9JE"
+   ],
+   "clips": [
+    "nbc-nasser-courtyard-graves-2024-01"
+   ],
+   "detail": "Khan Younis, January 2024, when the Israeli offensive made the cemetery too dangerous to reach (NBC News)"
+  },
+  {
+   "name": "More than 400 people killed across Gaza on 18 March 2025",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=TunR64-jZUk"
+   ],
+   "clips": [
+    "ap-jabaliya-dig-for-victims-2025-03"
+   ],
+   "detail": "The day Israel resumed the war. In Jabaliya, Fahmi Mohammad said ten of his cousins were killed (Gaza Health Ministry and AP)"
+  },
+  {
+   "name": "Seven people killed in Jabaliya refugee camp",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=_zps_M-njzw"
+   ],
+   "clips": [
+    "ap-jabaliya-strike-shifa-arrivals-2026-07-14"
+   ],
+   "detail": "Israeli airstrike on a market area, 14 July 2026; one woman among them, and Colonel Mohamad Marwan Salem, head of the Jabaliya police station, per Gaza's interior ministry (Shifa hospital officials, via AP)"
+  },
+  {
+   "name": "At least eight people killed across Gaza on 2 August 2026",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=TVneg3n7Ghc"
+   ],
+   "clips": [
+    "ap-khanyounis-mourning-overnight-strikes-2026-08-02"
+   ],
+   "detail": "Two children among them. In southern Gaza a strike on an apartment killed three members of one family, including their four-year-old child (local health officials and Nasser hospital, via AP)"
+  },
+  {
+   "name": "The dead of a November 2023 strike on a building in Nuseirat",
+   "kind": "group",
+   "roles": [
+    "group: killed"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=eKwlBuPcmw0"
+   ],
+   "clips": [
+    "roya-civil-defence-bones-nuseirat-2026-09-05"
+   ],
+   "detail": "Their remains, still being recovered from the rubble by Gaza's civil defence in September 2026 (Roya News)"
+  },
+  {
+   "name": "Sharif Shadi Labad",
+   "kind": "injured",
+   "roles": [
+    "injured (civil defence paramedic)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=vQdUgwKtwEY"
+   ],
+   "clips": [
+    "guardian-deconstructed-zinati-strike-2026-09-15"
+   ],
+   "detail": "Injured by the first strike. The Israeli military told the Guardian he was a Hamas militant and had been targeted"
+  },
+  {
+   "name": "A member of Gaza's civil defence",
+   "kind": "injured",
+   "roles": [
+    "injured"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=p0uoWSF1AIw"
+   ],
+   "clips": [
+    "roya-civil-defence-worker-shifa-2026-09-01"
+   ],
+   "detail": "Critically injured in an Israeli airstrike near Abu Sharkh roundabout, brought to al-Shifa Hospital, 1 September 2026 (Roya News; name not given)"
+  },
+  {
+   "name": "Mahmoud Hammad",
+   "kind": "bereaved",
+   "roles": [
+    "father; his wife and children were killed",
+    "bereaved father (his wife and children killed)"
+   ],
+   "age": null,
+   "sources": [
+    "https://www.youtube.com/watch?v=XoQWFfNR_M8"
+   ],
+   "clips": [
+    "ap-father-sieves-bones-2026-01-24"
+   ],
+   "detail": null
+  }
+ ],
+ "other_sources": {
+  "music": [
+   "media/src/meine.webm"
+  ],
+  "voice": [
+   "media/derived/face.mp4",
+   "media/derived/face_missiles_on_beat.mp4",
+   "media/derived/face_rant2.mp4"
+  ]
+ },
+ "unknown_sources": [],
+ "dead": {
+  "moh": {
+   "killed": 74498,
+   "injured": 175616,
+   "as_of": "2026-10-22",
+   "report_source": "mohtel",
+   "url": "https://data.techforpalestine.org/docs/casualties-daily/",
+   "retrieved": "2026-10-24"
+  },
+  "names": {
+   "records": 72835,
+   "children": 21637,
+   "infants": 1072,
+   "includes_until": "2026-05-07",
+   "list_published": "2026-07-27",
+   "abdullah_fixed": 280,
+   "url": "https://data.techforpalestine.org/docs/killed-in-gaza/",
+   "retrieved": "2026-10-24"
+  },
+  "cpj": {
+   "killed_by_israel": [
+    {
+     "name": "Ibrahim Mohammad Lafi",
+     "date": "2023-10-07",
+     "org": "Ain Media",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-mohammad-lafi/"
+    },
+    {
+     "name": "Mohammed Al-Salhi",
+     "date": "2023-10-07",
+     "org": "Fourth Authority news agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-salhi/"
+    },
+    {
+     "name": "Assaad Shamlakh",
+     "date": "2023-10-08",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/assaad-shamlakh/"
+    },
+    {
+     "name": "Hisham Alnwajha",
+     "date": "2023-10-09",
+     "org": "“Khabar” News Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hisham-alnwajha/"
+    },
+    {
+     "name": "Mohammed Sobh",
+     "date": "2023-10-09",
+     "org": "“Khabar” News Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-sobh/"
+    },
+    {
+     "name": "Saeed al-Taweel",
+     "date": "2023-10-09",
+     "org": "Al-Khamsa News",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/saeed-al-taweel/"
+    },
+    {
+     "name": "Ahmed Shehab",
+     "date": "2023-10-12",
+     "org": "Sowt Al-Asra Radio (Radio Voice of the Prisoners)",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-shehab/"
+    },
+    {
+     "name": "Husam Mubarak",
+     "date": "2023-10-13",
+     "org": "Al-Aqsa Voice Radio",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/husam-mubarak/"
+    },
+    {
+     "name": "Salam Mema",
+     "date": "2023-10-13",
+     "org": "Palestinian Media Assembly",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/salam-mema/"
+    },
+    {
+     "name": "Yousef Maher Dawas",
+     "date": "2023-10-14",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/yousef-maher-dawas/"
+    },
+    {
+     "name": "Abdulhadi Habib",
+     "date": "2023-10-16",
+     "org": "Al-Manara News Agency, HQ media",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abdulhadi-habib/"
+    },
+    {
+     "name": "Issam Bhar",
+     "date": "2023-10-17",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/issam-bhar/"
+    },
+    {
+     "name": "Mohammad Jameel Balousha",
+     "date": "2023-10-17",
+     "org": "Palestine Today",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammad-jameel-balousha/"
+    },
+    {
+     "name": "Sameeh Al-Nady",
+     "date": "2023-10-18",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/sameeh-al-nady/"
+    },
+    {
+     "name": "Khalil Abu Aathra",
+     "date": "2023-10-19",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/khalil-abu-aathra/"
+    },
+    {
+     "name": "Mohammed Ali",
+     "date": "2023-10-20",
+     "org": "Al-Shabab Radio (Youth Radio)",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-ali/"
+    },
+    {
+     "name": "Roshdi Sarraj",
+     "date": "2023-10-22",
+     "org": "Ain Media",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/roshdi-sarraj/"
+    },
+    {
+     "name": "Mohammed Imad Labad",
+     "date": "2023-10-23",
+     "org": "Al Resalah",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-imad-labad/"
+    },
+    {
+     "name": "Ibrahim Marzouq",
+     "date": "2023-10-24",
+     "org": "Palestine Today TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-marzouq/"
+    },
+    {
+     "name": "Tasneem Bkheet",
+     "date": "2023-10-24",
+     "org": "Al-Saada",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/tasneem-bkheet/"
+    },
+    {
+     "name": "Ahmed Abu Mhadi",
+     "date": "2023-10-25",
+     "org": "Al-Aqsa TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-abu-mhadi/"
+    },
+    {
+     "name": "Jamal Al-Faqaawi",
+     "date": "2023-10-25",
+     "org": "Mithaq Media Foundation",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/jamal-al-faqaawi/"
+    },
+    {
+     "name": "Saed Al-Halabi",
+     "date": "2023-10-25",
+     "org": "Al-Aqsa TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/saed-al-halabi/"
+    },
+    {
+     "name": "Duaa Sharaf",
+     "date": "2023-10-26",
+     "org": "Radio Al-Aqsa",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/duaa-sharaf/"
+    },
+    {
+     "name": "Nazmi Al-Nadim",
+     "date": "2023-10-30",
+     "org": "Palestine TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/nazmi-al-nadim/"
+    },
+    {
+     "name": "Imad Al-Wahidi",
+     "date": "2023-10-31",
+     "org": "Palestine TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/imad-al-wahidi/"
+    },
+    {
+     "name": "Majed Kashko",
+     "date": "2023-10-31",
+     "org": "Palestine TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/majed-kashko/"
+    },
+    {
+     "name": "Iyad Matar",
+     "date": "2023-11-01",
+     "org": "Al-Aqsa TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/iyad-matar/"
+    },
+    {
+     "name": "Majd Fadl Arandas",
+     "date": "2023-11-01",
+     "org": "Al-Jamaheer",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/majd-fadl-arandas/"
+    },
+    {
+     "name": "Mohamad Al-Bayyari",
+     "date": "2023-11-02",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamad-al-bayyari/"
+    },
+    {
+     "name": "Mohammed Abu Hatab",
+     "date": "2023-11-02",
+     "org": "Palestine TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-abu-hatab/"
+    },
+    {
+     "name": "Mohamed al-Jaja",
+     "date": "2023-11-06",
+     "org": "Freelance",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-al-jaja/"
+    },
+    {
+     "name": "Mohamed Abu Hassira",
+     "date": "2023-11-07",
+     "org": "WAFA",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-abu-hassira/"
+    },
+    {
+     "name": "Moussa Al-Borsh",
+     "date": "2023-11-12",
+     "org": "Namaa Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/moussa-al-borsh/"
+    },
+    {
+     "name": "Ahmed Fatima",
+     "date": "2023-11-13",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-fatima/"
+    },
+    {
+     "name": "Abdel Rahman al-Tanani",
+     "date": "2023-11-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abdel-rahman-al-tanani/"
+    },
+    {
+     "name": "Abdelhalim Awad",
+     "date": "2023-11-18",
+     "org": "Al-Aqsa TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abdelhalim-awad/"
+    },
+    {
+     "name": "Amal Zohud",
+     "date": "2023-11-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/amal-zohud/"
+    },
+    {
+     "name": "Amro Salah Abu Hayah",
+     "date": "2023-11-18",
+     "org": "Al Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/amro-salah-abu-hayah/"
+    },
+    {
+     "name": "Hassouneh Salim",
+     "date": "2023-11-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hassouneh-salim/"
+    },
+    {
+     "name": "Mostafa Al Sawaf",
+     "date": "2023-11-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mostafa-al-sawaf/"
+    },
+    {
+     "name": "Sari Mansour",
+     "date": "2023-11-18",
+     "org": "Quds News Network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/sari-mansour/"
+    },
+    {
+     "name": "Bilal Jadallah",
+     "date": "2023-11-19",
+     "org": "Press House-Palestine",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/bilal-jadallah/"
+    },
+    {
+     "name": "Ayat Khadoura",
+     "date": "2023-11-20",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ayat-khadoura/"
+    },
+    {
+     "name": "Jamal Mohamed Haniyeh",
+     "date": "2023-11-21",
+     "org": "Amwaj",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/jamal-mohamed-haniyeh/"
+    },
+    {
+     "name": "Mohamed Mouin Ayyash",
+     "date": "2023-11-23",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-mouin-ayyash/"
+    },
+    {
+     "name": "Adham Hassouna",
+     "date": "2023-12-01",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/adham-hassouna/"
+    },
+    {
+     "name": "Marwan Al Sawaf",
+     "date": "2023-12-01",
+     "org": "Alef Multimedia",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/marwan-al-sawaf/"
+    },
+    {
+     "name": "Montaser Al-Sawaf",
+     "date": "2023-12-01",
+     "org": "Anadolu Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/montaser-al-sawaf/"
+    },
+    {
+     "name": "Hamada Al-Yaziji",
+     "date": "2023-12-03",
+     "org": "Kanaan News Agency, Al-Quds Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hamada-al-yaziji/"
+    },
+    {
+     "name": "Shaima El-Gazzar",
+     "date": "2023-12-03",
+     "org": "Al-Majedat network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/shaima-el-gazzar/"
+    },
+    {
+     "name": "Ola Atallah",
+     "date": "2023-12-09",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ola-atallah/"
+    },
+    {
+     "name": "Samer Abu Daqqa",
+     "date": "2023-12-15",
+     "org": "Al-Jazeera Arabic",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/samer-abu-daqqa/"
+    },
+    {
+     "name": "Assem Kamal Moussa",
+     "date": "2023-12-17",
+     "org": "Palestine Now",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/assem-kamal-moussa/"
+    },
+    {
+     "name": "Haneen Kashtan",
+     "date": "2023-12-17",
+     "org": "TV Al-Kofiya, Baladna Web TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/haneen-kashtan/"
+    },
+    {
+     "name": "Abdallah Alwan",
+     "date": "2023-12-18",
+     "org": "Holy Quran Radio, Midan, Mugtama, Al-Jazeera",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abdallah-alwan/"
+    },
+    {
+     "name": "Adel Zorob",
+     "date": "2023-12-19",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/adel-zorob/"
+    },
+    {
+     "name": "Mohamed Khalifeh",
+     "date": "2023-12-22",
+     "org": "Al Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-khalifeh/"
+    },
+    {
+     "name": "Ahmad Jamal al Madhoun",
+     "date": "2023-12-24",
+     "org": "Al-Rai",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmad-jamal-al-madhoun/"
+    },
+    {
+     "name": "Mohamad Al-Iff",
+     "date": "2023-12-24",
+     "org": "Al-Rai",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamad-al-iff/"
+    },
+    {
+     "name": "Mohamed Azzaytouniyah",
+     "date": "2023-12-24",
+     "org": "Al-Rai",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-azzaytouniyah/"
+    },
+    {
+     "name": "Ahmed Khaireddine",
+     "date": "2023-12-28",
+     "org": "Al-Quds Al-Youm TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-khaireddine/"
+    },
+    {
+     "name": "Mohamed Khaireddine",
+     "date": "2023-12-28",
+     "org": "Al-Aqsa TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-khaireddine/"
+    },
+    {
+     "name": "Jabr Abu Hadrous",
+     "date": "2023-12-29",
+     "org": "Al-Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/jabr-abu-hadrous/"
+    },
+    {
+     "name": "Akram ElShafie",
+     "date": "2024-01-05",
+     "org": "Safa",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/akram-elshafie/"
+    },
+    {
+     "name": "Hamza Al Dahdouh",
+     "date": "2024-01-07",
+     "org": "Al-Jazeera",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hamza-al-dahdouh/"
+    },
+    {
+     "name": "Mustafa Thuraya",
+     "date": "2024-01-07",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mustafa-thuraya/"
+    },
+    {
+     "name": "Heba Al-Abadla",
+     "date": "2024-01-09",
+     "org": "Al-Azhar Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/heba-al-abadla/"
+    },
+    {
+     "name": "Ahmed Bdeir",
+     "date": "2024-01-10",
+     "org": "Bawabat al-Hadaf",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-bdeir/"
+    },
+    {
+     "name": "Shareef Okasha",
+     "date": "2024-01-10",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/shareef-okasha/"
+    },
+    {
+     "name": "Mohamed Jamal Sobhi Al-Thalathini",
+     "date": "2024-01-11",
+     "org": "Al-Quds Al-Youm",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-jamal-sobhi-al-thalathini/"
+    },
+    {
+     "name": "Yazan al-Zuweidi",
+     "date": "2024-01-14",
+     "org": "Al-Ghad",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/yazan-al-zuweidi/"
+    },
+    {
+     "name": "Iyad El-Ruwagh",
+     "date": "2024-01-25",
+     "org": "Al-Aqsa Voice Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/iyad-el-ruwagh/"
+    },
+    {
+     "name": "Mohammed Atallah",
+     "date": "2024-01-29",
+     "org": "Al-Resalah, Raseef22",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-atallah/"
+    },
+    {
+     "name": "Tariq Al-Maidna",
+     "date": "2024-01-29",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/tariq-al-maidna/"
+    },
+    {
+     "name": "Rizq Al-Gharabli",
+     "date": "2024-02-06",
+     "org": "Palestinian Information Center",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/rizq-al-gharabli/"
+    },
+    {
+     "name": "Nafez Abdel Jawad",
+     "date": "2024-02-08",
+     "org": "Palestine TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/nafez-abdel-jawad/"
+    },
+    {
+     "name": "Yasser Mamdouh El-Fady",
+     "date": "2024-02-11",
+     "org": "Kan'an news agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/yasser-mamdouh-el-fady/"
+    },
+    {
+     "name": "Alaa Al-Hams",
+     "date": "2024-02-12",
+     "org": "SND",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/alaa-al-hams/"
+    },
+    {
+     "name": "Angam Ahmad Edwan",
+     "date": "2024-02-12",
+     "org": "February",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/angam-ahmad-edwan/"
+    },
+    {
+     "name": "Ayman Al-Rafati",
+     "date": "2024-02-14",
+     "org": "Al Mayadeen",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ayman-al-rafati/"
+    },
+    {
+     "name": "Zayd Abu Zayed",
+     "date": "2024-02-15",
+     "org": "Quran Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/zayd-abu-zayed/"
+    },
+    {
+     "name": "Mohamed Yaghi",
+     "date": "2024-02-23",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-yaghi/"
+    },
+    {
+     "name": "Muhammad Salama",
+     "date": "2024-03-05",
+     "org": "Al Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/muhammad-salama/"
+    },
+    {
+     "name": "Abdul Rahman Saima",
+     "date": "2024-03-14",
+     "org": "Raqami TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abdul-rahman-saima/"
+    },
+    {
+     "name": "Mohamed El-Reefi",
+     "date": "2024-03-15",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-el-reefi/"
+    },
+    {
+     "name": "Saher Akram Rayan",
+     "date": "2024-03-25",
+     "org": "WAFA",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/saher-akram-rayan/"
+    },
+    {
+     "name": "Amna Hamid",
+     "date": "2024-04-24",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/amna-hamid/"
+    },
+    {
+     "name": "Ayman Al-Gharbawi",
+     "date": "2024-04-26",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ayman-al-gharbawi/"
+    },
+    {
+     "name": "Ibrahim Al-Gharbawi",
+     "date": "2024-04-26",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-al-gharbawi/"
+    },
+    {
+     "name": "Mustafa Ayyad",
+     "date": "2024-05-06",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mustafa-ayyad/"
+    },
+    {
+     "name": "Bahaaddine Yassine",
+     "date": "2024-05-10",
+     "org": "Watan Media Agency, Al-Quds News Network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/bahaaddine-yassine/"
+    },
+    {
+     "name": "Mahmoud Juhjouh",
+     "date": "2024-05-16",
+     "org": "Palestine Post",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mahmoud-juhjouh/"
+    },
+    {
+     "name": "Ola Al Dahdouh",
+     "date": "2024-05-31",
+     "org": "Sawt al Watan",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ola-al-dahdouh/"
+    },
+    {
+     "name": "Mohammed Abu Sharia",
+     "date": "2024-07-01",
+     "org": "Shams News Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-abu-sharia/"
+    },
+    {
+     "name": "Saadi Madoukh",
+     "date": "2024-07-05",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/saadi-madoukh/"
+    },
+    {
+     "name": "Amjad Juhjouh",
+     "date": "2024-07-06",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/amjad-juhjouh/"
+    },
+    {
+     "name": "Wafaa Abu Dabaan",
+     "date": "2024-07-06",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/wafaa-abu-dabaan/"
+    },
+    {
+     "name": "Mohamed Meshmesh",
+     "date": "2024-07-15",
+     "org": "Al-Aqsa Voice Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-meshmesh/"
+    },
+    {
+     "name": "Mohammed Abu Jasser",
+     "date": "2024-07-20",
+     "org": "Al-Risala, Felesteen",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-abu-jasser/"
+    },
+    {
+     "name": "Mohammed Abu Daqqa",
+     "date": "2024-07-29",
+     "org": "Freelance, Al-Hadath",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-abu-daqqa/"
+    },
+    {
+     "name": "Ismail Al Ghoul",
+     "date": "2024-07-31",
+     "org": "Al Jazeera Arabic",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ismail-al-ghoul/"
+    },
+    {
+     "name": "Rami Al Refee",
+     "date": "2024-07-31",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/rami-al-refee/"
+    },
+    {
+     "name": "Mohammed Issa Abu Saada",
+     "date": "2024-08-06",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-issa-abu-saada/"
+    },
+    {
+     "name": "Tamim Abu Muammar",
+     "date": "2024-08-09",
+     "org": "Palestinian Broadcasting Corporation",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/tamim-abu-muammar/"
+    },
+    {
+     "name": "Ibrahim Muhareb",
+     "date": "2024-08-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-muhareb/"
+    },
+    {
+     "name": "Hamza Murtaja",
+     "date": "2024-08-20",
+     "org": "Record Media",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hamza-murtaja/"
+    },
+    {
+     "name": "Mohammed Abed Rabbo",
+     "date": "2024-08-27",
+     "org": "Al-Manara Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-abed-rabbo/"
+    },
+    {
+     "name": "Ihab Diab",
+     "date": "2024-09-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ihab-diab/"
+    },
+    {
+     "name": "Wafa Al-Udaini",
+     "date": "2024-09-29",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/wafa-al-udaini/"
+    },
+    {
+     "name": "Nour Abu Oweimer",
+     "date": "2024-10-03",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/nour-abu-oweimer/"
+    },
+    {
+     "name": "Abdul Rahman Bahr",
+     "date": "2024-10-06",
+     "org": "Palestine Breaking News",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abdul-rahman-bahr/"
+    },
+    {
+     "name": "AlHassan Hamad",
+     "date": "2024-10-06",
+     "org": "Freelance, Al Jazeera, Media Town TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/alhassan-hamad/"
+    },
+    {
+     "name": "Mohammed Al-Tanani",
+     "date": "2024-10-09",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-tanani/"
+    },
+    {
+     "name": "Tareq AlSalhi",
+     "date": "2024-10-15",
+     "org": "Gaza Live network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/tareq-alsalhi/"
+    },
+    {
+     "name": "Haneen Baroud",
+     "date": "2024-10-27",
+     "org": "Al Majedat Media Network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/haneen-baroud/"
+    },
+    {
+     "name": "Nadia Emad Al Sayed",
+     "date": "2024-10-27",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/nadia-emad-al-sayed/"
+    },
+    {
+     "name": "Saed Radwan",
+     "date": "2024-10-27",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/saed-radwan/"
+    },
+    {
+     "name": "Amr Abu Odeh",
+     "date": "2024-10-31",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/amr-abu-odeh/"
+    },
+    {
+     "name": "Bilal Rajab",
+     "date": "2024-11-01",
+     "org": "Al-Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/bilal-rajab/"
+    },
+    {
+     "name": "Ahmed Abu Skheil",
+     "date": "2024-11-09",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-abu-skheil/"
+    },
+    {
+     "name": "Zahraa Abu Skheil",
+     "date": "2024-11-09",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/zahraa-abu-skheil/"
+    },
+    {
+     "name": "Mamdouh Qanita",
+     "date": "2024-11-30",
+     "org": "Al-Aqsa TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mamdouh-qanita/"
+    },
+    {
+     "name": "Iman Al Shanti",
+     "date": "2024-12-11",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/iman-al-shanti/"
+    },
+    {
+     "name": "Mohammed Al Qrinawi",
+     "date": "2024-12-14",
+     "org": "Snd News Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-qrinawi/"
+    },
+    {
+     "name": "Mohammed Balousha",
+     "date": "2024-12-14",
+     "org": "Al Mashhad Media",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-balousha/"
+    },
+    {
+     "name": "Ahmed Al-Louh",
+     "date": "2024-12-15",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-al-louh/"
+    },
+    {
+     "name": "Mohammed Al-Sharafi",
+     "date": "2024-12-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-sharafi/"
+    },
+    {
+     "name": "Ayman Al Gedi",
+     "date": "2024-12-26",
+     "org": "Al-Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ayman-al-gedi/"
+    },
+    {
+     "name": "Fadi Hassouna",
+     "date": "2024-12-26",
+     "org": "Al-Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/fadi-hassouna/"
+    },
+    {
+     "name": "Faisal Abu Al Qumsan",
+     "date": "2024-12-26",
+     "org": "Al-Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/faisal-abu-al-qumsan/"
+    },
+    {
+     "name": "Ibrahim Sheikh Ali",
+     "date": "2024-12-26",
+     "org": "Al-Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-sheikh-ali/"
+    },
+    {
+     "name": "Mohammed Al-Ladaa",
+     "date": "2024-12-26",
+     "org": "Al Quds Al-Youm",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-ladaa/"
+    },
+    {
+     "name": "Hassan Al-Qishawi",
+     "date": "2025-01-02",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hassan-al-qishawi/"
+    },
+    {
+     "name": "Areej Shaheen",
+     "date": "2025-01-03",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/areej-shaheen/"
+    },
+    {
+     "name": "Omar Al Dirawi",
+     "date": "2025-01-03",
+     "org": "Fourth Estate",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/omar-al-dirawi/"
+    },
+    {
+     "name": "Saed Abu Nabhan",
+     "date": "2025-01-10",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/saed-abu-nabhan/"
+    },
+    {
+     "name": "Mohammed Al-Talmas",
+     "date": "2025-01-14",
+     "org": "Safa News Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-talmas/"
+    },
+    {
+     "name": "Ahmed Abu Al-Rous",
+     "date": "2025-01-15",
+     "org": "Fourth Estate",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-abu-al-rous/"
+    },
+    {
+     "name": "Ahmed Al Shayyah",
+     "date": "2025-01-15",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-al-shayyah/"
+    },
+    {
+     "name": "Mahmoud Islim Al-Basos",
+     "date": "2025-03-15",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mahmoud-islim-al-basos/"
+    },
+    {
+     "name": "Hossam Shabat",
+     "date": "2025-03-24",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hossam-shabat/"
+    },
+    {
+     "name": "Mohammed Mansour",
+     "date": "2025-03-24",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-mansour/"
+    },
+    {
+     "name": "Mohammed al-Bardaweel",
+     "date": "2025-04-01",
+     "org": "Voice of Al-Aqsa",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-bardaweel/"
+    },
+    {
+     "name": "Ahmed Mansour",
+     "date": "2025-04-07",
+     "org": "Palestine Today",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-mansour/"
+    },
+    {
+     "name": "Fatma Hassona",
+     "date": "2025-04-16",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/fatma-hassona/"
+    },
+    {
+     "name": "Noureddine Abdo",
+     "date": "2025-05-07",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/noureddine-abdo/"
+    },
+    {
+     "name": "Yahya Sobeih",
+     "date": "2025-05-07",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/yahya-sobeih/"
+    },
+    {
+     "name": "Ahmed Al-Helou",
+     "date": "2025-05-15",
+     "org": "Quds News Network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-al-helou/"
+    },
+    {
+     "name": "Hassan Samour",
+     "date": "2025-05-15",
+     "org": "Al Aqsa Voice Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hassan-samour/"
+    },
+    {
+     "name": "Hassan Abu Warda",
+     "date": "2025-05-25",
+     "org": "Barq Gaza",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hassan-abu-warda/"
+    },
+    {
+     "name": "Yousef Al-Nakhala",
+     "date": "2025-05-31",
+     "org": "Watania Media Agency",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/yousef-al-nakhala/"
+    },
+    {
+     "name": "Ismail Baddah",
+     "date": "2025-06-05",
+     "org": "Palestine Today TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ismail-baddah/"
+    },
+    {
+     "name": "Suleiman Hajjaj",
+     "date": "2025-06-05",
+     "org": "Palestine Today TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/suleiman-hajjaj/"
+    },
+    {
+     "name": "Ahmad Qalaja",
+     "date": "2025-06-06",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmad-qalaja/"
+    },
+    {
+     "name": "Moamen Abu AlOuf",
+     "date": "2025-06-09",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/moamen-abu-alouf/"
+    },
+    {
+     "name": "Mahmoud Issa Abu Shirby",
+     "date": "2025-06-25",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mahmoud-issa-abu-shirby/"
+    },
+    {
+     "name": "Ismail Abu Hatab",
+     "date": "2025-06-30",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ismail-abu-hatab/"
+    },
+    {
+     "name": "Mohammed Imad al-Sultan",
+     "date": "2025-07-02",
+     "org": "Falasteen",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-imad-al-sultan/"
+    },
+    {
+     "name": "Adam Abu Harbid",
+     "date": "2025-07-24",
+     "org": "Al-Quds Al-Youm TV, Fact Media",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/adam-abu-harbid/"
+    },
+    {
+     "name": "Ibrahim Hajjaj",
+     "date": "2025-07-30",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-hajjaj/"
+    },
+    {
+     "name": "Anas al-Sharif",
+     "date": "2025-08-10",
+     "org": "Al Jazeera",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/anas-al-sharif/"
+    },
+    {
+     "name": "Ibrahim Zaher",
+     "date": "2025-08-10",
+     "org": "Al Jazeera",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ibrahim-zaher/"
+    },
+    {
+     "name": "Moamen Aliwa",
+     "date": "2025-08-10",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/moamen-aliwa/"
+    },
+    {
+     "name": "Mohammad al-Khaldi",
+     "date": "2025-08-10",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammad-al-khaldi/"
+    },
+    {
+     "name": "Mohammed Noufal",
+     "date": "2025-08-10",
+     "org": "Al Jazeera",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-noufal/"
+    },
+    {
+     "name": "Mohammed Qreiqeh",
+     "date": "2025-08-10",
+     "org": "Al Jazeera",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-qreiqeh/"
+    },
+    {
+     "name": "Islam al-Komi",
+     "date": "2025-08-18",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/islam-al-komi/"
+    },
+    {
+     "name": "Ahmed Abu Aziz",
+     "date": "2025-08-25",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-abu-aziz/"
+    },
+    {
+     "name": "Hassan Douhan",
+     "date": "2025-08-25",
+     "org": "Al-Hayat Al-Jadida newspaper",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hassan-douhan/"
+    },
+    {
+     "name": "Hussam Al-Masri",
+     "date": "2025-08-25",
+     "org": "Reuters",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/hussam-al-masri/"
+    },
+    {
+     "name": "Mariam Abu Dagga",
+     "date": "2025-08-25",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mariam-abu-dagga/"
+    },
+    {
+     "name": "Moaz Abu Taha",
+     "date": "2025-08-25",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/moaz-abu-taha/"
+    },
+    {
+     "name": "Mohammed Salama",
+     "date": "2025-08-25",
+     "org": "Al Jazeera",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-salama/"
+    },
+    {
+     "name": "Islam Abed",
+     "date": "2025-08-31",
+     "org": "Al Quds Today TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/islam-abed/"
+    },
+    {
+     "name": "Ayman Haniyeh",
+     "date": "2025-09-02",
+     "org": "Al-Manara Television Production Company",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ayman-haniyeh/"
+    },
+    {
+     "name": "Rasmi Jihad Salem",
+     "date": "2025-09-02",
+     "org": "Al-Manara TV Production Company",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/rasmi-jihad-salem/"
+    },
+    {
+     "name": "Osama Balousha",
+     "date": "2025-09-07",
+     "org": "Siraj Media Network",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/osama-balousha/"
+    },
+    {
+     "name": "Mohammed Al Kuaifi",
+     "date": "2025-09-15",
+     "org": "Safa News Agency",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-kuaifi/"
+    },
+    {
+     "name": "Mohammed Alaa Al-Sawalhi",
+     "date": "2025-09-17",
+     "org": "Al-Quds Al-Youm TV",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-alaa-al-sawalhi/"
+    },
+    {
+     "name": "Mohammed Al Daya",
+     "date": "2025-09-27",
+     "org": "Palestinian Information Center (Palinfo)",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-al-daya/"
+    },
+    {
+     "name": "Yahia Barzaq",
+     "date": "2025-09-30",
+     "org": "Collaborated with TRT World",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/yahia-barzaq/"
+    },
+    {
+     "name": "Ahmed Abu Mutair",
+     "date": "2025-10-19",
+     "org": "The Palestine Media Production (PMP)",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/ahmed-abu-mutair/"
+    },
+    {
+     "name": "Mahmoud Wadi",
+     "date": "2025-12-02",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mahmoud-wadi/"
+    },
+    {
+     "name": "Abed Shaat",
+     "date": "2026-01-21",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/abed-shaat/"
+    },
+    {
+     "name": "Anas Ghnaim",
+     "date": "2026-01-21",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/anas-ghnaim/"
+    },
+    {
+     "name": "Mohamed Qeshta",
+     "date": "2026-01-21",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohamed-qeshta/"
+    },
+    {
+     "name": "Amal Shamaly",
+     "date": "2026-03-09",
+     "org": "Qatar Radio",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/amal-shamaly/"
+    },
+    {
+     "name": "Marwan Harzallah",
+     "date": "2026-03-28",
+     "org": "Palestine TV",
+     "role": "Media Worker",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/marwan-harzallah/"
+    },
+    {
+     "name": "Mohammed Washah",
+     "date": "2026-04-08",
+     "org": "Al Jazeera",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/mohammed-washah/"
+    },
+    {
+     "name": "Fadi al-Meghari",
+     "date": "2026-05-26",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Military Officials",
+     "url": "https://cpj.org/data/people/fadi-al-meghari/"
+    }
+   ],
+   "others": [
+    {
+     "name": "Ayelet Arnin",
+     "date": "2023-10-07",
+     "org": "KAN",
+     "role": "Journalist",
+     "fire": "Political Group",
+     "url": "https://cpj.org/data/people/ayelet-arnin/"
+    },
+    {
+     "name": "Shai Regev",
+     "date": "2023-10-07",
+     "org": "Maariv",
+     "role": "Journalist",
+     "fire": "Political Group",
+     "url": "https://cpj.org/data/people/shai-regev/"
+    },
+    {
+     "name": "Yaniv Zohar",
+     "date": "2023-10-07",
+     "org": "Israel Hayom",
+     "role": "Journalist",
+     "fire": "Political Group",
+     "url": "https://cpj.org/data/people/yaniv-zohar/"
+    },
+    {
+     "name": "Roee Idan",
+     "date": "2023-10-20",
+     "org": "Ynet",
+     "role": "Journalist",
+     "fire": "Political Group",
+     "url": "https://cpj.org/data/people/roee-idan/"
+    },
+    {
+     "name": "Saleh Aljafarawi",
+     "date": "2025-10-12",
+     "org": "Freelance",
+     "role": "Journalist",
+     "fire": "Paramilitary Group",
+     "url": "https://cpj.org/data/people/saleh-aljafarawi/"
+    }
+   ],
+   "url": "https://cpj.org/data/",
+   "retrieved": "2026-10-24"
+  },
+  "gmo_press": {
+   "records": 262,
+   "url": "https://data.techforpalestine.org/docs/press-killed-in-gaza/"
+  }
+ }
+}

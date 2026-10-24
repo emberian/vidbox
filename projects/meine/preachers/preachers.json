@@ -1,0 +1,1054 @@
+{
+ "generated": "2026-10-24",
+ "times_are": "seconds within the local file (add clip_start_in_source for the source video)",
+ "original": {
+  "id": "missiles_short",
+  "person": "Sam Hyde",
+  "file": "media/src/missiles_short.mov",
+  "source_url": "https://www.youtube.com/shorts/_aFaQ-eRuWM",
+  "publisher": "Isostatic Rebound (fan re-upload, 2022-09-14)",
+  "sincere_or_satire": "satire (comedian in character)"
+ },
+ "clips": [
+  {
+   "id": "hibbs_weapons_insulting_god",
+   "person": "Jack Hibbs",
+   "role": "pastor, Calvary Chapel Chino Hills (CA)",
+   "file": "media/preachers/raw/hibbs_weapons_insulting_god.mp4",
+   "source_url": "https://www.youtube.com/watch?v=ltRAHOapmkc",
+   "clip_start_in_source": "0:00",
+   "publisher": "Right Wing Watch (from FRC's 'Washington Watch' with Tony Perkins)",
+   "date": "2024-05-14",
+   "venue": "Washington Watch (Family Research Council), selfie video call",
+   "provenance": "Right Wing Watch (People For the American Way) monitoring clip; RWW credits the speaker in its description; Washington Watch bug visible on frame",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 2.7,
+    "median_iod_px": 137,
+    "sheet": "media/preachers/sheets/hibbs_weapons_insulting_god.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "We are actually insulting God by hamstringing his own people",
+     "start": 12.51,
+     "end": 16.83,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hibbs_weapons_insulting_god.words.json"
+    },
+    {
+     "text": "you don't mess with Israel",
+     "start": 18.03,
+     "end": 19.55,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hibbs_weapons_insulting_god.words.json"
+    },
+    {
+     "text": "poking the God of Abraham, Isaac, and Jacob right in the eye",
+     "start": 36.72,
+     "end": 41.1,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hibbs_weapons_insulting_god.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Best head in the set: selfie, frontal, large face (iod 137px), clean audio. Context: Biden paused one shipment of 2,000-lb bombs in May 2024. The line is about withholding weapons, so it lines up directly with 'give Israel missiles'."
+  },
+  {
+   "id": "huckabee_bless_side",
+   "person": "Mike Huckabee",
+   "role": "Baptist minister; then nominee, now US ambassador to Israel",
+   "file": "media/preachers/raw/huckabee_bless_side.mp4",
+   "source_url": "https://www.youtube.com/watch?v=EG-8UseD0kI",
+   "clip_start_in_source": "0:00",
+   "publisher": "Right Wing Watch (from The Charlie Kirk Show, Real America's Voice)",
+   "date": "2024-11-14",
+   "venue": "The Charlie Kirk Show (webcam interview)",
+   "provenance": "Right Wing Watch (People For the American Way) monitoring clip; RWW credits the speaker in its description; lower third reads 'Gov. Mike Huckabee, Nominated to be Ambassador to Israel'",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 3.5,
+    "median_iod_px": 90,
+    "sheet": "media/preachers/sheets/huckabee_bless_side.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "Genesis 12, those who bless Israel will be blessed",
+     "start": 9.88,
+     "end": 13.16,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/huckabee_bless_side.words.json"
+    },
+    {
+     "text": "I want to be on the blessing side, not the curse side",
+     "start": 15.59,
+     "end": 17.93,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/huckabee_bless_side.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Frontal webcam, steady, 100% face. Compact Genesis 12:3 statement from the man who became the ambassador."
+  },
+  {
+   "id": "huckabee_tucker_take_it_all",
+   "person": "Mike Huckabee",
+   "role": "US ambassador to Israel",
+   "file": "media/preachers/raw/huckabee_tucker_take_it_all.mp4",
+   "source_url": "https://www.youtube.com/watch?v=XS7itdfgNnU",
+   "clip_start_in_source": "1:01:30",
+   "publisher": "Tucker Carlson (official channel)",
+   "date": "2026-02-20",
+   "venue": "Tucker Carlson interview",
+   "provenance": "original upload by the interviewer",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 16.5,
+    "median_iod_px": 76,
+    "sheet": "media/preachers/sheets/huckabee_tucker_take_it_all.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "Because you're appealing to Genesis",
+     "start": 23.47,
+     "end": 25.21,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/huckabee_tucker_take_it_all.words.json"
+    },
+    {
+     "text": "It would be fine if they took it all",
+     "start": 30.12,
+     "end": 31.52,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/huckabee_tucker_take_it_all.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Tucker cites Genesis 15 ('from the Nile to the Euphrates'), and Huckabee answers 'It would be fine if they took it all.' 3/4 profile (yaw ~16), steady face."
+  },
+  {
+   "id": "huckabee_tucker_genesis",
+   "person": "Mike Huckabee",
+   "role": "US ambassador to Israel",
+   "file": "media/preachers/raw/huckabee_tucker_genesis.mp4",
+   "source_url": "https://www.youtube.com/watch?v=XS7itdfgNnU",
+   "clip_start_in_source": "56:33",
+   "publisher": "Tucker Carlson (official channel)",
+   "date": "2026-02-20",
+   "venue": "Tucker Carlson interview",
+   "provenance": "original upload by the interviewer",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 28.1,
+    "median_iod_px": 72,
+    "sheet": "media/preachers/sheets/huckabee_tucker_genesis.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "I will bless those who bless you",
+     "start": 20.61,
+     "end": 21.83,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/huckabee_tucker_genesis.words.json"
+    },
+    {
+     "text": "curse those who curse you",
+     "start": 21.95,
+     "end": 23.03,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/huckabee_tucker_genesis.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "3/4 profile (yaw ~28). Usable, but the take_it_all moment is stronger."
+  },
+  {
+   "id": "johnson_bible_bless",
+   "person": "Mike Johnson",
+   "role": "Speaker of the US House",
+   "file": "media/preachers/raw/johnson_bible_bless.mp4",
+   "source_url": "https://www.youtube.com/watch?v=w2VGO4Dh2mU",
+   "clip_start_in_source": "0:05",
+   "publisher": "Forbes Breaking News",
+   "date": "2024-07-24",
+   "venue": "Capitol press availability",
+   "provenance": "news upload of press Q&A",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 12.0,
+    "median_iod_px": 63,
+    "sheet": "media/preachers/sheets/johnson_bible_bless.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "God will bless the nation that blesses Israel and curse the nation that curses Israel",
+     "start": 22.69,
+     "end": 25.85,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/johnson_bible_bless.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Frontal, 100% face. The reporter's question ('a moral or biblical rationale') runs 0.9-14s; the answer starts at 14.1s."
+  },
+  {
+   "id": "cruz_tucker_bless",
+   "person": "Ted Cruz",
+   "role": "US Senator (R-TX)",
+   "file": "media/preachers/raw/cruz_tucker_bless.mp4",
+   "source_url": "https://www.youtube.com/watch?v=smemFVe0l5E",
+   "clip_start_in_source": "50:05",
+   "publisher": "Tucker Carlson (official channel)",
+   "date": "2025-06-18",
+   "venue": "Tucker Carlson interview",
+   "provenance": "original upload by the interviewer",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 29.6,
+    "median_iod_px": 75,
+    "sheet": "media/preachers/sheets/cruz_tucker_bless.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "I was taught from the Bible, those who bless Israel will be blessed",
+     "start": 7.34,
+     "end": 11.15,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/cruz_tucker_bless.words.json"
+    },
+    {
+     "text": "I want to be on the blessing side of things",
+     "start": 15.45,
+     "end": 16.85,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/cruz_tucker_bless.words.json"
+    },
+    {
+     "text": "Where is that?",
+     "start": 26.75,
+     "end": 27.28,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/cruz_tucker_bless.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Yaw ~30, but steady and well lit. Built-in anti-war beat: Tucker asks 'Where is that?' and Cruz can't cite the verse ('It's in Genesis, but...')."
+  },
+  {
+   "id": "graham_mtp_bombs",
+   "person": "Lindsey Graham",
+   "role": "US Senator (R-SC)",
+   "file": "media/preachers/raw/graham_mtp_bombs.mp4",
+   "source_url": "https://www.youtube.com/watch?v=XUdUO02Lc-g",
+   "clip_start_in_source": "0:50",
+   "publisher": "NBC News (Meet the Press)",
+   "date": "2024-05-12",
+   "venue": "Meet the Press, remote interview",
+   "provenance": "network upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 80,
+    "median_abs_yaw": 1.4,
+    "median_iod_px": 95,
+    "sheet": "media/preachers/sheets/graham_mtp_bombs.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "Give Israel the bombs they need to end the war they can't afford to lose",
+     "start": 14.54,
+     "end": 18.5,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/graham_mtp_bombs.words.json"
+    },
+    {
+     "text": "bombing Hiroshima and Nagasaki with nuclear weapons. That was the right decision",
+     "start": 9.3,
+     "end": 14.24,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/graham_mtp_bombs.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Frontal, centred, 80% face (cuts to the studio at ~20s). The cleanest 'give Israel the bombs' line we have, and it rhymes with 'give Israel missiles'."
+  },
+  {
+   "id": "evans_bless_thee",
+   "person": "Mike Evans",
+   "role": "founder, Friends of Zion / Jerusalem Prayer Team",
+   "file": "media/preachers/raw/evans_bless_thee.mp4",
+   "source_url": "https://www.youtube.com/watch?v=IaIIwXAhPbc",
+   "clip_start_in_source": "4:30",
+   "publisher": "Mike Evans (own channel)",
+   "date": "2025-10-31",
+   "venue": "direct-to-camera address to Tucker Carlson",
+   "provenance": "speaker's own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 73,
+    "median_abs_yaw": 6.5,
+    "median_iod_px": 82,
+    "sheet": "media/preachers/sheets/evans_bless_thee.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "We believe the promise to Abraham",
+     "start": 6.76,
+     "end": 8.9,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/evans_bless_thee.words.json"
+    },
+    {
+     "text": "I will bless them that bless thee",
+     "start": 9.5,
+     "end": 11.06,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/evans_bless_thee.words.json"
+    },
+    {
+     "text": "America has been blessed because of this",
+     "start": 13.39,
+     "end": 16.85,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/evans_bless_thee.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Frontal and well lit, and he waves a Bible on camera. Cuts to an AI-looking 'Columbus' graphic at ~31-43s; avoid that part."
+  },
+  {
+   "id": "hagee_cufi2024_genesis",
+   "person": "John Hagee",
+   "role": "founder, Christians United for Israel; pastor, Cornerstone Church",
+   "file": "media/preachers/raw/hagee_cufi2024_genesis.mp4",
+   "source_url": "https://www.youtube.com/watch?v=GrgGCwHNuWA",
+   "clip_start_in_source": "17:25",
+   "publisher": "Christians United for Israel UK (CUFI)",
+   "date": "2024-07-29 (uploaded 2024-09-24)",
+   "venue": "CUFI Summit 2024, Night to Honor Israel, Washington DC",
+   "provenance": "CUFI's own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 100,
+    "median_abs_yaw": 5.2,
+    "median_iod_px": 61,
+    "sheet": "media/preachers/sheets/hagee_cufi2024_genesis.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "I will curse those who curse you",
+     "start": 14.19,
+     "end": 15.73,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_cufi2024_genesis.words.json"
+    },
+    {
+     "text": "the defense of Israel",
+     "start": 33.8,
+     "end": 34.94,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_cufi2024_genesis.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Pulpit, frontal, 100% face (iod 61)."
+  },
+  {
+   "id": "hagee_cufi2024_weapons",
+   "person": "John Hagee",
+   "role": "founder, Christians United for Israel",
+   "file": "media/preachers/raw/hagee_cufi2024_weapons.mp4",
+   "source_url": "https://www.youtube.com/watch?v=GrgGCwHNuWA",
+   "clip_start_in_source": "8:25",
+   "publisher": "Christians United for Israel UK (CUFI)",
+   "date": "2024-07-29",
+   "venue": "CUFI Summit 2024, Night to Honor Israel",
+   "provenance": "CUFI's own upload; the official US CUFI full-night video (Ep3Ziotsgq4 @19:48) has the identical program cut",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 60,
+    "median_abs_yaw": 8.1,
+    "median_iod_px": 61,
+    "sheet": "media/preachers/sheets/hagee_cufi2024_weapons.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "Israel is fighting our fight",
+     "start": 15.87,
+     "end": 18.17,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_cufi2024_weapons.words.json"
+    },
+    {
+     "text": "We must give them the weapons of war to win that fight",
+     "start": 18.67,
+     "end": 22.51,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_cufi2024_weapons.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "KEY LINE but AUDIO ONLY: the program cuts to the crowd and a wide shot at 13s, so the line (18.7-22.5s) has no face. Use his frontal 0-13s pulpit face as the head, or lay the line over war footage."
+  },
+  {
+   "id": "hagee_march_victory",
+   "person": "John Hagee",
+   "role": "founder, Christians United for Israel",
+   "file": "media/preachers/raw/hagee_march_victory.mp4",
+   "source_url": "https://www.youtube.com/watch?v=Sqi7VgaJgZo",
+   "clip_start_in_source": "7:55",
+   "publisher": "OfficialCUFI",
+   "date": "2023-11-14",
+   "venue": "March for Israel, National Mall, Washington DC",
+   "provenance": "CUFI's own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 74,
+    "median_abs_yaw": 16.3,
+    "median_iod_px": 99,
+    "sheet": "media/preachers/sheets/hagee_march_victory.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "victory was our only aim, and Israel should be afforded that same opportunity",
+     "start": 15.55,
+     "end": 22.05,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_march_victory.words.json"
+    },
+    {
+     "text": "without victory, there is no survival",
+     "start": 27.52,
+     "end": 30.2,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_march_victory.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Outdoor lectern, face 74% (iod 99), some yaw. Crowd chants 'Bring them home' over the first 7s."
+  },
+  {
+   "id": "hagee_nthi_bible_issue",
+   "person": "John Hagee",
+   "role": "founder, Christians United for Israel",
+   "file": "media/preachers/raw/hagee_nthi_bible_issue.mp4",
+   "source_url": "https://www.youtube.com/watch?v=ti_FFvh7wHw",
+   "clip_start_in_source": "10:00",
+   "publisher": "Hagee Ministries",
+   "date": "2025-10-24",
+   "venue": "Night to Honor Israel (Cornerstone Church)",
+   "provenance": "Hagee Ministries' own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 62,
+    "median_abs_yaw": 5.8,
+    "median_iod_px": 35,
+    "sheet": "media/preachers/sheets/hagee_nthi_bible_issue.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "Israel is not a political issue",
+     "start": 10.77,
+     "end": 12.73,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_nthi_bible_issue.words.json"
+    },
+    {
+     "text": "Israel is a Bible issue",
+     "start": 12.85,
+     "end": 14.83,
+     "match": 0.8,
+     "words_json": "media/preachers/sheets/hagee_nthi_bible_issue.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "360p only (the source has nothing higher), small face (iod 35). Strong slogan. Whisper misheard 'Bible issue' as 'Bible Israel'; the auto captions confirm 'Israel is a Bible issue'."
+  },
+  {
+   "id": "hagee_nthi_curse",
+   "person": "John Hagee",
+   "role": "founder, Christians United for Israel",
+   "file": "media/preachers/raw/hagee_nthi_curse.mp4",
+   "source_url": "https://www.youtube.com/watch?v=ti_FFvh7wHw",
+   "clip_start_in_source": "15:15",
+   "publisher": "Hagee Ministries",
+   "date": "2025-10-24",
+   "venue": "Night to Honor Israel (Cornerstone Church)",
+   "provenance": "Hagee Ministries' own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 38,
+    "median_abs_yaw": 2.4,
+    "median_iod_px": 34,
+    "sheet": "media/preachers/sheets/hagee_nthi_curse.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "I will curse those who curse you",
+     "start": 15.39,
+     "end": 17.15,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_nthi_curse.words.json"
+    },
+    {
+     "text": "He's watching every move we make toward Israel",
+     "start": 21.89,
+     "end": 24.82,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hagee_nthi_curse.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "360p, face only 38% of frames. Use the hagee_cufi2024_genesis curse line instead."
+  },
+  {
+   "id": "vaughn_wonderful_days",
+   "person": "Shane Vaughn ('Professor Toto')",
+   "role": "pastor, First Harvest Ministries; online broadcaster",
+   "file": "media/preachers/raw/vaughn_wonderful_days.mp4",
+   "source_url": "https://www.youtube.com/watch?v=3xDxFvr4Evc",
+   "clip_start_in_source": "0:00",
+   "publisher": "Right Wing Watch (from Vaughn's own show)",
+   "date": "2025-06-13",
+   "venue": "his webcast set ('Professor Toto' lower third)",
+   "provenance": "Right Wing Watch (People For the American Way) monitoring clip; RWW credits the speaker in its description; 'Professor Toto' is Vaughn's own on-air persona (his channel describes it as satirical), but he is a sincere pastor and this is sung in earnest",
+   "sincere_or_satire": "sincere (performed in persona)",
+   "face": {
+    "pct_frames": 96,
+    "median_abs_yaw": 3.1,
+    "median_iod_px": 118,
+    "sheet": "media/preachers/sheets/vaughn_wonderful_days.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "What wonderful days these days are before the coming of the Lord",
+     "start": 0.38,
+     "end": 11.0,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/vaughn_wonderful_days.words.json"
+    },
+    {
+     "text": "Oh, the glory",
+     "start": 34.65,
+     "end": 36.67,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/vaughn_wonderful_days.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "SINGING. Frontal, 96% face, iod 118. Sung the night Israel struck Iran (June 2025): end-times joy at war. Good for a musical bed or a call-and-response."
+  },
+  {
+   "id": "bachmann_blessed",
+   "person": "Michele Bachmann",
+   "role": "former US Rep. (R-MN); dean, Regent University government school",
+   "file": "media/preachers/raw/bachmann_blessed.mp4",
+   "source_url": "https://www.youtube.com/watch?v=ffuJp7d_25E",
+   "clip_start_in_source": "0:00",
+   "publisher": "Right Wing Watch (from FreedomNews.TV / 'Unclassified')",
+   "date": "2026-03-04",
+   "venue": "remote interview in a broadcast pane",
+   "provenance": "Right Wing Watch (People For the American Way) monitoring clip; RWW credits the speaker in its description",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 86,
+    "median_abs_yaw": 5.4,
+    "median_iod_px": 79,
+    "sheet": "media/preachers/sheets/bachmann_blessed.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "God ordained these two men",
+     "start": 53.17,
+     "end": 55.11,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/bachmann_blessed.words.json"
+    },
+    {
+     "text": "We've all been given an opportunity to bless Israel",
+     "start": 60.87,
+     "end": 64.25,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/bachmann_blessed.words.json"
+    },
+    {
+     "text": "America is going to be blessed from this effort",
+     "start": 71.67,
+     "end": 74.19,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/bachmann_blessed.words.json"
+    },
+    {
+     "text": "how nations treat Zion",
+     "start": 86.49,
+     "end": 87.91,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/bachmann_blessed.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Frontal in a pane, 86% face. The first ~5s is an RWW title card; skip it. After ~106s the audio is music and the transcript is garbage; ignore."
+  },
+  {
+   "id": "netanyahu_amalek_mee",
+   "person": "Benjamin Netanyahu",
+   "role": "Prime Minister of Israel",
+   "file": "media/preachers/raw/netanyahu_amalek_mee.mp4",
+   "source_url": "https://www.youtube.com/watch?v=pMVs7akyMh0",
+   "clip_start_in_source": "0:00",
+   "publisher": "Middle East Eye (rebroadcast of Sky News, 28 Oct 2023)",
+   "date": "2023-10-28",
+   "venue": "televised address at the start of the Gaza ground operation",
+   "provenance": "MEE vertical repackage of the Sky News feed; burned-in captions and MEE graphics",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 69,
+    "median_abs_yaw": 2.5,
+    "median_iod_px": 70,
+    "sheet": "media/preachers/sheets/netanyahu_amalek_mee.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "You must remember what Amalek has done to you, says our Holy Bible",
+     "start": 0.18,
+     "end": 5.2,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/netanyahu_amalek_mee.words.json"
+    },
+    {
+     "text": "never again is now",
+     "start": 49.23,
+     "end": 51.43,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/netanyahu_amalek_mee.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "Frontal, iod 70, but burned-in captions plus a vertical frame. This is the Amalek line South Africa cited in its ICJ filing. Head-of-state scripture for war; a cleaner source (GPO / PMO feed) is wanted."
+  },
+  {
+   "id": "isaac_bible_weaponized",
+   "person": "Rev. Munther Isaac",
+   "role": "Lutheran pastor, Evangelical Lutheran Christmas Church, Bethlehem",
+   "file": "media/preachers/raw/isaac_bible_weaponized.mp4",
+   "source_url": "https://www.youtube.com/watch?v=aEGiANa0-oI",
+   "clip_start_in_source": "1:55",
+   "publisher": "Munther Isaac (own channel)",
+   "date": "2023-12-23",
+   "venue": "'Christ in the Rubble' Christmas liturgy of lament, Bethlehem",
+   "provenance": "speaker's own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 93,
+    "median_abs_yaw": 10.3,
+    "median_iod_px": 43,
+    "sheet": "media/preachers/sheets/isaac_bible_weaponized.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "the theological cover, with the Western church stepping into the spotlight",
+     "start": 11.72,
+     "end": 16.79,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/isaac_bible_weaponized.words.json"
+    },
+    {
+     "text": "Here in Palestine, the Bible is weaponized against us, our very own sacred text",
+     "start": 43.04,
+     "end": 50.74,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/isaac_bible_weaponized.words.json"
+    }
+   ],
+   "usable": true,
+   "notes": "COUNTER-VOICE (Palestinian pastor, anti-war). Pulpit, frontal, 93% face but small (iod 43); a 720p crop will be soft. He names exactly what the chorus does."
+  },
+  {
+   "id": "hibbs_god_sanctions_war",
+   "person": "Jack Hibbs",
+   "role": "pastor, Calvary Chapel Chino Hills",
+   "file": "media/preachers/raw/hibbs_god_sanctions_war.mp4",
+   "source_url": "https://www.youtube.com/watch?v=09bR3Wh5yZE",
+   "clip_start_in_source": "0:00",
+   "publisher": "Right Wing Watch (from his Sunday sermon)",
+   "date": "2023-10-17",
+   "venue": "Sunday sermon, Calvary Chapel Chino Hills",
+   "provenance": "Right Wing Watch (People For the American Way) monitoring clip; RWW credits the speaker in its description",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 35,
+    "median_abs_yaw": 17.6,
+    "median_iod_px": 60,
+    "sheet": "media/preachers/sheets/hibbs_god_sanctions_war.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "there is no Christianity of being passive",
+     "start": 2.86,
+     "end": 6.56,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hibbs_god_sanctions_war.words.json"
+    },
+    {
+     "text": "God sanctions war",
+     "start": 47.75,
+     "end": 48.87,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hibbs_god_sanctions_war.words.json"
+    },
+    {
+     "text": "Israel needs to kind of tone it down and be proportional. Who says such things?",
+     "start": 57.25,
+     "end": 63.09,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/hibbs_god_sanctions_war.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "Wide stage shots, face only 35%, small. Great text, poor head; use as audio under footage."
+  },
+  {
+   "id": "walberg_nagasaki",
+   "person": "Tim Walberg",
+   "role": "US Rep. (R-MI)",
+   "file": "media/preachers/raw/walberg_nagasaki.mp4",
+   "source_url": "https://www.youtube.com/watch?v=y4PQ47OEU0Y",
+   "clip_start_in_source": "1:15",
+   "publisher": "Steven Meyer (raw phone video recorded by Pat Ulanowicz)",
+   "date": "2024-03-25",
+   "venue": "invitation-only town hall, Dundee, Michigan",
+   "provenance": "attendee's raw phone recording; widely reported (WILX, CNN); Walberg later said it was a 'metaphor'",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 0,
+    "median_abs_yaw": null,
+    "median_iod_px": null,
+    "sheet": "media/preachers/sheets/walberg_nagasaki.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "We shouldn't be spending a dime on humanitarian aid",
+     "start": 22.01,
+     "end": 24.37,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/walberg_nagasaki.words.json"
+    },
+    {
+     "text": "It should be like Nagasaki and Hiroshima",
+     "start": 26.82,
+     "end": 29.36,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/walberg_nagasaki.words.json"
+    },
+    {
+     "text": "Get it over quick",
+     "start": 30.28,
+     "end": 30.96,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/walberg_nagasaki.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "AUDIO ONLY: filmed from behind, no face. Walberg is a former pastor."
+  },
+  {
+   "id": "ogles_kill_them_all",
+   "person": "Andy Ogles",
+   "role": "US Rep. (R-TN)",
+   "file": "media/preachers/raw/ogles_kill_them_all.mp4",
+   "source_url": "https://www.youtube.com/watch?v=K7fG1VqbIyI",
+   "clip_start_in_source": "0:00",
+   "publisher": "Judge Napolitano channel, re-uploading Al Jazeera English's airing of CODE PINK footage",
+   "date": "2024-02 (filmed; Al Jazeera graphic dates it 2024-02-15)",
+   "venue": "Capitol hallway, confronted by CODE PINK activists",
+   "provenance": "activist phone footage via Al Jazeera; reupload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 4,
+    "median_abs_yaw": 15.2,
+    "median_iod_px": 36,
+    "sheet": "media/preachers/sheets/ogles_kill_them_all.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "that's my taxpayer dollars",
+     "start": 14.59,
+     "end": 15.74,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/ogles_kill_them_all.words.json"
+    },
+    {
+     "text": "I think we should kill them all",
+     "start": 19.31,
+     "end": 20.31,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/ogles_kill_them_all.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "Face visible in only 4% of frames (blurred-pillarbox vertical, profile), with burned-in captions. Audio usable. Whisper also misheard several crowd lines; 'it's time to play the Bible' at ~28s is not reliable."
+  },
+  {
+   "id": "haley_finish_them",
+   "person": "Nikki Haley",
+   "role": "former UN ambassador, former presidential candidate",
+   "file": "media/preachers/raw/haley_finish_them.mp4",
+   "source_url": "https://www.youtube.com/watch?v=YTxy2-rcxnY",
+   "clip_start_in_source": "0:00",
+   "publisher": "The London Standard",
+   "date": "2024-05-28 (event); uploaded 2024-05-30",
+   "venue": "IDF artillery position near the Lebanon border",
+   "provenance": "news package with burned-in captions; the footage was first posted on X by Israeli MK Danny Danon",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 21,
+    "median_abs_yaw": 33.0,
+    "median_iod_px": 68,
+    "sheet": "media/preachers/sheets/haley_finish_them.sheet.png"
+   },
+   "lines": [],
+   "usable": false,
+   "notes": "VISUAL INSERT, no speech: her hand writing 'Finish Them!' on a shell, 0-8s. Captions are burned in; a clean source is wanted."
+  },
+  {
+   "id": "haley_hannity_finish",
+   "person": "Nikki Haley",
+   "role": "former UN ambassador; then presidential candidate",
+   "file": "media/preachers/raw/haley_hannity_finish.mp4",
+   "source_url": "https://www.youtube.com/watch?v=NLe4j9Koxjw",
+   "clip_start_in_source": "1:48",
+   "publisher": "Nikki Haley (own channel, Fox News Hannity segment)",
+   "date": "2023-10-08",
+   "venue": "Hannity (Fox News), remote box",
+   "provenance": "candidate's own upload of the Fox segment",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 0,
+    "median_abs_yaw": null,
+    "median_iod_px": null,
+    "sheet": "media/preachers/sheets/haley_hannity_finish.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "And I'll say this to Prime Minister Netanyahu, finish them",
+     "start": 7.93,
+     "end": 11.63,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/haley_hannity_finish.words.json"
+    },
+    {
+     "text": "Finish them. (second repetition)",
+     "start": 12.21,
+     "end": 12.95,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/haley_hannity_finish.words.json"
+    },
+    {
+     "text": "They should have hell to pay",
+     "start": 16.65,
+     "end": 17.73,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/haley_hannity_finish.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "Clean audio; her face is a small inset box (0% detected). Pair this audio with the shell-writing visual."
+  },
+  {
+   "id": "graham_religious_war_wex",
+   "person": "Lindsey Graham",
+   "role": "US Senator (R-SC)",
+   "file": "media/preachers/raw/graham_religious_war_wex.mp4",
+   "source_url": "https://www.youtube.com/watch?v=YIB8MficlVc",
+   "clip_start_in_source": "0:00",
+   "publisher": "The Washington Examiner (embedding Fox News, courtesy Fox)",
+   "date": "2023-10-10 (Fox); uploaded 2023-10-12",
+   "venue": "Fox News remote hit",
+   "provenance": "news package quoting the Fox clip",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 24,
+    "median_abs_yaw": 14.5,
+    "median_iod_px": 132,
+    "sheet": "media/preachers/sheets/graham_religious_war_wex.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "We're in a religious war here",
+     "start": 0.2,
+     "end": 1.52,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/graham_religious_war_wex.words.json"
+    },
+    {
+     "text": "I am with Israel",
+     "start": 1.76,
+     "end": 2.48,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/graham_religious_war_wex.words.json"
+    },
+    {
+     "text": "Level the place",
+     "start": 5.58,
+     "end": 6.54,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/graham_religious_war_wex.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "AUDIO mostly: Graham is a small box in a Fox split screen for 0-6.5s, then AOC stills. Short and strong. A full-frame Fox original is wanted."
+  },
+  {
+   "id": "locke_bless_witness",
+   "person": "Greg Locke",
+   "role": "pastor, Global Vision Bible Church (TN)",
+   "file": "media/preachers/raw/locke_bless_witness.mp4",
+   "source_url": "https://www.youtube.com/watch?v=8n_u5cwI9N8",
+   "clip_start_in_source": "0:00",
+   "publisher": "Clearbrook Baptist Church",
+   "date": "2017-04-05",
+   "venue": "guest sermon",
+   "provenance": "church upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 0,
+    "median_abs_yaw": null,
+    "median_iod_px": null,
+    "sheet": "media/preachers/sheets/locke_bless_witness.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "I will bless them that bless thee, and I will curse them that curse thee",
+     "start": 0.2,
+     "end": 3.52,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/locke_bless_witness.words.json"
+    },
+    {
+     "text": "God is still very much on the side of the nation of Israel",
+     "start": 4.92,
+     "end": 8.31,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/locke_bless_witness.words.json"
+    },
+    {
+     "text": "Can I get a witness",
+     "start": 8.49,
+     "end": 9.23,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/locke_bless_witness.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "PRE-WAR (2017). Very wide shot, no detectable face. KJV call-and-response cadence is lovely for audio."
+  },
+  {
+   "id": "rjohnson_cufi2025_bless",
+   "person": "Russell Johnson",
+   "role": "pastor, The Fellowship Church (Pickerington OH); CUFI",
+   "file": "media/preachers/raw/rjohnson_cufi2025_bless.mp4",
+   "source_url": "https://www.youtube.com/watch?v=DOroW9tI0sA",
+   "clip_start_in_source": "1:40",
+   "publisher": "OfficialCUFI",
+   "date": "2025 (CUFI Summit; uploaded 2025-09-28)",
+   "venue": "CUFI Summit 2025",
+   "provenance": "CUFI's own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 0,
+    "median_abs_yaw": null,
+    "median_iod_px": null,
+    "sheet": "media/preachers/sheets/rjohnson_cufi2025_bless.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "if we will bless Israel, God will bless us",
+     "start": 15.25,
+     "end": 17.95,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/rjohnson_cufi2025_bless.words.json"
+    },
+    {
+     "text": "Why must Christians and Jews stand together?",
+     "start": 2.74,
+     "end": 5.36,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/rjohnson_cufi2025_bless.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "Reads from notes, head down, 0% detected. Has an anaphora ('Why must Christians and Jews stand together?') that suits audio."
+  },
+  {
+   "id": "bachmann_prophets",
+   "person": "Michele Bachmann",
+   "role": "former US Rep. (R-MN)",
+   "file": "media/preachers/raw/bachmann_prophets.mp4",
+   "source_url": "https://www.youtube.com/watch?v=w7xiewRwUtM",
+   "clip_start_in_source": "0:00",
+   "publisher": "Right Wing Watch",
+   "date": "2025-06-25",
+   "venue": "broadcast interview",
+   "provenance": "Right Wing Watch (People For the American Way) monitoring clip; RWW credits the speaker in its description",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 49,
+    "median_abs_yaw": 34.6,
+    "median_iod_px": 36,
+    "sheet": "media/preachers/sheets/bachmann_prophets.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "We are living in the times that the Bible said that the prophets longed to see",
+     "start": 0.24,
+     "end": 7.76,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/bachmann_prophets.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "Face 49%, yaw ~35. Weaker than bachmann_blessed."
+  },
+  {
+   "id": "copeland_bless_israel",
+   "person": "Terri Copeland Pearsons",
+   "role": "pastor, Eagle Mountain International Church (Kenneth Copeland Ministries)",
+   "file": "media/preachers/raw/copeland_bless_israel.mp4",
+   "source_url": "https://www.youtube.com/watch?v=SCjagzt9yRQ",
+   "clip_start_in_source": "0:00",
+   "publisher": "Kenneth Copeland Ministries",
+   "date": "2023-10-12",
+   "venue": "direct-to-camera appeal",
+   "provenance": "ministry's own upload",
+   "sincere_or_satire": "sincere",
+   "face": {
+    "pct_frames": 99,
+    "median_abs_yaw": 5.3,
+    "median_iod_px": 64,
+    "sheet": "media/preachers/sheets/copeland_bless_israel.sheet.png"
+   },
+   "lines": [
+    {
+     "text": "As you contribute to Kenneth Copeland Ministries and our Israel Fund",
+     "start": 11.78,
+     "end": 15.42,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/copeland_bless_israel.words.json"
+    },
+    {
+     "text": "If you would like to give, go to kcm.org",
+     "start": 30.85,
+     "end": 32.83,
+     "match": 1.0,
+     "words_json": "media/preachers/sheets/copeland_bless_israel.words.json"
+    }
+   ],
+   "usable": false,
+   "notes": "Frontal and clean, but the appeal is for RELIEF SUPPLIES, not weapons. Cutting it into a 'missiles' chorus would misrepresent it, so it is marked unusable for that use. It is honest only as 'televangelist fundraising' if the piece frames it that way."
+  }
+ ]
+}

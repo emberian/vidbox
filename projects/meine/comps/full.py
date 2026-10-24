@@ -14,10 +14,12 @@ HERE = Path(__file__).resolve().parent
 sys.path[:0] = [str(HERE.parents[2] / "render"), str(HERE)]
 from comp import Comp  # noqa: E402
 
-SECTIONS = ["s0_rant", "s1_build", "s2_peak"]
+SECTIONS = ["s0_rant", "s1_build", "s2_peak", "s3_credits"]
 
-c = Comp("meine", "full", range=(0, 473.5), sync="missiles_on_beat")
-c.add(c.background())
+from sections.s3_credits import SPAN as CREDITS  # noqa: E402
+
+c = Comp("meine", "full", range=(0, CREDITS[1]), sync="missiles_on_beat")   # the song, then the credits
+c.add(c.background(t1=473.5))
 for name in SECTIONS:
     try:
         mod = importlib.import_module(f"sections.{name}")

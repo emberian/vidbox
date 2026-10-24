@@ -460,7 +460,7 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
     # mp4 keep 1008 samples of AAC priming (the whole mix 21 ms late against the picture)
     mg = tl["music"].get("gain", 1.0)
     if isinstance(mg, (int, float)):
-        chains = [f"[1:a]asetpts=PTS-STARTPTS,volume={mg}[a0]"]
+        chains = [f"[1:a]asetpts=PTS-STARTPTS,volume={mg},apad=whole_dur={r1 - r0:.4f}[a0]"]   # pad: renders may outrun the song
         env_path = None
     else:   # a signal: the music's volume follows it (e.g. dipping so source audio punches through)
         g = compile_signal(mg, ctx)
@@ -489,7 +489,7 @@ def mux_audio(tl, video, out, r0, r1, ctx=None):
     if env_path is not None:   # the envelope is the last input
         ins += ["-f", "f32le", "-ar", str(ENV_RATE), "-ac", "1", "-i", str(env_path)]
         chains.append(f"[{len([x for x in ins if x == '-i']) - 1}:a]aresample={SR},pan=stereo|c0=c0|c1=c0,"
-                      f"aformat=sample_fmts=flt:channel_layouts=stereo[env];[mus][env]amultiply[a0]")
+                      f"aformat=sample_fmts=flt:channel_layouts=stereo[env];[mus][env]amultiply,apad=whole_dur={r1 - r0:.4f}[a0]")
     graph = ";".join(chains) + ";" + "".join(f"[a{i}]" for i in range(n)) + \
         f"amix=inputs={n}:normalize=0:duration=first,alimiter=limit=0.95:latency=1[aout]"   # latency=1: no 5 ms lookahead delay
     subprocess.run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", graph, "-map", "0:v", "-map", "[aout]",

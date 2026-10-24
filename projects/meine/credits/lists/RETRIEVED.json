@@ -1,0 +1,22 @@
+{
+ "killed-in-gaza.min.json": {
+  "url": "https://data.techforpalestine.org/api/v3/killed-in-gaza.min.json",
+  "retrieved": "2026-10-24T08:40:40+00:00"
+ },
+ "summary.json": {
+  "url": "https://data.techforpalestine.org/api/v3/summary.json",
+  "retrieved": "2026-10-24T08:40:40+00:00"
+ },
+ "casualties_daily.json": {
+  "url": "https://data.techforpalestine.org/api/v2/casualties_daily.json",
+  "retrieved": "2026-10-24T08:40:40+00:00"
+ },
+ "press_killed_in_gaza.json": {
+  "url": "https://data.techforpalestine.org/api/v2/press_killed_in_gaza.json",
+  "retrieved": "2026-10-24T08:40:40+00:00"
+ },
+ "cpj_killed.csv": {
+  "url": "https://cpj.org/wp-json/cpj-datamanager/v1/people_list?status=Killed&type%5B%5D=Journalist&type%5B%5D=Media%20Worker&motiveConfirmed%5B%5D=Confirmed&motiveUnconfirmed%5B%5D=Unconfirmed&sortBy=fullName&limit=-1&export=csv",
+  "retrieved": "2026-10-24T08:40:44+00:00"
+ }
+}
